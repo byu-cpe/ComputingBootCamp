@@ -1,9 +1,8 @@
 # The BYU Computing BootCamp
 
-* [Bootcamp Main Page](SelfPaced/BootCamp.md)
 # Bootcamp Planning for 2021
 
-### Published Units
+### Published Units (in SelfPaced directory)
 These are self-paced learning activities on the wiki.  Typically, they have the students read about topic, install the tool, and then complete a series of mini-projects to actually use the topic's tool and do some useful things with it.
 
 Last year we gave them a schedule to follow and adjusted it as some things took longer/shorter than we thought.  I took a guess at grouping them into weeks for this year.
