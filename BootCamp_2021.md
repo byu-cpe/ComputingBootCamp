@@ -1,6 +1,3 @@
-# The BYU Computing BootCamp
-
-* [Bootcamp Main Page](BootCamp.md)
 # Bootcamp Planning for 2021
 
 ### Published Units
