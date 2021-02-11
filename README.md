@@ -112,6 +112,7 @@ Group 1 are the things discussed above.
 - SystemVerilog Testbenches - An Alternative to Tcl
 
 ### Group 3: Things Mentioned as of Interest for Future Inclusion in Group 1 or 2
+- numpy, pandas, and matplotlib
 - gradle
 - maven
 - pandoc
