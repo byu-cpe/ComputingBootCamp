@@ -14,7 +14,7 @@ The system we will develop on is a Linux installation on a VMWare Virtual machin
 1. It downloads it as a ZIP file, unzip it.
 1. Then, open VMWare and "Open Virtual Machine" it, selecting the file with the .ovf extension.  It will ask where to put it - your home directory is a recommended place.
 1. Log in with "student", password "fpga".
-1. See [VirtualMachineCreationInstructions]({% link labs/02_createvm.md %})  for how the virtual machine was originally created/configured.  Pay special attention to the section suggesting what you might want to do with the virtual machine to customize it.  And, of course, if you desire follow the instructions there to make your own (not too hard, you would learn a lot).
+1. See [VirtualMachineCreationInstructions]({% link _labs/02_createvm.md %})  for how the virtual machine was originally created/configured.  Pay special attention to the section suggesting what you might want to do with the virtual machine to customize it.  And, of course, if you desire follow the instructions there to make your own (not too hard, you would learn a lot).
 1. Near the bottom of [VirtualMachineCreationInstructions](VirtualMachineCreationInstructions) there are things you could/should do to your VM to make it your own.  Go look at those now... 
 
 .

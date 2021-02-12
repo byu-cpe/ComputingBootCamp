@@ -1,0 +1,128 @@
+I"6<h1 id="machine-creation-script">Machine Creation Script</h1>
+<ul>
+  <li>
+    <p>Use ubuntu-xx.xx.xx-desktop-amd64.iso - get from Ubuntu website (do a search) - the xx.xx.xx are version numbers.  You may want 16.04, 18.04, or some other version.</p>
+  </li>
+  <li>Create new machine using VMWare, specifying above file when asked.  Use the following for login info:
+    <ul>
+      <li>Username: student</li>
+      <li>Password: fpga</li>
+    </ul>
+  </li>
+  <li>Customize settings (can be changed in VM settings later):
+    <ul>
+      <li>2GB RAM</li>
+      <li>1 CPU</li>
+      <li>60 GB disk (harder to change later but can be done)
+        <ul>
+          <li>When all is said and done, this VM takes up just about 20GB but you need nearly 60GB for the install files.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Wait until the install finishes being created and log into it.  Every below are things you now do inside the Linux virtual machine.  You do it from a terminal (command prompt).  To get one started, right-click in middle of screen and select “New terminal” or similar choice.  A command window will appear.</li>
+</ul>
+
+<p>NOTE: you prefix a lot of commands below with the word ‘sudo’ - this means run the following command as an administrator.  BE CAREFUL and only use it when you have to - you can totally trash your installation by doing the wrong thing with sudo.</p>
+
+<ul>
+  <li>Give your machine a name
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo hostname StudentFPGA</code></li>
+    </ul>
+  </li>
+  <li>Update system software installer catalog
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt update</code></li>
+    </ul>
+  </li>
+  <li>When you first create a VM it immediately goes out and looks for
+certain updates.  So, you may have to wait a few minutes until you
+can do this.  You will get errors until the coast is clear.  The following 
+will basically upgrade all the software in your VM.  Doing so is completely optional. 
+It will take 10-20 minutes.  You can always do it later.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt upgrade</code></li>
+    </ul>
+  </li>
+  <li>Install the VM tools (Ubuntu prefers these to what VMWare provides).<br />
+Depending on the ubuntu system you are working with these may or may not already 
+be installed.  Doing it even if they are installed won’t hurt.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt install open-vm-tools open-vm-tools-desktop</code></li>
+    </ul>
+  </li>
+  <li>Reboot the machine (I do it just to make sure everything I just installed is running
+the needed daemons, etc.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo shutdown -r now</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Moving on, we will install a few more things you will need:</p>
+<ul>
+  <li>SSH
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt install openssh-server</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sudo systemctl status ssh</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sudo ufw allow ssh</code></li>
+    </ul>
+  </li>
+  <li>git
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt install git -y</code></li>
+    </ul>
+  </li>
+  <li>emacs (optional) - this is a text editor that some people use.  There are other programs built in on Linux you will likely prefer (it is here because I like it).  The programs ‘vi’ and ‘nano’ are two common built-in ones.  Either of them will be fine.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt install emacs -y</code></li>
+    </ul>
+  </li>
+  <li>Xilinx VIvado
+    <ul>
+      <li>Increase CPU’s and memory in the VM first (see below)…</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Instructions:</p>
+<ul>
+  <li>Get -&gt; xilinx.com -&gt; support -&gt; downloads/licensing -&gt; Vivado Archive -&gt; xxxx.x -&gt; Vivado HLx xxxx.x WebPACK and Editions - Linux Self Extracting Web Installer (xxxx.x will depend on the version you want)</li>
+  <li><code class="language-plaintext highlighter-rouge">cd Downloads</code></li>
+  <li><code class="language-plaintext highlighter-rouge">chmod 755 Xilinx...  (... means hit the TAB key to let command completion finish it)</code></li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">./Xilinx...</code></p>
+  </li>
+  <li>Choose Webpack (top option)</li>
+  <li>Unselect Ultrascale and Ulstrascale+ devices</li>
+  <li>Select DocNav</li>
+  <li>Put it in /home/student/Xilinx_xxxx.x</li>
+  <li>Takes a while to install</li>
+</ul>
+
+<p>Regardless of which method you use, then:</p>
+<ul>
+  <li>Add to end of the .bashrc file in your home directory (using a text editor).  Remember
+to change the xxxx.xx to be your Vivado version:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge"># Set environment to run Xilinx tools.  Remove if you don't want/need it.</code></li>
+      <li><code class="language-plaintext highlighter-rouge">source ~/Xilinx_xxxx.x/Vivado/xxxx.x/settings64.sh</code></li>
+      <li><code class="language-plaintext highlighter-rouge"># Keep .log and .jou files from cluttering up the entire filesystem</code></li>
+      <li><code class="language-plaintext highlighter-rouge">alias vivado="vivado -log /tmp/vivado.log -journal /tmp/vivado.jou"</code></li>
+    </ul>
+  </li>
+  <li>When done, install cable drivers
+    <ul>
+      <li>Refer to https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug973-vivado-release-notes-install-license.pdf</li>
+      <li>Commands below are broken into 2 separate cd commands so it will fit on the screen for this wiki…</li>
+      <li><code class="language-plaintext highlighter-rouge">cd ~/Xilinx_xxxx.x/Vivado/xxxx.x</code></li>
+      <li><code class="language-plaintext highlighter-rouge">cd data/xicom/cable_drivers/lin64/install_script/install_drivers/</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sudo ./install_drivers</code></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<p>Initially created by Brent Nelson, March 2020.</p>
+:ET

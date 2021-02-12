@@ -1,0 +1,20 @@
+I"i
+<ul>
+  <li><a href="#do-this-first">Do This First</a></li>
+  <li><a href="#things-you-couldshould-do-later-to-customize-it">Things you could/should do later to customize it:</a>
+    <ul>
+      <li><a href="#1-learn-to-use-the-linux-command-line">1. Learn to use the Linux command line.</a></li>
+      <li><a href="#2-increase-memory-and-processors">2. Increase Memory and Processors</a></li>
+      <li><a href="#3-hard-code-your-machines-ip-address">3. Hard Code Your Machine’s IP Address</a></li>
+      <li><a href="#4-put-your-linux-machine-in-your-local-hosts-file">4. Put your Linux Machine in Your Local Hosts File</a></li>
+      <li><a href="#5-install-an-ide">5. Install an IDE</a></li>
+      <li><a href="#6-set-up-ssh-keys-so-you-dont-have-to-always-log-in-when-accessing-a-remote-machine">6. Set Up SSH Keys So You Don’t Have to Always Log In When Accessing a Remote Machine</a></li>
+    </ul>
+  </li>
+  <li><a href="#more-advanced-things-you-might-need-to-do">More Advanced Things You Might Need to Do</a>
+    <ul>
+      <li><a href="#increasing-disk-space">Increasing Disk Space</a></li>
+    </ul>
+  </li>
+</ul>
+:ET
