@@ -27,8 +27,8 @@ markdown: kramdown
 #highlighter: rouge
 enable_coderay: true
 
-plugins:
-  - jekyll-feed
+#plugins:
+#  - jekyll-feed
 
 # Turn on the button to allow students to submit PRs to change a page
 suggest_edits:
@@ -51,7 +51,7 @@ fonts:
   header: "'Ubuntu', sans-serif"
 
 collections:
-  labs:
+  selfpaced:
     output: true
     permalink: /:collection/:name/
   pages:
