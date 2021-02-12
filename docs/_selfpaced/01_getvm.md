@@ -17,5 +17,3 @@ The system we will develop on is a Linux installation on a VMWare Virtual machin
 1. See [Create a VM]({% link _selfpaced/02_createvm.md %})  for how the virtual machine was originally created/configured. 
 1. For things to do to customize your VM, see [Customize Your VM]({% link _selfpaced/03_customizevm.md %}).
 
-
-.

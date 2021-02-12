@@ -1,3 +1,10 @@
+---
+layout: page
+toc: true
+title: Project X-Ray
+lab: 1
+---
+
 # Project XRAY Bootcamp
 
 These instructions provide the "bootcamp" steps for learning about the ProjectXRAY. You can access the project on GitHub at: https://github.com/SymbiFlow/prjxray

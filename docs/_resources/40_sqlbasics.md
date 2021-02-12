@@ -1,3 +1,9 @@
+---
+layout: page
+toc: true
+title: SQL Basics
+lab: 1
+---
 
 ~~~~sql
 
@@ -172,16 +178,7 @@ UNION - Joins results from top to bottom (deleting duplicates)
 
 
 
- 
-
-
-
-
-
-
-
-
-//Primary keys do not reference other tables.
-//Foreign keys reference other tables.
-//Learn about Indexes!!
+* Primary keys do not reference other tables.
+* Foreign keys reference other tables.
+* Learn about Indexes!!
 

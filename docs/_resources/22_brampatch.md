@@ -1,4 +1,9 @@
-# The prjxray-bram-patch Project
+---
+layout: page
+toc: false
+title: bram-patch
+lab: 1
+---
 
 For Immerse 2019, Jonathan Orgill worked on a BRAM patching project.  It is a good example of how you can use the information provided by `prjxray` to manipulate bitstreams.
 
@@ -21,5 +26,3 @@ The Github page for XBP gives instructions for its use.  It assumes you have alr
 * Create a new memory init file (maybe all 1's?) and patch one of the examples - then look to see how the FASM file changed - did it change like you expected?
 * Look through the code to understand how to deal with FASM files and how convert them to/from bitstream files.
 
-----------------------------------
-Initially created by Brent Nelson, May 2020.

@@ -62,5 +62,3 @@ There are hundreds of printed tutorials on the web, find some and read them.  He
 
 - [Learning Git Branching](https://learngitbranching.js.org/?locale=en_US)
 
-----------------------------------
-Initially created by Brent Nelson, April 2020.

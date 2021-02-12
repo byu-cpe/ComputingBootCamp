@@ -1,7 +1,7 @@
 ---
 layout: page
 toc: true
-title: Project X-Ray (prjxray)
+title: prjxray Install
 lab: 1
 ---
 
@@ -42,6 +42,4 @@ For example, if you look into the file "~/prjxray/settings/artix7.sh" you will s
 
 Thus, you start a python virtual environment by sourcing its "activate" script and you leave a python virtual environment by running the "deactivate" shell command.
 
-----------------------------------
-Initially created by Brent Nelson, April 2020.
 
