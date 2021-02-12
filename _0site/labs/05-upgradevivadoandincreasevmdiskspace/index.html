@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    5. Upgrade VM and Increase Disk Space • Immerse Computing Bootcamp
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/css/main.css>
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" sizes="25x17" href=/icon/logo.png>
+
+<script src="https://kit.fontawesome.com/624d595ebf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/"><img src=/icon/logo.png>
+                Bootcamp</a>
+        </div>
+
+        <div class="list-group list-group-flush">
+            
+        </div>
+
+        <div class="sidebar-heading">Self Paced Activities</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/labs/01-getvirtualmachine/" class="list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                1. Getting a VM
+            </a>
+            
+            <a href="/labs/02-createvm/" class="list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                2. Creating a VM
+            </a>
+            
+            <a href="/labs/03-linuxreference/" class="list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                3. Coming Up to Speed on Linux
+            </a>
+            
+            <a href="/labs/04-customizelinux/" class="list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                4. Customize Your Linux VM
+            </a>
+            
+            <a href="/labs/05-upgradevivadoandincreasevmdiskspace/" class="list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                5. Upgrade VM and Increase Disk Space
+            </a>
+            
+            <a href="/labs/06-vivadoandtcl/" class="list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                6. Tcl and Vivado
+            </a>
+            
+            <a href="/labs/07-git/" class="list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                7. Git
+            </a>
+            
+        </div>
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg bg-light border-bottom">
+    <button class="btn btn-brand" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="#" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+    
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits"
+                href="mailto:nelson@ee.byu.edu?subject=Suggested Edits on Immerse Bootcamp Webpage: '5. Upgrade VM and Increase Disk Space'"><i
+                    class="far fa-envelope-open"></i> Suggest
+                Edits</a>
+        </li>
+    </ul>
+    
+</nav>
+
+      <div class="container">
+        <article class="page">
+    <h1 class="page-title" id="page-title">
+        
+        5. Upgrade VM and Increase Disk Space
+    </h1>
+
+  <div class="page-content">
+    
+    <div class="lab-toc col-md-6 col-lg-3 bg-light">
+        <h4>Table of Contents</h4>
+        <ul>
+  <li><a href="#upgrading-vivado">Upgrading Vivado</a></li>
+  <li><a href="#upgrading-vm-disk-space">Upgrading VM Disk Space</a></li>
+</ul>
+
+    </div>
+    
+
+    <h1 id="upgrading-vivado">Upgrading Vivado</h1>
+
+<p>Your VM’s have the Xilinx WebPack on them which is a chopped down (but quite useful version).   But, you may need to upgrade depending on what you are doing.</p>
+
+<p>You do this by going into Vivado and in Help there is an upgrade devices or something link.  FIre that up.  It will start the installer.</p>
+
+<p>The version you want is probably still 2017.2? but you don’t want WebPack you want the “real one”, but I cannot remember the name.  It is NOT Vivado Lab (that is just the download tool).  Also, you do not need SystemGenerator (which is the one just below the one you want).</p>
+
+<p>When done, you have to set the license for it.  All you do is add this to your .bashrc file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    export XILINXD_LICENSE_FILE=2100@ece-xilinx.byu.edu
+</code></pre></div></div>
+
+<p>Then, restart your terminal for it to take effect and Vivado should be happy.</p>
+
+<h1 id="upgrading-vm-disk-space">Upgrading VM Disk Space</h1>
+<p>One more thing, you may not have enough disk space on your VM.  Options include:</p>
+<ol>
+  <li>Create a new VM with larger disk.</li>
+  <li><a href="https://askubuntu.com/questions/116351/increase-partition-size-on-which-ubuntu-is-installed/116367">Enlarge your existing VM’s disk space</a></li>
+</ol>
+
+<p>Option 2 is quicker and not that bad - if you do it I would go to at least 120GB to be safe.  Also, with 2. the instructions are not entirely clear but: a) You shut down the VM, b) Enlarge the disk space in VMWare in the settings for the VM, c) Follow the instructions in the webpage, d) Reboot as directed (maybe multiple times).</p>
+
+  </div>
+</article>
+
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

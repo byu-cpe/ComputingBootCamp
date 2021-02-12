@@ -1,0 +1,42 @@
+<!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="{% link index.html %}"><img src={{ "/icon/logo.png" | relative_url }}>
+                {{ site.class_number }}</a>
+        </div>
+
+        <div class="list-group list-group-flush">
+            {% for item in site.pages %}
+            <!-- Look for specific front-matter tag -->
+            {% if item.link %}
+            <a href="{{item.link }}" class="list-group-item list-group-item-action bg-light sidebar-item" {% if
+                item.new_window %}target="_blank" {% endif %}>
+                {% if item.icon %}
+                <i class="{{ item.icon }}"></i>
+                {% endif %}
+                {{ item.title }}
+            </a>
+            {% else %}
+            <a href="{% link {{item.path }} %}" class="list-group-item list-group-item-action bg-light sidebar-item">
+                {% if item.icon %}
+                <i class="{{ item.icon }}"></i>
+                {% endif %}
+                {{ item.title }}
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="sidebar-heading">Self Paced Activities</div>
+        <div class="list-group list-group-flush">
+            {% for item in site.labs %}
+            <a href="{% link {{item.path }} %}" class="list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">{{ item.number }}</span>
+                {{ item.title }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->

@@ -1,0 +1,29 @@
+00:00:56	I can!
+00:06:28	Does anyone see anything on the screen? I only see a blank black background.
+00:06:36	I can see it
+00:06:39	I see the screen
+00:06:39	I can see it
+00:06:43	I can see his screen
+00:06:43	I can see it as well
+00:06:47	I can see it
+00:12:26	*cough cough* vim is the best
+00:12:44	if you hate yourself ;)
+00:12:57	Vim is the best but for starters try nano or gedit
+00:13:27	+1 ^^^
+00:14:46	Can you have different .gitconfigs for different projects?
+00:14:58	(would that ever be necessary?)
+00:16:08	Yes, you can, but it is in a different location.
+00:16:19	I think it is in .git/config.
+00:16:31	~/.gitconfig is for global settings
+00:18:34	if you didn't want to add the .o files but worried about other people compiling the code is that when you would make a Make file and add that?
+00:19:10	I'm not 100% sure what you're asking, but yes, we usually have some way to build our projects (Make, CMake, etc)  Those are committed into the repo
+00:19:36	Anything that the build system creates on the fly (.o, .elf, .exe, .a, etc) are generally not committed
+00:23:03	Where is the information for past commits stored? Is that all in the .git file?
+00:23:07	yes
+00:23:16	everything is in there...but you never look inside ;)
+00:36:31	Doesn't rm -rf do the same thing?
+00:37:16	yes
+00:37:33	I've never seen the "yes |" technique
+00:37:46	Ha me neither.
+00:43:17	Does git let you do a public/private key like with ssh?
+00:46:16	I have used git for school group projects

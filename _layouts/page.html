@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="page">
+    <h1 class="page-title" id="page-title">
+        {% if page.icon %}
+        <i class="{{ page.icon }}"></i>
+        {% endif %}
+        {{ page.title }}
+    </h1>
+
+  <div class="page-content">
+    {% if page.toc %}
+    <div class="lab-toc col-md-6 col-lg-3 bg-light">
+        <h4>Table of Contents</h4>
+        {% include toc.html html=content %}
+    </div>
+    {% endif %}
+
+    {{ content }}
+  </div>
+</article>
