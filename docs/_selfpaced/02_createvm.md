@@ -86,5 +86,3 @@ to change the xxxx.xx to be your Vivado version:
   * ``cd data/xicom/cable_drivers/lin64/install_script/install_drivers/``
   * ``sudo ./install_drivers``
 
---------------------------
-Initially created by Brent Nelson, March 2020.

@@ -1,4 +1,11 @@
-# The Symbiflow-Examples Repo
+---
+layout: page
+toc: true
+title: symbiflow-examples
+lab: 1
+---
+
+Not sure we want this.  Has been in huge flux the past few months.  Does provide an end-to-end flow: Verilog --> yosys/vpr --> 
 
 One of the goals of the Symbiflow project is to get a complete Verilog-to-Bitstream CAD tool flow out to users.  This can now be found at https://github.com/symbiflow/symbiflow-examples with three example circuits (and they are not necessarily toy circuits!).  
 
@@ -16,7 +23,4 @@ Also, find the .bit files generated - if you had the right board you could downl
 * Are there any steps that seem to take an especially long time?
 * From the Symbiflow Github or readthedocs pages, can you figure out what boards are supported?  
 * At the current time the board from the digital lab in our department is not supoprted.  But, they would very much like for it to be supported and have provided some thoughts on what needs to be done.  If you are interested, let Prof Nelson know - it could be a fun side project and the department would definitely loan you a board to use for it...
-
-----------------------------------
-Initially created by Brent Nelson, May 2020.
 

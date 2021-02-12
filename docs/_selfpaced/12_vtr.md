@@ -63,6 +63,3 @@ Docs on this can be found at: https://symbiflow-arch-defs.readthedocs.io/en/late
 ### Updating symbiflow-arch-defs With Submodules
 Doing a ``git pull`` will not update the submodules of a repo.  To update them too after a pull, you need to do ``git submodule update --init --recursive`` too.
 
-
-----------------------------------
-Created by Brent Nelson, June 2020.

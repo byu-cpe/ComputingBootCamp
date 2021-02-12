@@ -82,5 +82,3 @@ For a given wiring switchbox in the device:
       1. Give the destination wire and whether the connection to that wire is programmable or permanent (yes, Xilinx parts actually have non-programmable PIPs - they are always on).
       1. The tile location of the other wire.
 
-----------------------------
-Created by Brent Nelson, April 2020 (happy coronavirus!).

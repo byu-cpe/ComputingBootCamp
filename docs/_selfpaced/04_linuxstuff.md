@@ -55,5 +55,3 @@ This is how you move files between machines.
 
 The instructions at the bottom of [Create a VM]({% link _selfpaced/02_createvm.md %}) (item 6) can show you how to set it up so that your local machine is trusted by your Linux machine and so you don't have to specify your password every time.  And, if your username on your local machine is the same as the remote machine, you don't have to specify a username either and can just do:  "scp files 192.168.52.23:Downloads".
 
-----------------------------------
-Initially created by Brent Nelson, April 2020.
