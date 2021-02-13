@@ -2,7 +2,7 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-sticky">
         <div class="sidebar-heading-big">
-            <a href="{% link index.html %}"><img src={{ "/icon/logo.png" | relative_url }}>
+            <a href="{{ site.baseurl }}"><img src={{ "/icon/logo.png" | relative_url }}>
                 {{ site.class_number }}</a>
         </div>
 
@@ -10,7 +10,8 @@
         <div class="sidebar-heading-big">Self Paced Activities</div>
         <div class="list-group list-group-flush">
             {% for item in site.selfpaced %}
-            <a href="{{item.url}}" class="list-group-item list-group-item-action bg-light sidebar-item">
+            <a href="{{ site.baseurl }}{{item.url}}"
+                class="list-group-item list-group-item-action bg-light sidebar-item">
                 <span class="badge badge-pill badge-dark-grey">{{ item.number }}</span>
                 {{ item.title }}
             </a>
@@ -21,7 +22,8 @@
         <div class="sidebar-heading-big">Resources</div>
         <div class="list-group list-group-flush">
             {% for item in site.resources %}
-            <a href="{{item.url}}" class="list-group-item list-group-item-action bg-light sidebar-item">
+            <a href="{{ site.baseurl }}{{item.url}}"
+                class="list-group-item list-group-item-action bg-light sidebar-item">
                 <span class="badge badge-pill badge-dark-grey">{{ item.number }}</span>
                 {{ item.title }}
             </a>

@@ -18,7 +18,7 @@ class_name: Bootcamp
 class_number: Bootcamp
 email: brentnelson@byu.edu
 description: This is the lab website for the Immerse bootcamp.
-baseurl: "/ComputingBootCamp" # the subpath of your site, e.g. /blog
+baseurl: "/ComputingBootCamp/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
