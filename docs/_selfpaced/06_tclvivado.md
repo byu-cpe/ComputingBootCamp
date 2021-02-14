@@ -5,7 +5,12 @@ title: Tcl and Vivado
 lab: 1
 ---
 
-You need to be comfortable with running Vivado from the command line and in using Tcl to create scripts to control Vivado and to query your design.
+Tcl is a command language used in a variety of CAD tools.  Our interest in it is for use with Vivado - it is the scripting language that Vivado's command line capability is based on.  Using it you can do 2 main things:
+
+1. Write scripts to automate the processes we typically used the Vivado GUI for.  These include design creation, synthesis, implementation, and bitstream generation.
+2. Write scripts to create, modify, or query designs.  That is, Vivado contains methods to add cells and wires to a design and place and route them individually.  It also contains methods to query and analyze existing designs in terms of determining the cells, wires, and placement information in the design as well as querying Vivado's device representation.
+
+The goal of this unit is to help you get comfortable with running Vivado from the command line to accomplish these tasks.
 
 # Task 1: Refresh Your Vivado Abilities With the GUI
 * Take an FPGA design from a previous class you have had
