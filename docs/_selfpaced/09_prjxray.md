@@ -3,6 +3,7 @@ layout: page
 toc: true
 title: Project X-Ray
 lab: 1
+type: fpga_opensource
 ---
 
 # Project XRAY Bootcamp

@@ -4,6 +4,7 @@ layout: page
 toc: true
 title: VTR
 lab: 1
+type: fpga_opensource
 ---
 
 # Symbiflow and VTR
