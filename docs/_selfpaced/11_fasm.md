@@ -3,6 +3,7 @@ layout: page
 toc: true
 title: FASM (FPGA Assembly)
 lab: 1
+type: fpga_opensource
 ---
 
 # Symbiflow's FASM

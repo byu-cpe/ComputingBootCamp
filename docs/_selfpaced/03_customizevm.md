@@ -3,6 +3,8 @@ layout: page
 toc: true
 title: Customize Your VM
 lab: 1
+type: setup
+
 ---
 
 # Do This First

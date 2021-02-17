@@ -3,6 +3,7 @@ layout: page
 toc: true
 title: symbiflow-examples
 lab: 1
+type: fpga_opensource
 ---
 
 Not sure we want this.  Has been in flux the past few months.  But, is sort of the only it does provide an end-to-end flow: Verilog --> yosys/vpr --> bitstream.
