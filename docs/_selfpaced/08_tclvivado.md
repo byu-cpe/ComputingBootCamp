@@ -13,20 +13,22 @@ Tcl is a command language used in a variety of CAD tools.  Our interest in it is
 The goal of this unit is to help you get comfortable with running Vivado from the command line to accomplish these tasks.
 
 # Task 1: Refresh Your Vivado Abilities With the GUI
-* Take an FPGA design from a previous class you have had
+To begin with, let's review what you already know about using Vivado in GUI mode.
+* Take an FPGA design from a previous class you have had or project you have done
 * Using the Vivado (GUI mode) in your VM:
-  * Open it
+  * Open it (or create a new project if needed)
   * Modify it
-  * Re-simulate it using the built-in simulator
-    * Figure out how to add just the signals you care about to the waveform display.  There is a tutorial [here from ECEn 323](http://ecen323wiki.groups.et.byu.net/dokuwiki/doku.php?id=tutorials:simulation_tutorials) which may help in the next few steps.
+  * Simulate it using the built-in simulator
+    * Figure out how to add just the signals you care about to the waveform display.  There is a tutorial [here from BYU's ECEn 323](http://ecen323wiki.groups.et.byu.net/dokuwiki/doku.php?id=tutorials:simulation_tutorials) which may help in the next few steps.
     * Figure out how to add dividers between groups of signals in the waveform display
     * Figure out how to change the radix used to display the values of multi-bit signals
     * Figure out how to jump to the next signal transition for a selected signal in the waveform display
     * Figure out how to save the waveform display setup you have created and then re-load it for a later simulation
-  * Write you own SystemVerilog-based testbench for it and simulate it that way instead of with a Tcl file.  You can find details on testbenches [at this BYU tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/SVTestbenches).  Note that that tutorial is outside this Github repository so use the Back button to return to here...
+  * Write you own SystemVerilog-based testbench for it and simulate it that way instead of with a Tcl file.  You can find details on testbenches [at this BYU tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/SVTestbenches).  Note that that tutorial is outside this website so use the Back button to return to here...
 
 # Task 2: Learn How to Do All the Above Using Tcl
-You can do everything from above (except physically view simulation waveforms) using a script containing Tcl commands.  That is, you can compile code, start a simulation, synthesize/implement/generate bitstreams, etc.
+You can do everything from above (except physically view simulation waveforms) using a script containing Tcl commands.  That is, you can create projects, add design files, compile your design files, start a simulation, synthesize/implement/generate bitstreams, etc.
+
 This is often a preferred way to work since you want to be able to write a complete Tcl script to do what you want (create, implement, and then analyze a design) without your having to manually drive the GUI click by click.
 
 To learn how to use Tcl, work your way through this [BYU Tcl Tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/TclVivado).
@@ -37,14 +39,14 @@ Then:
 * For things that don't require the GUI (like synthesizing), do everything by running "vivado -mode tcl" and just do it from the command line.
 * Experiment with starting and stopping the GUI.
 
-Finally, a hint: anything you do in the GUI in Vivado (with some exceptions) will put the resulting Tcl command to accomplish that into the Tcl console.  So, one way to learn how to do things is to do them graphically and then look to see what the equivalent Tcl commands to accomplish that are.  
+Finally, a hint: anything you do in the GUI in Vivado (with a few exceptions) will put the resulting Tcl command to accomplish that into the Tcl console log.  So, one way to learn how to do things is to do them graphically and then look to see what the equivalent Tcl commands to accomplish that are.  
 
 Just remember that you usually are in project mode when you create and work with projects from the GUI.  And, you are in non-project mode when you create designs solely using Tcl commands.  And, note that the commands for doing certain tasks in project mode are different for non-project mode.  So you can only take the above paragraph's hint so far in learning Tcl commands.
 
 # Task 3: Write Some Additional Tcl Scripts to Learn More
 
 ## Mini-project 1
-You can prevent what sites Vivado will use when doing 'place_design'.  If a site has a PROHIBIT property attached to it then Vivado will avoid using it.  This experiment entails:
+You can prevent what sites Vivado will use when doing placement ('place_design').  If a site has a PROHIBIT property attached to it then Vivado will avoid using it.  This experiment entails:
 
 1. Write a Tcl script to attach the PROHIBIT property to every SLICE, BRAM, and DSP site in the chip.  You can do a "get-sites" call to get all sites.  Look at what comes back and figure out what names you can filter on  (like SLICE*).  You then attach the property to each thing returned.  
 1. Now, remove the property at specific locations (maybe a rectangle or donut shaped area in the middle or corner of the chip.  
