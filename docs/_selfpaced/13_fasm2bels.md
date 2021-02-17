@@ -3,6 +3,7 @@ layout: page
 toc: true
 title: fasm2bels
 lab: 1
+type: fpga_opensource
 ---
 
 Do we want a fasm2bels document?  It would be a pretty trivial activity but woudl be useful because it would:

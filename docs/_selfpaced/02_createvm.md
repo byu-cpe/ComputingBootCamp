@@ -3,6 +3,8 @@ layout: page
 toc: true
 title: Create a VM
 lab: 1
+type: setup
+
 ---
 
 # Machine Creation Script

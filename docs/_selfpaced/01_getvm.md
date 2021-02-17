@@ -3,6 +3,7 @@ layout: page
 toc: true
 title: Get a VM
 lab: 1
+type: setup
 ---
 
 # Getting and Running a Linux Virtual Machine
