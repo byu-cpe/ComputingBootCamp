@@ -29,3 +29,6 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 | Mon Jun 16 | Docker 
 |            | Travis-CI 
 
+## Other Topics
+
+* numpy/pandas/matplotlib
