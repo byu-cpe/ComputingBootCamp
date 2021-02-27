@@ -54,7 +54,9 @@
         shown = JSON.parse(shown);
 
         shown.forEach(function (item, index) {
+            $("#" + item).addClass('no-collapse-animation')
             $("#" + item).collapse("show");
+            $("#" + item).removeClass('no-collapse-animation')
         });
     });
 
