@@ -1,16 +1,11 @@
 ---
 layout: page
 toc: true
-title: Installing Vitis/Vivado
+title: Install Vivado/Vitis
 type: fpga_commercial
 order: 1
 ---
 
----
-layout: page
-toc: false
-title: Install Vivado/Vitis
----
 
 We will be using several Xilinx software tools, including Vivado, Vitis, and Vitis HLS.  These can all be installed using a single _Vitis_ installer.  
 
