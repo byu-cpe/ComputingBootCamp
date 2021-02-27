@@ -48,26 +48,14 @@
     $(document).ready(function () {
         var shown = Cookies.get('expandedSidebars');
         if (!shown) {
-            console.log('jbg');
-            $("#collapsesetup").collapse("show");
+            // $("#collapsesetup").collapse("show");
             return;
         }
         shown = JSON.parse(shown);
 
         shown.forEach(function (item, index) {
-            console.log(item, index);
             $("#" + item).collapse("show");
         });
-        // console.log(Cookies.get('expandedSidebars'));
-        return;
-
-        var last = $.cookie('activeAccordionGroup');
-        if (last != null) {
-            //remove default collapse settings
-            $("#accordion2 .collapse").removeClass('in');
-            //show the last visible group
-            $("#" + last).collapse("show");
-        }
     });
 
     {% for group in site.data.groups %}
@@ -80,8 +68,6 @@
         shown = JSON.parse(shown);
         shown.push("collapse{{group.key}}");
         Cookies.set('expandedSidebars', JSON.stringify(shown));
-
-        console.log(shown);
     });
 
     // When a group is hidden, remove it from the 'exapndedSidebars' cookie
@@ -95,8 +81,6 @@
             return value != "collapse{{group.key}}"
         });
         Cookies.set('expandedSidebars', JSON.stringify(shown));
-
-        console.log(shown);
     });
 
     {% endfor %}
