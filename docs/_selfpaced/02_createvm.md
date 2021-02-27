@@ -8,9 +8,9 @@ type: setup
 ---
 
 # Machine Creation Script
-* Use ubuntu-xx.xx.xx-desktop-amd64.iso - get from Ubuntu website (do a search) - the xx.xx.xx are version numbers.  You may want 16.04, 18.04, or some other version.
+* Use ubuntu-xx.xx.xx-desktop-amd64.iso - get from Ubuntu website (do a search) - the xx.xx.xx are version numbers.  You may want 16.04, 18.04, 20.04, or some other version.  You will note they all end in ".04" - these are the LTS or long term support versions of Ubuntu Linux.
 
-* Create new machine using VMWare, specifying above file when asked.  Use the following for login info:
+* Create new machine using VMWare, specifying above file when asked.  Specify whatever you would like for 
   * Username: student
   * Password: fpga
 

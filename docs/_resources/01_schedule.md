@@ -18,14 +18,17 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 | Wed May 12 | C++ programming helps  
 |            | make and cmake  
 | Mon May 17 | GIT and Github  
-| Wed May 19 | RapidWright and Interchange 
-| Mon May 24 | Prjxray & FASM  
-|            | fasm2bels, fpga-tool-perf, symbiflow-examples 
+| Wed May 19 | LaTeX  
+|            | ReadTheDocs
+| Mon May 24 | Docker 
+|            | Travis-CI 
 | Wed May 26 | Start Immerse talks 
 | Mon May 31 | HOLIDAY 
-| Mon Jun 7  | VTR and Symbiflow-VTR  
-| Mon Jun 9  | LaTeX  
-|            | ReadTheDocs 
-| Mon Jun 16 | Docker 
-|            | Travis-CI 
+| Mon Jun 7  | RapidWright and Interchange 
+| Mon Jun 9  | Prjxray & FASM  
+| Mon Jun 16 | fasm2bels, fpga-tool-perf, symbiflow-examples 
+| Mon Jun 23 | VTR and Symbiflow-VTR  
 
+## Other Topics
+
+* numpy/pandas/matplotlib
