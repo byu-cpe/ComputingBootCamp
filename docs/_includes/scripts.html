@@ -12,6 +12,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+<script src={{ "/js/js.cookie-2.2.1.min.js" | relative_url }}></script>
+
 
 
 <!-- Menu Toggle Script -->
@@ -37,4 +39,70 @@
         prevVisible = currentVisible;
     });
 
+</script>
+
+
+<!-- Sidebar memory script -->
+<script type="module">
+
+    $(document).ready(function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown) {
+            console.log('jbg');
+            $("#collapsesetup").collapse("show");
+            return;
+        }
+        shown = JSON.parse(shown);
+
+        shown.forEach(function (item, index) {
+            console.log(item, index);
+            $("#" + item).collapse("show");
+        });
+        // console.log(Cookies.get('expandedSidebars'));
+        return;
+
+        var last = $.cookie('activeAccordionGroup');
+        if (last != null) {
+            //remove default collapse settings
+            $("#accordion2 .collapse").removeClass('in');
+            //show the last visible group
+            $("#" + last).collapse("show");
+        }
+    });
+
+    $(window).unload(function () {
+        Cookies.remove('expandedSidebars');
+    });
+
+
+    {% for group in site.data.groups %}
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapse{{group.key}}").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapse{{group.key}}");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+
+        console.log(shown);
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapse{{group.key}}").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapse{{group.key}}"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+
+        console.log(shown);
+    });
+
+    {% endfor %}
 </script>
