@@ -6,4 +6,62 @@ type: fpga_commercial
 order: 1
 ---
 
-## TBD
+---
+layout: page
+toc: false
+title: Install Vivado/Vitis
+---
+
+We will be using several Xilinx software tools, including Vivado, Vitis, and Vitis HLS.  These can all be installed using a single _Vitis_ installer.  
+
+### Download
+
+1. Go to <https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html>
+
+2. On the left-hand bar, select _2020.2_, and find the section _Vitis Core Development Kit - 2020.2  Full Product Installation_.
+
+3. You can either:
+    * Download all the files upfront (_All OS installer Single-File Download_), or 
+    * Download files as you install using the Web Installer:
+      * Windows: _Xilinx Unified Installer 2020.2: Windows Self Extracting Web Installer_ 
+      * Linux:  _Xilinx Unified Installer 2020.2: Linux Self Extracting Web Installer_
+
+4. You will need a free Xilinx account in order to download the software.
+
+### Running the Installer
+Depending on how you downloaded the files, you will run the installer differently:
+  * _All OS installer Single-File Download_:
+    * Windows 
+        * Extract the files from the _Xilinx_Unified_2020.2_1118_1232.tar.gz_ archive using a program like 7-zip.
+        * Run _xsetup.exe_
+    * Linux:
+        * Extract the files from the _Xilinx_Unified_2020.2_1118_1232.tar.gz_ archive: `tar -xvf Xilinx_Unified_2020.2_1118_1232.tar.gz`
+        *  Run the installer: `sudo ./xsetup`
+
+  * Web installer:
+    * Windows: 
+      * Run _Xilinx_Unified_2020.2_1118_1232_Win64.exe_
+    * Linux: 
+      * Run the installer: `sudo ./Xilinx_Unified_2020.2_1118_1232_Lin64.bin`
+
+### Installer Options
+  1. Enter your Xilinx account information, and select _Download and Install Now_.
+  2. On the _Select Product to Install_ screen, choose _Vitis_.
+  3. On the customization screen, uncheck everything, except make sure you have:
+     *  _SoCs/Zynq-7000_ or _SoCs/Zynq Ultrascale+ MPSoC_, depending on which board type you are using.
+     *  Install Cable Drivers
+
+  4. On the next screen, agree to all boxes.
+  5. On the next screen, choose an installation location with enough space.
+  6. On the next screen, click _Install_ and wait a while.
+
+### Install Cable Drivers
+
+If you are using Windows, your cable driver will have been installed during the installation process.  If you are using Linux, you must install them manually:
+
+```
+cd /tools/Xilinx/Vivado/2020.2/data/xicom/cable_drivers/lin64/install_script/install_drivers
+sudo ./install_drivers
+```
+
+
