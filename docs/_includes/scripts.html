@@ -70,11 +70,6 @@
         }
     });
 
-    $(window).unload(function () {
-        Cookies.remove('expandedSidebars');
-    });
-
-
     {% for group in site.data.groups %}
 
     // When a group is expanded, save it to the 'expandedSidebars' cookie.
