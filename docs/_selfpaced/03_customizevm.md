@@ -129,8 +129,5 @@ The version you want is probably still 2017.2? but you don’t want WebPack you 
 
 When done, you have to set the license for it.  All you do is add this to your .bashrc file:
 
-```
-    export XILINXD_LICENSE_FILE=2100@ece-xilinx.byu.edu
-```
 
 Then, restart your terminal for it to take effect and Vivado should be happy.
