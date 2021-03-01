@@ -182,3 +182,7 @@ table {
 .fpga-icon {
     background: url("../images/fpga.svg") no-repeat center center;
             }
+
+.no-collapse-animation {
+    transition: none !important;
+    }

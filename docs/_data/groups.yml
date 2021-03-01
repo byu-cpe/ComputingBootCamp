@@ -3,12 +3,9 @@
 
 - key: development
   title: Software Development
-  collapsed: true
 
 - key: fpga_commercial
   title: Commerical FPGA
-  collapsed: true
 
 - key: fpga_opensource
   title: Open FPGA CAD
-  collapsed: true

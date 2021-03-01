@@ -11,13 +11,13 @@
         {% for group in site.data.groups %}
         <div class="card">
 
-            <div class="sidebar-heading-big btn-link {% if {{group.collapsed}} %} collapsed {% endif %}"
-                data-toggle="collapse" data-target="#collapse{{group.key}}" aria-expanded="{{group.expanded}}"
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapse{{group.key}}" aria-expanded="{{group.expanded}}"
                 aria-controls="collapse{{group.key}}">
                 {{group.title}}
             </div>
 
-            <div id="collapse{{group.key}}" class="collapse {% unless {{group.collapsed}} %} show {% endunless %}">
+            <div id="collapse{{group.key}}" class="collapse">
                 <div class="list-group list-group-flush">
                     {% for item in self_paced_sorted %}
                     {% if item.type == {{group.key}} %}
