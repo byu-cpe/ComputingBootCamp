@@ -127,7 +127,3 @@ Your VM’s have the Xilinx WebPack on them which is a chopped down (but quite u
 
 The version you want is probably still 2017.2? but you don’t want WebPack you want the “real one”.  It is NOT Vivado Lab (that is just the download tool).  Also, you do not need SystemGenerator (which is the one just below the one you want).  
 
-When done, you have to set the license for it.  All you do is add this to your .bashrc file:
-
-
-Then, restart your terminal for it to take effect and Vivado should be happy.
