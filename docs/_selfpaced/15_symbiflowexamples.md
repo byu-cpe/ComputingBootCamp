@@ -6,7 +6,7 @@ lab: 1
 type: fpga_opensource
 ---
 
-Not sure we want this.  Has been in flux the past few months.  But, is sort of the only it does provide an end-to-end flow: Verilog --> yosys/vpr --> bitstream.
+This is useful because it provides and illustrates an end-to-end flow: Verilog --> yosys/vpr --> bitstream.
 
 One of the goals of the Symbiflow project is to get a complete Verilog-to-Bitstream CAD tool flow out to users.  This can now be found at https://github.com/symbiflow/symbiflow-examples with three example circuits (and they are not necessarily toy circuits!).  
 

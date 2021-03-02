@@ -7,6 +7,7 @@ type: development
 
 ---
 
-Do we want an activity on these?  It would be activities tied to the talk(s) given.
+TODO: 
+- What self-paced activities do we want on these?  It would be activities tied to the talk(s) given.
 
 Combining python with Conda likely makes sense.

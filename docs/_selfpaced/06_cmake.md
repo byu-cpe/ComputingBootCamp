@@ -7,4 +7,4 @@ type: development
 
 ---
 
-Do we want an activity on this?
+TODO: Do we want self-paced learning activities on this?  Or will pointers to the videos be sufficient?
