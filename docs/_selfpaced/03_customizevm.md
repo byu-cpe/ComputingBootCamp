@@ -4,7 +4,7 @@ toc: true
 title: Customize Your VM
 lab: 1
 type: setup
-
+order: 3
 ---
 
 # Do This First

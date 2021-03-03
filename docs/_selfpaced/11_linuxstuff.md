@@ -4,7 +4,7 @@ toc: true
 title: Linux stuff
 lab: 1
 type: development
-
+order: 2
 ---
 
 Our work will be nearly 100% Linux and so you will want to invest significant time into becoming proficient with Linux.  It is a skill worth much and so you will be benefiting yourself by doing so.

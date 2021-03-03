@@ -4,7 +4,7 @@ toc: true
 title: Python and Conda
 lab: 1
 type: development
-
+order: 5
 ---
 
 TODO: 

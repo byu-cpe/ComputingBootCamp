@@ -3,6 +3,8 @@ layout: page
 toc: false
 title: bit2fasm
 lab: 1
+type: fpga_opensource
+order: 5
 ---
 
 This page provides details on how the bit2fasm.py script within Project XRAY works. There are two primary sections of this description. The first, [Code](#code), describes the code in the various files that perform the bit2fasm functionality. The second, [Data Structures](#data-structures), describes the data structures used by the code. 

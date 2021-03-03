@@ -4,6 +4,7 @@ toc: true
 title: symbiflow-examples
 lab: 1
 type: fpga_opensource
+order: 7
 ---
 
 This is useful because it provides and illustrates an end-to-end flow: Verilog --> yosys/vpr --> bitstream.

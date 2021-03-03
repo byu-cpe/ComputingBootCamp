@@ -1,10 +1,10 @@
-
 ---
 layout: page
 toc: true
 title: VTR
 lab: 1
 type: fpga_opensource
+order: 9
 ---
 
 # Symbiflow and VTR

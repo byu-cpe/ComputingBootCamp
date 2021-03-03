@@ -4,6 +4,7 @@ toc: true
 title: fasm2bels
 lab: 1
 type: fpga_opensource
+order: 6
 ---
 
 Using fasm2bels would be a useful activity because it would:
