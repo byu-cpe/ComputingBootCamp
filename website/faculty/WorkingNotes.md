@@ -26,5 +26,6 @@ lab: 1
 
 ## VS Code - CREATE, BY_WHOM?
 - I had students balk at using VS code last summer.  I plan on telling them they ing them use something without a good debugger was not worth it.
+- Need to flesh this out, have listed a few topics on the page itself.
 
 
