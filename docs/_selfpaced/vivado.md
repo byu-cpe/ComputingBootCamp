@@ -6,11 +6,6 @@ type: fpga_commercial
 order: 2
 ---
 
----
-layout: page
-toc: false
-title: Vivado Tutorial
----
 
 ## Setup
 
