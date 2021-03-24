@@ -84,6 +84,7 @@ exclude:
   - JOURNAL.md
   - LINKCHECK.md
   - Makefile
+  - faculty/
 
 # I have the compiled files being put into _site since I often mistakenly open it since it is in the middle of my files list.
 # Changing it to get it at the top of the list to avoid that
