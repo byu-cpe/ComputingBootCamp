@@ -57,3 +57,12 @@ This is how you move files between machines.
 
 The instructions at the bottom of [Create a VM]({% link _selfpaced/02_createvm.md %}) (item 6) can show you how to set it up so that your local machine is trusted by your Linux machine and so you don't have to specify your password every time.  And, if your username on your local machine is the same as the remote machine, you don't have to specify a username either and can just do:  "scp files 192.168.52.23:Downloads".
 
+# Possible Topics to Add
+Students will need to be forced to not use the GUI for everything.  Are we ready to do so?  Some topics that likely will require this might/probably include are listed below. However, I am so clueless about what the FileExplorer can do that maybe it can do all these :-(
+
+- Writing shell scripts (especially if they take parameters)
+- Really understanding and manipulating permissions.  It is true the GUI can do it (with about 9 clicks) but when when knowledgeable people start talking about them as in 'permission should be 755' we don't want them to lost.
+- Things like `find . -name \*.sv -exec cp {} /tmp \;`  (OK, so that may be a bit obtuse but I use it multiple times per week).  But, even things like `chgrp fpga *.sv` are useful
+
+What else?
+- 

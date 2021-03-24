@@ -24,8 +24,13 @@ lab: 1
 - Delete outdated stuff (RapidSith)
 - Move good stuff into topic above
 
-## VS Code - CREATE, BY_WHOM?
+## VS Code - CREATE, SELF_PACED, BY_WHOM?
 - I had students balk at using VS code last summer.  I plan on telling them they ing them use something without a good debugger was not worth it.
 - Need to flesh this out, have listed a few topics on the page itself.
 
+## Linux Stuff - SELF_PACED
+- Clearly needs fixing up - was the result of a good 4 minutes of my time last spring...
+- Should point at some good tutorials
+- Should decide what we really want them to know, I would hope we could go beyond the 220/330 level treatment and expect them to actually know command line.  
+- But that begs the question - why, especially given our conversation of today? I thus recommend we have some serious command line stuff to maybe motivate it - would want them to be things that would be quite difficult graphically.  See bottom of that page for some new things we might could add....
 
