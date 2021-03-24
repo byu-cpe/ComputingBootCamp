@@ -38,7 +38,7 @@ suggest_edits:
 colors:
   text_color: "#111"
   background_color: "#fdfdfd"
-  brand_color: "rgb(46, 94, 250)"
+  brand_color: "#0a69a8"
   secondary_color: "#c3e6ef"
   text_selection_color: "rgba(0, 98, 184, .5)"
   sidebar_hover_color: "#0062B8"
@@ -48,7 +48,7 @@ fonts:
   base: "'neue-haas-unica', 'Helvetica Neue', Helvetica, Arial, sans-serif"
   # header: "omnium, sans-serif"
   # If you want a more traditional font, consider using this instead:
-  header: "'Ubuntu', sans-serif"
+  header: "'Exo 2', sans-serif"
 
 collections:
   selfpaced:

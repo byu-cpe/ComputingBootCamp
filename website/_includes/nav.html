@@ -1,18 +1,25 @@
-<nav class="navbar sticky-top navbar-expand-lg bg-light border-bottom">
-    <button class="btn btn-brand" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-    </button>
+<nav class="navbar sticky-top navbar-expand-lg title-bar border-bottom d-flex flex-row">
+    <div>
+        <button class="btn btn-brand" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <div class="flex-fill">
+        <p class="title-text">BYU Computing Boot Camp</p>
+    </div>
 
-    <a href="#" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+    <!-- <a href="#" class="navbar-brand mb-0 h1  page-title-bar text-center mx-auto" id="page-title-bar"></a> -->
 
     {% if site.suggest_edits.enable %}
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link btn btn-brand suggest-edits"
-                href="mailto:nelson@ee.byu.edu?subject=Suggested Edits on Immerse Bootcamp Webpage: '{{page.title}}'"><i
-                    class="far fa-envelope-open"></i> Suggest
-                Edits</a>
-        </li>
-    </ul>
+    <div class="p-2">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link btn btn-brand suggest-edits"
+                    href="mailto:nelson@ee.byu.edu?subject=Suggested Edits on Immerse Bootcamp Webpage: '{{page.title}}'"><i
+                        class="far fa-envelope-open"></i> Suggest
+                    Edits</a>
+            </li>
+        </ul>
+    </div>
     {% endif %}
 </nav>

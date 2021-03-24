@@ -23,8 +23,9 @@ h3 {
 }
 
 .btn-brand {
-    color: $brand-color !important;
-    border-color: $brand-color;
+    color: white !important;
+    background-color: #505050 !important;
+    border-color: white;
     background-color: rgba(0, 0, 0, 0);
 
     &:hover {
@@ -186,3 +187,40 @@ table {
 .no-collapse-animation {
     transition: none !important;
     }
+
+.title-bar {
+    background: linear-gradient(
+  180deg,
+  #f18321,
+  #f18321 30%,
+  #f26448 30% 50%,
+  #d882a1 50% 70%,
+  #0a69a8 70%
+  
+);
+// min-height: 80px;
+// height: 70px;
+}
+
+.title-text {
+    font-size: xxx-large;
+    font-weight: 800;
+    color:$background_color;    
+    text-align: center;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.highlighter-rouge {
+    .highlight {
+        background:lighten(#d882a1,20%);
+    }
+}
+
+pre,code {
+    background-color: lighten(#d882a1,20%);
+}
+
+.btn-link {
+    color: $brand-color;
+}
