@@ -4,9 +4,10 @@ toc: true
 title: fasm2bels
 lab: 1
 type: fpga_opensource
+order: 6
 ---
 
-Do we want a fasm2bels document?  It would be a pretty trivial activity but woudl be useful because it would:
+Using fasm2bels would be a useful activity because it would:
 * It is a 2nd Symbiflow repo with its own install instructions to get them use to the idea of Symbiflow having multiples
 * Provide an example of a program that uses the prjxray database
 * Show them Verilog schematics and introduce Xilinx primitives - something they will have never seen before

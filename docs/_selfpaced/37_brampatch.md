@@ -3,6 +3,8 @@ layout: page
 toc: false
 title: bram-patch
 lab: 1
+type: fpga_opensource
+order: 8
 ---
 
 For Immerse 2019, Jonathan Orgill worked on a BRAM patching project.  It is a good example of how you can use the information provided by `prjxray` to manipulate bitstreams.

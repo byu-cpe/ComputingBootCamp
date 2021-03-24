@@ -4,9 +4,10 @@ toc: true
 title: Python and Conda
 lab: 1
 type: development
-
+order: 5
 ---
 
-Do we want an activity on these?  It would be activities tied to the talk(s) given.
+TODO: 
+- What self-paced activities do we want on these?  It would be activities tied to the talk(s) given.
 
 Combining python with Conda likely makes sense.

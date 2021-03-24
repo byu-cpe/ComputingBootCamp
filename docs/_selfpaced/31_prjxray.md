@@ -4,6 +4,7 @@ toc: true
 title: Project X-Ray
 lab: 1
 type: fpga_opensource
+order: 1
 ---
 
 # Project XRAY Bootcamp

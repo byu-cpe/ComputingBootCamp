@@ -4,6 +4,7 @@ toc: true
 title: FASM (FPGA Assembly)
 lab: 1
 type: fpga_opensource
+order: 3
 ---
 
 # Symbiflow's FASM

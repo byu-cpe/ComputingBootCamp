@@ -4,6 +4,7 @@ toc: true
 title: Get a VM
 lab: 1
 type: setup
+order: 1
 ---
 
 # Getting and Running a Linux Virtual Machine
