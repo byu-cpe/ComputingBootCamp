@@ -29,6 +29,21 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 | Mon Jun 16 | fasm2bels, fpga-tool-perf, symbiflow-examples 
 | Mon Jun 23 | VTR and Symbiflow-VTR  
 
-## Other Topics
+## New Schedule?
 
-* numpy/pandas/matplotlib
+| Date          | Topic                         | Speaker               | Followup Activity                                                         
+|---------------|-------------------------------|-----------------------|-------------------------------------------------------------------        
+| Mon           | Welcome & Computer Setup      |All Faculty            | Setup your computer.                                                      
+| Wed           | Hosting Your Own Website      |Lundrigan?             | Setup your website where you can post daily/weekly progress updates.      
+| Fri           | Git & Github                  |                       | Add your name and photo to the CCL website via pull request.
+| Mon           | VS Code                       |                       | ???
+| Wed           | make                          |                       | ???
+| Fri           | cmake                         |                       | ???
+| Mon           | Python Introduction           |                       | 
+| Wed           | Python Packages/Environments  |                       |
+| Fri           | Python numpy and pandas       |                       | Make your own Python application???
+| Mon           | Github CI + Unit Testing      |                       | Create a unit test + CI check for your Python application.
+| Wed           | Documentation w/ Sphinx       |                       | Add Sphinx documentation to your Python application.
+| Fri           | Docker                        |                       | Run your Python application within a docker container???
+
+...still need to add FPGA stuff...
