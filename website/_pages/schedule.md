@@ -39,9 +39,9 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 | Mon           | VS Code                       |                       | ???
 | Wed           | make                          |                       | ???
 | Fri           | cmake                         |                       | ???
-| Mon           | Python Introduction           |                       | 
-| Wed           | Python Packages/Environments  |                       |
-| Fri           | Python numpy and pandas       |                       | Make your own Python application???
+| Mon           | Python Introduction           |                       | Make your own Python application???
+| Wed           | Python Packages/Environments  |                       | Integrate some packages into your Python application and setup a `requirements.txt`
+| Fri           | Python numpy and pandas       |                       | Continue working on your Python application.
 | Mon           | Github CI + Unit Testing      |                       | Create a unit test + CI check for your Python application.
 | Wed           | Documentation w/ Sphinx       |                       | Add Sphinx documentation to your Python application.
 | Fri           | Docker                        |                       | Run your Python application within a docker container???
