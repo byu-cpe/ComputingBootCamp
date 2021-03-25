@@ -34,15 +34,6 @@ enable_coderay: true
 suggest_edits:
   enable: true
 
-# Set the color theme of the page
-colors:
-  text_color: "#111"
-  background_color: "#fdfdfd"
-  brand_color: "#0a69a8"
-  secondary_color: "#c3e6ef"
-  text_selection_color: "rgba(0, 98, 184, .5)"
-  sidebar_hover_color: "#0062B8"
-
 # Set the fonts
 fonts:
   base: "'neue-haas-unica', 'Helvetica Neue', Helvetica, Arial, sans-serif"
@@ -54,7 +45,7 @@ collections:
   selfpaced:
     output: true
     permalink: /:collection/:name/
-  resources:
+  pages:
     output: true
     permalink: /:collection/:name/
 

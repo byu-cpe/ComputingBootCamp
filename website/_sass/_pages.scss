@@ -224,3 +224,10 @@ pre,code {
 .btn-link {
     color: $brand-color;
 }
+
+.sidebar-schedule {
+    // background-color: lighten($brand-color, 40%) !important;
+    color: black;
+    font-weight: 800;
+    font-size:large;
+}

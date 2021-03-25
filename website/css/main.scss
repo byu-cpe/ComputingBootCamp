@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: {{ site.fonts.base}};
 $header-font-family: {{ site.fonts.header }};
@@ -14,18 +12,6 @@ $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit: 30px;
-
-$text-color: {{ site.colors.text_color }};
-$background-color: {{ site.colors.background_color }};
-$brand-color: {{ site.colors.brand_color }};
-$secondary-color: {{ site.colors.secondary_color }};
-
-$selection-color: {{ site.colors.text_selection_color }};
-$sidebar-hover-color: {{ site.colors.sidebar_hover_color }};
-
-$grey-color: #424242;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: darken($grey-color, 25%);
 
 // Width of the content area
 $content-width: 800px;
@@ -50,5 +36,24 @@ $on-lg: 1199.98px;
     }
 }
 
+
+// $sidebar_hover_color: #0062B8;
+$grey-color: #424242;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+$text-color: #111;
+$brand-color: #0a69a8;
+$secondary-color1:#d882a1;
+$secondary-color2:#f26448;
+$secondary-color3:#f18321;
+$background-color: #fdfdfd;
+$text_selection_color: rgba(0, 98, 184, .5);
+$selection-color: $text_selection_color;
+$sidebar-hover-color: $secondary-color1;
+
+
+
+
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base", "fonts", "syntax-highlighting", "simple-sidebar", "pages";
+@import "base", "fonts", "syntax-highlighting", "simple-sidebar", "pages", "colors";
