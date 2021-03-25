@@ -3,7 +3,7 @@ layout: page
 toc: true
 title: Get a VM
 lab: 1
-type: setup
+type: archive
 order: 1
 ---
 

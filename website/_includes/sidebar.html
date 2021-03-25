@@ -6,6 +6,13 @@
                 {{ site.class_number }}</a>
         </div>
 
+
+        <a href="{% link _pages/schedule.md %}"
+            class="list-group-item list-group-item-action bg-light sidebar-schedule sidebar-item">
+            <span class="badge badge-pill badge-dark-grey"></span>
+            Schedule
+        </a>
+
         {% assign self_paced_sorted = site.selfpaced | sort : "order" %}
 
         {% for group in site.data.groups %}
@@ -33,7 +40,7 @@
         </div>
         {% endfor %}
 
-        <div class="sidebar-heading-big"></div>
+        <!-- <div class="sidebar-heading-big"></div>
         <div class="card">
             <div class="sidebar-heading-big btn-link " data-toggle="collapse" data-target="#collapseResources"
                 aria-expanded="{{group.expanded}}" aria-controls="collapseResources">
@@ -49,7 +56,7 @@
                     {% endfor %}
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </div>
