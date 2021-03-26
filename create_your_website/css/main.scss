@@ -1,0 +1,304 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "Arial";
+$header-font-family: "Arial";
+$base-font-size: 16px;      
+$base-font-weight: 300;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit: 30px;
+
+// Width of the content area
+$content-width: 800px;
+
+$on-palm: 600px;
+$on-laptop: 800px;
+$on-xs: 575.98px;
+$on-sm: 767.98px;
+$on-md: 991.98px;
+$on-lg: 1199.98px;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+// $sidebar_hover_color: #0062B8;
+$grey-color: #424242;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+$text-color: #111;
+$brand-color: #0a69a8;
+$secondary-color1:#d882a1;
+$secondary-color2:#f26448;
+$secondary-color3:#f18321;
+$background-color: #fdfdfd;
+$text_selection_color: rgba(0, 98, 184, .5);
+$selection-color: $text_selection_color;
+$sidebar-hover-color: $secondary-color1;
+
+
+
+/**
+ * Reset some basic elements
+ */
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ blockquote,
+ pre,
+ hr,
+ dl,
+ dd,
+ ol,
+ ul,
+ figure {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ /**
+   * Basic styling
+   */
+ body {
+     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+     color: $text-color;
+     background-color: $background-color;
+     -webkit-text-size-adjust: 100%;
+     -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+     -o-font-feature-settings: "kern" 1;
+     font-feature-settings: "kern" 1;
+     font-kerning: normal;
+ }
+ 
+ /**
+   * Set `margin-bottom` to maintain vertical rhythm
+   */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ blockquote,
+ pre,
+ ul,
+ ol,
+ dl,
+ figure,
+ %vertical-rhythm {
+     margin-bottom: $spacing-unit / 2;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5 {
+     color: #424242;
+     font-family: $header-font-family;
+     letter-spacing: normal;
+ }
+ 
+ /**
+   * Images
+   */
+ img {
+     max-width: 100%;
+     vertical-align: middle;
+ }
+ 
+ /**
+   * Figures
+   */
+ figure > img {
+     display: block;
+ }
+ 
+ figcaption {
+     font-size: $small-font-size;
+ }
+ 
+ /**
+   * Lists
+   */
+ ul,
+ ol {
+     margin-left: $spacing-unit;
+ }
+ 
+ li {
+     > ul,
+     > ol {
+         margin-bottom: 0;
+     }
+ }
+ 
+ /**
+   * Headings
+   */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     font-weight: $base-font-weight;
+ }
+ 
+ /**
+   * Links
+   */
+ a {
+     color: $brand-color;
+     text-decoration: none;
+ 
+     &:visited {
+     }
+ 
+     &:hover {
+         color: darken($brand-color, 15%);
+         text-decoration: underline;
+     }
+ }
+ 
+ /**
+   * Blockquotes
+   */
+ blockquote {
+     color: $grey-color;
+     border-left: 4px solid $grey-color-light;
+     padding-left: $spacing-unit / 2;
+     font-size: 18px;
+     letter-spacing: -1px;
+     font-style: italic;
+ 
+     > :last-child {
+         margin-bottom: 0;
+     }
+ }
+ 
+ /**
+   * Code formatting
+   */
+ pre,
+ code {
+     font-size: 15px;
+     border: 1px solid $grey-color-light;
+     border-radius: 3px;
+     background-color: #eef;
+ }
+ 
+ code {
+     padding: 1px 5px;
+ }
+ 
+ pre {
+     padding: 8px 12px;
+     overflow-x: auto;
+ 
+     > code {
+         border: 0;
+         padding-right: 0;
+         padding-left: 0;
+     }
+ }
+ 
+ /**
+   * Wrapper
+   */
+ .wrapper {
+     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+     max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+     margin-right: auto;
+     margin-left: auto;
+     padding-right: $spacing-unit;
+     padding-left: $spacing-unit;
+     @extend %clearfix;
+ 
+     @include media-query($on-laptop) {
+         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+         max-width: calc(#{$content-width} - (#{$spacing-unit}));
+         padding-right: $spacing-unit / 2;
+         padding-left: $spacing-unit / 2;
+     }
+ }
+ 
+ /**
+   * Clearfix
+   */
+ %clearfix {
+     &:after {
+         content: "";
+         display: table;
+         clear: both;
+     }
+ }
+ 
+ /**
+   * Icons
+   */
+ .icon {
+     > svg {
+         display: inline-block;
+         width: 16px;
+         height: 16px;
+         vertical-align: middle;
+ 
+         path {
+             fill: $grey-color;
+         }
+     }
+ }
+ code {
+     color: $text-color;
+ }
+ 
+ .title-bar {
+         a { text-decoration: none; color:black;}
+ }
+#page-content-wrapper {
+    min-width: 100vw;
+  }
+  
+  
+
+h1 {
+    padding-top: 20px;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: gray;
+    font-size: 1.3rem;
+    margin-top: 50px;
+}
+
+.title-text {
+    font-size: xxx-large;
+    font-weight: 800;
+    color:black;
+    text-align: center;
+}
