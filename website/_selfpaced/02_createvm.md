@@ -4,7 +4,7 @@ toc: true
 title: Create a VM
 lab: 1
 type: setup
-order: 2
+order: 1
 ---
 
 # Machine Creation Script
