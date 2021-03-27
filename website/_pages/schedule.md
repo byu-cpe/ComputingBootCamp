@@ -22,6 +22,7 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 | Fri, May 21   | Docker                                | Lundrigan             | Run your Python application within a docker container???
 
 ## FPGA Track
+
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
 | Mon, May 24   | Vivado Block Design                   |   
