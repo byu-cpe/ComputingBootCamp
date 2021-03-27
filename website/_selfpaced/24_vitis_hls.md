@@ -1,7 +1,7 @@
 ---
 layout: page
 toc: true
-title: Vitis HLS Tutorial
+title: "Vitis: HLS"
 type: fpga_commercial
 order: 5
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 toc: true
-title: Vitis Tutorial
+title: "Vitis: Software"
 type: fpga_commercial
 order: 4
 ---
