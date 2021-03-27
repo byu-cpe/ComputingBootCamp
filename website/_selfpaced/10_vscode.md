@@ -7,7 +7,45 @@ type: development
 order: 1
 ---
 
-To be added...   There is a lecture on this topic, we should schedule this to be just after that lecture.
+
+
+## Installation
+
+Download .deb file from <https://code.visualstudio.com/>
+
+Install (your file may be named differently):
+    
+    cd ~/Downloads
+    sudo dpkg -i code_1.54.3-1615806378_amd64.deb
+
+## Tutorial
+
+We will be having a lecture on this topic, and will post the video here afterwards.
+
+**Tutorial Topics**:
+  * Take a tour:
+    * File vs Folder vs Workspace
+    * Sidebar
+    * F1, Ctrl+P
+    * Split views
+    * File previews (markdown)
+    * Terminal (and multiple terminals)
+  * Syntax highlighting 
+  * Extensions    
+  * Settings 
+    * How to access JSON settings
+    * User vs Workspace settings
+  * Git Integrations
+  * Remote Access (SSH)
+  * Launch Configurations (Debugging)
+  * Other niceties: 
+    * Package recommendations
+    * Github / Pull Request Integrations
+  
+
+
+## Faculty Brainstorming 
+  To be added...   There is a lecture on this topic, we should schedule this to be just after that lecture.
 
 ##Possible topics
 Some of these topics might deserve a full-blown text description.  
