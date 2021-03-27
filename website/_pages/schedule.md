@@ -6,6 +6,9 @@ title: Schedule
 
 These are talks presented by faculty/students (mostly faculty) at our weekly meetings.  Last year we met 2x/week during May, then the Immerse talks started up on Wednesdays and so we switched to 1x/week until mid-July.
 
+## FPGA Track
+
+
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------        
 | Mon, Apr 26   | Welcome & Computer Setup              | Wirthlin et al.       | Setup your computer. Get on Slack. Complete [Linux setup/tutorials]({% link _selfpaced/05_linux.md%}).
@@ -36,3 +39,5 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 | Fri, Jun 11   | Prjxray & FASM                        |
 | Mon, Jun 14   | fasm2bels, fpga-tool-perf, symbiflow-examples |
 | Fri, Jun 18   | VTR and Symbiflow-VTR                 |
+
+## Robotics Track
