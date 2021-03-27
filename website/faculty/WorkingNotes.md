@@ -32,6 +32,7 @@ But, I have no ties to any specific ones and won't be offended if others shred t
 ## VS Code - CREATE, SELF_PACED, BY_WHOM?
 - I had students balk at using VS code last summer.  I plan on telling them they ing them use something without a good debugger was not worth it.
 - Need to flesh this out, have listed a few topics on the page itself.
+- Jeff: I've added a list of topics to cover during the lecture.
 
 ## Linux Stuff - SELF_PACED, UPDATE, BY_WHOM?
 - Clearly needs fixing up - was the result of a good 4 minutes of my time last spring...
@@ -70,6 +71,7 @@ Don't know where this came from but I believe it was one of my students (Ethan?)
 - What has been useful to my Symbiflow projects (litghost's stuff) is students being able to interact with sqlite from within Python
     - Adding that could have value but it seems pretty specialized
 - I could go with NUKE or INFORMATION-ONLY
+- Jeff: Yeah seems too specialized
 
 ## Install Vivado/Vitis - KEEP, UPDATE?, BY_WHOM?
 - Good stuff - anything missing?
@@ -80,6 +82,7 @@ Don't know where this came from but I believe it was one of my students (Ethan?)
     - Should keep but could be in a later section or different document?
     - How about the first section being a vanilla Vivado tutorial from 220?  We could just point to it, or we could copy over the relevant stuff, or we could ...
         - I note that the 220 one it has both GUI and Tcl ways of doing a couple of things.
+    - Jeff: Yeah this is more specifically about creating a bare-bones Vivado project for SoC/software designs.  Should probably be renamed.
 
 ## Tcl and Vivado - SELF_PACED, UPDATE, MORE_SPECIFIC_ACTIVITIES, BRENT
 - I wrote this and am happy to take first cut at updating it
@@ -93,7 +96,7 @@ Don't know where this came from but I believe it was one of my students (Ethan?)
 - Love it but not sure if it needs anything
 
 ## Vitis HLS Tutorial - DITTO_TO_ABOVE
-- Jeff?
+- Jeff: I have a student that's going to work on this for their final project this semester.  Should be up and running in time.
 
 ## Project X-Ray - NUKE?, INFORMATION_ONLY?, SELF_PACED?, BY_WHOM?
 We were pretty new to it last year and so didn't have much to say.
