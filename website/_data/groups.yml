@@ -10,6 +10,9 @@
 - key: fpga_opensource
   title: Open FPGA CAD
 
+- key: robotics
+  title: Robotics
+
 - key: resources
   title: Resources
 

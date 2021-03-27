@@ -16,7 +16,7 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 | Fri, May 7    | cmake                         |                       | ???
 | Mon, May 10   | Python Introduction           |                       | Make your own Python application???
 | Wed, May 12   | Python Packages/Environments  |                       | Integrate some packages into your Python application and setup a `requirements.txt`
-| Fri, May 14   | Python numpy and pandas       |                       | Continue working on your Python application.
+| Fri, May 14   | Python numpy, pandas, and matplotlib       |                       | Continue working on your Python application.
 | Mon, May 17   | Github CI + Unit Testing      |                       | Create a unit test + CI check for your Python application.
 | Wed, May 19   | Documentation w/ Sphinx       |                       | Add Sphinx documentation to your Python application.
 | Fri, May 21   | Docker                        |                       | Run your Python application within a docker container???
