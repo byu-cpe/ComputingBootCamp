@@ -2,7 +2,6 @@
 layout: page
 toc: false
 title: Schedule
-lab: 1
 ---
 
 
