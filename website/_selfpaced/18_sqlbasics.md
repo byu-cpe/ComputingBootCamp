@@ -4,7 +4,7 @@ toc: true
 title: SQL Basics
 lab: 1
 type: development
-order: 5
+order: 7
 ---
 
 ~~~~sql
