@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: prjxray Install
+slug: xray_install
 lab: 1
 type: fpga_opensource
 order: 2

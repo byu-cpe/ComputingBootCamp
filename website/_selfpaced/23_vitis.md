@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: "Vitis: Software"
+slug: vitis
 type: fpga_commercial
 order: 4
 ---

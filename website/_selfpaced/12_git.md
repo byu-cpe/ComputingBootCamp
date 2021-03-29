@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Git
+slug: git
 lab: 1
 type: development
 order: 3

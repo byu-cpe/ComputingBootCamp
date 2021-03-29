@@ -2,6 +2,7 @@
 layout: page
 toc: false
 title: bit2fasm
+slug: bit2fasm
 lab: 1
 type: fpga_opensource
 order: 5

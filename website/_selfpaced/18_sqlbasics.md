@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: SQL Basics
+slug: sql
 lab: 1
 type: development
 order: 7

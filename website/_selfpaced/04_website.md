@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Setting Up Your Website
+slug: setup_website
 type: setup
 order: 4
 ---

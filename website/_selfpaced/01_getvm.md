@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Get a VM
+slug: get_vm
 lab: 1
 type: archive
 order: 1

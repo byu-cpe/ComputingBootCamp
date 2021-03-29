@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Linux stuff
+slug: linux
 lab: 1
 type: development
 order: 2

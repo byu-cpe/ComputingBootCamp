@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Install Vivado/Vitis
+slug: install_vivado
 type: fpga_commercial
 order: 1
 ---

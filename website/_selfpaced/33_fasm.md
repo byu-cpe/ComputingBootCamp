@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: FASM (FPGA Assembly)
+slug: fasm
 lab: 1
 type: fpga_opensource
 order: 3

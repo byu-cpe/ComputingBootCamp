@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Create a VM
+slug: create_vm
 lab: 1
 type: setup
 order: 1

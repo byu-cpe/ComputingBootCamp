@@ -2,6 +2,7 @@
 layout: page
 toc: false
 title: "HLS System Integration"
+slug: hls_system_integration
 type: fpga_commercial
 order: 6
 ---

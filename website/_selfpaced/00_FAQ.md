@@ -2,6 +2,7 @@
 layout: page
 toc: false
 title: FAQ - Misc Ideas
+slug: faq
 type: resources
 lab: 1
 ---

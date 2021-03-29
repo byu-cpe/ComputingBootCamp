@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Customize Your VM
+slug: customize_vm
 lab: 1
 type: setup
 order: 2

@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Vivado Tutorial
+slug: vivado
 type: fpga_commercial
 order: 2
 ---

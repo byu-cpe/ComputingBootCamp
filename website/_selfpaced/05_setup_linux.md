@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Setup Linux
+slug: setup_linux
 lab: 1
 type: setup
 order: 3

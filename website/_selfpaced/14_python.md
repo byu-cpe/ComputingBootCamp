@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Python and Conda
+slug: python
 lab: 1
 type: development
 order: 6

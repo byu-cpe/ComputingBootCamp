@@ -2,6 +2,7 @@
 layout: page
 toc: true
 title: Tcl and Vivado
+slug: vivado_tcl
 type: fpga_commercial
 order: 3
 ---
