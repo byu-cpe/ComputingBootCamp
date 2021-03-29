@@ -33,7 +33,7 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 
 | Date          | Topic                         | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------|-----------------------|-------------------------------------------------------------------        
-| Mon           | Welcome & Computer Setup      |All Faculty            | Setup your computer.                                                      
+| Mon           | Welcome & Computer Setup      |                       | Setup your computer. Complete Linux tutorials
 | Wed           | Hosting Your Own Website      |Lundrigan?             | Setup your website where you can post daily/weekly progress updates.      
 | Fri           | Git & Github                  |                       | Add your name and photo to the CCL website via pull request.
 | Mon           | VS Code                       |                       | ???

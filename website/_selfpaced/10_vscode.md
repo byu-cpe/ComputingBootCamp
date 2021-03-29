@@ -19,6 +19,18 @@ Install (your file may be named differently):
     cd ~/Downloads
     sudo dpkg -i code_1.54.3-1615806378_amd64.deb
 
+## Running 
+
+You can open files from the command line using:
+```
+code <path_to_file>
+```
+
+Alternatively you can open entire directories in VS Code:
+``` 
+code <path_to_dir>
+```
+
 ## Tutorial
 
 We will be having a lecture on this topic, and will post the video here afterwards.

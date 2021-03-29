@@ -9,11 +9,24 @@ order: 3
 ---
 
 
-# Git For Source Code Control
+## Overview
 
 You will need to become proficient in the use of GIT for managing source code files.  It turns out to be very complex (and powerful).  As such, don't be worried that it is taking quite some time to feel comfortable with it. You will find yourself constantly referring to reference materials for a while.
 
-On May 6, 2020 we had a Zoom-based Git Tutorial by Prof Nelson.  [You can find the video here]({% link media/GIT_Tutorial.mp4 %}) and [you can find the chat transcript here]({% link media/GIT_Tutorial_Chat.txt %}).
+## Install
+```
+sudo apt install git
+```
+
+## Lecture
+
+On May 6, 2020 we had a Zoom-based Git Tutorial by Prof Nelson.  The video is embedded below and [you can find the Zoom chat transcript here]({% link media/GIT_Tutorial_Chat.txt %}).
+
+<iframe width="800" height="600"
+src="https://www.youtube.com/embed/_AA4hHqeEyY">
+</iframe>
+
+ 
 
 ## A Suggested Approach
 

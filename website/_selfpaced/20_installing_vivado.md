@@ -60,4 +60,13 @@ cd /tools/Xilinx/Vivado/2020.2/data/xicom/cable_drivers/lin64/install_script/ins
 sudo ./install_drivers
 ```
 
+### Other Considerations
+  * Before you can run any Vivado/Vitis tool, you will need to add the executables to your PATH.  This is done using a Xilinx-provided script:
+
+        source /tools/Xilinx/Vivado/2020.1/settings64.sh
+
+  * If you want that to always be run when you open a new shell, add it to your `~/.bashrc` file.
+  * By default, Vivado creates log files in whatever directory it is run from.  To prevent these from cluttering up your filesystem, it is nice to redirect them to fixed locations (again, you may want to add this to your `~/.bashrc`):
+
+         alias vivado="vivado -log /tmp/vivado.log -journal /tmp/vivado.jou"
 

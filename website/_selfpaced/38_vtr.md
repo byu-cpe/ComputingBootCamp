@@ -3,7 +3,6 @@ layout: page
 toc: true
 title: VTR
 slug: vtr
-lab: 1
 type: fpga_opensource
 order: 9
 ---
