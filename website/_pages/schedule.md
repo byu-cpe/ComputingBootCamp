@@ -4,31 +4,7 @@ toc: false
 title: Schedule
 ---
 
-
-
 These are talks presented by faculty/students (mostly faculty) at our weekly meetings.  Last year we met 2x/week during May, then the Immerse talks started up on Wednesdays and so we switched to 1x/week until mid-July.
-
-| Date | Talk Topic(s) | Speaker
-| --- | ---  |---|
-| Mon May 3  | Welcome 
-|            | Linux VM  
-| Wed May 5  | VS Code  
-| Mon May 10 | Python  
-| Wed May 12 | C++ programming helps  
-|            | make and cmake  
-| Mon May 17 | GIT and Github  
-| Wed May 19 | LaTeX  
-|            | ReadTheDocs
-| Mon May 24 | Docker 
-|            | Travis-CI 
-| Wed May 26 | Start Immerse talks 
-| Mon May 31 | HOLIDAY 
-| Mon Jun 7  | RapidWright and Interchange 
-| Mon Jun 9  | Prjxray & FASM  
-| Mon Jun 16 | fasm2bels, fpga-tool-perf, symbiflow-examples 
-| Mon Jun 23 | VTR and Symbiflow-VTR  
-
-## New Schedule?
 
 | Date          | Topic                         | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------|-----------------------|-------------------------------------------------------------------        
@@ -50,6 +26,8 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 | Mon           | Vitis HLS                     |
 | Wed           | HLS/Vivado System Integration |
 | Fri           | Help Session                  |
-| Mon           | 
-
-...still need to add FPGA stuff...
+| Mon           | RapidWright and Interchange   |
+| Wed           | 
+| Fri           | Prjxray & FASM                |
+| Mon           | fasm2bels, fpga-tool-perf, symbiflow-examples |
+| Fri           | VTR and Symbiflow-VTR 
