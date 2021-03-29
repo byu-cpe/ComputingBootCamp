@@ -44,7 +44,7 @@ fonts:
 collections:
   selfpaced:
     output: true
-    permalink: /:collection/:name/
+    permalink: /tutorials/:name/
   pages:
     output: true
     permalink: /:collection/:name/
