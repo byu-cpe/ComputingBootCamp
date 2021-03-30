@@ -6,7 +6,7 @@ title: Schedule
 
 These are talks presented by faculty/students (mostly faculty) at our weekly meetings.  Last year we met 2x/week during May, then the Immerse talks started up on Wednesdays and so we switched to 1x/week until mid-July.
 
-## FPGA Track
+## General Computing Group
 
 
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
