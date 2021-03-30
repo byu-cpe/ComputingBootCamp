@@ -3,7 +3,6 @@ layout: page
 toc: true
 title: Make (and Makefiles)
 slug: make
-lab: 1
 type: development
 order: 4
 ---

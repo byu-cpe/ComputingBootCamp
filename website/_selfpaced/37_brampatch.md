@@ -3,7 +3,6 @@ layout: page
 toc: false
 title: bram-patch
 slug: bram-patch
-lab: 1
 type: fpga_opensource
 order: 8
 ---

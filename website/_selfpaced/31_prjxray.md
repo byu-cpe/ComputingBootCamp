@@ -3,7 +3,6 @@ layout: page
 toc: true
 title: Project X-Ray
 slug: xray
-lab: 1
 type: fpga_opensource
 order: 1
 ---

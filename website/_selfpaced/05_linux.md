@@ -3,7 +3,6 @@ layout: page
 toc: true
 title: Linux Setup & Tutorials
 slug: linux
-lab: 1
 type: setup
 order: 3
 ---

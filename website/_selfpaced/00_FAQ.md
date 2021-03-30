@@ -4,7 +4,6 @@ toc: false
 title: FAQ - Misc Ideas
 slug: faq
 type: resources
-lab: 1
 ---
 * When running with Tcl, DO NOT work inside the Vivado-created project directory.  Copy the files outside to a new location. You don't want to mix project mode and non-project mode stuff.
 

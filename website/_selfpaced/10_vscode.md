@@ -3,7 +3,6 @@ layout: page
 toc: true
 title: VS Code
 slug: vscode
-lab: 1
 type: development
 order: 1
 ---

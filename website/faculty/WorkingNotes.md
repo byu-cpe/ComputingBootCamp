@@ -2,7 +2,6 @@
 layout: page
 toc: false
 title: Comments and Working Notes
-lab: 1
 ---
 
 The following goes through the webpage (not the schedule) to discuss what to do with each thing there...

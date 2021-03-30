@@ -3,7 +3,6 @@ layout: page
 toc: true
 title: fasm2bels
 slug: fasm2bels
-lab: 1
 type: fpga_opensource
 order: 6
 ---
