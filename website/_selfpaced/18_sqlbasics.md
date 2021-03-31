@@ -4,7 +4,7 @@ toc: true
 title: SQL Basics
 slug: sql
 type: development
-order: 7
+order: 12
 ---
 
 ~~~~sql

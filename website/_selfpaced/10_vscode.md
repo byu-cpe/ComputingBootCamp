@@ -4,7 +4,7 @@ toc: true
 title: VS Code
 slug: vscode
 type: development
-order: 1
+order: 3
 ---
 
 
