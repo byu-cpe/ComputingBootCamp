@@ -28,8 +28,8 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
-| Mon, May 24   | Vivado Block Design                   |   
-| Wed, May 26   | Vivado Tcl                            | Nelson
+| Mon, May 24   | Vivado Tcl                            | Nelson
+| Wed, May 26   | Vivado Block Design                   |   
 | Fri, May 28   | Vitis Embedded SW                     |
 | Mon, May 31   | HOLIDAY                               |
 | Wed, Jun 2    | Vitis HLS                             |
