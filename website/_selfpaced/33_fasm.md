@@ -4,7 +4,7 @@ toc: true
 title: FASM (FPGA Assembly)
 slug: fasm
 type: fpga_opensource
-order: 3
+order: 4
 ---
 
 # Symbiflow's FASM

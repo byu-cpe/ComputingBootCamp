@@ -4,7 +4,7 @@ toc: true
 title: Project X-Ray
 slug: xray
 type: fpga_opensource
-order: 1
+order: 3
 ---
 
 # Project XRAY Bootcamp
