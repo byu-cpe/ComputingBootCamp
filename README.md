@@ -101,6 +101,9 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 - Talk on ReadTheDocs
 - Talk on 'Travis CI'
 - Talk on Docker
+- Ideas from Tim
+  - EDALize == Python library for "controlling" EDA tools.
+  - FuseSoC == apt-get for IP cores.
 
 ---
 ## Other Things
