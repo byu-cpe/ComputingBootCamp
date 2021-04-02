@@ -104,6 +104,10 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 - Ideas from Tim
   - EDALize == Python library for "controlling" EDA tools.
   - FuseSoC == apt-get for IP cores.
+  - You really need a general section on Docker / Containers too (like your Git sections).
+    - Once you have that, it is very easy to use the containers from https://GitHub.com/HDL/containers with Edalize thanks to https://twitter.com/OlofKindgren/status/1374848733746192394?s=20
+    - We want to support this as an alternative to conda in our user and development environments in the future.
+
 
 ---
 ## Other Things
