@@ -1,7 +1,7 @@
 ---
 layout: page
 toc: true
-title: Github / Your Website
+title: Github
 slug: github
 type: development
 order: 2
