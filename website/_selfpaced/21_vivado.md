@@ -1,10 +1,10 @@
 ---
 layout: page
 toc: true
-title: Vivado Tutorial
+title: Vivado Block Design Tutorial
 slug: vivado
 type: fpga_commercial
-order: 2
+order: 3
 ---
 
 

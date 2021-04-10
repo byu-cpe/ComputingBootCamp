@@ -3,7 +3,6 @@ layout: page
 toc: true
 title: CMake
 slug: cmake
-lab: 1
 type: development
 order: 5
 ---

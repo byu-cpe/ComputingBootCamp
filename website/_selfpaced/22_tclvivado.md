@@ -1,10 +1,10 @@
 ---
 layout: page
 toc: true
-title: Tcl and Vivado
+title: Vivado Review and Tcl for Vivado
 slug: vivado_tcl
 type: fpga_commercial
-order: 3
+order: 2
 ---
 
 Tcl is a command language used in a variety of CAD tools.  Our interest in it is for use with Vivado - it is the scripting language that Vivado's command line capability is based on.  Using it you can do 2 main things:

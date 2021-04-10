@@ -1,11 +1,10 @@
 ---
 layout: page
 toc: true
-title: Python and Conda
-slug: python
-lab: 1
+title: Python Packages II
+slug: pythonAdv
 type: development
-order: 6
+order: 8
 ---
 
 TODO: 

@@ -3,7 +3,6 @@ layout: page
 toc: true
 title: symbiflow-examples
 slug: symbiflow-examples
-lab: 1
 type: fpga_opensource
 order: 7
 ---

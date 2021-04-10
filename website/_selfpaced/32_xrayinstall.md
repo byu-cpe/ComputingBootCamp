@@ -3,9 +3,8 @@ layout: page
 toc: true
 title: prjxray Install
 slug: xray_install
-lab: 1
 type: fpga_opensource
-order: 2
+order: 4
 ---
 
 Installing prjxray is fairly simple and is carefully documented at Github's symbiflow/prjxray website (scroll down to the README.md section).
