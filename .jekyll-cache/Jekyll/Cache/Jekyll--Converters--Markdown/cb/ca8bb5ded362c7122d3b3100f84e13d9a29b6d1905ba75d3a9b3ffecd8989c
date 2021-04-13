@@ -1,0 +1,232 @@
+I"B,<p>The following goes through the webpage (not the schedule) to discuss what to do with each thing there…</p>
+
+<p>Should next revisit the schedule and see what is missing…</p>
+
+<h1 id="brent">Brent</h1>
+<p>Since I wrote many/most of these last spring I am happy to do initial reorganizing and refactoring.</p>
+
+<p>But, I have no ties to any specific ones and won’t be offended if others shred them.   Most were thrown up in anywhere from 5-45 minutes without much thought, just to get something up so we had a topic for the next week.</p>
+<h2 id="get-a-vm---delete">Get a VM - DELETE</h2>
+<ul>
+  <li>The get VM doesn’t really make sense any more.</li>
+</ul>
+
+<h2 id="create-a-vm---rename-update-no_self_paced-no_lecture-by_whom">Create a VM - RENAME, UPDATE, NO_SELF_PACED, NO_LECTURE, BY_WHOM?</h2>
+<ul>
+  <li>The create VM only makes sense if we don’t have sufficient seats for our students since  I propose we plan on in-person and insist our students come in. Proposal:
+    <ul>
+      <li>Point them at an on-line tutorial to do the clean instalon really how to do a clean install</li>
+      <li>Add fold the Customize Your VM stuff into the end of this</li>
+      <li>Move FPGA-specific stuff elsewhere</li>
+      <li>Rename to “Create and Set Up a Linux VM”</li>
+    </ul>
+  </li>
+  <li>In the end, its existence is only for reference - no need to lose the info, may come in handy</li>
+</ul>
+
+<h2 id="customize-your-vm---move_content_elsewhere-delete">Customize Your VM - MOVE_CONTENT_ELSEWHERE, DELETE</h2>
+<ul>
+  <li>Move the FPGA-specific stuff</li>
+  <li>Delete outdated stuff (RapidSith)</li>
+  <li>Move good stuff into topic above</li>
+</ul>
+
+<h2 id="vs-code---create-self_paced-by_whom">VS Code - CREATE, SELF_PACED, BY_WHOM?</h2>
+<ul>
+  <li>I had students balk at using VS code last summer.  I plan on telling them they ing them use something without a good debugger was not worth it.</li>
+  <li>Need to flesh this out, have listed a few topics on the page itself.</li>
+  <li>Jeff: I’ve added a list of topics to cover during the lecture.</li>
+</ul>
+
+<h2 id="linux-stuff---self_paced-update-by_whom">Linux Stuff - SELF_PACED, UPDATE, BY_WHOM?</h2>
+<ul>
+  <li>Clearly needs fixing up - was the result of a good 4 minutes of my time last spring…</li>
+  <li>Should point at some good tutorials</li>
+  <li>Should decide what we really want them to know, I would hope we could go beyond the 220/330 level treatment and expect them to actually know command line.</li>
+  <li>But that begs the question - why, especially given our conversation of today? I thus recommend we have some serious command line stuff to maybe motivate it - would want them to be things that would be quite difficult graphically.  See bottom of that page for some new things we might could add….</li>
+</ul>
+
+<h2 id="git---self_paced-update-by_whom">Git - SELF_PACED, UPDATE, BY_WHOM?</h2>
+<ul>
+  <li>Currently is just an overview, pointer to video, links to tutorials
+    <ul>
+      <li>Is that enough or should we force them to do something specific with it on a real set of files?  I think we should.</li>
+      <li>Should we also add github stuff to this one and call it ‘Git and Github’?
+        <ul>
+          <li>We do have something on Github Contribution Best Practices at the byu-cpe/BYU-Computing-Tutorials that we could copy over</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Once this is in place I think we should make them then install jekyll and do a pull request regarding updating the CCL page like you suggested.</li>
+</ul>
+
+<h2 id="cmake-and-make---information-only-self_paced-by_whom">cmake and make - INFORMATION-ONLY???, SELF_PACED???, BY_WHOM?</h2>
+<ul>
+  <li>Currently nothing is here but we have link to Goeders’ video from last year at byu-cpe.</li>
+  <li>Do we want to go beyond that or consider this an information only topic.
+    <ul>
+      <li>I sort of lean to information only but don’t feel strongly.</li>
+      <li>I would hope that the students were exposed to it so they don’t panic when they see cmake files and have a resource to go back to when they do</li>
+    </ul>
+  </li>
+  <li>Either way, should point to on-line tutorials (there have to be many)</li>
+</ul>
+
+<h2 id="python-and-conda---self_paced-by_whom">Python and Conda - SELF_PACED, BY_WHOM?</h2>
+<ul>
+  <li>On byu-cpe we have some stuff:
+    <ul>
+      <li>Goeders’ talk on python/C++ programming and development ideas</li>
+      <li>A python virtualenv page</li>
+      <li>A conda virtual environments page</li>
+      <li>Something on managing multiple virtual environments (I think we should nuke that one - it can cause problems)</li>
+    </ul>
+  </li>
+  <li>I propose we pull them together into one page</li>
+  <li>I propose we come up with a self-paced activity for conda - I have migrated to that one 100% and already have my own recipes and notes on how to use it I could add as well
+    <ul>
+      <li>I have had a couple grad students mess up large shared machines by not using a venv</li>
+      <li>I have had a grad student get something working that I don’t think should have, and I have always feared he messed up a machine doing so</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="sql-basics---information-only-by_whom">SQL Basics - INFORMATION-ONLY, BY_WHOM?</h2>
+<p>Don’t know where this came from but I believe it was one of my students (Ethan?)</p>
+<ul>
+  <li>Doesn’t hurt but a link to sqliteonline.com would be sufficient</li>
+  <li>What has been useful to my Symbiflow projects (litghost’s stuff) is students being able to interact with sqlite from within Python
+    <ul>
+      <li>Adding that could have value but it seems pretty specialized</li>
+    </ul>
+  </li>
+  <li>I could go with NUKE or INFORMATION-ONLY</li>
+  <li>Jeff: Yeah seems too specialized</li>
+</ul>
+
+<h2 id="install-vivadovitis---keep-update-by_whom">Install Vivado/Vitis - KEEP, UPDATE?, BY_WHOM?</h2>
+<ul>
+  <li>Good stuff - anything missing?
+    <ul>
+      <li>Do we want instructions on pointing to a license server?  I assume that is too specialized.  We rarely, if ever, need anything we cannot do with the open version…</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="vivado-tutorial---keep-update-by_whom">Vivado Tutorial - KEEP, UPDATE?, BY_WHOM?</h2>
+<ul>
+  <li>What is there is specific to IP integrator, block designs, the PS.
+    <ul>
+      <li>Should keep but could be in a later section or different document?</li>
+      <li>How about the first section being a vanilla Vivado tutorial from 220?  We could just point to it, or we could copy over the relevant stuff, or we could …
+        <ul>
+          <li>I note that the 220 one it has both GUI and Tcl ways of doing a couple of things.</li>
+        </ul>
+      </li>
+      <li>Jeff: Yeah this is more specifically about creating a bare-bones Vivado project for SoC/software designs.  Should probably be renamed.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tcl-and-vivado---self_paced-update-more_specific_activities-brent">Tcl and Vivado - SELF_PACED, UPDATE, MORE_SPECIFIC_ACTIVITIES, BRENT</h2>
+<ul>
+  <li>I wrote this and am happy to take first cut at updating it</li>
+  <li>First goal is to simply make them run an entire design through Vivado in case they are rusty.</li>
+  <li>Second goal is to learn how to redo all that using Tcl only</li>
+  <li>Third goal is to learn how to interact with a device or implemented design in Vivado: <code class="language-plaintext highlighter-rouge">get_cells -hierarchical</code>, <code class="language-plaintext highlighter-rouge">get_pins -of $c</code>, …</li>
+  <li>Fourth goal was to learn a bit about lists, file I/O, loops, etc.</li>
+  <li>Would be nice if the self paced activities were more relevant to something they care about.</li>
+</ul>
+
+<h2 id="vitis-tutorial---self_paced-jeff">Vitis Tutorial - SELF_PACED?, JEFF</h2>
+<ul>
+  <li>Love it but not sure if it needs anything</li>
+</ul>
+
+<h2 id="vitis-hls-tutorial---ditto_to_above">Vitis HLS Tutorial - DITTO_TO_ABOVE</h2>
+<ul>
+  <li>Jeff: I have a student that’s going to work on this for their final project this semester.  Should be up and running in time.</li>
+</ul>
+
+<h2 id="project-x-ray---nuke-information_only-self_paced-by_whom">Project X-Ray - NUKE?, INFORMATION_ONLY?, SELF_PACED?, BY_WHOM?</h2>
+<p>We were pretty new to it last year and so didn’t have much to say.</p>
+
+<ul>
+  <li>Content free - just says to install it by following instructions</li>
+  <li>Idea #1: replace that with pointers into the Symbiflow site - informational only</li>
+  <li>Idea #2: make them install it and do something that requires them to pick through the database files</li>
+  <li>Idea #3: give them a talk on it as enrichment.</li>
+</ul>
+
+<p>I would prefer not to nuke it completely</p>
+
+<p>Maybe a guided read through the various Symbiflow projects and their documentation for big picture sakes is enough?</p>
+
+<p>Or, maybe make them do something in Python to interrogate the database files to get a slightly deeper introduction.</p>
+
+<p>Or, maybe just give them an easter egg hunt - ask them a bunch of questions which can only be answered via database files or documentation or github repo (looking at the various projects).</p>
+
+<h2 id="prjxray-install---merge_if_kept-by_whom">prjxray Install - MERGE_IF_KEPT, BY_WHOM?</h2>
+<ul>
+  <li>Overlaps with above Project X-Ray topic as well as the virtual environments stuff
+    <ul>
+      <li>Just merge in with them if kept at all…</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="fasm-fasm2bels-symbiflow-examples---">FASM, fasm2bels, symbiflow-examples - ???</h2>
+<ul>
+  <li>In each case is not terribly deep</li>
+  <li>How to handle them
+    <ul>
+      <li>Good in that it points them to it so they are even aware of their existence</li>
+      <li>Running them asre and might be an ‘aha’ moment
+        <ul>
+          <li>Platform to talk about primitives vs. behavioral Verilog code with fasm2bels</li>
+          <li>Would see Verilog netlists</li>
+        </ul>
+      </li>
+      <li>But, do we have much to add w.r.t. this other than that they should run it?</li>
+    </ul>
+  </li>
+  <li>See below for idea</li>
+</ul>
+
+<h2 id="bram-patch---self_paced-brent">bram-patch - SELF_PACED, BRENT</h2>
+<ul>
+  <li>This project could be interesting in that it pulls together a number of things from above: prjxray, bits2fasm, Vivado, Tcl, etc.
+    <ul>
+      <li>Maybe have this be the vehicle to lead them through an entire project
+        <ol>
+          <li>Do simple design in Vivado that has some BRAM’s with INIT files</li>
+          <li>Implement it</li>
+          <li>Use bram-patch to change the BRAM initial contents and patch FASM\</li>
+          <li>Update bitstream using fasm2bits</li>
+          <li>Re-execute design in hardware (if boards available)</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Thoughts?</li>
+</ul>
+
+<h2 id="symbiflow-vtr---">Symbiflow VTR - ???</h2>
+<ul>
+  <li>Once again, not sure how to get them to engage with this.
+    <ul>
+      <li>symbiflow-examples from above has some end-to-end designs you can run
+        <ul>
+          <li>Get them to engage with VTR by running the visualization tools?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="other-topics">Other Topics</h1>
+<ul>
+  <li>Last year we talked about some things that we have nothing for</li>
+</ul>
+:ET
