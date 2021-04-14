@@ -28,16 +28,18 @@ These are talks presented by faculty/students (mostly faculty) at our weekly mee
 
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
-| Mon, May 24   | Vivado Tcl                            | Nelson
-| Wed, May 26   | Vivado Block Design                   |   
-| Fri, May 28   | Vitis Embedded SW                     |
+| Mon, May 24   | Xilinx FPGA Deep Dive                 |
+| Wed, May 26   | Xilinx FPGA Deep Dive                 |
+| Fri, May 28   | Vivado Tcl                            | Nelson
 | Mon, May 31   | HOLIDAY                               |
-| Wed, Jun 2    | Vitis HLS                             |
-| Fri, Jun 4    | HLS/Vivado System Integration         |
-| Mon, Jun 7    | RapidWright                           |
-| Wed, Jun 9    | Interchange                           |
-| Fri, Jun 11   | Prjxray & FASM                        |
-| Mon, Jun 14   | fasm2bels, fpga-tool-perf, symbiflow-examples |
-| Fri, Jun 18   | VTR and Symbiflow-VTR                 |
+| Wed, Jun 2    | Vivado Block Design                   |   
+| Fri, Jun 4    | Vitis Embedded SW                     |
+| Mon, Jun 7    | Vitis HLS                             |
+| Wed, Jun 9    | HLS/Vivado System Integration         |
+| Fri, Jun 11   | RapidWright                           |
+| Mon, Jun 14   | Interchange                           |
+| Fri, Jun 18   | Prjxray & FASM                        | 
+| Mon, Jun 21   | fasm2bels, fpga-tool-perf, symbiflow-examples | 
+| Wed, Jun 23   | VTR and Symbiflow-VTR                 |
 
 ## Robotics Track
