@@ -43,3 +43,13 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Wed, Jun 23   | VTR and Symbiflow-VTR                 |
 
 ## Robotics Track
+
+
+## Networking Track
+
+| Date          | Topic                         | Speaker               
+|---------------|-------------------------------|-----------------------
+| Wed, Jun 2    | Networking Basics             | Lundrigan
+| Wed, Jun 9    | Networking Command Line Tools | Lundrigan
+| Wed, Jun 16   | Wireshark                     | Lundrigan
+| Wed, Jun 23   | Wireless Networking           | Lundrigan
