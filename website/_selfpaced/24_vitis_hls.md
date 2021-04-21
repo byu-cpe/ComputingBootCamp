@@ -25,7 +25,7 @@ The first step will add the Xilinx binaries to your PATH. The second step was ne
 
 ## Create Vitis HLS project
 
-Download source code located [here](github.com)
+Download source code located [here](https://github.com/byu-cpe/ComputingBootCamp/tree/main/make/hls_tutorial_src_code)
 
 * `matrixmul.cpp`: a source file with a matrix multiplication algorithm in C++.
 * `matrixmul.h`: the header file that defines the interface for the core function `matrixmul`
@@ -40,7 +40,7 @@ Run Vitis (`vitis_hls`) and create a new project
 
 * Choose a name for your project and place it in your the desired location (I named mine MxM and placed it in _Documents/HLS_) Select next.
 
-* For design files, select add files and choose matrixmul.cpp from the downloaded source code. FOr the top function browse and choose matrixmul. Select next.
+* For design files, select add files and choose matrixmul.cpp from the downloaded source code. For the top function browse and choose matrixmul. Select next.
 
 <img src = "{% link images/HLS/designFiles.png %}" width="800">
 
@@ -141,7 +141,7 @@ If you create a pragma and a directive for the same command, you would see it tw
 ## Synthesize
 
 
-Once everyhting is completed, run C synthesis. 
+Once everything is completed, run C synthesis. 
 
 Compared to the values shown before, what is the new latency? How many times better is it than the original, unoptimized version? (Hint: the new latency should be under 50,000)
 
