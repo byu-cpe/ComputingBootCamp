@@ -46,16 +46,16 @@ Run Vitis (`vitis_hls`) and create a new project
 
 * For test bench files, select add files and choose matrixmul_test.cpp. Select next. 
 
-* Under solution configuration, you can change the solution name or leave it as "solution1."  Levae the period at 10us and change the board to the xc7z020clg484-1. Select Finish. 
+* Under solution configuration, you can change the solution name or leave it as "solution1."  Leave the period at 10us and change the board to the xc7z020clg484-1. Select Finish. 
 
 <img src = "{% link images/HLS/consoleScreen.PNG %}" width="800">
 
-* Looking at the above image, matrimul.cpp can be found under the drop down menu Source on the left side of the screen. Open it. Changes that you make to the code here with automaticallly update the code in VS. 
+* Looking at the above image, matrimul.cpp can be found under the drop-down menu Source on the left side of the screen. Open it. Changes that you make to the code here with automatically update the code in VS. 
  
 
 ## Simulating the Code
 
-Once the project is set up, check to see if the code is working. There are two different ways you will run the codce, C Simulation and C Synthesis. 
+Once the project is set up, check to see if the code is working. There are two different ways you will run the code, C Simulation and C Synthesis. 
 
 **C Simulation**
 
@@ -63,7 +63,7 @@ C Simulation is much like when you run the code in Visual Studios. It will run t
 
 This can be done by either clicking on the down arrow next to the green triangle and selecting *C Simulation* or by selecting *Project* at the top of the screen and then clicking on *C Simulation*. Select okay on the window that pops up and wait for the code to run.
 
-This project has three test cases. After running the simulation, the console should print out three succes statements. If this did not happen, be sure that the code doesn't contain any midifications and all the data files have been downloaded and saved into the same folder as your design and test bench files. 
+This project has three test cases. After running the simulation, the console should print out three success statements. If this did not happen, be sure that the code does not contain any modifications and all the data files have been downloaded and saved into the same folder as your design and test bench files. 
 
 **C Synthesis**
 
@@ -136,7 +136,7 @@ Once you finish, your Directives window should look like the image below:
 
 <img src = "{% link images/HLS/directivesWindow.PNG %}" width="800">
 
-If you create a pragma and a directive for the same command, you would see it twice in the Directives window. Don't do this. Choose one or the other and check your window for dupicates.
+If you create a pragma and a directive for the same command, you would see it twice in the Directives window. Don't do this. Choose one or the other and check your window for duplicates.
 
 ## Synthesize
 
@@ -152,12 +152,12 @@ Compared to the values shown before, what is the new latency? How many times bet
 
 See what other commands you can add to reduce the latency. Play around, see what makes things better and worse. Try to get the latency as low as you possibly can. 
 
-Watch your resources to ensure that you don't exeed the amount of resources available on the board that was selected for this solution. 
+Watch your resources to ensure that you don't exceed the amount of resources available on the board that was selected for this solution. 
 
 
 **Additional Notes**
 
-Some optimizations that can be done aren't in pragmas or directives, but changing the code itself. Feel free to play around with the written code, but be sure to run C Cimulation to ensure that the code is still working correctly. It doesn't matter how fast the code runs if it doesn't work right.
+Some optimizations that can be done aren't in pragmas or directives but changing the code itself. Feel free to play around with the written code but be sure to run C Simulation to ensure that the code is still working correctly. It doesn't matter how fast the code runs if it doesn't work right.
 
 If you would like to try a new optimization but don't want to lose what you have, you can create a new solution. To do this, select *Project* from the top tool bar and then *New Solution*. This new solution will appear in the Explorer drop down menu on the left. 
 
