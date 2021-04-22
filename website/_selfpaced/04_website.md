@@ -63,7 +63,7 @@ Jekyll allows you to host your website locally and try out any changes before yo
 First you need to install the necessary packages for your website.  This only needs to be done once:
 ```
 cd ~/website
-bundle udpate
+bundle update
 ```
 
 Then, to host your website simply run the following:
