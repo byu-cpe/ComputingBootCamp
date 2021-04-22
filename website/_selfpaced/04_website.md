@@ -90,13 +90,13 @@ The line to pay attention to is the `Server address: http://127.0.0.1:4000/test_
 Leave this running for now and we will make some changes in the next section.
 
 
-### Make an Edit
+## Make an Edit
 
 1. In your browser, navigate to the *IMMERSE Log* page.
 2. Now open your `_pages/log.md` file, update an entry and save the file.
 3. Refresh your web browser and you should immediately see the change.
 
 
-### Publishing Your Changes
+## Publishing Your Changes
 
 Any changes you push up to Github will automatically be published.  We will talk about Git and Github soon.
