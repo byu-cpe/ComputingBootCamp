@@ -47,9 +47,9 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
 | Mon, May 24   | Robotics Overview & Coord Transforms  | Mangelson             | ... also watch/attend FPGA Track
-| Wed, May 26   | Jenkins / PODS? / Pytest / GTest      | Easton                | ... also watch/attend FPGA Track 
-| Fri, May 28   | Perception and Sensing                | Mangelson
-| Mon, May 31   | OpenCV / PCL                          | Kalin/Easton
+| Wed, May 26   | Jenkins / Bitbucket / PODS   est      | Easton                | ... also watch/attend FPGA Track 
+| Fri, May 28   | Perception and Sensing                | Mangelson             | OpenCV / PCL
+| Mon, May 31   | Holiday                               | -
 | Wed, Jun 2    | Attend Networking or HLS              | - 
 | Fri, Jun 4    | 3D Printing / CAD or HLS              | Bridget
 | Mon, Jun 7    | PCBs / EAGLE or HLS                   | Devon
@@ -62,8 +62,8 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Wed, Jun 23   | Localization, SLAM, GTSAM             | Mangelson             | GTSAM Example?
 | Fri, Jun 25   | Mapping and OGM                       | Mangelson
 | Mon, Jun 28   | Planning                              | Mangelson
-| Mon, Jun 28   | QGroundControl/Ardusub/Pymav link     | Bridget/Kalin
-| Mon, Jun 28   | OpenSceneGraph Viewer                 | Kalin
+| Mon, Jun 30   | QGroundControl/Ardusub/Pymav link     | Bridget/Kalin
+| Mon, Jul 2    | OpenSceneGraph Viewer                 | Kalin
 
 
 ## Networking Track
