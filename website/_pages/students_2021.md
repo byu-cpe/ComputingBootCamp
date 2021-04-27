@@ -17,7 +17,7 @@ title: 2021 Students
 ### Goeders
 * Brandon Heiner
 * Bryce Hamilton
-* Jonathan Thompson
+* Jonathan Thompson [Jonathan's Immerse Log](https://jonath48.github.io/pages/log/)
 * Jarom Harris
 * Samuel Reynolds
 * Nathan Harris
