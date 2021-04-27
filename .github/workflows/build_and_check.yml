@@ -1,0 +1,24 @@
+name: Build and Check
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: build
+        run: |
+          cd website && bundle install
+          cd website && make build
+
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check links
+        run: |
+          cd website && bundle install
+          cd website && make check_links
