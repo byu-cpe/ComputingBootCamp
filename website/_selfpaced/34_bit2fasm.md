@@ -60,16 +60,16 @@ bit_0042001e_100_09
 bit_00420020_099_16
 ```
 
-**bits_to_fasm**
+#### bits_to_fasm
 
 After creating a 'bits' file, the 'bits_to_fasm' function is called. This function directs the main work of dissasembly. The function performs the following steps:
   * Creates the [Database](#database) object
   * Creates the [Grid](#grid) object (by calling db.grid)
   * Create [FasmDisassembler](#fasmdisassembler) object
 
-After creating these objects, a [Bits](#bits-file) is read and parsed using the `load_bitdata` in the [bitstream.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/prjxray/bitstream.py) file. The result is a dictionary (called `bitdata`) between a frame_Address and two sets. The first set are the word columns that have any bits set in the bitstrea and the second set are the bit indicies within the frame (not the word). The bit index references a specific bit within a frame and not within the word.
+After creating these objects, a [Bits](#bits-file) is read and parsed using the `load_bitdata` in the [bitstream.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/bitstream.py) file. The result is a dictionary (called `bitdata`) between a frame_Address and two sets. The first set are the word columns that have any bits set in the bitstrea and the second set are the bit indicies within the frame (not the word). The bit index references a specific bit within a frame and not within the word.
 
-Next, the [find_features_in_bitstream](#find-features-in-bitstream) function is called in FasmDisassembler.
+Next, the [find_features_in_bitstream](#find_features_in_bitstream) function is called in FasmDisassembler.
 
 **HERE**
 
@@ -78,12 +78,12 @@ Next, the [find_features_in_bitstream](#find-features-in-bitstream) function is 
 
 This is is the FasmDisassembler object.
 
-The input to this function is a "bitdata" dictionary (see [bits_to_fasm](#bits-to-fasm)) that contains bits we want to find features for. The key is a frame address and the two values are arrays: value[0] is a set of words and value[1] is a set of bits within the word. value[i] forms a unique pair of word and bit indicating a specific bit within a frame address. The algorithm works as follows:
+The input to this function is a "bitdata" dictionary (see [bits_to_fasm](#bits_to_fasm)) that contains bits we want to find features for. The key is a frame address and the two values are arrays: value[0] is a set of words and value[1] is a set of bits within the word. value[i] forms a unique pair of word and bit indicating a specific bit within a frame address. The algorithm works as follows:
 
   * Iterate over all frames (keys) in the bitdata dictionary
     * Using the [SegmentMap](#segmentmap), iterate over all [BitsInfo](#bitsinfo) objects from the device that reference the given frame.
       * Iterate over the range of words in the given device BitsInfo object. If any of the words in the features bitdata[frame][0] fall within this range of the device info, continue. Otherwise continue iterating (i.e., the given BitsInfo object doesn't relate to any of the bits in the bitdata so skip)
-        * Call [find_features_in_tile](#find-features-in-tile).Iterate over all fasm_line objects obtained from calling the 
+        * Call [find_features_in_tile](#find_features_in_tile).Iterate over all fasm_line objects obtained from calling the 
 
 ### find_features_in_tile
 
@@ -181,7 +181,7 @@ The FasmDisassembler object is key for the bitstream feature extraction. This py
 
 ### TileSegbits
 
-This python class is defined in the file [tile_segbits.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/prjxray/tile_segbits.py). Objects of this class are created upon demand through the Grid.get_tile_segbits_at_tilename(tile_name) function. This object is owned by the 'Database' object (although accessed by the Grid object using the Database object).
+This python class is defined in the file [tile_segbits.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/tile_segbits.py). Objects of this class are created upon demand through the Grid.get_tile_segbits_at_tilename(tile_name) function. This object is owned by the 'Database' object (although accessed by the Grid object using the Database object).
 
 Variables within the class:
   * segbits: A dictionary with key the name of the resource (CLBM_L.....) and the value is a set of [Bit](#bit) objects.
@@ -190,7 +190,7 @@ Variables within the class:
 
 ### Bit
 
-This is a named tuple defined in the [tile_segbits.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/prjxray/tile_segbits.py) file. The fields are:
+This is a named tuple defined in the [tile_segbits.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/tile_segbits.py) file. The fields are:
   * word_column
   * word_bit
   * isset
