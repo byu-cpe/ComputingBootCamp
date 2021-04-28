@@ -12,7 +12,7 @@ title: 2021 Students
 
 ### Wirthlin
 * Jackson Smith [Jackson's Immerse Log](https://rjsmith1999.github.io/IMMERSE/pages/log/)
-* TBD
+* [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
 
 ### Goeders
 * Brandon Heiner
