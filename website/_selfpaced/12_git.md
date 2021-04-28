@@ -74,8 +74,12 @@ Learn about merge vs rebase:
   * <https://www.youtube.com/watch?v=CRlGDDprdOQ>
   * <https://stackoverflow.com/questions/804115/when-do-you-use-git-rebase-instead-of-git-merge>
 
+### Git GUI Tools
+There are many great tools to [visualize your Git repositories and histories](https://www.tecmint.com/best-gui-git-clients-git-repository-viewers-for-linux/). Try one out.  
+
 ### Git is Always Changing
   * <https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch>
+  * <https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch>
 
 
 ## To Learn More
