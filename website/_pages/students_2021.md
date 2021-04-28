@@ -11,6 +11,7 @@ title: 2021 Students
 * Joshua Fife
 
 ### Wirthlin
+* [Ben Glines](https://benglines.github.io/immerse-website/pages/log/)
 * [Jackson Smith](https://rjsmith1999.github.io/IMMERSE/pages/log/)
 * [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
 
