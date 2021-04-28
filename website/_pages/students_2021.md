@@ -20,7 +20,7 @@ title: 2021 Students
 * Bryce Hamilton
 * [Jonathan Thompson](https://jonath48.github.io/pages/log/)
 * [Jarom Harris](https://jaromharris.github.io/immerse/)
-* Samuel Reynolds
+* [Samuel Reynolds](https://thedhcreator.github.io/pages/log/)
 * Nathan Harris
 * Jessa Locey
 
