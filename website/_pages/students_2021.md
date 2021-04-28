@@ -15,7 +15,6 @@ title: 2021 Students
 * [Jackson Smith](https://rjsmith1999.github.io/IMMERSE/pages/log/)
 * [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
 
-
 ### Goeders
 * Brandon Heiner
 * Bryce Hamilton
