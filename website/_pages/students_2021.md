@@ -11,7 +11,7 @@ title: 2021 Students
 * Joshua Fife
 
 ### Wirthlin
-* TBD
+* Jackson Smith [Jackson's Immerse Log](https://rjsmith1999.github.io/IMMERSE/pages/log/)
 * TBD
 
 ### Goeders
