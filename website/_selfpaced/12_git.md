@@ -54,6 +54,12 @@ Re-watch the video from above and replicate the basic steps you see there with s
 1. See the diffs between your current version and some previous version from the change log history (use the first few characters of the big hash value for that other version as the identifier)
 1. See the diffs between your current version and what is in some other branch (as identified by the branch name)
 
+### Merging and Conflicts
+1. Experiment with merging between branches.
+1. Can you forcibly create a conflict?  
+1. If you start a merge and run into a conflict, how do you back out and abort?
+1. Get comfortable with the steps to resolve a conflict.
+
 ### Fun With Remotes
 1. Clone a repo from Github.  You could try:
     * The bootcamp website: <https://github.com/byu-cpe/ComputingBootCamp>
