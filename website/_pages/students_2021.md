@@ -11,13 +11,13 @@ title: 2021 Students
 * Joshua Fife
 
 ### Wirthlin
-* Jackson Smith [Jackson's Immerse Log](https://rjsmith1999.github.io/IMMERSE/pages/log/)
+* [Jackson Smith](https://rjsmith1999.github.io/IMMERSE/pages/log/)
 * [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
 
 ### Goeders
 * Brandon Heiner
 * Bryce Hamilton
-* Jonathan Thompson [Jonathan's Immerse Log](https://jonath48.github.io/pages/log/)
+* [Jonathan Thompson](https://jonath48.github.io/pages/log/)
 * Jarom Harris
 * Samuel Reynolds
 * Nathan Harris
