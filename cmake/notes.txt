@@ -1,6 +1,6 @@
 CMake Tutorial
 
-1. Pre-processing, linking, and compiling of alone
+1. Pre-processing, linking, and compiling of alone (In my_cpp_project)
 
 /////////////////////////////
 // Pre-processor 
@@ -43,14 +43,38 @@ g++ -o my_program main.c my_file.c
 
 You could run this command every time you change a file to re-build.
 What does a Makefile buy you?
+Any reasons why we wouldn't want to always do this manually?
+
+When working large code bases?
+With respect to efficiency?
+
+2. Make my_file.cpp into a library (mylib)
+
+////////////////////////////////////////////
+// Static Library with g++/gcc
 
 
-2. Why CMake?
+
+
+
+
+
+
+////////////////////////////////////////////
+// Dynamic Library with g++/gcc
+
+
+
+
+
+
+
+3. Why CMake?
 
 - Generating a Makefile for large projects is tedious, time consuming, and brital.
 - What if your compiler changes?
 - What if you  move to another machine with a different operating system?
-- What if you want to do something more complex (dynamicly linked libraries)?
+- What if you want to do something more complex (dynamically linked libraries)?
 - What if your large library has many different versions of libraries it could link against and you want to configure those things at compile time?
 
 CMAKE!
@@ -58,5 +82,24 @@ CMAKE!
 Luckily, this general process is similar for almost every program/project.
 CMake lets us specify the dependencies of a project and then it will automatically generate the make file for us.
 
-3. CMake Example
+4. Simple CMake Library Example
 
+Go through CMake Library Code
+
+SHARED vs STATIC
+
+
+
+Installing?
+
+
+Finding and using a dependency
+- Make available
+- Find
+
+Exporting
+
+Testing
+
+
+Pods2
