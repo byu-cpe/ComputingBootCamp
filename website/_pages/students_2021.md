@@ -15,6 +15,7 @@ title: 2021 Students
 * [Jackson Smith](https://rjsmith1999.github.io/IMMERSE/pages/log/)
 * [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
 * [Jacob Brown](https://jacobdbrown4.github.io/jacob_brown//pages/log/)
+
 ### Goeders
 * [Brandon Heiner](https://heinerb1.github.io/pages/log/)
 * [Bryce Hamilton](https://brycejh.github.io/CCL_Page/pages/log/)
