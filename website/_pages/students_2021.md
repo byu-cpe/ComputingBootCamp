@@ -5,7 +5,7 @@ title: 2021 Students
 ---
 
 ### Nelson
-* Ryan Johnson
+* [Ryan Johnson](https://ryancj14.github.io/ryancj14/pages/log)
 * Jason Prescott
 * Xan Johnson
 * Joshua Fife
