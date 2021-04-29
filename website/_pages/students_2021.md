@@ -16,7 +16,7 @@ title: 2021 Students
 * [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
 
 ### Goeders
-* Brandon Heiner
+* [Brandon Heiner](https://heinerb1.github.io/pages/log/)
 * [Bryce Hamilton](https://brycejh.github.io/CCL_Page/pages/log/)
 * [Jonathan Thompson](https://jonath48.github.io/pages/log/)
 * [Jarom Harris](https://jaromharris.github.io/immerse/)
