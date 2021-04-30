@@ -8,7 +8,7 @@ title: 2021 Students
 * [Ryan Johnson](https://ryancj14.github.io/ryancj14/pages/log)
 * [Jason Prescott](https://jason1234309.github.io/Immerse_Website)
 * Xan Johnson
-* Joshua Fife
+* [Joshua Fife](https://whiteninjaz.github.io/pages/log/)
 
 ### Wirthlin
 * [Ben Glines](https://benglines.github.io/immerse-website/pages/log/)
