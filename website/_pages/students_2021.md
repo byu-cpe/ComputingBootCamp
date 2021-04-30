@@ -28,4 +28,7 @@ title: 2021 Students
 * [Nathan Harris](http://betacircuit.net/projects/IMMERSE/log/)
 * Jessa Locey
 
+### Lundrigan
+
+
 Please create a [pull request](https://github.com/byu-cpe/ComputingBootCamp/pulls) to update this webpage with a link to your weekly log.
