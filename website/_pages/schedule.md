@@ -12,8 +12,8 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------        
 | Mon, Apr 26   | Welcome, Setup, and Your Website      | Faculty               | Setup your computer. Get on Slack. Complete [Linux setup/tutorials]({% link _selfpaced/05_linux.md%}). Setup your website where you can post daily/weekly progress updates.
-| Wed, Apr 28   | Git                                   | Goeders               | 
-| Fri, Apr 30   | Github                                | Goeders/Lundrigan     | Add a link on the [students]({% link _pages/students_2021.md %}) page via pull request.   Add your name and photo to your lab website via pull request ([CCL](https://ccl.byu.edu), [NET Lab](https://netlab.byu.edu/), etc.). 
+| Wed, Apr 28   | Git                                   | Goeders               | Complete the followup activities on the [Git]({% link _selfpaced/12_git.md %}) page.  If you are already a Git expert, contribute to the list of follow-up topics with your own suggestions.
+| Fri, Apr 30   | Github                                | Lundrigan     | Add a link on the [students]({% link _pages/students_2021.md %}) page via pull request.   Add your name and photo to your lab website via pull request ([CCL](https://ccl.byu.edu), [NET Lab](https://netlab.byu.edu/), etc.). 
 | Mon, May 3    | VS Code                               | Goeders               | Debug a C Program
 | Wed, May 5    | make                                  | Goeders               | Create a simple C program of your choice, and compile it using make.  Push it up to Github.  Next, find a Makefile that is part of one of your group's projects and work through it to understand how it works.
 | Fri, May 7    | cmake                                 | Mangelson             | ???
@@ -47,9 +47,9 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
 | Mon, May 24   | Robotics Overview & Coord Transforms  | Mangelson             | ... also watch/attend FPGA Track
-| Wed, May 26   | Jenkins / PODS? / Pytest / GTest      | Easton                | ... also watch/attend FPGA Track 
-| Fri, May 28   | Perception and Sensing                | Mangelson
-| Mon, May 31   | OpenCV / PCL                          | Kalin/Easton
+| Wed, May 26   | Jenkins / Bitbucket / PODS   est      | Easton                | ... also watch/attend FPGA Track 
+| Fri, May 28   | Perception and Sensing                | Mangelson             | OpenCV / PCL
+| Mon, May 31   | Holiday                               | -
 | Wed, Jun 2    | Attend Networking or HLS              | - 
 | Fri, Jun 4    | 3D Printing / CAD or HLS              | Bridget
 | Mon, Jun 7    | PCBs / EAGLE or HLS                   | Devon
@@ -62,8 +62,8 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Wed, Jun 23   | Localization, SLAM, GTSAM             | Mangelson             | GTSAM Example?
 | Fri, Jun 25   | Mapping and OGM                       | Mangelson
 | Mon, Jun 28   | Planning                              | Mangelson
-| Mon, Jun 28   | QGroundControl/Ardusub/Pymav link     | Bridget/Kalin
-| Mon, Jun 28   | OpenSceneGraph Viewer                 | Kalin
+| Mon, Jun 30   | QGroundControl/Ardusub/Pymav link     | Bridget/Kalin
+| Mon, Jul 2    | OpenSceneGraph Viewer                 | Kalin
 
 
 ## Networking Track
