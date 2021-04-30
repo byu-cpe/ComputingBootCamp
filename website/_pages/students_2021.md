@@ -14,6 +14,7 @@ title: 2021 Students
 * [Ben Glines](https://benglines.github.io/immerse-website/pages/log/)
 * [Jackson Smith](https://rjsmith1999.github.io/IMMERSE/pages/log/)
 * [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
+* [Jackson Sahleen](https://jacksonsahleen.github.io/IMMERSE_2021_log/)
 
 ### Goeders
 * [Brandon Heiner](https://heinerb1.github.io/pages/log/)
