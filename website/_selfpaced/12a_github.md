@@ -7,14 +7,14 @@ type: development
 order: 2
 ---
 
-# Overview
+## Overview
 
 GitHub is a popular git repository hosting service. It has many helpful features that are worth learning and understanding. GitHub is an essential part of the open-source community.
 
 
-# Lecture
+## Lecture
 
-# Follow-Up Activities
+## Follow-Up Activities
 
 Here are a few ideas for follow-up activities:
 
@@ -22,7 +22,7 @@ Here are a few ideas for follow-up activities:
 - Fork an interesting repo
 - Submit a pull request to an open-source project
 
-# To Learn More
+## To Learn More
 
 There are hundreds of tutorials on the web. Find some and read/watch them. Here are some we have found:
 
