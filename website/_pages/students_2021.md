@@ -7,7 +7,7 @@ title: 2021 Students
 ### Nelson
 * [Ryan Johnson](https://ryancj14.github.io/ryancj14/pages/log)
 * [Jason Prescott](https://jason1234309.github.io/Immerse_Website)
-* Xan Johnson
+* [Xan Johnson](https://immerse.xanjohnson.com/daily)
 * [Joshua Fife](https://whiteninjaz.github.io/pages/log/)
 
 ### Wirthlin
