@@ -28,6 +28,9 @@ title: 2021 Students
 * [Nathan Harris](http://betacircuit.net/projects/IMMERSE/log/)
 * Jessa Locey
 
+### Mangleson
+* [Daniel Butterfield](https://frostlabwiki.groups.et.byu.net/index.php?title=Notebook:DanielButterfield)
+
 ### Lundrigan
 
 
