@@ -13,6 +13,9 @@ GitHub is a popular git repository hosting service. It has many helpful features
 
 
 ## Lecture
+On April 30, 2021 we had a GitHub Tutorial by Prof Lundrigan. The video is embedded below
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
 
 ## Follow-Up Activities
 
