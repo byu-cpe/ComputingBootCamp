@@ -21,8 +21,9 @@ sudo apt install make
 ```
 
 ## Lecture Video
+On May 5, 2021 we had a Make Tutorial by Prof Goeders. The video is embedded below
 
-The lecture video will be posted here once complete.
+<iframe width="800" height="600" src="https://www.youtube.com/embed/4ITu7eJBdDY"> </iframe> 
 
 ## Example
 
