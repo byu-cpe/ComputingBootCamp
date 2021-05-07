@@ -25,7 +25,7 @@ The first step will add the Xilinx binaries to your PATH. The second step was ne
 
 ## Create Vitis HLS project
 
-Download source code located [here](https://github.com/byu-cpe/ComputingBootCamp/tree/main/make/hls_tutorial_src_code)
+Download source code located [here](https://github.com/byu-cpe/ComputingBootCamp/tree/main/vitis_hls)
 
 * `matrixmul.cpp`: a source file with a matrix multiplication algorithm in C++.
 * `matrixmul.h`: the header file that defines the interface for the core function `matrixmul`
