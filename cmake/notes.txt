@@ -8,6 +8,7 @@ gcc -E -P main.cpp >> main.i
 gcc -E -P my_file.cpp >> my_file.i
 
 Show output and then clear
+rm *.i
 
 ////////////////////////////////
 // Compile to generate assembly
@@ -329,7 +330,12 @@ g (to generate Makefile)
 
 make
 
-9. Many Advanced Topics
+
+
+9. Installing
+
+
+10. Many Advanced Topics
 
 cmake passes?
 
