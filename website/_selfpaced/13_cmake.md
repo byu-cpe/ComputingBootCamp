@@ -86,6 +86,7 @@ To do this you will need to play around with and understand the PUBLIC and PRIVA
 
 * Play around with introducing dependencies between libraries that are or are not needed by targets further up the chain.
 
+# Advanced (But Essential) Topics
 
 ## Learn about Modern CMake
 
@@ -108,8 +109,6 @@ Often you need to combine many small repositories or projects into a single larg
 The best way to accomplish this is via FetchContent and the MakeAvailable function if possible.
 Read more about this here:
 * <https://cmake.org/cmake/help/latest/module/FetchContent.html>
-
-However, there are also situations where you will need to find a package on your local computer.
 
 
 ## Exporting, and Installing
@@ -134,7 +133,9 @@ More information about how to write your own Modern CMake FindModule can be foun
 
 ## Integrating Testing into CMake
 
-* <https://cliutils.gitlab.io/modern-cmake/chapters/testing.html>
+We will be talking more about unit testing in a later module, however, cmake can also be used to handle unit testing.
+
+More information can be found at the following link: <https://cliutils.gitlab.io/modern-cmake/chapters/testing.html>
 
 ## pods2
 

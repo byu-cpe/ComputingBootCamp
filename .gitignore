@@ -6,3 +6,4 @@ my_file.o
 my_program
 mylib.a
 *.so
+*.lock
