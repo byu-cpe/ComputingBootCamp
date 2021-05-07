@@ -32,14 +32,14 @@ Generates executable.
 
 // What is the difference between c (gcc) and c++ (g++)?
 // The following command will cause a link error
-// because of c++ libraries aren't linked
+// because c++ libraries aren't linked
 gcc -o my_program main.o my_file.o 
 
 
 ////////////////////////////////////////////
 // Do it all at once
 rm *.i *.o *.s
-g++ -o my_program main.c my_file.c
+g++ -o my_program main.cpp my_file.cpp
 
 You could run this command every time you change a file to re-build.
 What does a Makefile buy you?
@@ -48,25 +48,112 @@ Any reasons why we wouldn't want to always do this manually?
 When working large code bases?
 With respect to efficiency?
 
+
+
+
 2. Make my_file.cpp into a library (mylib)
+
+Change cout in my_file.cpp to include "(inside mylib - in non-cmake project)"
+
 
 ////////////////////////////////////////////
 // Static Library with g++/gcc
+https://stackoverflow.com/questions/5947067/how-to-create-a-static-library-with-g
+
+What if we have alot of functions that we want to create that can be reused?
+Create a library!
+
+What kind of libraries are there?
+Static Libraries
+
+// Create Object File
+g++ -c my_file.cpp
+// Create Archive/Static Library File
+ar rvs mylib.a my_file.o
+// .a -archive
+// r - insert into archive with replacement
+// v - verbose
+// s - write an index into the archive file
 
 
+// Link static library functions into executable
+g++ -o my_program main.cpp mylib.a
 
-
-
+Run executable
 
 
 
 ////////////////////////////////////////////
 // Dynamic Library with g++/gcc
+https://www.cprogramming.com/tutorial/shared-libraries-linux-gcc.html
+
+Problem with static libraries is that they take up space in every executable that uses them. 
+What if we could have multiple programs share the functions?
+
+Dynamic Libraries!
+Shared libraries are referenced when creating when the executable, but not copied.
+At runtime, they are referenced again to get the code that actually needs to be run.
+
+//clear files
+rm -rf *.o *.a my_program
+
+//compile with position independent code
+g++ -c -fpic my_file.c
+
+//create library
+g++ -shared -o libmylib.so my_file.o
+// Usually append library with "lib"
+// .so (shared object file)
 
 
+// Try to link against shared library
+g++ -o my_program main.cpp -lmylib
+// -lmylib actually looks for libmylib.so (not mylib.so)
+// Throws error because it couldn't find our library
+
+pwd  // tells what our current directory is
+g++ -o my_program -L<insert-directory-here> main.cpp -lmylib
+./my_program
 
 
+// What if we move it?
+mv my_program ../
+cd ..
+./my_program
+//The library can't be found
 
+//Can tell Linux shell/loader where to find the library...
+echo $LD_LIBRARY_PATH // This is an environment variable, $ lets you access its value
+export LD_LIBRARY_PATH=<insert-directory-here>:$LD_LIBRARY_PATH
+echo $LD_LIBRARY_PATH
+
+./my_program
+
+// This only affects the current shell (or terminal) and you will
+// need to update LD_LIBRARY_PATH in .bashrc if you want it to
+// always work
+
+///////////////////////////////////////////////
+// Important things about includes
+
+Open main.cpp
+Why do we need the first line?
+- It provides some of the definition code we need to compile main.o
+- If we remove it file_hello() will not be defined
+
+Open my_file.cpp side-by-side with main.cpp
+What is different between these two lines?
+"" - signify local directory path
+<> - signify to look at built-in libraries or library include paths
+
+The following environment variables tell where to look for includes:
+CPATH
+C_INCLUDE_PATH
+CPLUS_INCLUDE_PATH
+OBJC_INCLUDE_PATH
+
+
+iostream - is a built-in library.
 
 
 3. Why CMake?
@@ -82,16 +169,171 @@ CMAKE!
 Luckily, this general process is similar for almost every program/project.
 CMake lets us specify the dependencies of a project and then it will automatically generate the make file for us.
 
-4. Simple CMake Library Example
 
-Go through CMake Library Code
+4. Trace out Simple CMake Library Example CMake Structure
 
-SHARED vs STATIC
+/////////////////////////////////////////////////////////////////
+//Go through basic project folder structure and show actual files
+- src - library code (organized by folder
+- include - headers for library code
+- apps - code for executables
+- LICENCE
+- README
+- CMakeLists.txt
 
 
+///////////////////////////////////////////////
+// Go through CMake Library Code
+
+CMakeLists.txt root file
+
+//Min version command
+cmake_minimum_required(VERSION 3.11...3.20)
+// Useful depending on the features of cmake you chose to use
+
+
+// Project creation
+project(
+ <name>
+ VERSION <num>
+ DESCRIPTION "text"
+ LANGUAGES CXX)
+// Can specify the languages many languages are supported
+
+// Subdirectory cmake tree
+add_subdirectory(<folder_name>)
+
+// Cmake will trace this tree of CMakeList.txt files when it runs
+// Order matters
+
+//////////////////////////////////////////////////
+// Sub CMakeList.txt files in src ...
+
+
+//////////////////////////////////////////////////
+// Libraries Default (src/mylib folder)
+
+set(HEADER_LIST ...)
+
+//Targets (The objects in Modern CMake)
+add_library(mylib my_file.cpp ${HEADER_LIST})
+
+//create target of type library and tell it what files are relevent
+${MyCmakeProject_SOURCE_DIR} - top_level source directory of project with name MyCmakeProject
+
+//Then set parameters of that target
+target_include_directories(mylib PUBLIC ../../include)
+
+//Keywords
+PUBLIC - needed for the current target and all dependent targets
+PRIVATE - needed just for this current target
+INTERFACE - not needed for current target, but is needed for 
+
+//////////////////////////////////////////////////
+// Trace Tree back to main CMakeLists.txt and then
+// up to apps/my_program
+
+//create executable target
+add_executable(my_program my_program.cpp)
+//Create target with
+
+// set dependencies
+target_link_libraries(my_program PRIVATE mylib) // specifies target as dependency
+
+
+//Open my_program.cpp next to main.cpp from my_project
+Notice the change in format
+
+How does it know where to find the include?
+
+6. Show how it works
+
+mkdir build;
+cd build
+ls
+cmake ..
+ls
+
+// Now there is a bunch of stuff here (Including a Makefile!)
+ls src
+ls src/mylib
+ls apps
+ls apps/my_program
+
+make
+ls src/mylib
+ls apps/my_program
+
+Now there is a libmylib.a and a my_program
+
+What type of library was that?
+
+7. Dynamic Library
+
+////////////////////////////////////////////////////////////////
+// Add SHARED keyword to add_library in src/mylib/CMakeLists.txt
+add_library(mylib SHARED my_file.cpp ${HEADER_LIST})
+
+// now rebuild..
+
+// clear full build tree without touching the original code
+rm -rf build/  
+// You don't have to allways do this when code changes (make file will recognized changes and only build what you need to)
+// However, when you change the CMakeFiles this can sometimes be helpful
+
+mkdir build
+cd build
+cmake ..
+make
+
+ls src/mylib
+
+Now its a shared object file!
+
+ls apps/my_program
+
+It also built our program using the program we referenced
+
+///////////////////////////////////////////////////////////////
+// Try running it again
+
+./apps/my_program/my_program
+
+Thats pretty cool it worked!!!
+
+CMAKE is really helpful because it can simplify this build organization process.
+
+/////////////////////////////////////////////////////////////////////////////////
+// Wait did it just say we weren't running the function from the cmake project?
+Why did that happen?
+
+Thats because our LD_LIBRARY_PATH still points it to our old library file first
+
+open new terminal with out our LD_LIBRARY_PATH change
+
+Now it works!!!
+
+CMake is great, but you still need to understand what is happening
+
+
+8. CCMAKE
+
+rm -rf build
+mkdir build
+cd build
+ccmake ..
+
+c (to configure)
+t (to toggle advanced)
+g (to generate Makefile)
+
+make
+
+9. Many Advanced Topics
+
+cmake passes?
 
 Installing?
-
 
 Finding and using a dependency
 - Make available
@@ -99,7 +341,7 @@ Finding and using a dependency
 
 Exporting
 
-Testing
 
+Testing
 
 Pods2
