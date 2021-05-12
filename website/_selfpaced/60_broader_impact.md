@@ -11,23 +11,23 @@ order: 1
 
 | Student                 | Advisor             | Project Summary                                                                               
 |-------------------------|---------------------|------------------------------------------------------------------------------------------   
-| Samuel Reynolds         | Goeders             |          
+| Samuel Reynolds         | Goeders             | Symbliflow/Fasm2bels         
 | Jessa Locey             | Goeders             |
 | Kyle Cribbs             | Long                | Matlab (Dr. Rice, Dr. Beard)
-| Andrew Santa            | Long                | Bash?
-| Aaron Newman            | Mangelson           | Talking to Dr. Mangelson, Scripting (bash/python)
-| Kiley Atkinson          | Mangelson           | Matlab (240?), Dr. Cammacho (240)
+| Andrew Santa            | Long                | Mathlab / Python tutorials (Matlab vs Python?)
+| Aaron Newman            | Mangelson           | Bash + Improving robotics pages
+| Kiley Atkinson          | Mangelson           | Matlab Tutorials + Improving robotics pages
 | Daniel Butterfield      | Mangelson           | Badge system, Bootcamp web support/design
-| Bridget Beatson         | Mangelson           |
+| Bridget Beatson         | Mangelson           | Robotics tutorials: CAD & 3D printing, Blue Robotics 
 | Xan Johnson             | Nelson              | More/better activities, Quizzes/assessment (vim tutor), Web quizzes / XML
-| Joshua Fife             | Nelson              |
-| Jason Prescott          | Nelson              | Assessment (interactive activities)
-| Adam Hales              | (?)                 |
+| Joshua Fife             | Nelson              | Youtube videos
+| Jason Prescott          | Nelson              | Sphinx updates + activities
+| Adam Hales              | (?)                 | 
 | Collin Bradford         | (?)                 |
 | Alex Steffan            | Smalley             |
 | Braden Huffman          | Smalley             | Python (pytorch)
 | Benjamin Giles          | Wirthlin            | Common style, formatting for modules, style guide
-| Jordi Ramos             | Wirthlin            | SpyDrNet?, EDIF, blif, eblif, Verilog, Netlists in general (what is a netlist)
+| Jordi Ramos             | Wirthlin            | Netlists: SpyDrNet?, EDIF, blif, eblif, Verilog, (what is a netlist)
 | Caden Ellis             | Wirthlin            | JTAG, Badge stuff
 | Ryan Johnson            | Nelson              | Markdown tutorial, Conda and mini conda
 
