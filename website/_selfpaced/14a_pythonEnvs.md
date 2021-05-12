@@ -71,17 +71,24 @@ alias de='deactivate'
 # Conda
 `Conda` was developed by the developers of `numpy`.  The web suggests it was done to solve problems that python, venv, and pip alone could not handle.  And, it works with other languages besides python, something the `numpy` developers thought important.  
 
-It is claimed to be a more full-featured containerization technology compared to `venv` in that nothing is shared, nothing is installed into system areas on your machine but everything lives in the environments themselves. And, it can containerize things other than python installations. 
+It is claimed to be a more full-featured containerization technology compared to `venv` in that nothing is shared, nothing is installed into system areas on your machine but everything lives in the environments themselves. 
 
-To get and install Conda:
+Some terminology:
+- `Anaconda` is a data science distribution which includes the `conda` environment/package manager, and a large set of data science tools and modules. 
+- `Miniconda` is just the `conda` environment/package manager plus a small set of python base packages.   We will be installing that.
+- The `conda` tool is the environment/package manager we will use from `Miniconda`. 
+
+To get and install `Miniconda`:
 ```
-# Get a copy of the conda installer
+# Get a copy of the miniconda installer
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
-# Install conda, type yes to all questions (even the ones with No as the default answer).  This will modify .bashrc for conda usage.
+# Install miniconda.
+# Type yes to all questions (even the ones with No as the default answer).  
+# This will modify .bashrc for conda usage.
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
-After doing the above you should restart your bash console so the changes to your `.bashrc` file can take effect.
+After doing the above you should restart your bash console so the changes to your `.bashrc` file can take effect.  Or, you can simply do `source ~/.bashrc` to cause your shell to load the new stuff just put into `.bashrc`.
 
 Now, you can create environments like this:
 ```
