@@ -86,10 +86,10 @@ After doing the above you should restart your bash console so the changes to you
 Now, you can create environments like this:
 ```
 # Make new environment and you are ready
-conda create -n myenv python=3.9
+conda create -n condaenv python=3.9
 ```
 
-- You can activate your new environment at any time using: `conda activate myenv`
+- You can activate your new environment at any time using: `conda activate condaenv`
 - You deactivate it with `deactivate` (like with `venv`)
 - Conda, by default, will autostart a `base` environment which is not needed for our use 
     - You can prevent this base environment from activating by typing this in the console:  `conda config --set auto_activate_base false`
@@ -104,10 +104,10 @@ alias cac='conda activate'
 alias cde='conda deactivate'
 alias cel='conda env list'
 ```
-- With these, you would activate the above environment by typing `cac myenv`.
+- With these, you would activate the above environment by typing `cac condaenv`.
 
 ## Discussion of the `Conda` Approach
-- At this point you have not touched any system files, everything that has been installed is inside  `~/miniconda3/envs/myenv`.  
+- At this point you have not touched any system files, everything that has been installed is inside  `~/miniconda3/envs/condaenv`.  
 - Note that there is no need for a particular version of python to be already installed in `/usr/bin`.  Conda installs a fresh copy from its repo.
 - It does not touch any system directories and so you need not use `sudo` or have any type of admin privileges.  Useful for avoiding side effects in the rest of your system.  Required for multi-user systems where you may not have admin privileges.
 - As a result, the environments it creates are a bit more isolated from one another and from the system than with `venv`.  And, as said, `conda` can manage other things besides python packages.
