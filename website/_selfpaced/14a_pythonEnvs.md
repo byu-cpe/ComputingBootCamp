@@ -139,8 +139,32 @@ alias cel='conda env list'
 
 +/-: Puts virtual envronments into standard shared place and so can provide environment management commands
 
-# Continuing On
+# Self-Paced Learning Activities
+## Experiment with `venv`
+    - Create an environment called `env1` using the default system python
+    - Install a new python version into your system
+    - Create an environment called `env2` using that python version
+    - Create aliases in your `.bashrc` file to activate and deactivate these.
+    - Install `pandas` and `matplotlib` into `env1` after activating it using `pip install`.  
+        - Then, activate `env1`, start a python REPL, and note the python version being used.
+        - In the REPL, import pandas and import matplotlib.  Note that they exist (you get no errors).
+    - Deactivate `env1`
+    - Activate `env2`, start the REPL, and try to import pandas and note that you get an error.  This is because the pandas you installed above was sand-boxed into `env1` and this environment cannot see it.
+    - Deactivate `env2` and then remove it (see above for instructions on how to delete a `venv` environment.
+    - Rename the directory `env1` to be something else.  Verify that you can still activate it as long as you use the right path.
+    - Remove `env1`.
+
+## Experiment with `Conda`
+    - Repeat the above steps but using `Conda`. 
+    - Call your environments `cenv1` and `cenv2`.  When you create each just specify a python version to use without first installing any python into your system.
+    - When you create `cenv1` specify you want to install `pandas` in the `conda create` command itself (see above).  Then, once you have activated `cenv1` use `conda install` to add `matplotlib` to the environment.
+    - As above, experiment to understand how packages added to `cenv1` are not visible when in `cenv2`.
+    - Use aliases to make it easy to activate and deactivate environments.  In this case you need not make an alias for each environment due to the structure of the commands.
+    - Use `conda env list` to see what it knows about your environments.  Use `conda env remove` to remove `cenv1`.  
+    - Experiment to see what you can do with `cenv2`.  Can you rename it?  What else can you do with it?
+
 ## Saving and Re-creating Environments
+Both `venv` and `Conda` provide mechanisms to create a listing of their contents (the things you have installed in them) in a file.  You can then use that file
 
 ## TODO
 - What self-paced activities do we want on these?  It would be activities tied to the talk(s) given.
