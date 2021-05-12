@@ -7,4 +7,8 @@ type: development
 order: 6
 ---
 
-TBD
+## Lecture Video
+On May 10, 2021 we had an introduction to Python by Prof Lundrigan. The video is embedded below
+
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/KuD3mJxcwnk"> </iframe> 
