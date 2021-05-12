@@ -41,6 +41,7 @@ Everything in Linux can be (and usually is) run by shell scripts and commands so
 ### Linux Tutorial 
 **<ins>You must to read through and complete all steps of this tutorial</ins>**: <https://ryanstutorials.net/linuxtutorial>.  Even if you are already familiar with Linux and the command line, please read through the different topics and bring yourself up to speed on any you aren't familiar with.
 
+{% include quizzes.html id=4 %}
 
 ### Linux Resources (please add to this as you find good stuff)
 Here are some Linux tutorials that may be helpful:
@@ -110,7 +111,6 @@ A few of notes __before__ following the tutorial:
 
 Before proceeding, make sure you can ssh into `ssh.et.byu.edu` without being prompted for a password.
 
-
 ### SSH Config
 
 You can create an SSH Config file in order to save SSH preferences.  This file is located at `~/.ssh/config`.  Each entry in this file lists a remote machine that you can connect to by alias.
@@ -122,6 +122,7 @@ Host caedm
     User cosmo
 ```
 
+{% include quizzes.html id=5 %}
 
 <!-- # Faculty Notes
 - Writing shell scripts (especially if they take parameters)

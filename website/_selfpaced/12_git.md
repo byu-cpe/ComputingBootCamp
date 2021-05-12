@@ -7,7 +7,6 @@ type: development
 order: 1
 ---
 
-
 ## Overview
 
 You will need to become proficient in the use of GIT for managing source code files.  It turns out to be very complex (and powerful).  As such, don't be worried that it is taking quite some time to feel comfortable with it. You will find yourself constantly referring to reference materials for a while.
@@ -80,7 +79,6 @@ There are many great tools to [visualize your Git repositories and histories](ht
 ### Git is Always Changing
   * <https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch>
   * <https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch>
-
 
 ## To Learn More
 There are hundreds of printed tutorials on the web, find some and read them.  Here are some we have found:
