@@ -164,8 +164,9 @@ alias cel='conda env list'
     - Experiment to see what you can do with `cenv2`.  Can you rename it?  What else can you do with it?
 
 ## Saving and Re-creating Environments
-Both `venv` and `Conda` provide mechanisms to create a listing of their contents (the things you have installed in them) in a file.  You can then use that file
+Both `venv` and `Conda` provide mechanisms to freeze an environment (create a listing of the things you have installed in them in a file).  You can then use that file as the template to perfectly re-create that environment again later.
 
-## TODO
-- What self-paced activities do we want on these?  It would be activities tied to the talk(s) given.
+For both environment methods, figure out how to do that and experiment with it.  Can you think of where this might be useful?
+
+
 
