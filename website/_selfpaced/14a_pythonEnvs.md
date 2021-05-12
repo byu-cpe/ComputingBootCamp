@@ -142,7 +142,8 @@ alias cel='conda env list'
 # Self-Paced Learning Activities
 ## Experiment with `venv`
     - Create an environment called `env1` using the default system python
-    - Install a new python version into your system
+    - Activate it, start up python to verify the version being used, then deactivate it.
+    - Install a new python version into your system (maybe use 3.9?)
     - Create an environment called `env2` using that python version
     - Create aliases in your `.bashrc` file to activate and deactivate these.
     - Install `pandas` and `matplotlib` into `env1` after activating it using `pip install`.  
