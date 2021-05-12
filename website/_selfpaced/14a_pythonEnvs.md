@@ -142,7 +142,7 @@ alias cel='conda env list'
 # Self-Paced Learning Activities
 Work through the following activities.
 
-## Experiment with venv
+## 1. Experiment with venv
 - Create an environment called `env1` using the default system python
 - Activate it, start up python to verify the version being used, then deactivate it.
 - Install a new python version into your system (maybe use 3.9?)
@@ -157,7 +157,7 @@ Work through the following activities.
 - Rename the directory `env1` to be something else.  Can you still activate it as long as you use the right path?
 - Remove `env1`.
 
-## Experiment with Conda`
+## 2. Experiment with Conda`
 - Repeat the above steps but using `Conda`. 
 - Call your environments `cenv1` and `cenv2`.  When you create each just specify a python version to use without first installing any python into your system.
 - When you create `cenv1` specify you want to install `pandas` in the `conda create` command itself (see above).  Then, once you have activated `cenv1` use `conda install` to add `matplotlib` to the environment.
@@ -167,13 +167,14 @@ Work through the following activities.
 - Experiment to see what you can do with `cenv2`.  Can you rename it?  What else can you do with it?
 - Remove `cenv2` using the `conda env` command.
 
-## Saving and Re-creating Environments
+## 3. Saving and Re-creating Environments
 Both `venv` and `Conda` provide mechanisms to freeze an environment (create a file listing of the things you have installed in them).  You can then use that file as the template to perfectly re-create that environment again later.
 
 For both environment methods, read up on the web to figure out how to freeze and environment and use that as the basis for re-creating that environment.  Can you think of where this might be useful?  Given how easy it is to create an environment using either method might you not ever bother to use freezing?
 
-## Implement a Method
+## 4. Implement a Method
 - Select a method and start using it
 - Add aliases into your `.bashrc` file to make it easy to work with the method you have chosen.
+- If you choose `Conda`, find a cheat sheet on the web to use as a reference (they do exist)
 
 
