@@ -152,7 +152,7 @@ alias cel='conda env list'
     - Deactivate `env1`
     - Activate `env2`, start the REPL, and try to import pandas and note that you get an error.  This is because the pandas you installed above was sand-boxed into `env1` and this environment cannot see it.
     - Deactivate `env2` and then remove it (see above for instructions on how to delete a `venv` environment.
-    - Rename the directory `env1` to be something else.  Verify that you can still activate it as long as you use the right path.
+    - Rename the directory `env1` to be something else.  Can you still activate it as long as you use the right path?
     - Remove `env1`.
 
 ## Experiment with `Conda`
