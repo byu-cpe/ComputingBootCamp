@@ -140,7 +140,9 @@ alias cel='conda env list'
 +/-: Puts virtual envronments into standard shared place and so can provide environment management commands
 
 # Self-Paced Learning Activities
-## Experiment with `venv`
+Work through the following activities.
+
+## Experiment with venv
     - Create an environment called `env1` using the default system python
     - Activate it, start up python to verify the version being used, then deactivate it.
     - Install a new python version into your system (maybe use 3.9?)
@@ -155,7 +157,7 @@ alias cel='conda env list'
     - Rename the directory `env1` to be something else.  Can you still activate it as long as you use the right path?
     - Remove `env1`.
 
-## Experiment with `Conda`
+## Experiment with Conda`
     - Repeat the above steps but using `Conda`. 
     - Call your environments `cenv1` and `cenv2`.  When you create each just specify a python version to use without first installing any python into your system.
     - When you create `cenv1` specify you want to install `pandas` in the `conda create` command itself (see above).  Then, once you have activated `cenv1` use `conda install` to add `matplotlib` to the environment.
