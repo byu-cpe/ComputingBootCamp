@@ -100,8 +100,8 @@ conda create -n myenv python=3.9
 
 - As above, you could create aliases to save typing: 
 ```
-alias cac=conda activate
-alias cde=conda deactivate
+alias cac='conda activate'
+alias cde='conda deactivate'
 alias cel='conda env list'
 ```
 - With these, you would activate the above environment by typing `cac myenv`.
