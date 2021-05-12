@@ -68,7 +68,7 @@ alias de='deactivate'
     - One is `pyenv` a github project you can download and build.  When it installs a new python version for an environment on your machine it compiles it from sources.  It then provides facilities to manage your environments and make it easy to switch between them.  It may be useful or it may be overkill, depending on what you need.
     - Another is `conda`, which will be covered next so keep reading.
 
-# Conda
+# Using `Conda`
 `Conda` was developed by the developers of `numpy`.  The web suggests it was done to solve problems that python, venv, and pip alone could not handle.  And, it works with other languages besides python, something the `numpy` developers thought important.  
 
 It is claimed to be a more full-featured containerization technology compared to `venv` in that nothing is shared, nothing is installed into system areas on your machine but everything lives in the environments themselves. 
