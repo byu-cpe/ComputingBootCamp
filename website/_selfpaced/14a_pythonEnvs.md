@@ -163,11 +163,12 @@ alias cel='conda env list'
     - Use aliases to make it easy to activate and deactivate environments.  In this case you need not make an alias for each environment due to the structure of the commands.
     - Use `conda env list` to see what it knows about your environments.  Use `conda env remove` to remove `cenv1`.  
     - Experiment to see what you can do with `cenv2`.  Can you rename it?  What else can you do with it?
+    - Remove `cenv2` using the `conda env` command.
 
 ## Saving and Re-creating Environments
-Both `venv` and `Conda` provide mechanisms to freeze an environment (create a listing of the things you have installed in them in a file).  You can then use that file as the template to perfectly re-create that environment again later.
+Both `venv` and `Conda` provide mechanisms to freeze an environment (create a file listing of the things you have installed in them).  You can then use that file as the template to perfectly re-create that environment again later.
 
-For both environment methods, figure out how to do that and experiment with it.  Can you think of where this might be useful?
+For both environment methods, read up on the web to figure out how to freeze and environment and use that as the basis for re-creating that environment.  Can you think of where this might be useful?  Given how easy it is to create an environment using either method might you not ever both to use freezing?
 
 
 
