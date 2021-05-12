@@ -105,12 +105,17 @@ alias cde='conda deactivate'
 alias cel='conda env list'
 ```
 - With these, you would activate the above environment by typing `cac condaenv`.
+- As the alias above shows, you can list the environments you have with `conda env list`.
+- You can remove an environment by typing `conda env remove -n condaenv`
 
 ## Discussion of the `Conda` Approach
 - At this point you have not touched any system files, everything that has been installed is inside  `~/miniconda3/envs/condaenv`.  
-- Note that there is no need for a particular version of python to be already installed in `/usr/bin`.  Conda installs a fresh copy from its repo.
-- It does not touch any system directories and so you need not use `sudo` or have any type of admin privileges.  Useful for avoiding side effects in the rest of your system.  Required for multi-user systems where you may not have admin privileges.
-- As a result, the environments it creates are a bit more isolated from one another and from the system than with `venv`.  And, as said, `conda` can manage other things besides python packages.
+- You therefore don't need `sudo`
+- There is no need for a particular version of python to be already installed in `/usr/bin`.  `Conda` installs a fresh copy from its repo.
+- The 'user-space-only' nature of `Conda` is useful for avoiding side effects in the rest of your system.  And, such an approach is required for multi-user systems where you may not have admin privileges.
+- The environments it creates are a bit more isolated from one another and from the system than with `venv`.  
+- When you create an environment, you can specify the packages to be initially installed right in the create command: `conda create -n condaenv python=3.9 pandas matplotlib`.
+- As said above, `conda` can manage other things besides python packages.
 - According to the web, its dependency management capabilities are superior to pip's and is able to resolve complex dependencies that pip cannot.  It is unclear how true and/or important that claim is.
 - As mentioned above, `conda` provides management capabilities for your environments since they are all located in `~/miniconda3/envs`.  The `conda env list` command is just one of many commands it provides.  
 - Finally, note that `conda` maintains its own python distribution instead of using PyPI.  That is generally not a problem, however.
@@ -119,16 +124,18 @@ alias cel='conda env list'
 ## Venv
 +: Uses built-in python functionality exclusively.
 
--: Requires installing python distributions into the system directories using `sudo apt install`.  
+-: Requires installing python distributions into the system directories using `sudo apt install`. 
 
 -: Only manages python packages
 
 +/-: Can put virtual environment into any directory
 
 ## Conda
--: Requires installing external software
+-: Requires installing external software using `wget`
 
 +: Everything (conda itself, python distributions, python packages) is installed into user directories - nothing placed into system directories - no need to use `sudo`
+
++: Installing a new version of python, creating an environment that uses that, and installing initial packages is a one-liner.
 
 +/-: Puts virtual envronments into standard shared place and so can provide environment management commands
 
