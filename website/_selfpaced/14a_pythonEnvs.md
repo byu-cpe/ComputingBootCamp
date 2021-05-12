@@ -170,7 +170,10 @@ Work through the following activities.
 ## Saving and Re-creating Environments
 Both `venv` and `Conda` provide mechanisms to freeze an environment (create a file listing of the things you have installed in them).  You can then use that file as the template to perfectly re-create that environment again later.
 
-For both environment methods, read up on the web to figure out how to freeze and environment and use that as the basis for re-creating that environment.  Can you think of where this might be useful?  Given how easy it is to create an environment using either method might you not ever both to use freezing?
+For both environment methods, read up on the web to figure out how to freeze and environment and use that as the basis for re-creating that environment.  Can you think of where this might be useful?  Given how easy it is to create an environment using either method might you not ever bother to use freezing?
 
+## Implement a Method
+- Select a method and start using it
+- Add aliases into your `.bashrc` file to make it easy to work with the method you have chosen.
 
 
