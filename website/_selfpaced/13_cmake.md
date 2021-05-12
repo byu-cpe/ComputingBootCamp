@@ -24,7 +24,12 @@ sudo apt install python3-pip
 sudo pip3 install --upgrade cmake
 ```
 
-# The Lecture Tutorial
+# Lecture Tutorial
+
+On May 7, 2021 we had a CMake Tutorial by Prof Mangelson. The video is embedded below
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/4PoLuU32nqw"> </iframe> 
+
 
 All of the files used in the lecture tutorial can be found at: <https://github.com/byu-cpe/ComputingBootCamp/tree/main/cmake>
 
@@ -32,7 +37,7 @@ A rough outline of the discussion we had is included in the notes.txt file.
 
 Try running through the examples we talked about in lecture. 
 
-The lecture video will be posted here once we get it formatted:
+
 
 
 
