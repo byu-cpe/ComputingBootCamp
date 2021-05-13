@@ -87,7 +87,7 @@ We usually order parts from these suppliers:
 ### Components
   * [Digi-Key](https://www.digikey.com/)
     * For Digi-Key components, you can put all the components in a Digi-Key cart as a guest. Then go to your cart, click "Cart Share" in the list of Cart Tools on the right-hand side of the page, copy the link, and email it to the Shrec coordinator.
-  * [Mouser](https://www.mouser.com/?gclid=CjwKCAjwhMmEBhBwEiwAXwFoEZ3g1wqRzuUfOkxbIaAgWyeD-7ybwyPChTLinEb5D009d6qYyI-nBBoCVHQQAvD_BwE) is another company like Digikey.
+  * [Mouser](https://www.mouser.com/) is another company like Digikey.
 
 ### Boards and Stencils
   * [JLCPCB](https://jlcpcb.com/) (for boards < 6 layers thick)
