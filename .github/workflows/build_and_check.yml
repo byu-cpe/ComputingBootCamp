@@ -11,7 +11,9 @@ jobs:
       - name: build
         run: |
           cd website 
-          bundle install
+          sudo apt-get install -y ruby-full build-essential zlib1g-dev
+          sudo gem install bundler
+          bundle update
           make build
 
   check-links:
@@ -22,5 +24,7 @@ jobs:
       - name: Check links
         run: |
           cd website
-          bundle install
+          sudo apt-get install -y ruby-full build-essential zlib1g-dev
+          sudo gem install bundler
+          bundle update
           make check_links

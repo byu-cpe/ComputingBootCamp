@@ -8,6 +8,14 @@ order: 7
 ---
 
 
+## Lecture Video
+On May 12, 2021 Prof Nelson discussed two different methods of setting up virtual environments on Linux machines. The video is embedded below. 
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/o3uLvzaBHL0"> </iframe>
+
+
+You can install virtual environments on your machine by taking the steps that follow.
+
 # Installing Python Versions and Creating Environments for Them in Ubuntu
 These instructions were done for an Ubuntu 16.04 system.  They will work for later versions.  The original system these instructions were created for and tested on contained python=2.7.12 and python3=3.5.2 as the *system python* installation (and no other versions of python were installed).  
 

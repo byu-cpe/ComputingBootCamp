@@ -45,6 +45,7 @@ Everything in Linux can be (and usually is) run by shell scripts and commands so
 ### Linux Resources (please add to this as you find good stuff)
 Here are some Linux tutorials that may be helpful:
 
+* https://learning.oreilly.com/library/view/ubuntu-linux-unleashed/9780136685395/ A good, full book on Linux - with your academic credentials you may have free access to it (for BYU students that is the case)
 * https://tldp.org/LDP/abs/html/index.html Advanced Bash Scripting Guide
 * https://www.grymoire.com/Unix/ Tutorials on awk, sed, grep, make and find
 * https://danielmiessler.com/study/vim/ Opinionated tutorial on vim
