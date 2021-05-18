@@ -1,7 +1,7 @@
 ---
 layout: page
 toc: true
-title: Matlab overview & tutorial links
+title: Matlab
 slug: matlab
 type: development
 order: 13
