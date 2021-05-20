@@ -47,3 +47,4 @@ The various stages of makefile development shown in the lecture are:
 
 ## Other Resources
 * <https://www.gnu.org/software/make/>
+* Recursive make considered harmful: <https://accu.org/journals/overload/14/71/miller_2004/>

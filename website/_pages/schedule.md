@@ -28,8 +28,8 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
-| Mon, May 24   | Xilinx FPGA Deep Dive                 |
-| Wed, May 26   | Xilinx FPGA Deep Dive                 |
+| Mon, May 24   | FPGA Overview                         | Goeders
+| Wed, May 26   | Xilinx FPGA Deep Dive                 | Nelson
 | Fri, May 28   | Vivado Tcl                            | Nelson
 | Mon, May 31   | HOLIDAY                               |
 | Wed, Jun 2    | Prjxray & FASM                        | 
