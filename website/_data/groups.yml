@@ -13,6 +13,12 @@
 - key: robotics
   title: Robotics
 
+- key: PCB
+  title: PCB
+
+- key: broader_impacts
+  title: Broader Impacts
+
 - key: resources
   title: Resources
 

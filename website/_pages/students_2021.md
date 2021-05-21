@@ -6,13 +6,15 @@ title: 2021 Students
 
 ### Nelson
 * [Ryan Johnson](https://ryancj14.github.io/ryancj14/pages/log)
-* [Jason Prescott](https://jason1234309.github.io/Immerse_Website)
+* [Jason Prescott](https://jason1234309.github.io/Immerse_Website/pages/log/)
 * [Xan Johnson](https://immerse.xanjohnson.com/daily)
 * [Joshua Fife](https://whiteninjaz.github.io/pages/log/)
+
 
 ### Wirthlin
 * [Ben Glines](https://benglines.github.io/immerse-website/pages/log/)
 * [Jackson Smith](https://rjsmith1999.github.io/IMMERSE/pages/log/)
+* [Jordi Ramos](https://jordi1215.github.io/pages/log)
 * [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
 * [Cody Arvonen](https://codyarvonen.github.io/personal_website/)
 * [Jacob Brown](https://jacobdbrown4.github.io/jacob_brown//pages/log/)
@@ -26,7 +28,7 @@ title: 2021 Students
 * [Jarom Harris](https://jaromharris.github.io/immerse/)
 * [Samuel Reynolds](https://thedhcreator.github.io/pages/log/)
 * [Nathan Harris](http://betacircuit.net/projects/IMMERSE/log/)
-* Jessa Locey
+* [Jessa Locey](https://jessalocey.github.io/pages/log/)
 
 ### Lundrigan
 

@@ -2,19 +2,19 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-sticky">
         <div class="sidebar-heading-big">
-            <a href="{{ site.baseurl }}/"><img src="{% link icon/logo.png %}" width="50"> <img
-                    src="{% link icon/sidebar_title.png %}" width="200">
+            <a href="{{ site.baseurl }}/"><img src="{% link media/icon/logo.png %}" width="50"> <img
+                    src="{% link media/icon/sidebar_title.png %}" width="200">
             </a>
         </div>
 
 
         <a href="{% link _pages/schedule.md %}"
-            class="list-group-item list-group-item-action bg-light sidebar-schedule sidebar-item">
+            class="sidebar-item list-group-item list-group-item-action bg-light sidebar-schedule sidebar-item">
             <span class="badge badge-pill badge-dark-grey"></span>
             Schedule
         </a>
         <a href="{% link _pages/students_2021.md %}"
-            class="list-group-item list-group-item-action bg-light sidebar-item">
+            class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
             <span class="badge badge-pill badge-dark-grey"></span>
             Student List
         </a>
@@ -35,7 +35,7 @@
                     {% for item in self_paced_sorted %}
                     {% if item.type == {{group.key}} %}
                     <a href="{{ site.baseurl }}{{item.url}}"
-                        class="list-group-item list-group-item-action bg-light sidebar-item">
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
                         <span class="badge badge-pill badge-dark-grey">{{ item.number }}</span>
                         {{ item.title }}
                     </a>
