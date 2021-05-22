@@ -1,8 +1,8 @@
 ---
 layout: page
 toc: true
-title: Github CI + Unit Testing
-slug: githubci
+title: Unit Testing
+slug: unit_testing
 type: development
 order: 9
 ---
