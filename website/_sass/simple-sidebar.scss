@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
 body {
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .sidebar-sticky {
@@ -15,7 +15,7 @@ body {
   /* Next 5 entries are new - made to make sidebar have own scrolling */
   height: calc(100vh); 
   padding-top: 0.5rem; 
-  // overflow-x: hidden; 
+  overflow-x: hidden; 
   overflow-y: auto; 
   padding-bottom: 50px;
 
