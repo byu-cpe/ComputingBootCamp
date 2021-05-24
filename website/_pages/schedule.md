@@ -72,6 +72,8 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 
 ## Networking Track
 
+The networking track will be meeting in EB 302 at 2-3:30 PM.
+
 | Date          | Topic                         | Speaker               
 |---------------|-------------------------------|-----------------------
 | Wed, Jun 2    | Networking Basics             | Lundrigan
