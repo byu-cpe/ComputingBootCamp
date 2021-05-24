@@ -45,6 +45,7 @@ Depending on how you downloaded the files, you will run the installer differentl
   2. On the _Select Product to Install_ screen, choose _Vitis_.
   3. On the customization screen, uncheck everything, except make sure you have:
      *  _SoCs/Zynq-7000_ or _SoCs/Zynq Ultrascale+ MPSoC_, depending on which board type you are using.
+     * Make sure you install the 7 Series parts
      *  Install Cable Drivers
 
   4. On the next screen, agree to all boxes.
