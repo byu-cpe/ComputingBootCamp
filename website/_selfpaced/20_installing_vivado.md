@@ -44,8 +44,7 @@ Depending on how you downloaded the files, you will run the installer differentl
   1. Enter your Xilinx account information, and select _Download and Install Now_.
   2. On the _Select Product to Install_ screen, choose _Vitis_.
   3. On the customization screen, uncheck everything, except make sure you have:
-     *  _SoCs/Zynq-7000_ or _SoCs/Zynq Ultrascale+ MPSoC_, depending on which board type you are using.
-     * Make sure you install the 7 Series parts
+     *  Install the board files you need.  This may be _SoCs/Zynq-7000_ (PYNQ, Zedboard, or other Zynq boards), _SoCs/Zynq Ultrascale+ MPSoC_ (Ultra96, UltraZed, or other MPSoC boards), *7 Series/Artix-7* (Arty, BASYS 3), or others, depending on which board type you are using.  You can always come back and install more board files later, but it's a bit of a hassle, so it's better to install all the board files you think you will need now.  Note that the more boards you select, the more disk space you will need.
      *  Install Cable Drivers
 
   4. On the next screen, agree to all boxes.
