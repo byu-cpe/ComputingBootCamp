@@ -27,12 +27,14 @@ To begin with, let's review what you already know about using Vivado in GUI mode
     * Figure out how to change the radix used to display the values of multi-bit signals
     * Figure out how to jump to the next signal transition for a selected signal in the waveform display
     * Figure out how to save the waveform display setup you have created and then re-load it for a later simulation
-  * Write your own SystemVerilog-based testbench for your design and simulate it that way instead of with a Tcl file.  You can find details on testbenches [at this BYU tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/SVTestbenches).  Note that that tutorial is outside this website so use the Back button to return to here...
+  
+# Task 2: Learn to Write a SystemVerilog Testbench
+In your classes you used Tcl commands to control your simulation.  This is sufficient for small designs but not for real designs.   The accepted way to exercise a circuit in simulation is to write a *testbench* using SystemVerilog (or whatever HDL you are coding your design in).
 
-  Finally, you may decide to do the above for another design or two until you feel comfortable with Vivado.
+* Write your own SystemVerilog-based testbench for your design and simulate it that way instead of with a Tcl file.  You can find details on testbenches [at this BYU tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/SVTestbenches).  Note that that tutorial is outside this website so use the Back button to return to here...
 
-# Task 2: Learn How to Do All the Above Using Tcl
-You can do everything from above (except perhaps physically view simulation waveforms) using a script containing Tcl commands.  That is, you can create projects, add design files, compile your design files, start a simulation, synthesize/implement/generate bitstreams, etc. all using Tcl commands.
+# Task 3: Learn How to Drive Vivado Using Tcl
+You can do essentially everything you need (except perhaps physically view simulation waveforms) using a script containing Tcl commands.  That is, you can create projects, add design files, compile your design files, start a simulation, synthesize/implement/generate bitstreams, etc. all using Tcl commands.
 
 This is often a preferred way to work since you want to be able to write a complete Tcl script to do what you want (create, implement, and then analyze a design) without your having to manually drive the GUI click by click.  And, this is the ONLY feasible way to script a large set of test runs of the tools on benchmark designs, for example.  
 
@@ -43,7 +45,7 @@ Also, note if you start Vivado in `Tcl mode` using the `-mode tcl` flag you can 
 To learn how to use Tcl, work your way through this [BYU Tcl Tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/TclVivado).
 
 Then:
-* Repeat all the steps from above with your previous class's design. 
+* Use a version of the script from the tutorial above to synthesize and implement your design.
 * For things that require the GUI to see the effects (like some simulations), have the GUI open.
 * For things that don't require the GUI (like synthesizing), do everything by running "vivado -mode tcl" and just do it from the command line.
 * Experiment with starting and stopping the GUI.
@@ -52,7 +54,7 @@ Finally, a hint: anything you do in the GUI in Vivado (with a few exceptions) wi
 
 Just remember that you usually are in `project mode` when you create and work with projects from the GUI.  And, you are in `non-project mode` when you create designs solely using Tcl commands.  And, note that the commands for doing certain tasks in project mode are different for non-project mode.  So you can only take the above paragraph's hint so far in learning Tcl commands.  At this point, go read up on project and non-project mode in Vivado to understand the differences.
 
-# Task 3: Write Some Additional Tcl Scripts to Learn More
+# Task 4: Write Some Additional Tcl Scripts to Learn More
 
 ## Mini-project 1
 You can prevent what sites Vivado will use when doing placement ('place_design').  If a site has a PROHIBIT property attached to it then Vivado will avoid using it.  This experiment entails:
