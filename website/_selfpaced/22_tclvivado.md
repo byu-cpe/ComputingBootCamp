@@ -16,8 +16,9 @@ The goal of this unit is to help you get comfortable with running Vivado from th
 
 # Task 1: Refresh Your Vivado Abilities With the GUI
 To begin with, let's review what you already know about using Vivado in GUI mode.
+* Get yourself a Vivado version installed you can use.  It need not be the very latest but use a relatively recent version.
 * Take an FPGA design from a previous class you have had or project you have done
-* Using the Vivado (GUI mode) in your VM:
+* Using the Vivado (GUI mode):
   * Open it (or create a new project if needed)
   * Modify it
   * Simulate it using the built-in simulator
@@ -26,12 +27,18 @@ To begin with, let's review what you already know about using Vivado in GUI mode
     * Figure out how to change the radix used to display the values of multi-bit signals
     * Figure out how to jump to the next signal transition for a selected signal in the waveform display
     * Figure out how to save the waveform display setup you have created and then re-load it for a later simulation
-  * Write you own SystemVerilog-based testbench for it and simulate it that way instead of with a Tcl file.  You can find details on testbenches [at this BYU tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/SVTestbenches).  Note that that tutorial is outside this website so use the Back button to return to here...
+  * Write your own SystemVerilog-based testbench for your design and simulate it that way instead of with a Tcl file.  You can find details on testbenches [at this BYU tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/SVTestbenches).  Note that that tutorial is outside this website so use the Back button to return to here...
+
+  Finally, you may decide to do the above for another design or two until you feel comfortable with Vivado.
 
 # Task 2: Learn How to Do All the Above Using Tcl
-You can do everything from above (except physically view simulation waveforms) using a script containing Tcl commands.  That is, you can create projects, add design files, compile your design files, start a simulation, synthesize/implement/generate bitstreams, etc.
+You can do everything from above (except perhaps physically view simulation waveforms) using a script containing Tcl commands.  That is, you can create projects, add design files, compile your design files, start a simulation, synthesize/implement/generate bitstreams, etc. all using Tcl commands.
 
-This is often a preferred way to work since you want to be able to write a complete Tcl script to do what you want (create, implement, and then analyze a design) without your having to manually drive the GUI click by click.
+This is often a preferred way to work since you want to be able to write a complete Tcl script to do what you want (create, implement, and then analyze a design) without your having to manually drive the GUI click by click.  And, this is the ONLY feasible way to script a large set of test runs of the tools on benchmark designs, for example.  
+
+One work method is to do everything with Tcl except simulation.  When you want to simulate you can either start up the Vivado simulator from the command line on a series of files or learn to another more standard simulator (like Modelsim).
+
+Also, note if you start Vivado in `Tcl mode` using the `-mode tcl` flag you can always start and stop the GUI as needed using `start_gui` and `stop_gui` in the Tcl console.
 
 To learn how to use Tcl, work your way through this [BYU Tcl Tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/TclVivado).
 
@@ -43,7 +50,7 @@ Then:
 
 Finally, a hint: anything you do in the GUI in Vivado (with a few exceptions) will put the resulting Tcl command to accomplish that into the Tcl console log.  So, one way to learn how to do things is to do them graphically and then look to see what the equivalent Tcl commands to accomplish that are.  
 
-Just remember that you usually are in project mode when you create and work with projects from the GUI.  And, you are in non-project mode when you create designs solely using Tcl commands.  And, note that the commands for doing certain tasks in project mode are different for non-project mode.  So you can only take the above paragraph's hint so far in learning Tcl commands.
+Just remember that you usually are in `project mode` when you create and work with projects from the GUI.  And, you are in `non-project mode` when you create designs solely using Tcl commands.  And, note that the commands for doing certain tasks in project mode are different for non-project mode.  So you can only take the above paragraph's hint so far in learning Tcl commands.  At this point, go read up on project and non-project mode in Vivado to understand the differences.
 
 # Task 3: Write Some Additional Tcl Scripts to Learn More
 
@@ -52,7 +59,7 @@ You can prevent what sites Vivado will use when doing placement ('place_design')
 
 1. Write a Tcl script to attach the PROHIBIT property to every SLICE, BRAM, and DSP site in the chip.  You can do a "get-sites" call to get all sites.  Look at what comes back and figure out what names you can filter on  (like SLICE*).  You then attach the property to each thing returned.  
 1. Now, remove the property at specific locations (maybe a rectangle or donut shaped area in the middle or corner of the chip.  
-1. Run the design through the tools from the command line, start the gui, and observe whether it followed your placement directives.  Iterate until you figure out how to make it do so.
+1. Run the design through the tools from the command line, start the gui, and observe whether it followed your placement directives.  Iterate until you figure out how to make it do so.  For example, can you make it so all the circuitry in your design ends up in a small rectangle in a certain place on the FPGA?  You won't be able to observe this easily with a 4-bit counter design, you might need a bigger design to be able to observe it...
 
 ## Mini-project 2
 Create an 'analyze_design' script in Tcl.
@@ -68,7 +75,7 @@ Create an 'analyze_design' script in Tcl.
   1. Its name, type, etc.
   1. A listing of the pins on cells that it is connected to.
   1. If it is routed then print out a listing of the pins on sites or cells it is connected to.  For each such connected pin, print out enough identifying information so it is obvious where that can be located.
-  1. If it is routed then print out a listing of the wires/nodes and PIPs making up its route.  For each such wire/node and PIP print out enough identifying information so it is obvious where they are located.  This last one is prett difficult until you figure out what a PIP is.   You might want to leave it until you have read through the RapidSmith docs.
+  1. If it is routed then print out a listing of the wires/nodes and PIPs making up its route.  For each such wire/node and PIP print out enough identifying information so it is obvious where they are located.  This last one will require you figure out what a PIP is.  
 
 In short, from the above info you print out one should be able to re-create the entire design from cells and nets to placement and routing (but you do not need to do the re-creation).
 

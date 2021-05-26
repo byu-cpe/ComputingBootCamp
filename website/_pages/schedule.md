@@ -29,8 +29,8 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
 | Mon, May 24   | FPGA Overview                         | Goeders
-| Wed, May 26   | Xilinx FPGA Deep Dive                 | Nelson
-| Fri, May 28   | Vivado Tcl                            | Nelson
+| Wed, May 26   | Vivado Review and Tcl for Vivado      | Nelson
+| Fri, May 28   | Xilinx 7 Series FPGA Deep Dive  (no lecture - self-paced learning activity only) | Nelson
 | Mon, May 31   | HOLIDAY                               |
 | Wed, Jun 2    | Prjxray & FASM                        | 
 | Fri, Jun 4    | fasm2bels, fpga-tool-perf, symbiflow-examples | 
