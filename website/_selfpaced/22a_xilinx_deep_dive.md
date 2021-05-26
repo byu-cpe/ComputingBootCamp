@@ -40,6 +40,7 @@ A CLB (configurable logic block) tile is where general logic is found in an FPGA
   - Now, show how to do it a different way using one of the flip flops toward the center of the diagram.  
   - For each case, how would the various routing MUXes need to be programmed to accomplish this.
 
+Finally, open up Vivado, load a project for one of your previous designs, and open the implemented design.  Zoom into the device view and find a CLB and some slices.  Clicking on the little wiring icon above the device view will turn on wiring and show you how your design was configured into the slices.  It will show the routing muxes and how the signals are configured through them.  As with the Vivado Tcl self-paced activity, click on things and explore until you better understand how Vivado presents the internals of CLBs and SLICEs to you and how that relates to what you see in the documentation you have just reviewed above.
 ## Distributed RAM in SLICEM's
 - First turn to Figure 2-3 to see that a SLICEM is close to, but not exactly the same as a SLICEL.  
 - Read the section titled "Distributed RAM" for an introduction to how to make small memories in a SLICEM.
