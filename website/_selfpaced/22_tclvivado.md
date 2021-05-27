@@ -42,9 +42,11 @@ One work method is to do everything with Tcl except simulation.  When you want t
 
 Also, note if you start Vivado in `Tcl mode` using the `-mode tcl` flag you can always start and stop the GUI as needed using `start_gui` and `stop_gui` in the Tcl console.
 
-To learn how to use Tcl, work your way through this [BYU Tcl Tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/TclVivado).
+To learn how to use Tcl, work your way through this [BYU Tcl Tutorial](https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/TclVivado), which is focused on the basic usage of Tcl inside Vivado.
 
-Then:
+Then, here is a good [general Tcl Tutorial](https://wiki.tcl-lang.org/page/Tcl+Tutorial+Lesson+0) which will fill in many gaps and provide information on many of the language features.
+
+To proceed:
 * Use a version of the script from the tutorial above to synthesize and implement your design.
 * For things that require the GUI to see the effects (like some simulations), have the GUI open.
 * For things that don't require the GUI (like synthesizing), do everything by running "vivado -mode tcl" and just do it from the command line.
