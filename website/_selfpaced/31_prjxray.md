@@ -6,6 +6,11 @@ slug: xray
 type: fpga_opensource
 order: 3
 ---
+# Lecture Video
+On Jun 2, 2021 Prof Nelson gave an overview of Project XRAY and FASM. The video is embedded below. 
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/6HGN8pQn_jA"> </iframe>
+
 
 # Project XRAY Bootcamp
 
