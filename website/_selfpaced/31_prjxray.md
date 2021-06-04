@@ -7,10 +7,6 @@ type: fpga_opensource
 order: 3
 ---
 
-# Project XRAY Bootcamp
-
-These instructions provide the "bootcamp" steps for learning about the ProjectXRAY. You can access the project on GitHub at: https://github.com/SymbiFlow/prjxray
-
 ## Overview
 
 [Project X-Ray](https://github.com/SymbiFlow/prjxray) is a project that documents the [Xilinx 7 Series](https://www.xilinx.com/support/documentation/selection-guides/7-series-product-selection-guide.pdf) bitstream. Essentially, Project X-Ray can build databases that map the elements (Lookup tables, interconnects, muxes, ports, etc.) for an FPGA part to their corresponding bits in the bitstream.
