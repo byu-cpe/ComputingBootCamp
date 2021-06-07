@@ -7,6 +7,11 @@ type: development
 order: 8
 ---
 
+## Lecture Video 
+On May 14, 2021 Prof Mangelson gave a tutorial on how to use the Numpy, Pandas, and Matplotlib python packages. The video is embedded bellow. Most of the instructions from the lecture as well as additional information can be found in the following sections. 
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/hdDKcOLD-5M"> </iframe> 
+
 ## Overview
 
 In this module, we are going to provide an introduction to several essential python libraries. There are many many more libraries than we can cover and the details of each library is much larger than we can fully cover as well, so this is just supposed to give you a brief introduction to some essential libraries and their basic use.

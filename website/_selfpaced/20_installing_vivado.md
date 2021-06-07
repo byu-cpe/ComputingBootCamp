@@ -44,7 +44,7 @@ Depending on how you downloaded the files, you will run the installer differentl
   1. Enter your Xilinx account information, and select _Download and Install Now_.
   2. On the _Select Product to Install_ screen, choose _Vitis_.
   3. On the customization screen, uncheck everything, except make sure you have:
-     *  _SoCs/Zynq-7000_ or _SoCs/Zynq Ultrascale+ MPSoC_, depending on which board type you are using.
+     *  Install the board files you need.  This may be _SoCs/Zynq-7000_ (PYNQ, Zedboard, or other Zynq boards), _SoCs/Zynq Ultrascale+ MPSoC_ (Ultra96, UltraZed, or other MPSoC boards), *7 Series/Artix-7* (Arty, BASYS 3), or others, depending on which board type you are using.  You can always come back and install more board files later, but it's a bit of a hassle, so it's better to install all the board files you think you will need now.  Note that the more boards you select, the more disk space you will need.
      *  Install Cable Drivers
 
   4. On the next screen, agree to all boxes.
@@ -63,7 +63,7 @@ sudo ./install_drivers
 ### Other Considerations
   * Before you can run any Vivado/Vitis tool, you will need to add the executables to your PATH.  This is done using a Xilinx-provided script:
 
-        source /tools/Xilinx/Vivado/2020.1/settings64.sh
+        source /tools/Xilinx/Vivado/2020.2/settings64.sh
 
   * If you want that to always be run when you open a new shell, add it to your `~/.bashrc` file.  *Note:* While this is convenient, it can also cause issues.  The Xilinx tools come with their own versions of several others tools (ie. make, cmake), and you if add this to your *.bashrc* then the Xilinx versions of these programs will always be run instead of the version installed by your Linux package manager.
   * By default, Vivado creates log files in whatever directory it is run from.  To prevent these from cluttering up your filesystem, it is nice to redirect them to fixed locations (again, you may want to add this to your `~/.bashrc`):

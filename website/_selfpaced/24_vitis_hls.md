@@ -42,13 +42,13 @@ Run Vitis (`vitis_hls`) and create a new project
 
 * For design files, select add files and choose matrixmul.cpp from the downloaded source code. For the top function browse and choose matrixmul. Select next.
 
-<img src = "{% link images/HLS/designFiles.png %}" width="800">
+<img src = "{% link media/HLS/designFiles.png %}" width="800">
 
 * For test bench files, select add files and choose matrixmul_test.cpp. Select next. 
 
 * Under solution configuration, you can change the solution name or leave it as "solution1."  Leave the period at 10us and change the board to the xc7z020clg484-1. Select Finish. 
 
-<img src = "{% link images/HLS/consoleScreen.PNG %}" width="800">
+<img src = "{% link media/HLS/consoleScreen.PNG %}" width="800">
 
 * Looking at the above image, matrimul.cpp can be found under the drop-down menu Source on the left side of the screen. Open it. Changes that you make to the code here with automatically update the code in VS. 
  
@@ -73,11 +73,11 @@ C Synthesis is the simulation run to determine what resources will be used on th
 
 * After running screen like the one below will appear. 
 
-<img src = "{% link images/HLS/synthesis.PNG %}" width="800">
+<img src = "{% link media/HLS/synthesis.PNG %}" width="800">
 
 * Scroll in the Synthesis Summary Report section. The part that will be focused on during this tutorial is the section is the first box under Performance and Resource Estimates, as shown below.
 
-<img src = "{% link images/HLS/beforeOptimization.PNG %}" width="800">
+<img src = "{% link media/HLS/beforeOptimization.PNG %}" width="800">
 
 * Take note of the unoptimized latency and the amount of resources. These are the values we will compare to in the next section. 
 
@@ -85,7 +85,7 @@ C Synthesis is the simulation run to determine what resources will be used on th
 
 This section will focus on adding optimizations to the program in order to decrease the latency. 
 
-<img src = "{% link images/HLS/codeBeforeOpt(1).PNG %}" width="800">
+<img src = "{% link media/HLS/codeBeforeOpt(1).PNG %}" width="800">
 
 * As seen in the image above, there is a Directives window. If this window is not there, go to *Window->Show View->Show Directives*.
 
@@ -118,7 +118,7 @@ For a full list of the different pragmas, what they are, and what they do, visit
 
 Altogether the code should look like:
 
-<img src = "{% link images/HLS/codeFinalOpt.PNG %}" width="800">
+<img src = "{% link media/HLS/codeFinalOpt.PNG %}" width="800">
 
 **Directives**
 
@@ -134,7 +134,7 @@ Adding Directives in the Directives window does not change the code in any way.
 
 Once you finish, your Directives window should look like the image below:
 
-<img src = "{% link images/HLS/directivesWindow.PNG %}" width="800">
+<img src = "{% link media/HLS/directivesWindow.PNG %}" width="800">
 
 If you create a pragma and a directive for the same command, you would see it twice in the Directives window. Don't do this. Choose one or the other and check your window for duplicates.
 

@@ -12,12 +12,21 @@ body {
   position: sticky;
   top: 0;
 
-  /* Next 5 entries are new - made to make sidebar have own scrollbar */
+  /* Next 5 entries are new - made to make sidebar have own scrolling */
   height: calc(100vh); 
   padding-top: 0.5rem; 
   overflow-x: hidden; 
   overflow-y: auto; 
   padding-bottom: 50px;
+
+  // Hide scrollbar
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+// Hide scrollbar
+.sidebar-sticky::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 #sidebar-wrapper {
@@ -32,6 +41,7 @@ body {
 #sidebar-wrapper .sidebar-heading-big {
   padding: 7pt 20pt;
   font-size: 1.2rem;
+  width: 16rem;
 }
 
 .sidebar-item {

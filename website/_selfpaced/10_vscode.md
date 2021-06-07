@@ -38,20 +38,29 @@ On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded 
 
 **Tutorial Topics**:
   * Take a tour:
-    * File vs Folder vs Workspace
+    * Opening Files
+      * File vs Folder vs Workspace
+      * Reload workspace (Ctrl+R)
+      * Open file (Ctrl+P)      
+    * Viewing files
+      * Split views
+      * File previews (markdown)
+    * Working with code:
+      * Syntax highlighting 
+      * Autocomplete
+      * Auto parameters
     * Sidebar
-    * F1, Ctrl+P
-    * Split views
-    * File previews (markdown)
-    * Terminal (and multiple terminals)
-  * Syntax highlighting 
+    * Terminal (and multiple terminals)  
   * Extensions    
   * Settings 
     * How to access JSON settings
-    * User vs Workspace settings
+    * User vs Workspace settings 
+    * Extension settings     
+    * Settings Sync
   * Git Integrations
   * Remote Access (SSH)
   * Launch Configurations (Debugging)
+  * Tasks
   * Other niceties: 
     * Package recommendations
     * Github / Pull Request Integrations

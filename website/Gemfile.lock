@@ -11,7 +11,7 @@ GEM
     ethon (0.14.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
-    ffi (1.15.0)
+    ffi (1.15.1)
     forwardable-extended (2.6.0)
     html-proofer (3.19.1)
       addressable (~> 2.3)
@@ -52,13 +52,11 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    mini_portile2 (2.5.1)
-    nokogiri (1.11.3)
+    mini_portile2 (2.5.3)
+    nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.3-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.11.3-x86_64-linux)
+    nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
     nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
@@ -87,14 +85,14 @@ GEM
 PLATFORMS
   ruby
   x86_64-darwin-18
-  x86_64-linux-musl
 
 DEPENDENCIES
   html-proofer
   jekyll
   kramdown (>= 2.3.1)
+  nokogiri (>= 1.11.4)
   rake
   rexml (>= 3.2.5)
 
 BUNDLED WITH
-   2.2.16
+   2.2.17
