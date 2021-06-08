@@ -17,6 +17,11 @@ Once you have done that and the tests have been created, go into the 3 directori
 
 Also, find the .bit files generated - if you had the right board you could download them to the board - they do work!
 
+## Lecture Video
+On June 4, 2021 Prof Nelson gave an overview of the various repositories inside symbiflow. The video is embedded below. 
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/zNZND75nQ10"> </iframe>
+
 ## Some Things to Do
 * Make a change to one of the designs and re-make it.  
 * Time how long it takes.  

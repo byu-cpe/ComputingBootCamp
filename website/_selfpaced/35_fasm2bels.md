@@ -6,6 +6,11 @@ slug: fasm2bels
 type: fpga_opensource
 order: 6
 ---
+## Lecture Video
+On June 4, 2021 Prof Goeders gave an overview of the FASM to Bells repository. The video is embedded below. 
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/58wXkBlyu-Q"> </iframe>
+
 
 Using fasm2bels would be a useful activity because it would:
 * It is a 2nd Symbiflow repo with its own install instructions to get them use to the idea of Symbiflow having multiples
