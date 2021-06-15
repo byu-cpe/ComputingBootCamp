@@ -36,12 +36,8 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Fri, Jun 4    | fasm2bels, fpga-tool-perf, symbiflow-examples | 
 | Mon, Jun 7    | Guest Speakder
 | Wed, Jun 9    | RapidWright                           |
-| Fri, Jun 11   | Interchange                           |
-| Mon, Jun 14   | VTR and Symbiflow-VTR                 |
-| Wed, Jun 16    | Vivado Block Design                   |   
-| Fri, Jun 18    | Vitis Embedded SW                     |
-| Mon, Jun 21    | Vitis HLS                             |
-| Wed, Jun 23    | HLS/Vivado System Integration         |
+| Mon, Jun 21    | Vivado Block Design + Vitis          | Goeders
+| Wed, Jun 23    | Vitis HLS                            | Goeders
 
 ## Robotics Track
 
