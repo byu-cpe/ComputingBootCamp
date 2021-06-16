@@ -14,11 +14,13 @@ Matlab is a software used by engineers around the globe to perform mathematical 
 
 ## Setup
 
-A Matlab SDK (Sofware Development Kit) can be downloaded [here](https://software.byu.edu/student) if you are a current BYU student. You will need to create a Matlab account using your byu email (i.e. NetID@byu.edu), and you will need an access code (available to current BYU students through BYU after creating a Matlab account) in order to use the full version of Matlab rather than the free trial version.
+A Matlab SDK (Sofware Development Kit) can be downloaded  <a href="https://software.byu.edu/student" target="_blank">here</a> if you are a current BYU student. You will need to create a Matlab account using your byu email (i.e. NetID@byu.edu), and you will need an access code (available to current BYU students through BYU after creating a Matlab account) in order to use the full version of Matlab rather than the free trial version.
 
 ## Intro to Matlab Window
 
 FIXME: Put in short tutorial with pictures explaining what each part of the Matlab window is
+
+<img src = "{% link media/matlab/matlab_window.PNG %}" width="600">
 
 When first opening Matlab it can be overwhelming to a new user. The key sections of the matlab screen are the folder directory (left), the command window (bottom), the workspace (right), and the editor (middle top). The folder directory is used when accessing a directory of files, which is especially common with large Matlab programs which hold many Matlab scripts which will allow for easy navigation between files. The command window is where one can directly write in Matlab commands and run them. The Workspace is similar to a stack frame as it is an area where local variables are stored for easy access and reuse. The editor is used in creating and editing Matlab scripts.
 
@@ -36,7 +38,7 @@ If the following command is run in the terminal window
 ```
 the variable x is assigned the value (2 + 2) or 4, and the output is printed to the command window as shown below:
 
-FIXME: ADD PICTURE OF OUTPUT x = 2 + 2
+<img src = "{% link media/matlab/MatlabSemicolon_01.PNG %}" width="600">
 
 In contrast if a semicolon is placed at the end of the line:
 ```
@@ -44,7 +46,7 @@ In contrast if a semicolon is placed at the end of the line:
 ```
 the variable is assigned the value (2 + 2) or 4 the same as above, but the output is suppressed and does not display in the command window.
 
-FIXME: ADD PICTURE OF OUTPUT x = 2 + 2;
+<img src = "{% link media/matlab/MatlaSemicolon_02.PNG %}" width="600">
 
 ## Basic plotting
 
