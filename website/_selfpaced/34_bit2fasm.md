@@ -7,7 +7,15 @@ type: fpga_opensource
 order: 5
 ---
 
+## Overview
+
+"bit2fasm" is a tool within Project X-Ray that converts a bitstream (.bit file) to [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/) lines. 
+
 This page provides details on how the bit2fasm.py script within Project XRAY works. There are two primary sections of this description. The first, [Code](#code), describes the code in the various files that perform the bit2fasm functionality. The second, [Data Structures](#data-structures), describes the data structures used by the code. 
+
+## Install
+
+Follow the instructions for installing [Project X-Ray](https://byu-cpe.github.io/ComputingBootCamp/tutorials/xray/). 
 
 ## Code
 
@@ -60,7 +68,7 @@ bit_0042001e_100_09
 bit_00420020_099_16
 ```
 
-#### bits_to_fasm
+### bits_to_fasm
 
 After creating a 'bits' file, the 'bits_to_fasm' function is called. This function directs the main work of dissasembly. The function performs the following steps:
   * Creates the [Database](#database) object
@@ -70,8 +78,6 @@ After creating a 'bits' file, the 'bits_to_fasm' function is called. This functi
 After creating these objects, a [Bits](#bits-file) is read and parsed using the `load_bitdata` in the [bitstream.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/bitstream.py) file. The result is a dictionary (called `bitdata`) between a frame_Address and two sets. The first set are the word columns that have any bits set in the bitstrea and the second set are the bit indicies within the frame (not the word). The bit index references a specific bit within a frame and not within the word.
 
 Next, the [find_features_in_bitstream](#find_features_in_bitstream) function is called in FasmDisassembler.
-
-**HERE**
 
 
 ### find_features_in_bitstream
@@ -149,7 +155,7 @@ Defined in [grid_types.py](https://github.com/SymbiFlow/prjxray/blob/master/prjx
   * **pin_functions**
   * **clock_region**
 
-## Bits
+### Bits
 
 Defined in [grid_types.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/grid_types.py) file. A named tuple that stores the "bit" information within a tile .json using the following fields:
   * **base_address**
@@ -158,7 +164,7 @@ Defined in [grid_types.py](https://github.com/SymbiFlow/prjxray/blob/master/prjx
   * **words**
   * **alias**
 
-## SegmentMap
+### SegmentMap
 
 Defined in [segment_map.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/segment_map.py) file. A python class that contains a Python "IntervalTree" object. The purpose of this class is to facilitate lookup of BitsInfo objects based on the base address.
 
@@ -236,6 +242,18 @@ Devices of the same family share the same database directory but each devices ha
                      coordinate system.
 
 
-## Project XRAY Environment Variables
+### Project XRAY Environment Variables
 
+When opening a new terminal, the following command must be ran from the Project X-Ray directory to use Project X-Ray tools
+```
+source settings/<part_famliy_name>.sh
+```
+After running the command above, the command `env` can be used to verify that the correct part is loaded into an environment variable. The command above sets several environment variables, which can all be seen (along with all other environment variables) by simply typing `env` in the terminal. To check one of the environment variables used by the tool, run `printenv XRAY_PART_YAML`, and a path to a part.yaml file should be printed.
+
+
+## Follow-up Activities:
+
+* Try creating a simple 2-input AND gate with Vivado, generate a bitstream, and convert it to FASM. Make sure that the part you generate matches the part you're using in your environment variables (You can look inside the `settings/<part_famliy_name>.sh` script you ran, or run the command `printenv XRAY_PART`. It might not be important what part you're using, so the easiest route is to just match Vivado to whatever part is in the settings script)
+  * Find which FASM lines correspond to the logic that implements the AND gate. Change the design to a 3-input AND gate, and a 2-input OR gate and mark the differences. 
+  * Open up the implemented design in Vivado and look at the device GUI. Try to find the LUT that implements the logic in your design by looking at the Site/Slice location. Try to find one of the interconnects in the design as well. 
 

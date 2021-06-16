@@ -26,7 +26,7 @@ order: 1
 | Collin Bradford         | (?)                 |
 | Alex Steffan            | Smalley             |
 | Braden Huffman          | Smalley             | Python (pytorch)
-| Benjamin Giles          | Wirthlin            | Common style, formatting for modules, style guide
+| Benjamin Glines         | Wirthlin            | Common style, formatting for modules, style guide
 | Jordi Ramos             | Wirthlin            | Netlists: SpyDrNet?, EDIF, blif, eblif, Verilog, (what is a netlist)
 | Caden Ellis             | Wirthlin            | JTAG, Badge stuff
 | Ryan Johnson            | Nelson              | Markdown tutorial, Conda and mini conda
