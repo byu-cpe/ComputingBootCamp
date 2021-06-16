@@ -1,10 +1,10 @@
 ---
 layout: page
 toc: true
-title: Python Packages II
+title: Python Packages
 slug: pythonAdv
 type: development
-order: 8
+order: 9
 ---
 
 ## Lecture Video 

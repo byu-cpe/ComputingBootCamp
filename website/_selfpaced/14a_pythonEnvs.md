@@ -1,7 +1,7 @@
 ---
 layout: page
 toc: true
-title: Python Packages/Environments
+title: Python Environments
 slug: pythonEnvs
 type: development
 order: 7
@@ -26,7 +26,7 @@ Before proceeding carefully consider the goals of what we are trying to achieve:
 
 There are two ways to do this: using python's `venv` module or using `Conda`.  They will be covered in that order.  There are advantages and disadvantages to each.
 
-# Using `venv`
+# Using venv
 
 First, set up a new python version on your machine (you can specify any version you want, we will use 3.9):
 ```
@@ -63,7 +63,7 @@ python3.9 -m venv ~/myvenv
 alias myvenv='source ~/myvenv/bin/activate'
 alias de='deactivate'
 ```
-## Discussion of the `venv` Approach
+## Discussion of the 'venv' Approach
 - The `venv` module is in all python distributions since python 3.3 according to the web so this will work for all versions after that.    So, you need not install any 3rd party software to use `venv`.  
 - The instructions above have you install new versions of python on your system in `/usr/bin` alongside the system python.  As a result, you will need `sudo` privileges to install these.
 - With the `venv` approach the virtual environments can be located anywhere in the file system you want (unlike with some other approaches where they are all gathered into one place - both a plus and a minus).
@@ -76,7 +76,7 @@ alias de='deactivate'
     - One is `pyenv` a github project you can download and build.  When it installs a new python version for an environment on your machine it compiles it from sources.  It then provides facilities to manage your environments and make it easy to switch between them.  It may be useful or it may be overkill, depending on what you need.
     - Another is `conda`, which will be covered next so keep reading.
 
-# Using `Conda`
+# Using Conda
 `Conda` was developed by the developers of `numpy`.  The web suggests it was done to solve problems that python, venv, and pip alone could not handle.  And, it works with other languages besides python, something the `numpy` developers thought important.  
 
 It is claimed to be a more full-featured containerization technology compared to `venv` in that nothing is shared, nothing is installed into system areas on your machine but everything lives in the environments themselves. 
@@ -123,7 +123,7 @@ alias cel='conda env list'
 - As the alias above shows, you can list the environments you have with `conda env list`.
 - You can remove an environment by typing `conda env remove -n condaenv`
 
-## Discussion of the `Conda` Approach
+## Discussion of the 'Conda' Approach
 - At this point you have not touched any system files, everything that has been installed is inside  `~/miniconda3/envs/condaenv`.  
 - You therefore don't need `sudo`
 - There is no need for a particular version of python to be already installed in `/usr/bin`.  `Conda` installs a fresh copy from its repo.
@@ -135,8 +135,10 @@ alias cel='conda env list'
 - As mentioned above, `conda` provides management capabilities for your environments since they are all located in `~/miniconda3/envs`.  The `conda env list` command is just one of many commands it provides.  
 - Finally, note that `conda` maintains its own python distribution instead of using PyPI.  That is generally not a problem, however.
 
-# What to Choose?
-## Venv
+## What to Choose?
+
+### Venv
+
 +: Uses built-in python functionality exclusively.
 
 -: Requires installing python distributions into the system directories using `sudo apt install`. 
@@ -145,7 +147,8 @@ alias cel='conda env list'
 
 +/-: Can put virtual environment into any directory
 
-## Conda
+### Conda
+
 -: Requires installing external software using `wget`
 
 +: Everything (conda itself, python distributions, python packages) is installed into user directories - nothing placed into system directories - no need to use `sudo`
@@ -154,10 +157,10 @@ alias cel='conda env list'
 
 +/-: Puts virtual envronments into standard shared place and so can provide environment management commands
 
-# Self-Paced Learning Activities
+## Self-Paced Learning Activities
 Work through the following activities.
 
-## 1. Experiment with venv
+### 1. Experiment with venv
 - Create an environment called `env1` using the default system python
 - Activate it, start up python to verify the version being used, then deactivate it.
 - Install a new python version into your system (maybe use 3.9?)
@@ -172,7 +175,7 @@ Work through the following activities.
 - Rename the directory `env1` to be something else.  Can you still activate it as long as you use the right path?
 - Remove `env1`.
 
-## 2. Experiment with Conda`
+### 2. Experiment with Conda
 - Repeat the above steps but using `Conda`. 
 - Call your environments `cenv1` and `cenv2`.  When you create each just specify a python version to use without first installing any python into your system.
 - When you create `cenv1` specify you want to install `pandas` in the `conda create` command itself (see above).  Then, once you have activated `cenv1` use `conda install` to add `matplotlib` to the environment.
@@ -182,14 +185,13 @@ Work through the following activities.
 - Experiment to see what you can do with `cenv2`.  Can you rename it?  What else can you do with it?
 - Remove `cenv2` using the `conda env` command.
 
-## 3. Saving and Re-creating Environments
+### 3. Saving and Re-creating Environments
+
 Both `venv` and `Conda` provide mechanisms to freeze an environment (create a file listing of the things you have installed in them).  You can then use that file as the template to perfectly re-create that environment again later.
 
 For both environment methods, read up on the web to figure out how to freeze and environment and use that as the basis for re-creating that environment.  Can you think of where this might be useful?  Given how easy it is to create an environment using either method might you not ever bother to use freezing?
 
-## 4. Implement a Method
+### 4. Implement a Method
 - Select a method and start using it
 - Add aliases into your `.bashrc` file to make it easy to work with the method you have chosen.
 - If you choose `Conda`, find a cheat sheet on the web to use as a reference (they do exist)
-
-

@@ -4,7 +4,7 @@ toc: true
 title: Documentation + Sphinx
 slug: sphinx
 type: development
-order: 10
+order: 11
 ---
 
 ## Lecture Video

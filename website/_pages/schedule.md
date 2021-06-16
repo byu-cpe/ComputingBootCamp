@@ -36,14 +36,12 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Fri, Jun 4    | fasm2bels, fpga-tool-perf, symbiflow-examples | 
 | Mon, Jun 7    | Guest Speakder
 | Wed, Jun 9    | RapidWright                           |
-| Fri, Jun 11   | Interchange                           |
-| Mon, Jun 14   | VTR and Symbiflow-VTR                 |
-| Wed, Jun 16    | Vivado Block Design                   |   
-| Fri, Jun 18    | Vitis Embedded SW                     |
-| Mon, Jun 21    | Vitis HLS                             |
-| Wed, Jun 23    | HLS/Vivado System Integration         |
+| Mon, Jun 21    | Vivado Block Design + Vitis          | Goeders
+| Wed, Jun 23    | Vitis HLS                            | Goeders
 
 ## Robotics Track
+
+2:00 in CB 437
 
 | Date          | Topic                                 | Speaker               | Followup Activity
 |---------------|-------------------------------        |------------------------------------------------------------------------------------------
@@ -57,17 +55,22 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Wed, Jun 9    | Attend Networking and Optionally FPGA |
 | Fri, Jun 11   | CI/CD / Bitbucket / pods2             | Easton
 | Mon, Jun 14   | Robotics Overview & Coord Transforms  | Mangelson
-| Wed, Jun 16   | LCM                                   | Kalin                 | LCM Tutorial
-| Fri, Jun 18   | Holodeck                              | Easton                | Holodeck
-| Mon, Jun 21   | Perception / Sensing                  | Mangelson             
-| Wed, Jun 23   | OpenCV / PCL                          | Devon/Kalin           | Line Detection, Camera Calibration / Scan Matching
-| Fri, Jun 25   | CAD / 3D Printing                     | Bridget               | Simple CAD Tutorial
+| Wed, Jun 16   | LCM and Optional FPGA                 | Kalin                 | LCM Tutorial
+| Fri, Jun 18   | Holodeck and Optional FPGA            | Easton                | Holodeck
+| Mon, Jun 21   | Perception / Sensing and Optional FPGA | Mangelson             
+| Wed, Jun 23   | OpenCV / PCL and Optional FPGA        | Devon/Kalin           | Line Detection, Camera Calibration / Scan Matching
+| Fri, Jun 25   | 
 | Mon, Jun 28   | Basic Probability                     | Mangelson             | Gaussians in Python?
 | Wed, Jun 30   | Estimation & Localization             | Mangelson             | Kalman Filter Example
-| Fri, Jul 2    | QGroundControl/Ardusub/Pymav link     | Bridget/Kalin
+| Fri, Jul 2    | 
 | Mon, Jul 5    | Factor Graphs, SLAM, & GTSAM          | Mangelson             | GTSAM Example
-| Mon, Jul 12   | Mapping and OGM                       | Mangelson             
+| Wed, Jul 7    | QGroundControl/Ardusub/Pymav link     | Bridget/Kalin
+| Fri, Jul 9    |
+| Mon, Jul 12   | Mapping and OGM                       | Mangelson
+| Wed, Jul 14   | CAD / 3D Printing                     | Bridget               | Simple CAD Tutorial
+| Fri, Jul 16   |
 | Mon, Jul 19   | Planning                              | Mangelson
+
 
 
 ## Networking Track
