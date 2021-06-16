@@ -19,7 +19,7 @@ Follow the instructions to install Jekyll on Ubuntu: <https://jekyllrb.com/docs/
 3. Name your repository appropriately:
     * Each Github user can have a website at *username.github.io*.  If you want to use this URL, you should name your repo *username.github.io*.  For example, if your Github username was *jgoeders*, you would name your new repository *jgoeders.github.io*.
     * Otherwise, you can name your repository anything else, and it will be available at *username.github.io/repo_name*.  For example, if your Github username was *jgoeders* and you named the repository *test_website*, the website would be hosted at *https://jgoeders.github.io/test_website/*.
-4. Choose *Public* or *Private*.  Either is fine.  You can have your repository files be private and still host a public website.
+4. Choose *Public* or *Private*.  Either is fine.  You can have your repository files be private and still host a public website. If you use the later option, you will need to use your student privileges to sign in to github. The server will not allow you to host a private website from github on a free account. 
 5. Click *Create repository from template*
 
 ## Activate Github Pages
@@ -39,7 +39,12 @@ Make a copy of your website on your own computer using *git clone* (we will talk
  For example, if I wanted to clone my website to the `website` directory in my home folder, I would do the following:
 
 ```git clone git@github.com:jgoeders/test_website.git ~/website```
+ 
+ You can find the link for cloning your repo by going to your github page and clicking the ```Code``` button in the top left. Then select the *SSH* option and copy the link. Note that you will need to configure your machine with an SSH key to use this method (Google how to do this). Configuring your machine with a key will allow you to push and pull from your repo without signing in to your github account from the terminal every time.
 
+ **Not recommended:** If you would like to just sign in to your repository each time you pull or push from your repo, then you can skip creating the SSH key and use the *HTTPS* option to clone your repo:
+ 
+ ```git clone https://github.com/jgoeders/test_website.git```
 
 ## Configure your website
 
@@ -99,4 +104,4 @@ Leave this running for now and we will make some changes in the next section.
 
 ## Publishing Your Changes
 
-Any changes you push up to Github will automatically be published.  We will talk about Git and Github soon.
+Any changes you push up to Github will automatically be published after a short delay (usually not more than a few minutes).  We will talk about Git and Github soon.
