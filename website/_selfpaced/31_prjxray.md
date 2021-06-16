@@ -15,19 +15,6 @@ Project X-Ray is being created by [SymbiFlow](https://symbiflow.github.io/), whi
 
 There are many cases where such databases can be useful. For example, let's say that during radiation testing, certain bits that flip will break our design, so we want to further investigate to see why. These databases help so that it can be understood what these bits correspond to inside the FPGA i.e. whether they affect a PIP, a LUT, etc. 
 
-<!-- ## Step 1: Complete "Quickstart Guide"
-
-Follow the “QuickStart Guide” and complete the steps to install XRAY. Note that some of these steps take some time to execute. You are encouraged to jump ahead to step 2 (documentation) while a long step is executing. There are a few extra notes with each of the steps in the quickstart guide:
-  * Step 0: Before starting the quickstart guide, clone the XRAY project somewhere in your Ubuntu filespace. The directory you place it in will be named `<XRAY>` for the rest of this boot camp instruction.
-  * Step 1: You should add this export command to your .bashrc file so you don't have to type this in each time. However, you should use the actual directory where Vivado is installed - it is probably in "~/Xilinx_2017.2/vivado/2017.2/settings64.sh".
-  * Step 2: Run this command within the root project XRAY directory (`<XRAY>`)
-  * Step 4: You should be in the prjxray directory when you do this.
-  * Step 5: Go with option 1.  This will create a self-contained python environment that will not interfere with your system setup.  See below for a description of what virtual environments are all about.
-  * Step 6: Run this in the `<XRAY>` directory.  Better yet, add it to your .bashrc file so it will always get executed when you start a new terminal (you can always comment it out later when you don't want to run xray).  If you do so, note that the .bashrc runs from your home directory so you will have change the path in the command to make sure it gets found...
-  * Step 7: Go with option 1 (you will run option 2 later in the bootcamp)
-  * Step 8: Complete this step exactly as written. This runs a single "fuzzer". If it works, you system is setup correctly. This takes a bit of time.
-  * Step 9: After completing this step, open the following file in your browser: `<XRAY>/htmlgen/html/artix7/index.html` Browse through this page and its links. -->
-
 ## Install
 
 Follow the [Project X-Ray quickstart guide](https://github.com/SymbiFlow/prjxray#quickstart-guide) on their GitHub repository to install Project X-Ray. The guide was written for Ubuntu 16.04, but is also known to work on Ubuntu 18.04. Any other version of Ubuntu is not guaranteed to work (The roadblock would probably Vivado 2017.2. That version is required, and other versions of Vivado will not work. It is an older version that may not work with newer versions of Ubuntu)
@@ -41,8 +28,7 @@ git clone https://github.com/SymbiFlow/prjxray.git
 ``` 
 Run either the command for SSH cloning or HTTPS cloning within the home directory. By default, you should be in the home directory. If not, just run `cd` in the terminal, and you should be there (alternatively, you can run `cd ~/`). This will create a directory called `prjxray` where the GitHub repo will then be stored. 
 * Step 4: When running `make`, it will look for a file called `Makefile`. For Project X-Ray, this will be in the `prjxray` directory on the top level, so make sure you are there by running `cd ~/prjxray`
-* Step 5: Go with option 1.  This will create a self-contained python environment that will not interfere with your system setup.
-* NOTE: Currently the ordering for the steps is wrong, but should be fixed on the Project X-Ray repo soon. Make sure to run steps 7 and 8 BEFORE running step 6, i.e. prepare/download the database before setting the environment for the device you want to use. 
+* Step 5: Go with option 1.  This will create a self-contained python virtual environment that will not interfere with your system setup.
 * Step 8: Choose option 1. It is possible that your system may not even have the resources (not enough RAM) to recreate the entire database.
 * Step 9: Complete this step exactly as written. This runs a single "fuzzer". If it works, you system is setup correctly. Since you downloaded the database in step 8, you don't actually have to run any of the fuzzers to start using the Project X-Ray tools.
 
@@ -75,7 +61,7 @@ Thus, you start a python virtual environment by sourcing its "activate" script a
 ## Lecture
 
 <iframe width="800" height="600"
-src="https://www.youtube.com/embed/sh_YkYK5p0o">
+src="https://www.youtube.com/embed/6HGN8pQn_jA">
 </iframe>
 
 ## Learn More
