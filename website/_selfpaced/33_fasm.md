@@ -7,11 +7,26 @@ type: fpga_opensource
 order: 4
 ---
 
-# Symbiflow's FASM
+## Overview
 
 FASM is a textual representation of a bitstream.  Specifically it assigns a symbolic name to each confgurable thing in the FPGA.  You can tell what features are configured "on" by looking through the FASM file.  FASM files provide an easy way for you to write programs that manipulate bitstreams.  Modifying a textual FASM file is much easier than trying to modify a binary bitstream.
 
-## Some Things to Do:
+## Install
+
+Follow the instructions for installing [Project X-Ray](https://byu-cpe.github.io/ComputingBootCamp/tutorials/xray/). 
+
+## Lecture
+
+<iframe width="800" height="600"
+src="https://www.youtube.com/embed/sh_YkYK5p0o">
+</iframe>
+
+## Learn More
+
+* FASM GitHub repository - <https://github.com/SymbiFlow/fasm>
+* FASM SymbiFlow Read the Docs page - <https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>
+
+## Follow-up Activities:
 
 * Generate a bitstream for the simplest design you can in Vivado (a 2-input AND gate).  Since prjxray cannot handle all FPGA devices, you will have to do it for a specific one: the `xc7a50tfgg484-1` part.
     * Also, if you don't have your top level ports mapped to physical pins then you will get Vivado errors.  Below is some code you can use in your .tcl script to make Vivado happy.  They set the IOB voltages and also tell Vivado to be happy with unconstrained pins.
@@ -28,3 +43,4 @@ set_property BITSTREAM.General.UnconstrainedPins {Allow} [current_design]
 * Repeat the above but for other kinds of gates.
 * Do counters, shift registers, and memories and examine the FASM file to get a feel for how LUTs, flip flops, and BRAMs are represented.
     * NOTE: unless your memory is large enough, the tools will build the memory from flip flops or LUTRAMs instead of BRAMs.  If you want to see how to force it to use BRAM, pull down the Github "symbiflow/prjxray-bram-patch" project and look at the Verilog files in the "samples" directory - they each have a directive in them to force Vivado to use BRAMs, even if the memory they implement is small.
+    
