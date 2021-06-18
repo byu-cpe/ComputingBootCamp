@@ -70,7 +70,32 @@ We can then use the command
 ```
 plot(x,y);
 ```
+
 to graph vector y versus x.
+
+Adding a title and axis labels can be achieved using the following commands:
+```
+  title('This is a Title');
+  xlabel('My x-axis label');
+  ylabel('My y-axis label');
+```
+
+To plot multiple functions on the same graph, create the vectors for each function and use `plot(x,y1, x,y2)`:
+```
+  x = 0:pi/30:4*pi;
+  y1 = 2*sin(x);
+  y2 = cos(2*x);
+  plot(x,y1, x,y2);
+```
+
+The command `legend('sine', 'cosine')` adds a legend to the side with the first label in the parenthesis corresponding to the first function in the `plot` command.
+
+#### Try it
+
+Using the commands shown, try to create a graph to look like the following picture.
+
+
+<img src = "{% link media/matlab/matlab_2D_plot.PNG %}" width="600">
 
 Learn more about plotting in Matlab:
   - [MathWorks plot Help Center](https://www.mathworks.com/help/matlab/ref/plot.html)
