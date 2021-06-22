@@ -21,7 +21,7 @@ sudo apt install git
 
 On May 6, 2020 we had a Zoom-based Git Tutorial by Prof Nelson.  The video is embedded below and [you can find the Zoom chat transcript here]({% link media/GIT_Tutorial_Chat.txt %}).
 
-<iframe width="800" height="600"
+<iframe width="800" height="600" allow="fullscreen"
 src="https://www.youtube.com/embed/sh_YkYK5p0o">
 </iframe>
 

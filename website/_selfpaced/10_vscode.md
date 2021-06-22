@@ -34,7 +34,7 @@ code <path_to_dir>
 
 On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded below
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
 
 **Tutorial Topics**:
   * Take a tour:
