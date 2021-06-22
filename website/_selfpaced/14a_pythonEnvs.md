@@ -11,7 +11,7 @@ order: 7
 ## Lecture Video
 On May 12, 2021 Prof Nelson discussed two different methods of setting up virtual environments on Linux machines. The video is embedded below. 
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/o3uLvzaBHL0"> </iframe>
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/o3uLvzaBHL0"> </iframe>
 
 
 You can install virtual environments on your machine by taking the steps that follow.

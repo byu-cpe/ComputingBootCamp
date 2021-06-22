@@ -17,7 +17,7 @@ Follow the instructions for installing [Project X-Ray](https://byu-cpe.github.io
 
 ## Lecture
 
-<iframe width="800" height="600"
+<iframe width="800" height="600" allow="fullscreen" 
 src="https://www.youtube.com/embed/sh_YkYK5p0o">
 </iframe>
 

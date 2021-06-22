@@ -20,7 +20,7 @@ Also, find the .bit files generated - if you had the right board you could downl
 ## Lecture Video
 On June 4, 2021 Prof Nelson gave an overview of the various repositories inside symbiflow. The video is embedded below. 
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/zNZND75nQ10"> </iframe>
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/zNZND75nQ10"> </iframe>
 
 ## Some Things to Do
 * Make a change to one of the designs and re-make it.  
