@@ -102,7 +102,56 @@ Learn more about plotting in Matlab:
 
 FIXME: add more content
 
-## Manipulating matrices
+## Manipulating Matrices
+
+A matrix is a rectangular array or table of numbers, arranged in rows and columns. Matrices can be very useful if you know how to use them in various calculations. Luckily MATLAB will do some of those calculations for you. We'll start with the basics of creating matrices and accessing values within the matrix. 
+
+Creating a 3x4 matrix
+```
+  a = [ 1 2 3 4 ; 2 3 4 5 ; 3 4 5 6 ]
+```
+will output the following matrix:
+```
+  1 2 3 4 
+  2 3 4 5 
+  3 4 5 6 
+```
+To access a value within a matrix use the following. Note that all indexing in MATLAB starts at i=1.
+```
+  temp = matrixName(row,col)
+```
+You can also access a range of values within a matrix by using a colon. If you have just the colon, it will select the entire row/column. You can also specify the range using the expression
+```
+  startIndex:endIndex
+```
+This will start with the first index listed and includes the last index included.
+Below are examples of accessing values within a matrix. Think about what the code will print,try it in MATLAB, and see if you got the desired results
+```
+  a = [ 1 2 3 4 ; 2 3 4 5 ; 3 4 5 6 ]
+  index1 = a(2,3)                        % 4
+  index2 = a(3,1)                        % 3
+  index3 = a(:,3)                        % 3 4 5 (will be printed vertically)
+  index4 = a(2,:)                        % 2 3 4 5
+  index5 = a(1:2,3)                      % 3 4 (will be printed vertically)
+  index6 = a(:,1:2)                      % 1 2 ; 2 3 ; 3 4 (will be printed vertically)
+```
+You can also manipulate matrices by deleting rows/columns and creating submatrices. To delete a row/column you set it equal to an empty array
+```
+  a(2,:) = []                            % 1 2 3 4 ; 3 4 5 6 (will be printed vertically)
+```
+To create a submatrix you set a new matrix equal to the range of the old matrix you want
+```
+  new_a1 = a(2:3,1:4)                    % 3 4 5 ; 4 5 6 (will be printed vertically)
+```
+You can also create a new matrix by using lines from previous matrix. The following code will take matrix a and turn it into a 3x3 matrix while using row 2 for the first and last row
+```
+  new_a2 = a([2,1,3],1:3)                % 2 3 4 ; 1 2 3 ; 2 3 4 (will be printed vertically)
+```
+## Matrix Operations
+
+FIXME: add content
+
+## Try it
 
 FIXME: add content
 
