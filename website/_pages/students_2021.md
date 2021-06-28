@@ -15,7 +15,7 @@ title: 2021 Students
 * [Ben Glines](https://benglines.github.io/immerse-website/pages/log/)
 * [Jackson Smith](https://rjsmith1999.github.io/IMMERSE/pages/log/)
 * [Jordi Ramos](https://jordi1215.github.io/pages/log)
-* [Garrett Westover](https://supeon.github.io/garrettx/pages/log)
+* [Garrett Westover](https://garrettxw.github.io/garrettx/pages/log)
 * [Cody Arvonen](https://codyarvonen.github.io/personal_website/)
 * [Jacob Brown](https://jacobdbrown4.github.io/jacob_brown//pages/log/)
 * [Caden Ellis](https://caden-ellis77.github.io/ImmerseSite/pages/log/)
