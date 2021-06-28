@@ -17,8 +17,10 @@ Follow the instructions for installing [Project X-Ray](https://byu-cpe.github.io
 
 ## Lecture
 
+On June 2, 2021, we had a lecture from Professor Nelson about [Project X-Ray](https://byu-cpe.github.io/ComputingBootCamp/tutorials/xray/) and FASM. The video is embeddded below.
+
 <iframe width="800" height="600" allow="fullscreen" 
-src="https://www.youtube.com/embed/sh_YkYK5p0o">
+src="https://www.youtube.com/embed/6HGN8pQn_jA">
 </iframe>
 
 ## Learn More

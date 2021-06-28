@@ -60,6 +60,8 @@ Thus, you start a python virtual environment by sourcing its "activate" script a
 
 ## Lecture
 
+On June 2, 2021, we had a lecture from Professor Nelson about Project X-Ray and [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/). The video is embeddded below.
+
 <iframe width="800" height="600"
 src="https://www.youtube.com/embed/6HGN8pQn_jA">
 </iframe>
@@ -100,3 +102,4 @@ File | Purpose
 ------------ | -------------
 top.v | Verilog file to use for running fuzzer. Try to figure out what this circuit is doing.
 generate.tcl | Vivado .tcl file for generating bitfile
+
