@@ -9,7 +9,7 @@ order: 5
 
 ## Overview
 
-"bit2fasm" is a tool within Project X-Ray that converts a bitstream (.bit file) to [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/) lines. 
+"bit2fasm" is a tool within [Project X-Ray](https://byu-cpe.github.io/ComputingBootCamp/tutorials/xray/) that converts a bitstream (.bit file) to [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/) lines. 
 
 This page provides details on how the bit2fasm.py script within Project XRAY works. There are two primary sections of this description. The first, [Code](#code), describes the code in the various files that perform the bit2fasm functionality. The second, [Data Structures](#data-structures), describes the data structures used by the code. 
 
@@ -257,3 +257,6 @@ After running the command above, the command `env` can be used to verify that th
   * Find which FASM lines correspond to the logic that implements the AND gate. Change the design to a 3-input AND gate, and a 2-input OR gate and mark the differences. 
   * Open up the implemented design in Vivado and look at the device GUI. Try to find the LUT that implements the logic in your design by looking at the Site/Slice location. Try to find one of the interconnects in the design as well. 
 
+## Learn More
+
+TODO: Add more links here.
