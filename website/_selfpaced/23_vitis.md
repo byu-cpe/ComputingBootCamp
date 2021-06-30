@@ -7,6 +7,10 @@ type: fpga_commercial
 order: 4
 ---
 
+## Lecture Videos
+On June 21, 2021 we had a Vivado Vitis Tutorial by Prof Goeders. The video is embedded below:
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/suO89IG7Mho"> </iframe> 
 
 ## Create Vitis Projects
 
