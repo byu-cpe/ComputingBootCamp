@@ -12,7 +12,7 @@ On May 17, 2021 we had a Pytest Tutorial by Prof Goeders and a GoogleTest tutori
 
 
 ### Pytest-for Python
-<iframe width="800" height="600" src="https://www.youtube.com/embed/g7sEa-Ha6CY"> </iframe> 
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/g7sEa-Ha6CY"> </iframe> 
 
 
 ### GoogleTest-for C/C++
@@ -28,7 +28,7 @@ Each library/framework supports different functionality and comes with its own t
 
 In this module, we will use Google Test to provide a short example.
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/I6AyAhI44Yg"> </iframe> 
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/I6AyAhI44Yg"> </iframe> 
 
 TODO: 
 - What should this contain?

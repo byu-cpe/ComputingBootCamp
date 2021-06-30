@@ -60,16 +60,11 @@ Thus, you start a python virtual environment by sourcing its "activate" script a
 
 ## Lecture
 
+On June 2, 2021, we had a lecture from Professor Nelson about Project X-Ray and [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/). The video is embeddded below.
+
 <iframe width="800" height="600"
 src="https://www.youtube.com/embed/6HGN8pQn_jA">
 </iframe>
-
-## Learn More
-
-* SymbiFlow website - <https://symbiflow.github.io/>
-* Toolchain wikipedia - <https://en.wikipedia.org/wiki/Toolchain>
-* Project X-Ray GitHub repository - <https://github.com/SymbiFlow/prjxray>
-* Project X-Ray documentation (Particularly the first three sections of "Xilinx 7-series Architecture": Overview, Configuration, Bitstream Format) - <https://symbiflow.readthedocs.io/projects/prjxray/en/latest/>
 
 ## Follow-Up Activities
 
@@ -100,3 +95,11 @@ File | Purpose
 ------------ | -------------
 top.v | Verilog file to use for running fuzzer. Try to figure out what this circuit is doing.
 generate.tcl | Vivado .tcl file for generating bitfile
+
+## Learn More
+
+* SymbiFlow Website - <https://symbiflow.github.io/>
+* Toolchain Wikipedia - <https://en.wikipedia.org/wiki/Toolchain>
+* Project X-Ray GitHub Repository - <https://github.com/SymbiFlow/prjxray>
+* Project X-Ray Documentation (Particularly the first three sections of "Xilinx 7-series Architecture": Overview, Configurdation, Bitstream Format) - <https://symbiflow.readthedocs.io/projects/prjxray/en/latest/>
+

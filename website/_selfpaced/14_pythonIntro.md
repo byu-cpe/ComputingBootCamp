@@ -12,12 +12,12 @@ On May 10th and 12th of 2021 we had an introduction to Python by Prof Lundrigan.
 
 
 ### Lecture 1
-<iframe width="800" height="600" src="https://www.youtube.com/embed/KuD3mJxcwnk"> </iframe> 
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KuD3mJxcwnk"> </iframe> 
 
 
 
 ### Lecture 2
-<iframe width="800" height="600" src="https://www.youtube.com/embed/sq0_nicEFH8"> </iframe> 
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/sq0_nicEFH8"> </iframe> 
 
 
 

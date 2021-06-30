@@ -9,7 +9,7 @@ order: 2
 ## Lecture Video
 On May 26, 2021 Prof Nelson discussed how to use TCL in Vivado. The video is embedded below. 
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/dk7wFKXoMcg"> </iframe>
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/dk7wFKXoMcg"> </iframe>
 
 Tcl is a command language used in a variety of CAD tools.  Our interest in it is for use with Vivado - it is the scripting language that Vivado's command line capability is based on.  Using it you can do 2 main things:
 

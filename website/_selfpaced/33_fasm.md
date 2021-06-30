@@ -17,14 +17,11 @@ Follow the instructions for installing [Project X-Ray](https://byu-cpe.github.io
 
 ## Lecture
 
-<iframe width="800" height="600"
-src="https://www.youtube.com/embed/sh_YkYK5p0o">
+On June 2, 2021, we had a lecture from Professor Nelson about [Project X-Ray](https://byu-cpe.github.io/ComputingBootCamp/tutorials/xray/) and FASM. The video is embeddded below.
+
+<iframe width="800" height="600" allow="fullscreen" 
+src="https://www.youtube.com/embed/6HGN8pQn_jA">
 </iframe>
-
-## Learn More
-
-* FASM GitHub repository - <https://github.com/SymbiFlow/fasm>
-* FASM SymbiFlow Read the Docs page - <https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>
 
 ## Follow-up Activities:
 
@@ -43,4 +40,8 @@ set_property BITSTREAM.General.UnconstrainedPins {Allow} [current_design]
 * Repeat the above but for other kinds of gates.
 * Do counters, shift registers, and memories and examine the FASM file to get a feel for how LUTs, flip flops, and BRAMs are represented.
     * NOTE: unless your memory is large enough, the tools will build the memory from flip flops or LUTRAMs instead of BRAMs.  If you want to see how to force it to use BRAM, pull down the Github "symbiflow/prjxray-bram-patch" project and look at the Verilog files in the "samples" directory - they each have a directive in them to force Vivado to use BRAMs, even if the memory they implement is small.
-    
+
+## Learn More
+
+* FASM GitHub Repository - <https://github.com/SymbiFlow/fasm>
+* FASM SymbiFlow "Read the Docs" Page - <https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>    
