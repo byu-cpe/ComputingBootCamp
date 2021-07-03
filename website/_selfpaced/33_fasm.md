@@ -44,4 +44,7 @@ set_property BITSTREAM.General.UnconstrainedPins {Allow} [current_design]
 ## Learn More
 
 * FASM GitHub Repository - <https://github.com/SymbiFlow/fasm>
-* FASM SymbiFlow "Read the Docs" Page - <https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>    
+* FASM SymbiFlow "Read the Docs" Page - <https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>
+
+
+TODO: find more links for fasm and update follow up activities

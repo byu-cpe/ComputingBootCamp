@@ -259,4 +259,5 @@ After running the command above, the command `env` can be used to verify that th
 
 ## Learn More
 
-TODO: Add more links here.
+TODO: Add more links here. Also TODO, add more color to the page somehow, maybe find a video to add since there was no lecture on bit2fasm
+
