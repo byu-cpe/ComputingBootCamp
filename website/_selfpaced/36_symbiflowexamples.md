@@ -36,3 +36,6 @@ src="https://www.youtube.com/embed/zNZND75nQ10">
 * From the SymbiFlow Github or readthedocs pages, can you figure out what boards are supported?  
 * At the current time the board from the digital lab in our department is not supoprted.  But, they would very much like for it to be supported and have provided some thoughts on what needs to be done.  If you are interested, let Prof Nelson know - it could be a fun side project and the department would definitely loan you a board to use for it...
 
+
+TODO add links to popular/interesting symbiflow repos, change some things to do to Follow Up Activities and make follow up activities be the user looking at the repos and clone a few to research more on their own.
+
