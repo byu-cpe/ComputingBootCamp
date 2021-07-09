@@ -102,7 +102,7 @@ top.v | Verilog file to use for running fuzzer. Try to figure out what this circ
 generate.tcl | Vivado .tcl file for generating bitfile
 
 ### Run Another Fuzzer (Or More) of Your Choice
-    * TODO, talk more about fuzzers and what they are, tell user to run another fuzzer of their choice from the long list of fuzzers,
+    * TODO find fuzzers you like, run them, look at the verilog and see what you understand, etc. etc.
 
 ## Learn More
 

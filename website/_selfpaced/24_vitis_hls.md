@@ -7,6 +7,11 @@ type: fpga_commercial
 order: 5
 ---
 
+## Lecture Videos
+On June 23, 2021 we had a Vitis HLS Tutorial by Prof Goeders. The video is embedded below:
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/i_nQmjEaMVs"> </iframe> 
+
 ## Install Vitis HLS
 
 For this assignment we will be using Vitis HLS. You can install Vitis on your local machine (https://www.xilinx.com/support/download.html). If you do this, you should install Vitis 2020.2 on an Ubuntu 18.04 (or newer) machine. To install it will take approximately 100GB. 
