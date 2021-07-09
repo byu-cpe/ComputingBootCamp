@@ -85,6 +85,11 @@ Go back and recreate the database (run the fuzzers). This involves Step 7, optio
  
 ### Run a Fuzzer by Hand
 
+According to the SymbiFlow website, [Fuzzers]("https://symbiflow.readthedocs.io/en/latest/prjxray/docs/db_dev_process/fuzzers/index.html") are "a set of tests which generate a design, feed it to Vivado, and look at the resulting bitstream to make some conclusion. This is how the contents of the database are generated."
+
+*****talk more about fuzzers here and how many fuzzers there are to choose from
+*****tell user to run the fuzzer below and then two more of their choosing
+
 Run and Understand the CLB LUT Initialization Contents Fuzzer. In this step, you will learn the details of a single fuzzer. In particular you will run the [clb-lutinit](https://symbiflow.readthedocs.io/projects/prjxray/en/latest/db_dev_process/fuzzers/clb-lutinit.html) fuzzer. The purpose of this fuzzer is to determine where in the bitfile the LUT initialize constants are found. Review the fuzzer documentation (there is not much here!) and then run the fuzzer individually. Review the console output while the fuzzer is running.
 
     cd fuzzers/010-clb-lutinit
@@ -96,7 +101,7 @@ File | Purpose
 top.v | Verilog file to use for running fuzzer. Try to figure out what this circuit is doing.
 generate.tcl | Vivado .tcl file for generating bitfile
 
-### Run Another Fuzzer
+### Run Another Fuzzer (Or More) of Your Choice
     * TODO, talk more about fuzzers and what they are, tell user to run another fuzzer of their choice from the long list of fuzzers,
 
 ## Learn More
