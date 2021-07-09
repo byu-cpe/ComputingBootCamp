@@ -87,7 +87,7 @@ Go back and recreate the database (run the fuzzers). This involves Step 7, optio
  
 ### Run a Fuzzer by Hand
 
-According to the SymbiFlow website, [Fuzzers]("https://symbiflow.readthedocs.io/en/latest/prjxray/docs/db_dev_process/fuzzers/index.html") are "a set of tests which generate a design, feed it to Vivado, and look at the resulting bitstream to make some conclusion. This is how the contents of the database are generated."
+According to the SymbiFlow website, [Fuzzers](https://symbiflow.readthedocs.io/en/latest/prjxray/docs/db_dev_process/fuzzers/index.html) are "a set of tests which generate a design, feed it to Vivado, and look at the resulting bitstream to make some conclusion. This is how the contents of the database are generated."
 
 *****talk more about fuzzers here and how many fuzzers there are to choose from
 *****tell user to run the fuzzer below and then two more of their choosing
