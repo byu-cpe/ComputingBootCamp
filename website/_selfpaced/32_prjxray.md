@@ -9,54 +9,56 @@ order: 3
 
 ## Overview
 
-[Project X-Ray](https://github.com/SymbiFlow/prjxray) is a project that documents the [Xilinx 7 Series](https://www.xilinx.com/support/documentation/selection-guides/7-series-product-selection-guide.pdf) bitstream. Essentially, Project X-Ray can build databases that map the elements (Lookup tables, interconnects, muxes, ports, etc.) for an FPGA part to their corresponding bits in the bitstream.
+[Project X-Ray](https://github.com/SymbiFlow/prjxray) is a project that documents the [Xilinx 7-Series](https://www.xilinx.com/support/documentation/selection-guides/7-series-product-selection-guide.pdf) bitstream.
 
-Project X-Ray is being created by [SymbiFlow](https://symbiflow.github.io/), which aims to create a completely open-source [toolchain](https://en.wikipedia.org/wiki/Toolchain) for FPGAs from various vendors (Currently Xilinx and Lattice). In order to create this toolchain, the bitstream needs to be generated after completing implementation. Xilinx does not have documentation open to the public on how their bitstreams are generated, so Project X-Ray aims to fill this gap.
+It is being created by [SymbiFlow](https://symbiflow.github.io/), which aims to create a completely open-source [toolchain](https://en.wikipedia.org/wiki/Toolchain) for FPGAs from various vendors (currently Xilinx and Lattice). In order to create this toolchain, the bitstream needs to be generated after completing implementation. Xilinx does not have documentation open to the public on how their bitstreams are generated, so Project X-Ray aims to fill this gap.
 
-There are many cases where such databases can be useful. For example, let's say that during radiation testing, certain bits that flip will break our design, so we want to further investigate to see why. These databases help so that it can be understood what these bits correspond to inside the FPGA i.e. whether they affect a PIP, a LUT, etc. 
+Essentially, Project X-Ray can build databases that map the elements (LUTs, interconnects, muxes, ports, etc.) for an FPGA part to their corresponding bits in the bitstream.
+
+There are many cases where such databases can be useful. As a hypothetical example, if an FPGA part undergoes radiation testing and certain bits flip and break the design, we will want to know why. By using these Project X-Ray database(s) associated with the part in question, we can determine where the broken bits are based on their connections to areas inside the FPGA. Once identified, whatever has broken the design (i.e. whether the broken bit was affecting a PIP, LUT, etc.) can be repaired.
+
+Like a pair of X-Ray Vision Goggles, Project X-Ray is providing the way for the closest examination of bitstreams than ever before. 
 
 ## Install
 
-Follow the [Project X-Ray quickstart guide](https://github.com/SymbiFlow/prjxray#quickstart-guide) on their GitHub repository to install Project X-Ray. The guide was written for Ubuntu 16.04, but is also known to work on Ubuntu 18.04. Any other version of Ubuntu is not guaranteed to work (The roadblock would probably Vivado 2017.2. That version is required, and other versions of Vivado will not work. It is an older version that may not work with newer versions of Ubuntu)
+Follow the [Project X-Ray Quickstart Guide](https://github.com/SymbiFlow/prjxray#quickstart-guide) on their GitHub repository to install Project X-Ray. The guide was written for Ubuntu 16.04, but is also known to work on Ubuntu 18.04 and 20.04. Other versions of Ubuntu are not guaranteed to work.
 
-Here are some extra notes for each of their install steps that might be helpful:
+**Please note:** You must have **Vivado 2017.2** installed for Project X-Ray to work. Other versions of Vivado will not work. This version of Vivado may not work with newer versions of Ubuntu (but for now, it does work with Ubuntu 20.04 with no issues). Click [here](https://byu-cpe.github.io/ComputingBootCamp/tutorials/install_vivado/) for instructions on installing Vivado. 
 
-* Step 1: Project X-Ray sometimes needs to use Vivado, so it needs to know where you have it install on your system. By default, it is installed in the `/opt/` directory, but it may be in some other place on you system. Double check where you have it installed, and then  You should add this export command to your [.bashrc file](https://www.journaldev.com/41479/bashrc-file-in-linux) so you don't have to type this in each time you start a terminal. 
+Here are some extra tips for each of the install steps that might be helpful:
+
+* Step 1: Project X-Ray sometimes needs to use Vivado, so it needs to know where you have it installed on your system. By default, it is installed in the `/opt/` directory, but it may be in some other place on your system. Double check where you have it installed, and then you should add the export command from this step to your [.bashrc file](https://www.journaldev.com/41479/bashrc-file-in-linux) so you don't have to type this in each time you start a terminal.
+
+`export XRAY_VIVADO_SETTINGS="/opt/Xilinx/Vivado/2017.2/settings64.sh"`
+
 * Step 2: This step downloads their directory to your system. The command they provide uses SSH to clone the directory. This probably won't be set up on your system, but you can set it up by following [these instructions](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account). You can also easily clone the directory with HTTPS instead of SSH by running the following command:
+
 ```
 git clone https://github.com/SymbiFlow/prjxray.git
 ``` 
 Run either the command for SSH cloning or HTTPS cloning within the home directory. By default, you should be in the home directory. If not, just run `cd` in the terminal, and you should be there (alternatively, you can run `cd ~/`). This will create a directory called `prjxray` where the GitHub repo will then be stored. 
-* Step 4: When running `make`, it will look for a file called `Makefile`. For Project X-Ray, this will be in the `prjxray` directory on the top level, so make sure you are there by running `cd ~/prjxray`
-* Step 5: Go with option 1.  This will create a self-contained python virtual environment that will not interfere with your system setup.
-* Step 8: Choose option 1. It is possible that your system may not even have the resources (not enough RAM) to recreate the entire database.
-* Step 9: Complete this step exactly as written. This runs a single "fuzzer". If it works, you system is setup correctly. Since you downloaded the database in step 8, you don't actually have to run any of the fuzzers to start using the Project X-Ray tools.
+* Step 4: When running `make`, it will look for a file called `Makefile`. For Project X-Ray, this will be in the `prjxray` directory on the top level, so make sure you are there by running `cd ~/prjxray`.
+* Step 5: Go with Option 1.  This will create a self-contained Python virtual environment that will not interfere with your system setup.
+* Step 8: Choose Option 1. It is possible that your system may not even have the resources (not enough RAM) to recreate the entire database.
+* Step 9: Complete this step exactly as written. This runs a single "fuzzer". If it works, (the last line before your terminal returns reads `touch run.ok`), your system is set up correctly. Since you downloaded the database in Step 8, you don't actually have to run any of the fuzzers to start using the Project X-Ray tools.
 
-One of the installation steps for prjxray has you create a [python virtual environment](https://byu-cpe.github.io/ComputingBootCamp/tutorials/pythonEnvs/) (the 'make env' step).  You may not know about them - they are an important _containerization_ technology.  Once you create a python virtual environment and activate it, everything you install with "pip" will be placed into that environment and will not affect the rest of your running system.  It is a nice way to get precisely the python environment you need for a project without messing with what came with your Linux installation.
+One of the installation steps for Project X-Ray had you create a Python virtual environment (the 'make env' step). You may not know about them - they are an important _containerization_ technology.  Once you create a Python virtual environment and activate it, everything you install with `pip` will be placed into that environment and will not affect the rest of your running system.  It is a nice way to get precisely the Python environment you need for a project without messing with the contents of your initial Linux installation.
 
-The key steps are Step 5 and Step 6 from the [prjxray install steps](https://github.com/SymbiFlow/prjxray).  Once you create the environment ("env"), you need to activate it any time you are working on the project using the step:
+The key steps are Step 5 and Step 6. Once you create the environment ("env"), you need to activate it any time you are working on the project using the step:
 
     source settings/artix7.sh
 
-Just remember that that is actually located in the prjxray directory you created when you did a "git clone".  So, in your .bashrc file you probably want something like this:
+Remember, the `artix7.sh` file is actually located in the prjxray directory you created when you did a "git clone".  So, you will probably want something like this in your .bashrc file:
 
-    source ~/prjxray/settings/artix7.sh
+    alias xray='source ~/prjxray/settings/artix7.sh'
 
-You will know that the virtual environment is activated since the command prompt for your Linux bash shell will have a "(env)" preceding it like this:
+After adding the alias to your .bashrc file, kill your terminal and open a new one. If you have set it up correctly, after changing to your prjxray directory, type `xray` (or the alias keyword you chose) into the terminal to activate your virtual environment. You will know it is activated since the command prompt for your Linux bash shell will have a "(env)" preceding it like this:
 
     (env) nelson@ubuntu:~$ 
 
-The best way to get out of the environment is to edit your .bashrc file to not source the above .sh file, kill your terminal, and re-open a new one.  You will tell it worked if the "(env") is gone from your command prompt.
+To deactivate your virtual environment, type `deactivate` into the terminal and "(env)" will disappear, returning your terminal to normal.
 
-Finally, you can have as many virtual environments as you want on your machine, one for each project, for 
-example.  You can customize each to what you need and can go into and out of them at will.  
-
-
-For example, if you look into the file "~/prjxray/settings/artix7.sh" you will see that, besides setting a bunch of environment variables, it sources ../utils/environment.sh.  That script then, in turn, sets a bunch more environment variables but IMPORTANTLY also activates the virtual environment by doing this:
-
-    source ${XRAY_DIR}/env/bin/activate
-
-Thus, you start a python virtual environment by sourcing its "activate" script and you leave a python virtual environment by running the "deactivate" shell command.
+To learn more about Python virtual enviroments, click [here](https://byu-cpe.github.io/ComputingBootCamp/tutorials/pythonEnvs/).
 
 ## Lecture
 
@@ -101,7 +103,7 @@ File | Purpose
 top.v | Verilog file to use for running fuzzer. Try to figure out what this circuit is doing.
 generate.tcl | Vivado .tcl file for generating bitfile
 
-### Run Another Fuzzer (Or More) of Your Choice
+### More With Fuzzers
     * TODO find fuzzers you like, run them, look at the verilog and see what you understand, etc. etc.
 
 ## Learn More
@@ -109,8 +111,8 @@ generate.tcl | Vivado .tcl file for generating bitfile
 * SymbiFlow Website - <https://symbiflow.github.io/>
 * Toolchain Wikipedia - <https://en.wikipedia.org/wiki/Toolchain>
 * Project X-Ray GitHub Repository - <https://github.com/SymbiFlow/prjxray>
-* Project X-Ray Documentation (Particularly the first three sections of "Xilinx 7-series Architecture": Overview, Configurdation, Bitstream Format) - <https://symbiflow.readthedocs.io/projects/prjxray/en/latest/>
-
-
-TODO find more links?
+* Project X-Ray Database: XC7 Series - <https://github.com/SymbiFlow/prjxray-db>
+* "Read the Docs" Project X-Ray Documentation (PDF Version) - <https://readthedocs.org/projects/prjxray/downloads/pdf/latest/>
+* Project X-Ray Documentation - <https://symbiflow.readthedocs.io/projects/prjxray/en/latest/>
+    * (Pay particular attention to the first three sections of "Xilinx 7-Series Architecture": Overview, Configuration, and Bistream Format)
 
