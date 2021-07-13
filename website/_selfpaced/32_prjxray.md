@@ -125,7 +125,7 @@ generate.tcl | Vivado .tcl file for generating the bitfile
 
 **Repeat this same process with two more fuzzers of your choice; research the fuzzer's documentation by name on the SymbiFlow website, run it successfully, and examine the contents of the resulting top.v and generate.tcl files.**
 
-### Learn More
+## Learn More
 
 * SymbiFlow Website - <https://symbiflow.github.io/>
 * Toolchain Wikipedia - <https://en.wikipedia.org/wiki/Toolchain>
