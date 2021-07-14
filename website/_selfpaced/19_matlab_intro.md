@@ -84,7 +84,7 @@ plot(x,y);
 
 to graph vector y versus x:
 
-<img src = "{% link /media/matlab_sine_plot.png %}" width="600">
+<img src = "{% link /media/matlab/matlab_sine_plot.png %}" width="600">
 
 Adding a title and axis labels can be achieved using the following commands:
 ```
