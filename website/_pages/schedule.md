@@ -79,7 +79,7 @@ The networking track will be meeting in EB 302 at 2-3:30 PM.
 
 | Date          | Topic                         | Speaker               
 |---------------|-------------------------------|-----------------------
-| Wed, Jun 2    | Networking Basics             | Lundrigan
-| Wed, Jun 9    | Networking Command Line Tools | Lundrigan
+| Wed, Jun 2    | [Networking Basics]({% link _selfpaced/70_networking.md %})             | Lundrigan
+| Wed, Jun 9    | [Networking Command Line Tools]({% link _selfpaced/71_networking_tools.md  %}) | Lundrigan
 | Wed, Jun 16   | Wireshark                     | Lundrigan
 | Wed, Jun 23   | Wireless Networking           | Lundrigan

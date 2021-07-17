@@ -13,6 +13,9 @@
 - key: robotics
   title: Robotics
 
+- key: networking
+  title: Networking
+
 - key: PCB
   title: PCB
 

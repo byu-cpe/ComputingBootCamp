@@ -67,11 +67,11 @@ Matlab offers a number of plotting capabilities.  The basic 2-D line plot requir
 ``` 
 creates a vector starting at zero, ending at 100, which is incremented up by 5.
 
-The command `plot(x,y)` creates a line-plot of the vectors x and y.  Make sure vectors x and y are of equal length.  For example, the vector
+[plot](https://www.mathworks.com/help/matlab/ref/plot.html#btzpm1x)(x,y) creates a line-plot of the vectors x and y.  Make sure vectors x and y are of equal length.  For example, the vector
 ```
-  x = 0:pi/30:4*pi;
+  x = 0:pi/50:4*pi;
 ```
-creates a vector starting at 0 and incrementing up to 2pi.  
+creates a vector starting at 0 and incrementing up to 4 pi.  
 The vector
 ```
   y = sin(x);
@@ -82,7 +82,9 @@ We can then use the command
 plot(x,y);
 ```
 
-to graph vector y versus x.
+to graph vector y versus x:
+
+<img src = "{% link /media/matlab/matlab_sine_plot.png %}" width="600">
 
 Adding a title and axis labels can be achieved using the following commands:
 ```
@@ -99,9 +101,9 @@ To plot multiple functions on the same graph, create the vectors for each functi
   plot(x,y1, x,y2);
 ```
 
-The command `legend('sine', 'cosine')` adds a legend to the side with the first label in the parenthesis corresponding to the first function in the `plot` command.
+[legend](https://www.mathworks.com/help/matlab/creating_plots/add-legend-to-graph.html)('sine', 'cosine') adds a legend to the side with the first label in the parenthesis corresponding to the first function in the `plot` command.
 
-#### Try it
+### Try it
 
 Using the commands shown, try to create a graph to look like the following picture.
 
@@ -110,6 +112,9 @@ Using the commands shown, try to create a graph to look like the following pictu
 
 Learn more about plotting in Matlab:
   - [MathWorks plot Help Center](https://www.mathworks.com/help/matlab/ref/plot.html)
+  - [BYU ECEn 240 Matlab Intro](http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf)
+  - [Tutorialspoint Matlab Plotting](https://www.tutorialspoint.com/matlab/matlab_plotting.htm)
+
 
 FIXME: add more content
 
@@ -162,7 +167,7 @@ You can also create a new matrix by using lines from previous matrix. The follow
 
 FIXME: add content
 
-## Try it
+### Try it
 
 FIXME: add content
 
