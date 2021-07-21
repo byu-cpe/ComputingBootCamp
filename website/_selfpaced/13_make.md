@@ -48,3 +48,19 @@ The various stages of makefile development shown in the lecture are:
 ## Other Resources
 * <https://www.gnu.org/software/make/>
 * Recursive make considered harmful: <https://accu.org/journals/overload/14/71/miller_2004/>
+
+## Make Test (Pass-off for Make Badge)
+<img src="https://media.badgr.com/uploads/badges/8e853a0b-726b-4101-8cb0-4b299926f19d.png" alt="Make Badge" width="200"/>
+
+For those who believe they have mastered Make and Makefiles, we present the Make Badge! This Badge can be viewed in it's entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). This badge can be used to prove your knowledge to potential employers, educational instutitions, or anyone else! To earn it, you'll have to complete the "Make Test" and use your knowledge to write Makefiles for varying situations. To attempt the Make Test and earn yourself a copy of the Make Badge, go to the GitHub repository here to attempt it: [Make Test Repository](https://github.com/BYUComputingBootCampTests/makeTest).
+
+Good luck to those who attempt the test, and if you pass, congradulations! You are now certified in Make and Makefiles by the BYU Computing Boot Camp.
+
+
+
+
+
+
+
+
+
