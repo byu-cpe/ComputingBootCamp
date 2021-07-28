@@ -22,3 +22,24 @@ After the user submits their pull request, GitHub Actions comes into play. GitHu
 Because these workflow files are stored within the repository itself, that means that every single user has access to look inside these workflow files and edit them if they so desire. This is what would allow users to "cheat the system" if we allowed merging in our repository. All they would have to do is remove all the pass-off lines of code in the workflow files, and leave the line that submits the badge to them. It's incredibly easy, and so we have set up the framework for the user's submited code and our pass-off code to remain seperate at all times (This is also why we don't just have the pass-off files run whenever a pull request is submitted. This would cause GitHub Actions to run the workflow files in the user's code, which could have been edidted by the user). So, even though it may be a little strange, this is why the user submits a pull request, and then the respostiroy itself pull data from the forked repository.
 
 Now, we get into the pass-off magic. There are actually two workflow files that are in the .github/workflows folder, the triggerPRruns.yml workflow and the makeTest.yml. The one that runs every 20 minutes is the triggerPRruns.yml, which I'll refer to as the "Trigger PR Test Runs" workflow. This workflow is in charge of finding all of the open pull requests, and then using a javascript file in the .cbc folder to trigger the makeTest.yml workflow on each one. Why is this necessary, you may ask? This is to allow us to run multiple tests simulaneously. We want the workflow file to run a test for each of the open pull requests, but GitHub Actions only allows us to trigger a certain workflow once every 5 minutes (at the most). By having two workflows, the Trigger PR Test Runs workflow is triggered once every 20 minutes-ish, and it can trigger the makeTest.yml workflow on each and every open Pull Request (up to 12, as the tests take some time, and if two Trigger PR Test Runs workflows run concurretntly, it will break the repository). So, if multiple users submit PRs, they will all have their code testied in around 20 minutes.
+
+The makeTest.yml workflow, which I'll refer to as the Make Test workflow, is what actually tests the user's code. It goes to the specific PR, grabs the files we want to test, and then can use script commands to do all sorts of things (like build and compile code, run other programs, run linux commands, etc). The Make Test workflow grabs two Makefiles from the user's repository, builds code with them, runs the code and asserts that the output is correct, and then issues the Make Badge. All of this is easily facilitated by javascript files that I have written in the .cbc folder, which the Make Test workflow uses frequently. Finally, the Make Test workflow will issue comments on the PR throughout the testing process, so that the user cna know exactly where they passed and exactly what they messed up.
+
+That is the entire process! Hopefully it's not too complicated to understand. A similar process can be used for all code-based automated testing repositories that we want to make in the future. And since all of this code is publicly available in the .github and .cbc folders, it will be easy to reuse and adapt to other pass-off drivers.
+
+## The Specifics
+Now, I will go into the specific's of each file and how they work exactly, so that you can edit these files according to your pleasure, or even create your own.
+
+### .github Folder
+
+#### CODEOWNERS
+
+#### triggerPRruns.yml
+
+#### makeTest.yml
+
+### .cbc Folder
+
+#### 
+
+####
