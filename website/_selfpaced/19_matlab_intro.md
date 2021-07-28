@@ -150,7 +150,7 @@ Learn more about plotting in Matlab:
 
 FIXME: add more content
 
-## Manipulating Matrices
+### Manipulating Matrices
 
 A matrix is a rectangular array or table of numbers, arranged in rows and columns. Matrices can be very useful if you know how to use them in various calculations. Luckily MATLAB will do some of those calculations for you. We'll start with the basics of creating matrices and accessing values within the matrix. 
 
@@ -185,55 +185,71 @@ Below are examples of accessing values within a matrix. Think about what the cod
 ```
 You can also manipulate matrices by deleting rows/columns and creating submatrices. To delete a row/column you set it equal to an empty array
 ```
-  a(2,:) = []                            % 1 2 3 4 ; 3 4 5 6 (will be printed vertically)
+  a(2,:) = []                            % 1 2 3 4 ; 3 4 5 6 
 ```
 To create a submatrix you set a new matrix equal to the range of the old matrix you want
 ```
-  new_a1 = a(2:3,1:4)                    % 3 4 5 ; 4 5 6 (will be printed vertically)
+  new_a1 = a(2:3,1:4)                    % 3 4 5 ; 4 5 6 
 ```
 You can also create a new matrix by using lines from previous matrix. The following code will take matrix a and turn it into a 3x3 matrix while using row 2 for the first and last row
 ```
-  new_a2 = a([2,1,3],1:3)                % 2 3 4 ; 1 2 3 ; 2 3 4 (will be printed vertically)
+  new_a2 = a([2,1,2],1:3)                % 2 3 4 ; 1 2 3 ; 2 3 4 
 ```
-## Matrix Operations
+### Try it
+
+Using the following matrix and the commands you just learned, find the following:
+- What are the index of all occurances of the value 2 (ANS: (1,1), (2,3), 3,4))
+- Sum of row 2 and 3 (ANS: [ 5 4 6 3 ])
+- Column 4 multiplied by the value in index (1,2) (ANS: [ 3 ; 1 ; 2 ])
+- Index (3,4) multiplied by the 2x2 matrix in the bottom right corner (ANS: [ 4 2 ; 8 4 ]) 
+- Create a 3x3 submatrix (ANS: [1 4 3 ; 1 2 1 ; 3 4 2 ] - answers may vary)
+- Delete the first column and last row (ANS: [1 4 3 ; 1 2 1 ])
+- Turn the 3x4 matrix into a 4x4 matrix repeating the last row twice (ANS: [ 2 1 4 3 ; 4 1 2 1 ; 1 3 4 2 ; 1 3 4 2 ])
+
+### Matrix Operations
 
 Here are a few commonly used matrix operations. We will use the following matrices in the examples:
 ```
-  a = [ 1 2 3 ; 4 5 6 ; 7 8 9 ]      normal matrix
-  b = [ 5 1 2 ; 4 5 1 ; 2 6 3 ]      normal matrix
-  c = [ 2 -3 1 ; -1 2 0 ; 2 2 1 ]    matrix multiplication (with a) inv and det
+  a = [ 1 2 3 ; 4 5 6 ; 7 8 9 ]
+  b = [ 5 1 2 ; 4 5 1 ; 2 6 3 ]
+  c = [ 2 -3 1 ; -1 2 0 ; 2 2 1 ]
 ```
-  - Addition
+- Addition
 ```
   a + b              % 6 3 5 ; 8 10 7 ; 9 14 12 (will be printed vertically)
 ```
-  - Subtraction
+- Subtraction
 ```
   a - b              % -4 1 1 ; 0 0 5 ; 5 2 6 (will be printed vertically)
 ```
-  - Scalar operations
+- Scalar operations
 ```
   a + 3              % 3 5 6 ; 7 8 9 ; 10 11 12 (will be printed vertically)
   a - 3              % -2 -1 0 ; 1 2 3 ; 4 5 6 (will be printed vertically)
   a * 3              % 3 6 9 ; 12 15 18 ; 21 24 27 (will be printed vertically)
   a / 3              % 0.3333 0.6667 1.0000 ; 1.3333 1.6667 2.0000 ; 2.3333 2.6667 3.0000 (will be printed vertically)
 ```
-  - FIXME: DIVISION
+- Transpose
 ```
-  
+  a'                 % 1 4 7 ; 2 5 8 ; 3 6 9 (will be printed vertically)
 ```
-  - Transpose
+- Concatenate
 ```
-  a                  % 1 4 7 ; 2 5 8 ; 3 6 9 (will be printed vertically)
+  [ a , b ]          % 1 2 3 5 1 2 ; 4 5 6 4 5 1 ; 7 8 9 2 6 3 (will be printed vertically)
+  [ a ; b ]          % 1 2 3 ; 4 5 6 ; 7 8 9 ; 5 1 2 ; 4 5 1 ; 2 6 3 ] (will be printed vertically)
 ```
-  - Concatenate
-
-  - Multiplication 
-
-  - Determinant 
-
-  - Inverse
-
+- Multiplication 
+```
+  a * c              % 6 7 4 ; 15 10 10 ; 24 13 16 (will be printed vertically)
+```
+- Determinant 
+```
+  det(c)             % -5
+```
+- Inverse
+```
+  inv(c)             % -0.4000 -1.0000 0.4000 ; -0.2000 0 0.2000 ; 1.2000 2.000 -0.2000 (will be printed vertically)
+```
 
 ### Try it
 
