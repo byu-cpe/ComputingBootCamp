@@ -11,7 +11,7 @@ read-throughs for you to fully understand it, so don't lose hope if parts of thi
 to be adding up, a quick Google search should be enough to fill in the gaps.
 
 ## How it works
-First, I want to explain how the Automated Pass-off Tests are currently set up, so that you can understand why we are doing what we are doing. Currently, we are using a GitHub Repository with Github Actions to automated the testing process. The makeTest repository, that is owned by BYUComputingBootCampTests, is a fully functional automated testing repository for the Make Mini-badge. Try it out, see if you can earn the badge! Just reading through the README.md will give you alot of insight into how it works. 
+First, I want to explain how the Automated Pass-off Tests are currently set up, so that you can understand why we are doing what we are doing. Currently, we are using a GitHub Repository with Github Actions to automated the testing process. The makeTest repository, that is owned by BYUComputingBootCampTests, is a fully functional automated testing repository for the Make Mini-badge. Try it out, see if you can earn the badge! Just reading through the README.md will give you alot of insight into how it works. The link to the repository is here: https://github.com/BYUComputingBootCampTests/makeTest.
 
 Using the makeTest repository as an example, I'll outline the process. First of all, the user needs to fork the repository, write the necessary code, and then submit a pull requeset. This is necessary because it gives us a way of finding the user's code, through the pull request that has been submitted. It also gives us the liberty of providing starter files for the user to work with, along with a README.md that contains instructions. 
 
@@ -31,15 +31,34 @@ That is the entire process! Hopefully it's not too complicated to understand. A 
 Now, I will go into the specific's of each file and how they work exactly, so that you can edit these files according to your pleasure, or even create your own.
 
 ### .github Folder
+This folder contains all of the files that outline workflows for GitHub Actions and CODEOWNER information for protecting our files. The workflows are contained in the "workflows" folder (and they have to be here to work), and the CODEOWNERS file is in this directory.
 
 #### CODEOWNERS
+The CODEOWNERS file is a file specific to GitHub, and specifies which users on the site are "owners" of code in certain parts of the repository.
 
 #### triggerPRruns.yml
 
 #### makeTest.yml
 
 ### .cbc Folder
+This folder contains all of the javascript files I wrote to assist the workflow files. It also contains an image called CBClogo.png that is used in the README.md of the respository, but for obvious reasons, I haven't documented how it works below. If you want to know what a .png file is, see the following link: https://en.wikipedia.org/wiki/File_format.
 
-#### 
+#### addLabel.js
 
-####
+#### assertContains.js
+
+#### assertDoesNotContain.js
+
+#### badgeAPI.js
+
+#### getFile.js
+
+#### getRepoInfo.js
+
+#### makeComment.js
+
+#### removeAllLabels.js
+
+#### triggerRunForAllPRs.js
+
+## Future Plans
