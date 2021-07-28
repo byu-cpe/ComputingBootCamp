@@ -2,19 +2,19 @@
 
 Badges are one of the core elements of the BYU Computing Boot Camp. They motivate those who use our site to put their newly-learned skills to the test by attempting a 
 pass-off assessment, and acts as evidence of their knowledge after being earned. The badges we issue are OpenBadges, which contain json metadata with the cerification 
-and qualification information present, so that it can be verified as real and contain information on the knowledge the recepient has. We are currently using Badgr to 
-issue these badges, using their easy-to-use API. The users can then download the badges directly onto their computers as png files (with the aformentioned metadata), 
+and qualification information so that it can be verified as real and assert the recepient knowledge. We are currently using Badgr to 
+issue these badges with their easy-to-use API. The users can then download the badges directly onto their computers as png files (with the aformentioned metadata), 
 and/or store it in the Badgr wallet. 
 
-This guide will explain how to create a badge for new modules and sub-modules on the site, as well as giving access to all currently-existent badges just in case the
-badge you want to create has already been made. Be sure to read all of the sections, as the "Existing Badges" sections gives alot of context for 
+This guide will explain how to create a badge for new modules and sub-modules on the site, as well as giving access to all currently-existent badges. Be sure to read all of the sections, as the "Existing Badges" sections gives alot of context for creating new ones, and might just contain the badge you wanted to make.
 
-## Existing Badges
-The BYU Computing Boot Camp already has tons of badge designs that are ready for use. They can all found at the following link, as pngs and as their Adobe Illustrator 
-Project Files: [TO DO] . There is a badge created for almost every module and sub-module currently on the site. For example, the module "Software Development" has it's own 
-Module Badge that looks like this:
+### Existing Badges
+The BYU Computing Boot Camp already has tons of badge designs that are ready for use. They can be found at the following link, as pngs and as their Adobe Illustrator 
+Project Files: [TO DO] . The png files are ready to be uploaded to Badgr, and the Adobe Illustrator files can be used to edit/create badges. 
 
-Each of the modules on the site have their own Module badge (as of 7/28/2021). 
+There is a badge created for almost every module and sub-module currently on the site as of July 2021. For example, the module "Software Development" has it's own Module Badge that looks like this:
+
+Each of the modules on the site have their own Module badge. 
 
 Most of the sub-modules have their own Mini-badges. For example, the sub-module "Git" under the module "Software Development" has it's own Mini-badge that looks like this:
 
@@ -22,7 +22,7 @@ Almost all of the sub-modules have their own Mini-badge. A few don't have a Mini
 a reward (like "Install Vivado/Vitis"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under
 Software Development").
 
-### Mini-Badges
+#### Mini-Badges
 Mini-Badges are the easiest badges to earn, and represent the smallest amount of knowledge. For example, to earn the "Make" Mini-badge, one must write two Makefiles that
 implement functionality taught in the Make sub-module. This means that the Make Mini-badge will represent experience writing functional Makefiles, but not much else. For
 this reason, the badge designs are simple yet elegeant. They clearly state the skill that was learned near the top, and state at the bottom that the recepient has a
@@ -48,7 +48,7 @@ the website banner.
 
 When creating a new Mini-badge under an existing module, be sure to make sure the color of the ribbon matches the color of the other Mini-badges under the same module.
 
-### Module Badges
+#### Module Badges
 Module Badges are the hardest to earn, and represent the largest amount of knowledge. This is due to the fact that to earn the Module Badge, one must earn all of the
 Mini-badges in all of the sub-modules for that modules. For example, if the user wants to earn the "Software Development" Module Badge, they must earn 14 Mini-badges, 
 from "Git" all the way to "Matlab". This means that the Softwawre Development Module Badge will represent experience in all sorts of different software concepts, which
@@ -56,6 +56,16 @@ will make it alot more valuable. The idea is that the Mini-badges will help the 
 Module badges are what will actually be shared with employeers and educational institutitions as a certification of their skill. Both types of badges could be used
 for both purposes, but they will generally fulfill the previously specified roles better.
 
+Here are all six of the Module Badges:
 
-## Creating a new Badge
+#### Computing Boot Camp Badge (idea, not currently implemented)
+I have been considering having one badge that represents a knowledge in ALL of the modules taught on the Computing Boot Camp site. This badge would be earned by earning all six
+of the Module Badges (or a badge for every Module on the site), and would represent skill in every single topic covered on the site. This would be the ultimate show of learning
+in Electrical and Computer Engineering, so instead of saying "Electrical and Computer Engineering Knowledge", it could say "Electrical and Computer Engineering Expertise", or something similar.
+
+We don't currently have a design for this badge. It could be a modified version of the Module Badges, or one we haven't used yet. For this reason, I'm leaving all of my unused
+badge design concepts with the rest of the badges in a folder called "Unused". If you want to try and create the Computing Boot Camp Badge, you could try to adapt one of those
+designs if you'd like.
+
+### Creating a new Badge
 While creating a new badge, be sure to use the previous designs as templates, so that all of the badges can blend well asthetically and make logical sense to the user.
