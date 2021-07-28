@@ -222,7 +222,43 @@ You can also create a new matrix by using lines from previous matrix. The follow
 ```
 ## Matrix Operations
 
-FIXME: add content
+Here are a few commonly used matrix operations. We will use the following matrices in the examples:
+```
+  a = [ 1 2 3 ; 4 5 6 ; 7 8 9 ]      normal matrix
+  b = [ 5 1 2 ; 4 5 1 ; 2 6 3 ]      normal matrix
+  c = [ 2 -3 1 ; -1 2 0 ; 2 2 1 ]    matrix multiplication (with a) inv and det
+```
+  - Addition
+```
+  a + b              % 6 3 5 ; 8 10 7 ; 9 14 12 (will be printed vertically)
+```
+  - Subtraction
+```
+  a - b              % -4 1 1 ; 0 0 5 ; 5 2 6 (will be printed vertically)
+```
+  - Scalar operations
+```
+  a + 3              % 3 5 6 ; 7 8 9 ; 10 11 12 (will be printed vertically)
+  a - 3              % -2 -1 0 ; 1 2 3 ; 4 5 6 (will be printed vertically)
+  a * 3              % 3 6 9 ; 12 15 18 ; 21 24 27 (will be printed vertically)
+  a / 3              % 0.3333 0.6667 1.0000 ; 1.3333 1.6667 2.0000 ; 2.3333 2.6667 3.0000 (will be printed vertically)
+```
+  - FIXME: DIVISION
+```
+  
+```
+  - Transpose
+```
+  a                  % 1 4 7 ; 2 5 8 ; 3 6 9 (will be printed vertically)
+```
+  - Concatenate
+
+  - Multiplication 
+
+  - Determinant 
+
+  - Inverse
+
 
 ### Try it
 
