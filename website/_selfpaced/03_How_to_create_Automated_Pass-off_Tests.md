@@ -155,16 +155,108 @@ This step set-up node.js on the ubuntu machine for running javascript files.
 This step installs octokit/core.js, so we can make API calls to the GitHub API using javascript.
 
 ```
-    - name: Trigger makeTest.yml for each PR
-      run: node .cbc/triggerRunForAllPRs.js ${{ secrets.AUTH_TOKEN }}   
+- name: Trigger makeTest.yml for each PR
+  run: node .cbc/triggerRunForAllPRs.js ${{ secrets.AUTH_TOKEN }}   
 ```
 
-This step runs my custom triggerRunForAllPRs.js file, that uses API requests to the GitHub API to trigger a pass-off test for each open PR in the repository.
+This step runs my custom triggerRunForAllPRs.js file, that uses API requests to the GitHub API to trigger a pass-off test for each open PR in the repository. Note the `${{ secrets.AUTH_TOKEN }}`. This tells GitHub Actions to replace this section with the variable value contained in secrets.AUTH_TOKEN. For the javascript file to sucessfully make
+API calls, it needs an authorized token for the BYUComputingBootCamp 
 
 As you can see, this workflow doesn't actually trigger any tests directly. Rather, it just sets up the necessary infrastructure to call a javascript file, which handles
 the pass-off triggering.
 
+For information on how to use the "triggerRunForAllPRs.js" file, see the section with the same name below.
+
 #### makeTest.yml
+The makeTest.yml contains alot of code, so I won't copy it as one big code block. Instead, I'll go through each line and explain what it does. I'll assume that you already 
+have the context explained in "triggerPRruns.yml" section. If you haven't read that yet, go read it now.
+
+`name: Make Test`
+
+Here, I give this workflow the name of "Make Test".
+
+```
+on: 
+  repository_dispatch:
+    types: 
+      [test_pr]
+```
+
+This tells the workflow to trigger on a GitHub API call, and the `types: [test_pr]` line tells it that the API call must specify the `event_type` as "test_pr" for it to
+trigger this workflow.
+
+```
+jobs:
+  runTests:
+    runs-on: ubuntu-latest
+    steps:
+```
+
+This defines a job called "runTests", tells it to run on the latest version of a ubuntu machine, and tells the file that we are about to outline some steps.
+
+```
+- name: Checkout Repository
+  uses: actions/checkout@v2
+
+- name: Setup Node.js environment
+  uses: actions/setup-node@v2.1.5
+  
+- name: Install octokit/core.js
+  run: npm install @octokit/core
+  
+- name: Install xmlhttprequest
+  run: npm install xmlhttprequest
+```
+
+These steps download the repository, set-up Node.js on the machine, and install octokit/core.js and xmlhttprequest for making API calls with Javascript. octokit/core.js is
+for making API request to the GitHub API, and xmlhttprequest is for making API calls to the Badgr API (for issuing badges).
+
+```
+- name: Get a Pull Request's Repo Name that isn't already being checked
+  run: node .cbc/getRepoInfo.js ${{ secrets.AUTH_TOKEN }} full_name > repo.txt
+
+- name: Save Repository name as Output Variable
+  id: repo
+  uses: juliangruber/read-file-action@v1
+  with:
+    path: repo.txt
+```
+
+These steps are a little bit confusing, but are a workaround for some of the limitations of GitHub Actions. The first step calls a javascript file that finds a PR that
+isn't currently being checked (we use labels to be able to detect this), and then outputs the name of the forked repository that corresponds to the PR. This name is saved to a file. The second step takes the repository name from that file and saves it as an output for use later in the workflow. It is used to download the user's code from their forked
+repository to then run tests on.
+
+You may be thinking, why not just save the output of the javascript file as a variable? Well, Github Actions wasn't made to be a pass-off driver, and so it doesn't really
+have variables in the traditional sense of the word. So, instead, we use this workaround so that the PR's name ends up as an output variable of the second step with the 
+id of "repo".
+
+For information on how to use the "getRepoInfo.js" file, see the section with the same name below.
+
+```
+- name: Get the Pull Request's Number
+  run: node .cbc/getRepoInfo.js ${{ secrets.AUTH_TOKEN }} number > number.txt
+
+- name: Save Repository Number as Output Variable
+  id: number
+  uses: juliangruber/read-file-action@v1
+  with:
+    path: number.txt
+```
+
+This is the same as the last two steps, except it gets the number of the Pull Request for later use, instead of the name of the corresponding repository. This number is 
+used to make commments on the Pull Request so that the user can easily see how the pass-off went.
+
+```
+- name: Add "currentlyBeingChecked" label
+  run: node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} currentlyBeingChecked
+```
+
+This step calls a javascript file that adds a label to the Pull Request called "currentlyBeingChecked". This allows the getRepoInfo.js code to tell if a Pull Request is already
+being tested so that it doesn't test a user's code twice, or miss a PR.
+
+The addLabel.js file needs the number of the 
+
+For information on how to use the "addLabel.js" file, see the section with the same name below.
 
 ### .cbc Folder
 This folder contains all of the javascript files I wrote to assist the workflow files. It also contains an image called CBClogo.png that is used in the README.md of the respository, but for obvious reasons, I haven't documented how it works below. If you want to know what a .png file is, see the following link: https://en.wikipedia.org/wiki/File_format.
