@@ -13,6 +13,7 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
 <script src={{ "/js/js.cookie-2.2.1.min.js" | relative_url }}></script>
+<script src={{ "/js/quizzes.js" | relative_url }}></script>
 
 <!-- Menu Toggle Script -->
 <script>
@@ -84,82 +85,4 @@
     });
 
     {% endfor %}
-</script>
-
-<!-- Quiz script-->
-<script>
-
-    function multiple_choice_check_answer(isCorrect) {
-        if (isCorrect) {
-            event.target.classList.add("correct")
-        }
-        else {
-            event.target.classList.add("incorrect")
-        }
-    }
-
-    function changeclass() {
-        let selectedItem = event.target.parentElement.getElementsByClassName("selected")[0];
-        if (selectedItem != null)
-            selectedItem.classList.remove("selected");
-        event.target.classList.add("selected");
-    }
-
-
-    function fillin_check_answer(blank) {
-        if (event.target.value.toLowerCase() == blank.toLowerCase()) {
-            event.target.classList.add("correct");
-            event.target.disabled = true;
-            event.target.parentElement.nextElementSibling.firstElementChild.focus();
-        }
-    }
-
-    function matching_check_answer(responseA, responseB) {
-        let leftItem = document.getElementById(responseA);
-        let rightItem = document.getElementById(responseB);
-        if (leftItem.classList.contains("selected") == true && rightItem.classList.contains("selected") == true) {
-            leftItem.onclick = function () { return false; };
-            leftItem.classList.add("disabled");
-            rightItem.onclick = function () { return false; };
-            rightItem.classList.add("disabled");
-            rightColSelected = false;
-            leftColSelected = false;
-        }
-
-    }
-
-    // Drop-down animation
-    $(".collapsible").click(function (event) {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.display = "block";
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-    });
-
-    //Help animation
-    $(".help-circle").click(function (event) {
-        var content = this.parentElement.parentElement.lastElementChild;
-        if (content.style.maxWidth) {
-            content.style.maxWidth = null;
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-            content.style.maxWidth = (content.parentElement.scrollWidth * .7) + "px";
-        }
-    });
-
-    $(".help-x").click(function (event) {
-        var content = this.parentElement;
-        if (content.style.maxWidth) {
-            content.style.display = "none";
-            content.style.maxWidth = null;
-        } else {
-            content.style.display = "block";
-            content.style.maxWidth = (content.parentElement.scrollWidth * .7) + "px";
-        }
-    });
 </script>

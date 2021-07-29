@@ -62,25 +62,3 @@
     </div>
     {% endif %}
 </div>
-
-
-<script type="text/javascript">
-    // Setup and randomize matching questions
-    var leftColSelected = false;
-    var rightColSelected = false;
-    var ul = document.querySelectorAll('.matching-col');
-    for (let i = 0; i < ul.length; i++) {
-        for (var j = ul[i].children.length; j >= 0; j--) {
-            ul[i].appendChild(ul[i].children[Math.random() * j | 0]);
-
-        }
-    }
-
-    // Replace blanks from fillin the blank questions with input boxes
-    var lines = document.querySelectorAll('.fillin-line');
-    for (let i = 0; i < lines.length; i++) {
-        lines[i].innerHTML = lines[i].innerHTML.replace(/_+/, "<input class='blank' type='text' oninput='fillin_check_answer(this.parentElement.dataset.blank)'>");
-        lines[i].firstElementChild.setAttribute('size', lines[i].dataset.blank.length);
-    }
-
-</script>
