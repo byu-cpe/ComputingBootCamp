@@ -34,9 +34,135 @@ Now, I will go into the specific's of each file and how they work exactly, so th
 This folder contains all of the files that outline workflows for GitHub Actions and CODEOWNER information for protecting our files. The workflows are contained in the "workflows" folder (and they have to be here to work), and the CODEOWNERS file is in this directory.
 
 #### CODEOWNERS
-The CODEOWNERS file is a file specific to GitHub, and specifies which users on the site are "owners" of code in certain parts of the repository.
+The CODEOWNERS file is a file specific to GitHub, and specifies which users on the site are "owners" of code in certain parts of the repository. This doesn't actually make these
+users owners of the code, as the repository will still be owned by the creator of the repository, but rather acts more like they have duties to protect the code by reviewing
+changes to it.
+
+The syntax for the CODEOWNERS file is as follows:
+
+`<File(s) to be owned> @<User who will be a codeowner for it>`
+
+A CODEOWNERS file can have as many of these lines as desired. The makeTest repository only has one line in it:
+
+`* @BYUComputingBootCampTests`
+
+A CODEOWNERS file can follow the same syntax as the linux terminal, so the * refers to all of the files in the repository. This means that the user "BYUComputingBootCampTests"
+becomes a CODEOWNER of every file in the repository. And since the makeTest repository has settings that requires an approving review from CODEOWNERS before any merges can be performed, we effectively have disabled merging to our repository.
 
 #### triggerPRruns.yml
+The triggerPRruns.yml file contains the following code:
+
+```
+name: Trigger PR Test Runs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0/5 * * * *'
+
+jobs:
+  triggerRuns:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.1.5
+
+    - name: Install octokit/core.js
+      run: npm install @octokit/core
+
+    - name: Trigger makeTest.yml for each PR
+      run: node .cbc/triggerRunForAllPRs.js ${{ secrets.AUTH_TOKEN }}   
+```
+
+I'll try to explain this from the top-down. 
+
+Every workflow file should have a name, that will be shown when the workflow file is run in the Actions tab of the repository. I've named this workflow as the "Trigger PR
+Test Runs" workflow. The syntax for naming is as follows:
+
+`name: <name of workflow>`
+
+Next, the `on:` defines when a workflow will run. See https://docs.github.com/en/actions/reference/events-that-trigger-workflows for information on the specific formatting
+of this part of the yml file. Basically, you can add as many triggers as you want, and triggers can have specific settings (which are denoted by the "-" preceeding them). So,
+in this workflow file, I have two triggers: workflow_dispatch and schedule. workflow_dispatch means that I can manually trigger it whenever I want in the Actions tab, which is
+useful for debugging. schedule means that the workflow will automatically trigger according to a defined timetable. The line after "schedule:" that says
+
+`cron: '0/5 * * * *`
+
+defines the specific timetable that the workflow will run at. See https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events for information on
+the syntax of the "cron" setting. This cron means that the workflow should run every 5 minutes (however, with GitHub's delay, this ends up being around 20 minutes on average).
+
+Next, are the jobs, or tasks that the workflow will run. 
+
+```
+jobs:
+    triggerRuns:
+```
+
+In this workflow file, I only have one job called "triggerRuns". 
+
+`runs-on: ubuntu-latest`
+
+This line tells GitHub Actions that I want the following job to be run on the latest Ubuntu version available.
+
+Now, we get to all of the steps, or specific actions, that the job will do. Defining steps uses the following syntax:
+
+```
+steps:
+  - (name:) (name of first step)
+    (id:) (id for first step)
+    (uses:) (Action to use)
+    (run:) (Bash script commands to run)
+  - (name:) (name of second step)
+    ...
+```
+ 
+All of these options are techincally optional, but you need to have at least one of them for a step that actually does something (and for the workflow to properly compile). For all of the options you can define on a step, see the following documentation: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idsteps. 
+
+`name:` defines the name of the step to use on GitHub.
+
+`id:` gives the step an id value, by which other steps can refer to this step, and recieve it's output.
+
+`uses:` tells the step to run a pre-built action, that can make our lives alot easier. For example `uses: actions/setup-node@v2.1.5` will automatically install Node.js onto the
+machine.
+
+`run:` tells the step to run the following Bash script commands.
+
+You can have as many steps as you want in a job, and they can all work together to pull off basically anything you want. I'll now explain the specific steps that I have in
+the Trigger PR Test Runs workflow:
+
+```
+- name: Checkout Repository
+  uses: actions/checkout@v2
+```
+
+This step downloads the repository onto the ubuntu machine.
+
+```  
+- name: Setup Node.js environment
+  uses: actions/setup-node@v2.1.5
+```
+
+This step set-up node.js on the ubuntu machine for running javascript files.
+
+```
+- name: Install octokit/core.js
+  run: npm install @octokit/core
+```
+
+This step installs octokit/core.js, so we can make API calls to the GitHub API using javascript.
+
+```
+    - name: Trigger makeTest.yml for each PR
+      run: node .cbc/triggerRunForAllPRs.js ${{ secrets.AUTH_TOKEN }}   
+```
+
+This step runs my custom triggerRunForAllPRs.js file, that uses API requests to the GitHub API to trigger a pass-off test for each open PR in the repository.
+
+As you can see, this workflow doesn't actually trigger any tests directly. Rather, it just sets up the necessary infrastructure to call a javascript file, which handles
+the pass-off triggering.
 
 #### makeTest.yml
 
