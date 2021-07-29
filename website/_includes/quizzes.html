@@ -1,0 +1,64 @@
+{% assign item = site.data.questions | where: "id", include.id | first %}
+<div class="collapsible">
+    <p class="activity-label h3-clone">ACTIVITY</p>
+    <p class="dropdown-arrow h3-clone">&#9660;</p>
+</div>
+<div class="activity">
+    <p class="item-prompt h2-clone">{{item.prompt}}
+        {% if item.help %}
+        <i class="fas fa-question-circle help-circle"></i>
+        {% endif %}
+    </p>
+    <!-- Check for image -->
+    {% if item.image %}
+    <img src="{{site.baseurl}}/{{item.image}}" alt="">
+    {% endif %}
+    <!-- Multiple Choice Setup -->
+    {% if item.type=="multiple_choice" %}
+    <ul class="quiz answer-cont">
+        {% for response in item.responses %}
+        {% if response.correct %}
+        <li onclick="multiple_choice_check_answer('{{response.correct}}')">{{response.text}}</li>
+        {% else %}
+        <li onclick="multiple_choice_check_answer('{{response.correct}}')">{{response.text}}</li>
+        {% endif %}
+        {% endfor %}
+
+    </ul>
+    <!-- Matching Setup -->
+    {% elsif item.type=="matching" %}
+    <div class="matching-cont answer-cont">
+        <ul class="quiz matching-col">
+            {% for response in item.responses %}
+            <li id='{{response.text}}'
+                onclick="changeclass(); matching_check_answer('{{response.text}}', '{{response.correct}}')">
+                {{response.text}}</li>
+            {% endfor %}
+        </ul>
+        <ul class="quiz matching-col">
+            {% for response in item.responses %}
+            <li id='{{response.correct}}'
+                onclick="changeclass(); matching_check_answer('{{response.text}}', '{{response.correct}}')">
+                {{response.correct}}</li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    {% else %}
+    <!-- Fillin the Blank Setup -->
+    <div class="quiz fillin-cont answer-cont">
+        {% for response in item.responses %}
+        <p class="fillin-line" data-blank={{response.correct}}>{{response.text}}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if item.help %}
+    <div class="help">
+        <svg class="help-x" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+        </svg>
+        <p class="help-text">{{item.help}}</p>
+    </div>
+    {% endif %}
+</div>

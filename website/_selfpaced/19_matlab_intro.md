@@ -141,14 +141,39 @@ Try to recreate the following image. (Hint: use `.*` to multiply an element of o
 
 <img src = "{% link media/matlab/matlab_vulture.png %}" width="600">
 
+### Surfaces
+
+[surf](https://www.mathworks.com/help/matlab/ref/surf.html?)(X,Y,Z) produces a 3-D surface with solid face colors.  This function plots the values of matrix Z as a height of a grid on the x-y plane formed by using the `meshgrid` command.  The surface's color changes depending on its height.
+
+The command `colorbar` displays a bar to reference the values of the different colors of the surface, and [axis](https://www.mathworks.com/help/matlab/ref/axis.html)(\[limit\]) can change the axis of the plot.
+
+For example, the commands
+```
+[X,Y] = meshgrid(0:0.1:10,0:2:20);
+Z = sin(X);
+surf(X,Y,Z);
+axis([0 10 -5 25 -2 2]);
+colorbar;
+```
+creates the following surface:
+
+<img src = "{% link media/matlab/matlab_surface.png %}" width="600">
+
+
+#### Try it
+
+Using one of the [other surface and mesh plots](https://www.mathworks.com/help/matlab/surface-and-mesh-plots-1.html), as well as a certain combination of a sine and cosine function produces the following surface:
+
+<img src = "{% link media/matlab/matlab_mattress.png %}" width="600">
+
 
 Learn more about plotting in Matlab:
   - [MathWorks plot Help Center](https://www.mathworks.com/help/matlab/ref/plot.html)
   - [BYU ECEn 240 Matlab Intro](http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf)
   - [Tutorialspoint Matlab Plotting](https://www.tutorialspoint.com/matlab/matlab_plotting.htm)
+  - [Create the MATLAB logo](https://www.mathworks.com/help/matlab/visualize/creating-the-matlab-logo.html)
 
 
-FIXME: add more content
 
 ### Manipulating Matrices
 

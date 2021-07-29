@@ -1,0 +1,282 @@
+$primary-button-color: rgb(192, 210, 236);
+$pink-button-color: rgb(236, 139, 210);
+$grey-button-color: rgba(218, 218, 218, 0.623);
+
+body {
+  font-family: sans-serif;
+}
+
+.activity {
+  background-color: rgba(189, 182, 174, 0.171);
+  box-sizing: border-box;
+  border-radius: 30px;
+  height: auto;
+  padding: 0px;
+  border-color: black;
+  border-width: 2px;
+  margin: 30px 0px;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out, padding .2s ease-in;
+  position: relative;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz li {
+  display: block !important;
+  width: 70%;
+  background-color: rgb(192, 210, 236);
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 5px auto;
+}
+
+.quiz li:hover {
+  background-color: rgb(159, 190, 235);
+}
+
+.quiz li.correct {
+  animation: correct 0.7s forwards;
+}
+
+.quiz li.incorrect {
+  animation: incorrect 0.7s forwards;
+}
+
+@media only screen and (max-width: 600px) {
+  .quiz li {
+    width: 90%;
+  }
+  .answer-cont {
+    margin: 5px;
+  }
+  .help-circle {
+    margin: 0px;
+  }
+}
+
+.matching-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.matching-col {
+  width: 50%;
+}
+
+.matching-col li.selected {
+  animation: select 0.1s;
+  background-color: $pink-button-color;
+  animation-fill-mode: forwards;
+}
+
+.matching-col li.disabled {
+  animation: disable 0.7s;
+  animation-fill-mode: forwards;
+  cursor: default;
+}
+
+@keyframes select {
+  from {
+    transform: scale(1,1);
+  }
+  to {
+    transform: scale(1.1,1.1);
+  }
+}
+
+@keyframes disable {
+  from {
+  }
+  30% {background-color: rgb(169, 228, 169)}
+  to {
+    background-color: $grey-button-color;
+    opacity: 50%;
+    cursor: default;
+  }
+}
+
+@keyframes correct {
+  from {
+  }
+  to {
+    background-color: rgb(169, 228, 169);
+    opacity: 50%;
+    cursor: default;
+  }
+}
+
+@keyframes incorrect {
+  from {
+    background-color: $pink-button-color;
+  }
+  30% {background-color: rgb(219, 106, 106)}
+  to {
+    background-color: $grey-button-color;
+    opacity: 50%;
+    cursor: default;
+  }
+}
+
+.fillin-line {
+  display: block;
+}
+
+.help {
+  background-color: rgba(230, 225, 220, 0.973);
+  border-radius: 30px;
+  padding: 20px 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  max-width: 0;
+  transition: max-width 0.2s ease-out;
+  display: none;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  right: 0px; 
+  position: absolute;
+}
+
+.help-text {
+  margin: 40px;
+}
+
+.help-x {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.help-x:first-child:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.collapsible {
+  width: 300px;
+  background-color:rgba(189, 182, 174, 0.171) ;
+  padding: 5px 30px;
+  border-color: black;
+  border-width: 2px;
+  margin: 30px 0px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.collapsible:hover{
+  background-color:rgba(88, 85, 81, 0.171) ;
+}
+
+.item-prompt {
+  color: rgb(82, 82, 82);
+  font-family: $header-font-family;
+  letter-spacing: normal;
+  font-size: 1.7rem;
+  margin: 40px;
+  margin-bottom: 20px;
+}
+
+.help-circle {
+  color: grey;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.help-circle:hover {
+  color: rgb(71, 71, 71);
+}
+
+.collapsible::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: -5%;
+  background: linear-gradient(
+  180deg,
+  #f18321,
+  #f18321 30%,
+  #f26448 30% 50%,
+  #d882a1 50% 70%,
+  #0a69a8 70%
+  );
+  z-index: -1;
+  transform: rotate(-60deg);
+  cursor: pointer;
+}
+
+.activity button {
+    display: block;
+    margin: 20px auto;
+}
+.activity button:hover {
+    color:rgb(146, 146, 146)
+}
+
+.answer-cont {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    margin: 30px;
+}
+
+.answer-button {
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    padding: 7px 9px;
+    border-color: black;
+    border-width: 2px;
+}
+
+.activity-label {
+  padding: 10px;
+  padding-left: 80px;
+  margin: 0px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  font-family: $header-font-family;
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.dropdown-arrow {
+  justify-self: flex-end;
+  padding: 10px 0px;
+  display: block;
+  margin: 0px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.answer-button:hover {
+    background-color: rgb(219, 219, 219);
+    cursor: default;
+}
+
+input.correct {
+  animation: correct 0.9s none; 
+  animation: disable 0.9s forwards;
+  border-style: solid;
+  transition: background-color 1s;
+}
