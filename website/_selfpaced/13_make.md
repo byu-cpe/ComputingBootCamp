@@ -45,43 +45,6 @@ The various stages of makefile development shown in the lecture are:
 * mk5: Pattern matching
 * mk6: Makefile functions, and making the makefile more generic.
 
-<div class="activity">
-<h3 class="activity-label">Activity</h3>
-<hr/>
-<h2>The following files were changed: Which files will be recompiled with the following Makefile</h2>
-<pre>
-  <code>
-    CC=gcc
-    CFLAGS=-O3 -Wall
-
-    calc: compute.o main.o input.o
-	    $(CC) $(CFLAGS) -o calc compute.o main.o input.o
-
-    compute.o: compute.c compute.h
-  	  $(CC) $(CFLAGS) -c compute.c
-
-    input.o: input.c input.h
-    	$(CC) $(CFLAGS) -c input.c
-
-    main.o: main.c
-    	$(CC) $(CFLAGS) -c main.c
-
-    clean: 
-    	rm calc *.o
-  </code>
-</pre>
-<div class="answer-cont">
-  <p onclick="changeclass()" class="answer-button">main.o</p>
-  <p onclick="changeclass()" class="answer-button">compute.o</p>
-  <p onclick="changeclass()" class="answer-button">input.o</p>
-  <p onclick="changeclass()" class="answer-button">compute.h</p>
-  <p onclick="changeclass()" class="answer-button">input.c</p>
-  <p onclick="changeclass()" class="answer-button">input.h</p>
-  <p onclick="changeclass()" class="answer-button">main.c</p>
- </div>
- <button onclick="checkAnswers()">Check answers</button>
-</div>
-
 ## Other Resources
 * <https://www.gnu.org/software/make/>
 * Recursive make considered harmful: <https://accu.org/journals/overload/14/71/miller_2004/>
