@@ -9,7 +9,7 @@ order: 4
 
 ## Overview
 
-FASM is a textual representation of a bitstream.  Specifically it assigns a symbolic name to each confgurable thing in the FPGA.  You can tell what features are configured "on" by looking through the FASM file.  FASM files provide an easy way for you to write programs that manipulate bitstreams.  Modifying a textual FASM file is much easier than trying to modify a binary bitstream.
+FASM (FPGA Assembly) is a textual representation of a bitstream. By assigning a symbolic name to each configurable thing in the FPGA, the resulting FASM file shows what features are specifically configured "on". These files provide an easy way to write programs that manipulate bitstreams. Modifying a textual FASM file is far easier than trying to modify a binary bitstream.
 
 ## Install
 
@@ -23,7 +23,9 @@ On June 2, 2021, we had a lecture from Professor Nelson about [Project X-Ray](ht
 src="https://www.youtube.com/embed/6HGN8pQn_jA">
 </iframe>
 
-## Follow-up Activities:
+## Follow-Up Activities
+
+***need to do this activity for myself to see if everything works properly***
 
 * Generate a bitstream for the simplest design you can in Vivado (a 2-input AND gate).  Since prjxray cannot handle all FPGA devices, you will have to do it for a specific one: the `xc7a50tfgg484-1` part.
     * Also, if you don't have your top level ports mapped to physical pins then you will get Vivado errors.  Below is some code you can use in your .tcl script to make Vivado happy.  They set the IOB voltages and also tell Vivado to be happy with unconstrained pins.
@@ -44,7 +46,6 @@ set_property BITSTREAM.General.UnconstrainedPins {Allow} [current_design]
 ## Learn More
 
 * FASM GitHub Repository - <https://github.com/SymbiFlow/fasm>
-* FASM SymbiFlow "Read the Docs" Page - <https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>
+* FASM Documentation - <https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>
+* FASM Output Support - <https://docs.verilogtorouting.org/en/latest/utils/fasm/>
 
-
-TODO: find more links for fasm and update follow up activities
