@@ -61,17 +61,19 @@ Below are some other helpful resources for beginners to Matlab:
 
 ## Basic plotting
 
+### 2-D plots
+
 Matlab offers a number of plotting capabilities.  The basic 2-D line plot requires the use of vectors, which can be created by using the form (starting point):(increment):(ending point). For example, the vector
 ```
   my_vector = 0:5:100;
 ``` 
 creates a vector starting at zero, ending at 100, which is incremented up by 5.
 
-The command `plot(x,y)` creates a line-plot of the vectors x and y.  Make sure vectors x and y are of equal length.  For example, the vector
+[plot](https://www.mathworks.com/help/matlab/ref/plot.html#btzpm1x)(x,y) creates a line-plot of the vectors x and y.  Make sure vectors x and y are of equal length.  For example, the vector
 ```
-  x = 0:pi/30:4*pi;
+  x = 0:pi/50:4*pi;
 ```
-creates a vector starting at 0 and incrementing up to 2pi.  
+creates a vector starting at 0 and incrementing up to 4 pi.  
 The vector
 ```
   y = sin(x);
@@ -82,7 +84,9 @@ We can then use the command
 plot(x,y);
 ```
 
-to graph vector y versus x.
+to graph vector y versus x:
+
+<img src = "{% link /media/matlab/matlab_sine_plot.png %}" width="600">
 
 Adding a title and axis labels can be achieved using the following commands:
 ```
@@ -99,7 +103,7 @@ To plot multiple functions on the same graph, create the vectors for each functi
   plot(x,y1, x,y2);
 ```
 
-The command `legend('sine', 'cosine')` adds a legend to the side with the first label in the parenthesis corresponding to the first function in the `plot` command.
+[legend](https://www.mathworks.com/help/matlab/creating_plots/add-legend-to-graph.html)('sine', 'cosine') adds a legend to the side with the first label in the parenthesis corresponding to the first function in the `plot` command.
 
 #### Try it
 
@@ -108,8 +112,41 @@ Using the commands shown, try to create a graph to look like the following pictu
 
 <img src = "{% link media/matlab/matlab_2D_plot.png %}" width="600">
 
+
+### 3-D plots
+
+[plot3](https://www.mathworks.com/help/matlab/ref/plot3.html?)(X,Y,Z) plots a function in 3-D.
+
+The commands
+```
+  x = 0:0.1:30;
+  y = sin(x);
+  z = cos(x);
+  plot3(x,y,z);
+```
+produces the following graph:
+
+<img src = "{% link media/matlab/matlab_3D_plot.png %}" width="600">
+
+The style and color of the line [can be changed](https://www.mathworks.com/help/matlab/ref/plot.html#btzitot_sep_mw_3a76f056-2882-44d7-8e73-c695c0c54ca8) by adding another argument in the `plot` function. For example,
+```
+plot3(x,y,z,'--');
+```
+produces a 3-D plot with a dashed line.
+
+
+#### Try it
+
+Try to recreate the following image. (Hint: use `.*` to multiply an element of one vector by an element of another vector)
+
+<img src = "{% link media/matlab/matlab_vulture.png %}" width="600">
+
+
 Learn more about plotting in Matlab:
   - [MathWorks plot Help Center](https://www.mathworks.com/help/matlab/ref/plot.html)
+  - [BYU ECEn 240 Matlab Intro](http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf)
+  - [Tutorialspoint Matlab Plotting](https://www.tutorialspoint.com/matlab/matlab_plotting.htm)
+
 
 FIXME: add more content
 
@@ -160,9 +197,45 @@ You can also create a new matrix by using lines from previous matrix. The follow
 ```
 ## Matrix Operations
 
-FIXME: add content
+Here are a few commonly used matrix operations. We will use the following matrices in the examples:
+```
+  a = [ 1 2 3 ; 4 5 6 ; 7 8 9 ]      normal matrix
+  b = [ 5 1 2 ; 4 5 1 ; 2 6 3 ]      normal matrix
+  c = [ 2 -3 1 ; -1 2 0 ; 2 2 1 ]    matrix multiplication (with a) inv and det
+```
+  - Addition
+```
+  a + b              % 6 3 5 ; 8 10 7 ; 9 14 12 (will be printed vertically)
+```
+  - Subtraction
+```
+  a - b              % -4 1 1 ; 0 0 5 ; 5 2 6 (will be printed vertically)
+```
+  - Scalar operations
+```
+  a + 3              % 3 5 6 ; 7 8 9 ; 10 11 12 (will be printed vertically)
+  a - 3              % -2 -1 0 ; 1 2 3 ; 4 5 6 (will be printed vertically)
+  a * 3              % 3 6 9 ; 12 15 18 ; 21 24 27 (will be printed vertically)
+  a / 3              % 0.3333 0.6667 1.0000 ; 1.3333 1.6667 2.0000 ; 2.3333 2.6667 3.0000 (will be printed vertically)
+```
+  - FIXME: DIVISION
+```
+  
+```
+  - Transpose
+```
+  a                  % 1 4 7 ; 2 5 8 ; 3 6 9 (will be printed vertically)
+```
+  - Concatenate
 
-## Try it
+  - Multiplication 
+
+  - Determinant 
+
+  - Inverse
+
+
+### Try it
 
 FIXME: add content
 
