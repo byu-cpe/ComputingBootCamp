@@ -1,3 +1,11 @@
+---
+layout: page
+toc: true
+title: How to create a Badge
+slug: create_badge
+type: resources
+---
+
 # How to create a Badge
 
 Badges are one of the core elements of the BYU Computing Boot Camp. They motivate those who use our site to put their newly-learned skills to the test by attempting a 
