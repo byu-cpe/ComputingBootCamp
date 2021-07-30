@@ -1,3 +1,11 @@
+---
+layout: page
+toc: true
+title: How to create Automated Pass-off Tests
+slug: create_passoff
+type: resources
+---
+
 # How to create Automated Pass-off Tests
 In order to award badges, the BYU Computing Boot Camp is currently considering using a mixture of "project" based assessments and "code" based assessments. For the project-based
 assessments, users will create an end-product that will involved the subject taught, but will also involve alot of creativity on their part. This will require these projects to
