@@ -174,10 +174,64 @@ Now, just check the "Use Artboards" box and hit "Export":
   
 <img src="../media/badgeDocumentation/AdobeEx15.png" alt="Git Mini-Badge" width="700"/>
   
-Congradulations! Your new badge should now be in the same folder as all of the other badges in the sub-module. Be sure to upload it to <TO DO>
+Congradulations! Your new badge should now be in the same folder as all of the other badges in the sub-module. Be sure to upload it to ______________________.
   
 Now, all that's left is to upload it to Badgr so that it can be awarded to the site's users. See the section "Uploading a Badge to Badgr" below for more information.
   
+#### Creating a Mini-Badge in a new Module
+Since the module is new, the Mini-badge will be the first one that you create. This means that in addition to doing most of the steps found in the section "Creating a Mini-Badge in a pre-existing Module", you'll have to create a new .ai file for the Mini-badges of this module, and pick a color for it.
+  
+To start, locate the "CommercialFPGAMiniBadges.ai" file at __________________________, and open it up with Adobe Illustrator. You should see a screen that looks like this:
+
+<img src="../media/badgeDocumentation/AdobeEx16.png" alt="Git Mini-Badge" width="900"/>
+  
+We're going to copy a badge from this file, to use as a starting point for our new .ai file. Click on "File" in the top left, and then click "New...":
+
+<img src="../media/badgeDocumentation/AdobeEx17.png" alt="Git Mini-Badge" width="900"/>
+
+You should see a window pop-up that looks like this:
+  
+<img src="../media/badgeDocumentation/AdobeEx18.png" alt="Git Mini-Badge" width="700"/>
+  
+Under "Preset Details", it should say something like "Untitled-1". Change this, so that it says the name of the new module, followed by "MiniBadges", like this:
+
+```
+<ModuleName>MiniBadges
+```
+  
+Let's assume that the new module that I was making a Mini-Badge for was called "Game Development". So, I'd type in something like this, and then hit "Create":
+  
+<img src="../media/badgeDocumentation/AdobeEx19.png" alt="Git Mini-Badge" width="700"/>
+
+Now, you should see the new file open up:
+  
+<img src="../media/badgeDocumentation/AdobeEx20.png" alt="Git Mini-Badge" width="900"/>
+  
+Notice that the top bar of the view now has two files listed, "CommercialFPGAMiniBadges.ai" and "<ModuleName>MiniBadges.ai". By clicking on the name of the file, you can switch
+the view to focus on the contents of that file.
+  
+<img src="../media/badgeDocumentation/AdobeEx21.png" alt="Git Mini-Badge" width="500"/>
+
+Use this to switch back to CommercialFPGAMiniBadges.ai:
+  
+<img src="../media/badgeDocumentation/AdobeEx22.png" alt="Git Mini-Badge" width="900"/>
+  
+Click on the Artboard tool on the left bar:
+  
+<img src="../media/badgeDocumentation/AdobeEx2.png" alt="Git Mini-Badge" width="400"/>
+  
+This will allow us to copy one of the badges (with it's Artboard behind it) to the new file. Left-click on one of the white squares with a badge, and then hit Ctrl-C. Navigate to your new .ai file, and then hit Ctrl-V. You should see the badge appear in the new file:
+  
+<img src="../media/badgeDocumentation/AdobeEx23.png" alt="Git Mini-Badge" width="900"/>
+  
+Left-click on the giant white Artboard, and hit delete. We don't need it. Use the bars on the right and bottom of the view to center yourself on the newly copied artboard, and use Alt with the mouse wheel to zoom so that it fills most of the screen.
+  
+<img src="../media/badgeDocumentation/AdobeEx24.png" alt="Git Mini-Badge" width="900"/>
+  
+Now we need to change the text to match the subject or topic of the first sub-module in our new module. Since I'm pretending that this is for the "Game Development" module, let's pretend that the sub-module is called "Unity Game Engine". With that context in mind, I'll change the top text to say "Unity". Go to the "Creating a Mini-Badge in a pre-existing Module" section and follow the instructions for changing the upper text and centering it:
+  
+<img src="../media/badgeDocumentation/AdobeEx25.png" alt="Git Mini-Badge" width="900"/>
+
 #### Uploading a Badge to Badgr
   
 
