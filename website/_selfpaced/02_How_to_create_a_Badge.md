@@ -33,7 +33,7 @@ Most of the sub-modules have their own mini-badges. For example, the sub-module 
 <img src="../media/badgeDocumentation/SoftwareDevelopmentMiniBadges-01.png" alt="Git Mini-Badge" width="250"/>
 
 Almost all of the sub-modules have their own mini-badges. A few don't have a mini-badge because they represent too little knowledge to justify
-a reward (like "Install Vivado/Vitis"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under
+a reward (like "Install Vivado/Vitis" under "Commercial FPGA"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under
 Software Development").
 
 #### Mini-badges
