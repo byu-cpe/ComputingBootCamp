@@ -3,7 +3,7 @@ layout: page
 toc: true
 title: Badges Development
 slug: badges_dev
-type: Badges
+type: badges
 order: 2
 ---
 
