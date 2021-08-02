@@ -15,6 +15,7 @@ issue these badges with their easy-to-use API. The users can then download the b
 and/or store it in the Badgr wallet. 
 
 <img src="../media/badgeDocumentation/BadgrPage.png" alt="BYU Computing Boot Camp Badgr Page" width="600"/>
+<img src = "{% link media/badgeDocumentation/BadgrPage.png %}" width="600">
 
 This guide will explain how to create a badge for new modules and sub-modules as well as giving access to all current badges on the site. Be sure to read all of the sections as the "Existing Badges" section gives alot of context for creating new badges, and might have a badge or two that you were planning on using.
 
