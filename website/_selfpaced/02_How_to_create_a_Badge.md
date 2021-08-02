@@ -55,7 +55,7 @@ banner, with the badges using the exact color on the banner, or a slight variati
 
 <img src="../media/badgeDocumentation/CommercialFPGAMiniBadgesAllTogether.png" alt="Git Mini-Badge" width="500"/>
 
-"Open FPGA CAD" Mini-badges are red, which is taken off of the website banner.
+"Open FPGA CAD" Mini-badges are tomato red, which is taken off of the website banner.
 
 <img src="../media/badgeDocumentation/OpenFPGACADMiniBadgesAllTogether.png" alt="Git Mini-Badge" width="500"/>
 
@@ -95,7 +95,7 @@ badge design concepts with the rest of the badges in a folder called "Unused". I
 designs if you'd like.
 
 ## Creating a new Badge
-To create a new badge, you are going to need access to Adobe Illustrator, a vector graphics editor and design program, since that's what I used to create the badges. Adobe Illustrator comes as part of the Adobe Creative Cloud, which is free for full-time employees of BYU, and available at a discount to BYU Students for $69 a year (instead of $624 a year). See the following link for information: https://adobe.byu.edu/. You could also just buy Adobe Illustrator for $252 a year, but I wouldn't reccomend it, since you can get ALL of the programs at a lower price.
+To create a new badge, you are going to need access to Adobe Illustrator, a vector graphics editor and design program, since that's what I used to create the badges. Adobe Illustrator comes as part of the Adobe Creative Cloud, which is free for full-time employees of BYU, and available at a discount to BYU Students for $69 a year (instead of $624 a year). See the following link for information: https://adobe.byu.edu/. You could also just buy Adobe Illustrator for $252 a year, but I wouldn't recommend it, since you can get ALL of the programs at a lower price.
 
 The process for creating new badges will vary based on the type of badge you are creating.
 
@@ -207,7 +207,7 @@ Now, you should see the new file open up:
   
 <img src="../media/badgeDocumentation/AdobeEx20.png" alt="Git Mini-Badge" width="900"/>
   
-Notice that the top bar of the view now has two files listed, "CommercialFPGAMiniBadges.ai" and "<ModuleName>MiniBadges.ai". By clicking on the name of the file, you can switch
+Notice that the top bar of the view now has two files listed, "CommercialFPGAMiniBadges.ai" and "GameDevelopmentMiniBadges.ai". By clicking on the name of the file, you can switch
 the view to focus on the contents of that file.
   
 <img src="../media/badgeDocumentation/AdobeEx21.png" alt="Git Mini-Badge" width="500"/>
@@ -231,7 +231,62 @@ Left-click on the giant white Artboard, and hit delete. We don't need it. Use th
 Now we need to change the text to match the subject or topic of the first sub-module in our new module. Since I'm pretending that this is for the "Game Development" module, let's pretend that the sub-module is called "Unity Game Engine". With that context in mind, I'll change the top text to say "Unity". Go to the "Creating a Mini-Badge in a pre-existing Module" section and follow the instructions for changing the upper text and centering it:
   
 <img src="../media/badgeDocumentation/AdobeEx25.png" alt="Git Mini-Badge" width="900"/>
+  
+Now, the only thing that needs to be changed is the ribbon color. As described in the "Existing Badges" section of this guide, each Mini-badge has a colored ribbon that corresponds to its module. For example, Commercial FPGA Mini-badges have pink ribbons, and Software Development Mini-badges have light blue ribbons. The color should be similar to one of the colors on the Computing Boot Camp Website's top banner, but no two modules should have the same color. See the "Mini-Badges" section above for all of the currently used colors.
+  
+With this information in mind, let's pick a new color to assign to the Game Development Mini-Badges. First, click on the ribbon of the badge, so that a box appears around it. 
+  
+<img src="../media/badgeDocumentation/AdobeEx26.png" alt="Git Mini-Badge" width="900"/>
+  
+Next, double click on the colored square that matches of the color of the ribbon on the left side of the screen:
+  
+<img src="../media/badgeDocumentation/AdobeEx27.png" alt="Git Mini-Badge" width="500"/>
+  
+This should cause the Color Picker window to pop-up:
+  
+<img src="../media/badgeDocumentation/AdobeEx28.png" alt="Git Mini-Badge" width="700"/>
+  
+Now let's put in the values for one of the Computing Boot Camp colors so that you have a color to start with. In the bottom-right of the color picker is a "#" with 6 characters after this. This is a hexadecimal representation of the color currently selected. We can put in the hexadecimal value of a color we want to start with there. The colors on the BYU Computing Boot Camp banner are as follows:
+- #f18321 for Orange
+- #f26448 for Tomato Red
+- #d882a1 for Pink
+- #0a69a8 for Blue
+  
+I picked Tomato Red to start out with, so after putting #f26448 into the box, I saw this:
+  
+<img src="../media/badgeDocumentation/AdobeEx29png" alt="Git Mini-Badge" width="700"/>
+  
+Now, using the options in the color picker, mess around until you find a similar color that you like. I ended up with this:
+  
+<img src="../media/badgeDocumentation/AdobeEx30.png" alt="Git Mini-Badge" width="700"/>
+  
+Now, just hit "Okay":
+  
+<img src="../media/badgeDocumentation/AdobeEx31.png" alt="Git Mini-Badge" width="900"/>
+ 
+Now your first badge is made! All you need to do is export it as a png file. Click on "File" at the top of the screen, then "Export", and then "Export as...":
+  
+<img src="../media/badgeDocumentation/AdobeEx32.png" alt="Git Mini-Badge" width="900"/>
+  
+You should see a window like this pop-up:
+  
+<img src="../media/badgeDocumentation/AdobeEx33.png" alt="Git Mini-Badge" width="700"/>
+  
+Now, just check the "Use Artboards" box and hit "Export":
+  
+<img src="../media/badgeDocumentation/AdobeEx34.png" alt="Git Mini-Badge" width="700"/>
+  
+Congradulations! Your new badge should now be __________________________________. Be sure to upload it to ______________________.
 
+Now, all that's left is to upload it to Badgr so that it can be awarded to the site's users. See the section "Uploading a Badge to Badgr" below for more information.  
+  
+#### Creating a Module Badge
+When you create a new Module Badge, you'll follow the same process as found in the section "Creating a Mini-Badge in a pre-existing Module", except that instead of picking one of the MiniBadges.ai files, you use the "ModuleBadges.ai" file. You'll also need to change the text that is in the middle of the badge instead of the text on the top of it.
+  
+While editing the text, you may find that the text is too big or too small for the available space. If this happens, you can change it's size. Left-click on the text with the Selection Tool, and then click and hold on one of the four corners. While holding the Shift and Alt buttons on the keyboard (in addition to the mouse), drag the text so that it's bigger/smaller. Holding Shift and Alt will stop the text from being distorted.
+  
+If the text is no longer centered in the badge after changing it, left-click on the text with the selection tool, and then use the arrow keys to move the text up, down, left, and right, until you believe it's centered. 
+  
 #### Uploading a Badge to Badgr
   
 
