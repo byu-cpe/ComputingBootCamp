@@ -290,6 +290,92 @@ If the text is no longer centered in the badge after changing it, left-click on 
 #### Uploading a Badge to Badgr
 Now that the badge designs are made, we just need to upload them to Badgr so that they can be issued to users, either manually or through automated pass-off tests. Badgr is an easy (and currently free) system for awarding, storing, and sharing badges across the Internet. First, we'll need to go to their site at https://badgr.com/:
   
+<img src="../media/badgeDocumentation/AdobeEx35.png" alt="Git Mini-Badge" width="900"/>
 
+Now, click on the "Sign In" button in the top-right of the screen:
+  
+<img src="../media/badgeDocumentation/AdobeEx36.png" alt="Git Mini-Badge" width="900"/>
+  
+Now, you'll need to log-in with the byucomputingbootcamptests@gmail.com as the email. Daniel Butterfield in Professor Mangelson's FRoSt Lab has the password, so contact him for access:
+  
+<img src="../media/badgeDocumentation/AdobeEx37.png" alt="Git Mini-Badge" width="900"/>
+  
+Now, you should see a page that looks like this. This shows all of the "Issuers" that the byucomputingbootcamptests@gmail.com has access to. Simply put, an Issuer is a distinct entity that awards badges. Since the BYU Computing Boot Camp is a distinct entity, it has it's own Issuer.
+  
+<img src="../media/badgeDocumentation/AdobeEx38.png" alt="Git Mini-Badge" width="900"/>
+  
+Click on the BYU Computing Boot Camp Issuer:
+  
+<img src="../media/badgeDocumentation/AdobeEx39.png" alt="Git Mini-Badge" width="900"/>
+  
+Here, you can see all of the badges that the BYU Computing Boot Camp currently has, a brief description, and info on Staff and available Pathways. To upload a badge, click on the "Create Badge" Button on the right side of the screen, which will lead you here:
+  
+<img src="../media/badgeDocumentation/AdobeEx40.png" alt="Git Mini-Badge" width="900"/>
+  
+Now, upload the file of the new badge you created in the "Badge Image" section. 
+  
+The "Name" will be the text that is on the badge (look at the other badges for reference).
+  
+The "Description" is an important part of the badge, as it helps to set a professional tone and gives legitmacy to the award. Depending on the badge that you are making, you'll want to use a template so that all of the badge descriptions can follow the same format.
+  
+For a Mini-Badge, use this template:
+  
+```
+The recipient of this badge has shown their knowledge and expertise with [skill or ability], having [exercises done in follow-up activities and pass-off tests]. They are certified by the BYU Computing BootCamp to have a knowledge of [skill or ability], and they are ready to use it in the workforce.
+```
+ 
+For example, the Make Knowledge Badge has the following description:
 
+```
+The recipient of this badge has shown their knowledge and expertise with Make and Makefiles, having written Makefiles to compile and clean C++ programs. They are certified by the BYU Computing BootCamp to have a knowledge of Make and Makefiles, and they are ready to use it in the workforce.
+```
+  
+For a Module Badge, use this template:
+  
+```
+The recipient of this badge has shown their knowledge and expertise with [module name], having earned the [number of mini-badges in module] Mini-badges in the [module name] Module in the BYU Computing Boot Camp. This means that they have used and proved their proficiency with [list of all skills learned in sub-modules]. They are certified by the BYU Computing Boot Camp to have knowledge off all of these subjects, and they are ready to use them in the workforce.
+```
+  
+For example, the Software Development Knowledge Badge has the following description:
+```
+The recipient of this badge has shown their knowledge and expertise with Software Development, having earned the 14 Mini-badges in the Software Development Module in the BYU Computing Boot Camp. This means that they have used and proved their proficiency with Git, GitHub, VS Code, Makefiles, CMake, Python, Python Environments (especially Conda), Python Packages, Unit Testing, Sphinx Documentation, Docker, SQL Basics, and Matlab. They are certified by the BYU Computing Boot Camp to have knowledge off all of these subjects, and they are ready to use them in the workforce.
+```
+  
+The "Description" in "Earning Criteria" is a different field entirely, and is meant for outlining the specific activities undertaken by the user to earn the badge. This field remains empty until we have a pass-off test for the badge. When we have made the pass-off test, we can fill it with the specifications that the test requires. For example, since the Make Knowledge badge already has a pass-off test, it's earning criteria description reads as follows:
+  
+```
+The recipient of this badge has implemented the following Makefiles:
 
+## Problem 1 - Makefile1.txt
+
+Write a Makefile that implements the following functionality. You'll store the contents of this Makefile at "MakeFiles/MakeFile1.txt". It
+should be very simple, and shouldn't use variables, automatic variables, pattern matching, or Makefile functions. It should have the following two rules:
+
+#### tree:
+This rule should be the first rule in the file. It should be called "tree", and it should generate an executable called "tree" with the g++ compiler. It should use 7 files to do so, including leaves.c, leaves.h, branches.c, branches.h, roots.c, roots.h, and main.c.
+
+#### clean:
+This rule should be called "clean", and it should remove the "tree" executable if there is one.
+
+## Problem 2 - Makefile2.txt
+
+Write a Makefile that implements the following functionality. You'll store the contents of this Makefile at "MakeFiles/MakeFile2.txt". It
+will be complicated, and shouldn't have the words "main", "leaves", "Leaves", "roots", "Roots", "branches", or "Branches" anywhere in the file. It should have at least the following three rules:
+
+#### $(TARGET):
+This rule should be the first rule in the file. It should be called "$(TARGET)", and it should generate an executable called "tree" with the g++ compiler. It should use all of the .h and .c files found in the directory. Then, it should save the names of all the files that it used in a text file called "compiled.txt".
+
+#### %.o:
+This rule should be called "%.o", and uses pattern matching to generate all the necessary .o files for the $(TARGET) rule.
+
+#### clean:
+This rule should be called "clean", and should remove the tree executable, compiled.txt file, and the .o files.
+```
+  
+Finally, the "Criteria URL" should point to the pass-off test (if the badge has one), to the sub-module page (if it's a Mini-badge), or just to the main page of the Computing Boot Camp if the other two don't work.
+  
+Now, just hit the "Create Badge" button in the bottom-right of the screen:
+  
+<img src="../media/badgeDocumentation/AdobeEx41.png" alt="Git Mini-Badge" width="900"/>
+  
+Congradulations! Your new badge is now ready to be issued to users. Whenever you want to award it, use the "Award Badge" button in the middle of the screen, or see the page "How to create Automated Pass-off Tests" for information on how to issue this badge with an API call.
