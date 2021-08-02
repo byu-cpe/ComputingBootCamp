@@ -240,7 +240,7 @@ With this information in mind, let's pick a new color to assign to the Game Deve
   
 Next, double click on the colored square that matches of the color of the ribbon on the left side of the screen:
   
-<img src="../media/badgeDocumentation/AdobeEx27.png" alt="Git Mini-Badge" width="500"/>
+<img src="../media/badgeDocumentation/AdobeEx27.png" alt="Git Mini-Badge" width="300"/>
   
 This should cause the Color Picker window to pop-up:
   
@@ -254,7 +254,7 @@ Now let's put in the values for one of the Computing Boot Camp colors so that yo
   
 I picked Tomato Red to start out with, so after putting #f26448 into the box, I saw this:
   
-<img src="../media/badgeDocumentation/AdobeEx29png" alt="Git Mini-Badge" width="700"/>
+<img src="../media/badgeDocumentation/AdobeEx29.png" alt="Git Mini-Badge" width="700"/>
   
 Now, using the options in the color picker, mess around until you find a similar color that you like. I ended up with this:
   
@@ -288,6 +288,8 @@ While editing the text, you may find that the text is too big or too small for t
 If the text is no longer centered in the badge after changing it, left-click on the text with the selection tool, and then use the arrow keys to move the text up, down, left, and right, until you believe it's centered. 
   
 #### Uploading a Badge to Badgr
+Now that the badge designs are made, we just need to upload them to Badgr so that they can be issued to users, either manually or through automated pass-off tests. Badgr is an easy (and currently free) system for awarding, storing, and sharing badges across the Internet. First, we'll need to go to their site at https://badgr.com/:
   
+
 
 
