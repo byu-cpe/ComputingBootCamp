@@ -10,36 +10,36 @@ type: resources
 
 Badges are one of the core elements of the BYU Computing Boot Camp. They motivate those who use our site to put their newly-learned skills to the test by attempting a 
 pass-off assessment, and acts as evidence of their knowledge after being earned. The badges we issue are OpenBadges, which contain json metadata with the cerification 
-and qualification information so that it can be verified as real and assert the recepient knowledge. We are currently using Badgr to 
+and qualification information so that it can be verified as real and act as evidence of the recepient's knowledge. We are currently using Badgr to 
 issue these badges with their easy-to-use API. The users can then download the badges directly onto their computers as png files (with the aformentioned metadata), 
 and/or store it in the Badgr wallet. 
 
 <img src="../media/badgeDocumentation/BadgrPage.png" alt="BYU Computing Boot Camp Badgr Page" width="600"/>
 
-This guide will explain how to create a badge for new modules and sub-modules on the site, as well as giving access to all currently-existent badges. Be sure to read all of the sections, as the "Existing Badges" sections gives alot of context for creating new ones, and might just contain the badge you wanted to make.
+This guide will explain how to create a badge for new modules and sub-modules as well as giving access to all current badges on the site. Be sure to read all of the sections as the "Existing Badges" section gives alot of context for creating new badges, and might have a badge or two that you were planning on using.
 
 ## Existing Badges
 The BYU Computing Boot Camp already has tons of badge designs that are ready for use. They can be found at the following link, as pngs and as their Adobe Illustrator 
-Project Files: [TO DO] . The png files are ready to be uploaded to Badgr, and the Adobe Illustrator files can be used to edit/create badges. 
+Project Files: _______________ . The png files are ready to be uploaded to Badgr, and the Adobe Illustrator files can be used to edit/create badges. 
 
-There is a badge created for almost every module and sub-module currently on the site as of July 2021. For example, the module "Software Development" has it's own Module Badge that looks like this:
+There is a badge created for almost every module and sub-module currently on the site as of July 2021. For example, the module "Software Development" has it's own module badge that looks like this:
 
 <img src="../media/badgeDocumentation/ModuleBadges-01.png" alt="Software Development Module Badge" width="250"/>
 
-Each of the modules on the site have their own Module badge. 
+Each of the modules on the site have their own module badge. 
 
-Most of the sub-modules have their own Mini-badges. For example, the sub-module "Git" under the module "Software Development" has it's own Mini-badge that looks like this:
+Most of the sub-modules have their own mini-badges. For example, the sub-module "Git" under the module "Software Development" has it's own mini-badge that looks like this:
 
 <img src="../media/badgeDocumentation/SoftwareDevelopmentMiniBadges-01.png" alt="Git Mini-Badge" width="250"/>
 
-Almost all of the sub-modules have their own Mini-badge. A few don't have a Mini-badge because they represent too little knowledge to justify
+Almost all of the sub-modules have their own mini-badges. A few don't have a mini-badge because they represent too little knowledge to justify
 a reward (like "Install Vivado/Vitis"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under
 Software Development").
 
-#### Mini-Badges
-Mini-Badges are the easiest badges to earn, and represent the smallest amount of knowledge. For example, to earn the "Make" Mini-badge, one must write two Makefiles that
-implement functionality taught in the Make sub-module. This means that the Make Mini-badge will represent experience writing functional Makefiles, but not much else. For
-this reason, the badge designs are simple yet elegeant. They clearly state the skill that was learned near the top, and state at the bottom that the recepient has a
+#### Mini-badges
+Mini-badges are the easiest badges to earn, and represent the smallest amount of knowledge. For example, to earn the "Make" mini-badge, one must write two Makefiles that
+implement functionality taught in the Make sub-module. This means that the Make mini-badge will represent experience writing functional Makefiles, but not much else. For
+this reason, the badge designs are simple yet elegant. They clearly state the skill that was learned near the top, and state at the bottom that the recepient has a
 "knowledge" of the skill. It is not an "expertise", due to the limited amount of code that they have to implement. The Mini-badges also have three logos on them, the Computing
 Boot Camp logo on the left (cbc), a logo for Electrical and Computer Engineering on the right (ECE), and the BYU seal in the middle. These logos add legitimacy to the badge, 
 represent who issued it, and add to the asthetic appeal of the Mini-badge.
