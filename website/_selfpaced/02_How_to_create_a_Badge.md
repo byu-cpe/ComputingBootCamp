@@ -10,11 +10,11 @@ Badges are one of the core elements of the BYU Computing Boot Camp. They motivat
 pass-off assessment, and acts as evidence of their knowledge after being earned. The badges we issue are OpenBadges, which contain json metadata with the cerification 
 and qualification information so that it can be verified as real and act as evidence of the recepient's knowledge. We are currently using Badgr to 
 issue these badges with their easy-to-use API. The users can then download the badges directly onto their computers as png files (with the aformentioned metadata), 
-and/or store it in the Badgr wallet. 
+or store it in their Badgr wallet. 
 
 <img src = "{% link media/badgeDocumentation/BadgrPage.png %}" width="600">
 
-This guide will explain how to create a badge for new modules and sub-modules as well as giving access to all current badges on the site. Be sure to read all of the sections as the "Existing Badges" section gives alot of context for creating new badges, and might have a badge or two that you were planning on using.
+This guide will explain how to create a badge for new modules/sub-modules as well as giving access to all current badges on the site. Be sure to read all of the sections as the "Existing Badges" section gives alot of context for creating new badges, and might have a badge or two that you were planning on using.
 
 ## Existing Badges
 The BYU Computing Boot Camp already has tons of badge designs that are ready for use. They can be found at the following link, as pngs and as their Adobe Illustrator 
@@ -30,45 +30,40 @@ Most of the sub-modules have their own mini-badges. For example, the sub-module 
 
 <img src = "{% link media/badgeDocumentation/SoftwareDevelopmentMiniBadges-01.png %}" width="250">
 
-Almost all of the sub-modules have their own mini-badges. A few don't have a mini-badge because they represent too little knowledge to justify
-a reward (like "Install Vivado/Vitis" under "Commercial FPGA"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under
-Software Development").
+Almost all of the sub-modules have their own mini-badges. Some of them don't, and the reason for that is because they represent too little knowledge to justify
+a reward (like "Install Vivado/Vitis" under "Commercial FPGA"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under Software Development").
 
 #### Mini-badges
 Mini-badges are the easiest badges to earn, and represent the smallest amount of knowledge. For example, to earn the "Make" mini-badge, one must write two Makefiles that
 implement functionality taught in the Make sub-module. This means that the Make mini-badge will represent experience writing functional Makefiles, but not much else. For
-this reason, the badge designs are simple yet elegant. They clearly state the skill that was learned near the top, and state at the bottom that the recepient has a
-"knowledge" of the skill. It is not an "expertise", due to the limited amount of code that they have to implement. The Mini-badges also have three logos on them, the Computing
-Boot Camp logo on the left (cbc), a logo for Electrical and Computer Engineering on the right (ECE), and the BYU seal in the middle. These logos add legitimacy to the badge, 
-represent who issued it, and add to the asthetic appeal of the Mini-badge.
+this reason, the badge designs are simple yet elegant. The Badge declares that the recipient has knowledge in whatever skill was learned. It is not an "expertise", due to the limited amount of code that they have to implement. The Mini-badges also have three logos on them, the Computing Boot Camp logo on the left (cbc), a logo for Electrical and Computer Engineering on the right (ECE), and the BYU seal in the middle. These logos add legitimacy to the badge,  represent who issued it, and add to the asthetic appeal of the mini-badge.
 
-Mini-Badges are color-coded, with the color on the ribbon representing which Module they fall under. The colors are taken from the 4 main colors found on the website 
-banner, with the badges using the exact color on the banner, or a slight variation of the color on the banner. 
+Mini-Badges are color-coded, with the color on the ribbon matching the color of all the other mini-badges in their module. The colors are inspired by or taken from the four main colors found on the website banner.
 
-"Software Development" Mini-badges are light blue, which is a variation of the blue on the website banner.
+"Software Development" mini-badges are light blue.
 
 <img src = "{% link media/badgeDocumentation/SoftwareDevelopmentMiniBadgesAllTogether.png %}" width="500">
 
-"Commercial FPGA" Mini-badges are pink, which is taken off of the website banner.
+"Commercial FPGA" mini-badges are pink.
 
 <img src = "{% link media/badgeDocumentation/CommercialFPGAMiniBadgesAllTogether.png %}" width="500">
 
-"Open FPGA CAD" Mini-badges are tomato red, which is taken off of the website banner.
+"Open FPGA CAD" mini-badges are tomato red.
 
 <img src = "{% link media/badgeDocumentation/OpenFPGACADMiniBadgesAllTogether.png %}" width="500">
 
-"Robotics" doesn't have any sub-modules yet, and so doesn't have any Mini-badges. When they are made, they should have a unique color based off of the colors in
+"Robotics" doesn't have any sub-modules yet, and so doesn't have any mini-badges. When they are made, they should have a unique color based off of the colors in
 the website banner.
 
-"Networking" Mini-badges are orange, which is taken off of the website banner.
+"Networking" mini-badges are oranger.
 
 <img src = "{% link media/badgeDocumentation/NetworkingMiniBadgesAllTogether.png %}" width="325">
 
-"PCB" Mini-badges are blue, which is taken off of the website banner.
+"PCB" mini-badges are blue.
 
 <img src = "{% link media/badgeDocumentation/PCBMiniBadgesAllTogether.png %}" width="500"/>
 
-When creating a new Mini-badge under an existing module, be sure to make sure the color of the ribbon matches the color of the other Mini-badges under the same module.
+When creating a new mini-badge under an existing module, be sure to make sure the color of the ribbon matches the color of the other mini-badges in the same module.
 
 #### Module Badges
 Module Badges are the hardest to earn, and represent the largest amount of knowledge. This is due to the fact that to earn the Module Badge, one must earn all of the
