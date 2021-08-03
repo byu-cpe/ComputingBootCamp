@@ -33,6 +33,8 @@ Most of the sub-modules have their own mini-badges. For example, the sub-module 
 Almost all of the sub-modules have their own mini-badges. Some of them don't, and the reason for that is because they represent too little knowledge to justify
 a reward (like "Install Vivado/Vitis" under "Commercial FPGA"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under Software Development").
 
+Mini-badges will help motivate the user to learn and to keep track of their progress, while the module badges will be shared with employeers and educational institutitions as a certification of the user's skill. Both types of badges could be used for both purposes, but they will generally fulfill their specified roles better.
+
 #### Mini-badges
 Mini-badges are the easiest badges to earn, and represent the smallest amount of knowledge. For example, to earn the "Make" mini-badge, one must write two Makefiles that
 implement functionality taught in the Make sub-module. This means that the Make mini-badge will represent experience writing functional Makefiles, but not much else. For
@@ -66,7 +68,7 @@ the website banner.
 When creating a new mini-badge under an existing module, be sure to make sure the color of the ribbon matches the color of the other mini-badges in the same module.
 
 #### Module badges
-Module badges are the hardest to earn, and represent more knowledge than a mini-badge. To earn a module badge, one must earn all of the mini-badges for all of the sub-modules in that module. For example, if the user wants to earn the "Software Development" module badge, they must earn 14 mini-badges, from "Git" all the way to "Matlab". This means that module badges will represent experience in many different aspects of their discipline. The idea is that mini-badges will help motivate the user to keep learning and to keep track of their progress, while the module badges will be shared with employeers and educational institutitions as a certification of the user's skill. Both types of badges could be used for both purposes, but they will generally fulfill their specified roles better.
+Module badges are the hardest to earn, and represent more knowledge than a mini-badge. To earn a module badge, one must earn all of the mini-badges for all of the sub-modules in that module. For example, if the user wants to earn the "Software Development" module badge, they must earn 14 mini-badges, from "Git" all the way to "Matlab". This means that module badges will represent experience in many different aspects of their discipline. 
 
 Here are all six of the Module Badges:
 
