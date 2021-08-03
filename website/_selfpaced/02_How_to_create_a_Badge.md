@@ -75,21 +75,18 @@ Here are all six of the Module Badges:
 <img src = "{% link media/badgeDocumentation/ModuleBadgesTogether.png %}" width="600"/>
 
 #### Computing Boot Camp Badge (idea, not currently implemented)
-I have been considering having one badge that represents a knowledge in ALL of the modules taught on the Computing Boot Camp site. This badge would be earned by earning all six
-of the Module Badges (or a badge for every Module on the site), and would represent skill in every single topic covered on the site. This would be the ultimate show of learning
-in Electrical and Computer Engineering, so instead of saying "Electrical and Computer Engineering Knowledge", it could say "Electrical and Computer Engineering Expertise", or something similar.
+I have been considering having one badge that represents a knowledge in all of the modules taught on the Computing Boot Camp site. Effectively, a badge that represents skill in everything taught on the site. This badge would be earned by earning all six of the module badges (or all of the 30+ mini-badges), and would represent skill in every single topic covered on the site. This would be the ultimate show of learning in Electrical and Computer Engineering, so potentially it could say "Electrical and Computer Engineering Expertise" instead of "Electrical and Computer Engineering Knowledge".
 
-We don't currently have a design for this badge. It could be a modified version of the Module Badges, or one we haven't used yet. For this reason, I'm leaving all of my unused
-badge design concepts with the rest of the badges in a folder called "Unused". If you want to try and create the Computing Boot Camp Badge, you could try to adapt one of those
-designs if you'd like.
+We don't currently have a design for this badge. It could be a modified version of the module badges, or one we haven't used yet. For this reason, I'm leaving all of my unused
+badge design concepts in . If you want to try and create the Computing Boot Camp Badge, you could try to adapt one of those designs if you'd like. There won't be a tutorial for how to create this badge, but Google and Youtube can be great recourses, for learning how to do something specific in Adobe Illustrator or to find tutorials on how to create designs from scratch, respectively. For example, typing in "mountain badge designs" to Youtube brings up videos that have badge tutorials that inspired the modules badges and many of my unused designs.
 
 ## Creating a new Badge
-To create a new badge, you are going to need access to Adobe Illustrator, a vector graphics editor and design program, since that's what I used to create the badges. Adobe Illustrator comes as part of the Adobe Creative Cloud, which is free for full-time employees of BYU, and available at a discount to BYU Students for $69 a year (instead of $624 a year). See the following link for information: https://adobe.byu.edu/. You could also just buy Adobe Illustrator for $252 a year, but I wouldn't recommend it, since you can get ALL of the programs at a lower price.
+To create a new badge, you are going to need access to Adobe Illustrator, a vector graphics editor and design program, since that's what I used to create the badges. Adobe Illustrator comes as part of the Adobe Creative Cloud, which is free for full-time employees of BYU, and available at a discount to BYU Students for $69 a year (instead of $624 a year). See the following link for information: https://adobe.byu.edu/. You could also just buy Adobe Illustrator for $252 a year, but I wouldn't recommend it, since you can get all of the programs combined for a lower price.
 
-The process for creating new badges will vary based on the type of badge you are creating.
+The process for creating new badges will vary based on the type of badge you are creating. See the corresponding section for the type of badge you want to create:
 
-#### Creating a Mini-Badge in a pre-existing Module
-For a new Mini-Badge in a pre-existing module, all you have to do is locate the design files for the previously designed Mini-badges in that module, and then just copy those designs with the name of the new sub-module. First, go to <TO DO>. Here, you'll be able to see .ai files, which is the file format that Adobe Illustrator uses for storing design information. You should see the following files:
+#### Creating a mini-badge in a pre-existing module
+To create a new mini-badge in a pre-existing module, you will locate the design files for the previously designed mini-badges in that module and then just use that design with as a starting point. First, go to . Here, you'll be able to see .ai files, which is the file format that Adobe Illustrator uses for storing design information. You should see the following files:
   
 - CommercialFPGAMiniBadges.ai
 - NetworkingMiniBadges.ai
@@ -97,14 +94,13 @@ For a new Mini-Badge in a pre-existing module, all you have to do is locate the 
 - PCBMiniBadges.ai
 - SoftwareDevelopmentMiniBadges.ai
 
-Note that if you want to make a Mini-Badge in the Robotics Module, there haven't been any Mini-Badges created for it, so for all intensive purposes, it's like it's a new module. See the section "Creating a Mini-Badge in a new Module" for more information.
+These are the current mini-badge .ai files that have been made. Note that if you want to make a mini-badge in the Robotics module, there haven't been any mini-badges created for it, so for all intensive purposes, it's a new module. See the section "Creating a mini-badge in a new module" for more information.
   
-Click on the .ai file with the name of the Module you want to create a Mini-Badge for. This should open up Adobe Illustrator (assuming you have access to it). You should see a page like this (note that in this example, I clicked on the CommercialFPGAMiniBadges.ai file):
+Click on the .ai file with the name of the module you want to create a mini-badge for. This should open up Adobe Illustrator (assuming you have access to it). You should see a page like this. Note that in this example, I clicked on the CommercialFPGAMiniBadges.ai file:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx1.png %}" width="900"/>
 
-This is the standard view for editing Illustrator files. You can see each of the previously made Mini-badges are surrounded by white squares. These squares are called ArtBoards, 
-and they make it easy to export all of the badges as seperate images. All you need to know is that when you make a new badge, you want it to have an Artboard behind it. So, let's do that. On the left bar, click on the following symbol, which is the Artboard Tool:
+This is the standard view for editing Adobe Illustrator files. You can see all of the current mini-badges in the Commercial FPGA module, and each is surrounded by a white square. These squares are called artboards, and they make it easy to export all of the badges as seperate images. All you need to know is that when you make a new badge, you want it to have an artboard behind it so that exporting works. So, let's do that. On the left bar, click on the following symbol, which is the Artboard Tool:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx2.png %}" width="400"/>
   
@@ -112,19 +108,19 @@ The screen should then change to look like this:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx3.png %}" width="900"/>
   
-Now you should see labels for all of the Artboards on the screen. Left-click on the last Artboard, and you should see it light up with a blue outline, like Artboard 06 in this example:
+Now you should see labels on all of the artboards on the screen. Left-click on the last artboard and you should see it light up with a blue outline, like artboard 06 in this example:
   
 <img src = "{% link media/badgeDocumentation/AdobeEx4.png %}" width="900"/>
   
-Now, hit Ctrl-C, and then hit Ctrl-V. This will copy both the Artboard, and the badge inside it, making a new Artboard for the new Mini-badge:
+Now, hit Ctrl-C and then hit Ctrl-V. This will copy the artboard and the badge inside it, making a new artboard for the new mini-badge:
   
 <img src = "{% link media/badgeDocumentation/AdobeEx5.png %}" width="900"/>
  
-If you want to reposition it, you can left click and drag on the new artboard to move it to a new position. You can use the bars on the bottom and right sides of the view to change your preview of the badges as well. I moved my badge down and to the left, so that I could have three badges on each row:
+If you want to reposition it, you can left click and drag on the new artboard to move it to a new position. You can use the bars on the bottom and right sides of the view to change your preview of the badges as well. I moved my badge down and to the left, to preserve a maximum of three badges on each row:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx6.png %}" width="900"/>
   
-Now, you can start editing the badge to make it unique. The only thing you'll need to change is the text on the upper-rim of the badge, since the color of the ribbon will stay the same. Click on the Type Tool on the Left Bar, so that you can edit the text on your new Mini-badge:
+Now, you can start editing the badge to make it unique. The only thing you'll need to change is the text on the upper-rim of the badge, since the color of the ribbon will stay the same. Click on the type tool on the left bar to edit the text on your new mini-badge:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx7.png %}" width="500"/>
   
@@ -136,11 +132,11 @@ Now, left-click on it. A cursor should appear on the text:
   
 <img src = "{% link media/badgeDocumentation/AdobeEx8.png %}" width="900"/>
   
-Change the text to match the subject or skill of the sub-module that the badge will be for. In my example, let's assume that this badge was for a new sub-module called "Debugging", so I'll change the text to say "DEBUGGING" (Notice that it should be in all caps, to match the other badges):
+Change the text to match the subject or skill of the sub-module that the badge will be for. In my example, let's assume that this badge was for a new sub-module called "Debugging", so I'll change the text to say "DEBUGGING". Notice that it should be in all caps, to match the other badges:
   
 <img src = "{% link media/badgeDocumentation/AdobeEx10.png %}" width="900"/>
   
-You can now see that the text isn't perfectly centered in the badge anymore. Let's fix this. Click on the Selection Tool:
+Now you can see that the text isn't perfectly centered in the badge anymore. Let's fix this. Click on the selection tool:
   
 <img src = "{% link media/badgeDocumentation/AdobeEx11.png %}" width="500"/>
   
@@ -154,7 +150,7 @@ Now your badge is made! All you need to do is export it as a png file. Click on 
   
 <img src = "{% link media/badgeDocumentation/AdobeEx13.png %}" width="900"/>
   
-You should see a window like this pop-up:
+You should see a window like this pop up:
   
 <img src = "{% link media/badgeDocumentation/AdobeEx14.png %}" width="700"/>
   
@@ -164,10 +160,10 @@ Now, just check the "Use Artboards" box and hit "Export":
   
 Congradulations! Your new badge should now be in the same folder as all of the other badges in the sub-module. Be sure to upload it to .
   
-Now, all that's left is to upload it to Badgr so that it can be awarded to the site's users. See the section "Uploading a Badge to Badgr" below for more information.
+Now, all that's left is to upload it to Badgr so that it can be awarded to the site's users. See the section "Uploading a badge to Badgr" below for more information.
   
-#### Creating a Mini-Badge in a new Module
-Since the module is new, the Mini-badge will be the first one that you create. This means that in addition to doing most of the steps found in the section "Creating a Mini-Badge in a pre-existing Module", you'll have to create a new .ai file for the Mini-badges of this module, and pick a color for it.
+#### Creating a mini-badge in a new module
+Since the module is new, this mini-badge will be the first one that you create for it. This means that in addition to doing most of the steps found in the section "Creating a mini-badge in a pre-existing module", you'll have to create a new .ai file and pick a color for the mini-badges of this module.
   
 To start, locate the "CommercialFPGAMiniBadges.ai" file at , and open it up with Adobe Illustrator. You should see a screen that looks like this:
 
