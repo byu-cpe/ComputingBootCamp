@@ -40,13 +40,12 @@ Now, we get into the pass-off magic. There are actually two workflow files that 
 
 <img src = "{% link media/testDocumentation/TestEx6.png %}" width="1000">
 
-The makeTest.yml workflow, which I'll refer to as the Make Test workflow, is what actually tests the user's code. It goes to the specific PR, grabs the files we want to test, and then can use script commands to do all sorts of things (like build and compile code, run other programs, run linux commands, etc). The Make Test workflow grabs two Makefiles from the user's repository, builds code with them, runs the code and asserts that the output is correct, and then issues the Make Badge. All of this is easily facilitated by javascript files that I have written in the .cbc folder, which the Make Test workflow uses frequently. Finally, the Make Test workflow will issue comments on the PR throughout the testing process, so that the user cna know exactly where they passed and exactly what they messed up.
+The makeTest.yml workflow, which I'll refer to as the Make Test workflow, is what actually tests the user's code. It goes to the specific PR, grabs the files we want to test, and then can use script commands to do all sorts of things (like build and compile code, run other programs, run linux commands, etc). The Make Test workflow grabs two Makefiles from the user's repository, builds code with them, runs the code and asserts that the output is correct, and then issues the Make Badge. All of this is easily facilitated by javascript files that I have written in the .cbc folder, which the Make Test workflow uses frequently. Finally, the Make Test workflow will issue comments on the PR throughout the testing process, so that the user can know exactly where they passed and exactly what they messed up.
 
 <img src = "{% link media/testDocumentation/TestEx7.png %}" width="900">
 
 That is the entire process! Hopefully it's not too complicated to understand. A similar process can be used for all code-based automated testing repositories that we want to make in the future. And since all of this code is publicly available in the .github and .cbc folders, it will be easy to reuse and adapt to other pass-off drivers.
 
-## The Specifics
 Now, I will go into the specific's of each file and how they work exactly, so that you can edit these files according to your pleasure, or even create your own.
 
 ### .github Folder
@@ -309,5 +308,7 @@ This folder contains all of the javascript files I wrote to assist the workflow 
 #### removeAllLabels.js
 
 #### triggerRunForAllPRs.js
+
+## Creating an automated pass-off test
 
 ## Future Plans
