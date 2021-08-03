@@ -6,8 +6,6 @@ slug: create_badge
 type: resources
 ---
 
-# How to create a Badge
-
 Badges are one of the core elements of the BYU Computing Boot Camp. They motivate those who use our site to put their newly-learned skills to the test by attempting a 
 pass-off assessment, and acts as evidence of their knowledge after being earned. The badges we issue are OpenBadges, which contain json metadata with the cerification 
 and qualification information so that it can be verified as real and act as evidence of the recepient's knowledge. We are currently using Badgr to 
@@ -20,7 +18,7 @@ This guide will explain how to create a badge for new modules and sub-modules as
 
 ## Existing Badges
 The BYU Computing Boot Camp already has tons of badge designs that are ready for use. They can be found at the following link, as pngs and as their Adobe Illustrator 
-Project Files: _______________ . The png files are ready to be uploaded to Badgr, and the Adobe Illustrator files can be used to edit/create badges. 
+Project Files: . The png files are ready to be uploaded to Badgr, and the Adobe Illustrator files can be used to edit/create badges. 
 
 There is a badge created for almost every module and sub-module currently on the site as of July 2021. For example, the module "Software Development" has it's own module badge that looks like this:
 
@@ -172,14 +170,14 @@ Now, just check the "Use Artboards" box and hit "Export":
   
 <img src = "{% link media/badgeDocumentation/AdobeEx15.png %}" width="700"/>
   
-Congradulations! Your new badge should now be in the same folder as all of the other badges in the sub-module. Be sure to upload it to ______________________.
+Congradulations! Your new badge should now be in the same folder as all of the other badges in the sub-module. Be sure to upload it to .
   
 Now, all that's left is to upload it to Badgr so that it can be awarded to the site's users. See the section "Uploading a Badge to Badgr" below for more information.
   
 #### Creating a Mini-Badge in a new Module
 Since the module is new, the Mini-badge will be the first one that you create. This means that in addition to doing most of the steps found in the section "Creating a Mini-Badge in a pre-existing Module", you'll have to create a new .ai file for the Mini-badges of this module, and pick a color for it.
   
-To start, locate the "CommercialFPGAMiniBadges.ai" file at __________________________, and open it up with Adobe Illustrator. You should see a screen that looks like this:
+To start, locate the "CommercialFPGAMiniBadges.ai" file at , and open it up with Adobe Illustrator. You should see a screen that looks like this:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx16.png %}" width="900"/>
   
@@ -274,7 +272,7 @@ Now, just check the "Use Artboards" box and hit "Export":
   
 <img src = "{% link media/badgeDocumentation/AdobeEx34.png %}" width="700"/>
   
-Congradulations! Your new badge should now be __________________________________. Be sure to upload it to ______________________.
+Congradulations! Your new badge should now be . Be sure to upload it to .
 
 Now, all that's left is to upload it to Badgr so that it can be awarded to the site's users. See the section "Uploading a Badge to Badgr" below for more information.  
   
@@ -319,24 +317,31 @@ The "Description" is an important part of the badge, as it helps to set a profes
 For a Mini-Badge, use this template:
   
 ```
-The recipient of this badge has shown their knowledge and expertise with [skill or ability], having [exercises done in follow-up activities and pass-off tests]. They are certified by the BYU Computing BootCamp to have a knowledge of [skill or ability], and they are ready to use it in the workforce.
+The recipient of this badge has shown their knowledge and expertise with [skill or ability], having [exercises done in follow-up activities and pass-off tests]. They 
+are certified by the BYU Computing BootCamp to have a knowledge of [skill or ability], and they are ready to use it in the workforce.
 ```
  
 For example, the Make Knowledge Badge has the following description:
 
 ```
-The recipient of this badge has shown their knowledge and expertise with Make and Makefiles, having written Makefiles to compile and clean C++ programs. They are certified by the BYU Computing BootCamp to have a knowledge of Make and Makefiles, and they are ready to use it in the workforce.
+The recipient of this badge has shown their knowledge and expertise with Make and Makefiles, having written Makefiles to compile and clean C++ programs. They 
+are certified by the BYU Computing BootCamp to have a knowledge of Make and Makefiles, and they are ready to use it in the workforce.
 ```
   
 For a Module Badge, use this template:
   
 ```
-The recipient of this badge has shown their knowledge and expertise with [module name], having earned the [number of mini-badges in module] Mini-badges in the [module name] Module in the BYU Computing Boot Camp. This means that they have used and proved their proficiency with [list of all skills learned in sub-modules]. They are certified by the BYU Computing Boot Camp to have knowledge off all of these subjects, and they are ready to use them in the workforce.
+The recipient of this badge has shown their knowledge and expertise with [module name], having earned the [number of mini-badges in module] Mini-badges in the [module name] 
+Module in the BYU Computing Boot Camp. This means that they have used and proved their proficiency with [list of all skills learned in sub-modules]. They are certified by 
+the BYU Computing Boot Camp to have knowledge off all of these subjects, and they are ready to use them in the workforce.
 ```
   
 For example, the Software Development Knowledge Badge has the following description:
 ```
-The recipient of this badge has shown their knowledge and expertise with Software Development, having earned the 14 Mini-badges in the Software Development Module in the BYU Computing Boot Camp. This means that they have used and proved their proficiency with Git, GitHub, VS Code, Makefiles, CMake, Python, Python Environments (especially Conda), Python Packages, Unit Testing, Sphinx Documentation, Docker, SQL Basics, and Matlab. They are certified by the BYU Computing Boot Camp to have knowledge off all of these subjects, and they are ready to use them in the workforce.
+The recipient of this badge has shown their knowledge and expertise with Software Development, having earned the 14 Mini-badges in the Software Development Module in the 
+BYU Computing Boot Camp. This means that they have used and proved their proficiency with Git, GitHub, VS Code, Makefiles, CMake, Python, Python Environments (especially 
+Conda), Python Packages, Unit Testing, Sphinx Documentation, Docker, SQL Basics, and Matlab. They are certified by the BYU Computing Boot Camp to have knowledge off all 
+of these subjects, and they are ready to use them in the workforce.
 ```
   
 The "Description" in "Earning Criteria" is a different field entirely, and is meant for outlining the specific activities undertaken by the user to earn the badge. This field remains empty until we have a pass-off test for the badge. When we have made the pass-off test, we can fill it with the specifications that the test requires. For example, since the Make Knowledge badge already has a pass-off test, it's earning criteria description reads as follows:
@@ -350,7 +355,8 @@ Write a Makefile that implements the following functionality. You'll store the c
 should be very simple, and shouldn't use variables, automatic variables, pattern matching, or Makefile functions. It should have the following two rules:
 
 #### tree:
-This rule should be the first rule in the file. It should be called "tree", and it should generate an executable called "tree" with the g++ compiler. It should use 7 files to do so, including leaves.c, leaves.h, branches.c, branches.h, roots.c, roots.h, and main.c.
+This rule should be the first rule in the file. It should be called "tree", and it should generate an executable called "tree" with the g++ compiler. It 
+should use 7 files to do so, including leaves.c, leaves.h, branches.c, branches.h, roots.c, roots.h, and main.c.
 
 #### clean:
 This rule should be called "clean", and it should remove the "tree" executable if there is one.
@@ -358,10 +364,12 @@ This rule should be called "clean", and it should remove the "tree" executable i
 ## Problem 2 - Makefile2.txt
 
 Write a Makefile that implements the following functionality. You'll store the contents of this Makefile at "MakeFiles/MakeFile2.txt". It
-will be complicated, and shouldn't have the words "main", "leaves", "Leaves", "roots", "Roots", "branches", or "Branches" anywhere in the file. It should have at least the following three rules:
+will be complicated, and shouldn't have the words "main", "leaves", "Leaves", "roots", "Roots", "branches", or "Branches" anywhere in the file. It should 
+have at least the following three rules:
 
 #### $(TARGET):
-This rule should be the first rule in the file. It should be called "$(TARGET)", and it should generate an executable called "tree" with the g++ compiler. It should use all of the .h and .c files found in the directory. Then, it should save the names of all the files that it used in a text file called "compiled.txt".
+This rule should be the first rule in the file. It should be called "$(TARGET)", and it should generate an executable called "tree" with the g++ compiler. 
+It should use all of the .h and .c files found in the directory. Then, it should save the names of all the files that it used in a text file called "compiled.txt".
 
 #### %.o:
 This rule should be called "%.o", and uses pattern matching to generate all the necessary .o files for the $(TARGET) rule.
