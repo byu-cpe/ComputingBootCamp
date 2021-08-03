@@ -81,7 +81,7 @@ We don't currently have a design for this badge. It could be a modified version 
 badge design concepts in . If you want to try and create the Computing Boot Camp Badge, you could try to adapt one of those designs if you'd like. There won't be a tutorial for how to create this badge, but Google and Youtube can be great recourses, for learning how to do something specific in Adobe Illustrator or to find tutorials on how to create designs from scratch, respectively. For example, typing in "mountain badge designs" to Youtube brings up videos that have badge tutorials that inspired the modules badges and many of my unused designs.
 
 ## Creating a new Badge
-To create a new badge, you are going to need access to Adobe Illustrator, a vector graphics editor and design program, since that's what I used to create the badges. Adobe Illustrator comes as part of the Adobe Creative Cloud, which is free for full-time employees of BYU, and available at a discount to BYU Students for $69 a year (instead of $624 a year). See the following link for information:[Adobe BYU](https://adobe.byu.edu/). You could also just buy Adobe Illustrator for $252 a year, but I wouldn't recommend it, since you can get all of the programs combined for a lower price.
+To create a new badge, you are going to need access to Adobe Illustrator, a vector graphics editor and design program, since that's what I used to create the badges. Adobe Illustrator comes as part of the Adobe Creative Cloud, which is free for full-time employees of BYU, and available at a discount to BYU Students for $69 a year (instead of $624 a year). See the following link for information: [Adobe BYU](https://adobe.byu.edu/). You could also just buy Adobe Illustrator for $252 a year, but I wouldn't recommend it, since you can get all of the programs combined for a lower price.
 
 The process for creating new badges will vary based on the type of badge you are creating. See the corresponding section for the type of badge you want to create:
 
@@ -336,7 +336,7 @@ Python Packages, Unit Testing, Sphinx Documentation, Docker, SQL Basics, and Mat
 Computing Boot Camp to have knowledge off all of these subjects, and they are ready to use them in the workforce.
 ```
   
-The "Description" in "Earning Criteria" is a different field entirely, and is meant for outlining the specific activities undertaken by the user to earn the badge. This field remains empty until we have a pass-off test for the badge. When we have made the pass-off test, we can fill it with the specifications that the test requires. For example, since the Make Knowledge badge already has a pass-off test, it's earning criteria description reads as follows:
+The "Description" in "Earning Criteria" is a different field entirely, and is meant for outlining the specific activities undertaken by the user to earn the badge. This field remains empty until we have a pass-off test for the badge. When we have made the pass-off test, we can fill it with the specifications that the test requires. For example, since the Make Knowledge badge already has a pass-off test, its earning criteria description reads as follows:
   
 ```
 The recipient of this badge has implemented the following Makefiles:
