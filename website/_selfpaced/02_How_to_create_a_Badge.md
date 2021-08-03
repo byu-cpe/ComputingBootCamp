@@ -40,38 +40,33 @@ this reason, the badge designs are simple yet elegant. The Badge declares that t
 
 Mini-Badges are color-coded, with the color on the ribbon matching the color of all the other mini-badges in their module. The colors are inspired by or taken from the four main colors found on the website banner.
 
-"Software Development" mini-badges are light blue.
+"Software Development" mini-badges are light blue:
 
 <img src = "{% link media/badgeDocumentation/SoftwareDevelopmentMiniBadgesAllTogether.png %}" width="500">
 
-"Commercial FPGA" mini-badges are pink.
+"Commercial FPGA" mini-badges are pink:
 
 <img src = "{% link media/badgeDocumentation/CommercialFPGAMiniBadgesAllTogether.png %}" width="500">
 
-"Open FPGA CAD" mini-badges are tomato red.
+"Open FPGA CAD" mini-badges are tomato red:
 
 <img src = "{% link media/badgeDocumentation/OpenFPGACADMiniBadgesAllTogether.png %}" width="500">
 
 "Robotics" doesn't have any sub-modules yet, and so doesn't have any mini-badges. When they are made, they should have a unique color based off of the colors in
 the website banner.
 
-"Networking" mini-badges are oranger.
+"Networking" mini-badges are orange:
 
 <img src = "{% link media/badgeDocumentation/NetworkingMiniBadgesAllTogether.png %}" width="325">
 
-"PCB" mini-badges are blue.
+"PCB" mini-badges are blue:
 
 <img src = "{% link media/badgeDocumentation/PCBMiniBadgesAllTogether.png %}" width="500"/>
 
 When creating a new mini-badge under an existing module, be sure to make sure the color of the ribbon matches the color of the other mini-badges in the same module.
 
-#### Module Badges
-Module Badges are the hardest to earn, and represent the largest amount of knowledge. This is due to the fact that to earn the Module Badge, one must earn all of the
-Mini-badges in all of the sub-modules for that modules. For example, if the user wants to earn the "Software Development" Module Badge, they must earn 14 Mini-badges, 
-from "Git" all the way to "Matlab". This means that the Softwawre Development Module Badge will represent experience in all sorts of different software concepts, which
-will make it alot more valuable. The idea is that the Mini-badges will help the user be motivated to keep learning and to keep track of their progress, while the
-Module badges are what will actually be shared with employeers and educational institutitions as a certification of their skill. Both types of badges could be used
-for both purposes, but they will generally fulfill the previously specified roles better.
+#### Module badges
+Module badges are the hardest to earn, and represent more knowledge than a mini-badge. To earn a module badge, one must earn all of the mini-badges for all of the sub-modules in that module. For example, if the user wants to earn the "Software Development" module badge, they must earn 14 mini-badges, from "Git" all the way to "Matlab". This means that module badges will represent experience in many different aspects of their discipline. The idea is that mini-badges will help motivate the user to keep learning and to keep track of their progress, while the module badges will be shared with employeers and educational institutitions as a certification of the user's skill. Both types of badges could be used for both purposes, but they will generally fulfill their specified roles better.
 
 Here are all six of the Module Badges:
 
