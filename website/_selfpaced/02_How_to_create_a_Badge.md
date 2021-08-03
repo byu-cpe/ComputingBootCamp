@@ -14,7 +14,6 @@ and qualification information so that it can be verified as real and act as evid
 issue these badges with their easy-to-use API. The users can then download the badges directly onto their computers as png files (with the aformentioned metadata), 
 and/or store it in the Badgr wallet. 
 
-<img src="../media/badgeDocumentation/BadgrPage.png" alt="BYU Computing Boot Camp Badgr Page" width="600"/>
 <img src = "{% link media/badgeDocumentation/BadgrPage.png %}" width="600">
 
 This guide will explain how to create a badge for new modules and sub-modules as well as giving access to all current badges on the site. Be sure to read all of the sections as the "Existing Badges" section gives alot of context for creating new badges, and might have a badge or two that you were planning on using.
@@ -25,13 +24,13 @@ Project Files: _______________ . The png files are ready to be uploaded to Badgr
 
 There is a badge created for almost every module and sub-module currently on the site as of July 2021. For example, the module "Software Development" has it's own module badge that looks like this:
 
-<img src="../media/badgeDocumentation/ModuleBadges-01.png" alt="Software Development Module Badge" width="250"/>
+<img src = "{% link media/badgeDocumentation/ModuleBadges-01.png %}" width="250">
 
 Each of the modules on the site have their own module badge. 
 
 Most of the sub-modules have their own mini-badges. For example, the sub-module "Git" under the module "Software Development" has it's own mini-badge that looks like this:
 
-<img src="../media/badgeDocumentation/SoftwareDevelopmentMiniBadges-01.png" alt="Git Mini-Badge" width="250"/>
+<img src = "{% link media/badgeDocumentation/SoftwareDevelopmentMiniBadges-01.png %}" width="250">
 
 Almost all of the sub-modules have their own mini-badges. A few don't have a mini-badge because they represent too little knowledge to justify
 a reward (like "Install Vivado/Vitis" under "Commercial FPGA"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under
@@ -50,26 +49,26 @@ banner, with the badges using the exact color on the banner, or a slight variati
 
 "Software Development" Mini-badges are light blue, which is a variation of the blue on the website banner.
 
-<img src="../media/badgeDocumentation/SoftwareDevelopmentMiniBadgesAllTogether.png" alt="Git Mini-Badge" width="500"/>
+<img src = "{% link media/badgeDocumentation/SoftwareDevelopmentMiniBadgesAllTogether.png %}" width="500">
 
 "Commercial FPGA" Mini-badges are pink, which is taken off of the website banner.
 
-<img src="../media/badgeDocumentation/CommercialFPGAMiniBadgesAllTogether.png" alt="Git Mini-Badge" width="500"/>
+<img src = "{% link media/badgeDocumentation/CommercialFPGAMiniBadgesAllTogether.png %}" width="500">
 
 "Open FPGA CAD" Mini-badges are tomato red, which is taken off of the website banner.
 
-<img src="../media/badgeDocumentation/OpenFPGACADMiniBadgesAllTogether.png" alt="Git Mini-Badge" width="500"/>
+<img src = "{% link media/badgeDocumentation/OpenFPGACADMiniBadgesAllTogether.png %}" width="500">
 
 "Robotics" doesn't have any sub-modules yet, and so doesn't have any Mini-badges. When they are made, they should have a unique color based off of the colors in
 the website banner.
 
 "Networking" Mini-badges are orange, which is taken off of the website banner.
 
-<img src="../media/badgeDocumentation/NetworkingMiniBadgesAllTogether.png" alt="Git Mini-Badge" width="325"/>
+<img src = "{% link media/badgeDocumentation/NetworkingMiniBadgesAllTogether.png %}" width="325">
 
 "PCB" Mini-badges are blue, which is taken off of the website banner.
 
-<img src="../media/badgeDocumentation/PCBMiniBadgesAllTogether.png" alt="Git Mini-Badge" width="500"/>
+<img src = "{% link media/badgeDocumentation/PCBMiniBadgesAllTogether.png %}" width="500"/>
 
 When creating a new Mini-badge under an existing module, be sure to make sure the color of the ribbon matches the color of the other Mini-badges under the same module.
 
@@ -83,8 +82,7 @@ for both purposes, but they will generally fulfill the previously specified role
 
 Here are all six of the Module Badges:
 
-<img src="../media/badgeDocumentation/ModuleBadgesTogether.png" alt="Git Mini-Badge" width="600"/>
-
+<img src = "{% link media/badgeDocumentation/ModuleBadgesTogether.png %}" width="600"/>
 
 #### Computing Boot Camp Badge (idea, not currently implemented)
 I have been considering having one badge that represents a knowledge in ALL of the modules taught on the Computing Boot Camp site. This badge would be earned by earning all six
@@ -112,68 +110,67 @@ For a new Mini-Badge in a pre-existing module, all you have to do is locate the 
 Note that if you want to make a Mini-Badge in the Robotics Module, there haven't been any Mini-Badges created for it, so for all intensive purposes, it's like it's a new module. See the section "Creating a Mini-Badge in a new Module" for more information.
   
 Click on the .ai file with the name of the Module you want to create a Mini-Badge for. This should open up Adobe Illustrator (assuming you have access to it). You should see a page like this (note that in this example, I clicked on the CommercialFPGAMiniBadges.ai file):
-  
 
-<img src="../media/badgeDocumentation/AdobeEx1.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx1.png %}" width="900"/>
 
 This is the standard view for editing Illustrator files. You can see each of the previously made Mini-badges are surrounded by white squares. These squares are called ArtBoards, 
 and they make it easy to export all of the badges as seperate images. All you need to know is that when you make a new badge, you want it to have an Artboard behind it. So, let's do that. On the left bar, click on the following symbol, which is the Artboard Tool:
-  
-<img src="../media/badgeDocumentation/AdobeEx2.png" alt="Git Mini-Badge" width="400"/>
+
+<img src = "{% link media/badgeDocumentation/AdobeEx2.png %}" width="400"/>
   
 The screen should then change to look like this:
 
-<img src="../media/badgeDocumentation/AdobeEx3.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx3.png %}" width="900"/>
   
 Now you should see labels for all of the Artboards on the screen. Left-click on the last Artboard, and you should see it light up with a blue outline, like Artboard 06 in this example:
   
-<img src="../media/badgeDocumentation/AdobeEx4.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx4.png %}" width="900"/>
   
 Now, hit Ctrl-C, and then hit Ctrl-V. This will copy both the Artboard, and the badge inside it, making a new Artboard for the new Mini-badge:
   
-<img src="../media/badgeDocumentation/AdobeEx5.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx5.png %}" width="900"/>
  
 If you want to reposition it, you can left click and drag on the new artboard to move it to a new position. You can use the bars on the bottom and right sides of the view to change your preview of the badges as well. I moved my badge down and to the left, so that I could have three badges on each row:
-  
-<img src="../media/badgeDocumentation/AdobeEx6.png" alt="Git Mini-Badge" width="900"/>
+
+<img src = "{% link media/badgeDocumentation/AdobeEx6.png %}" width="900"/>
   
 Now, you can start editing the badge to make it unique. The only thing you'll need to change is the text on the upper-rim of the badge, since the color of the ribbon will stay the same. Click on the Type Tool on the Left Bar, so that you can edit the text on your new Mini-badge:
-  
-<img src="../media/badgeDocumentation/AdobeEx7.png" alt="Git Mini-Badge" width="500"/>
+
+<img src = "{% link media/badgeDocumentation/AdobeEx7.png %}" width="500"/>
   
 Hover over the text on the top of the badge. It should turn blue, like this:
-  
-<img src="../media/badgeDocumentation/AdobeEx8.png" alt="Git Mini-Badge" width="900"/>
+
+<img src = "{% link media/badgeDocumentation/AdobeEx8.png %}" width="900"/>
   
 Now, left-click on it. A cursor should appear on the text:
   
-<img src="../media/badgeDocumentation/AdobeEx9.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx8.png %}" width="900"/>
   
 Change the text to match the subject or skill of the sub-module that the badge will be for. In my example, let's assume that this badge was for a new sub-module called "Debugging", so I'll change the text to say "DEBUGGING" (Notice that it should be in all caps, to match the other badges):
   
-<img src="../media/badgeDocumentation/AdobeEx10.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx10.png %}" width="900"/>
   
 You can now see that the text isn't perfectly centered in the badge anymore. Let's fix this. Click on the Selection Tool:
   
-<img src="../media/badgeDocumentation/AdobeEx11.png" alt="Git Mini-Badge" width="500"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx11.png %}" width="500"/>
   
 This tool will allow us to rotate the text back into a centered position. You should now see a box around the middle of the badge. This box represents the text object. Put your cursor close to one of the four corners of the box, and then left-click and drag to edit the rotation of the text. Let go when you think it's centered. Repeat this process until you've successfully centered the text on the badge. To make it easier to see, you can also hold down Ctrl and Alt, and then use the mouse wheel to zoom in or out.
  
-<img src="../media/badgeDocumentation/AdobeEx12.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx12.png %}" width="900"/>
   
 Note that if the box goes away for any reason, you can make it come back by left-clicking on the text.
   
 Now your badge is made! All you need to do is export it as a png file. Click on "File" at the top of the screen, then "Export", and then "Export as...":
   
-<img src="../media/badgeDocumentation/AdobeEx13.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx13.png %}" width="900"/>
   
 You should see a window like this pop-up:
   
-<img src="../media/badgeDocumentation/AdobeEx14.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx14.png %}" width="700"/>
   
 Now, just check the "Use Artboards" box and hit "Export":
   
-<img src="../media/badgeDocumentation/AdobeEx15.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx15.png %}" width="700"/>
   
 Congradulations! Your new badge should now be in the same folder as all of the other badges in the sub-module. Be sure to upload it to ______________________.
   
@@ -184,15 +181,15 @@ Since the module is new, the Mini-badge will be the first one that you create. T
   
 To start, locate the "CommercialFPGAMiniBadges.ai" file at __________________________, and open it up with Adobe Illustrator. You should see a screen that looks like this:
 
-<img src="../media/badgeDocumentation/AdobeEx16.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx16.png %}" width="900"/>
   
 We're going to copy a badge from this file, to use as a starting point for our new .ai file. Click on "File" in the top left, and then click "New...":
-
-<img src="../media/badgeDocumentation/AdobeEx17.png" alt="Git Mini-Badge" width="900"/>
+  
+<img src = "{% link media/badgeDocumentation/AdobeEx17.png %}" width="900"/>
 
 You should see a window pop-up that looks like this:
   
-<img src="../media/badgeDocumentation/AdobeEx18.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx18.png %}" width="700"/>
   
 Under "Preset Details", it should say something like "Untitled-1". Change this, so that it says the name of the new module, followed by "MiniBadges", like this:
 
@@ -202,50 +199,50 @@ Under "Preset Details", it should say something like "Untitled-1". Change this, 
   
 Let's assume that the new module that I was making a Mini-Badge for was called "Game Development". So, I'd type in something like this, and then hit "Create":
   
-<img src="../media/badgeDocumentation/AdobeEx19.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx19.png %}" width="700"/>
 
 Now, you should see the new file open up:
   
-<img src="../media/badgeDocumentation/AdobeEx20.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx20.png %}" width="900"/>
   
 Notice that the top bar of the view now has two files listed, "CommercialFPGAMiniBadges.ai" and "GameDevelopmentMiniBadges.ai". By clicking on the name of the file, you can switch
 the view to focus on the contents of that file.
   
-<img src="../media/badgeDocumentation/AdobeEx21.png" alt="Git Mini-Badge" width="500"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx21.png %}" width="500"/>
 
 Use this to switch back to CommercialFPGAMiniBadges.ai:
   
-<img src="../media/badgeDocumentation/AdobeEx22.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx22.png %}" width="900"/>
   
 Click on the Artboard tool on the left bar:
   
-<img src="../media/badgeDocumentation/AdobeEx2.png" alt="Git Mini-Badge" width="400"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx2.png %}" width="400"/>
   
 This will allow us to copy one of the badges (with it's Artboard behind it) to the new file. Left-click on one of the white squares with a badge, and then hit Ctrl-C. Navigate to your new .ai file, and then hit Ctrl-V. You should see the badge appear in the new file:
   
-<img src="../media/badgeDocumentation/AdobeEx23.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx23.png %}" width="900"/>
   
 Left-click on the giant white Artboard, and hit delete. We don't need it. Use the bars on the right and bottom of the view to center yourself on the newly copied artboard, and use Alt with the mouse wheel to zoom so that it fills most of the screen.
   
-<img src="../media/badgeDocumentation/AdobeEx24.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx24.png %}" width="900"/>
   
 Now we need to change the text to match the subject or topic of the first sub-module in our new module. Since I'm pretending that this is for the "Game Development" module, let's pretend that the sub-module is called "Unity Game Engine". With that context in mind, I'll change the top text to say "Unity". Go to the "Creating a Mini-Badge in a pre-existing Module" section and follow the instructions for changing the upper text and centering it:
   
-<img src="../media/badgeDocumentation/AdobeEx25.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx25.png %}" width="900"/>
   
 Now, the only thing that needs to be changed is the ribbon color. As described in the "Existing Badges" section of this guide, each Mini-badge has a colored ribbon that corresponds to its module. For example, Commercial FPGA Mini-badges have pink ribbons, and Software Development Mini-badges have light blue ribbons. The color should be similar to one of the colors on the Computing Boot Camp Website's top banner, but no two modules should have the same color. See the "Mini-Badges" section above for all of the currently used colors.
   
 With this information in mind, let's pick a new color to assign to the Game Development Mini-Badges. First, click on the ribbon of the badge, so that a box appears around it. 
   
-<img src="../media/badgeDocumentation/AdobeEx26.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx26.png %}" width="900"/>
   
 Next, double click on the colored square that matches of the color of the ribbon on the left side of the screen:
   
-<img src="../media/badgeDocumentation/AdobeEx27.png" alt="Git Mini-Badge" width="300"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx27.png %}" width="e00"/>
   
 This should cause the Color Picker window to pop-up:
   
-<img src="../media/badgeDocumentation/AdobeEx28.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx28.png %}" width="700"/>
   
 Now let's put in the values for one of the Computing Boot Camp colors so that you have a color to start with. In the bottom-right of the color picker is a "#" with 6 characters after this. This is a hexadecimal representation of the color currently selected. We can put in the hexadecimal value of a color we want to start with there. The colors on the BYU Computing Boot Camp banner are as follows:
 - #f18321 for Orange
@@ -255,27 +252,27 @@ Now let's put in the values for one of the Computing Boot Camp colors so that yo
   
 I picked Tomato Red to start out with, so after putting #f26448 into the box, I saw this:
   
-<img src="../media/badgeDocumentation/AdobeEx29.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx29.png %}" width="700"/>
   
 Now, using the options in the color picker, mess around until you find a similar color that you like. I ended up with this:
   
-<img src="../media/badgeDocumentation/AdobeEx30.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx30.png %}" width="700"/>
   
 Now, just hit "Okay":
   
-<img src="../media/badgeDocumentation/AdobeEx31.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx31.png %}" width="900"/>
  
 Now your first badge is made! All you need to do is export it as a png file. Click on "File" at the top of the screen, then "Export", and then "Export as...":
   
-<img src="../media/badgeDocumentation/AdobeEx32.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx32.png %}" width="900"/>
   
 You should see a window like this pop-up:
   
-<img src="../media/badgeDocumentation/AdobeEx33.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx33.png %}" width="700"/>
   
 Now, just check the "Use Artboards" box and hit "Export":
   
-<img src="../media/badgeDocumentation/AdobeEx34.png" alt="Git Mini-Badge" width="700"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx34.png %}" width="700"/>
   
 Congradulations! Your new badge should now be __________________________________. Be sure to upload it to ______________________.
 
@@ -291,27 +288,27 @@ If the text is no longer centered in the badge after changing it, left-click on 
 #### Uploading a Badge to Badgr
 Now that the badge designs are made, we just need to upload them to Badgr so that they can be issued to users, either manually or through automated pass-off tests. Badgr is an easy (and currently free) system for awarding, storing, and sharing badges across the Internet. First, we'll need to go to their site at https://badgr.com/:
   
-<img src="../media/badgeDocumentation/AdobeEx35.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx35.png %}" width="900"/>
 
 Now, click on the "Sign In" button in the top-right of the screen:
   
-<img src="../media/badgeDocumentation/AdobeEx36.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx36.png %}" width="900"/>
   
 Now, you'll need to log-in with the byucomputingbootcamptests@gmail.com as the email. Daniel Butterfield in Professor Mangelson's FRoSt Lab has the password, so contact him for access:
   
-<img src="../media/badgeDocumentation/AdobeEx37.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx37.png %}" width="900"/>
   
 Now, you should see a page that looks like this. This shows all of the "Issuers" that the byucomputingbootcamptests@gmail.com has access to. Simply put, an Issuer is a distinct entity that awards badges. Since the BYU Computing Boot Camp is a distinct entity, it has it's own Issuer.
   
-<img src="../media/badgeDocumentation/AdobeEx38.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx38.png %}" width="900"/>
   
 Click on the BYU Computing Boot Camp Issuer:
   
-<img src="../media/badgeDocumentation/AdobeEx39.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx39.png %}" width="900"/>
   
 Here, you can see all of the badges that the BYU Computing Boot Camp currently has, a brief description, and info on Staff and available Pathways. To upload a badge, click on the "Create Badge" Button on the right side of the screen, which will lead you here:
   
-<img src="../media/badgeDocumentation/AdobeEx40.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx40.png %}" width="900"/>
   
 Now, upload the file of the new badge you created in the "Badge Image" section. 
   
@@ -377,6 +374,6 @@ Finally, the "Criteria URL" should point to the pass-off test (if the badge has 
   
 Now, just hit the "Create Badge" button in the bottom-right of the screen:
   
-<img src="../media/badgeDocumentation/AdobeEx41.png" alt="Git Mini-Badge" width="900"/>
+<img src = "{% link media/badgeDocumentation/AdobeEx41.png %}" width="900"/>
   
 Congradulations! Your new badge is now ready to be issued to users. Whenever you want to award it, use the "Award Badge" button in the middle of the screen, or see the page "How to create Automated Pass-off Tests" for information on how to issue this badge with an API call.
