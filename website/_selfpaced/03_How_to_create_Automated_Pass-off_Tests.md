@@ -251,7 +251,7 @@ have variables in the traditional sense of the word. So, instead, we use this wo
 
 For information on how to use the "getRepoInfo.js" file, see the section with the same name below.
 
-For information on how to use the `juliangruber/read-file-action@v1`, see [Read File - GitHub Marketplace](https://github.com/marketplace/actions/read-file).
+For information on how to use the `juliangruber/read-file-action@v1` action, see [Read File - GitHub Marketplace](https://github.com/marketplace/actions/read-file).
 
 ```
 - name: Get the Pull Request's Number
@@ -286,9 +286,243 @@ For information on how to use the "addLabel.js" file, see the section with the s
   run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt found"
 ```
 
-Now, we start 
+Now, we start the actual testing of the files. Since the pull request has been labeled, we can be confident that no other makeTest.yml workflow will start to test this pull request.
 
-### .cbc Folder
+The first step above calls a javascript file that downloads a file from the forked repository and saves it on our machine for testing. The `MakeFiles/MakeFile1.txt` is the file we instructed the user to put their code in, so we should find a functional Makefile there. Notice that the javascript fil takes in the name of the forked repository, through the variable `${{ steps.repo.outputs.content }}`. This is the same as `${{ steps.number.outputs.content }}`, however changing `number` to `repo` tells GitHub Actions to get the output of the step with the id of "repo" instead of "number".
+
+The second step calls a javascript file that leaves a comment on the pull request that says "Makefile1.txt found". It uses the number of the pull request to do so. Note that if the previous step failed because `MakeFiles/MakeFile1.txt` didn't exist, then this step won't run because the GitHub Action will have already terminated. At the end of the workflow are steps that will output an error comment on the pull request that correspond with the step that failed. For example, if the first step above fails, a step found later in the workflow will output "Error - No Makefile1.txt found". This setup makes it easy for the user to see what went wrong with their code.
+
+For information on how to use the "addLabel.js" file or the "makeComment.js" file, see the section with the same name below.
+
+```
+- name: Run Make
+  id: runMake
+  run: make
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt ran"
+```
+
+The first step above simply runs the make command, to see if the user's Makefile will run.
+
+The second step leaves a comment on the pull request that says "Makefile1.txt ran". Almost every testing step has a step afterwards that leaves a comment, so I won't explain what it does every time, but I will leave it in the code snippets that I copy.
+
+```
+- name: Run program
+  id: runProgram
+  run: ./tree > output.log
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Problem 1 tree executable ran"
+```
+
+This step tries to run the executable that the `make` command should have generated, and saves it's output to a file called "output.log".
+
+```
+- name: Read Output
+  id: output
+  uses: juliangruber/read-file-action@v1
+  with:
+    path: output.log
+
+- name: Assert Proper Output
+  id: properOutput
+  uses: therussiankid92/gat@v1.5
+  with:
+    assertion: should.equal
+    actual: ${{ steps.output.outputs.content }}
+    expected: ${{ secrets.PROGRAM_OUTPUT }}
+    
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Problem 1 tree executable output is correct"
+```
+
+The first step above uses the `juliangruber/read-file-action@v1` action to save the contents of the output.log file as an output of the "output" step, and the second step uses
+an action called `therussiankid02/gat@v1.5` to assert that the contents of the output match the specification of the README.md file. The variable `${{ steps.output.outputs.content }}` holds the actual output, while the secret `${{ secrets.PROGRAM_OUTPUT }}` holds the expected output.
+
+For information on how to use the `therussiankid92/gat@v1.5` action, see [Github Action Test Automation (Gat) - GitHub Marketplace](https://github.com/marketplace/actions/github-action-test-automation).
+
+```
+- name: Make clean
+  id: makeClean
+  run: make clean
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt clean function ran"
+```
+
+This step runs `make clean` in the directory.
+
+```
+- name: Find File
+  continue-on-error: true
+  run: |
+    echo "Found? " > clean.txt
+    test -f tree && echo "Yes" >> clean.txt
+    
+- name: Read Find Output
+  id: find
+  uses: juliangruber/read-file-action@v1
+  with:
+    path: clean.txt
+
+- name: Assert File Gone
+  id: fileGone
+  uses: therussiankid92/gat@v1.5
+  with:
+    assertion: should.equal
+    actual: ${{ steps.find.outputs.content }}
+    expected: Found?
+    
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt clean function deleted the tree executable"
+```
+
+The first step above runs a command that outputs "Found? Yes" if the tree executable was found, or just "Found?" if the tree executable wasn't found. The `continue-on-error: true` line causes the workflow to continue to run even if this step throws an error. Since we want to NOT find the file (because the `make clean` command should delete it), this allows us to ignore the error thrown when the file isn't found. The `run |` allows us to run multiple linux commands in one step, instead of just being restricted to one.
+
+The second and third steps assert that the output of the first step matches the expected output.
+
+```
+- name: Assert No Variables, Automatic Variables, Pattern Matching, or Makefile Functions in MakeFile1.txt
+  id: assertNoVariables
+  run: node .cbc/assertDoesNotContain.js Makefile "$,@,<,%,="
+    
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt doesn't contain Variables, Automatic Variables, Pattern Matching, or Makefile Functions"
+```
+
+This step calls a javascript file to make sure that the Makefile doesn't have certain characters in it. Since these characters are required to use variables, automatic variables, pattern matching, or Makefile Functions, this step verifies that the user followed the specifications in the README.md to not use these in the "MakeFile/MakeFile1.txt" file.
+
+For information on how to use the "assertDoesNotContain.js" file, see the section with the same name below.
+
+```
+  #Problem 2 Testing
+- name: Get Make File for Problem 2
+  id: getMakeFile2
+  run: node .cbc/getFile.js ${{ secrets.AUTH_TOKEN }} ${{ steps.repo.outputs.content }} MakeFiles/MakeFile2.txt > Makefile
+  
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2.txt found"
+    
+- name: Run Make
+  id: runMake2
+  run: make
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2.txt ran"
+
+- name: Run program
+  id: runProgram2
+  run: ./tree > output.log
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Problem 2 tree executable ran"
+
+- name: Read Output
+  id: output2
+  uses: juliangruber/read-file-action@v1
+  with:
+    path: output.log
+
+- name: Assert Proper Output
+  id: properOutput2
+  uses: therussiankid92/gat@v1.5
+  with:
+    assertion: should.equal
+    actual: ${{ steps.output2.outputs.content }}
+    expected: ${{ secrets.PROGRAM_OUTPUT }}
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Problem 2 tree executable output is correct"
+```
+
+These steps do the same thing with `MakeFiles/MakeFile2.txt` as what has been done previously with `MakeFiles/MakeFile1.txt`. If you don't understand these lines of yaml, go back to their explanations earlier in this guide.
+
+```
+- name: Assert compiled.txt contains all files used
+  id: assertCompiled
+  run: node .cbc/assertContains.js compiled.txt ${{ secrets.COMPILED_TXT }}
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "compiled.txt contains proper file names"
+```
+
+This step uses a javascript file to make sure that the complied.txt file contains the file names that it should. In other words, this asserts that the complied.txt file contains proper output. Asserting proper output with GitHub secrets can be a extremely difficult when the output has multliple lines or newlines in it, so using the javascript file here allows us to assert a multi-lined output.
+
+For information on how to use the "assertContains.js" file, see the section with the same name below.
+
+```
+- name: Make clean
+  id: makeClean2
+  run: make clean
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2.txt clean function ran"
+
+- name: Check that Files are gone
+  continue-on-error: true
+  run: |
+    echo "Found? " > clean.txt
+    test -f tree && echo "Yes" >> clean.txt
+    test -f compiled.txt && echo "Yes" >> clean.txt
+    test -f *.o && echo "Yes" >> clean.txt
+- name: Read Find Output
+  id: find2
+  uses: juliangruber/read-file-action@v1
+  with:
+     path: clean.txt
+
+- name: Assert File Gone
+  id: fileGone2
+  uses: therussiankid92/gat@v1.5
+  with:
+    assertion: should.equal
+    actual: ${{ steps.find2.outputs.content }}
+    expected: Found?
+    
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2.txt clean function deleted the tree executable, compiled.txt, and .o files"
+```
+
+These steps make sure that the `make clean` command works, as explained previously.
+
+```
+- name: Assert %.o rule
+  id: assertORule
+  run: node .cbc/assertContains.js Makefile "%.o:"
+
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2txt contains a %.o rule"
+
+- name: Assert no "main", "leaves", "Leaves", "roots", "Roots", "branches", or "Branches" found in Makefile2.txt
+  id: assertNoClassNames
+  run: node .cbc/assertDoesNotContain.js Makefile "main,leaves,Leaves,roots,Roots,branches,Branches"
+    
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2txt doesn't have main, leaves, Leaves, roots, Roots, branches, or Branches in it"
+```
+
+These steps assert that `MakeFiles/MakeFile2.txt` follows the requirements in the README.md.
+
+This is the end of the tests, so if the users code has made it this far without the workflow terminating, they they have passed! We can now transition into issuing the Make badge to the user.
+
+```
+  #Issue Badge  
+- name: Get email.txt
+  id: getEmail
+  run: node .cbc/getFile.js ${{ secrets.AUTH_TOKEN }} ${{ steps.repo.outputs.content }} email.txt > email.txt
+
+- name: Save Email as Output Variable
+  id: userEmail
+  uses: juliangruber/read-file-action@v1
+  with:
+    path: email.txt
+    
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Email found - ${{ steps.userEmail.outputs.content }}"
+```
+
+## .cbc Folder
 This folder contains all of the javascript files I wrote to assist the workflow files. It also contains an image called CBClogo.png that is used in the README.md of the respository, but for obvious reasons, I haven't documented how it works below. If you want to know what a .png file is, see the following link: https://en.wikipedia.org/wiki/File_format.
 
 #### addLabel.js
