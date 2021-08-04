@@ -684,7 +684,7 @@ It is used to add labels to pull requests on GitHub.
 
 Usage: `node  .cbc/addLabel.js <authToken> <pullRequestNumber> <nameOfLabelToAdd>`
 
-The file requires the @octokit/core package, in order to send API requests to GitHub. This is why `npm install @octokit/core` needs to be run in the workflow. It also contains a function called addLabel, which uses an API call to add a label to a pull request in the BYUComputingBootCampTests/makeTest repository with the corresponding issue number. The file takes 3 parameters, an authentication token for authorizing edits to the repository (authToken), the number of the pull request we want to edit (issueNumber), and the name of the label that we want to add (labelToAdd).
+The file requires the @octokit/core package in order to send API requests to GitHub. This is why `npm install @octokit/core` needs to be run in the workflow. It also contains a function called addLabel, which uses an API call to add a label to a pull request in the BYUComputingBootCampTests/makeTest repository with the corresponding issue number. The file takes 3 parameters, an authentication token for authorizing edits to the repository (authToken), the number of the pull request we want to edit (issueNumber), and the name of the label that we want to add (labelToAdd).
 
 An example use of this code would be `node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} checkComplete`. This would add the "checkComplete" label to the pull request with the number specified.
 
@@ -897,9 +897,13 @@ Usage: `node .cbc/badgeAPI.js <cbcUsername> <cbcPassword> <userEmail>`
 The file requires xmlhttprequest in order to send API calls to Badgr. It contains multiple functions:
 
 `getAuthenticationToken()` is used to get an authToken from the Badgr API that corresponds to the username and password, so we can use it for future API calls. It takes in the username and password as parameters, and returns the authToken.
+
 `refreshStoredAuthToken()` can be used to refresh an authToken, but it is currently unused.
+
 `getIssuerInformation()` can be used to get information on the BYU Computing Boot Camp Issuer. It takes in the issuer id as a parameter. I originally used it to get the id of the issuer, which is now stored as a variable at the top of the file. This value is necessary for issuing a badge, but since we already have the issuer id, the function is currently unused. It takes an authToken as a parameter.
+
 `getBadgeClassInformation()` can be used to get information on a badge stored in an issuer. It takes in the issuer id as a parameter, and finds information on all the badges in that issuer. I used this to get the id of the "Make" badge, so that we could issue it. When making new automated pass-off tests, you'll need to use this function to get the id of the badge that you want to issue. But since the Make badge id is already stored as a variable at the top of the file, this function is currently unused.
+
 `issueAssertionToTestUser()` is used to issue the badge to the user. It takes four parameters, the issuer id, the badge id (to know which badge to give), the user's email (so it knows who to give it to), and an authentication token.
 
 The code currently uses only `getAuthenticationToken()` and `issueAssertionToTestUser()` to get an authentication token and issue a badge to the user. If it fails, it will throw an error so that the GitHub Actions workflow terminates and the user is notified that they didn't recieve the badge. It takes in three parameters, the username of the Computing Boot Camp's Badgr account, the corresponding password, and the email of the user that should recieve the badge. If any of these are missing, the file will throw an error.
@@ -907,6 +911,35 @@ The code currently uses only `getAuthenticationToken()` and `issueAssertionToTes
 An example use of this code would be `node .cbc/badgeAPI.js ${{secrets.USERNAME}} ${{secrets.PASSWORD}} fakeEmail@fake.com`. This would use the username and password stored in the GitHub secrets, and if they were valid, it would issue the Make badge to "fakeEmail@fake.com".
 
 #### getFile.js
+The getFile.js file contains the following code:
+
+```
+const { Octokit } = require("@octokit/core");
+
+const getFile = async (authToken, repoInfo, filePath) => {
+    const octokit = new Octokit({auth: authToken});
+    const response = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+        owner: repoInfo[0],
+        repo: repoInfo[1],
+        path: filePath
+      })
+      
+    console.log(Buffer.from(response.data.content, 'base64').toString('binary'));
+}
+
+var authToken = process.argv[2];
+var repoInfo = process.argv[3].split("/");
+var filePath = process.argv[4];
+getFile(authToken, repoInfo, filePath);
+```
+
+This file downloads a file from a repository on GitHub, and is used to download the user's code off of their forked repositoryy.'
+
+Usage: `node .cbc/getFile.js <authToken> <repoInfo> <filePath>`
+
+This code requres the @octokit/core package in order to send API calls to GitHub. It has a function called getFile() that downloads the file at "filePath" from the repository that corresponds with the information provided in "repoInfo". The code takes three parameters, the authentication token for the API call, the repository info that is formatted as `ownerName/repoName`, and the file path of the file you want to download inside that repository.
+
+An example use of this code would be `node .cbc/getFile.js ${{ secrets.AUTH_TOKEN }} BYUComputingBootCampTests/makeTest .github/CODEOWNERS"`. This would download the file "CODEOWNERS" in the ".github" folder from the repository "makeTest" owned by "BYUComputingBootCampTests".
 
 #### getRepoInfo.js
 
