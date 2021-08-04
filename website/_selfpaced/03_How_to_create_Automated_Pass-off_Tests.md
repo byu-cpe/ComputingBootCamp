@@ -652,6 +652,30 @@ This folder contains all of the javascript files I wrote to assist the workflow 
 <img src = "{% link media/testDocumentation/TestEx8.png %}" width="900">
 
 #### addLabel.js
+The addLabel.js file contains the following code:
+
+```
+const { Octokit } = require("@octokit/core");
+
+const addLabel = async (authToken, issueNumber, labelToAdd) => {
+    const octokit = new Octokit({auth: authToken});
+    const response = await octokit.request("POST /repos/{owner}/{repo}/issues/{issue_number}/labels", {
+        owner: "BYUComputingBootCampTests",
+        repo: "makeTest",
+        issue_number: issueNumber,
+        labels: [labelToAdd]
+      });
+
+}
+
+// Start
+var authToken = process.argv[2];
+var issueNumber = process.argv[3];
+var labelToAdd = process.argv[4];
+addLabel(authToken, issueNumber, labelToAdd);
+```
+
+The file requires the @octokit/core package, in order to send API requests to GitHub. This is why `npm install @octokit/core` needs to be run in the workflow. It also contains a function called addLabel, which uses an API call to add a label to a pull request in the BYUComputingBootCampTests/makeTest repository with the corresponding issue number. The file takes 3 parameters, an authentication token for authorizing edits to the repository (authToken), the number of the pull request we want to edit (issueNumber), and the name of the label that we want to add (labelToAdd).
 
 #### assertContains.js
 
