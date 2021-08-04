@@ -1,6 +1,6 @@
 ---
 layout: page
-toc: true
+toc: false
 title: How to create a Badge
 slug: create_badge
 type: resources
