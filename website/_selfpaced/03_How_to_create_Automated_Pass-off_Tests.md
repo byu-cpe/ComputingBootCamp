@@ -647,9 +647,14 @@ For information on the "removeAllLabels.js" file, see the section with the same 
 And that's it! That's the entire makeTest.yml file. It's a big one, but hopefully you can see how all of the steps together combine to make an effective and transparent pass-off test.
 
 ## .cbc Folder
-This folder contains all of the javascript files I wrote to assist the workflow files. It also contains an image called CBClogo.png that is used in the README.md of the respository, but for obvious reasons, I haven't documented how it works below. If you want to know what a .png file is, see the following link: [File format - Wikipedia](https://en.wikipedia.org/wiki/File_format).
+This folder contains all of the javascript files I wrote to assist the workflow files, and an image file.
 
 <img src = "{% link media/testDocumentation/TestEx8.png %}" width="900">
+
+#### CBClogo.png
+<img src = "{% link media/testDocumentation/TestEx9.png %}" width="700">
+
+This is simply the logo of the BYU Computing Boot Camp, for use in the README.md of the repository.
 
 #### addLabel.js
 The addLabel.js file contains the following code:
@@ -675,9 +680,43 @@ var labelToAdd = process.argv[4];
 addLabel(authToken, issueNumber, labelToAdd);
 ```
 
+It is used to add labels to pull requests on GitHub.
+
+Usage: `node  .cbc/addLabel.js <authToken> <pullRequestNumber> <nameOfLabelToAdd>`
+
 The file requires the @octokit/core package, in order to send API requests to GitHub. This is why `npm install @octokit/core` needs to be run in the workflow. It also contains a function called addLabel, which uses an API call to add a label to a pull request in the BYUComputingBootCampTests/makeTest repository with the corresponding issue number. The file takes 3 parameters, an authentication token for authorizing edits to the repository (authToken), the number of the pull request we want to edit (issueNumber), and the name of the label that we want to add (labelToAdd).
 
+An example use of this code would be `node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN } ${{ steps.number.outputs.content }} checkComplete`. This would add the "checkComplete" label to the pull request with the number specified.
+
 #### assertContains.js
+The assertContains.js file contains the following code:
+
+```
+const fs = require('fs')
+
+var fileToReadPath = process.argv[2];
+var required = process.argv[3].split(',');
+
+const data = fs.readFileSync(fileToReadPath, 'utf8')
+required.forEach(string => {
+    assertContains(data, string);
+});
+
+function assertContains(data, string) {
+    if(!data.includes(string)) {
+        throw ("Error: File does not contain " + string);
+    }
+}
+```
+
+It is used to verify that a file contains specified strings.
+
+Usage: `node  .cbc/assertContains.js <filePath> <requiredStrings>`
+
+The code requires fs in order to read the contents of the any file that is provided. It contains a function called assertContains() that asserts that some data string contains some smaller string inside it. Otherwise, it throws an error, which stops the GitHub Action workflow and causes the user to not recieve the badge. The code takes two parameters, the file path for the file to read the contents from for the data string, and all the required substrings to be in the data string seperated by commas.
+
+An example use of this code would be `node .cbc/assertContains.js Makefile "%.o:,tree"`. This would throw an error if the "Makefile" file didn't contain the strings "%.o:" or "tree".
+
 
 #### assertDoesNotContain.js
 
