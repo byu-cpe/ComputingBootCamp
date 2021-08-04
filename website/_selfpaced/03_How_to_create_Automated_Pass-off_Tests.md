@@ -1,6 +1,6 @@
 ---
 layout: page
-toc: true
+toc: false
 title: How to create Automated Pass-off Tests
 slug: create_passoff
 type: resources
