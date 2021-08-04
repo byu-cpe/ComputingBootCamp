@@ -933,7 +933,7 @@ var filePath = process.argv[4];
 getFile(authToken, repoInfo, filePath);
 ```
 
-This file downloads a file from a repository on GitHub, and is used to download the user's code off of their forked repositoryy.'
+This file downloads a file from a repository on GitHub, and is used to download the user's code off of their forked repository.
 
 Usage: `node .cbc/getFile.js <authToken> <repoInfo> <filePath>`
 
@@ -942,13 +942,171 @@ This code requres the @octokit/core package in order to send API calls to GitHub
 An example use of this code would be `node .cbc/getFile.js ${{ secrets.AUTH_TOKEN }} BYUComputingBootCampTests/makeTest .github/CODEOWNERS"`. This would download the file "CODEOWNERS" in the ".github" folder from the repository "makeTest" owned by "BYUComputingBootCampTests".
 
 #### getRepoInfo.js
+The getRepoInfo.js file contains the following code:
+
+```
+const { Octokit } = require("@octokit/core");
+
+const getRepoInfo = async (authToken, infoNeeded) => {
+    const octokit = new Octokit({auth: authToken});
+    const response = await octokit.request("GET /repos/{owner}/{repo}/pulls?state=open", {
+        owner: "BYUComputingBootCampTests",
+        repo: "makeTest"
+      });
+
+    let index = 0;
+    //While there are still repositories that are open
+    while(response.data.length > index) {
+      //If the repository doesn't have a "currently being checked" label
+      let label = "hi";
+      if(response.data[index].labels.length != 0) {
+        label = response.data[index].labels[0];
+      }
+      if(response.data[index].labels.length == 0 || label.name.toString().localeCompare("currentlyBeingChecked") != 0) { 
+        if(infoNeeded.toString().localeCompare('full_name') == 0) {
+          repoInfo = response.data[index].head.repo.full_name;
+          process.stdout.write(repoInfo);
+          return;
+        } else {
+          repoInfo = response.data[index].number;
+          var repoNumber = repoInfo.toString();
+          process.stdout.write(repoNumber);
+          return;
+        }
+      }
+      index++;
+    }
+    throw "No Repositories waiting to be checked";
+}
+
+var authToken = process.argv[2];
+var infoNeeded = process.argv[3];
+getRepoInfo(authToken, infoNeeded);
+```
+
+This file gets the first pull request that isn't already being checked, and returns either the full name of the repository that corresponds to the pull request or the number of the pull request.
+
+Usage: `node .cbc/getRepoInfo.js <authToken> <infoNeeded>`
+
+This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called getRepoInfo() that gets a list of all the open pull requests. It then finds the first open pull request that doesn't have the "currentlyBeingChecked" label, and then returns either the full name of the repository (formatted as ownerName/repoName) or the number of the pull request, depending on the infoNeeded paramter ("full_name" causes the name to be returned, while anything else causes the number to be returned). This file takes two parameters, an authentication token for the API calls, and a string that defines which information should be returned.
+
+An example use of this code would be `node .cbc/getRepoInfo.js ${{ secrets.AUTH_TOKEN }} full_name`. This would output the full name of the repository that corresponds to the first open pull request without the label "currentlyBeingChecked".
 
 #### makeComment.js
+The makeComment.js file contains the following code:
+
+```
+const { Octokit } = require("@octokit/core");
+
+const makeComment = async (authToken, issueNumber, comment) => {
+    const octokit = new Octokit({auth: authToken});
+    const response = await octokit.request("POST /repos/{owner}/{repo}/issues/{issue_number}/comments", {
+        owner: "BYUComputingBootCampTests",
+        repo: "makeTest",
+        issue_number: issueNumber,
+        body: comment
+      });
+
+}
+
+// Start
+var authToken = process.argv[2];
+var issueNumber = process.argv[3];
+var comment = process.argv[4];
+makeComment(authToken, issueNumber, comment);
+```
+
+This code is used to issue comments on pull requests on GitHub.
+
+Usage: `node .cbc/makeComment.js <authToken> <pullRequestNumber> <commentToPost>`
+
+This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called makeComment() that leaves a specified comment on a pull request in the BYUComputingBootCampTests/makeTest repository that corresponds to the issue number. This code takes three parameters, an authentication token for API calls, the pull request number, and the comment that you want posted.
+
+An example use of this code would be `node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} 9 "BYU was here"`. This would leave the comment "BYU was here" on the pull request with the issue number 9 in the BYUComputingBootCampTests/makeTest repository.
 
 #### removeAllLabels.js
+The removeAllLabels.js file contains the following code:
+
+```
+const { Octokit } = require("@octokit/core");
+
+const deleteAllLabels = async (authToken, issueNumber) => {
+    const octokit = new Octokit({auth: authToken});
+    const response = await octokit.request("DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels", {
+        owner: "BYUComputingBootCampTests",
+        repo: "makeTest",
+        issue_number: issueNumber
+    });
+}
+
+// Start
+var authToken = process.argv[2];
+var issueNumber = process.argv[3];
+deleteAllLabels(authToken, issueNumber);
+```
+
+This code is used to remove all of the labels off of a pull request.
+
+Usage: `node .cbc/removeAllLabels.js <authToken> <pullRequestNumber>`
+
+This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called deleteAllLabels() that simply removes any labels that are on the pull request with the corresponding issue number (in the makeTest repository). This codes takes two parameters, an authetication token for sending API calls, and the issue number of the pull request.
+
+An example use of this code would be `node .cbc/removeAllLabels.js ${{ secrets.AUTH_TOKEN }} 9"`. This would remove all labels on the pull request with the issue number 9 in the BYUComputingBootCampTests/makeTest repository.
 
 #### triggerRunForAllPRs.js
+The triggerRunForAllPRs.js file contains the following code:
+
+```
+const { Octokit } = require("@octokit/core");
+
+const triggerRunForAllPRs = async (authToken) => {
+    const octokit = new Octokit({auth: authToken});
+    const response = await octokit.request("GET /repos/{owner}/{repo}/pulls?state=open", {
+        owner: "BYUComputingBootCampTests",
+        repo: "makeTest"
+      });
+
+    console.log(response)
+    var numberOfPRs = response.data.length;
+    if(numberOfPRs > 12) numberOfPRs = 12; //So that the github action doesn't overlap with the next scheduled round
+    for(let i = 0; i < numberOfPRs; i++) {
+        const octokitMakeTest = new Octokit({auth: authToken});
+        const responseNew = await octokitMakeTest.request("POST /repos/{owner}/{repo}/dispatches", {
+            owner: "BYUComputingBootCampTests",
+            repo: "makeTest",
+            event_type: "test_pr"
+        });
+        sleep(10000); //Wait 10 seconds so the last workflow has time to label the PR as "currently being checked"
+    }
+}
+
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }  
+
+// Start
+var authToken = process.argv[2];
+triggerRunForAllPRs(authToken);
+```
+
+This function is used to run a workflow for each currently open pull request in the makeTest repository.
+
+Usage: `node .cbc/triggerRunForAllPRs.js <authToken>`
+
+This code requires the @octokit/core package in order to send API calls to GitHub. 
 
 ## Creating an automated pass-off test
 
+
 ## Future Plans
+Eventually, we'll want to have some sort of pass-off assesement for every sub-module that has a badge. Whether these pass-offs are project-based assessments or code-based assessments is up to you, however, code-based assessments can be preferred where the BYU Computing Boot Camp staff wouldn't want to have to manually check user submissions. I personally believe that we should implement them wherever possible, as the BYU Computing Boot Camp doesn't have active development year-round, and so automatic pass-offs wouldn't be subject to delays as a manual pass-off system would. However, there are some sub-modules where an automatic pass-off just wouldn't be possible or would be ill-suited for the subject matter.
+
+So, a tentative plan would be to implement automated pass-off tests for CMake, Python Intro, Python Packages, Unit Testing, SQL Basics and Matlab, as those would all translate decently well into automated tests.
+
+Another idea is that when each person is assigned to improve/make a page on the site, they are in charge of making the pass-off test for it. If they decided they want to have a code-based assessment, they can follow the tutorial in this guide to do so.
+
+I was also considering improving the makeTest repository by adding more problems to it (i.e. more Makefiles to implement). This would give the users more experince and more hours with Make and add value to the Make badge. I'm not sure what direction these new Makefiles would take, but preferrably it would require the user to make their own creative Makefiles based off of the concepts they learned in the sub-module, instead of just re-making the Makefiles explained in the sub-module, as the current two Makefiles require.
