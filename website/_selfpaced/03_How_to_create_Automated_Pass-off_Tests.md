@@ -522,8 +522,134 @@ This is the end of the tests, so if the users code has made it this far without 
   run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Email found - ${{ steps.userEmail.outputs.content }}"
 ```
 
+These steps get the email.txt file from the user's forked repository, and save it as an output variable. The comment outputs the email that was found, so that the
+user can easily see if they had a typo in their email or forgot to enter it.
+
+```
+- name: Issue Badge
+  id: issueBadge
+  run: node .cbc/badgeAPI.js ${{secrets.USERNAME}} ${{secrets.PASSWORD}} ${{ steps.userEmail.outputs.content }}
+    
+- name: Comment
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Badge Issued. Congraduations!"
+```
+
+This step uses a javascript file to call the Badgr API and issue a badge to the user's email found in a previous step. The javascript file takes in the username and password of the BYU Computing Boot Camp Test's Badgr account to get authorization to issue the badge. Note that if the user's email is invalid in any way, this step will throw an error, and the user won't recieve the badge. 
+
+For information on how to use the "badgeAPI.js" file, see the section with the same name below.
+
+```
+  #Failure Output for Problem 1
+- name: Failure Comment
+  if: always() && steps.getMakeFile1.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - No Makefile1.txt found"
+
+- name: Failure Comment
+  if: always() && steps.runMake.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile1.txt didn't run"
+    
+- name: Failure Comment
+  if: always() && steps.runProgram.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Problem 1 tree executable crashed"
+    
+- name: Failure Comment
+  if: always() && steps.properOutput.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Problem 1 tree executable output was incorrect"
+    
+- name: Failure Comment
+  if: always() && steps.makeClean.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile1.txt clean didn't run"
+    
+- name: Failure Comment
+  if: always() && steps.fileGone.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile1.txt clean didn't delete the tree executable"
+
+- name: Failure Comment
+  if: always() && steps.assertNoVariables.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile1.txt has Variables, Automatic Variables, Pattern Matching, or Makefile Functions"
+
+  #Failure Output for Problem 2
+- name: Failure Comment
+  if: always() && steps.getMakeFile2.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - No Makefile2.txt found"
+
+- name: Failure Comment
+  if: always() && steps.runMake2.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2.txt didn't run"
+
+- name: Failure Comment
+  if: always() && steps.runProgram2.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Problem 2 tree executable crashed"
+
+- name: Failure Comment
+  if: always() && steps.properOutput2.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Problem 2 tree executable output was incorrect"
+
+- name: Failure Comment
+  if: always() && steps.assertCompiled.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - compiled.txt doesn't exist, or doesn't contain all files used"
+    
+- name: Failure Comment
+  if: always() && steps.makeClean2.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2.txt clean didn't run"
+
+- name: Failure Comment
+  if: always() && steps.fileGone2.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2.txt clean didn't delete the tree executable, compiled.txt, or all of the .o files"\
+
+- name: Failure Comment
+  if: always() && steps.assertORule.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2txt doesn't contain a %.o rule"
+
+- name: Failure Comment
+  if: always() && steps.assertNoClassNames.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2txt contains main, leaves, Leaves, roots, Roots, branches, or Branches"
+
+  #Failure Output for Issue Badge
+- name: Failure Comment
+  if: always() && steps.getEmail.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - No email.txt found"
+
+- name: Failure Comment
+  if: always() && steps.issueBadge.outcome == 'failure'
+  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Badge issue failed - Email Address wasn't valid"
+```
+
+These steps handle failure output in case one of the previous steps fails. They use a javascript file to make this comment on the pull request, as explained previously. The line `if: always() %% steps.<idOfStep>.outcome == 'failure'` is key to the functionality of these steps. We want an error message to be output when the workflow file terminates prematurely, but normally, steps after the one that threw an error don't run. To get around this, we use `if: always()`, which means that the step will run even if a previous step threw an error. However, we don't want every error message to print when the workflow file terminates prematurely, just one. For this reason, the `always()` is anded with `steps.<idOfStep>.outcome == 'failure'`. This means that the step will only run if it's corresponding step is the one that threw an error. Just replace `<idOfStep>` with the id of the step that corresponds. And with this, we can outline all of the error messages in order, and in an easy to read manner.
+
+```
+  #Close Pull Request
+- name: Close Pull Request
+  if: always()
+  uses: peter-evans/close-pull@v1
+  with:
+    pull-request-number:  ${{ steps.number.outputs.content }}
+    comment: Auto-closing pull request after submission
+    delete-branch: false
+```
+
+This step closes the pull request that was just tested, so that a future workflow doesn't try to test it.
+
+```
+- name: Remove Previous Labels
+  if: always()
+  run: node .cbc/removeAllLabels.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }}
+      
+- name: Add "checkComplete" label
+  if: always()
+  run: node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} checkComplete
+```
+
+These steps use javascript to remove all of the labels on the pull request and add the "checkComplete" label to it, so that the user can tell that their pull request was tested.
+
+For information on the "removeAllLabels.js" file, see the section with the same name below.
+
+And that's it! That's the entire makeTest.yml file. It's a big one, but hopefully you can see how all of the steps together combine to make an effective and transparent pass-off test.
+
 ## .cbc Folder
-This folder contains all of the javascript files I wrote to assist the workflow files. It also contains an image called CBClogo.png that is used in the README.md of the respository, but for obvious reasons, I haven't documented how it works below. If you want to know what a .png file is, see the following link: https://en.wikipedia.org/wiki/File_format.
+This folder contains all of the javascript files I wrote to assist the workflow files. It also contains an image called CBClogo.png that is used in the README.md of the respository, but for obvious reasons, I haven't documented how it works below. If you want to know what a .png file is, see the following link: [File format - Wikipedia](https://en.wikipedia.org/wiki/File_format).
+
+<img src = "{% link media/testDocumentation/TestEx8.png %}" width="900">
 
 #### addLabel.js
 
