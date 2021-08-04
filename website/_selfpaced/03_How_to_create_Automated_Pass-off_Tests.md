@@ -686,7 +686,7 @@ Usage: `node  .cbc/addLabel.js <authToken> <pullRequestNumber> <nameOfLabelToAdd
 
 The file requires the @octokit/core package, in order to send API requests to GitHub. This is why `npm install @octokit/core` needs to be run in the workflow. It also contains a function called addLabel, which uses an API call to add a label to a pull request in the BYUComputingBootCampTests/makeTest repository with the corresponding issue number. The file takes 3 parameters, an authentication token for authorizing edits to the repository (authToken), the number of the pull request we want to edit (issueNumber), and the name of the label that we want to add (labelToAdd).
 
-An example use of this code would be `node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN } ${{ steps.number.outputs.content }} checkComplete`. This would add the "checkComplete" label to the pull request with the number specified.
+An example use of this code would be `node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} checkComplete`. This would add the "checkComplete" label to the pull request with the number specified.
 
 #### assertContains.js
 The assertContains.js file contains the following code:
