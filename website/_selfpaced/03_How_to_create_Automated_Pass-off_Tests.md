@@ -652,7 +652,7 @@ This folder contains all of the javascript files I wrote to assist the workflow 
 <img src = "{% link media/testDocumentation/TestEx8.png %}" width="900">
 
 #### CBClogo.png
-<img src = "{% link media/testDocumentation/TestEx9.png %}" width="700">
+<img src = "{% link media/testDocumentation/TestEx9.png %}" width="350">
 
 This is simply the logo of the BYU Computing Boot Camp, for use in the README.md of the repository.
 
@@ -717,10 +717,194 @@ The code requires fs in order to read the contents of the any file that is provi
 
 An example use of this code would be `node .cbc/assertContains.js Makefile "%.o:,tree"`. This would throw an error if the "Makefile" file didn't contain the strings "%.o:" or "tree".
 
-
 #### assertDoesNotContain.js
+The assertDoesNotContain.js file contains the following code:
+
+```
+const fs = require('fs')
+
+var fileToReadPath = process.argv[2];
+var notAllowed = process.argv[3].split(',');
+
+const data = fs.readFileSync(fileToReadPath, 'utf8')
+notAllowed.forEach(string => {
+    assertDoesNotContain(data, string);
+});
+
+function assertDoesNotContain(data, string) {
+    if(data.includes(string)) {
+        throw ("Error: File contains " + string);
+    }
+}
+```
+
+It is used to verify that a file does not contain specified strings.
+
+Usage: `node  .cbc/assertDoesNotContain.js <filePath> <stringsNotAllowed>`
+
+The code requires fs in order to read the contents of the any file that is provided. It contains a function called assertDoesNotContain() that asserts that some data string does not contain some smaller string inside it. Otherwise, it throws an error, which stops the GitHub Action workflow and causes the user to not recieve the badge. The code takes two parameters, the file path for the file to read the contents from for the data string, and all the strings that are not allowed to be in the data string (seperated by commas).
+
+An example use of this code would be `node .cbc/assertDoesNotContain.js Makefile "main,leaves,Leaves,roots,Roots,branches,Branches"`. This would throw an error if the "Makefile" file contained "main", "leaves", "Leaves", "roots", "Roots", "branches", or "Branches".
 
 #### badgeAPI.js
+The badgeAPI.js file contains the following code:
+
+```
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var computingBootCampId = '0YOSWoQPQO-ehX8P3o7ZFw';
+var makeBadgeEntityID = 'opPKYN_pQFi6UWl1Q_aT5Q';
+
+//Program starts here
+var username = process.argv[2];
+var password = process.argv[3];
+var userEmail = process.argv[4];
+
+//Check to make sure there are contents for each arguments
+if(username.localeCompare('') == 0 || password.localeCompare('') == 0 || userEmail.localeCompare('') == 0){
+    throw "Error: Missing argument";
+}
+
+var accessToken = getAuthenticationToken(username, password);
+issueAssertionToTestUser(computingBootCampId, makeBadgeEntityID, userEmail, accessToken);
+
+
+//This function can be used to get an authentication token to make requests with the server for the Computing Boot Camp
+function getAuthenticationToken(username, password) {
+    var url = "https://api.badgr.io/o/token";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+    }};
+
+    var data = "username=" + username + "&password=" + password;
+
+    xhr.send(data);
+
+    if(xhr.status != 200)  {
+        throw "Error: Invalid Credentials for the BYU Computing BootCamp - Please contact the BYU Computing BootCamp \
+through the Support section on the README.md for help"
+    }
+    var accessToken = JSON.parse(xhr.responseText).access_token;
+    return accessToken;
+}
+
+//This function uses a refresh Token to make a certain authToken reusable again to make requests with the server.
+//If you have a refresh token but not the corresponding authToken that goes with it, you'll have to get a new
+//authentication token.
+function refreshStoredAuthToken() {
+    var url = "https://api.badgr.io/o/token";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+    }};
+
+    var data = "grant_type=refresh_token&refresh_token=" + refreshToken;
+
+    xhr.send(data);
+    return JSON.parse(xhr.responseText);
+}
+
+//This function will take an authToken and get the issuerInformation tied to that account
+function getIssuerInformation (authToken) {
+    var url = "https://api.badgr.io/v2/issuers";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+
+    xhr.setRequestHeader("Authorization", "Bearer " + authToken);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+           console.log(xhr.status);
+           console.log(xhr.responseText);
+        }};
+     
+     xhr.send();
+
+     return JSON.parse(xhr.responseText);
+}
+
+//This function will take an authToken and issuerID and return the badgeClass information for that Issuer
+function getBadgeClassInformation(issuerEntityID) {
+    var url = "https://api.badgr.io/v2/issuers/" + issuerEntityID + "/badgeclasses";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+
+    xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+           console.log(xhr.status);
+           console.log(xhr.responseText);
+        }};
+     
+     xhr.send();
+
+     return JSON.parse(xhr.responseText);
+}
+
+//This function will take an authToken, issuerId and badgeID and issue a badge to the person with the information provided.
+function issueAssertionToTestUser(issuerEntityID, badgeEntityID, userEmail, accessToken) { //Assertion is another name for Badge
+    //Issue the Assertion that we want to
+    var url = "https://api.badgr.io/v2/issuers/" + issuerEntityID + "/assertions";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, false);
+
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+    }};
+
+    var data = {"badgeclass": badgeEntityID,
+        "recipient":{
+        "identity": userEmail,
+        "hashed":false,
+        "type":"email",
+        },
+        "notify":true,};
+    var dataString = JSON.stringify(data);
+
+    xhr.send(dataString);
+
+    if(xhr.status != 201) throw "Error: Invalid Email Address - Please put a valid email address into email.txt on your \
+Forked Repository";
+    else console.log("Success! Make Badge has been issued to" + userEmail);
+    //return JSON.parse(xhr.responseText);
+}
+```
+
+This file is used to send API requests to the Badgr API, specifically to issue badges to users.
+
+Usage: `node .cbc/badgeAPI.js <cbcUsername> <cbcPassword> <userEmail>`
+
+The file requires xmlhttprequest in order to send API calls to Badgr. It contains multiple functions:
+
+`getAuthenticationToken()` is used to get an authToken from the Badgr API that corresponds to the username and password, so we can use it for future API calls. It takes in the username and password as parameters, and returns the authToken.
+`refreshStoredAuthToken()` can be used to refresh an authToken, but it is currently unused.
+`getIssuerInformation()` can be used to get information on the BYU Computing Boot Camp Issuer. It takes in the issuer id as a parameter. I originally used it to get the id of the issuer, which is now stored as a variable at the top of the file. This value is necessary for issuing a badge, but since we already have the issuer id, the function is currently unused. It takes an authToken as a parameter.
+`getBadgeClassInformation()` can be used to get information on a badge stored in an issuer. It takes in the issuer id as a parameter, and finds information on all the badges in that issuer. I used this to get the id of the "Make" badge, so that we could issue it. When making new automated pass-off tests, you'll need to use this function to get the id of the badge that you want to issue. But since the Make badge id is already stored as a variable at the top of the file, this function is currently unused.
+`issueAssertionToTestUser()` is used to issue the badge to the user. It takes four parameters, the issuer id, the badge id (to know which badge to give), the user's email (so it knows who to give it to), and an authentication token.
+
+The code currently uses only `getAuthenticationToken()` and `issueAssertionToTestUser()` to get an authentication token and issue a badge to the user. If it fails, it will throw an error so that the GitHub Actions workflow terminates and the user is notified that they didn't recieve the badge. It takes in three parameters, the username of the Computing Boot Camp's Badgr account, the corresponding password, and the email of the user that should recieve the badge. If any of these are missing, the file will throw an error.
+
+An example use of this code would be `node .cbc/badgeAPI.js ${{secrets.USERNAME}} ${{secrets.PASSWORD}} fakeEmail@fake.com`. This would use the username and password stored in the GitHub secrets, and if they were valid, it would issue the Make badge to "fakeEmail@fake.com".
 
 #### getFile.js
 
