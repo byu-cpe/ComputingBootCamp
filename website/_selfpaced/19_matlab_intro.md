@@ -175,7 +175,7 @@ Learn more about plotting in Matlab:
 
 
 
-### Manipulating Matrices
+## Manipulating Matrices
 
 A matrix is a rectangular array or table of numbers, arranged in rows and columns. Matrices can be very useful if you know how to use them in various calculations. Luckily MATLAB will do some of those calculations for you. We'll start with the basics of creating matrices and accessing values within the matrix. 
 
@@ -276,7 +276,5 @@ Here are a few commonly used matrix operations. We will use the following matric
   inv(c)             % -0.4000 -1.0000 0.4000 ; -0.2000 0 0.2000 ; 1.2000 2.000 -0.2000 (will be printed vertically)
 ```
 
-### Try it
 
-FIXME: add content
 
