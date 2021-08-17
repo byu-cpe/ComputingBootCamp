@@ -9,7 +9,11 @@ order: 6
 
 ## Overview
 
+<!--FASM2BELs (FPGA Assembly to Basic Elements of Logic) is a tool that takes FASM files, generates a file containing techmapped Verilog (the BEL connections) and TCL commands that, if all placed into Vivado, allows for production of an identical bitstream (see the FASM2BELs README.md file below). With the BELs and the TCL commands, if fed through Vivado, an identical bitstream can be produced that would match one generated from the FASM file on its own.-->
+
 ## Install
+
+
 
 ## Lecture
 
@@ -19,7 +23,11 @@ On June 4, 2021, Professor Goeders gave an overview of the FASM 2 BELs repositor
 src="https://www.youtube.com/embed/58wXkBlyu-Q"> 
 </iframe>
 
-## Possible Follow-Up Activities
+## Follow-Up Activities
+
+### Bringing It All Together
+
+**Follow up activity is under construction**
 
 Using fasm2bels would be a useful activity because it would:
 
@@ -28,5 +36,9 @@ Using fasm2bels would be a useful activity because it would:
 * Show them Verilog schematics and introduce Xilinx primitives - something they will have never seen before
 * Help them see the complete cycle - they could go from behavioral Verilog --> Vivado --> bitstream --> FASM --> Verilog Schematic --> Vivado --> bitstream
 
+## Learn More
 
-TODO: find links to add about fasm2bels, add an overview section, make this page longer and more detailed
+* FASM2BELs Github Repository (BYU CCL Fork) - <https://github.com/byuccl/symbiflow-xc-fasm2bels>
+* FASM2BELs Github Repository - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels>
+* FASM2BELs Introduction - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels/blob/master/README.md>
+

@@ -86,7 +86,7 @@ For this activity, return to your Project X-Ray folder and recreate the database
 
 Recreating the database (running all the fuzzers) will require performing Step 8, Option 2 in the Quickstart Guide.  This will take a very long time; begin the process right away. While this process is running, you are suggested to investigate the links at the bottom of this page to learn more about Project X-Ray and its documentation. Check on the process periodically to make sure it is still working and hasn't crashed. While the fuzzers are running, there are a number of things you can also do to learn about the Project X-Ray system:
 
-  * The output stream will provide an indication on where you are in the build process. The following line demonstrates what you may see. The key here is the text "005-tilegrid" which indicates that the process is currently operating on fuzzer "005-tilegrid" 2020-05-14T17:10:01 - xc7a50tfgg484-1/005-tilegrid  - 1h02m: make---make---sh---make---sh---bash---vivado.sh---vivado---loader---vivado---2*[{vivado}]
+  * The output stream will provide an indication on where you are in the build process. The following line demonstrates what you may see. The key here is the text "005-tilegrid" which indicates that the process is currently operating on fuzzer "005-tilegrid" 2020-05-14T17:10:01 - xc7a50tfgg484-1/005-tilegrid  - 1h02m: make---make---sh---make---sh---bash---vivado.sh---vivado---loader---vivado---2*[{vivado}].
 
   * When a fuzzer has finished, you can enter its directory to browse information about the results. The fuzzers run in sequential order (using the first three digits of the fuzzer name) so it is easy to know which fuzzers have already completed running. If the build process is currently on `005-tilegrid` then the fuzzers `000-init-db` and `001-part-yaml` have been completed.
 
@@ -130,6 +130,7 @@ generate.tcl | Vivado .tcl file for generating the bitfile
 * SymbiFlow Website - <https://symbiflow.github.io/>
 * Toolchain Wikipedia - <https://en.wikipedia.org/wiki/Toolchain>
 * Project X-Ray GitHub Repository - <https://github.com/SymbiFlow/prjxray>
+* Project X-Ray BRAM Patch Github Repository - <https://github.com/SymbiFlow/prjxray-bram-patch>
 * Project X-Ray Database: XC7 Series - <https://github.com/SymbiFlow/prjxray-db>
 * "Read the Docs" Project X-Ray Documentation (PDF Version) - <https://readthedocs.org/projects/prjxray/downloads/pdf/latest/>
 * Project X-Ray Documentation - <https://symbiflow.readthedocs.io/projects/prjxray/en/latest/>
