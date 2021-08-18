@@ -23,7 +23,7 @@ Follow the instructions for installing [Project X-Ray](https://byu-cpe.github.io
 
 The [bit2fasm.py](https://github.com/SymbiFlow/prjxray/blob/master/utils/bit2fasm.py) Python file contains the "main" function for the bit2fasm program. It isn't a very big file and most of the actual work is done by other files in the Project X-Ray repository.
 
-To run the executable, the [Project X-Ray Environment Variables](#projectx-rayenvironmentvariables) need to be set as the code will use these variables to acccess the appropriate databases. 
+To run the executable, the Project X-Ray Environment Variables (see below) need to be set as the code will use these variables to acccess the appropriate databases. 
 
 The arguments for running this Python executable are summarized below:
 ```
