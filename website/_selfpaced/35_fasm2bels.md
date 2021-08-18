@@ -9,11 +9,13 @@ order: 6
 
 ## Overview
 
-FASM2BELs (FPGA Assembly to Basic Elements of Logic) is a tool that takes FASM files, generates a file containing techmapped Verilog (the BEL connections) and TCL commands that, if all placed into Vivado, allows for production of an identical bitstream (see the FASM2BELs README.md file below). With the BELs and the TCL commands, if fed through Vivado, an identical bitstream can be produced that would match one generated from the FASM file on its own.
+FASM2BELs (FPGA Assembly to Basic Elements of Logic) is a tool that takes FASM files, generates a new file containing techmapped Verilog (the BEL connections) and TCL commands that, if all placed into Vivado, allows for production of an identical bitstream (see the FASM2BELs README.md file below). With the BELs and the TCL commands, if fed through Vivado, an identical bitstream can be produced that would match one generated from the FASM file on its own.
 
 ## Install
 
-capnproto java has to be installed first, then rapidwright
+<!--capnproto java has to be installed first, then rapidwright-->
+
+**The FASM2BELS Installation instructions are currently under construction.**
 
 ## Lecture
 

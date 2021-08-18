@@ -18,8 +18,6 @@ A Matlab SDK (Sofware Development Kit) can be downloaded  <a href="https://softw
 
 ## Intro to Matlab Window
 
-FIXME: Put in short tutorial with pictures explaining what each part of the Matlab window is
-
 <img src = "{% link media/matlab/matlab_window.PNG %}" width="1200">
 
 When first opening Matlab it can be overwhelming to a new user. The key sections of the matlab screen are the folder directory (left), the command window (bottom), the workspace (right), and the editor (middle top). The folder directory is used when accessing a directory of files, which is especially common with large Matlab programs which hold many Matlab scripts which will allow for easy navigation between files. The command window is where one can directly write in Matlab commands and run them. The Workspace is similar to a stack frame as it is an area where local variables are stored for easy access and reuse. The editor is used in creating and editing Matlab scripts.
@@ -49,14 +47,14 @@ the variable is assigned the value (2 + 2) or 4 the same as above, but the outpu
 <img src = "{% link media/matlab/MatlaSemicolon_02.PNG %}" width="1200">
 
 Below are some other helpful commands to be used:
-<a href="https://www.mathworks.com/help/matlab/ref/help.html" target="_blank">help</a>
-<a href="https://www.mathworks.com/help/matlab/ref/clc.html" target="_blank">clc</a>
-<a href="https://www.mathworks.com/help/matlab/ref/close.html" target="_blank">close</a>
-<a href="https://www.mathworks.com/help/matlab/ref/clear.html" target="_blank">clear</a>
+  - <a href="https://www.mathworks.com/help/matlab/ref/help.html" target="_blank">help</a>
+  - <a href="https://www.mathworks.com/help/matlab/ref/clc.html" target="_blank">clc</a>
+  - <a href="https://www.mathworks.com/help/matlab/ref/close.html" target="_blank">close</a>
+  - <a href="https://www.mathworks.com/help/matlab/ref/clear.html" target="_blank">clear</a>
 
 Below are some other helpful resources for beginners to Matlab:
-<a href="http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf" target="_blank">Introduction to Matlab</a>
-<a href="http://www.cs.cmu.edu/~tom/10601_fall2012/recitations/matlab_quickref.pdf" target="_blank">MATLAB Quick Reference</a>
+  - <a href="http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf" target="_blank">Introduction to Matlab</a>
+  - <a href="http://www.cs.cmu.edu/~tom/10601_fall2012/recitations/matlab_quickref.pdf" target="_blank">MATLAB Quick Reference</a>
 
 
 ## Basic plotting
@@ -175,7 +173,7 @@ Learn more about plotting in Matlab:
 
 
 
-### Manipulating Matrices
+## Manipulating Matrices
 
 A matrix is a rectangular array or table of numbers, arranged in rows and columns. Matrices can be very useful if you know how to use them in various calculations. Luckily MATLAB will do some of those calculations for you. We'll start with the basics of creating matrices and accessing values within the matrix. 
 
@@ -276,7 +274,9 @@ Here are a few commonly used matrix operations. We will use the following matric
   inv(c)             % -0.4000 -1.0000 0.4000 ; -0.2000 0 0.2000 ; 1.2000 2.000 -0.2000 (will be printed vertically)
 ```
 
-### Try it
 
-FIXME: add content
+
+Learn more about matrices in Matlab:
+  - [Tutorialspoint](https://www.tutorialspoint.com/matlab/index.htm)
+  - [MathWorks Arrays vs Matrices](https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html?)
 

@@ -39,8 +39,8 @@ src="https://www.youtube.com/embed/zNZND75nQ10">
 
 ## Learn More
 
-*
-*
+* SymbiFlow Examples Github Repository - <https://github.com/symbiflow/symbiflow-examples>
+* 
 *
 
 TODO add links to popular/interesting symbiflow repos, change some things to do to Follow Up Activities and make follow up activities be the user looking at the repos and clone a few to research more on their own.
