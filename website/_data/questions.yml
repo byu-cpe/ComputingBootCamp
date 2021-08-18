@@ -1,0 +1,57 @@
+- id: 1 # A unique identifier used to embed the question
+  type: multiple_choice
+  help: "Hint: Tool Command Language"
+  prompt: Which scripting language was created first? 
+  responses: 
+    - text: Python
+    - text: Tcl 
+      correct: true
+    - text: Ruby
+
+- id: 2
+  prompt: Select the most appropriate pairs
+  type: matching
+  responses: 
+    - text: interpreted
+      correct: python
+    - text: compiled
+      correct: c++
+    - text: HDL
+      correct: System Verilog
+
+- id: 3
+  prompt: Finish the fight song!
+  type: fill_in
+  responses:
+    - text: Rise all loyal Cougars and hurl your _________ to the foe.
+      correct: challenge
+    - text: You will fight, day or night, rain or ____.
+      correct: snow
+    - text: _____, strong, and true
+      correct: loyal
+
+- id: 4
+  prompt: Match each linux command with its function.
+  type: matching
+  responses:
+    - text: touch
+      correct: create a file
+    - text: mv
+      correct: rename a file
+    - text: curl
+      correct: test a URL
+    - text: cat
+      correct: display file contents
+
+- id: 5
+  prompt: Use the manual pages in a terminal session to find the function of each option.
+  type: matching
+  responses:
+    - text: ls -L
+      correct: dereference
+    - text: chmod -f
+      correct: supress error msgs
+    - text: rm -i
+      correct: prompt
+
+    

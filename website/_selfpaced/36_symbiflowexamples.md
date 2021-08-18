@@ -19,7 +19,7 @@ Once you have done that and the tests have been created, go into the 3 directori
 
 Also, find the .bit files generated - if you had the right board you could download them to the board - they do work!
 
-## Lecture Video
+## Lecture
 
 On June 4, 2021, Professor Nelson gave an overview of the various repositories inside SymbiFlow. The video is embedded below. 
 
@@ -27,7 +27,8 @@ On June 4, 2021, Professor Nelson gave an overview of the various repositories i
 src="https://www.youtube.com/embed/zNZND75nQ10"> 
 </iframe>
 
-## Some Things to Do
+## Follow-Up Activities
+
 * Make a change to one of the designs and re-make it.  
 * Time how long it takes.  
 * Carefully read what is printed out as the tools run.  
@@ -36,6 +37,11 @@ src="https://www.youtube.com/embed/zNZND75nQ10">
 * From the SymbiFlow Github or readthedocs pages, can you figure out what boards are supported?  
 * At the current time the board from the digital lab in our department is not supoprted.  But, they would very much like for it to be supported and have provided some thoughts on what needs to be done.  If you are interested, let Prof Nelson know - it could be a fun side project and the department would definitely loan you a board to use for it...
 
+## Learn More
+
+*
+*
+*
 
 TODO add links to popular/interesting symbiflow repos, change some things to do to Follow Up Activities and make follow up activities be the user looking at the repos and clone a few to research more on their own.
 
