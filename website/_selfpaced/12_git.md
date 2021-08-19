@@ -40,6 +40,8 @@ Re-watch the video from above and replicate the basic steps you see there with s
     * Can you have multiple .gitignore files in your repo?
     * When you add an entry in a .gitignore file, is it recursive? Ie, are all files in the repo that match the entry ignored, or only those in the current directory?  Can you ignore files only in the current directory (not recursive)?
 
+{% include quizzes.html id=9 %}
+
 ### Learn About Git Aliases
 1. Set some aliases in ~/.gitconfig
 1. Find some handy git aliases online.  One of my favorites: <https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs>

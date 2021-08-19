@@ -20,7 +20,9 @@ On May 10th and 12th of 2021 we had an introduction to Python by Prof Lundrigan.
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/sq0_nicEFH8"> </iframe> 
 
 
+{% include quizzes.html id=11 %}
 
+{% include quizzes.html id=12 %}
 
 ## Follow-Up Activities
 
