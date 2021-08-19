@@ -13,7 +13,7 @@ order: 7
 
 One of the goals of the SymbiFlow Project is to get a complete Verilog-to-Bitstream CAD tool flow out to users. The repository currently contains some example circuits in its `xc7/` and `eos-s3/` directories (and these are not necessarily toy circuits!)
 
-Every module page associated with SymbiFlow ([Project X-Ray]((https://byu-cpe.github.io/ComputingBootCamp/tutorials/xray)) , [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/), [bit2fasm](https://byu-cpe.github.io/ComputingBootCamp/tutorials/bit2fasm/), and [fasm2bels](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm2bels/)) have all been integral pieces in the toolchain puzzle. Now, with these examples, everything comes together to show the power of what SymbiFlow can truly do.
+Every module page associated with SymbiFlow (Project X-Ray, FASM, bit2fasm, and fasm2bels) have all been integral pieces in the toolchain puzzle. Now, with these examples, everything comes together to show the power of what SymbiFlow can truly do.
 
 ## Lecture
 
