@@ -9,11 +9,15 @@ order: 6
 
 ## Overview
 
-<!--FASM2BELs (FPGA Assembly to Basic Elements of Logic) is a tool that takes FASM files, generates a file containing techmapped Verilog (the BEL connections) and TCL commands that, if all placed into Vivado, allows for production of an identical bitstream (see the FASM2BELs README.md file below). With the BELs and the TCL commands, if fed through Vivado, an identical bitstream can be produced that would match one generated from the FASM file on its own.-->
+"fasm2bels [(FPGA Assembly to Basic Elements of Logic)] is a tool designed to take a FASM file into Vivado. It does this by generating a file describing the BEL connections (techmapped Verilog) and TCL commands for Vivado which lock the BEL placements. This makes it possible to perform simulation and analysis of a FASM file inside Vivado.
+
+In the absence of bugs, it is expected that after consuming the BEL connections and TCL constraints Vivado will produce a bitstream identical to the bitstream the FASM file would generate." (see the FASM2BELs README.md file below)
 
 ## Install
 
+<!--capnproto java has to be installed first, then rapidwright-->
 
+**The FASM2BELS Installation instructions are currently under construction.**
 
 ## Lecture
 
@@ -41,4 +45,5 @@ Using fasm2bels would be a useful activity because it would:
 * FASM2BELs Github Repository (BYU CCL Fork) - <https://github.com/byuccl/symbiflow-xc-fasm2bels>
 * FASM2BELs Github Repository - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels>
 * FASM2BELs Introduction - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels/blob/master/README.md>
+* How to Install RapidWright - <https://www.rapidwright.io/docs/Automatic_Install.html>
 

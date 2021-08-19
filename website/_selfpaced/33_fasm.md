@@ -64,7 +64,7 @@ Now that the FASM file has been created, it can be examined. In this activity, t
 
     * **Please note**: Unless your memory is large enough, the tools will build the memory from flip flops or LUTRAMs instead of BRAMs. If you want to know how to force the tools to use BRAM instead, pull down the Github [SymbiFlow/prjxray-bram-patch](https://github.com/SymbiFlow/prjxray-bram-patch) Project and look at the Verilog files in the "samples" directory. They each have a directive in them that forces Vivado to use BRAMs, even if the memory they implement is small.
 
-**Hold on to the FASM file you created during this activity. It will be essential for the activities on the FASM2BELs module page.**
+**Hold on to the FASM file you created during this activity. It will be essential for the activities on the bit2fasm and FASM2BELs module pages.**
 
 ## Learn More
 

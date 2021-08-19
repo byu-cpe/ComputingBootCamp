@@ -134,6 +134,6 @@ generate.tcl | Vivado .tcl file for generating the bitfile
 * Project X-Ray Database: XC7 Series - <https://github.com/SymbiFlow/prjxray-db>
 * "Read the Docs" Project X-Ray Documentation (PDF Version) - <https://readthedocs.org/projects/prjxray/downloads/pdf/latest/>
 * Project X-Ray Documentation - <https://symbiflow.readthedocs.io/projects/prjxray/en/latest/>
-    * (Pay particular attention to the first three sections of "Xilinx 7-Series Architecture": Overview, Configuration, and Bistream Format)
+    * (Pay particular attention to the first three sections of "Xilinx 7-Series Architecture": Overview, Configuration, and Bitstream Format)
 * Project X-Ray Fuzzers Documentation -<https://symbiflow.readthedocs.io/en/latest/prjxray/docs/db_dev_process/fuzzers/index.html>
 
