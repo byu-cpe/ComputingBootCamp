@@ -18,8 +18,6 @@ A Matlab SDK (Sofware Development Kit) can be downloaded  <a href="https://softw
 
 ## Intro to Matlab Window
 
-FIXME: Put in short tutorial with pictures explaining what each part of the Matlab window is
-
 <img src = "{% link media/matlab/matlab_window.PNG %}" width="1200">
 
 When first opening Matlab it can be overwhelming to a new user. The key sections of the matlab screen are the folder directory (left), the command window (bottom), the workspace (right), and the editor (middle top). The folder directory is used when accessing a directory of files, which is especially common with large Matlab programs which hold many Matlab scripts which will allow for easy navigation between files. The command window is where one can directly write in Matlab commands and run them. The Workspace is similar to a stack frame as it is an area where local variables are stored for easy access and reuse. The editor is used in creating and editing Matlab scripts.
@@ -49,14 +47,14 @@ the variable is assigned the value (2 + 2) or 4 the same as above, but the outpu
 <img src = "{% link media/matlab/MatlaSemicolon_02.PNG %}" width="1200">
 
 Below are some other helpful commands to be used:
-<a href="https://www.mathworks.com/help/matlab/ref/help.html" target="_blank">help</a>
-<a href="https://www.mathworks.com/help/matlab/ref/clc.html" target="_blank">clc</a>
-<a href="https://www.mathworks.com/help/matlab/ref/close.html" target="_blank">close</a>
-<a href="https://www.mathworks.com/help/matlab/ref/clear.html" target="_blank">clear</a>
+  - <a href="https://www.mathworks.com/help/matlab/ref/help.html" target="_blank">help</a>
+  - <a href="https://www.mathworks.com/help/matlab/ref/clc.html" target="_blank">clc</a>
+  - <a href="https://www.mathworks.com/help/matlab/ref/close.html" target="_blank">close</a>
+  - <a href="https://www.mathworks.com/help/matlab/ref/clear.html" target="_blank">clear</a>
 
 Below are some other helpful resources for beginners to Matlab:
-<a href="http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf" target="_blank">Introduction to Matlab</a>
-<a href="http://www.cs.cmu.edu/~tom/10601_fall2012/recitations/matlab_quickref.pdf" target="_blank">MATLAB Quick Reference</a>
+  - <a href="http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf" target="_blank">Introduction to Matlab</a>
+  - <a href="http://www.cs.cmu.edu/~tom/10601_fall2012/recitations/matlab_quickref.pdf" target="_blank">MATLAB Quick Reference</a>
 
 
 ## Basic plotting
@@ -141,14 +139,39 @@ Try to recreate the following image. (Hint: use `.*` to multiply an element of o
 
 <img src = "{% link media/matlab/matlab_vulture.png %}" width="600">
 
+### Surfaces
+
+[surf](https://www.mathworks.com/help/matlab/ref/surf.html?)(X,Y,Z) produces a 3-D surface with solid face colors.  This function plots the values of matrix Z as a height of a grid on the x-y plane formed by using the `meshgrid` command.  The surface's color changes depending on its height.
+
+The command `colorbar` displays a bar to reference the values of the different colors of the surface, and [axis](https://www.mathworks.com/help/matlab/ref/axis.html)(\[limit\]) can change the axis of the plot.
+
+For example, the commands
+```
+[X,Y] = meshgrid(0:0.1:10,0:2:20);
+Z = sin(X);
+surf(X,Y,Z);
+axis([0 10 -5 25 -2 2]);
+colorbar;
+```
+creates the following surface:
+
+<img src = "{% link media/matlab/matlab_surface.png %}" width="600">
+
+
+#### Try it
+
+Using one of the [other surface and mesh plots](https://www.mathworks.com/help/matlab/surface-and-mesh-plots-1.html), as well as a certain combination of a sine and cosine function produces the following surface:
+
+<img src = "{% link media/matlab/matlab_mattress.png %}" width="600">
+
 
 Learn more about plotting in Matlab:
   - [MathWorks plot Help Center](https://www.mathworks.com/help/matlab/ref/plot.html)
   - [BYU ECEn 240 Matlab Intro](http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf)
   - [Tutorialspoint Matlab Plotting](https://www.tutorialspoint.com/matlab/matlab_plotting.htm)
+  - [Create the MATLAB logo](https://www.mathworks.com/help/matlab/visualize/creating-the-matlab-logo.html)
 
 
-FIXME: add more content
 
 ## Manipulating Matrices
 
@@ -185,57 +208,75 @@ Below are examples of accessing values within a matrix. Think about what the cod
 ```
 You can also manipulate matrices by deleting rows/columns and creating submatrices. To delete a row/column you set it equal to an empty array
 ```
-  a(2,:) = []                            % 1 2 3 4 ; 3 4 5 6 (will be printed vertically)
+  a(2,:) = []                            % 1 2 3 4 ; 3 4 5 6 
 ```
 To create a submatrix you set a new matrix equal to the range of the old matrix you want
 ```
-  new_a1 = a(2:3,1:4)                    % 3 4 5 ; 4 5 6 (will be printed vertically)
+  new_a1 = a(2:3,1:4)                    % 3 4 5 ; 4 5 6 
 ```
 You can also create a new matrix by using lines from previous matrix. The following code will take matrix a and turn it into a 3x3 matrix while using row 2 for the first and last row
 ```
-  new_a2 = a([2,1,3],1:3)                % 2 3 4 ; 1 2 3 ; 2 3 4 (will be printed vertically)
+  new_a2 = a([2,1,2],1:3)                % 2 3 4 ; 1 2 3 ; 2 3 4 
 ```
-## Matrix Operations
+### Try it
+
+Using the following matrix and the commands you just learned, find the following:
+- What are the index of all occurances of the value 2 (ANS: (1,1), (2,3), 3,4))
+- Sum of row 2 and 3 (ANS: [ 5 4 6 3 ])
+- Column 4 multiplied by the value in index (1,2) (ANS: [ 3 ; 1 ; 2 ])
+- Index (3,4) multiplied by the 2x2 matrix in the bottom right corner (ANS: [ 4 2 ; 8 4 ]) 
+- Create a 3x3 submatrix (ANS: [1 4 3 ; 1 2 1 ; 3 4 2 ] - answers may vary)
+- Delete the first column and last row (ANS: [1 4 3 ; 1 2 1 ])
+- Turn the 3x4 matrix into a 4x4 matrix repeating the last row twice (ANS: [ 2 1 4 3 ; 4 1 2 1 ; 1 3 4 2 ; 1 3 4 2 ])
+
+### Matrix Operations
 
 Here are a few commonly used matrix operations. We will use the following matrices in the examples:
 ```
-  a = [ 1 2 3 ; 4 5 6 ; 7 8 9 ]      normal matrix
-  b = [ 5 1 2 ; 4 5 1 ; 2 6 3 ]      normal matrix
-  c = [ 2 -3 1 ; -1 2 0 ; 2 2 1 ]    matrix multiplication (with a) inv and det
+  a = [ 1 2 3 ; 4 5 6 ; 7 8 9 ]
+  b = [ 5 1 2 ; 4 5 1 ; 2 6 3 ]
+  c = [ 2 -3 1 ; -1 2 0 ; 2 2 1 ]
 ```
-  - Addition
+- Addition
 ```
   a + b              % 6 3 5 ; 8 10 7 ; 9 14 12 (will be printed vertically)
 ```
-  - Subtraction
+- Subtraction
 ```
   a - b              % -4 1 1 ; 0 0 5 ; 5 2 6 (will be printed vertically)
 ```
-  - Scalar operations
+- Scalar operations
 ```
   a + 3              % 3 5 6 ; 7 8 9 ; 10 11 12 (will be printed vertically)
   a - 3              % -2 -1 0 ; 1 2 3 ; 4 5 6 (will be printed vertically)
   a * 3              % 3 6 9 ; 12 15 18 ; 21 24 27 (will be printed vertically)
   a / 3              % 0.3333 0.6667 1.0000 ; 1.3333 1.6667 2.0000 ; 2.3333 2.6667 3.0000 (will be printed vertically)
 ```
-  - FIXME: DIVISION
+- Transpose
 ```
-  
+  a'                 % 1 4 7 ; 2 5 8 ; 3 6 9 (will be printed vertically)
 ```
-  - Transpose
+- Concatenate
 ```
-  a                  % 1 4 7 ; 2 5 8 ; 3 6 9 (will be printed vertically)
+  [ a , b ]          % 1 2 3 5 1 2 ; 4 5 6 4 5 1 ; 7 8 9 2 6 3 (will be printed vertically)
+  [ a ; b ]          % 1 2 3 ; 4 5 6 ; 7 8 9 ; 5 1 2 ; 4 5 1 ; 2 6 3 ] (will be printed vertically)
 ```
-  - Concatenate
+- Multiplication 
+```
+  a * c              % 6 7 4 ; 15 10 10 ; 24 13 16 (will be printed vertically)
+```
+- Determinant 
+```
+  det(c)             % -5
+```
+- Inverse
+```
+  inv(c)             % -0.4000 -1.0000 0.4000 ; -0.2000 0 0.2000 ; 1.2000 2.000 -0.2000 (will be printed vertically)
+```
 
-  - Multiplication 
-
-  - Determinant 
-
-  - Inverse
 
 
-### Try it
-
-FIXME: add content
+Learn more about matrices in Matlab:
+  - [Tutorialspoint](https://www.tutorialspoint.com/matlab/index.htm)
+  - [MathWorks Arrays vs Matrices](https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html?)
 

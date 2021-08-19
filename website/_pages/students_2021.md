@@ -20,7 +20,7 @@ title: 2021 Students
 * [Jacob Brown](https://jacobdbrown4.github.io/jacob_brown//pages/log/)
 * [Caden Ellis](https://caden-ellis77.github.io/ImmerseSite/pages/log/)
 * [Jackson Sahleen](https://jacksonsahleen.github.io/IMMERSE_2021_log/)
-* [Josh Hanni]
+* [Josh Hanni](https://joshhanni20.github.io/immersewebsite/pages/log/)
 
 ### Goeders
 * [Brandon Heiner](https://heinerb1.github.io/pages/log/)
