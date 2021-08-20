@@ -72,6 +72,15 @@ $(".help-x").click(function (event) {
   }
 });
 
+// Event listeners for question responses
+$(".matching-response").click(changeclass);
+$(".matching-response").click(function () {
+  matching_check_answer($(this).attr("data-text"), $(this).attr("data-correct"))
+});
+$(".mc-response").click(function() {
+  multiple_choice_check_answer($(this).attr("data-correct"));
+});
+
 // Setup and randomize matching questions
 var leftColSelected = false;
 var rightColSelected = false;
