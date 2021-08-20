@@ -4,6 +4,9 @@
 - key: development
   title: Software Development
 
+- key: hardware
+  title: Hardware
+
 - key: fpga_commercial
   title: Commerical FPGA
 
@@ -21,6 +24,9 @@
 
 - key: broader_impacts
   title: Broader Impacts
+
+- key: badges
+  title: Badges
 
 - key: resources
   title: Resources
