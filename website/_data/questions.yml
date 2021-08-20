@@ -53,5 +53,4 @@
       correct: supress error msgs
     - text: rm -i
       correct: prompt
-
-    
+      
