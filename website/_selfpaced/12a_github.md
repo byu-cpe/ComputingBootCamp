@@ -22,6 +22,9 @@ On April 30, 2021 we had a GitHub Tutorial by Prof Lundrigan. The video is embed
 Here are a few ideas for follow-up activities:
 
 - Start a new repo on GitHub and explore the features
+
+{% include quizzes.html id=10 %}
+
 - Fork an interesting repo
 - Submit a pull request to an open-source project
 
