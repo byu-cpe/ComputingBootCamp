@@ -17,8 +17,7 @@ or store it in their Badgr wallet.
 This guide will explain how to create a badge for new modules/sub-modules as well as giving access to all current badges on the site. Be sure to read all of the sections as the "Existing Badges" section gives alot of context for creating new badges, and might have a badge or two that you were planning on using.
 
 ## Existing Badges
-The BYU Computing Boot Camp already has tons of badge designs that are ready for use. They can be found at the following link, as pngs and as their Adobe Illustrator 
-Project Files: . The png files are ready to be uploaded to Badgr, and the Adobe Illustrator files can be used to edit/create badges. 
+The BYU Computing Boot Camp already has tons of badge designs that are ready for use. They can be found in a private repository owned by the BYUComputingBootCampTests user, as pngs and as their Adobe Illustrator Project Files. The repository is called "badgeDesigns". Contact Daniel Butterfield in Professor Mangelson's lab for access to the username and password to the BYUComputingBootCampTests Github account, so that you can download all of the files. The png files are ready to be uploaded to Badgr, and the Adobe Illustrator files can be used to edit/create badges. 
 
 There is a badge created for almost every module and sub-module currently on the site as of July 2021. For example, the module "Software Development" has it's own module badge that looks like this:
 
@@ -86,7 +85,7 @@ To create a new badge, you are going to need access to Adobe Illustrator, a vect
 The process for creating new badges will vary based on the type of badge you are creating. See the corresponding section for the type of badge you want to create:
 
 #### Creating a mini-badge in a pre-existing module
-To create a new mini-badge in a pre-existing module, you will locate the design files for the previously designed mini-badges in that module and then just use that design as a starting point. First, go to . Here, you'll be able to see .ai files, which is the file format that Adobe Illustrator uses for storing design information. You should see the following files:
+To create a new mini-badge in a pre-existing module, you will locate the design files for the previously designed mini-badges in that module and then just use that design as a starting point. First, log onto GitHub as the BYUComputingBootCampTests user (contact Daniel Butterfield in Professor Mangelson's lab for the username and password), and navigate to the private repository "badgeDesigns". Here, you'll be able to see .ai files, which is the file format that Adobe Illustrator uses for storing design information. You should see the following files:
   
 - CommercialFPGAMiniBadges.ai
 - NetworkingMiniBadges.ai
@@ -165,7 +164,7 @@ Now, all that's left is to upload it to Badgr so that it can be awarded to the s
 #### Creating a mini-badge in a new module
 Since the module is new, this mini-badge will be the first one that you create for it. This means that in addition to doing most of the steps found in the section "Creating a mini-badge in a pre-existing module", you'll have to create a new .ai file and pick a color for the mini-badges of this module.
   
-To start, locate the "CommercialFPGAMiniBadges.ai" file at , and open it up with Adobe Illustrator. You should see a screen that looks like this:
+To start, locate the "CommercialFPGAMiniBadges.ai" file in the "badgeDesigns" repository, and open it up with Adobe Illustrator. You should see a screen that looks like this:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx16.png %}" width="900"/>
   
