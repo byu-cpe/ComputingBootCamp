@@ -1196,12 +1196,37 @@ You'll have to change quite a bit in this file, but you'll probably want to edit
 
 The structure of this file should remain the same, with the Intro, Setup, Problems, Submitting, and Support sections. You'll want to keep this structure the same so that the testing repositories are consistent across the site.
 
+Once you're done with all of these edits, move onto the "Deploying the Repository" section below so that users can start using it.
+
 ## Deploying the Repository
 If you've just finished the "Creating an automated pass-off test" section, and think your repository is ready to go, there are just a few more things you'll need to do to deploy it.
 
 First, DEBUG! Make sure that it actually works, and be sure to test edge cases. While I was making the makeTest repository, there were multiple times where I thought it was fully functional, and then one short test later made me realize how wrong I was.
 
-Second, edit the BYU Computing Boot Camp website so that the corresponding sub-module page has a section that takes the user directly to the testing repository. Use the same format and visual design found on the Make sub-module page on the website (
+Second, fork the BYU Computing Boot Camp repository, and edit the website so that the corresponding sub-module page has a section that takes the user directly to the testing repository. Use the same format and visual design found on the [Make sub-module page](https://byu-cpe.github.io/ComputingBootCamp/tutorials/make/) on the website:
+
+<img src = "{% link media/testDocumentation/TestEx10.png %}" width="900">
+
+Here is the code to make that possible, so copy and edit it for your testing repository.
+```
+## Make Badge
+<a href="https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q"><img src="https://media.badgr.com/uploads/badges/8e853a0b-726b-4101-8cb0-4b299926f19d.png" alt="Make Badge" width="250"/></a>
+
+For those who believe they have mastered Make and Makefiles, we present the Make badge! This badge can be viewed in it's entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). The Make badge can be used to prove your Makefile knowledge to potential employers, educational instutitions, or anyone else! To earn it, you'll have to complete the Make test and use your knowledge to write Makefiles for varying situations. Attempt the Make test and earn the Make badge with the button below!
+
+<div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/makeTest'">
+    <p class="activity-label h3-clone">EARN THE MAKE BADGE</p>
+    <p class="dropdown-arrow h3-clone">&#9654;</p>
+</div>
+
+Good luck to those who attempt the test, and if you pass, congradulations! You are now certified in Make and Makefiles by the BYU Computing Boot Camp.
+```
+
+Be sure to replace all of the links with the proper ones, and make sure to preserve all of the functionallity (hitting the button takes you to the repository, you can see the proper badge image, and if you click on it, it takes you to the Badgr page for the badge.
+
+When you're done editing the BYU Computing Boot Camp website, be sure to submit a Pull Request to the CBC repository so that your changes can actual appear on the website.
+
+Finally, if you've made it this far, CONGRADULATIONS!!!!! Your automated test repository is fully functional and on the CBC website!
 
 ## Future Plans
 Eventually, we'll want to have some sort of pass-off assesement for every sub-module that has a badge. Whether these pass-offs are project-based assessments or code-based assessments is up to you, however, code-based assessments can be preferred where the BYU Computing Boot Camp staff wouldn't want to have to manually check user submissions. I personally believe that we should implement them wherever possible, as the BYU Computing Boot Camp doesn't have active development year-round, and so automatic pass-offs wouldn't be subject to delays as a manual pass-off system would. However, there are some sub-modules where an automatic pass-off just wouldn't be possible or would be ill-suited for the subject matter.
