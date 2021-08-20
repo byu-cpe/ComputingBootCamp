@@ -1106,9 +1106,52 @@ An example use of this code would be `node .cbc/triggerRunForAllPRs.js ${{ secre
 Due to the specific functionality of this javascript file, you'll only really ever want to use it in the triggerPRruns.yml file, in order to avoid creating an infinite loop.
 
 ## Creating an automated pass-off test
-Alright, now it's time to make a completely new pass-off test! I'll walk through it step-by-step as far as I can until we reach a point where you'll have to make edits that are specific to the skill you're trying to assess.
+Alright, now it's time to make a completely new pass-off test! I'll walk through it step-by-step as much as I can, however due to the fact that many of the tests will have to vary significantly according to the subject matter being tested, some sections will be up to your creative vision.
 
-The first step is to make a new repository on GitHub for this new automated pass-off test. Login to GitHub as the BYUComputingBootCampTests user. You can get the email and password from Daniel Butterfield (who is currently working in Professor Mangelson's lab). k
+The first step is to make a new repository on GitHub for this new automated pass-off test. Login to GitHub as the BYUComputingBootCampTests user. You can get the email and password from Daniel Butterfield (who is currently working in Professor Mangelson's lab). Create a new repository, and give it the name of the subject matter being tested, followed by "Test". For example, if I wanted to make an automated test for the Python sub-module, I would name my repository "pythonTest". For the moment, make it private, but just know that you'll have to make it public when you are ready for it to be used.
+
+After creating the repository, copy over the .github and .cbc folders from the makeTest repository into this one, so that you can re-use alot of the same code. However, there are edits that you'll have to make to alot of the files so that it works in this new repository and so that the code stays readable. I'll go through the edits one by one:
+
+### .cbc/addLabel.js 
+To use this file, you'll need to value on line 7 from `makeTest` to the name of the new repository.
+
+### .cbc/badgeAPI.js
+To use this file, you'll need to edit line 3 so that it contains the entity ID of the badge you want to submit. Currently, it states:
+
+```
+var makeBadgeEntityID = 'opPKYN_pQFi6UWl1Q_aT5Q';
+```
+
+If I were editing this for my pythonTest repository, I'd rename this variable to be `pythonBadgeEntityID` and then swap it out with the `makeBadgeEntityID` name throughout the rest of the code. In addition, I'll need to find the entity ID that corresponds to the python badge. To find this out, you can download the badgeAPI.js file onto your local machine, and edit it so that you can run the getBadgeClassInformation() function with the `computingBootCampId` variable as the `issuerID` parameter. Comment out the issueAssertionToTestUser() function. Finally, copy `console.log(JSON.stringify(JSON.parse(xhr.responseText),null,'\t'))` onto line 103 of the code. Now if you run the code, with the username and password for the BYU Computing Boot Camp as parameters (it's the same username and password as the GitHub account, contact Daniel Butterfield in Professor Mangelson's lab for access), you'll get to see information on all of the badges currently in the Badgr issuer.
+
+Find the badge that you want to reward, and then replace the entity ID on line 3 with the entity ID of the badge that you want to reward. If you can't seem to find the badge, then it probably hasn't been added to the Badgr account yet. See the sub-module "How to create a badge" for information on how to add a badge to Badgr.
+
+Make sure that the badgeAPI.js file in the repository only has the change on line 3, and none of the changes that you did to find out the entityID, as we just want this to issue a badge within the repository.
+
+### .cbc/getRepoInfo.js
+To use this file, you'll need to value on line 7 from `makeTest` to the name of the new repository.
+
+### .cbc/makeComment.js
+To use this file, you'll need to value on line 7 from `makeTest` to the name of the new repository.
+
+### .cbc/removeAllLabels.js
+To use this file, you'll need to value on line 7 from `makeTest` to the name of the new repository.
+
+### .cbc/triggerRunForAllPRs.js
+To use this file, you'll need to value on line 7 AND on line 17 from `makeTest` to the name of the new repository.
+
+Remember to change both, or this WILL NOT work.
+
+### .github/workflows/makeTest.yml
+First, you'll probably want to change the name of this file to match your repositories name. For example, if I'm making a pythonTest repository, I'd probably rename it to pythonTest.yml. 
+
+On line 1, change it from `Make Test` to `<repository name> Test`.
+
+This is the point where the changes are up to your creative interpretation and engineering intuition. The testing process will vary drastically depending on the subject matter. For example, the makeTest repository relies alot on running actual make commands in the terminal, and then testing for proper output. If I were to make a pythonTest repository, I'd instead write alot of Python Unit Tests, and have the unit tests assert proper output. The point is that the exact steps will vary significantly. So, to help you with this process, I'll outline which lines of code you'll want to KEEP THE SAME in this file and which ones will have to be replaced with testing lines more specific to your subject material.
+
+You'll want to keep lines 3 through 45, which download all the necessary packages for the javascript files to run correctly, and handle the complicated process of runnning tests on multiple repositories at the same time. I'd highly reccomend you NOT TO TOUCH this code unless you know what you're doing, as this will cause you many hours of frustration and debugging if you don't. Since it works as it is, there isn't any reason to mess with this unless you want to add another `npm install` line or if you know the system well enough to want to improve it.
+
+Lines 46 through 213 are the actual tests, so most (if not all) of this should change. Notice how I segmented this into two sections, a section for question 1 and a section for question 2. You should also do this for each of your questions, as it will keep you sane and stop you from losing your place in the file. Also notice that each testing line is followed by a "Comment" line, which outputs the successful completion of the step to the pull request. You'll have to do this as well, or it can become very difficult for a user to know where their code went wrong. You can use all of the javascript files available in the .cbc folder, any linux terminal commands, and any other tools you can think of as a means to test the user's code, as long as you can trigger it through a command. Be sure to save any additional files that you write to the .cbc folder so that other students can use them in future testing repositories. If you are wondering if it's possible to do something through the workflow files, look it up! Google is your friend if you want to do something that we havent't already implemneted in the .cbc folder
 
 ## Future Plans
 Eventually, we'll want to have some sort of pass-off assesement for every sub-module that has a badge. Whether these pass-offs are project-based assessments or code-based assessments is up to you, however, code-based assessments can be preferred where the BYU Computing Boot Camp staff wouldn't want to have to manually check user submissions. I personally believe that we should implement them wherever possible, as the BYU Computing Boot Camp doesn't have active development year-round, and so automatic pass-offs wouldn't be subject to delays as a manual pass-off system would. However, there are some sub-modules where an automatic pass-off just wouldn't be possible or would be ill-suited for the subject matter.
