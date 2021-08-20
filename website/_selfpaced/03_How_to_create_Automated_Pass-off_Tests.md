@@ -1108,9 +1108,26 @@ Due to the specific functionality of this javascript file, you'll only really ev
 ## Creating an automated pass-off test
 Alright, now it's time to make a completely new pass-off test! I'll walk through it step-by-step as much as I can, however due to the fact that many of the tests will have to vary significantly according to the subject matter being tested, some sections will be up to your creative vision.
 
-The first step is to make a new repository on GitHub for this new automated pass-off test. Login to GitHub as the BYUComputingBootCampTests user. You can get the email and password from Daniel Butterfield (who is currently working in Professor Mangelson's lab). Create a new repository, and give it the name of the subject matter being tested, followed by "Test". For example, if I wanted to make an automated test for the Python sub-module, I would name my repository "pythonTest". For the moment, make it private, but just know that you'll have to make it public when you are ready for it to be used.
+The first step is to make a new repository on GitHub for this new automated pass-off test. Login to GitHub as the BYUComputingBootCampTests user. You can get the email and password from Daniel Butterfield (who is currently working in Professor Mangelson's lab). Create a new public repository, and give it the name of the subject matter being tested, followed by "Test". For example, if I wanted to make an automated test for the Python sub-module, I would name my repository "pythonTest".
 
-After creating the repository, copy over the .github and .cbc folders from the makeTest repository into this one, so that you can re-use alot of the same code. However, there are edits that you'll have to make to alot of the files so that it works in this new repository and so that the code stays readable. I'll go through the edits one by one:
+After creating the repository, copy over the .github and .cbc folders from the makeTest repository into this one, so that you can re-use alot of the same code. Also, copy over the .gitignore file, the email.txt file, and the README.md file. Now, there are edits that you'll have to make to alot of these files so that they work in the new repository. I'll go through the edits one by one:
+
+### Repository Settings/Secrets
+These are the changes that you'll need to make to the repository itself for the workflow files to run at all. 
+
+First, make sure that the branch name of the repository is called "main" instead of "master". Look-up how to change this if it isn't.
+
+Second, go to Settings and make sure that only the "Issues" feature is checked. We don't need the other features, and they might just end up confusing the users.
+
+Third, go to the "Branches" tab on the left and click "Add Rule". Set the branch name pattern as "main" and check the following boxes:
+- Require pull request reviews before merging
+- Require review from Code Owners
+
+This will stop the users from merging pull requests so that the repository can function as designed. However, when you are making edits to the repository, you might want to disable this temporarily to make it easy to push to the repository.
+
+Fourth, go to the "Actions" tab, hit the "Allow all actions" button, and then hit "Save". This will let our workflow files run any action they want to.
+
+Finally, go to the "Secrets" tab. This is where you'll put the username and password for the Badgr account, as well as the authentication token for the GitHub API, so that the Github workflows can use them without them being leaked to the public. Contact Daniel Butterfield in Professor Mangelson's lab for access to the username, password, and auth token. Save the username in a secret called "USERNAME", save the password in a secret called "PASSWORD", and save the auth token in a secret called "AUTH_TOKEN".
 
 ### .cbc/addLabel.js 
 To use this file, you'll need to value on line 7 from `makeTest` to the name of the new repository.
@@ -1151,7 +1168,7 @@ This is the point where the changes are up to your creative interpretation and e
 
 You'll want to keep lines 3 through 45, which download all the necessary packages for the javascript files to run correctly, and handle the complicated process of runnning tests on multiple repositories at the same time. I'd highly reccomend you NOT TO TOUCH this code unless you know what you're doing, as this will cause you many hours of frustration and debugging if you don't. Since it works as it is, there isn't any reason to mess with this unless you want to add another `npm install` line or if you know the system well enough to want to improve it.
 
-Lines 46 through 213 are the actual tests, so most (if not all) of this should change. Notice how I segmented this into two sections, a section for question 1 and a section for question 2. You should also do this for each of your questions, as it will keep you sane and stop you from losing your place in the file. Also notice that each testing line is followed by a "Comment" line, which outputs the successful completion of the step to the pull request. You'll have to do this as well, or it can become very difficult for a user to know where their code went wrong. You can use all of the javascript files available in the .cbc folder, any linux terminal commands, and any other tools you can think of as a means to test the user's code, as long as you can trigger it through a command. Be sure to save any additional files that you write to the .cbc folder so that other students can use them in future testing repositories. If you are wondering if it's possible to do something through the workflow files, look it up! Google is your friend if you want to do something that we havent't already implemneted in the .cbc folder.
+Lines 46 through 213 are the actual tests, so most (if not all) of this should change. Notice how I segmented this into two sections, a section for question 1 and a section for question 2. You should also do this for each of your questions, as it will keep you sane and stop you from losing your place in the file. Also notice that each testing line is followed by a "Comment" line, which outputs the successful completion of the step to the pull request. You'll have to do this as well, or it can become very difficult for a user to know where their code went wrong. You can use all of the javascript files available in the .cbc folder, any linux terminal commands, and any other tools you can think of as a means to test the user's code, as long as you can trigger it through a command. Be sure to save any additional files that you write to the .cbc folder so that other students can use them in future testing repositories. If you want to test specific output without users being able to see it, use a GitHub Secret (as described in the "Repository Settings/Secrets" section above). If you are wondering if it's possible to do something through the workflow files, look it up! Google is your friend if you want to do something that we havent't already implemneted in the .cbc folder. 
 
 Lines 214 through 234 issue the badge to the user, so you'll probably want to leave them just as is.
 
@@ -1159,8 +1176,8 @@ Lines 235 through 308 handle outputting failure messages if any of the testing s
 
 ```
  - name: Failure Comment
-      if: always() && steps.<stepID>.outcome == 'failure'
-      run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} <Error message>
+   if: always() && steps.<stepID>.outcome == 'failure'
+   run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} <Error message>
 ```
 
 So that it triggers on the failure of a certain step, you'll have to give that step an `id:` and then put that id into the `<stepID>` space on the if statement line. To configure the error message outputted, put the message you desire in the `<Error message>` space on the run line.
@@ -1169,7 +1186,22 @@ Lines 310 through 325 handle closing the pull request after testing and giving i
 
 And those are the changes you'll need to make. Be warned, this is the hardest part of making the testing repository. This will proabably take 95% of your total time making the repository, and debugging will be a very necessary step. Be sure to use alternate GitHub accounts to submit multiple pull requests at the same time, and then make sure that the results are as expected. For example, if the user forgets to put their email into email.txt, does the repository realize they forget and output an error, or erroneously state that the user was issued their badge? If the user's code has incorrect output, does the corresponding failure comment get posted? Is the framework for testing repositories working correctly (as in, each repository is getting checked simultaneously and without repeats)? If you're having trouble with the last one, you probably forgot to update some of the .cbc files with the new repository name.
 
-###
+To debug easily, go to the GitHub Actions tab on the repository, navigate to the Trigger PR Test Runs workflow, and hit the "Run Workflow" button. This will allow you to test your workflow files without having to wait 5-20 minutes for it to be triggered automatically. Also, the GitHub Actions tab has all of the results of all of the workflow runs, so you can deep dive into there to see exactly what happened when your workflow file ran, all the way to the exact terminal output. This is very useful. 
+
+### .github/workflows/triggerPRruns.yml
+In this file, no changes are required, but you might want to edit line 21 with the new name of the makeTest.yml file.
+
+### README.md
+You'll have to change quite a bit in this file, but you'll probably want to edit this last, as the contents of this file will depend largely on what edits you make in the other files. If you do this file last, the changes to make will be obvious, but if you do it before some other files, the odds are that you'll have to come back and edit it again after you're done.
+
+The structure of this file should remain the same, with the Intro, Setup, Problems, Submitting, and Support sections. You'll want to keep this structure the same so that the testing repositories are consistent across the site.
+
+## Deploying the Repository
+If you've just finished the "Creating an automated pass-off test" section, and think your repository is ready to go, there are just a few more things you'll need to do to deploy it.
+
+First, DEBUG! Make sure that it actually works, and be sure to test edge cases. While I was making the makeTest repository, there were multiple times where I thought it was fully functional, and then one short test later made me realize how wrong I was.
+
+Second, edit the BYU Computing Boot Camp website so that the corresponding sub-module page has a section that takes the user directly to the testing repository. Use the same format and visual design found on the Make sub-module page on the website (
 
 ## Future Plans
 Eventually, we'll want to have some sort of pass-off assesement for every sub-module that has a badge. Whether these pass-offs are project-based assessments or code-based assessments is up to you, however, code-based assessments can be preferred where the BYU Computing Boot Camp staff wouldn't want to have to manually check user submissions. I personally believe that we should implement them wherever possible, as the BYU Computing Boot Camp doesn't have active development year-round, and so automatic pass-offs wouldn't be subject to delays as a manual pass-off system would. However, there are some sub-modules where an automatic pass-off just wouldn't be possible or would be ill-suited for the subject matter.
