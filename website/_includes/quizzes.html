@@ -4,7 +4,7 @@
     <p class="dropdown-arrow h3-clone">&#9660;</p>
 </div>
 <div class="activity">
-    <p class="item-prompt h2-clone">{{item.prompt}}
+    <p class="item-prompt h2-clone">{{item.prompt | escape}}
         {% if item.help %}
         <i class="fas fa-question-circle help-circle"></i>
         {% endif %}
@@ -17,29 +17,22 @@
     {% if item.type=="multiple_choice" %}
     <ul class="quiz answer-cont">
         {% for response in item.responses %}
-        {% if response.correct %}
-        <li onclick="multiple_choice_check_answer('{{response.correct}}')">{{response.text}}</li>
-        {% else %}
-        <li onclick="multiple_choice_check_answer('{{response.correct}}')">{{response.text}}</li>
-        {% endif %}
+        <li class='mc-response' data-correct='{{response.correct | escape}}'>{{response.text | escape}}</li>
         {% endfor %}
-
     </ul>
     <!-- Matching Setup -->
     {% elsif item.type=="matching" %}
     <div class="matching-cont answer-cont">
         <ul class="quiz matching-col">
             {% for response in item.responses %}
-            <li id='{{response.text}}'
-                onclick="changeclass(); matching_check_answer('{{response.text}}', '{{response.correct}}')">
-                {{response.text}}</li>
+            <li class='matching-response' id='{{response.text | escape}}' data-text='{{response.text | escape}}' data-correct='{{response.correct | escape}}'>
+                {{response.text | escape }}</li>
             {% endfor %}
         </ul>
         <ul class="quiz matching-col">
             {% for response in item.responses %}
-            <li id='{{response.correct}}'
-                onclick="changeclass(); matching_check_answer('{{response.text}}', '{{response.correct}}')">
-                {{response.correct}}</li>
+            <li class='matching-response' id='{{response.correct | escape}}' data-text='{{response.text | escape}}' data-correct='{{response.correct | escape}}'>
+                {{response.correct | escape}}</li>
             {% endfor %}
 
         </ul>
@@ -48,7 +41,7 @@
     <!-- Fillin the Blank Setup -->
     <div class="quiz fillin-cont answer-cont">
         {% for response in item.responses %}
-        <p class="fillin-line" data-blank={{response.correct}}>{{response.text}}</p>
+        <p class="fillin-line" data-blank='{{response.correct | escape}}'>{{response.text | escape}}</p>
         {% endfor %}
     </div>
     {% endif %}
@@ -58,7 +51,7 @@
             <path
                 d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
         </svg>
-        <p class="help-text">{{item.help}}</p>
+        <p class="help-text">{{item.help | escape}}</p>
     </div>
     {% endif %}
 </div>
