@@ -1,14 +1,11 @@
 ---
 layout: page
 toc: false
-title: Badges Development
+title: Badge Development
 slug: badges_dev
 type: badges
 order: 2
 ---
-
-
-# How to Continue Development on the Badges
 
 Badges are one of the core elements of the BYU Computing Boot Camp. They motivate those who use our site to put their newly-learned skills to the test by attempting a 
 pass-off assessment, and acts as evidence of their knowledge after being earned. The badges we issue are OpenBadges, which contain json metadata with cerification 
