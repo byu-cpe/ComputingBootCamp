@@ -1,15 +1,16 @@
 ---
 layout: page
 toc: false
-title: How to create Automated Pass-off Tests
+title: How to create automated pass-off tests
 slug: create_passoff
 type: resources
 ---
 
 In order to award badges, the BYU Computing Boot Camp is currently considering using a mixture of project-based assessments and code-based assessments. 
 
-For project-based assessments, users will create an end-product that will involved using creativity to make something new with the subject taught. This will require these projects to be reviewed by humans, due to the many types of submissions that can be recieved. Staff of the Computing Boot Camp website will review submissions and manually award badges if they believe the project proves that the user has sufficient knowledge in the subject. 
-For code-based assessments, users will be required to create software that conforms to specified instructions, meaning that an automated pass-off test can be used to evaluate the user's work and then award the badge. 
+For project-based assessments, users will create an end-product that will involve using creativity to make something new out of the subject material. This will require these projects to be reviewed by humans due to the many types of submissions that can be recieved. Staff of the Computing Boot Camp website will review submissions and manually award badges if they believe the project proves that the user has sufficient knowledge in the subject. 
+
+For code-based assessments, users will be required to create software that conforms to specified instructions, meaning that an automated pass-off test can be used to evaluate the user's work and then award the badge.
 
 Whether a project-based assessment or a code-based assessment is used to award the badge for a specified sub-module will be up to the discretion of the staff of the BYU Immerse Program.
 
