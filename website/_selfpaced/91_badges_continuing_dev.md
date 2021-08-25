@@ -1,6 +1,6 @@
 ---
 layout: page
-toc: true
+toc: false
 title: Badges Development
 slug: badges_dev
 type: badges
