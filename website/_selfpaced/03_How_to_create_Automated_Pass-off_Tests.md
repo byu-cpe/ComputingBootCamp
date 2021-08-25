@@ -17,7 +17,12 @@ Whether a project-based assessment or a code-based assessment is used to award t
 This guide will attempt to explain how to create an automated pass-off test in order to implement a code-based assessment. This is a complicated guide, and may require a couple of read-throughs for you to fully understand it, so don't lose hope if parts of this are going over your head. In addition, I'm not a perfect writer, so if something doesn't seem to be adding up, a quick Google search should be enough to fill in the gaps.
 
 ## How it works
-First, I want to explain how the Automated Pass-off Tests are currently set up, so that you can understand why we are doing what we are doing. Currently, we are using a GitHub Repository with Github Actions to automated the testing process. The makeTest repository, that is owned by BYUComputingBootCampTests, is a fully functional automated testing repository for the Make Mini-badge. Try it out, see if you can earn the badge! Just reading through the README.md will give you alot of insight into how it works. The link to the repository is here: [BYUComputingBootCampTests/makeTest Repository](https://github.com/BYUComputingBootCampTests/makeTest).
+First, I want to explain how the Automated Pass-off Tests are currently set up, so that you can understand why we are doing what we are doing. Currently, we are using a GitHub Repository with Github Actions to automated the testing process. The makeTest repository, that is owned by BYUComputingBootCampTests, is a fully functional automated testing repository for the Make Mini-badge. Click on the button below to go to the repository and see if you can earn the badge! You can also go there and take a look at the README.md, which should give you a good basic understanding of the setup.
+
+<div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/makeTest'">
+    <p class="activity-label h3-clone">EARN THE MAKE BADGE</p>
+    <p class="dropdown-arrow h3-clone">&#9654;</p>
+</div>
 
 <img src = "{% link media/testDocumentation/TestEx1.png %}" width="900">
 
@@ -25,15 +30,15 @@ Using the makeTest repository as an example, I'll outline the process. First of 
 
 <img src = "{% link media/testDocumentation/TestEx2.png %}" width="900">
 
-You may be wondering, what happens if the pull request gets merged? Wouldn't that potentially mess up the repository? You'd be correct, and for that reason the framework is set up so that the user only needs to submit a pull request, not merge one. The pass-off files will automatically pull the necessary code from the user's pull requestb so that no merging is necessary. In addition, if we allowed merging, users could potentially edit the pass-off tests to cheat the system (more on that later). For this reason, the makeTest repository has settings enabled that don't allow merging without approving reviews from CODEOWNERS (users on GitHub with "ownership" over the code). The CODEOWNERS file, which is always found within a .github folder in a repository, specifies which users own which code. The makeTest repository has deemed the BYUComputingBootCampTests user as a CODEOWNER for all the files in the repository, which effectively means that nothing can be merged without our approval. This stops any malicious activity from users.
+You may be wondering, what happens if the pull request gets merged? Wouldn't that potentially mess up the repository? You'd be correct, and for that reason the framework is set up so that the user only needs to submit a pull request, not merge one. The pass-off files will automatically pull the necessary code from the user's pull request so that no merging is necessary. In addition, if we allowed merging, users could potentially edit the pass-off tests to cheat the system (more on that later). For this reason, the makeTest repository has settings enabled that don't allow merging without approving reviews from CODEOWNERS (users on GitHub with "ownership" over the code). The CODEOWNERS file, which is always found within a .github folder in a repository, specifies which users own which code. The makeTest repository has deemed the BYUComputingBootCampTests user as a CODEOWNER for all the files in the repository, which effectively means that nothing can be merged without our approval. This stops any malicious activity from users.
 
 <img src = "{% link media/testDocumentation/TestEx3.png %}" width="900">
 
-After the user submits their pull request, GitHub Actions comes into play. GitHub Actions allows for automated commands to be run on a machine with the repository's contents. Using this functionallity, we can have the machine execute pass-off code to evaluate the user's code. The actions are triggered by workflow files, that are always stored in the .github/workflows folder in a GitHub repository. If the workflow files aren't present here, you won't be able to use them. The workflow files are set up to run once every 5 minutes (but with delay on GitHub's side, this ends up averaging at around every 20 minutes), and once these files run, they look to see if there are any open pull requests. If there are, they start to work their pass-off magic. 
+After the user submits their pull request, GitHub Actions comes into play. GitHub Actions allows for automated commands to be run on a machine with the repository's contents. Using this functionality, we can have the machine execute pass-off code to evaluate the user's code. The actions are triggered by workflow files, that are always stored in the .github/workflows folder in a GitHub repository. If the workflow files aren't present here, you won't be able to use them. The workflow files are set up to run once every 5 minutes (but with delay on GitHub's side, this ends up averaging to around every 20 minutes), and once these files run, they look to see if there are any open pull requests. If there are, they start to work their pass-off magic. 
 
 <img src = "{% link media/testDocumentation/TestEx4.png %}" width="900">
 
-Because these workflow files are stored within the repository itself, that means that every single user has access to look inside these workflow files and edit them if they so desire. This is what would allow users to "cheat the system" if we allowed merging in our repository. All they would have to do is remove all the pass-off lines of code in the workflow files, and leave the line that submits the badge to them. It's incredibly easy to do. Because of this, we have set up the framework so that the user's submited code and our pass-off code remains seperate at all times (This is why the pass-off tests run on a predetermined schedule instead of triggering on a pull request - triggering on a pull request would cause the user's workflow files to be run, not ours). So, even though it may be a little strange, this is why the user submits a pull request and the makeTeset respository pulls data from the forked repository.
+Because these workflow files are stored within the repository itself, that means that every single user has access to look inside these workflow files and edit them if they so desire. This is what would allow users to "cheat the system" if we allowed merging in our repository. All they would have to do is remove all the pass-off lines of code in the workflow files, and leave the line that submits the badge to them. It's incredibly easy to do. Because of this, we have set up the framework so that the user's submited code and our pass-off code remains seperate at all times (This is why the pass-off tests run on a predetermined schedule instead of triggering on a pull request - triggering on a pull request would cause the user's workflow files to be run, not ours). So, even though it may be a little strange, this is why the user submits a pull request and the respository pulls data from their pull request.
 
 <img src = "{% link media/testDocumentation/TestEx5.png %}" width="1000">
 
@@ -41,13 +46,13 @@ Now, we get into the pass-off magic. There are actually two workflow files that 
 
 <img src = "{% link media/testDocumentation/TestEx6.png %}" width="1000">
 
-The makeTest.yml workflow, which I'll refer to as the Make Test workflow, is what actually tests the user's code. It goes to the specific pull request, grabs the files we want to test, and then uses script commands to do all sorts of things (like build and compile code, run other programs, run linux commands, etc). The Make Test workflow grabs two Makefiles from the user's repository, builds code with them, runs the code and asserts that the output is correct, and then issues the Make Badge. All of this is easily facilitated by javascript files that I have written in the .cbc folder, which the Make Test workflow uses frequently. Finally, the Make Test workflow will issue comments on the pull request throughout the testing process, so that the user can know exactly where they passed and exactly what they messed up.
+The makeTest.yml workflow, which I'll refer to as the "Make Test" workflow, is what actually tests the user's code. It goes to the specific pull request, grabs the files we want to test, and then uses script commands to do all sorts of things (like build and compile code, run other programs, run linux commands, etc). The Make Test workflow grabs two Makefiles from the user's repository, builds code with them, runs the code and asserts that the output is correct, and then issues the Make Badge. All of this is easily facilitated by javascript files that I have written in the .cbc folder, which the Make Test workflow uses frequently. Finally, the Make Test workflow will issue comments on the pull request throughout the testing process, so that the user can know exactly where they passed and exactly what they messed up.
 
 <img src = "{% link media/testDocumentation/TestEx7.png %}" width="900">
 
 That is the entire process! Hopefully it's not too complicated to understand. A similar process can be used for all code-based automated testing repositories that we want to make in the future. And since all of this code is publicly available in the .github and .cbc folders, it will be easy to reuse and adapt to other pass-off drivers.
 
-The big question you may have is "Why do this instead of having a pass-off on the CBC Website? Wouldn't that be easier?" That is an excellent question. The main reason why we aren't doing it on the CBC website is because it doesn't have a back-end. The back-end of a website authenticates user requests and verifies that the user can only access programs that they are authorized to use. Without a back-end, there is no way that we can stop users from running arbitrary javascript to award themselves the badges without any effort. In addition to that reason, using GitHub means we can use their website for hosting these tests, instead of having to build it all ourselves on the CBC website.
+The big question you may have is this: "Why do this instead of having a pass-off on the CBC Website? Wouldn't that be easier?" That is an excellent question. The main reason why we aren't doing it on the CBC website is because it doesn't have a back-end. The back-end of a website authenticates user requests and verifies that the user can only access programs that they are authorized to use. Without a back-end, there is no way that we can stop users from running arbitrary javascript to award themselves the badges without any effort. In addition to that reason, using GitHub means we can use their website for hosting these tests, instead of having to build it all ourselves on the CBC website.
 
 Now that you know how it works and why it's built this way, I will go into the specifics of each file and how they work exactly, so that you can edit these files according to your pleasure, or even create your own.
 
@@ -55,7 +60,7 @@ Now that you know how it works and why it's built this way, I will go into the s
 
 <img src = "{% link media/testDocumentation/TestEx5.png %}" width="1000">
 
-This folder contains all of the files that outline workflows for GitHub Actions and CODEOWNER information for protecting our files. The workflows are contained in the "workflows" folder (and they have to be here to work), and the CODEOWNERS file is in this directory.
+This folder contains all of the files that outline workflows and CODEOWNERS. The workflows are contained in the "workflows" folder (and they have to be here to function properly), and the CODEOWNERS file is in this directory.
 
 #### CODEOWNERS
 The CODEOWNERS file is a file specific to GitHub, and specifies which users on the site are "owners" of code in certain parts of the repository. This doesn't actually make these
@@ -103,20 +108,16 @@ jobs:
 
 I'll try to explain this from the top-down. 
 
-Every workflow file should have a name, that will be shown when the workflow file is run in the Actions tab of the repository. I've named this workflow as the "Trigger PR
-Test Runs" workflow. The syntax for naming is as follows:
+Every workflow file should have a name. This name will be shown when the workflow file is run in the "Actions" tab of the repository. I've named this workflow "Trigger PR
+Test Runs". The syntax for naming is as follows:
 
 `name: <name of workflow>`
 
-Next, the `on:` defines when a workflow will run. See https://docs.github.com/en/actions/reference/events-that-trigger-workflows for information on the specific formatting
-of this part of the yml file. Basically, you can add as many triggers as you want, and triggers can have specific settings (which are denoted by the "-" preceeding them). So,
-in this workflow file, I have two triggers: workflow_dispatch and schedule. workflow_dispatch means that I can manually trigger it whenever I want in the Actions tab, which is
-useful for debugging. schedule means that the workflow will automatically trigger according to a defined timetable. The line after "schedule:" that says
+Next, the `on:` defines when a workflow will run. See [GitHub Docs - Events that trigger workflows](https://docs.github.com/en/actions/reference/events-that-trigger-workflows) for information on the specific formatting of this part of the yml file. Basically, you can add as many triggers as you want, and triggers can have specific settings (which are denoted by the "-" and listed after the specific setting). So, in this workflow file, I have two triggers: workflow_dispatch and schedule. workflow_dispatch means that I can manually trigger it at any time, which is useful for debugging. schedule means that the workflow will automatically trigger according to a defined timetable. The line after "schedule:" that says
 
-`cron: '0/5 * * * *`
+`- cron: '0/5 * * * *`
 
-defines the specific timetable that the workflow will run at. See https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events for information on
-the syntax of the "cron" setting. This cron means that the workflow should run every 5 minutes (however, with GitHub's delay, this ends up being around 20 minutes on average).
+defines the specific timetable that the workflow will run at. See [GitHub Docs - Events that trigger workflows](https://docs.github.com/en/actions/reference/events-that-trigger-workflows) for information on the syntax of the "cron" setting. This cron tells GitHub that the workflow should run every 5 minutes (however, with GitHub's delay, this ends up being around 20 minutes on average).
 
 Next, are the jobs, or tasks that the workflow will run. 
 
@@ -131,7 +132,7 @@ In this workflow file, I only have one job called "triggerRuns".
 
 This line tells GitHub Actions that I want the following job to be run on the latest Ubuntu version available.
 
-Now, we get to all of the steps, or specific actions, that the job will do. Defining steps uses the following syntax:
+Now, we get to the steps, or specific actions, that the job will do. Steps can be defined using the following syntax:
 
 ```
 steps:
@@ -143,19 +144,17 @@ steps:
     ...
 ```
  
-All of these options are techincally optional, but you need to have at least one of them for a step that actually does something (and for the workflow to properly compile). For all of the options you can define on a step, see the following documentation: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idsteps. 
+All of these lines are technically optional, but you need to have at least one of them for a step to actually do something (and for the workflow to properly compile). For all of the options you can use in a step, see the following documentation: [GitHub Docs - jobs.<job_id>.steps](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idsteps). 
 
 `name:` defines the name of the step to use on GitHub.
 
-`id:` gives the step an id value, by which other steps can refer to this step, and recieve it's output.
+`id:` gives the step an id value, by which other steps can refer to this step and recieve its output.
 
-`uses:` tells the step to run a pre-built action, that can make our lives alot easier. For example `uses: actions/setup-node@v2.1.5` will automatically install Node.js onto the
-machine.
+`uses:` tells the step to run a pre-built action, which is basically code that someone else has already built to accomplish a certain task. This can make our lives alot easier. For example `uses: actions/setup-node@v2.1.5` will automatically install Node.js onto the machine.
 
-`run:` tells the step to run the following Bash script commands.
+`run:` tells the step to run the following bash script commands.
 
-You can have as many steps as you want in a job, and they can all work together to pull off basically anything you want. I'll now explain the specific steps that I have in
-the Trigger PR Test Runs workflow:
+You can have as many steps as you want in a job. I'll now explain the specific steps that I have in the Trigger PR Test Runs workflow:
 
 ```
 - name: Checkout Repository
@@ -169,7 +168,7 @@ This step downloads the repository onto the ubuntu machine.
   uses: actions/setup-node@v2.1.5
 ```
 
-This step set-up node.js on the ubuntu machine for running javascript files.
+This step sets up Node.js on the ubuntu machine for running javascript files.
 
 ```
 - name: Install octokit/core.js
@@ -183,8 +182,8 @@ This step installs octokit/core.js, so we can make API calls to the GitHub API u
   run: node .cbc/triggerRunForAllPRs.js ${{ secrets.AUTH_TOKEN }}   
 ```
 
-This step runs my custom triggerRunForAllPRs.js file, that uses API requests to the GitHub API to trigger a pass-off test for each open PR in the repository. Note the `${{ secrets.AUTH_TOKEN }}`. This tells GitHub Actions to replace this section with the variable value contained in secrets.AUTH_TOKEN. For the javascript file to sucessfully make
-API calls, it needs an authorized token for the BYUComputingBootCamp 
+This step runs my custom triggerRunForAllPRs.js file, that uses API requests to the GitHub API to trigger a pass-off test for each open PR in the repository. Note the `${{ secrets.AUTH_TOKEN }}`. This tells GitHub Actions to replace this section with the variable value contained in secrets.AUTH_TOKEN. For the javascript file to successfully make
+API calls, it needs an authorized token for the BYUComputingBootCampTests user.
 
 As you can see, this workflow doesn't actually trigger any tests directly. Rather, it just sets up the necessary infrastructure to call a javascript file, which handles
 the pass-off triggering.
