@@ -103,7 +103,7 @@ jobs:
       run: npm install @octokit/core
 
     - name: Trigger makeTest.yml for each PR
-      run: node .cbc/triggerRunForAllPRs.js ${{ secrets.AUTH_TOKEN }}   
+      run: node .cbc/triggerRunForAllPRs.js ${ secrets.AUTH_TOKEN }   
 ```
 
 I'll try to explain this from the top-down. 
@@ -179,11 +179,13 @@ This step installs octokit/core.js, so we can make API calls to the GitHub API u
 
 ```
 - name: Trigger makeTest.yml for each PR
-  run: node .cbc/triggerRunForAllPRs.js ${{ secrets.AUTH_TOKEN }}   
+  run: node .cbc/triggerRunForAllPRs.js ${ secrets.AUTH_TOKEN }  
 ```
 
-This step runs my custom triggerRunForAllPRs.js file, that uses API requests to the GitHub API to trigger a pass-off test for each open PR in the repository. Note the `${{ secrets.AUTH_TOKEN }}`. This tells GitHub Actions to replace this section with the variable value contained in secrets.AUTH_TOKEN. For the javascript file to successfully make
+This step runs my custom triggerRunForAllPRs.js file, that uses API requests to the GitHub API to trigger a pass-off test for each open PR in the repository. Note the `${ secrets.AUTH_TOKEN }`. This tells GitHub Actions to replace this section with the variable value contained in secrets.AUTH_TOKEN. For the javascript file to successfully make
 API calls, it needs an authorized token for the BYUComputingBootCampTests user.
+
+(IMPORTANT NOTICE: For the statement `${ secrets.AUTH_TOKEN }`, the single curly brackets should actually be DOUBLE curly brackets. Throughout this entire guide, all matching double curly brackets have been replaced with single curly brackets so that they aren't automatically replaced by markdown or HTML. But they are actually double curly brackets in the workflow files, so be sure to use double curly brackets when editing them)
 
 As you can see, this workflow doesn't actually trigger any tests directly. Rather, it just sets up the necessary infrastructure to call a javascript file, which handles
 the pass-off triggering.
@@ -236,7 +238,7 @@ used to make API requests to the GitHub API, and xmlhttprequest is used to make 
 
 ```
 - name: Get a Pull Request's Repo Name that isn't already being checked
-  run: node .cbc/getRepoInfo.js ${{ secrets.AUTH_TOKEN }} full_name > repo.txt
+  run: node .cbc/getRepoInfo.js ${ secrets.AUTH_TOKEN } full_name > repo.txt
 
 - name: Save Repository name as Output Variable
   id: repo
@@ -257,7 +259,7 @@ For information on how to use the `juliangruber/read-file-action@v1` action, see
 
 ```
 - name: Get the Pull Request's Number
-  run: node .cbc/getRepoInfo.js ${{ secrets.AUTH_TOKEN }} number > number.txt
+  run: node .cbc/getRepoInfo.js ${ secrets.AUTH_TOKEN } number > number.txt
 
 - name: Save Repository Number as Output Variable
   id: number
@@ -270,11 +272,11 @@ This is the same as the last two steps, except it gets the number of the pull re
 
 ```
 - name: Add "currentlyBeingChecked" label
-  run: node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} currentlyBeingChecked
+  run: node .cbc/addLabel.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } currentlyBeingChecked
 ```
 
 This step calls a javascript file that adds the label "currentlyBeingChecked" to the pull request. This allows the getRepoInfo.js code to tell if a pull request is already
-being tested so that it doesn't test a user's code twice, or miss a pull request. Notice that the javascript file takes in the number of the pull request, through the variable `${{ steps.number.outputs.content }}`. The `steps.number` finds the step with the id of "number", and the `.outputs.content` gets the output of that action (which is the number of the pull request.
+being tested so that it doesn't test a user's code twice, or miss a pull request. Notice that the javascript file takes in the number of the pull request, through the variable `${ steps.number.outputs.content }`. The `steps.number` finds the step with the id of "number", and the `.outputs.content` gets the output of that action (which is the number of the pull request.
 
 For information on how to use the "addLabel.js" file, see the section with the same name below.
 
@@ -282,15 +284,15 @@ For information on how to use the "addLabel.js" file, see the section with the s
   #Problem 1 Testing
 - name: Get Make File for Problem 1
   id: getMakeFile1
-  run: node .cbc/getFile.js ${{ secrets.AUTH_TOKEN }} ${{ steps.repo.outputs.content }} MakeFiles/MakeFile1.txt > Makefile
+  run: node .cbc/getFile.js ${ secrets.AUTH_TOKEN } ${ steps.repo.outputs.content } MakeFiles/MakeFile1.txt > Makefile
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt found"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile1.txt found"
 ```
 
 Now, we start the actual testing of the files. Since the pull request has been labeled, we can be confident that no other makeTest.yml workflow will start to test this pull request.
 
-The first step above calls a javascript file that downloads a file from the forked repository and saves it onto our machine for testing. The `MakeFiles/MakeFile1.txt` is the file designated for the first problem, so we should find a functional Makefile there. Notice that the javascript file takes in the name of the forked repository through the variable `${{ steps.repo.outputs.content }}`. This is the same as `${{ steps.number.outputs.content }}` from before, however changing `number` to `repo` tells GitHub Actions to get the output of the step with the id of "repo" instead of "number".
+The first step above calls a javascript file that downloads a file from the forked repository and saves it onto our machine for testing. The `MakeFiles/MakeFile1.txt` is the file designated for the first problem, so we should find a functional Makefile there. Notice that the javascript file takes in the name of the forked repository through the variable `${ steps.repo.outputs.content }`. This is the same as `${ steps.number.outputs.content }` from before, however changing `number` to `repo` tells GitHub Actions to get the output of the step with the id of "repo" instead of "number".
 
 The second step calls a javascript file that leaves a comment on the pull request that says "Makefile1.txt found". It uses the number of the pull request to do so. Note that if the previous step failed because `MakeFiles/MakeFile1.txt` didn't exist, then this step won't run because the GitHub Action will have already terminated. At the end of the workflow are steps that will output an error comment on the pull request if certain steps fail. For example, if the first step above fails, a step found later in the workflow will output "Error - No Makefile1.txt found". This setup makes it easy for the user to see what went wrong with their code.
 
@@ -302,7 +304,7 @@ For information on how to use the "addLabel.js" file or the "makeComment.js" fil
   run: make
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt ran"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile1.txt ran"
 ```
 
 The first step above simply runs the make command, to see if the user's Makefile will run.
@@ -315,7 +317,7 @@ The second step leaves a comment on the pull request, just like in the previous 
   run: ./tree > output.log
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Problem 1 tree executable ran"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Problem 1 tree executable ran"
 ```
 
 This step tries to run the executable that the `make` command should have generated, and saves it's output to a file called "output.log".
@@ -332,15 +334,15 @@ This step tries to run the executable that the `make` command should have genera
   uses: therussiankid92/gat@v1.5
   with:
     assertion: should.equal
-    actual: ${{ steps.output.outputs.content }}
-    expected: ${{ secrets.PROGRAM_OUTPUT }}
+    actual: ${ steps.output.outputs.content }
+    expected: ${ secrets.PROGRAM_OUTPUT }
     
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Problem 1 tree executable output is correct"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Problem 1 tree executable output is correct"
 ```
 
 The first step above uses the `juliangruber/read-file-action@v1` action to save the contents of the output.log file as an output of the "output" step. The second step uses
-an new action called `therussiankid02/gat@v1.5` to assert that the contents of the output match the problem specifications (which can be found in the README.md file). The variable `${{ steps.output.outputs.content }}` holds the actual output, while the GitHub secret `${{ secrets.PROGRAM_OUTPUT }}` holds the expected output. See the section "Repository Settings/Secrets" below for documentation on how to set the values of GitHub secrets.
+an new action called `therussiankid02/gat@v1.5` to assert that the contents of the output match the problem specifications (which can be found in the README.md file). The variable `${ steps.output.outputs.content }` holds the actual output, while the GitHub secret `${ secrets.PROGRAM_OUTPUT }` holds the expected output. See the section "Repository Settings/Secrets" below for documentation on how to set the values of GitHub secrets.
 
 For information on how to use the `therussiankid92/gat@v1.5` action, see [Github Action Test Automation (Gat) - GitHub Marketplace](https://github.com/marketplace/actions/github-action-test-automation).
 
@@ -350,7 +352,7 @@ For information on how to use the `therussiankid92/gat@v1.5` action, see [Github
   run: make clean
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt clean function ran"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile1.txt clean function ran"
 ```
 
 This step runs `make clean` in the directory.
@@ -373,11 +375,11 @@ This step runs `make clean` in the directory.
   uses: therussiankid92/gat@v1.5
   with:
     assertion: should.equal
-    actual: ${{ steps.find.outputs.content }}
+    actual: ${ steps.find.outputs.content }
     expected: Found?
     
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt clean function deleted the tree executable"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile1.txt clean function deleted the tree executable"
 ```
 
 The first step above runs a command that outputs "Found? Yes" if the tree executable was found, or just "Found?" if the tree executable wasn't found. The `continue-on-error: true` line causes the workflow to continue to run even if this step throws an error. Since we DON'T want to find the file (the `make clean` command should have deleted it), this allows us to ignore the error thrown when the file isn't found. The `run |` allows us to run multiple linux commands in one step, instead of just being restricted to one.
@@ -390,7 +392,7 @@ The second and third steps assert that the output of the first step matches the 
   run: node .cbc/assertDoesNotContain.js Makefile "$,@,<,%,="
     
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile1.txt doesn't contain Variables, Automatic Variables, Pattern Matching, or Makefile Functions"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile1.txt doesn't contain Variables, Automatic Variables, Pattern Matching, or Makefile Functions"
 ```
 
 This step calls a javascript file to check that the Makefile doesn't have the characters $, @, <, %, or = in it. Since these characters are used in Makefiles to create variables, automatic variables, pattern matching, or Makefile Functions, this step verifies that the user followed the specifications in the README.md to not use those features.
@@ -401,24 +403,24 @@ For information on how to use the "assertDoesNotContain.js" file, see the sectio
   #Problem 2 Testing
 - name: Get Make File for Problem 2
   id: getMakeFile2
-  run: node .cbc/getFile.js ${{ secrets.AUTH_TOKEN }} ${{ steps.repo.outputs.content }} MakeFiles/MakeFile2.txt > Makefile
+  run: node .cbc/getFile.js ${ secrets.AUTH_TOKEN } ${ steps.repo.outputs.content } MakeFiles/MakeFile2.txt > Makefile
   
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2.txt found"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile2.txt found"
     
 - name: Run Make
   id: runMake2
   run: make
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2.txt ran"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile2.txt ran"
 
 - name: Run program
   id: runProgram2
   run: ./tree > output.log
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Problem 2 tree executable ran"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Problem 2 tree executable ran"
 
 - name: Read Output
   id: output2
@@ -431,11 +433,11 @@ For information on how to use the "assertDoesNotContain.js" file, see the sectio
   uses: therussiankid92/gat@v1.5
   with:
     assertion: should.equal
-    actual: ${{ steps.output2.outputs.content }}
-    expected: ${{ secrets.PROGRAM_OUTPUT }}
+    actual: ${ steps.output2.outputs.content }
+    expected: ${ secrets.PROGRAM_OUTPUT }
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Problem 2 tree executable output is correct"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Problem 2 tree executable output is correct"
 ```
 
 These steps do the same thing with `MakeFiles/MakeFile2.txt` as what has been done previously with `MakeFiles/MakeFile1.txt`. If you don't understand these lines, go back to their explanations earlier in this guide.
@@ -443,10 +445,10 @@ These steps do the same thing with `MakeFiles/MakeFile2.txt` as what has been do
 ```
 - name: Assert compiled.txt contains all files used
   id: assertCompiled
-  run: node .cbc/assertContains.js compiled.txt ${{ secrets.COMPILED_TXT }}
+  run: node .cbc/assertContains.js compiled.txt ${ secrets.COMPILED_TXT }
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "compiled.txt contains proper file names"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "compiled.txt contains proper file names"
 ```
 
 This step uses a javascript file to make sure that the complied.txt file contains the file names that it should. Asserting proper output with GitHub secrets can be a extremely difficult when the output has multliple lines or newlines in it, so using the javascript file here allows us to easily assert a multi-lined output.
@@ -459,7 +461,7 @@ For information on how to use the "assertContains.js" file, see the section with
   run: make clean
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2.txt clean function ran"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile2.txt clean function ran"
 
 - name: Check that Files are gone
   continue-on-error: true
@@ -479,11 +481,11 @@ For information on how to use the "assertContains.js" file, see the section with
   uses: therussiankid92/gat@v1.5
   with:
     assertion: should.equal
-    actual: ${{ steps.find2.outputs.content }}
+    actual: ${ steps.find2.outputs.content }
     expected: Found?
     
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2.txt clean function deleted the tree executable, compiled.txt, and .o files"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile2.txt clean function deleted the tree executable, compiled.txt, and .o files"
 ```
 
 These steps make sure that the `make clean` command works, as explained previously.
@@ -494,14 +496,14 @@ These steps make sure that the `make clean` command works, as explained previous
   run: node .cbc/assertContains.js Makefile "%.o:"
 
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2txt contains a %.o rule"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile2txt contains a %.o rule"
 
 - name: Assert no "main", "leaves", "Leaves", "roots", "Roots", "branches", or "Branches" found in Makefile2.txt
   id: assertNoClassNames
   run: node .cbc/assertDoesNotContain.js Makefile "main,leaves,Leaves,roots,Roots,branches,Branches"
     
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Makefile2txt doesn't have main, leaves, Leaves, roots, Roots, branches, or Branches in it"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Makefile2txt doesn't have main, leaves, Leaves, roots, Roots, branches, or Branches in it"
 ```
 
 These steps assert that `MakeFiles/MakeFile2.txt` follow the specifications for problem #2.
@@ -512,7 +514,7 @@ This is the end of the pass-off tests. If the user's code has made it this far w
   #Issue Badge  
 - name: Get email.txt
   id: getEmail
-  run: node .cbc/getFile.js ${{ secrets.AUTH_TOKEN }} ${{ steps.repo.outputs.content }} email.txt > email.txt
+  run: node .cbc/getFile.js ${ secrets.AUTH_TOKEN } ${ steps.repo.outputs.content } email.txt > email.txt
 
 - name: Save Email as Output Variable
   id: userEmail
@@ -521,7 +523,7 @@ This is the end of the pass-off tests. If the user's code has made it this far w
     path: email.txt
     
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Email found - ${{ steps.userEmail.outputs.content }}"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Email found - ${ steps.userEmail.outputs.content }"
 ```
 
 These steps get the email.txt file from the user's forked repository, and save it as an output variable. The comment outputs the email that was found, so that the
@@ -530,10 +532,10 @@ user can easily see if they had a typo in their email or forgot to enter it.
 ```
 - name: Issue Badge
   id: issueBadge
-  run: node .cbc/badgeAPI.js ${{secrets.USERNAME}} ${{secrets.PASSWORD}} ${{ steps.userEmail.outputs.content }}
+  run: node .cbc/badgeAPI.js ${secrets.USERNAME} ${secrets.PASSWORD} ${ steps.userEmail.outputs.content }
     
 - name: Comment
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Badge Issued. Congraduations!"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Badge Issued. Congraduations!"
 ```
 
 This step uses a javascript file to call the Badgr API and issue a badge to the user's email found in a previous step. The javascript file takes in the username and password of the BYU Computing Boot Camp Test's Badgr account in order to get authorization to issue the badge. Note that if the user's email is invalid, this step will throw an error, and the user won't recieve the badge. However, if the email is valid, but isn't the user's email, Badgr will still issue the badge to that email.
@@ -544,77 +546,77 @@ For information on how to use the "badgeAPI.js" file, see the section with the s
   #Failure Output for Problem 1
 - name: Failure Comment
   if: always() && steps.getMakeFile1.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - No Makefile1.txt found"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - No Makefile1.txt found"
 
 - name: Failure Comment
   if: always() && steps.runMake.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile1.txt didn't run"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile1.txt didn't run"
     
 - name: Failure Comment
   if: always() && steps.runProgram.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Problem 1 tree executable crashed"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Problem 1 tree executable crashed"
     
 - name: Failure Comment
   if: always() && steps.properOutput.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Problem 1 tree executable output was incorrect"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Problem 1 tree executable output was incorrect"
     
 - name: Failure Comment
   if: always() && steps.makeClean.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile1.txt clean didn't run"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile1.txt clean didn't run"
     
 - name: Failure Comment
   if: always() && steps.fileGone.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile1.txt clean didn't delete the tree executable"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile1.txt clean didn't delete the tree executable"
 
 - name: Failure Comment
   if: always() && steps.assertNoVariables.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile1.txt has Variables, Automatic Variables, Pattern Matching, or Makefile Functions"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile1.txt has Variables, Automatic Variables, Pattern Matching, or Makefile Functions"
 
   #Failure Output for Problem 2
 - name: Failure Comment
   if: always() && steps.getMakeFile2.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - No Makefile2.txt found"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - No Makefile2.txt found"
 
 - name: Failure Comment
   if: always() && steps.runMake2.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2.txt didn't run"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile2.txt didn't run"
 
 - name: Failure Comment
   if: always() && steps.runProgram2.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Problem 2 tree executable crashed"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Problem 2 tree executable crashed"
 
 - name: Failure Comment
   if: always() && steps.properOutput2.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Problem 2 tree executable output was incorrect"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Problem 2 tree executable output was incorrect"
 
 - name: Failure Comment
   if: always() && steps.assertCompiled.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - compiled.txt doesn't exist, or doesn't contain all files used"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - compiled.txt doesn't exist, or doesn't contain all files used"
     
 - name: Failure Comment
   if: always() && steps.makeClean2.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2.txt clean didn't run"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile2.txt clean didn't run"
 
 - name: Failure Comment
   if: always() && steps.fileGone2.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2.txt clean didn't delete the tree executable, compiled.txt, or all of the .o files"\
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile2.txt clean didn't delete the tree executable, compiled.txt, or all of the .o files"\
 
 - name: Failure Comment
   if: always() && steps.assertORule.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2txt doesn't contain a %.o rule"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile2txt doesn't contain a %.o rule"
 
 - name: Failure Comment
   if: always() && steps.assertNoClassNames.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Makefile2txt contains main, leaves, Leaves, roots, Roots, branches, or Branches"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Makefile2txt contains main, leaves, Leaves, roots, Roots, branches, or Branches"
 
   #Failure Output for Issue Badge
 - name: Failure Comment
   if: always() && steps.getEmail.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - No email.txt found"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - No email.txt found"
 
 - name: Failure Comment
   if: always() && steps.issueBadge.outcome == 'failure'
-  run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} "Error - Badge issue failed - Email Address wasn't valid"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Badge issue failed - Email Address wasn't valid"
 ```
 
 These steps handle failure output when one of the previous steps fails. They use the javascript file "makeComment.js" to make this comment on the pull request. The line `if: always() %% steps.<idOfStep>.outcome == 'failure'` is key to the functionality of these steps. We want an error message to be output when a step crashes or throws an error. However, default behavior for workflow files is that the entire workflow terminates after an error is thrown. To get around this, we use `if: always()`, which means that the step will run even if a previous step threw an error. However, we don't want every error message to print when the workflow file terminates prematurely, just one. For this reason, the `always()` is anded with `steps.<idOfStep>.outcome == 'failure'`. This means that the step will only run if it's corresponding step is the one that threw the error. Just replace `<idOfStep>` with the id of the step that corresponds to it. This allows us to outline all of the error messages in order and in an easy to read manner.
@@ -625,7 +627,7 @@ These steps handle failure output when one of the previous steps fails. They use
   if: always()
   uses: peter-evans/close-pull@v1
   with:
-    pull-request-number:  ${{ steps.number.outputs.content }}
+    pull-request-number:  ${ steps.number.outputs.content }
     comment: Auto-closing pull request after submission
     delete-branch: false
 ```
@@ -635,11 +637,11 @@ This step closes the pull request that was just tested, so that a future workflo
 ```
 - name: Remove Previous Labels
   if: always()
-  run: node .cbc/removeAllLabels.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }}
+  run: node .cbc/removeAllLabels.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content }
       
 - name: Add "checkComplete" label
   if: always()
-  run: node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} checkComplete
+  run: node .cbc/addLabel.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } checkComplete
 ```
 
 These steps use javascript to remove all of the labels on the pull request and add the "checkComplete" label to it, so that the user can tell that their pull request was tested.  Again, notice that we use `if: always()` here.
@@ -688,7 +690,7 @@ Usage: `node  .cbc/addLabel.js <authToken> <pullRequestNumber> <nameOfLabelToAdd
 
 This file requires the @octokit/core package in order to send API requests to GitHub. This is why `npm install @octokit/core` needs to be run in the workflow. It also contains a function called addLabel, which uses an API call to add a label to the pull request with the corresponding number. The file takes 3 parameters, an authentication token for authorizing edits to the repository (authToken), the number of the pull request we want to edit (issueNumber), and the name of the label that we want to add (labelToAdd).
 
-An example use of this code would be `node .cbc/addLabel.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} checkComplete`. This would add the "checkComplete" label to the pull request with the number specified.
+An example use of this code would be `node .cbc/addLabel.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } checkComplete`. This would add the "checkComplete" label to the pull request with the number specified.
 
 #### assertContains.js
 The assertContains.js file contains the following code:
@@ -910,7 +912,7 @@ The file requires xmlhttprequest in order to send API calls to Badgr. It contain
 
 The code currently only uses `getAuthenticationToken()` and `issueAssertionToTestUser()` to get an authentication token and issue a badge to the user. If it fails, it will throw an error so that the GitHub Actions workflow terminates and the user is notified that they didn't recieve the badge. It takes in three parameters, the username of the Computing Boot Camp's Badgr account, the corresponding password, and the email of the user that should recieve the badge. If any of these are missing, the file will throw an error.
 
-An example use of this code would be `node .cbc/badgeAPI.js ${{secrets.USERNAME}} ${{secrets.PASSWORD}} fakeEmail@fake.com`. This would use the username and password stored in GitHub secrets, and if they were valid, it would issue the Make badge to "fakeEmail@fake.com".
+An example use of this code would be `node .cbc/badgeAPI.js ${secrets.USERNAME} ${secrets.PASSWORD} fakeEmail@fake.com`. This would use the username and password stored in GitHub secrets, and if they were valid, it would issue the Make badge to "fakeEmail@fake.com".
 
 #### getFile.js
 The getFile.js file contains the following code:
@@ -941,7 +943,7 @@ Usage: `node .cbc/getFile.js <authToken> <repoInfo> <filePath>`
 
 This code requres the @octokit/core package in order to send API calls to GitHub. It has a function called getFile() that downloads the file at "filePath" from the repository that corresponds with the information provided in "repoInfo". The code takes three parameters, the authentication token for the API call, the repository info that is formatted as `ownerName/repoName`, and the file path of the file you want to download inside that repository.
 
-An example use of this code would be `node .cbc/getFile.js ${{ secrets.AUTH_TOKEN }} BYUComputingBootCampTests/makeTest .github/CODEOWNERS"`. This would download the file "CODEOWNERS" in the ".github" folder from the repository "makeTest" owned by "BYUComputingBootCampTests".
+An example use of this code would be `node .cbc/getFile.js ${ secrets.AUTH_TOKEN } BYUComputingBootCampTests/makeTest .github/CODEOWNERS"`. This would download the file "CODEOWNERS" in the ".github" folder from the repository "makeTest" owned by "BYUComputingBootCampTests".
 
 #### getRepoInfo.js
 The getRepoInfo.js file contains the following code:
@@ -992,7 +994,7 @@ Usage: `node .cbc/getRepoInfo.js <authToken> <infoNeeded>`
 
 This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called getRepoInfo() that gets a list of all the open pull requests. The function then finds the first open pull request that doesn't have the "currentlyBeingChecked" label, and then returns either the full name of the repository (formatted as ownerName/repoName) or the number of the pull request, depending on the infoNeeded parameter ("full_name" causes the name to be returned, while anything else causes the number to be returned). This file takes two parameters, an authentication token for the API calls, and a string that defines which information should be returned.
 
-An example use of this code would be `node .cbc/getRepoInfo.js ${{ secrets.AUTH_TOKEN }} full_name`. This would output the full name of the repository that corresponds to the first open pull request without the label "currentlyBeingChecked".
+An example use of this code would be `node .cbc/getRepoInfo.js ${ secrets.AUTH_TOKEN } full_name`. This would output the full name of the repository that corresponds to the first open pull request without the label "currentlyBeingChecked".
 
 #### makeComment.js
 The makeComment.js file contains the following code:
@@ -1024,7 +1026,7 @@ Usage: `node .cbc/makeComment.js <authToken> <pullRequestNumber> <commentToPost>
 
 This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called makeComment() that leaves a specified comment on a pull request in the BYUComputingBootCampTests/makeTest repository that corresponds to the issue number. This code takes three parameters, an authentication token for API calls, the issue number of the pull request, and the comment that you want posted.
 
-An example use of this code would be `node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} 9 "BYU was here"`. This would leave the comment "BYU was here" on the pull request with the issue number 9 in the BYUComputingBootCampTests/makeTest repository.
+An example use of this code would be `node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } 9 "BYU was here"`. This would leave the comment "BYU was here" on the pull request with the issue number 9 in the BYUComputingBootCampTests/makeTest repository.
 
 #### removeAllLabels.js
 The removeAllLabels.js file contains the following code:
@@ -1053,7 +1055,7 @@ Usage: `node .cbc/removeAllLabels.js <authToken> <pullRequestNumber>`
 
 This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called deleteAllLabels() that simply removes any labels that are on the pull request with the corresponding issue number (in the makeTest repository). This codes takes two parameters, an authetication token for sending API calls, and the issue number of the pull request.
 
-An example use of this code would be `node .cbc/removeAllLabels.js ${{ secrets.AUTH_TOKEN }} 9"`. This would remove all labels on the pull request with the issue number 9 in the BYUComputingBootCampTests/makeTest repository.
+An example use of this code would be `node .cbc/removeAllLabels.js ${ secrets.AUTH_TOKEN } 9"`. This would remove all labels on the pull request with the issue number 9 in the BYUComputingBootCampTests/makeTest repository.
 
 #### triggerRunForAllPRs.js
 The triggerRunForAllPRs.js file contains the following code:
@@ -1101,7 +1103,7 @@ Usage: `node .cbc/triggerRunForAllPRs.js <authToken>`
 
 This code requires the @octokit/core package in order to send API calls to GitHub. It has a sleep() function that will stop javascript execution for the amount of milliseconds given as a parameter, and it has a triggerRunForAllPRs() function that takes in an authentication token as a parameter, uses it to get the oldest 12 pull requests, and starts the Make Test workflow on them one by one: waiting 10 seconds between each. This stops the workflows from interferring with each other and working on the same pull requests. It starts with the oldest, goes to the next oldest, and so on. This code takes in one parameter, the authetnication token for making GitHub API requests.
 
-An example use of this code would be `node .cbc/triggerRunForAllPRs.js ${{ secrets.AUTH_TOKEN }}`. This would call the Make Test workflow on the 12 oldest pull requests.
+An example use of this code would be `node .cbc/triggerRunForAllPRs.js ${ secrets.AUTH_TOKEN }`. This would call the Make Test workflow on the 12 oldest pull requests.
 
 Due to the specific functionality of this javascript file, you'll only want to use it in the triggerPRruns.yml file, in order to avoid creating an infinite loop.
 
@@ -1175,7 +1177,7 @@ Lines 235 through 308 handle outputting failure messages if any of the testing s
 ```
  - name: Failure Comment
    if: always() && steps.<stepID>.outcome == 'failure'
-   run: node .cbc/makeComment.js ${{ secrets.AUTH_TOKEN }} ${{ steps.number.outputs.content }} <Error message>
+   run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } <Error message>
 ```
 
 So that it triggers on the failure of a certain step, you'll have to give that step an `id:` and then put that id into the `<stepID>` space on the if statement line. To configure the error message outputted, put the message you desire in the `<Error message>` space on the run line.
