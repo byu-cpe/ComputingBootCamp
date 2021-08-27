@@ -1,3 +1,5 @@
+
+# --------------------------- Activites for 61_quizzes.md --------------------------- 
 - id: 1 # A unique identifier used to embed the question
   type: multiple_choice
   help: "Hint: Tool Command Language"
@@ -30,6 +32,8 @@
     - text: _____, strong, and true
       correct: loyal
 
+
+# --------------------------- Activites for 05_linux.md ---------------------------
 - id: 4
   prompt: Match each linux command with its function.
   type: matching
@@ -54,4 +58,98 @@
     - text: rm -i
       correct: prompt
 
-    
+# --------------------------- Activites for 13_make.md ---------------------------
+- id: 6
+  prompt: Match the automatic variable with its value
+  help: See https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html for help
+  type: matching
+  responses: 
+    - text: $<
+      correct: The name of the first prerequisite
+    - text: $?
+      correct: The names of all the prerequisites that are newer than the target
+    - text: $^
+      correct: The names of all the prerequisites
+    - text: $@
+      correct: The target of the rule
+
+- id: 7
+  type: multiple_choice
+  prompt: What is the target of the first rule?
+  responses: 
+    - text: compute.c
+    - text: gcc
+    - text: -o
+    - text: calc
+      correct: true
+
+- id: 8
+  prompt: Which of the following is a Makefile function that takes the .cpp files in a varible called CPP, changes the endings to .h, and saves them in a variable called HEADERS?
+  type: multiple_choice
+  responses:
+    - text: HEADERS=$(wildcard *.h)
+    - text: CPP=$(wildcard *.cpp)
+    - text: HEADERS=$(CPP:.cpp=.h)
+      correct: true
+    - text: CPP=$(HEADERS:.h=.cpp)
+
+# --------------------------- Activites for 12_git.md ---------------------------
+- id: 9
+  prompt: Match the git log feature on the left with its corresponding functionality on the right
+  type: matching
+  help: Use git log --help
+  responses:
+    - text: --(number)
+      correct: Limit the number of commits to output
+    - text: --reverse
+      correct: Output the commits chosen to be shown in reverse order
+    - text: --parents
+      correct: Print also the parents of the commit
+    - text: --graph
+      correct: Draw a text-based graphical representation of the commit history on the left hand side of the output
+    - text: --skip=(number)
+      correct: Skip (number) commits before starting to show the commit output
+    - text: --grep=(pattern)
+      correct: Limit the commits output to ones with log message that matches the specified pattern (regular expression)
+
+# --------------------------- Activites for 12a_github.md ---------------------------
+- id: 10
+  prompt: Match the GitHub feature on the left to its functionality on the right
+  type: matching
+  responses:
+    - text: Issues
+      correct: A bug tracker that keeps track of tasks, enhancements, and bugs for your repository
+    - text: Wiki
+      correct: A section for hosting documentation
+    - text: Pull requests
+      correct: A section for submitting pull requests
+    - text: Actions
+      correct: Automation for software workflows, to build, run, and deploy code
+    - text: Projects
+      correct: A section for setting up project boards, sorting tasks, and tracking progress
+    - text: Discussions
+      correct: A collaborative communication forum for questions, conversations, and more
+    - text: Insights
+      correct: An application that provides data about your repository, including traffic, number of pull request and issues, contributors, and more
+
+# --------------------------- Activites for 14_pythonIntro.md --------------------------- 
+- id: 11
+  prompt: Which of the following statements in Python is equivalent to 1776?
+  type: multiple_choice
+  responses:
+    - text: "1,776"
+    - text: '1.776'
+    - text: '1-776'
+    - text: '1_776'
+      correct: true
+
+- id: 12
+  prompt: "What is the output of the following statements: lst = ['My', 'name', 'is', 'Python'] and lst[-2]?"
+  type: multiple_choice
+  responses:
+    - text: 'is'
+      correct: true
+    - text: "IndexError: list index out of range"
+    - text: 'Python'
+    - text: 'name'
+    - text: "SyntaxError: invalid syntax"

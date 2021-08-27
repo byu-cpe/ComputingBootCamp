@@ -7,3 +7,4 @@ my_program
 mylib.a
 *.so
 *.lock
+website/vendor

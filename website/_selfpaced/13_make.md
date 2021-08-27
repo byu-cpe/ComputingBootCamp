@@ -39,20 +39,28 @@ The lectures starts by creating a very simple *Makefile*, which is copied from `
 
 The various stages of makefile development shown in the lecture are:
 * mk1: The simplest makefile where we discuss makefile "recipes" (targets).  Build and clean only.
+{% include quizzes.html id=7 %}
 * mk2: Variables
 * mk3: We split up the compilation/linker steps, and introduce chained dependencies.  We do a bunch of demos of deleting files and rebuilding targets.  The linux 'touch' command is very helpful here.
-* mk4: We introduce Makefile automatic variables ($@ and $<)   
+* mk4: We introduce Makefile automatic variables ($@ and $<)
+{% include quizzes.html id=6 %}
 * mk5: Pattern matching
 * mk6: Makefile functions, and making the makefile more generic.
+{% include quizzes.html id=8 %}
 
 ## Other Resources
 * <https://www.gnu.org/software/make/>
 * Recursive make considered harmful: <https://accu.org/journals/overload/14/71/miller_2004/>
 
-## Make Test (Pass-off for Make Badge)
-<img src="https://media.badgr.com/uploads/badges/8e853a0b-726b-4101-8cb0-4b299926f19d.png" alt="Make Badge" width="200"/>
+## Make Badge
+<a href="https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q"><img src="https://media.badgr.com/uploads/badges/8e853a0b-726b-4101-8cb0-4b299926f19d.png" alt="Make Badge" width="250"/></a>
 
-For those who believe they have mastered Make and Makefiles, we present the Make Badge! This Badge can be viewed in it's entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). This badge can be used to prove your knowledge to potential employers, educational instutitions, or anyone else! To earn it, you'll have to complete the "Make Test" and use your knowledge to write Makefiles for varying situations. To attempt the Make Test and earn yourself a copy of the Make Badge, go to the GitHub repository here to attempt it: [Make Test Repository](https://github.com/BYUComputingBootCampTests/makeTest).
+For those who believe they have mastered Make and Makefiles, we present the Make badge! This badge can be viewed in it's entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). The Make badge can be used to prove your Makefile knowledge to potential employers, educational instutitions, or anyone else! To earn it, you'll have to complete the Make test and use your knowledge to write Makefiles for varying situations. Attempt the Make test and earn the Make badge with the button below!
+
+<div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/makeTest'">
+    <p class="activity-label h3-clone">EARN THE MAKE BADGE</p>
+    <p class="dropdown-arrow h3-clone">&#9654;</p>
+</div>
 
 Good luck to those who attempt the test, and if you pass, congradulations! You are now certified in Make and Makefiles by the BYU Computing Boot Camp.
 
