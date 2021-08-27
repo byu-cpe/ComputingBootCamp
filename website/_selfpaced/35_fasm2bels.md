@@ -15,9 +15,31 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
 
 ## Install
 
-<!--capnproto java has to be installed first, then rapidwright-->
+These instructions will help you get the fasm2bels repository up and running on your machine. The official install instructions on the BYU fork and the main fasm2bels repo differ slightly from the instructions below, but the extra tips will ensure fasm2bels runs properly:
 
-**The FASM2BELS Installation instructions are currently under construction.**
+Before cloning this repo, the RapidWright and capnproto-java repos must be installed first.
+
+Follow the instructions to install RapidWright [here](https://github.com/Xilinx/RapidWright) and clone capnproto-java [here](https://github.com/capnproto/capnproto-java).
+
+After RapidWright and capnproto-java are installed, clone the [SymbiFlow fasm2bels repo](https://github.com/SymbiFlow/symbiflow-xc-fasm2bels.git) and run the following commands:
+  - `make env`: For this to be successful, python3.7 or above is required - you may have to upgrade and then change the Makefile to use the new version (same for Invoking below)
+    - To get python3.7 on Ubuntu 16.04 (or above) do the following:
+      - sudo apt update
+      - sudo apt install software-properties-common
+      - sudo add-apt-repository ppa:deadsnakes/ppa
+      - sudo apt update
+      - sudo apt install python3.7
+    - Then, had to modify the Makefile to use python3.7 instead of python3
+    - Then, modify the Makefile to use python3.7 instead of python3.
+ - `make build`
+ - `make test-py` - Before running, go into `.github/workflows/test.sh` and change the directory path from $GITHUB_WORKSPACE to your directory path for CAPN_PATH and INTERCHANGE_SCHEMA_PATH (fpga-interchange-schema is inside `RapidWright/interchange`). It should look something like this when completed:
+
+`export CAPNP_PATH="/home/username/capnproto-java/compiler/src/main/schema/"`
+`export INTERCHANGE_SCHEMA_PATH="/home/username/RapidWright/interchange/fpga-interchange-schema/interchange"`
+
+Source the `test.sh` from the main fasm2bels directory (`source .github/workflows/test.sh`) and `make test-py` will run automatically. It takes a few minutes to run all 22 tests.
+
+An `OK` should appear at the bottom of the terminal run if successful.
 
 ## Lecture
 
@@ -29,9 +51,17 @@ src="https://www.youtube.com/embed/58wXkBlyu-Q">
 
 ## Follow-Up Activities
 
+**THIS FOLLOW UP ACTIVITY SECTION IS STILL UNDER CONSTRUCTION. ESTIMATED COMPLETION/FINAL PUSH FRIDAY NIGHT, SATURDAY NIGHT, or MONDAY MORNING.**
+
+### Run FASM2BELs
+
+In the BYU FASM2BELs repo `README.md` file, it describes how to run a test of fasm2bels once it has been fully installed... continue this once all fasm2bels problems are resolved 
+
+
 ### Bringing It All Together
 
-**Follow up activity is under construction**
+
+
 
 Using fasm2bels would be a useful activity because it would:
 
