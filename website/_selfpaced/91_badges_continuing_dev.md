@@ -1,17 +1,14 @@
 ---
 layout: page
-toc: true
-title: Badges Development
+toc: false
+title: Badge Development
 slug: badges_dev
 type: badges
 order: 2
 ---
 
-
-# How to Continue Development on the Badges
-
 Badges are one of the core elements of the BYU Computing Boot Camp. They motivate those who use our site to put their newly-learned skills to the test by attempting a 
-pass-off assessment, and acts as evidence of their knowledge after being earned. The badges we issue are OpenBadges, which contain json metadata with the cerification 
+pass-off assessment, and acts as evidence of their knowledge after being earned. The badges we issue are OpenBadges, which contain json metadata with cerification 
 and qualification information so that it can be verified as real and act as evidence of the recepient's knowledge. We are currently using Badgr to 
 issue these badges with their easy-to-use API. The users can then download the badges directly onto their computers as png files (with the aformentioned metadata), 
 or store it in their Badgr wallet. 
@@ -36,7 +33,7 @@ Most of the sub-modules have their own mini-badges. For example, the sub-module 
 Almost all of the sub-modules have their own mini-badges. Some of them don't, and the reason for that is because they represent too little knowledge to justify
 a reward (like "Install Vivado/Vitis" under "Commercial FPGA"), or they are a duplicate of another sub-module (like "Github" under "PCB", which covers the same knowledge as "GitHub" under Software Development").
 
-Mini-badges will help motivate the user to learn and to keep track of their progress, while the module badges will be shared with employeers and educational institutitions as a certification of the user's skill. Both types of badges could be used for both purposes, but they will generally fulfill their specified roles better.
+Mini-badges will primarily help motivate the user to learn and to keep track of their progress, while the module badges will primarily be shared with employeers and educational institutitions as a certification of the user's skill. Both types of badges could be used for both purposes, but they will generally fulfill their specified roles better.
 
 #### Mini-badges
 Mini-badges are the easiest badges to earn, and represent the smallest amount of knowledge. For example, to earn the "Make" mini-badge, one must write two Makefiles that
@@ -81,7 +78,7 @@ Here are all six of the Module Badges:
 I have been considering having one badge that represents a knowledge in all of the modules taught on the Computing Boot Camp site. Effectively, a badge that represents skill in everything taught on the site. This badge would be earned by earning all six of the module badges (or all of the 30+ mini-badges), and would represent skill in every single topic covered on the site. This would be the ultimate show of learning in Electrical and Computer Engineering, so potentially it could say "Electrical and Computer Engineering Expertise" instead of "Electrical and Computer Engineering Knowledge".
 
 We don't currently have a design for this badge. It could be a modified version of the module badges, or one we haven't used yet. For this reason, I'm leaving all of my unused
-badge design concepts in . If you want to try and create the Computing Boot Camp Badge, you could try to adapt one of those designs if you'd like. There won't be a tutorial for how to create this badge, but Google and Youtube can be great recourses, for learning how to do something specific in Adobe Illustrator or to find tutorials on how to create designs from scratch, respectively. For example, typing in "mountain badge designs" to Youtube brings up videos that have badge tutorials that inspired the modules badges and many of my unused designs.
+badge design concepts in the private "badgeDesigns" repository owned by the BYUComputingBootCampTests GitHub user, in a folder called "Unused". If you want to try and create the Computing Boot Camp Badge, you could try to adapt one of those designs if you'd like. There won't be a tutorial for how to create this badge, but Google and Youtube can be great recourses, for learning how to do something specific in Adobe Illustrator or to find tutorials on how to create designs from scratch, respectively. For example, typing in "mountain badge designs" to Youtube brings up videos that have badge tutorials that inspired the modules badges and many of my unused designs.
 
 ## Creating a new Badge
 To create a new badge, you are going to need access to Adobe Illustrator, a vector graphics editor and design program, since that's what I used to create the badges. Adobe Illustrator comes as part of the Adobe Creative Cloud, which is free for full-time employees of BYU, and available at a discount to BYU Students for $69 a year (instead of $624 a year). See the following link for information: [Adobe BYU](https://adobe.byu.edu/). You could also just buy Adobe Illustrator for $252 a year, but I wouldn't recommend it, since you can get all of the programs combined for a lower price.
@@ -99,7 +96,7 @@ To create a new mini-badge in a pre-existing module, you will locate the design 
 
 These are the current mini-badge .ai files that have been made. Note that if you want to make a mini-badge in the Robotics module, there haven't been any mini-badges created for it, so for all intensive purposes, it's a new module. See the section "Creating a mini-badge in a new module" for more information.
   
-Click on the .ai file with the name of the module you want to create a mini-badge for. This should open up Adobe Illustrator (assuming you have access to it). You should see a page like this. Note that in this example, I clicked on the CommercialFPGAMiniBadges.ai file:
+First, clone the repository onto your computer. Next, click on the .ai file with the name of the module you want to create a mini-badge for. This should open up Adobe Illustrator (assuming you have access to it). You should see a page like this. Note that in this example, I clicked on the CommercialFPGAMiniBadges.ai file:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx1.png %}" width="900"/>
 
@@ -161,14 +158,14 @@ Now, just check the "Use Artboards" box and hit "Export":
   
 <img src = "{% link media/badgeDocumentation/AdobeEx15.png %}" width="700"/>
   
-Congradulations! Your new badge should now be in the same folder as all of the other badges in the sub-module. Be sure to upload it to .
+Congradulations! Your new badge should now be in the main directory of the repository. Be sure to commit and push your changes to the private "badgeDesigns" repository owned by BYUComputingBootCampTests, so that they can be available to everyone working on the website.
   
 Now, all that's left is to upload it to Badgr so that it can be awarded to the site's users. See the section "Uploading a badge to Badgr" below for more information.
   
 #### Creating a mini-badge in a new module
 Since the module is new, this mini-badge will be the first one that you create for it. This means that in addition to doing most of the steps found in the section "Creating a mini-badge in a pre-existing module", you'll have to create a new .ai file and pick a color for the mini-badges of this module.
   
-To start, locate the "CommercialFPGAMiniBadges.ai" file in the "badgeDesigns" repository, and open it up with Adobe Illustrator. You should see a screen that looks like this:
+To start, locate the "CommercialFPGAMiniBadges.ai" file in the "badgeDesigns" repository after cloning it to your computer, and open it up with Adobe Illustrator. You should see a screen that looks like this:
 
 <img src = "{% link media/badgeDocumentation/AdobeEx16.png %}" width="900"/>
   
@@ -262,8 +259,10 @@ You should see a window like this pop-up:
 Now, just check the "Use Artboards" box and hit "Export":
   
 <img src = "{% link media/badgeDocumentation/AdobeEx34.png %}" width="700"/>
+
+Finally, save your new .ai file for future use.
   
-Congradulations! Your new badge should now be . Be sure to upload it to .
+Congradulations! Your new badge and new .ai file should be in the main directory of the repository. Be sure to commit and push your changes to the private "badgeDesigns" repository owned by BYUComputingBootCampTests, so that they can be available to everyone working on the website.
 
 Now, all that's left is to upload it to Badgr so that it can be awarded to the site's users. See the section "Uploading a Badge to Badgr" below for more information.  
   
@@ -295,7 +294,7 @@ Click on the BYU Computing Boot Camp Issuer:
   
 <img src = "{% link media/badgeDocumentation/AdobeEx39.png %}" width="900"/>
   
-Here, you can see all of the badges that the BYU Computing Boot Camp currently has, a brief description, and info on Staff and available Pathways. To upload a badge, click on the "Create Badge" Button on the right side of the screen, which will lead you here:
+Here, you can see all of the badges, a brief description, and info on staff and available pathways. To upload a badge, click on the "Create Badge" Button on the right side of the screen, which will lead you here:
   
 <img src = "{% link media/badgeDocumentation/AdobeEx40.png %}" width="900"/>
   
