@@ -1,0 +1,4 @@
+*.fasm
+*_db
+*_reversed.v
+output.xdc

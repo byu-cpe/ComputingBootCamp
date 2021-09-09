@@ -17,29 +17,56 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
 
 These instructions will help you get the fasm2bels repository up and running on your machine. The official install instructions on the BYU fork and the main fasm2bels repo differ slightly from the instructions below, but the extra tips will ensure fasm2bels runs properly:
 
-Before cloning this repo, the RapidWright and capnproto-java repos must be installed first.
+### Install Prerequisite Tools
+1. Follow the instructions to install RapidWright [here](https://github.com/Xilinx/RapidWright)
 
-Follow the instructions to install RapidWright [here](https://github.com/Xilinx/RapidWright) and clone capnproto-java [here](https://github.com/capnproto/capnproto-java).
+        wget http://www.rapidwright.io/docs/_downloads/rapidwright-installer.jar
+        java -jar rapidwright-installer.jar -t
+        source rapidwright.sh
+        cd RapidWright
 
-After RapidWright and capnproto-java are installed, clone the [SymbiFlow fasm2bels repo](https://github.com/SymbiFlow/symbiflow-xc-fasm2bels.git) and run the following commands:
-  - `make env`: For this to be successful, python3.7 or above is required - you may have to upgrade and then change the Makefile to use the new version (same for Invoking below)
-    - To get python3.7 on Ubuntu 16.04 (or above) do the following:
-      - sudo apt update
-      - sudo apt install software-properties-common
-      - sudo add-apt-repository ppa:deadsnakes/ppa
-      - sudo apt update
-      - sudo apt install python3.7
-    - Then, had to modify the Makefile to use python3.7 instead of python3
-    - Then, modify the Makefile to use python3.7 instead of python3.
- - `make build`
- - `make test-py` - Before running, go into `.github/workflows/test.sh` and change the directory path from $GITHUB_WORKSPACE to your directory path for CAPN_PATH and INTERCHANGE_SCHEMA_PATH (fpga-interchange-schema is inside `RapidWright/interchange`). It should look something like this when completed:
+1. Install capnproto (<https://capnproto.org/>):
 
-`export CAPNP_PATH="/home/username/capnproto-java/compiler/src/main/schema/"`
-`export INTERCHANGE_SCHEMA_PATH="/home/username/RapidWright/interchange/fpga-interchange-schema/interchange"`
+        cd /tmp && curl -O https://capnproto.org/capnproto-c++-0.8.0.tar.gz
+        cd /tmp && tar zxf capnproto-c++-0.8.0.tar.gz
+        cd /tmp/capnproto-c++-0.8.0 && ./configure
+        cd /tmp/capnproto-c++-0.8.0 && make -j6 check
+        cd /tmp/capnproto-c++-0.8.0 && sudo make install
 
-Source the `test.sh` from the main fasm2bels directory (`source .github/workflows/test.sh`) and `make test-py` will run automatically. It takes a few minutes to run all 22 tests.
+1.  Install capnproto-java (<https://github.com/capnproto/capnproto-java>).
 
-An `OK` should appear at the bottom of the terminal run if successful.
+        cd /tmp && git clone https://github.com/capnproto/capnproto-java
+        cd /tmp/capnproto-java && make
+        cd /tmp/capnproto-java && sudo make install
+
+1. Build the Interchange Scheme
+
+        cd <your_rapidwright_path>/interchange
+        make
+
+### Install Fasm2Bels
+
+1. Clone the [SymbiFlow fasm2bels repo](https://github.com/SymbiFlow/symbiflow-xc-fasm2bels.git) and build (you will need Python 3.7 or above):
+
+        git clone https://github.com/SymbiFlow/symbiflow-xc-fasm2bels.git
+        cd symbiflow-xc-fasm2bels/
+        make env
+        make build
+
+1. Set your `INTERCHANGE_SCHEMA_PATH` environment variable:
+    
+        export INTERCHANGE_SCHEMA_PATH="<your_rapidwright_path>/interchange/fpga-interchange-schema/interchange"
+
+ 1. Run the fasm2bels tests:
+ 
+        make test-py
+
+    If this works correctly, you should see something like this at the end of the output:
+
+        Ran 22 tests in 145.281s
+
+        OK
+    
 
 ## Lecture
 
@@ -49,13 +76,35 @@ On June 4, 2021, Professor Goeders gave an overview of the FASM 2 BELs repositor
 src="https://www.youtube.com/embed/58wXkBlyu-Q"> 
 </iframe>
 
+
+
+## Runing FASM2BELs
+
+Go to:
+
+    <bootcamp_repo>/fasm2bels
+
+In this directory you will see a simple 16-bit adder design (*add16.v*), with an associated constraints file (*constraints.xdc*).  A bitstream has already been generated for you, and is provided as *add16.bit*.
+
+We will now convert this bitstream back to a Verilog netlist.
+
+1. To perform the first step of the conversion, and convert the bitstream to fasm, run:
+
+        make bit2fasm
+
+2. You may want to inspect the produced *add16.fasm* file.
+
+3. Next, convert the fasm file to a Verilog netlist:
+
+        make fasm2verilog
+
+In the BYU FASM2BELs repo `README.md` file, it describes how to run a test of fasm2bels once it has been fully installed... continue this once all fasm2bels problems are resolved 
+
+
 ## Follow-Up Activities
 
 **THIS FOLLOW UP ACTIVITY SECTION IS STILL UNDER CONSTRUCTION. ESTIMATED COMPLETION/FINAL PUSH FRIDAY NIGHT, SATURDAY NIGHT, or MONDAY MORNING.**
 
-### Run FASM2BELs
-
-In the BYU FASM2BELs repo `README.md` file, it describes how to run a test of fasm2bels once it has been fully installed... continue this once all fasm2bels problems are resolved 
 
 
 ### Bringing It All Together
