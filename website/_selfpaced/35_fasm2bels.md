@@ -98,8 +98,6 @@ We will now convert this bitstream back to a Verilog netlist.
 
         make fasm2verilog
 
-In the BYU FASM2BELs repo `README.md` file, it describes how to run a test of fasm2bels once it has been fully installed... continue this once all fasm2bels problems are resolved 
-
 
 ## Follow-Up Activities
 
