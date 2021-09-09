@@ -15,8 +15,6 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
 
 ## Install
 
-These instructions will help you get the fasm2bels repository up and running on your machine. The official install instructions on the BYU fork and the main fasm2bels repo differ slightly from the instructions below, but the extra tips will ensure fasm2bels runs properly:
-
 ### Install Prerequisite Tools
 1. Follow the instructions to install RapidWright [here](https://github.com/Xilinx/RapidWright)
 
