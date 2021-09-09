@@ -86,13 +86,13 @@ In this directory you will see a simple 16-bit adder design (*add16.v*), with an
 
 We will now convert this bitstream back to a Verilog netlist.
 
-1. To perform the first step of the conversion, and convert the bitstream to fasm, run:
+1. To perform the first step of the conversion, and convert the bitstream to fasm, run (and check out the Makefile to see how this is done):
 
         make bit2fasm
 
 2. You may want to inspect the produced *add16.fasm* file.
 
-3. Next, convert the fasm file to a Verilog netlist:
+3. Next, convert the fasm file to a Verilog netlist (and check out the Makefile to see how this is done):
 
         make fasm2verilog
 
