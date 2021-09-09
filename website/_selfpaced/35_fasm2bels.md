@@ -42,9 +42,9 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
         cd <your_rapidwright_path>/interchange
         make
 
-### Install Fasm2Bels
+### Install FASM2BELs
 
-1. Clone the [SymbiFlow fasm2bels repo](https://github.com/SymbiFlow/symbiflow-xc-fasm2bels.git) and build (you will need Python 3.7 or above):
+1. Clone the [SymbiFlow Fasm2bels repo](https://github.com/SymbiFlow/symbiflow-xc-fasm2bels.git) and build (you will need Python 3.7 or above):
 
         git clone https://github.com/SymbiFlow/symbiflow-xc-fasm2bels.git
         cd symbiflow-xc-fasm2bels/
@@ -75,50 +75,47 @@ src="https://www.youtube.com/embed/58wXkBlyu-Q">
 </iframe>
 
 
+## Follow-Up Activities
 
-## Runing FASM2BELs
+### Running FASM2BELs
 
-Go to:
+Go to your local BYU Computing Boot Camp repository (or [clone it](https://github.com/byu-cpe/ComputingBootCamp.git) if you haven't already):
 
-    <bootcamp_repo>/fasm2bels
+    cd <bootcamp_repo>/fasm2bels
 
-In this directory you will see a simple 16-bit adder design (*add16.v*), with an associated constraints file (*constraints.xdc*).  A bitstream has already been generated for you, and is provided as *add16.bit*.
+In this directory you will see many files. We will focus on the add16 files for this activity. There is a simple 16-bit adder design (`add16.v`) with an associated constraints file (`constraints.xdc`). A bitstream has already been generated for you, and is provided as `add16.bit`.
+
+Before running the instructions below, make sure you modify the Makefile to route the FASM2BELS_PATH variable to your local fasm2bels path:
+
+`FASM2BELS_PATH=/home/username/symbiflow-xc-fasm2bels`
 
 We will now convert this bitstream back to a Verilog netlist.
 
-1. To perform the first step of the conversion, and convert the bitstream to fasm, run (and check out the Makefile to see how this is done):
+1. To perform the first step of the conversion, and convert the bitstream to a fasm file, run the following (and check out the Makefile to see how this is done):
 
         make bit2fasm
 
-2. You may want to inspect the produced *add16.fasm* file.
+2. You may want to pause and inspect the produced `add16.fasm` file.
 
-3. Next, convert the fasm file to a Verilog netlist (and check out the Makefile to see how this is done):
+3. Next, convert the fasm file to a Verilog netlist by running the following (and check out the Makefile to see how this is done):
 
         make fasm2verilog
 
 
-## Follow-Up Activities
+A fasm file, a reversed Verilog file, and an output.xdc file should have been produced from the steps above. 
 
-**THIS FOLLOW UP ACTIVITY SECTION IS STILL UNDER CONSTRUCTION. ESTIMATED COMPLETION/FINAL PUSH FRIDAY NIGHT, SATURDAY NIGHT, or MONDAY MORNING.**
-
+**The final step is to open a new project in Vivado (make sure the part matches the Makefile), import the `output.xdc` and `reversed.v` files, synthesize, implement, and generate the bitstream. After this process is complete, if you took this new bitstream and compared it with the `add16.bit` file, they would be identical!**
 
 
 ### Bringing It All Together
 
+(to be finished tomorrow, will say do the same activity above but with either the cnt file or the andgate from the fasm page or another design of their choice)
 
-
-
-Using fasm2bels would be a useful activity because it would:
-
-* It is a 2nd Symbiflow repo with its own install instructions to get them use to the idea of Symbiflow having multiples
-* Provide an example of a program that uses the prjxray database
-* Show them Verilog schematics and introduce Xilinx primitives - something they will have never seen before
-* Help them see the complete cycle - they could go from behavioral Verilog --> Vivado --> bitstream --> FASM --> Verilog Schematic --> Vivado --> bitstream
 
 ## Learn More
 
 * FASM2BELs Github Repository (BYU CCL Fork) - <https://github.com/byuccl/symbiflow-xc-fasm2bels>
 * FASM2BELs Github Repository - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels>
-* FASM2BELs Introduction - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels/blob/master/README.md>
+* FASM2BELs README.md - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels/blob/master/README.md>
 * How to Install RapidWright - <https://www.rapidwright.io/docs/Automatic_Install.html>
 
