@@ -28,7 +28,7 @@ title: 2021 Students
 * [Jonathan Thompson](https://jonath48.github.io/pages/log/)
 * [Jarom Harris](https://jaromharris.github.io/immerse/)
 * [Samuel Reynolds](https://thedhcreator.github.io/pages/log/)
-* [Nathan Harris](http://betacircuit.net/projects/IMMERSE/log/)
+* Nathan Harris
 * [Jessa Locey](https://jessalocey.github.io/pages/log/)
 
 ### Lundrigan
