@@ -16,6 +16,9 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
 ## Install
 
 ### Install Prerequisite Tools
+
+Before you begin, make sure you have Python3.7 or later, and the python3-virtualenv package installed.
+
 1. Follow the instructions to install RapidWright [here](https://github.com/Xilinx/RapidWright)
 
         wget http://www.rapidwright.io/docs/_downloads/rapidwright-installer.jar
@@ -53,7 +56,7 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
 
 1. Set your `INTERCHANGE_SCHEMA_PATH` environment variable:
     
-        export INTERCHANGE_SCHEMA_PATH="<your_rapidwright_path>/interchange/fpga-interchange-schema/interchange"
+        export INTERCHANGE_SCHEMA_PATH="<absolute path to your_rapidwright_directory>/interchange/fpga-interchange-schema/interchange"
 
  1. Run the fasm2bels tests:
  
