@@ -37,6 +37,10 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
         cd /tmp/capnproto-java && make
         cd /tmp/capnproto-java && sudo make install
 
+1. Install Virtualenv
+
+        sudo apt install python3-virtualenv
+
 1. Build the Interchange Scheme
 
         cd <your_rapidwright_path>/interchange
@@ -53,7 +57,7 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
 
 1. Set your `INTERCHANGE_SCHEMA_PATH` environment variable:
     
-        export INTERCHANGE_SCHEMA_PATH="<your_rapidwright_path>/interchange/fpga-interchange-schema/interchange"
+        export INTERCHANGE_SCHEMA_PATH="<absolute path to your_rapidwright_directory>/interchange/fpga-interchange-schema/interchange"
 
  1. Run the fasm2bels tests:
  

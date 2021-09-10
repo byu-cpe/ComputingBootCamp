@@ -1,4 +1,4 @@
-FASM2BELS_PATH=/home/jgoeders/fasm2bels_test/symbiflow-xc-fasm2bels
+FASM2BELS_PATH=~/symbiflow-xc-fasm2bels
 FASM2BELS_PATH_PY=$(FASM2BELS_PATH)/env/bin/python3
 XRAY_PATH=$(FASM2BELS_PATH)/third_party/prjxray
 XRAY_DB_PATH=$(FASM2BELS_PATH)/third_party/prjxray-db
