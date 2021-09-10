@@ -16,6 +16,9 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
 ## Install
 
 ### Install Prerequisite Tools
+
+Before you begin, make sure you have Python3.7 or later, and the python3-virtualenv package installed.
+
 1. Follow the instructions to install RapidWright [here](https://github.com/Xilinx/RapidWright)
 
         wget http://www.rapidwright.io/docs/_downloads/rapidwright-installer.jar
@@ -36,10 +39,6 @@ In the absence of bugs, it is expected that after consuming the BEL connections 
         cd /tmp && git clone https://github.com/capnproto/capnproto-java
         cd /tmp/capnproto-java && make
         cd /tmp/capnproto-java && sudo make install
-
-1. Install Virtualenv
-
-        sudo apt install python3-virtualenv
 
 1. Build the Interchange Scheme
 
