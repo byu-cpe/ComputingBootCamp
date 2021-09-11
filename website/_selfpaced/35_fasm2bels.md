@@ -109,7 +109,11 @@ A fasm file, a reversed Verilog file, and an output.xdc file should have been pr
 
 ### Bringing It All Together
 
-(to be finished tomorrow, will say do the same activity above but with either the cnt file or the andgate from the fasm page or another design of their choice)
+Now that you have run fasm2bels successfully and gotten an identical bitstream from Vivado successfully, it is time to bring it all together. On the FASM page, you should've generated a fasm file from a 2-input AND gate design and kept that handy for this activity. Move your fasm file, your original andgate.bit file, and your Vivado constraints file into your `bootcamp/fasm2bels` directory.
+
+Modify the appropriate Makefile variables to reflect the newly imported files. Then, follow the same steps as above (but skip Steps 1 and 2 since you already have the fasm file) and run Step 3 to make the reversed Verilog and output.xdc files. Finally, repeat the same last step as before and put those two files into Vivado to produce the identical bitstream!
+
+**Repeat this with the cnt design files already in the folder and any other designs of your choice to become familiar with all fasm2bels has to offer.**
 
 
 ## Learn More
