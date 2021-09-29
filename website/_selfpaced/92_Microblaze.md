@@ -1,10 +1,10 @@
 ---
 layout: page
 toc: true
-title: "Vitis: Software"
-slug: vitis
+title: "Microblaze Soft Processor"
+slug: microblaze
 type: fpga_commercial
-order: 4
+order: 7
 ---
 
 ## Lecture Videos
