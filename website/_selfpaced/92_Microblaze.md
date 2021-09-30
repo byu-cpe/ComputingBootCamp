@@ -96,10 +96,12 @@ order: 7
 *  Under your new application project, right click on src and click add file.
 *  Name it main.cpp and click Finish
 *  Add the following simple program
-*  #include <stdio.h>  
-     int main() {
-     printf("Hello World\n");
-   }
+```
+#include <stdio.h>  
+int main() {
+  printf("Hello World\n");
+}
+```
 *  Save the file
 *  Right-click on your application project and select build project
 ## Connect to UART
