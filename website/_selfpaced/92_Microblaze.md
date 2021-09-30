@@ -67,18 +67,47 @@ order: 7
 *  Wait
 *  On the next pop up click Cancel
 *  In the File drop-down select Export, then Export Hardware,
-*  Check Include bitstream and click OK
-*  
+*  Click Next
+*  Check Include bitstream and click Next
+*  Choose a name for your XSA filename and click Next
+  * I named mine dh_microblaze and saved it to /home/danh444/microblaze_tutorial/microblaze
+* Click Finish
+## Program Board
+* Click Open Hardware Manager -> Open Target -> Auto Connect
+* Click Program Device -> xc7a100t_0
+* Click Program
 ## Launch Vitis
-
+*  Type Vitis in terminal window
+*  Choose a Workspace and click Launch
 ## Create the Platform Project
-
+*  Click File -> New -> Platform Project
+*  Choose a name for the platform project
+*  Click Next
+*  Under Hardware Specification, Browse to the XSA file you created
+*  Click Finish
 ## Create the Application Project
-
+*  Click File -> New -> Application Project
+*  Click Next
+*  Select the platform you created
+*  Choose an application project name
+*  Click Next
+*  Choose Empty Application C++
+*  Click Finish
+*  Under your new application project, right click on src and click add file.
+*  Name it main.cpp and click Finish
+*  Add the following simple program
+*  #include <stdio.h>  
+     int main() {
+     printf("Hello World\n");
+   }
+*  Save the file
+*  Right-click on your application project and select build project
+## Connect to UART
+*  In order to see the program output you need to connect to the board UART
+*  Open a separate terminal
+*  Enter the following command
+  * python3 -m serial.tools.miniterm /dev/ttyUSB1 9600 
 ## Run Your Applicaton on the Board
-*  Right-click on your executable folder (down one level from the *_system* project created in the last step -- see image below), choose *Run As->Launch on Hardware (Single Application Debug*.  
-<img src = "{% link media/vitis/run_program.png %}" width="800">
-
-
-* You should see the message *Hello World*.
+*  Right-click on your application project and select run as -> Launch on Hardware (Single application debug)
+* You should see the message *Hello World* in the UART terminal
 
