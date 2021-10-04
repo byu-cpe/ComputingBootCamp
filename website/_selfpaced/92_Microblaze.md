@@ -23,7 +23,7 @@ order: 7
 *  Choose a design name and click OK
 *  Select the board tab
 
-<img src = "{% link media/HLS/designFiles.png %}" width="800">
+<img src = "{% link media/microblaze/board_tab.png %}" width="800">
 
 *  Right click on the Push Buttons entry
 *  Select Connect Board Component
