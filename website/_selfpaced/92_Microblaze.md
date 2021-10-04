@@ -6,6 +6,9 @@ slug: microblaze
 type: fpga_commercial
 order: 7
 ---
+The following procedure gives detailed steps for how to program a Nexys 4 DDR board with
+a microblaze soft processor and run code on that same processor. It assumes that the board file
+for the Nexys 4 DDR board is already downloaded and added to vivado.
 
 ## Create a New Vivado Project
 *  Run Vivado (`vivado`)
