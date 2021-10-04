@@ -129,5 +129,7 @@ int main() {
   * python3 -m serial.tools.miniterm /dev/ttyUSB1 9600 
 ## Run Your Applicaton on the Board
 *  Right-click on your application project and select run as -> Launch on Hardware (Single application debug)
-* You should see the message *Hello World* in the UART terminal
-
+*  You should see the message *Hello World* in the UART terminal
+## Sources
+*  This was done following this tutorial
+*  https://digilent.com/reference/vivado/getting-started-with-ipi/2018.2
