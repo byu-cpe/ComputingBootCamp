@@ -28,6 +28,9 @@ order: 7
 *  Right click on the Push Buttons entry
 *  Select Connect Board Component
 *  In the popup, select Create new IP -> AXI GPIO -> GPIO and click OK
+
+<img src = "{% link media/microblaze/Block_diagram.png %}" width="800">
+
 *  In the board tab, right click on the LEDs
 *  Select Connect Board Component
 *  In the popup, select existing IP -> axi_gpio_0 -> GPIO2 and click OK
@@ -37,12 +40,21 @@ order: 7
 *  Double click on the clk_wiz_0 block in the block diagram
 *  On the Board Tab, make sure that CLK_IN1 has sys clock selected
 *  For EXT_RESET_IN select reset
+
+<img src = "{% link media/microblaze/Clock_interface.png %}" width="800">
+
 *  Select Output Clocks tab
 *  Make sure that the clk_out1 box is checked and that the Requested Frequency is 100 MHz
 *  Select Active Low for the Reset Type
+
+<img src = "{% link media/microblaze/clock_Settings.png %}" width="800">
+
 *  Click OK
 *  Click "Run Connection Automation"
 *  Make sure the resetn box is checked
+
+<img src = "{% link media/microblaze/connection_automation.png %}" width="800">
+
 *  Click OK
 *  In the Board tab, right click on USB UART
 *  Select Connect Board Component
@@ -97,6 +109,9 @@ order: 7
 *  Choose Empty Application C++
 *  Click Finish
 *  Under your new application project, right click on src and click add file.
+
+<img src = "{% link media/microblaze/src_directory.png %}" width="800">
+
 *  Name it main.cpp and click Finish
 *  Add the following simple program
 ```
