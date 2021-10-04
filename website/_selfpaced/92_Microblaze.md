@@ -22,6 +22,9 @@ order: 7
 *  On the left in the Flow Navigator, under IP INTEGRATOR, select "Create Block Design"
 *  Choose a design name and click OK
 *  Select the board tab
+
+<img src = "{% link media/HLS/designFiles.png %}" width="800">
+
 *  Right click on the Push Buttons entry
 *  Select Connect Board Component
 *  In the popup, select Create new IP -> AXI GPIO -> GPIO and click OK
