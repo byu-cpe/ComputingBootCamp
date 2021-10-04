@@ -11,7 +11,7 @@ a microblaze soft processor and run code on that same processor. It assumes that
 for the Nexys 4 DDR board is already downloaded and added to vivado.
 
 ## Create a New Vivado Project
-*  Run Vivado (`vivado`)
+*  Run Vivado (`vivado`) from terminal
 *  Create Project
 *  Click Next
 *  Choose a project name and location and click next
@@ -95,7 +95,7 @@ for the Nexys 4 DDR board is already downloaded and added to vivado.
 * Click Program Device -> xc7a100t_0
 * Click Program
 ## Launch Vitis
-*  Type Vitis in terminal window
+*  Run Vitis (`vitis`) in terminal window
 *  Choose a Workspace and click Launch
 ## Create the Platform Project
 *  Click File -> New -> Platform Project
