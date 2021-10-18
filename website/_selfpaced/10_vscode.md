@@ -65,7 +65,19 @@ On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded 
     * Package recommendations
     * Github / Pull Request Integrations
   
-
+ 
+## VS Code Tips
+* Settings:
+  * JSON
+  * Format on save
+  * Word wrap
+  * [python.analysis.extraPaths](https://github.com/byuccl/bfasst/blob/master/.vscode/settings.json)
+  * [Include paths](https://github.com/byu-cpe/ecen427_student/blob/master/.vscode/c_cpp_properties.json)
+* Settings sync
+* Markdown preview
+* Latex run and preview
+* Run on save
+* Package recommendations
 
 ## Faculty Brainstorming 
   To be added...   There is a lecture on this topic, we should schedule this to be just after that lecture.
