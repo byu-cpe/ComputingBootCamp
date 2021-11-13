@@ -24,7 +24,6 @@ Before you begin, make sure you have Python3.7 or later, and the python3-virtual
         wget http://www.rapidwright.io/docs/_downloads/rapidwright-installer.jar
         java -jar rapidwright-installer.jar -t
         source rapidwright.sh
-        cd RapidWright
 
 1. Install capnproto (<https://capnproto.org/>):
 
