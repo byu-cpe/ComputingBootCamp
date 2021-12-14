@@ -24,7 +24,7 @@ This page discusses how you can export your IP from Vitis HLS to be used in a Vi
 * Close Vivado HLS.
 * Unzip your IP to a folder, for example, I used `unzip digitrec.zip -d lab_vitis/ip/digitrec/`
 
-**Bug fix**: I ran into a bug in Vitis 2020.2 that I had to fix.  Look in your *\<ip_dir\>/drivers/digitrec_v1_0/src/Makefile* and look for **three** commented out lines that start with '#echo'.  Remove these lines from the Makefile.  See <https://forums.xilinx.com/t5/High-Level-Synthesis-HLS/Bug-HLS-2020-2-generated-makefile-compilation-error-in-vitis/td-p/1206772>
+**Bug fix**: I ran into a bug in Vitis 2020.2 that I had to fix.  Look in your *\<ip_dir\>/drivers/digitrec_v1_0/src/Makefile* and look for **three** commented out lines that start with '#echo'.  Remove these lines from the Makefile.  See <https://support.xilinx.com/s/question/0D52E00006hpYI9SAM/bug-hls-20202-generated-makefile-compilation-error-in-vitis-20202>
 
 
 ### Adding your IP to Vivado

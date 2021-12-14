@@ -7,7 +7,7 @@ title: 2021 Students
 ### Nelson
 * [Ryan Johnson](https://ryancj14.github.io/ryancj14/pages/log)
 * [Jason Prescott](https://jason1234309.github.io/Immerse_Website/pages/log/)
-* [Xan Johnson](https://immerse.xanjohnson.com/daily)
+* Xan Johnson
 * [Joshua Fife](https://whiteninjaz.github.io/pages/log/)
 
 
@@ -19,7 +19,7 @@ title: 2021 Students
 * [Cody Arvonen](https://codyarvonen.github.io/personal_website/)
 * [Jacob Brown](https://jacobdbrown4.github.io/jacob_brown//pages/log/)
 * [Caden Ellis](https://caden-ellis77.github.io/ImmerseSite/pages/log/)
-* [Jackson Sahleen](https://jacksonsahleen.github.io/IMMERSE_2021_log/)
+* Jackson Sahleen
 * [Josh Hanni](https://joshhanni20.github.io/immersewebsite/pages/log/)
 
 ### Goeders
