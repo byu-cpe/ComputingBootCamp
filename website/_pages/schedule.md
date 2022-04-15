@@ -82,9 +82,9 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 
 The networking track will be meeting in EB 302 at 2-3:30 PM.
 
-| Date          | Topic                         | Speaker               
-|---------------|-------------------------------|-----------------------
-| Wed, Jun 2    | [Networking Basics]({% link _selfpaced/70_networking.md %})             | Lundrigan
-| Wed, Jun 9    | [Networking Command Line Tools]({% link _selfpaced/71_networking_tools.md  %}) | Lundrigan
-| Wed, Jun 16   | Wireshark                     | Lundrigan
-| Wed, Jun 23   | Wireless Networking           | Lundrigan
+| Date          | Topic                                                                          | Speaker               
+|---------------|--------------------------------------------------------------------------------|-----------------------
+| Wed, Jun 1    | [Networking Basics]({% link _selfpaced/70_networking.md %})                    | Lundrigan
+| Wed, Jun 8    | [Networking Command Line Tools]({% link _selfpaced/71_networking_tools.md  %}) | Lundrigan
+| Wed, Jun 15   | Case Study: Connecting a Raspberry Pi to the Internet                          | Lundrigan
+| Wed, Jun 22   | Wireless Networking                                                            | Lundrigan
