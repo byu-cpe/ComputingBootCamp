@@ -14,18 +14,24 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------        
-| Mon, Apr 25   | Welcome, Setup, and Your Website      | Faculty               | Setup your computer. Get on Slack. Complete [Linux setup/tutorials]({% link _selfpaced/05_linux.md%}). Setup your website where you can post daily/weekly progress updates.
-| Wed, Apr 27   | Git                                   | Goeders               | Complete the followup activities on the [Git]({% link _selfpaced/12_git.md %}) page.  If you are already a Git expert, contribute to the list of follow-up topics with your own suggestions.
-| Fri, Apr 29   | Github                                | Lundrigan     | Add a link on the [students]({% link _pages/students_2021.md %}) page via pull request.   Add your name and photo to your lab website via pull request ([CCL](https://ccl.byu.edu), [NET Lab](https://netlab.byu.edu/), etc.). 
+| Wed, Apr 27   | **Welcome, Setup, and Your Website**  | Faculty               | Setup your computer. Get on Slack. Complete [Linux setup/tutorials]({% link _selfpaced/05_linux.md%}). Setup your website where you can post daily/weekly progress updates.
+| Thu, Apr 28   | Git                                   | Goeders               | Complete the followup activities on the [Git]({% link _selfpaced/12_git.md %}) page.  If you are already a Git expert, contribute to the list of follow-up topics with your own suggestions.
+| Fri, Apr 29   | Github                                | Lundrigan             | Add a link on the [students]({% link _pages/students_2021.md %}) page via pull request.   Add your name and photo to your lab website via pull request ([CCL](https://ccl.byu.edu), [NET Lab](https://netlab.byu.edu/), etc.). 
 | Mon, May 2    | VS Code                               | Goeders               | Debug a C Program
-| Wed, May 4    | make                                  | Goeders               | Create a simple C program of your choice, and compile it using make.  Push it up to Github.  Next, find a Makefile that is part of one of your group's projects and work through it to understand how it works.
-| Fri, May 5    | cmake                                 | Mangelson             | ???
-| Mon, May 9    | Python Introduction                   | Lundrigan             | Make your own Python application
+| Tue, May 3    | make                                  | Goeders               | Create a simple C program of your choice, and compile it using make.  Push it up to Github.  Next, find a Makefile that is part of one of your group's projects and work through it to understand how it works.
+| Wed, May 4    | **cmake**                             | Goeders               | 
+| Fri, May 6    | **OpenSource**                        | Wirthlin              | 
+| Mon, May 9    | **Python, Part I**                    | Lundrigan             | Make your own Python application
+| Tue, May 10   | Python, Part II                       |                       | 
 | Wed, May 11   | Python Packages/Environments          | Nelson                | Integrate some packages into your Python application and setup a `requirements.txt`
-| Fri, May 13   | Python numpy, pandas, and matplotlib  | Mangelson             | Continue working on your Python application.
-| Mon, May 16   | Github CI + Unit Testing              | Goeders/Mangelson     | Create a unit test + CI check for your Python application.
-| Wed, May 18   | Documentation w/ Sphinx               | Wirthlin              | Add Sphinx documentation to your Python application.
+| Thu, May 12   | Python numpy, pandas, and matplotlib  | Mangelson             | Continue working on your Python application.
+| Fri, May 13   | Github CI + Unit Testing              | Goeders/Mangelson     | Create a unit test + CI check for your Python application.
+| Mon, May 16   | **Web**                                   |              | 
+| Tue, May 17   | Documentation w/ Sphinx               | Wirthlin              | Add Sphinx documentation to your Python application.
+| Wed, May 18   | **Security**                                   |              | 
 | Fri, May 20   | Docker                                | Lundrigan             | Run your Python application within a docker container
+
+**Bold** Indicates a Live meeting
 
 ## FPGA Track
 
@@ -36,11 +42,11 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 | Fri, May 26   | Xilinx 7 Series FPGA Deep Dive  (no lecture - self-paced learning activity only) | Nelson
 | Mon, May 30   | HOLIDAY                               |
 | Wed, Jun 1    | Prjxray & FASM                        | 
-| Fri, Jun 3    | fasm2bels, fpga-tool-perf, symbiflow-examples | 
+| Fri, Jun 3    | fasm2bels, fpga-tool-perf, symbiflow-examples | Nelson 
 | Mon, Jun 6    | Guest Speakder
 | Wed, Jun 8    | RapidWright                           |
-| Fri, Jun 10    | Vivado Block Design + Vitis          | Goeders
-| Mon, Jun 13    | Vitis HLS                            | Goeders
+| Fri, Jun 10   | Vivado Block Design + Vitis          | Goeders
+| Mon, Jun 13   | Vitis HLS                            | Goeders
 
 ## Robotics Track
 
