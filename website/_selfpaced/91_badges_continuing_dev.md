@@ -3,7 +3,7 @@ layout: page
 toc: false
 title: Badge Development
 slug: badges_dev
-type: badges
+type: broader_impacts
 order: 2
 ---
 

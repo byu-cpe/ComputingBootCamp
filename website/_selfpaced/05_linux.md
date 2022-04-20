@@ -3,8 +3,8 @@ layout: page
 toc: true
 title: Linux Setup & Tutorials
 slug: linux
-type: setup
-order: 3
+type: development
+order: 1
 ---
 
 

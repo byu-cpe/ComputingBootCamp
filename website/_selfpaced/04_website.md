@@ -1,9 +1,9 @@
 ---
 layout: page
 toc: true
-title: Setting Up Your Website
+title: Creating Your Own Website
 slug: setup_website
-type: setup
+type: resources
 order: 4
 ---
 

@@ -3,7 +3,7 @@ layout: page
 toc: true
 title: Markdown
 slug: markdown
-type: setup
+type: resources
 order: 5
 ---
 

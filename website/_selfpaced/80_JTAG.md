@@ -3,13 +3,12 @@ layout: page
 toc: true
 title: JTAG
 slug: JTAG
-type: hardware
-order: 1
+type: fpga_commercial
+order: 10
 ---
 
 
 # JTAG
-
 
 In an effort to create a standardized way to access the internals of increasingly small circuits for testing and manufacturing, the Joint Test Action Group created the industry standard *JTAG*. This standard became official in 1990. Testing PCB's from the outside was becoming infeasible, and so JTAG provides a standardized way to see what is going on in a circuit without having to use big traditional electronic tools.
 
