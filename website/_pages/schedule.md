@@ -7,13 +7,13 @@ title: 2022 Schedule
 
 ## General Computing Group
 
-<span style="color:red">For those from other institutions that would like to attend via Zoom webinar, a link will be posted soon.</span>.
 
 The boot camp will follow a mix of live presentations, live Q&A sessions, and offline modules.  **We will be meeting M/W/F in EB 325 at 2-3:30p (Mountain Time)** for all live presentations and live Q&A sessions.
   * **Live Talk:** This will consist of faculty presentation on a topic.  After the presentation, you should visit the boot camp page and complete the follow up activities.  
   * **Live Q&A:** For certain topics we already have videos from previous year's boot camp.  Please watch the videos and start working on the followup activities *before* attending the live Q&A.  Come to the Q&A session with questions you have, or to share what you've learned with your fellow students.
   * **Offline:** Several topics will be completed entirely offline on Tuesdays/Thursdays.  You should watch the video on the topic and complete the activities.
 
+<span style="color:red">For those from other institutions that would like to attend via Zoom webinar, [please click here to register](https://byu.zoom.us/webinar/register/WN_ssdI-0VKQLWAyUpQ-CC2RA).</span>.
 
 | Date                                  | Topic                                                                     | Speaker               | Activity                                                         
 |---------------------------------------|---------------------------------------------------------------------------|-----------    ------------|--------------------------------------------        
