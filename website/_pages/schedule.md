@@ -33,7 +33,7 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14a_pythonEnvs.md %})      | Mangelson             | Continue working on your Python application.
 | Fri, May 13 <br /> (**Live Q&A**)     | [Github CI + Unit Testing]({% link _selfpaced/15_Unit_Testing.md %})      | Goeders/Mangelson     | Create a unit test + CI check for your Python application.
 | <ins>**WEEK 4**</ins>                 
-| Mon, May 16 <br /> (**Live Talk**)    | Web                                                                       |                       | 
+| Mon, May 16 <br /> (**Live Talk**)    | Web                                                                       | Lundrigan             | 
 | Tue, May 17 <br /> (*Offline*)        | [Sphinx]({% link _selfpaced/16_Sphinx.md %})                              | Wirthlin              | Add Sphinx documentation to your Python application.
 | Wed, May 18 <br /> (**Live Talk**)    | Security                                                                  |                       | 
 | Fri, May 20 <br /> (**Live Q&A**)     | [Docker]({% link _selfpaced/17_Docker.md %})                              | Lundrigan             | Run your Python application within a docker container
@@ -53,7 +53,7 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Fri, Jun 10   | Vivado Block Design + Vitis          | Goeders
 | Mon, Jun 13   | Vitis HLS                            | Goeders
 
-#
+
 ## Networking Track
 
 The networking track will be meeting in EB 302 at 2-3:30 PM.
