@@ -88,5 +88,6 @@ There are hundreds of printed tutorials on the web, find some and read them.  He
 - [Git and Github Tutorial for Beginners](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 - [Git Tutorial - Commands](https://www.edureka.co/blog/git-tutorial/)
 - [Learning Git Branching](https://learngitbranching.js.org/?locale=en_US)
-- [Git Cheat-Sheet] (https://education.github.com/git-cheat-sheet-education.pdf)
+- [Git Cheat Sheet](https://github.com/JakeEdvenson/ComputingBootCamp/files/8577687/git-cheat-sheet-education.pdf)
+
 
