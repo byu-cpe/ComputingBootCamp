@@ -28,7 +28,7 @@ Here are a few ideas for follow-up activities:
 - Fork an interesting repo
 - Submit a pull request to an open-source project
 
-## Githup Actions
+## GitHub Actions
 
 Here is a [Powerpoint](../../media/Github_Actions.pptx) briefly discussing GitHub Actions
 
