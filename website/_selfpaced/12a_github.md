@@ -32,7 +32,7 @@ Here are a few ideas for follow-up activities:
 
 Here is a [Powerpoint](../../media/Github_Actions.pptx) briefly discussing GitHub Actions
 
-## To Learn More
+## To Learn More!
 
 There are hundreds of tutorials on the web. Find some and read/watch them. Here are some we have found:
 
