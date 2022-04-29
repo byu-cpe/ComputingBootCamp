@@ -3,7 +3,7 @@ layout: page
 toc: true
 title: SQL Basics
 slug: sql
-type: development
+type: archive
 order: 13
 ---
 

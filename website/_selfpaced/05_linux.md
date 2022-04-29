@@ -3,8 +3,8 @@ layout: page
 toc: true
 title: Linux Setup & Tutorials
 slug: linux
-type: setup
-order: 3
+type: development
+order: 1
 ---
 
 
@@ -100,6 +100,8 @@ Copy files to and from a remote machine as in:
     scp username@hostname:.bashrc /tmp
 
 This is how you move files between machines.
+
+{% include quizzes.html id=13 %}
 
 ### SSH Keys
 Instead of having to authenticate with a password each time you connect to a remote machine, you can set up an SSH key to do automatic authentication.  [This tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1804) explains how to set this up in a variety of ways.

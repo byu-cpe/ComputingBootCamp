@@ -1,4 +1,8 @@
 
+# Current id index: 14
+# When making a new question, use the above id number and then 
+# increment it.
+
 # --------------------------- Activites for 61_quizzes.md --------------------------- 
 - id: 1 # A unique identifier used to embed the question
   type: multiple_choice
@@ -46,6 +50,17 @@
       correct: test a URL
     - text: cat
       correct: display file contents
+
+- id: 13
+  prompt: Help Alice copy a file off of the BYU caedm servers!
+  type: fill_in
+  responses:
+    - text: Alice wants to copy a text file off of the BYU caedm servers onto her
+            personal computer. The text file is located at ~/Documents/textfile1.txt
+            on the caedm computer and she wants to save it at ~/Downloads in her
+            personal computer. Her caedm username is alice123. What command should she execute?
+            _______________________________________________________________
+      correct: scp alice123@ssh.et.byu.edu:Documents/textfile1.txt ~/Downloads
 
 - id: 5
   prompt: Use the manual pages in a terminal session to find the function of each option.

@@ -19,7 +19,7 @@ for the Nexys 4 DDR board is already downloaded and added to vivado.
 *  At the top of the window select Boards
 *  From the list of boards highlight the Nexys4 DDR and click next
   *  If the board is not shown in the list, you need to download and add the board file to vivado. 
-  *  Follow this tutorial for instructions on how to obtain and add the board file
+  *  Follow the steps towards the bottom of [this](https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-sdk) tutorial for instructions on how to obtain and add the board file
 *  Click Finish
 ## Create Block Design
 *  On the left in the Flow Navigator, under IP INTEGRATOR, select "Create Block Design"

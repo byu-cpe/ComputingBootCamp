@@ -1,9 +1,9 @@
 ---
 layout: page
 toc: true
-title: Github
+title: PCB - Github
 slug: github_PCB
-type: PCB
+type: archive
 order: 3
 ---
 

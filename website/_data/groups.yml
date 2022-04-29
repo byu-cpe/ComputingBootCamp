@@ -1,11 +1,8 @@
-- key: setup
-  title: Setup
+# - key: setup
+#   title: Setup
 
 - key: development
   title: Software Development
-
-- key: hardware
-  title: Hardware
 
 - key: fpga_commercial
   title: Commerical FPGA
@@ -13,8 +10,8 @@
 - key: fpga_opensource
   title: Open FPGA CAD
 
-- key: robotics
-  title: Robotics
+# - key: robotics
+#   title: Robotics
 
 - key: networking
   title: Networking
@@ -24,9 +21,6 @@
 
 - key: broader_impacts
   title: Broader Impacts
-
-- key: badges
-  title: Badges
 
 - key: resources
   title: Resources
