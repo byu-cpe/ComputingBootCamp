@@ -221,13 +221,16 @@ You can also create a new matrix by using lines from previous matrix. The follow
 ### Try it
 
 Using the following matrix and the commands you just learned, find the following:
-- What are the index of all occurances of the value 2 (ANS: (1,1), (2,3), 3,4))
-- Sum of row 2 and 3 (ANS: [ 5 4 6 3 ])
-- Column 4 multiplied by the value in index (1,2) (ANS: [ 3 ; 1 ; 2 ])
-- Index (3,4) multiplied by the 2x2 matrix in the bottom right corner (ANS: [ 4 2 ; 8 4 ]) 
-- Create a 3x3 submatrix (ANS: [1 4 3 ; 1 2 1 ; 3 4 2 ] - answers may vary)
-- Delete the first column and last row (ANS: [1 4 3 ; 1 2 1 ])
-- Turn the 3x4 matrix into a 4x4 matrix repeating the last row twice (ANS: [ 2 1 4 3 ; 4 1 2 1 ; 1 3 4 2 ; 1 3 4 2 ])
+```
+try_it = [ 2 1 4 3 ; 4 1 2 1 ; 1 3 4 2 ]
+```
+- What are the index of all occurances of the value 2 ( SOLUTION: (1,1), (2,3), (3,4) )
+- Sum of row 2 and 3 ( SOLUTION: [ 5 4 6 3 ] )
+- Column 4 multiplied by the value in index (1,2) ( SOLUTION: [ 3 ; 1 ; 2 ] )
+- Index (3,4) multiplied by the 2x2 matrix in the bottom right corner ( SOLUTION: [ 4 2 ; 8 4 ] ) 
+- Create a 3x3 submatrix ( SOLUTION: [ 1 4 3 ; 1 2 1 ; 3 4 2 ] - answers may vary )
+- Delete the first column and last row ( SOLUTION: [ 1 4 3 ; 1 2 1 ] )
+- Turn the 3x4 matrix into a 4x4 matrix repeating the last row twice ( SOLUTION: [ 2 1 4 3 ; 4 1 2 1 ; 1 3 4 2 ; 1 3 4 2 ] )
 
 ### Matrix Operations
 
