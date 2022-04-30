@@ -12,9 +12,9 @@ We will be using several Xilinx software tools, including Vivado, Vitis, and Vit
 
 ### Download
 
-1. Go to <https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html>
+1. Go to <https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/archive-vitis.html>
 
-2. On the left-hand bar, select _2020.2_, and find the section _Vitis Core Development Kit - 2020.2  Full Product Installation_.
+2. Under _2020_, select _2020.2_, and find the section _Vitis Core Development Kit - 2020.2  Full Product Installation_.
 
 3. You can either:
     * Download all the files upfront (_All OS installer Single-File Download_), or 
