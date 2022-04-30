@@ -124,6 +124,17 @@ Host caedm
     User cosmo
 ```
 
+You can remotely connect to an individual machine by tunneling through an SSH server on the same network as the machine. To accomplish this, use SSH to connect to the SSH server, then use SSH again within the same session to connect to the remote machine.
+
+This can be automated by adding `ProxyJump` to your Config file entry for the machine, and optionally adding `IdentityFile` to allow for passwordless key authentication, like this (appended below the above CAEDM example):
+```
+Host myDesktop
+    Hostname 10.2.111.111
+    User cosmo
+    ProxyJump caedm
+    IdentityFile ~/.ssh/privateKeyName
+```
+
 {% include quizzes.html id=5 %}
 
 <!-- # Faculty Notes
