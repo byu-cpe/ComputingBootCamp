@@ -35,3 +35,9 @@ title: 2021 Students
 
 
 Please create a [pull request](https://github.com/byu-cpe/ComputingBootCamp/pulls) to update this webpage with a link to your weekly log.
+
+
+
+### BootCamp Students 2022
+* Preston Walker
+
