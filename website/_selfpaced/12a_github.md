@@ -36,5 +36,4 @@ Here is a [Powerpoint](../../media/Github_Actions.pptx) briefly discussing GitHu
 
 There are hundreds of tutorials on the web. Find some and read/watch them. Here are some we have found:
 
-- [Bit-sized guides made by GitHub](https://guides.github.com)
 - [GitHub Course](https://lab.github.com)

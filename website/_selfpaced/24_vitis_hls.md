@@ -104,7 +104,7 @@ This section will focus on adding optimizations to the program in order to decre
 
 Adding Pragmas to the code automatically updates the directives in the GUI. 
 
-For a full list of the different pragmas, what they are, and what they do, visit this [website](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/tfo1593136615570.html) or this [user guide](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_2/ug1399-vitis-hls.pdf) starting in Chapter 16. This will be useful as you explore different optimizations. 
+For a full list of the different pragmas, what they are, and what they do, see the [user guide](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_2/ug1399-vitis-hls.pdf) starting in Chapter 16. This will be useful as you explore different optimizations. 
 
 * To start, enter the following lines of code into matrixmul.cpp just inside the function:
 

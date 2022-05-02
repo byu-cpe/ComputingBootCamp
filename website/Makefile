@@ -5,7 +5,7 @@ dbuild:
 	docker run --rm --volume="$$PWD:/srv/jekyll" -it jekyll/jekyll:4.0 jekyll build
 
 check_links: build
-	bundle exec htmlproofer --empty_alt_ignore --url-swap "^\/ComputingBootCamp:" --url-ignore "/www.mouser.com/,/www.epectec.com/,/oshpark.com/,/www.tablesgenerator.com/text_tables/,/support.xilinx.com/" ./_0site
+	bundle exec htmlproofer --empty_alt_ignore --url-swap "^\/ComputingBootCamp:" --url-ignore "/www.mouser.com/,/www.epectec.com/,/oshpark.com/,/www.tablesgenerator.com/text_tables/,/support.xilinx.com/,/software.byu.edu/,/docs.github.com/en/actions/using-workflows/" ./_site
 
 build:
 	bundle exec jekyll build
