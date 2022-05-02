@@ -12,7 +12,7 @@ order: 4
 [make](https://www.gnu.org/software/make/manual/make.html) is a powerful tool that helps you organize and issue collections of shell commands.  It is commonly used to:
   * Determine which parts of a program need to be compiled, and issue shell commands to compile these programs.  While C/C++ is the most commonly compiled language, *make* can be used to compile any language that uses a command-line interface for compiling.
   * More broadly, *make* can be used for any task where files are created or modified via shell commands, and need to be updated when other files change.
-  * Even more boardly, *make* is often used as a shorthand for issuing multiple shell commands in a single statement.
+  * Even more broadly, *make* is often used as a shorthand for issuing multiple shell commands in a single statement.
 
 ## Install
 
