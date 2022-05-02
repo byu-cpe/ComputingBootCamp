@@ -82,7 +82,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  html-proofer
+  html-proofer (>= 3.19.0)
   jekyll
   kramdown (>= 2.3.1)
   nokogiri (>= 1.11.4)
@@ -90,4 +90,4 @@ DEPENDENCIES
   rexml (>= 3.2.5)
 
 BUNDLED WITH
-   2.1.4
+   2.2.33

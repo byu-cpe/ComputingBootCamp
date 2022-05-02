@@ -31,13 +31,6 @@ Here are some extra tips for each of the install steps that might be helpful:
 
 `export XRAY_VIVADO_SETTINGS="/opt/Xilinx/Vivado/2017.2/settings64.sh"`
 
-* Step 2: This step downloads their directory to your system. The command they provide uses SSH to clone the directory. This probably won't be set up on your system, but you can set it up by following [these instructions](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account). You can also easily clone the directory with HTTPS instead of SSH by running the following command:
-
-```
-git clone https://github.com/SymbiFlow/prjxray.git
-``` 
-Run either the command for SSH cloning or HTTPS cloning within the home directory. By default, you should be in the home directory. If not, just run `cd` in the terminal, and you should be there (alternatively, you can run `cd ~/`). This will create a directory called `prjxray` where the GitHub repo will then be stored.
-
 * Step 4: When running `make`, it will look for a file called `Makefile`. For Project X-Ray, this will be in the `prjxray` directory on the top level, so make sure you are there by running `cd ~/prjxray`.
 
 * Step 5: Go with Option 1.  This will create a self-contained Python virtual environment that will not interfere with your system setup.
@@ -82,7 +75,7 @@ Below are some activities associated with the fuzzers.
 
 **Only complete this step if your advisor has asked you to.**
 
-For this activity, return to your Project X-Ray folder and recreate the database (running all the fuzzers). According to the SymbiFlow website, [Fuzzers](https://symbiflow.readthedocs.io/en/latest/prjxray/docs/db_dev_process/fuzzers/index.html) are "a set of tests which generate a design, feed it to Vivado, and look at the resulting bitstream to make some conclusion. This is how the contents of the database are generated."
+For this activity, return to your Project X-Ray folder and recreate the database (running all the fuzzers). According to the SymbiFlow website, [Fuzzers](https://f4pga.readthedocs.io/projects/prjxray/en/latest/db_dev_process/fuzzers/index.html) are "a set of tests which generate a design, feed it to Vivado, and look at the resulting bitstream to make some conclusion. This is how the contents of the database are generated."
 
 Recreating the database (running all the fuzzers) will require performing Step 8, Option 2 in the Quickstart Guide.  This will take a very long time; begin the process right away. While this process is running, you are suggested to investigate the links at the bottom of this page to learn more about Project X-Ray and its documentation. Check on the process periodically to make sure it is still working and hasn't crashed. While the fuzzers are running, there are a number of things you can also do to learn about the Project X-Ray system:
 
@@ -112,7 +105,7 @@ To run individual fuzzers, we will modify the make command.
 
 For this activity, run three different fuzzers from the fuzzers directory. The first fuzzer will be `fuzzers/010-clb-ltinit`. The other two fuzzers can be any two of your choice, so have fun with it!
 
-The purpose of the [clb-lutinit Fuzzer](https://symbiflow.readthedocs.io/projects/prjxray/en/latest/db_dev_process/fuzzers/clb-lutinit.html) is to determine where in the bitfile the LUT initialize constants are found. Review the fuzzer documentation (there is not much for this one!), change into the fuzzer's directory,  and run it by adding `run` to the end of the make command. Review the console output while the fuzzer is running.
+The purpose of the [clb-lutinit Fuzzer](https://f4pga.readthedocs.io/projects/prjxray/en/latest/db_dev_process/fuzzers/clb-lutinit.html) is to determine where in the bitfile the LUT initialize constants are found. Review the fuzzer documentation (there is not much for this one!), change into the fuzzer's directory,  and run it by adding `run` to the end of the make command. Review the console output while the fuzzer is running.
 
     make -j$(nproc) run
 
@@ -133,7 +126,7 @@ generate.tcl | Vivado .tcl file for generating the bitfile
 * Project X-Ray BRAM Patch Github Repository - <https://github.com/SymbiFlow/prjxray-bram-patch>
 * Project X-Ray Database: XC7 Series - <https://github.com/SymbiFlow/prjxray-db>
 * "Read the Docs" Project X-Ray Documentation (PDF Version) - <https://readthedocs.org/projects/prjxray/downloads/pdf/latest/>
-* Project X-Ray Documentation - <https://symbiflow.readthedocs.io/projects/prjxray/en/latest/>
+* Project X-Ray Documentation - <https://f4pga.readthedocs.io/projects/prjxray/en/latest/>
     * (Pay particular attention to the first three sections of "Xilinx 7-Series Architecture": Overview, Configuration, and Bitstream Format)
-* Project X-Ray Fuzzers Documentation -<https://symbiflow.readthedocs.io/en/latest/prjxray/docs/db_dev_process/fuzzers/index.html>
+* Project X-Ray Fuzzers Documentation -<https://f4pga.readthedocs.io/projects/prjxray/en/latest/db_dev_process/fuzzers/index.html>
 
