@@ -16,9 +16,21 @@ order: 4
 
 ## Install
 
+From a Linux terminal, run:
+
 ```
 sudo apt install make
 ```
+
+<details>
+  <summary> Wondering what this does? </summary>
+
+    <em>sudo</em> - This command elevates the privileges of the next command to an administrator level, allowing you to install <em>make</em> system-wide.  <br>
+    <em>apt</em> - This command runs the command-line interface of the APT (advanced package tool), which handles the installation of <em>make</em>. <br>
+    <em>install</em> - This is an <em>apt</em>-specific command that installs the packages named as inputs. <br>
+    <em>make</em> - The name of the package to install. <br>
+
+</details>
 
 ## Lecture Video
 On May 5, 2021 we had a Make Tutorial by Prof Goeders. The video is embedded below
@@ -55,14 +67,14 @@ The various stages of makefile development shown in the lecture are:
 ## Make Badge
 <a href="https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q"><img src="https://media.badgr.com/uploads/badges/8e853a0b-726b-4101-8cb0-4b299926f19d.png" alt="Make Badge" width="250"/></a>
 
-For those who believe they have mastered Make and Makefiles, we present the Make badge! This badge can be viewed in it's entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). The Make badge can be used to prove your Makefile knowledge to potential employers, educational instutitions, or anyone else! To earn it, you'll have to complete the Make test and use your knowledge to write Makefiles for varying situations. Attempt the Make test and earn the Make badge with the button below!
+For those who believe they have mastered Make and Makefiles, we present the Make badge! This badge can be viewed in its entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). The Make badge can be used to prove your Makefile knowledge to potential employers, educational instutitions, or anyone else! To earn it, you'll have to complete the Make test and use your knowledge to write Makefiles for varying situations. Attempt the Make test and earn the Make badge with the button below!
 
 <div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/makeTest'">
     <p class="activity-label h3-clone">EARN THE MAKE BADGE</p>
     <p class="dropdown-arrow h3-clone">&#9654;</p>
 </div>
 
-Good luck to those who attempt the test, and if you pass, congradulations! You are now certified in Make and Makefiles by the BYU Computing Boot Camp.
+Good luck to those who attempt the test, and if you pass, congratulations! You are now certified in Make and Makefiles by the BYU Computing Boot Camp.
 
 
 
