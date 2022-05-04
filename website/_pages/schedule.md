@@ -25,9 +25,9 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Mon, May 2 <br /> (**Live Q&A**)      | [VS Code]({% link _selfpaced/10_vscode.md %})                             | Goeders               | Debug a C Program
 | Tue, May 3 <br /> (*Offline*)         | [make]({% link _selfpaced/13_make.md %})                                  |                       | Create a simple C program of your choice, and compile it using make.  Push it up to Github.  Next, find a Makefile that is part of one of your group's projects and work through it to understand how it works.
 | Wed, May 4 <br /> (**Live Talk**)     | [cmake]({% link _selfpaced/13_cmake.md %})                                | Goeders               | 
-| Fri, May 6 <br /> (**Live Talk**)     | Open Source Software                                                      | Wirthlin              | 
+| Fri, May 6 <br /> (**Live Talk**)     | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part I                 | Lundrigan             | Make your own Python application
 | <ins>**WEEK 3**</ins>                 
-| Mon, May 9 <br /> (**Live Talk**)     | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part I                 | Lundrigan             | Make your own Python application
+| Fri, May 6 <br /> (**Live Talk**)     | Open Source Software                                                      | Wirthlin              | 
 | Tue, May 10 <br /> (*Offline*)        | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part II                |                       | 
 | Wed, May 11 <br /> (**Live Q&A**)     | [Python Packages/Environments]({% link _selfpaced/14a_pythonEnvs.md %})   | Nelson                | Integrate some packages into your Python application and setup a `requirements.txt`
 | Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14a_pythonEnvs.md %})      | Mangelson             | Continue working on your Python application.
