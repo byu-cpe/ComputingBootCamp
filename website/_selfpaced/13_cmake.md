@@ -46,7 +46,7 @@ Try running through the examples we talked about in lecture.
 ## Learn More CMake Syntax
 
 * Watch the following video by Jason Turner for a quick introduction: <https://www.youtube.com/watch?v=HPMvU64RUTY>
-* Read throgh the following page for an overview of the syntax: <https://llvm.org/docs/CMakePrimer.html>
+* Read through the following page for an overview of the syntax: <https://llvm.org/docs/CMakePrimer.html>
 
 ## PUBLIC, PRIVATE,  INTERFACE
 
