@@ -100,7 +100,7 @@ Early CMake primarily worked by working with setting global variables for includ
 Modern CMake is targets based. Instead of directly changing variables (which was the old way to do things), instead we should deal with targets and properties. Modern CMake is the object oriented version of the older cmake methods.
 
 
-You should allways be using Modern CMake techniques and methods.
+You should always be using Modern CMake techniques and methods.
 
 Read about these items at the following links:
 * <https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1>
@@ -118,7 +118,7 @@ Read more about this here:
 
 ## Exporting, and Installing
 
-Enabling others to use your library is essential. For large projects especially, intalling your files from many sub-projects to a single unified folder can be very helpful.
+Enabling others to use your library is essential. For large projects especially, installing your files from many sub-projects to a single unified folder can be very helpful.
 
 Exporting your targets is essential for supporting Modern CMake practices.
 

@@ -11,7 +11,7 @@ order: 4
 
 [make](https://www.gnu.org/software/make/manual/make.html) is a powerful tool that helps you organize and issue collections of shell commands.  It is commonly used to:
   * Determine which parts of a program need to be compiled, and issue shell commands to compile these programs.  While C/C++ is the most commonly compiled language, *make* can be used to compile any language that uses a command-line interface for compiling.
-  * More broadly, *make* can be used for any task where files are created or modified via shell commands, and need to be updated when other files change.
+  * More broadly, *make* can be used for any task where files are created or modified via shell commands and need to be updated when other files change.
   * Even more broadly, *make* is often used as a shorthand for issuing multiple shell commands in a single statement.
 
 ## Install
@@ -24,22 +24,22 @@ sudo apt install make
 
 <details>
   <summary> Wondering what this does? </summary>
-
-    <em>sudo</em> - This command elevates the privileges of the next command to an administrator level, allowing you to install <em>make</em> system-wide.  <br>
-    <em>apt</em> - This command runs the command-line interface of the APT (advanced package tool), which handles the installation of <em>make</em>. <br>
-    <em>install</em> - This is an <em>apt</em>-specific command that installs the packages named as inputs. <br>
-    <em>make</em> - The name of the package to install. <br>
-
+  <ul>
+    <li><em>sudo</em> - This command elevates the privileges of the next command to superuser level, allowing you to install <em>make</em> system-wide.</li>
+    <li><em>apt</em> - This command runs the command-line interface of the APT (advanced package tool), which handles the installation of <em>make</em>.</li>
+    <li><em>install</em> - This is an <em>apt</em>-specific command that installs the packages named as inputs.</li>
+    <li><em>make</em> - The name of the package to install.</li>
+  </ul>
 </details>
 
 ## Lecture Video
-On May 5, 2021 we had a Make Tutorial by Prof Goeders. The video is embedded below
+On May 5, 2021, we had a Make Tutorial by Prof Goeders. The video is embedded below:
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/4ITu7eJBdDY"> </iframe> 
 
 ## Example
 
-The lecture video presents a simple C program that implements and interactive calculator, and then discusses how to use *make* to compile it.  The lecture walks through how a Makefile works, starting with a very simple example, and building up to a more complex, generic makefile.  
+The lecture video presents a simple C program that implements an interactive calculator and then discusses how to use *make* to compile it.  The lecture walks through how a Makefile works, starting with a very simple example and building up to a more complex generic makefile.  
 
 <!-- The code is the split calculator code from the compiler lecture, so it makes sense to position this lecture after that one. -->
 
