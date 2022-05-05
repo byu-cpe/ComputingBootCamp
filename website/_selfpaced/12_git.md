@@ -43,11 +43,15 @@ Re-watch the video from above and replicate the basic steps you see there with s
 {% include quizzes.html id=9 %}
 
 ### Learn About Git Aliases
-1. Set some aliases in ~/.gitconfig
-1. Find some handy git aliases online.  One of my favorites: <https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs>
+1. Find some handy git aliases online.  
+    * Handy git aliases: <https://betterdev.blog/handy-git-aliases/>
+    * Making pretty `git log` outputs: <https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs>
+    * Awesome git aliases (including dad jokes): <https://davidwalsh.name/awesome-git-aliases>
+    * Advanced aliases using shell commands: <https://www.atlassian.com/blog/git/advanced-git-aliases>
+1. Set some of these aliases in ~/.gitconfig and try them out for yourself!
 
 ### Play With Branches
-1. Create a new branch and then check it out
+1. Create a new branch and then check it out.
 1. Check what branch you are on by noting where it shows up in `git status`.  Also see what `git branch` tells you.
 1. Now, change a file and recommit.
 1. Merge the branch’s changes back into master (you must checkout master to do this since a merge is always “merge something else into my current version")
