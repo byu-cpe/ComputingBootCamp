@@ -114,7 +114,7 @@
   type: matching
   help: Use git log --help
   responses:
-    - text: --(number)
+    - text: -(number)
       correct: Limit the number of commits to output
     - text: --reverse
       correct: Output the commits chosen to be shown in reverse order
