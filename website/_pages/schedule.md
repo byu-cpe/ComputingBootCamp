@@ -30,7 +30,7 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Fri, May 6 <br /> (**Live Talk**)     | [Open Source Software]({% link _selfpaced/13a_OpenSource.md %})                                                      | Wirthlin              | 
 | Tue, May 10 <br /> (*Offline*)        | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part II                |                       | 
 | Wed, May 11 <br /> (**Live Q&A**)     | [Python Packages/Environments]({% link _selfpaced/14a_pythonEnvs.md %})   | Nelson                | Integrate some packages into your Python application and setup a `requirements.txt`
-| Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14a_pythonEnvs.md %})      | Mangelson             | Continue working on your Python application.
+| Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14c_pythonAdv.md %})       | Mangelson             | Continue working on your Python application.
 | Fri, May 13 <br /> (**Live Q&A**)     | [Github CI + Unit Testing]({% link _selfpaced/15_Unit_Testing.md %})      | Goeders/Mangelson     | Create a unit test + CI check for your Python application.
 | <ins>**WEEK 4**</ins>                 
 | Mon, May 16 <br /> (**Live Talk**)    | Web                                                                       | Lundrigan             | 

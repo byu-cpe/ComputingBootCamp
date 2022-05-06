@@ -279,7 +279,7 @@ add_library(mylib SHARED my_file.cpp ${HEADER_LIST})
 
 // clear full build tree without touching the original code
 rm -rf build/  
-// You don't have to allways do this when code changes (make file will recognized changes and only build what you need to)
+// You don't have to always do this when code changes (make file will recognized changes and only build what you need to)
 // However, when you change the CMakeFiles this can sometimes be helpful
 
 mkdir build
