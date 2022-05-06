@@ -27,7 +27,7 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Wed, May 4 <br /> (**Live Talk**)     | [cmake]({% link _selfpaced/13_cmake.md %})                                | Goeders               | 
 | Fri, May 6 <br /> (**Live Talk**)     | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part I                 | Lundrigan             | Make your own Python application
 | <ins>**WEEK 3**</ins>                 
-| Mon, May 9 <br /> (**Live Talk**)     | [Open Source Software]({% link _selfpaced/13a_OpenSource.md %})                                                      | Wirthlin              | 
+| Mon, May 9 <br /> (**Live Talk**)     | [Open Source Software]({% link _selfpaced/13a_OpenSource.md %})                                                      | Wirthlin              | Explore open source projects
 | Tue, May 10 <br /> (*Offline*)        | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part II                |                       | 
 | Wed, May 11 <br /> (**Live Q&A**)     | [Python Packages/Environments]({% link _selfpaced/14a_pythonEnvs.md %})   | Nelson                | Integrate some packages into your Python application and setup a `requirements.txt`
 | Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14c_pythonAdv.md %})       | Mangelson             | Continue working on your Python application.
