@@ -69,7 +69,7 @@
     - text: ls -L
       correct: dereference
     - text: chmod -f
-      correct: supress error msgs
+      correct: suppress error msgs
     - text: rm -i
       correct: prompt
 
@@ -99,7 +99,7 @@
       correct: true
 
 - id: 8
-  prompt: Which of the following is a Makefile function that takes the .cpp files in a varible called CPP, changes the endings to .h, and saves them in a variable called HEADERS?
+  prompt: Which of the following is a Makefile function that takes the .cpp files in a variable called CPP, changes the endings to .h, and saves them in a variable called HEADERS?
   type: multiple_choice
   responses:
     - text: HEADERS=$(wildcard *.h)
