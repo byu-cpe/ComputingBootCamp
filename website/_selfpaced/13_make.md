@@ -49,15 +49,15 @@ The lectures starts by creating a very simple *Makefile*, which is copied from `
 
 <!-- Last time I showed them mk6 first, and showed how cryptic it was, and then talked about how we will walk through the steps to understanding this. -->
 
-The various stages of makefile development shown in the lecture are:
-* mk1: The simplest makefile where we discuss makefile "recipes" (targets).  Build and clean only.
+The various stages of makefile development shown in the lecture are (time stamps in parentheses):
+* mk1 ([10:13](https://www.youtube.com/embed/4ITu7eJBdDY?start=613)): The simplest makefile where we discuss makefile "recipes" (targets).  Build and clean only.
 {% include quizzes.html id=7 %}
-* mk2: Variables
-* mk3: We split up the compilation/linker steps, and introduce chained dependencies.  We do a bunch of demos of deleting files and rebuilding targets.  The linux 'touch' command is very helpful here.
-* mk4: We introduce Makefile automatic variables ($@ and $<)
+* mk2 ([15:01](https://www.youtube.com/embed/4ITu7eJBdDY?start=901)): Variables
+* mk3 ([16:36](https://www.youtube.com/embed/4ITu7eJBdDY?start=996)): We split up the compilation/linker steps, and introduce chained dependencies.  We do a bunch of demos of deleting files and rebuilding targets.  The linux 'touch' command is very helpful here.
+* mk4 ([26:28](https://www.youtube.com/embed/4ITu7eJBdDY?start=1588)): We introduce Makefile automatic variables ($@ and $<)
 {% include quizzes.html id=6 %}
-* mk5: Pattern matching
-* mk6: Makefile functions, and making the makefile more generic.
+* mk5 ([30:06](https://www.youtube.com/embed/4ITu7eJBdDY?start=1806)): Pattern matching
+* mk6 ([34:35](https://www.youtube.com/embed/4ITu7eJBdDY?start=2075)): Makefile functions, and making the makefile more generic.
 {% include quizzes.html id=8 %}
 
 ## Other Resources
