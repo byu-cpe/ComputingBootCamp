@@ -12,6 +12,18 @@ On May 14, 2021 Prof Mangelson gave a tutorial on how to use the Numpy, Pandas, 
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/hdDKcOLD-5M"> </iframe> 
 
+### Video Timestamps
+
+* Installation
+* numpy - 2:29
+  * Creating a numpy array - 3:46
+  * Array indexing - 9:28
+  * Array operations - 12:16
+* matplotlib - 26:42
+  * General graphing - 27:55
+  * Other types of plots - 38:32
+* pandas - 48:39
+
 ## Overview
 
 In this module, we are going to provide an introduction to several essential python libraries. There are many many more libraries than we can cover and the details of each library is much larger than we can fully cover as well, so this is just supposed to give you a brief introduction to some essential libraries and their basic use.
