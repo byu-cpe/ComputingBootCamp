@@ -27,10 +27,10 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Wed, May 4 <br /> (**Live Talk**)     | [cmake]({% link _selfpaced/13_cmake.md %})                                | Goeders               | 
 | Fri, May 6 <br /> (**Live Talk**)     | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part I                 | Lundrigan             | Make your own Python application
 | <ins>**WEEK 3**</ins>                 
-| Fri, May 6 <br /> (**Live Talk**)     | Open Source Software                                                      | Wirthlin              | 
+| Mon, May 9 <br /> (**Live Talk**)     | [Open Source Software]({% link _selfpaced/13a_OpenSource.md %})                                                      | Wirthlin              | Explore open source projects
 | Tue, May 10 <br /> (*Offline*)        | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part II                |                       | 
 | Wed, May 11 <br /> (**Live Q&A**)     | [Python Packages/Environments]({% link _selfpaced/14a_pythonEnvs.md %})   | Nelson                | Integrate some packages into your Python application and setup a `requirements.txt`
-| Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14a_pythonEnvs.md %})      | Mangelson             | Continue working on your Python application.
+| Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14c_pythonAdv.md %})       | Mangelson             | Continue working on your Python application.
 | Fri, May 13 <br /> (**Live Q&A**)     | [Github CI + Unit Testing]({% link _selfpaced/15_Unit_Testing.md %})      | Goeders/Mangelson     | Create a unit test + CI check for your Python application.
 | <ins>**WEEK 4**</ins>                 
 | Mon, May 16 <br /> (**Live Talk**)    | Web                                                                       | Lundrigan             | 
