@@ -7,6 +7,16 @@ type: development
 order: 6
 ---
 
+## Installation
+Python generally comes preinstalled on Ubuntu, but you can check which version you have by typing the following into your terminal:
+`python3 --version`
+
+If the above command says you don't have Python installed or if your Python version is not 3.8, you can type the following into your terminal to get the latest version of Python:
+```
+sudo apt update
+sudo apt install python3.8
+```
+
 ## Lecture Videos
 On May 10th and 12th of 2021 we had an introduction to Python by Prof Lundrigan. The videos are embedded below
 
