@@ -35,7 +35,7 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | <ins>**WEEK 4**</ins>                 
 | Mon, May 16 <br /> (**Live Talk**)    | Web                                                                       | Lundrigan             | 
 | Tue, May 17 <br /> (*Offline*)        | [Sphinx]({% link _selfpaced/16_Sphinx.md %})                              | Wirthlin              | Add Sphinx documentation to your Python application.
-| Wed, May 18 <br /> (**Live Talk**)    | Security                                                                  |                       | 
+| Wed, May 18 <br /> (**Live Talk**)    | Security                                                                  |  Hansen                     | 
 | Fri, May 20 <br /> (**Live Q&A**)     | [Docker]({% link _selfpaced/17_Docker.md %})                              | Lundrigan             | Run your Python application within a docker container
 
 ## FPGA Track
