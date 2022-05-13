@@ -65,7 +65,7 @@ More information about the many different ways of creating these arrays can be f
 
 ### Array Operations
 
-Numpy also provides a variety of methods for manipulating and operating on arrays. These range from things like sorting, reshaping, masking, and concatenating arrays to numerical operations such as summing, applying an operation to every element, to linear algera operations such as matrix multiplication, matrix transpose, matrix inversion, and matrix decomposition.
+Numpy also provides a variety of methods for manipulating and operating on arrays. These range from things like sorting, reshaping, masking, and concatenating arrays to numerical operations such as summing, applying an operation to every element, to linear algebra operations such as matrix multiplication, matrix transpose, matrix inversion, and matrix decomposition.
 
 Numpy is designed in such a way that for most operations you can avoid iterating through all elements of the array by hand and apply operations to every element with only a single command. It is considered un-pythonic to use for loops on numpy arrays.
 
@@ -87,11 +87,11 @@ Your followup assignment for numpy is to look through the documentation at the l
   * Generating random values from a uniform distribution
 * Running statistical and mathematical operations an array of elements:
   * Calculate the sum of an array
-  * Calcualte the sum of a 2D array along the columns/rows
+  * Calculate the sum of a 2D array along the columns/rows
   * Calculate the mean of an array
   * Calculate the standard deviation of an array
   * Calculate the covariance of the columns of a 2D array
-* Performing matix operations on a 2D-array or pair of 2D-arrays:
+* Performing matrix operations on a 2D-array or pair of 2D-arrays:
   * Perform matrix multiplication between two arrays of matching sizes
   * Calculate the dot product between two arrays
   * Calculate the eigenvalue, Cholesky, and SVD decompositions of a matrix
@@ -153,13 +153,13 @@ For a followup activity, read more about the following topics and experiment wit
 * heatmaps/images (plt.imshow()) - (Try to find this documentation your self)
 * Plotting a 3D bar graph - (Try to find this documentation your self)
 * Plotting latex-notation in the plot - (Try to find this documentation your self)
-* Specifying markder shape, color, etc... - <https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html>
+* Specifying marker shape, color, etc... - <https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html>
 
 ## Pandas
 
 Pandas is a library that enables interaction with and analysis of tabulated datasets. For example, the csv parser similar to the one you implemented in the previous module is built into pandas.
 
-The two main data stuctures in pandas are:
+The two main data structures in pandas are:
 * Series - A 1-D list of labeled data that can be of varying types
 * DataFrame - A 2-D table where each column is of specific type
 

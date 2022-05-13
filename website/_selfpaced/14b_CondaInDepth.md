@@ -10,7 +10,7 @@ order: 8
 
 ## Managing and Maintaining Python Virtual Environments
 
-Conda is a great tool for organizing your space. Every python project you have can include a wide variety of downloaded packages, and conda can help you to keep them from interfering with eachother. It also helps you to keep track of exactly which packages are required for a project to work. 
+Conda is a great tool for organizing your space. Every python project you have can include a wide variety of downloaded packages, and conda can help you to keep them from interfering with each other. It also helps you to keep track of exactly which packages are required for a project to work. 
 
 It also makes it easy to share environments for your projects with others.
 
@@ -24,7 +24,7 @@ Miniconda is also a smaller download as anaconda comes with lots of packages, wh
 
 <img src = "{% link media/conda/conda-1.png %}" width="600">
 
-This image comes from a [video by Academind](https://www.youtube.com/watch?v=23aQdrS58e0). It is one of many tutorials covering conda. This image may help you understand the benefits of conda. You can acheive essentially the same things with virtualenv and pip, but conda has proven for me to be much easier to understand and navigate.
+This image comes from a [video by Academind](https://www.youtube.com/watch?v=23aQdrS58e0). It is one of many tutorials covering conda. This image may help you understand the benefits of conda. You can achieve essentially the same things with virtualenv and pip, but conda has proven for me to be much easier to understand and navigate.
 
 According to the video, conda makes data analysis easier, and also makes it easier for those who are new to python to get started.
 
@@ -388,7 +388,7 @@ To use pip within a conda environment, you need to install it:
 ```
 conda install pip
 ```
-Then you can use `pip install` to install any packages not available in conda. Essentialy, it's not wrong to use pip inside of conda. It's better to install using conda, but for any packages that don't have a conda build, it's perfectly acceptable to use pip.
+Then you can use `pip install` to install any packages not available in conda. Essentially, it's not wrong to use pip inside of conda. It's better to install using conda, but for any packages that don't have a conda build, it's perfectly acceptable to use pip.
 
 ***
 

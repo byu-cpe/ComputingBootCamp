@@ -14,7 +14,7 @@ On May 19, 2021 Prof Wirthlin discussed how to set up Sphinx and how to document
 
 ## Introduction and Installing Sphinx
 
-Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a verity of different coding langueages (not just python) and also allows you to generate html websites from restructured text.
+Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a verity of different coding languages (not just python) and also allows you to generate html websites from restructured text.
 
 You can install sphinx using either the system package manager or pip. You can also try installing sphinx within a conda env. The commands for each of these options can be found bellow:
 ### System Package Manager
@@ -85,7 +85,7 @@ headings or subheadings can be created by using a line of "-" or "~" as follows:
 Your tittle/heading markers must be at least as long as the text above them. You also must have a blank line between your section tittle and the body of your text. For instance, these tittles will generate errors from sphinx or will produce unintended renders:
 
 ```
-   Dont do this
+   Don't do this
    =======
 
    Or this
