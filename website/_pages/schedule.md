@@ -33,7 +33,7 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14c_pythonAdv.md %})       | Mangelson             | Continue working on your Python application.
 | Fri, May 13 <br /> (**Live Q&A**)     | [Github CI + Unit Testing]({% link _selfpaced/15_Unit_Testing.md %})      | Goeders/Mangelson     | Create a unit test + CI check for your Python application.
 | <ins>**WEEK 4**</ins>                 
-| Mon, May 16 <br /> (**Live Talk**)    | Web                                                                       | Lundrigan             | 
+| Mon, May 16 <br /> (**Live Talk**)    | [Web Technologies]({% link _selfpaced/15a_web_technologies.md %})                                                                       | Lundrigan             | 
 | Tue, May 17 <br /> (*Offline*)        | [Sphinx]({% link _selfpaced/16_Sphinx.md %})                              | Wirthlin              | Add Sphinx documentation to your Python application.
 | Wed, May 18 <br /> (**Live Talk**)    | Security                                                                  |  Hansen                     | 
 | Fri, May 20 <br /> (**Live Q&A**)     | [Docker]({% link _selfpaced/17_Docker.md %})                              | Lundrigan             | Run your Python application within a docker container
