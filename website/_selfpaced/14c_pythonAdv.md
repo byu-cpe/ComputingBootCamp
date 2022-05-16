@@ -27,7 +27,7 @@ Installing these packages is relatively easy. All you need to do is:
 
 ```
 # Source your local environment 
-source ~/myenv/bib/activate
+source ~/myenv/bin/activate
 # Install via pip
 pip install numpy pandas matplotlib
 ```
