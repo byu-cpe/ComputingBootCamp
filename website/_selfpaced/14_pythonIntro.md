@@ -7,15 +7,24 @@ type: development
 order: 6
 ---
 
+## Introduction
+Python is a high-level programming language that is interpreted rather than compiled. It is object-oriented, and as such it supports classes and also has many available data structures. It has many open-source libraries and resources that make it a very powerful and versatile tool for anyone looking for a way to make an automated way to do a task.
+
+While Python was first introduced in 1991, it was relatively unknown until the mid-2000s. Over the past few years, however, it has quickly become one of the most popular programming languages in the world.
+
 ## Installation
 Python generally comes preinstalled on Ubuntu, but you can check which version you have by typing the following into your terminal:
-`python3 --version`
+```
+python3 --version
+```
 
-If the above command says you don't have Python installed or if your Python version is not 3.8, you can type the following into your terminal to get the latest version of Python:
+If the above command says you don't have Python installed or if your Python version is not 3.8 (which is typically the default on Ubuntu 20), you can type the following into your terminal to get that version of Python:
 ```
 sudo apt update
 sudo apt install python3.8
 ```
+
+There are also many other versions of Python you can download. Using other versions will become more important as you learn about Python Environments later on. For now, using the default version on your computer is a great starting point.
 
 ## Lecture Videos
 On May 10th and 12th of 2021 we had an introduction to Python by Prof Lundrigan. The videos are embedded below
@@ -33,6 +42,9 @@ On May 10th and 12th of 2021 we had an introduction to Python by Prof Lundrigan.
 {% include quizzes.html id=11 %}
 
 {% include quizzes.html id=12 %}
+
+## Resources
+For those who have not used Python before, there is a tutorial put out by python.org that is very helpful and gives a great introduction to the language. It is also a great tool for those who are familiar with Python already because it goes deeply into a lot of the available data structures and other aspects of the language. This tutorial is for Python3.10.4, which is the newest version out right now, but you can choose most of the previous versions on the drop-down menu that appears on the tutorial. The link to it is [here](https://docs.python.org/3.10/tutorial/index.html).
 
 ## Follow-Up Activities
 
