@@ -43,7 +43,7 @@ You will be asked several questions about how you want your documentation to be 
 After sphinx-quickstart completes, move into the empty directory you created before. Take a look at the files and folders that sphinx has automatically created. Of special note are the following:
 
 **index.rst**
-This file is the root of all the other documentation files we are going to create. It serves as the landing page of the sphinx generated website. You can customize this file to your harts content just don't remove the `toctree` directive from the file. We will talk more about toctrees latter.
+This file is the root of all the other documentation files we are going to create. It serves as the landing page of the sphinx generated website. You can customize this file to your heart's content just don't remove the `toctree` directive from the file. We will talk more about toctrees latter.
 
 **conf.py**
 This is a python script containing all of the settings used by sphinx to configure itself. You can modify this file to include advanced features such as different highlighting for code snippets or changing your default webpage layout. We will modify this file latter to include the autodoc feature of sphinx. 
