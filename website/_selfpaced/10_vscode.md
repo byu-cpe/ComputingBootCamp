@@ -67,7 +67,7 @@ On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded 
 ## VS Code Tips
 * Settings:
   * JSON
-  * Format on save
+
   * Word wrap
   * [python.analysis.extraPaths](https://github.com/byuccl/bfasst/blob/master/.vscode/settings.json)
   * [Include paths](https://github.com/byu-cpe/ecen427_student/blob/master/.vscode/c_cpp_properties.json)
@@ -76,6 +76,59 @@ On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded 
 * Latex run and preview
 * Run on save
 * Package recommendations
+
+### Formating Code
+VS Code provides the ability to format your code automatically. Depending on the language of your code a formater may be already available for others you may need to install one. Once a formatter is installed it can be configured to format on save. Some languages and formaters also all formating on paste or formating when line is completed. You can manually format the code using the keystroke `Ctrl+Shift+I`. If you choose to use a formater make sure your formater and settings match those of the project you are working on.
+
+#### Python
+VS code does not by default have a python formater. The recommended formater to use is [Black](https://black.readthedocs.io/en/stable/). To install black simply run 
+```
+pip install black
+```
+Then, open your settings.json file. The settings you will need to add are:
+```
+    "python.formatting.provider": "black",
+    "[python]": {"editor.formatOnSave": true}
+```
+The first setting specifies our chosen formatter. The second enables formating on save for python files. 
+
+To adjust the formater's settings you may set `"python.formmating.blackArgs"`. For instance, the folowing example sets the max line length to 100.
+```
+"python.formatting.blackArgs": ["--line-length", "100"]
+```
+See [this page](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html), for more information on Black's settings.
+
+#### C/C++
+VS code uses clang-format to format C and C++ code by default. You can enable the formater to format on save as well as to format a line whenever you type `;` using the following settings.
+```
+"C_Cpp.formatting":"clangFormat",
+"[c]":{"editor.formatOnSave": true, editor.formatOnType": true},
+"[cpp]":{"editor.formatOnSave": true}
+```
+The first line is not required unless the default formater has been changed. 
+
+The formater settings can be changed from the default by placing a file named `.clang-format` in your project directory. You can read more about that [here](https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
+
+*Note:* VS Code assumes cpp files contain C++ code and C files contain C code. With h files, VS Code by default assumes they are C++ code and will apply cpp settings to them. You can specify the file to use C using [these steps.](https://code.visualstudio.com/docs/languages/overview#_changing-the-language-for-the-selected-file)
+
+### Extension recomendations
+There are a multude of extensions for VS Code. Which to install will depend both on personal preference and the projects you are working on. Below is a list of some useful extensions. 
+* [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools):
+  * Provides basic support for C/C++
+* [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack): 
+    * Provides additional tools for C/C++ including C-make and Doxygen support.
+* [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  * Provides basic support for Python
+* [Hex Editor](https://marketplace.visualstudio.com/items?itemName=ms-vscode.hexeditor):
+  * Allows viewing of binary files in VS code.
+* [Remote-SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+  * Allows VS Code to run on a remote machine
+* [Debug Visualizer](https://marketplace.visualstudio.com/items?itemName=hediet.debug-visualizer)
+  * Provides usful visualization for debugging
+* [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+  * Allows management of Github pull requests and issues from VS Code. 
+* [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+  * Allows easy integration with Docker
 
 ## Faculty Brainstorming 
   To be added...   There is a lecture on this topic, we should schedule this to be just after that lecture.
