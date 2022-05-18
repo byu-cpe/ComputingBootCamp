@@ -14,7 +14,7 @@ order: 1
 
 ### Altium Account
 
-When you first go to [download Altium](https://www.altium.com/products/downloads), you will need an Altium account. If you haven't been set up with one yet, submit a ticket to request one from the CSRs/Systems Administrators at https://eceticket.byu.edu/open.php.
+When you first go to [download Altium](https://www.altium.com/products/downloads), you will need an Altium account. If you haven't been set up with one yet, submit a ticket to request one from the CSRs/Systems Administrators at https://eceticket.byu.edu/.
 
 ### License Manager
 

@@ -14,6 +14,9 @@ On May 17, 2021 we had a Pytest Tutorial by Prof Goeders and a GoogleTest tutori
 ### Pytest-for Python
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/g7sEa-Ha6CY"> </iframe> 
 
+Here is the link to the tutorial used in the video:
+* Testing Python Applications with Pytest - <https://semaphoreci.com/community/tutorials/testing-python-applications-with-pytest>
+
 
 ### GoogleTest-for C/C++
 

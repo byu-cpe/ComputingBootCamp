@@ -68,7 +68,7 @@ alias de='deactivate'
 - The instructions above have you install new versions of python on your system in `/usr/bin` alongside the system python.  As a result, you will need `sudo` privileges to install these.
 - With the `venv` approach the virtual environments can be located anywhere in the file system you want (unlike with some other approaches where they are all gathered into one place - both a plus and a minus).
 - To remove a `venv` environment you simply remove the directory: `rm -rf ~/myvenv` and the environment and everything you have installed into it using `pip` are gone.
-- When you run `pip install somePackage` the location it searches for somePackage to install is at PyPI.org - the Python Package Index site.  That is not true for some other approaches which maintain their own distriutions of python and its packages.
+- When you run `pip install somePackage` the location it searches for somePackage to install is at PyPI.org - the Python Package Index site.  That is not true for some other approaches which maintain their own distributions of python and its packages.
 - This is the lightest-weight approach for python virtual environments of those we use.
 - A caution - there is an alphabet-soup mess of alternate approaches that have been proposed and used in the past that you will see on the web.  Be careful - the names overlap and can easily confuse you - `virtualenv`, `virtualenvwrapper`, `pipenv`, `pyenv`, `pyvenv`, ...  To reiterate - the approach described above uses ONLY the `venv` module built into python to do its work, and does not use any of those others.  
 - A possible shortcoming of the `venv` approach is that there is no real environment manager.  As mentioned, environments can live anywhere - there is no central repo or controller for your environments; there is no way to list them or manage them.  You just remember where they are to activate them.  
@@ -155,7 +155,7 @@ alias cel='conda env list'
 
 +: Installing a new version of python, creating an environment that uses that, and installing initial packages is a one-liner.
 
-+/-: Puts virtual envronments into standard shared place and so can provide environment management commands
++/-: Puts virtual environments into standard shared place and so can provide environment management commands
 
 ## Self-Paced Learning Activities
 Work through the following activities.

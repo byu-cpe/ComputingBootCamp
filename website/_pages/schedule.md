@@ -48,7 +48,7 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Mon, May 30   | HOLIDAY                               |
 | Wed, Jun 1    | Prjxray & FASM                        | 
 | Fri, Jun 3    | fasm2bels, fpga-tool-perf, symbiflow-examples | Nelson 
-| Mon, Jun 6    | Guest Speakder
+| Mon, Jun 6    | Guest Speaker
 | Wed, Jun 8    | RapidWright                           |
 | Fri, Jun 10   | Vivado Block Design + Vitis          | Goeders
 | Mon, Jun 13   | Vitis HLS                            | Goeders
