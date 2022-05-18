@@ -51,6 +51,7 @@ Below are some other helpful commands to be used:
   - <a href="https://www.mathworks.com/help/matlab/ref/clc.html" target="_blank">clc</a>
   - <a href="https://www.mathworks.com/help/matlab/ref/close.html" target="_blank">close</a>
   - <a href="https://www.mathworks.com/help/matlab/ref/clear.html" target="_blank">clear</a>
+  - <a hreg="https://www.mathworks.com/help/matlab/ref/edit.html" target="_blank">edit</a>
 
 Below are some other helpful resources for beginners to Matlab:
   - <a href="http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf" target="_blank">Introduction to Matlab</a>
