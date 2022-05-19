@@ -223,7 +223,7 @@ This concludes our module about Documentation and Sphinx. For more information c
 
 
 * [This online tool](https://www.tablesgenerator.com/text_tables) is invaluable for building complex tables in RST or Markdown format. 
-* Visit [this website](https://www.sphinx-doc.org/en/master/) for the official Sphinx guid. 
+* Visit [this website](https://www.sphinx-doc.org/en/master/) for the official Sphinx guide. 
 
 * If you want RST examples the [SpyDrNet documentation](https://byuccl.github.io/spydrnet/docs/stable/index.html) is written in RST. See how each page is written by clicking on **View Page Source** at the top of the page. As previously mentioned [Symbiflow](https://symbiflow-examples.readthedocs.io/en/latest/) is also written in RST.
 
