@@ -4,7 +4,7 @@ toc: true
 title: Linux Setup & Tutorials
 slug: linux
 type: development
-order: 1
+order: 0
 ---
 
 
@@ -71,7 +71,7 @@ sudo apt upgrade
 
 In many tutorials you will be asked to edit files.  It is good to be familiar with a command-line editor like Vim or Emacs in order to make quick edits without needing a GUI, but if you prefer to always use a GUI for editing files, that's fine.  
 
-There are some instructions on installing and running VS Code [here]({% link _selfpaced/10_vscode.md %}).
+There are some instructions on installing and running VS Code [here]({% link _selfpaced/vscode.md %}).
 
 
 ## Other Things to Learn and Set Up
