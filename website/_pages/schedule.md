@@ -18,25 +18,25 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Date                                  | Topic                                                                     | Speaker               | Activity                                                         
 |---------------------------------------|---------------------------------------------------------------------------|-----------    ------------|--------------------------------------------        
 | <ins>**WEEK 1**</ins>                 
-| Wed, Apr 27 <br /> (**Live Talk**)    | Welcome, Setup, IMMERSE log                                               | All Faculty           | Setup your computer. Get on Slack. Complete [Linux setup/tutorials]({% link _selfpaced/05_linux.md%}). Setup your website where you can post daily/weekly progress updates.
-| Thu, Apr 28 <br /> (*Offline*)        | [Git]({% link _selfpaced/12_git.md %})                                    |                       | Complete the followup activities on the [Git]({% link _selfpaced/12_git.md %}) page.  If you are already a Git expert, contribute to the list of follow-up topics with your own suggestions.
-| Fri, Apr 29 <br /> (**Live Q&A**)     | [Github]({% link _selfpaced/12a_github.md %})                             | Lundrigan             | Add a link on the [students]({% link _pages/students_2021.md %}) page via pull request.   Add your name and photo to your lab website via pull request ([CCL](https://ccl.byu.edu), [NET Lab](https://netlab.byu.edu/), etc.). 
+| Wed, Apr 27 <br /> (**Live Talk**)    | Welcome, Setup, IMMERSE log                                               | All Faculty           | Setup your computer. Get on Slack. Complete [Linux setup/tutorials]({% link _selfpaced/linux.md%}). Setup your website where you can post daily/weekly progress updates.
+| Thu, Apr 28 <br /> (*Offline*)        | [Git]({% link _selfpaced/git.md %})                                    |                       | Complete the followup activities on the [Git]({% link _selfpaced/git.md %}) page.  If you are already a Git expert, contribute to the list of follow-up topics with your own suggestions.
+| Fri, Apr 29 <br /> (**Live Q&A**)     | [Github]({% link _selfpaced/github.md %})                             | Lundrigan             | Add a link on the [students]({% link _pages/students_2021.md %}) page via pull request.   Add your name and photo to your lab website via pull request ([CCL](https://ccl.byu.edu), [NET Lab](https://netlab.byu.edu/), etc.). 
 | <ins>**WEEK 2**</ins>                 
-| Mon, May 2 <br /> (**Live Q&A**)      | [VS Code]({% link _selfpaced/10_vscode.md %})                             | Goeders               | Debug a C Program
-| Tue, May 3 <br /> (*Offline*)         | [make]({% link _selfpaced/13_make.md %})                                  |                       | Create a simple C program of your choice, and compile it using make.  Push it up to Github.  Next, find a Makefile that is part of one of your group's projects and work through it to understand how it works.
-| Wed, May 4 <br /> (**Live Talk**)     | [cmake]({% link _selfpaced/13_cmake.md %})                                | Goeders               | 
-| Fri, May 6 <br /> (**Live Talk**)     | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part I                 | Lundrigan             | Make your own Python application
+| Mon, May 2 <br /> (**Live Q&A**)      | [VS Code]({% link _selfpaced/vscode.md %})                             | Goeders               | Debug a C Program
+| Tue, May 3 <br /> (*Offline*)         | [make]({% link _selfpaced/make.md %})                                  |                       | Create a simple C program of your choice, and compile it using make.  Push it up to Github.  Next, find a Makefile that is part of one of your group's projects and work through it to understand how it works.
+| Wed, May 4 <br /> (**Live Talk**)     | [cmake]({% link _selfpaced/cmake.md %})                                | Goeders               | 
+| Fri, May 6 <br /> (**Live Talk**)     | [Python]({% link _selfpaced/pythonIntro.md %}), Part I                 | Lundrigan             | Make your own Python application
 | <ins>**WEEK 3**</ins>                 
-| Mon, May 9 <br /> (**Live Talk**)     | [Open Source Software]({% link _selfpaced/13a_OpenSource.md %})                                                      | Wirthlin              | Explore open source projects
-| Tue, May 10 <br /> (*Offline*)        | [Python]({% link _selfpaced/14_pythonIntro.md %}), Part II                |                       | 
-| Wed, May 11 <br /> (**Live Q&A**)     | [Python Packages/Environments]({% link _selfpaced/14a_pythonEnvs.md %})   | Nelson                | Integrate some packages into your Python application and setup a `requirements.txt`
-| Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/14c_pythonAdv.md %})       | Mangelson             | Continue working on your Python application.
-| Fri, May 13 <br /> (**Live Q&A**)     | [Github CI + Unit Testing]({% link _selfpaced/15_Unit_Testing.md %})      | Goeders/Mangelson     | Create a unit test + CI check for your Python application.
+| Mon, May 9 <br /> (**Live Talk**)     | [Open Source Software]({% link _selfpaced/OpenSource.md %})                                                      | Wirthlin              | Explore open source projects
+| Tue, May 10 <br /> (*Offline*)        | [Python]({% link _selfpaced/pythonIntro.md %}), Part II                |                       | 
+| Wed, May 11 <br /> (**Live Q&A**)     | [Python Packages/Environments]({% link _selfpaced/pythonEnvs.md %})   | Nelson                | Integrate some packages into your Python application and setup a `requirements.txt`
+| Thu, May 12 <br /> (*Offline*)        | [numpy, pandas, matplotlib]({% link _selfpaced/pythonAdv.md %})       | Mangelson             | Continue working on your Python application.
+| Fri, May 13 <br /> (**Live Q&A**)     | [Github CI + Unit Testing]({% link _selfpaced/Unit_Testing.md %})      | Goeders/Mangelson     | Create a unit test + CI check for your Python application.
 | <ins>**WEEK 4**</ins>                 
-| Mon, May 16 <br /> (**Live Talk**)    | [Web Technologies]({% link _selfpaced/15a_web_technologies.md %})                                                                       | Lundrigan             | 
-| Tue, May 17 <br /> (*Offline*)        | [Sphinx]({% link _selfpaced/16_Sphinx.md %})                              | Wirthlin              | Add Sphinx documentation to your Python application.
+| Mon, May 16 <br /> (**Live Talk**)    | [Web Technologies]({% link _selfpaced/web_technologies.md %})                                                                       | Lundrigan             | 
+| Tue, May 17 <br /> (*Offline*)        | [Sphinx]({% link _selfpaced/Sphinx.md %})                              | Wirthlin              | Add Sphinx documentation to your Python application.
 | Wed, May 18 <br /> (**Live Talk**)    | Security                                                                  |  Hansen                     | 
-| Fri, May 20 <br /> (**Live Q&A**)     | [Docker]({% link _selfpaced/17_Docker.md %})                              | Lundrigan             | Run your Python application within a docker container
+| Fri, May 20 <br /> (**Live Q&A**)     | [Docker]({% link _selfpaced/Docker.md %})                              | Lundrigan             | Run your Python application within a docker container
 
 ## FPGA Track
 
@@ -60,7 +60,7 @@ The networking track will be meeting in EB 302 at 2-3:30 PM.
 
 | Date          | Topic                                                                          | Speaker               
 |---------------|--------------------------------------------------------------------------------|-----------------------
-| Wed, Jun 1    | [Networking Basics]({% link _selfpaced/70_networking.md %})                    | Lundrigan
-| Wed, Jun 8    | [Networking Command Line Tools]({% link _selfpaced/71_networking_tools.md  %}) | Lundrigan
+| Wed, Jun 1    | [Networking Basics]({% link _selfpaced/networking.md %})                    | Lundrigan
+| Wed, Jun 8    | [Networking Command Line Tools]({% link _selfpaced/networking_tools.md  %}) | Lundrigan
 | Wed, Jun 15   | Case Study: Connecting a Raspberry Pi to the Internet                          | Lundrigan
 | Wed, Jun 22   | Wireless Networking                                                            | Lundrigan
