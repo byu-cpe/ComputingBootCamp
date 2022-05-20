@@ -42,3 +42,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo docker run hello-world
 ```
    This should present a message that begins with "Hello from Docker!" 
+   
+#### Common Error
+  When trying to run your first docker, you might get this error: 
+  ```
+  docker: Got permission denied while trying to connect to the Docker daemon socket at...
+  ```
+  If this happens, enter `sudo chmod 666 /var/run/docker.sock` to change the permissions on the docker.sock file.
