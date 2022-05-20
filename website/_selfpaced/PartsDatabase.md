@@ -26,7 +26,7 @@ The Parts Database is in the Altium_PCB GitHub repository. Once you have cloned 
   - Click on the menu icon (three horizontal lines to the right of the list of components that are currently available to use).
   - Click "File-based Libraries Preferences." This will open a new window.
   - In the new window, click "Install..."
-  - Navigate to the Database. You will find it in the Altium_PCB GitHub repository in PartsDatabase -> Database. The file type is "Altium Library Database file." Choose the file by double-clicking it or by highlighting it and clicking "Open." This will add the Database to the Installed Libraries list. The Activated check box next to it should be checked.
+  - Navigate to the Database. You will find it in the Altium_PCB GitHub repository in PartsDatabase -> Database. The file type is "Altium Library Database file." You may have to change the default extension to  .Dblib in order to see the Database. Choose the file by double-clicking it or by highlighting it and clicking "Open." This will add the Database to the Installed Libraries list. The Activated check box next to it should be checked.
   - Note: Altium may give you an error if you do not have a 64-bit access database engine installed. See "Other things to know about the database" below.
   - Click "Close." The folders in the Database will now appear in the list of components to choose from in the Components panel. You can select a folder, search for a part, and drag it onto your schematic.
 
