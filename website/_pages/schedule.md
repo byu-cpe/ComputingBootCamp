@@ -60,7 +60,7 @@ The networking track will be meeting in EB 302 at 2-3:30 PM.
 
 | Date          | Topic                                                                          | Speaker               
 |---------------|--------------------------------------------------------------------------------|-----------------------
-| Wed, Jun 1    | [Networking Basics]({% link _selfpaced/networking.md %})                    | Lundrigan
-| Wed, Jun 8    | [Networking Command Line Tools]({% link _selfpaced/networking_tools.md  %}) | Lundrigan
-| Wed, Jun 15   | Case Study: Connecting a Raspberry Pi to the Internet                          | Lundrigan
-| Wed, Jun 22   | Wireless Networking                                                            | Lundrigan
+| Wed, Jun 8    | [Networking Basics]({% link _selfpaced/networking.md %})                    | Lundrigan
+| Wed, Jun 15    | [Networking Command Line Tools]({% link _selfpaced/networking_tools.md  %}) | Lundrigan
+| Wed, Jun 22   | Case Study: Connecting a Raspberry Pi to the Internet                          | Lundrigan
+| Wed, Jun 29   | Wireless Networking                                                            | Lundrigan
