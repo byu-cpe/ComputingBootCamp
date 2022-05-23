@@ -69,7 +69,7 @@ Now that the FASM file has been created, it can be examined. In this activity, t
 ## Learn More
 
 * FASM GitHub Repository - <https://github.com/SymbiFlow/fasm>
-* FASM Documentation - <https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>
+* FASM Documentation - <https://fasm.readthedocs.io/en/latest/>
 * FASM Output Support - <https://docs.verilogtorouting.org/en/latest/utils/fasm/>
 * SLICEL Diagram (Figure 2-4, Page 20) - <https://www.xilinx.com/support/documentation/user_guides/ug474_7Series_CLB.pdf>
 

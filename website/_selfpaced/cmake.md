@@ -9,9 +9,9 @@ order: 5
 
 # Introduction
 
-In the last module, we talked about Make. Make and Makefiles provide a nice way to break the build process (or any complex generation process) into a list of dependencies and commands that are needed to generate them easily and efficiently. Make is a very useful tool for a variety of different problems, however manually coding a Makefile for large coding projects can be very tedious, time consuming, and brital.
+In the last module, we talked about Make. Make and Makefiles provide a nice way to break the build process (or any complex generation process) into a list of dependencies and commands that are needed to generate them easily and efficiently. Make is a very useful tool for a variety of different problems, however manually coding a Makefile for large coding projects can be very tedious, time consuming, and brutal.
 
-However, most C++/C projects tend to follow a common structure. For example, each .c file needed for an executable or library needs to be pre-processed, compiled, and assembled into binary object files (or .o files), then combinations of these files need to be linked together. To complete compilation and assembly of dependent .c files, the compilor needs access to the .h files for any included libraries; and, to complete linking, the linker needs access to the associated object files (or .o files) for those libraries as well.
+However, most C++/C projects tend to follow a common structure. For example, each .c file needed for an executable or library needs to be pre-processed, compiled, and assembled into binary object files (or .o files), then combinations of these files need to be linked together. To complete compilation and assembly of dependent .c files, the compiler needs access to the .h files for any included libraries; and, to complete linking, the linker needs access to the associated object files (or .o files) for those libraries as well.
 
 CMake is a tool and syntax that enables you to specify the dependencies and properties for various targets (such as executables and libraries). CMake will then traverse through your folder structure and automatically generate a Makefile that will build all of the targets you specified by calling all of the combinations of gcc/g++/ld/ar commands needed to compile and link your code.
 
@@ -26,7 +26,7 @@ sudo pip3 install --upgrade cmake
 
 # Lecture Tutorial
 
-On May 7, 2021 we had a CMake Tutorial by Prof Mangelson. The video is embedded below
+On May 7, 2021 we had a CMake Tutorial by Prof Mangelson. The video is embedded below:
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/4PoLuU32nqw"> </iframe> 
 
@@ -46,7 +46,7 @@ Try running through the examples we talked about in lecture.
 ## Learn More CMake Syntax
 
 * Watch the following video by Jason Turner for a quick introduction: <https://www.youtube.com/watch?v=HPMvU64RUTY>
-* Read throgh the following page for an overview of the syntax: <https://llvm.org/docs/CMakePrimer.html>
+* Read through the following page for an overview of the syntax: <https://llvm.org/docs/CMakePrimer.html>
 
 ## PUBLIC, PRIVATE,  INTERFACE
 
@@ -100,7 +100,7 @@ Early CMake primarily worked by working with setting global variables for includ
 Modern CMake is targets based. Instead of directly changing variables (which was the old way to do things), instead we should deal with targets and properties. Modern CMake is the object oriented version of the older cmake methods.
 
 
-You should allways be using Modern CMake techniques and methods.
+You should always be using Modern CMake techniques and methods.
 
 Read about these items at the following links:
 * <https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1>
@@ -118,7 +118,7 @@ Read more about this here:
 
 ## Exporting, and Installing
 
-Enabling others to use your library is essential. For large projects especially, intalling your files from many sub-projects to a single unified folder can be very helpful.
+Enabling others to use your library is essential. For large projects especially, installing your files from many sub-projects to a single unified folder can be very helpful.
 
 Exporting your targets is essential for supporting Modern CMake practices.
 

@@ -8,7 +8,7 @@ type: resources
 
 In order to award badges, the BYU Computing Boot Camp is currently considering using a mixture of project-based assessments and code-based assessments. 
 
-For project-based assessments, users will create an end-product that will involve using creativity to make something new out of the subject material. This will require these projects to be reviewed by humans due to the many types of submissions that can be recieved. Staff of the Computing Boot Camp website will review submissions and manually award badges if they believe the project proves that the user has sufficient knowledge in the subject. 
+For project-based assessments, users will create an end-product that will involve using creativity to make something new out of the subject material. This will require these projects to be reviewed by humans due to the many types of submissions that can be received. Staff of the Computing Boot Camp website will review submissions and manually award badges if they believe the project proves that the user has sufficient knowledge in the subject. 
 
 For code-based assessments, users will be required to create software that conforms to specified instructions, meaning that an automated pass-off test can be used to evaluate the user's work and then award the badge.
 
@@ -113,11 +113,11 @@ Test Runs". The syntax for naming is as follows:
 
 `name: <name of workflow>`
 
-Next, the `on:` defines when a workflow will run. See [GitHub Docs - Events that trigger workflows](https://docs.github.com/en/actions/reference/events-that-trigger-workflows) for information on the specific formatting of this part of the yml file. Basically, you can add as many triggers as you want, and triggers can have specific settings (which are denoted by the "-" and listed after the specific setting). So, in this workflow file, I have two triggers: workflow_dispatch and schedule. workflow_dispatch means that I can manually trigger it at any time, which is useful for debugging. schedule means that the workflow will automatically trigger according to a defined timetable. The line after "schedule:" that says
+Next, the `on:` defines when a workflow will run. See [GitHub Docs - Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows) for information on the specific formatting of this part of the yml file. Basically, you can add as many triggers as you want, and triggers can have specific settings (which are denoted by the "-" and listed after the specific setting). So, in this workflow file, I have two triggers: workflow_dispatch and schedule. workflow_dispatch means that I can manually trigger it at any time, which is useful for debugging. schedule means that the workflow will automatically trigger according to a defined timetable. The line after "schedule:" that says
 
 `- cron: '0/5 * * * *`
 
-defines the specific timetable that the workflow will run at. See [GitHub Docs - Events that trigger workflows](https://docs.github.com/en/actions/reference/events-that-trigger-workflows) for information on the syntax of the "cron" setting. This cron tells GitHub that the workflow should run every 5 minutes (however, with GitHub's delay, this ends up being around 20 minutes on average).
+defines the specific timetable that the workflow will run at. See [GitHub Docs - Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows) for information on the syntax of the "cron" setting. This cron tells GitHub that the workflow should run every 5 minutes (however, with GitHub's delay, this ends up being around 20 minutes on average).
 
 Next, are the jobs, or tasks that the workflow will run. 
 

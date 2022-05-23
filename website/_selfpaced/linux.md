@@ -4,7 +4,7 @@ toc: true
 title: Linux Setup & Tutorials
 slug: linux
 type: development
-order: 1
+order: 0
 ---
 
 
@@ -71,7 +71,7 @@ sudo apt upgrade
 
 In many tutorials you will be asked to edit files.  It is good to be familiar with a command-line editor like Vim or Emacs in order to make quick edits without needing a GUI, but if you prefer to always use a GUI for editing files, that's fine.  
 
-There are some instructions on installing and running VS Code [here]({% link _selfpaced/10_vscode.md %}).
+There are some instructions on installing and running VS Code [here]({% link _selfpaced/vscode.md %}).
 
 
 ## Other Things to Learn and Set Up
@@ -101,6 +101,8 @@ Copy files to and from a remote machine as in:
 
 This is how you move files between machines.
 
+{% include quizzes.html id=13 %}
+
 ### SSH Keys
 Instead of having to authenticate with a password each time you connect to a remote machine, you can set up an SSH key to do automatic authentication.  [This tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1804) explains how to set this up in a variety of ways.
 
@@ -120,6 +122,17 @@ For example, to connect to the CAEDM SSH server by only running `ssh caedm` you 
 Host caedm
     Hostname ssh.et.byu.edu
     User cosmo
+```
+
+You can remotely connect to an individual machine by tunneling through an SSH server on the same network as the machine. To accomplish this, use SSH to connect to the SSH server, then use SSH again within the same session to connect to the remote machine.
+
+This can be automated by adding `ProxyJump` to your Config file entry for the machine, and optionally adding `IdentityFile` to allow for passwordless key authentication, like this (appended below the above CAEDM example):
+```
+Host myDesktop
+    Hostname 10.2.111.111
+    User cosmo
+    ProxyJump caedm
+    IdentityFile ~/.ssh/privateKeyName
 ```
 
 {% include quizzes.html id=5 %}

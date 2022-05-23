@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "http://rubygems.org"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -29,5 +29,5 @@ gem "rexml", ">= 3.2.5"
 
 # Nelson added for link checking
 gem 'rake'
-gem 'html-proofer'
+gem 'html-proofer', ">= 3.19.0"
 gem 'jekyll'

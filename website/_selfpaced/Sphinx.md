@@ -14,7 +14,7 @@ On May 19, 2021 Prof Wirthlin discussed how to set up Sphinx and how to document
 
 ## Introduction and Installing Sphinx
 
-Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a verity of different coding langueages (not just python) and also allows you to generate html websites from restructured text.
+Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a verity of different coding languages (not just python) and also allows you to generate html websites from restructured text.
 
 You can install sphinx using either the system package manager or pip. You can also try installing sphinx within a conda env. The commands for each of these options can be found bellow:
 ### System Package Manager
@@ -43,7 +43,7 @@ You will be asked several questions about how you want your documentation to be 
 After sphinx-quickstart completes, move into the empty directory you created before. Take a look at the files and folders that sphinx has automatically created. Of special note are the following:
 
 **index.rst**
-This file is the root of all the other documentation files we are going to create. It serves as the landing page of the sphinx generated website. You can customize this file to your harts content just don't remove the `toctree` directive from the file. We will talk more about toctrees latter.
+This file is the root of all the other documentation files we are going to create. It serves as the landing page of the sphinx generated website. You can customize this file to your heart's content just don't remove the `toctree` directive from the file. We will talk more about toctrees latter.
 
 **conf.py**
 This is a python script containing all of the settings used by sphinx to configure itself. You can modify this file to include advanced features such as different highlighting for code snippets or changing your default webpage layout. We will modify this file latter to include the autodoc feature of sphinx. 
@@ -85,7 +85,7 @@ headings or subheadings can be created by using a line of "-" or "~" as follows:
 Your tittle/heading markers must be at least as long as the text above them. You also must have a blank line between your section tittle and the body of your text. For instance, these tittles will generate errors from sphinx or will produce unintended renders:
 
 ```
-   Dont do this
+   Don't do this
    =======
 
    Or this
@@ -209,7 +209,7 @@ This concludes our module about Documentation and Sphinx. For more information c
 
 ### **More things to try**
 
-* Go through the different RST functions in the [sphinx guid](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html) and pick a few that interest you. Incorporate this functionality into your documentation.
+* Go through the different RST functions in the [sphinx guide](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html) and pick a few that interest you. Incorporate this functionality into your documentation.
 * Go to [Symbiflow.readthedocs.io](https://symbiflow-examples.readthedocs.io/en/latest/) and look at the RST that the webpage is written in by clicking on **Show Source** in the top right hand corner of each page. Try to incorporate a few of the design techniques into your own documentation.
 * Sphinx uses *alabaster* as the default theme of its webpage. Learn how to change the theme of your webpage by following [this link](https://www.sphinx-doc.org/en/master/usage/theming.html#:~:text=%20These%20themes%20are%3A%20%201%20nosidebar%20%28true,6%20linkcolor%207%20visitedlinkcolor%208%20admonitioncolor%20More%20).
 * Learn about [doctest](https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html) and try adding a few tests to your code using sphinx.
