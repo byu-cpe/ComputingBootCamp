@@ -45,7 +45,7 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Wed, Jun 1    | FPGA Overview                         | Goeders
 | Fri, Jun 3    | Vivado Review and Tcl for Vivado      | Nelson
 | Mon, Jun 6    | Xilinx 7 Series FPGA Deep Dive  (no lecture - self-paced learning activity only) | Nelson
-| Wed, Jun 8    | Prjxray & FASM                        | 
+| Wed, Jun 8    | Prjxray & FASM                        |  
 | Fri, Jun 10   | fasm2bels, fpga-tool-perf, symbiflow-examples | Nelson 
 | Mon, Jun 13   | Guest Speakder
 | Wed, Jun 15   | RapidWright                           |
