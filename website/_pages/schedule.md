@@ -42,16 +42,15 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
-| Mon, May 23   | FPGA Overview                         | Goeders
-| Wed, May 25   | Vivado Review and Tcl for Vivado      | Nelson
-| Fri, May 26   | Xilinx 7 Series FPGA Deep Dive  (no lecture - self-paced learning activity only) | Nelson
-| Mon, May 30   | HOLIDAY                               |
-| Wed, Jun 1    | Prjxray & FASM                        | 
-| Fri, Jun 3    | fasm2bels, fpga-tool-perf, symbiflow-examples | Nelson 
-| Mon, Jun 6    | Guest Speakder
-| Wed, Jun 8    | RapidWright                           |
-| Fri, Jun 10   | Vivado Block Design + Vitis          | Goeders
-| Mon, Jun 13   | Vitis HLS                            | Goeders
+| Wed, Jun 1    | FPGA Overview                         | Goeders
+| Fri, Jun 3    | Vivado Review and Tcl for Vivado      | Nelson
+| Mon, Jun 6    | Xilinx 7 Series FPGA Deep Dive  (no lecture - self-paced learning activity only) | Nelson
+| Wed, Jun 8    | Prjxray & FASM                        | 
+| Fri, Jun 10   | fasm2bels, fpga-tool-perf, symbiflow-examples | Nelson 
+| Mon, Jun 13   | Guest Speakder
+| Wed, Jun 15   | RapidWright                           |
+| Fri, Jun 17   | Vivado Block Design + Vitis          | Goeders
+| Mon, Jun 20   | Vitis HLS                            | Goeders
 
 
 ## Networking Track
