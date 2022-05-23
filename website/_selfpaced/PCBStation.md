@@ -30,6 +30,8 @@ The solder paste we use comes in syringes and can be bought from this link [here
 
 Let the solder paste warm up before use, as this will ensure that it flows over the stencil more easily.
 
+When you have used all the paste in a syringe or if the batch is expired, take the syringe to Joe Bussio in the ELC (CB 416), and he will safely dispose of it.
+
 ## Soldering Oven
 
 There is a switch on the rear side of the oven to power it on. For all of our boards, we select the second temperature profile so that the plastic parts don't get too hot. The default profile is profile #1, so you need to switch it to profile #2 every time you do a board. To switch profiles, hit the F3 button, then F1 to switch to profile #2. After that, hit F4 a couple times. It has a glitch where it turns to Chinese, so keep hitting F4 until it switches back to English. Place the board in the middle of the oven so that the air vents are below all parts of the board (no part of the board should be over the non-vented metal sections). This ensures that each component solders properly to the boar. Then hit F1 to start the oven.
