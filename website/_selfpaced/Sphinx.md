@@ -14,7 +14,7 @@ On May 19, 2021 Prof Wirthlin discussed how to set up Sphinx and how to document
 
 ## Introduction and Installing Sphinx
 
-Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a verity of different coding languages (not just python) and also allows you to generate html websites from restructured text.
+Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a variety of different coding languages (not just python) and also allows you to generate html websites from restructured text.
 
 You can install sphinx using either the system package manager or pip. You can also try installing sphinx within a conda env. The commands for each of these options can be found bellow:
 ### System Package Manager

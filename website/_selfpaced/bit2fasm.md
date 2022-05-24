@@ -23,7 +23,7 @@ Follow the instructions for installing [Project X-Ray](https://byu-cpe.github.io
 
 The [bit2fasm.py](https://github.com/SymbiFlow/prjxray/blob/master/utils/bit2fasm.py) Python file contains the "main" function for the bit2fasm program. It isn't a very big file and most of the actual work is done by other files in the Project X-Ray repository.
 
-To run the executable, the Project X-Ray Environment Variables (see below) need to be set as the code will use these variables to acccess the appropriate databases. 
+To run the executable, the Project X-Ray Environment Variables (see below) need to be set as the code will use these variables to access the appropriate databases. 
 
 The arguments for running this Python executable are summarized below:
 ```
@@ -72,12 +72,12 @@ bit_00420020_099_16
 
 ### bits_to_fasm
 
-After creating a 'bits' file, the 'bits_to_fasm' function is called. This function directs the main work of dissasembly. The function performs the following steps:
+After creating a 'bits' file, the 'bits_to_fasm' function is called. This function directs the main work of disassembly. The function performs the following steps:
   1. It creates the [Database](#database) object
   2. It creates the [Grid](#grid) object (by calling db.grid)
   3. It creates [FasmDisassembler](#fasmdisassembler) object
 
-After these objects are made, a [Bits File](#bits-file) is read and parsed using the `load_bitdata` function in the [bitstream.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/bitstream.py) file. The result is a dictionary (called `bitdata`) between a frame_Address and two sets. The first set are the word columns that have any bits set in the bitstream and the second set are the bit indicies within the frame (not the word). The bit index references a specific bit within a frame and not within the word.
+After these objects are made, a [Bits File](#bits-file) is read and parsed using the `load_bitdata` function in the [bitstream.py](https://github.com/SymbiFlow/prjxray/blob/master/prjxray/bitstream.py) file. The result is a dictionary (called `bitdata`) between a frame_Address and two sets. The first set are the word columns that have any bits set in the bitstream and the second set are the bit indices within the frame (not the word). The bit index references a specific bit within a frame and not within the word.
 
 ### More Functions
 
@@ -227,7 +227,7 @@ bit_00420020_099_16
 
 Devices of the same family share the same database directory but each device has its own unique "tilegrid.json" file. This file represents the grid of tiles used to make the unique part. The tile grid is represented in the .json format and is essentially a list of "tiles". Each tile is represented as follows:
 
-  * **tile name:** A unique text string that represents a unique tile. The tile name has X & Y coordinates embedded within them. The coordiante system of these coordinates seems to be some logical representation and does not refer to actual physical locations (example: BRAM_INT_INTERFACE_L_X6Y2)
+  * **tile name:** A unique text string that represents a unique tile. The tile name has X & Y coordinates embedded within them. The coordinate system of these coordinates seems to be some logical representation and does not refer to actual physical locations (example: BRAM_INT_INTERFACE_L_X6Y2)
     * **tile type**: a string that indicates tile type. There should be a corresponding file named "tile_type_<type>.json" in the database directory.
     * **grid_x:** numerical grid x position (not the same coordinate system as the tile name)
     * **grid_y**: numerical grid y position

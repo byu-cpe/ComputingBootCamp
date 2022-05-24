@@ -46,5 +46,5 @@ Pages that require changes:
 ## Running Website Locally
 
 1. [Install Jekyll](https://jekyllrb.com/docs/installation/)
-2. Run `bundle instal`
+2. Run `bundle install`
 3. Run `make serve`.  The website will be hosted locally. Check the console output for the address.
