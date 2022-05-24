@@ -40,17 +40,21 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 
 ## FPGA Track
 
-| Date          | Topic                                 | Speaker               | Followup Activity                                                         
-|---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
-| Wed, Jun 1    | FPGA Overview                         | Goeders
-| Fri, Jun 3    | Vivado Review and Tcl for Vivado      | Nelson
-| Mon, Jun 6    | Xilinx 7 Series FPGA Deep Dive  (no lecture - self-paced learning activity only) | Nelson
-| Wed, Jun 8    | Prjxray & FASM                        | 
-| Fri, Jun 10   | fasm2bels, fpga-tool-perf, symbiflow-examples | Nelson 
-| Mon, Jun 13   | Guest Speaker
-| Wed, Jun 15   | RapidWright                           |
-| Fri, Jun 17   | Vivado Block Design + Vitis          | Goeders
-| Mon, Jun 20   | Vitis HLS                            | Goeders
+| Date                                | Topic                                 | Speaker               | Followup Activity                                                         
+|-------------------------------------|---------------------|-----------------|-------------------------------------------------------------------   
+| Wed, Jun 1 <br /> (**Live Talk**)   | FPGA Overview                         | Goeders
+| Fri, Jun 3 <br /> (*Offline*)       | Vivado Review and Tcl for Vivado      | Nelson
+| Mon, Jun 6 <br /> (**Live Talk**)   | Xilinx 7 Series FPGA Deep Dive        | Nelson
+| Wed, Jun 8 <br /> (**Live Talk**)   | RapidWright                           | Hayden Cook
+
+Other FPGA tutorial pages and videos are available for you to work on offline.  Discuss with your research advisor to decide which of these you should complete:
+  * F4PGA Toolchain:
+    * Prjxray & FASM
+    * fasm2bels
+    * fpga-tool-perf, symbiflow-examples
+  * Xilinx Tools:
+    * Vivado Block Design + Vitis
+    * Vitis HLS
 
 
 ## Networking Track
