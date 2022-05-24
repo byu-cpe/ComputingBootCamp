@@ -30,7 +30,7 @@ Using the makeTest repository as an example, I'll outline the process. First of 
 
 <img src = "{% link media/testDocumentation/TestEx2.png %}" width="900">
 
-You may be wondering, what happens if the pull request gets merged? Wouldn't that potentially mess up the repository? You'd be correct, and for that reason the framework is set up so that the user only needs to submit a pull request, not merge one. The pass-off files will automatically pull the necessary code from the user's pull request so that no merging is necessary. In addition, if we allowed merging, users could potentially edit the pass-off tests to cheat the system (more on that later). For this reason, the makeTest repository has settings enabled that don't allow merging without approving reviews from CODEOWNERS (users on GitHub with "ownership" over the code). The CODEOWNERS file, which is always found within a .github folder in a repository, specifies which users own which code. The makeTest repository has deemed the BYUComputingBootCampTests user as a CODEOWNER for all the files in the repository, which effectively means that nothing can be merged without our approval. This stops any malicious activity from users.
+You may be wondering, "What happens if the pull request gets merged? Wouldn't that potentially mess up the repository?" You'd be correct, and for that reason the framework is set up so that the user only needs to submit a pull request, not merge one. The pass-off files will automatically pull the necessary code from the user's pull request so that no merging is necessary. In addition, if we allowed merging, users could potentially edit the pass-off tests to cheat the system (more on that later). For this reason, the makeTest repository has settings enabled that don't allow merging without approving reviews from CODEOWNERS (users on GitHub with "ownership" over the code). The CODEOWNERS file, which is always found within a .github folder in a repository, specifies which users own which code. The makeTest repository has deemed the BYUComputingBootCampTests user as a CODEOWNER for all the files in the repository, which effectively means that nothing can be merged without our approval. This stops any malicious activity from users.
 
 <img src = "{% link media/testDocumentation/TestEx3.png %}" width="900">
 
@@ -38,11 +38,11 @@ After the user submits their pull request, GitHub Actions comes into play. GitHu
 
 <img src = "{% link media/testDocumentation/TestEx4.png %}" width="900">
 
-Because these workflow files are stored within the repository itself, that means that every single user has access to look inside these workflow files and edit them if they so desire. This is what would allow users to "cheat the system" if we allowed merging in our repository. All they would have to do is remove all the pass-off lines of code in the workflow files, and leave the line that submits the badge to them. It's incredibly easy to do. Because of this, we have set up the framework so that the user's submited code and our pass-off code remains seperate at all times (This is why the pass-off tests run on a predetermined schedule instead of triggering on a pull request - triggering on a pull request would cause the user's workflow files to be run, not ours). So, even though it may be a little strange, this is why the user submits a pull request and the respository pulls data from their pull request.
+Because these workflow files are stored within the repository itself, that means that every single user has access to look inside these workflow files and edit them if they so desire. This is what would allow users to "cheat the system" if we allowed merging in our repository. All they would have to do is remove all the pass-off lines of code in the workflow files, and leave the line that submits the badge to them. It's incredibly easy to do. Because of this, we have set up the framework so that the user's submitted code and our pass-off code remains separate at all times (This is why the pass-off tests run on a predetermined schedule instead of triggering on a pull request - triggering on a pull request would cause the user's workflow files to be run, not ours). So, even though it may be a little strange, this is why the user submits a pull request and the repository pulls data from their pull request.
 
 <img src = "{% link media/testDocumentation/TestEx5.png %}" width="1000">
 
-Now, we get into the pass-off magic. There are actually two workflow files that are in the .github/workflows folder, the triggerPRruns.yml workflow and the makeTest.yml. The one that runs every 20 minutes is the triggerPRruns.yml, which I'll refer to as the "Trigger PR Test Runs" workflow. This workflow is in charge of finding all of the open pull requests, and then using a javascript file in the .cbc folder to trigger the makeTest.yml workflow on each one. Why is this necessary, you may ask? This is to allow us to run multiple tests simulaneously. We want the workflow file to run a test for each of the open pull requests, but GitHub Actions only allows us to trigger a specific workflow once every 5 minutes (at the most). By having two workflows, the Trigger PR Test Runs workflow is triggered once every 20 minutes-ish, and it can trigger the makeTest.yml workflow on each and every open pull eequest (up to 12, as the tests take some time, and if two Trigger PR Test Runs workflows run concurretntly, it will break the repository). So if multiple users submit pull requests, each of their submissions will be tested in around 20 minutes.
+Now, we get into the pass-off magic. There are actually two workflow files that are in the .github/workflows folder, the triggerPRruns.yml workflow and the makeTest.yml. The one that runs every 20 minutes is the triggerPRruns.yml, which I'll refer to as the "Trigger PR Test Runs" workflow. This workflow is in charge of finding all of the open pull requests, and then using a javascript file in the .cbc folder to trigger the makeTest.yml workflow on each one. Why is this necessary, you may ask? This is to allow us to run multiple tests simultaneously. We want the workflow file to run a test for each of the open pull requests, but GitHub Actions only allows us to trigger a specific workflow once every 5 minutes (at the most). By having two workflows, the Trigger PR Test Runs workflow is triggered once every 20 minutes-ish, and it can trigger the makeTest.yml workflow on each and every open pull request (up to 12, as the tests take some time, and if two Trigger PR Test Runs workflows run concurrently, it will break the repository). So if multiple users submit pull requests, each of their submissions will be tested in around 20 minutes.
 
 <img src = "{% link media/testDocumentation/TestEx6.png %}" width="1000">
 
@@ -148,9 +148,9 @@ All of these lines are technically optional, but you need to have at least one o
 
 `name:` defines the name of the step to use on GitHub.
 
-`id:` gives the step an id value, by which other steps can refer to this step and recieve its output.
+`id:` gives the step an id value, by which other steps can refer to this step and receive its output.
 
-`uses:` tells the step to run a pre-built action, which is basically code that someone else has already built to accomplish a certain task. This can make our lives alot easier. For example `uses: actions/setup-node@v2.1.5` will automatically install Node.js onto the machine.
+`uses:` tells the step to run a pre-built action, which is basically code that someone else has already built to accomplish a certain task. This can make our lives a lot easier. For example `uses: actions/setup-node@v2.1.5` will automatically install Node.js onto the machine.
 
 `run:` tells the step to run the following bash script commands.
 
@@ -193,7 +193,7 @@ the pass-off triggering.
 For information on how to use the "triggerRunForAllPRs.js" file, see the section with the same name below.
 
 #### makeTest.yml
-The makeTest.yml contains alot of code, so I won't copy it as one big code block. Instead, I'll go through each line and explain what it does. I'll assume that you already 
+The makeTest.yml contains a lot of code, so I won't copy it as one big code block. Instead, I'll go through each line and explain what it does. I'll assume that you already 
 have the context explained in "triggerPRruns.yml" section. If you haven't read that yet, go read it now.
 
 `name: Make Test`
@@ -268,7 +268,7 @@ For information on how to use the `juliangruber/read-file-action@v1` action, see
     path: number.txt
 ```
 
-This is the same as the last two steps, except it gets the number of the pull request instead of the name of the corresponding repository. The pull request's number ends up as an output variable of the step with the id of "number". The pull request number is used later to make commments on the pull request so that the user can easily see how the pass-off went. 
+This is the same as the last two steps, except it gets the number of the pull request instead of the name of the corresponding repository. The pull request's number ends up as an output variable of the step with the id of "number". The pull request number is used later to make comments on the pull request so that the user can easily see how the pass-off went. 
 
 ```
 - name: Add "currentlyBeingChecked" label
@@ -451,7 +451,7 @@ These steps do the same thing with `MakeFiles/MakeFile2.txt` as what has been do
   run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "compiled.txt contains proper file names"
 ```
 
-This step uses a javascript file to make sure that the complied.txt file contains the file names that it should. Asserting proper output with GitHub secrets can be a extremely difficult when the output has multliple lines or newlines in it, so using the javascript file here allows us to easily assert a multi-lined output.
+This step uses a javascript file to make sure that the complied.txt file contains the file names that it should. Asserting proper output with GitHub secrets can be a extremely difficult when the output has multiple lines or newlines in it, so using the javascript file here allows us to easily assert a multi-lined output.
 
 For information on how to use the "assertContains.js" file, see the section with the same name below.
 
@@ -535,10 +535,10 @@ user can easily see if they had a typo in their email or forgot to enter it.
   run: node .cbc/badgeAPI.js ${secrets.USERNAME} ${secrets.PASSWORD} ${ steps.userEmail.outputs.content }
     
 - name: Comment
-  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Badge Issued. Congraduations!"
+  run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Badge Issued. Congratulations!"
 ```
 
-This step uses a javascript file to call the Badgr API and issue a badge to the user's email found in a previous step. The javascript file takes in the username and password of the BYU Computing Boot Camp Test's Badgr account in order to get authorization to issue the badge. Note that if the user's email is invalid, this step will throw an error, and the user won't recieve the badge. However, if the email is valid, but isn't the user's email, Badgr will still issue the badge to that email.
+This step uses a javascript file to call the Badgr API and issue a badge to the user's email found in a previous step. The javascript file takes in the username and password of the BYU Computing Boot Camp Test's Badgr account in order to get authorization to issue the badge. Note that if the user's email is invalid, this step will throw an error, and the user won't receive the badge. However, if the email is valid, but isn't the user's email, Badgr will still issue the badge to that email.
 
 For information on how to use the "badgeAPI.js" file, see the section with the same name below.
 
@@ -717,7 +717,7 @@ It is used to verify that a file contains specified strings.
 
 Usage: `node  .cbc/assertContains.js <filePath> <requiredStrings>`
 
-The code requires fs in order to read the contents of the any file that is provided. It contains a function called assertContains() that asserts that "string" can be found in "data". Otherwise, it throws an error, which stops the GitHub Action workflow and causes the user to not recieve the badge. The code takes two parameters, the file path for the data string and a string with all the required substrings (seperated by commas).
+The code requires fs in order to read the contents of the any file that is provided. It contains a function called assertContains() that asserts that "string" can be found in "data". Otherwise, it throws an error, which stops the GitHub Action workflow and causes the user to not receive the badge. The code takes two parameters, the file path for the data string and a string with all the required substrings (separated by commas).
 
 An example use of this code would be `node .cbc/assertContains.js Makefile "%.o:,tree"`. This would throw an error if the "Makefile" file didn't contain the strings "%.o:" or "tree".
 
@@ -746,7 +746,7 @@ It is used to verify that a file does not contain specified strings.
 
 Usage: `node  .cbc/assertDoesNotContain.js <filePath> <stringsNotAllowed>`
 
-The code requires fs in order to read the contents of the provided file. It contains a function called assertDoesNotContain() that asserts that some data string does not contain some smaller string inside it. Otherwise, it throws an error, which stops the GitHub Action workflow and causes the user to not recieve the badge. The code takes two parameters, the file path for the data string and all the strings that are not allowed to be in the data string (seperated by commas).
+The code requires fs in order to read the contents of the provided file. It contains a function called assertDoesNotContain() that asserts that some data string does not contain some smaller string inside it. Otherwise, it throws an error, which stops the GitHub Action workflow and causes the user to not receive the badge. The code takes two parameters, the file path for the data string and all the strings that are not allowed to be in the data string (separated by commas).
 
 An example use of this code would be `node .cbc/assertDoesNotContain.js Makefile "main,leaves,Leaves,roots,Roots,branches,Branches"`. This would throw an error if the "Makefile" file contained "main", "leaves", "Leaves", "roots", "Roots", "branches", or "Branches".
 
@@ -910,7 +910,7 @@ The file requires xmlhttprequest in order to send API calls to Badgr. It contain
 
 `issueAssertionToTestUser()` is used to issue the badge to the user. It takes four parameters, the issuer id, the badge id (to know which badge to give), the user's email (so it knows who to give it to), and an authentication token.
 
-The code currently only uses `getAuthenticationToken()` and `issueAssertionToTestUser()` to get an authentication token and issue a badge to the user. If it fails, it will throw an error so that the GitHub Actions workflow terminates and the user is notified that they didn't recieve the badge. It takes in three parameters, the username of the Computing Boot Camp's Badgr account, the corresponding password, and the email of the user that should recieve the badge. If any of these are missing, the file will throw an error.
+The code currently only uses `getAuthenticationToken()` and `issueAssertionToTestUser()` to get an authentication token and issue a badge to the user. If it fails, it will throw an error so that the GitHub Actions workflow terminates and the user is notified that they didn't receive the badge. It takes in three parameters, the username of the Computing Boot Camp's Badgr account, the corresponding password, and the email of the user that should receive the badge. If any of these are missing, the file will throw an error.
 
 An example use of this code would be `node .cbc/badgeAPI.js ${secrets.USERNAME} ${secrets.PASSWORD} fakeEmail@fake.com`. This would use the username and password stored in GitHub secrets, and if they were valid, it would issue the Make badge to "fakeEmail@fake.com".
 
@@ -941,7 +941,7 @@ This file downloads a file from a repository on GitHub, and is used to download 
 
 Usage: `node .cbc/getFile.js <authToken> <repoInfo> <filePath>`
 
-This code requres the @octokit/core package in order to send API calls to GitHub. It has a function called getFile() that downloads the file at "filePath" from the repository that corresponds with the information provided in "repoInfo". The code takes three parameters, the authentication token for the API call, the repository info that is formatted as `ownerName/repoName`, and the file path of the file you want to download inside that repository.
+This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called getFile() that downloads the file at "filePath" from the repository that corresponds with the information provided in "repoInfo". The code takes three parameters, the authentication token for the API call, the repository info that is formatted as `ownerName/repoName`, and the file path of the file you want to download inside that repository.
 
 An example use of this code would be `node .cbc/getFile.js ${ secrets.AUTH_TOKEN } BYUComputingBootCampTests/makeTest .github/CODEOWNERS"`. This would download the file "CODEOWNERS" in the ".github" folder from the repository "makeTest" owned by "BYUComputingBootCampTests".
 
@@ -1053,7 +1053,7 @@ This code is used to remove all of the labels from a pull request.
 
 Usage: `node .cbc/removeAllLabels.js <authToken> <pullRequestNumber>`
 
-This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called deleteAllLabels() that simply removes any labels that are on the pull request with the corresponding issue number (in the makeTest repository). This codes takes two parameters, an authetication token for sending API calls, and the issue number of the pull request.
+This code requires the @octokit/core package in order to send API calls to GitHub. It has a function called deleteAllLabels() that simply removes any labels that are on the pull request with the corresponding issue number (in the makeTest repository). This codes takes two parameters, an authentication token for sending API calls, and the issue number of the pull request.
 
 An example use of this code would be `node .cbc/removeAllLabels.js ${ secrets.AUTH_TOKEN } 9"`. This would remove all labels on the pull request with the issue number 9 in the BYUComputingBootCampTests/makeTest repository.
 
@@ -1101,7 +1101,7 @@ This function is used to run a workflow for each currently open pull request in 
 
 Usage: `node .cbc/triggerRunForAllPRs.js <authToken>`
 
-This code requires the @octokit/core package in order to send API calls to GitHub. It has a sleep() function that will stop javascript execution for the amount of milliseconds given as a parameter, and it has a triggerRunForAllPRs() function that takes in an authentication token as a parameter, uses it to get the oldest 12 pull requests, and starts the Make Test workflow on them one by one: waiting 10 seconds between each. This stops the workflows from interferring with each other and working on the same pull requests. It starts with the oldest, goes to the next oldest, and so on. This code takes in one parameter, the authetnication token for making GitHub API requests.
+This code requires the @octokit/core package in order to send API calls to GitHub. It has a sleep() function that will stop javascript execution for the amount of milliseconds given as a parameter, and it has a triggerRunForAllPRs() function that takes in an authentication token as a parameter, uses it to get the oldest 12 pull requests, and starts the Make Test workflow on them one by one: waiting 10 seconds between each. This stops the workflows from interfering with each other and working on the same pull requests. It starts with the oldest, goes to the next oldest, and so on. This code takes in one parameter, the authentication token for making GitHub API requests.
 
 An example use of this code would be `node .cbc/triggerRunForAllPRs.js ${ secrets.AUTH_TOKEN }`. This would call the Make Test workflow on the 12 oldest pull requests.
 
@@ -1112,7 +1112,7 @@ Alright, now it's time to make a completely new pass-off test! I'll walk through
 
 The first step is to make a new repository on GitHub for this new automated pass-off test. Login to GitHub as the BYUComputingBootCampTests user. You can get the email and password from Daniel Butterfield (who is currently working in Professor Mangelson's lab). Create a new public repository, and give it the name of the subject matter being tested, followed by "Test". For example, if I wanted to make an automated test for the Python sub-module, I would name my repository "pythonTest".
 
-After creating the repository, copy over the .github and .cbc folders from the makeTest repository into this one, so that you can re-use alot of the same code. Also, copy over the .gitignore file, the email.txt file, and the README.md file. There are edits that you'll have to make to alot of these files so that they work in the new repository and alot of settings to configure. I'll go through them one by one:
+After creating the repository, copy over the .github and .cbc folders from the makeTest repository into this one, so that you can re-use a lot of the same code. Also, copy over the .gitignore file, the email.txt file, and the README.md file. There are edits that you'll have to make to a lot of these files so that they work in the new repository and a lot of settings to configure. I'll go through them one by one:
 
 ### Repository Settings/Secrets
 These are the changes that you'll need to make to the repository itself for the workflow files to run at all. 
@@ -1164,11 +1164,11 @@ First, you'll probably want to change the name of this file to match your reposi
 
 On line 1, change it from `Make Test` to `<repository name> Test`.
 
-This is the point where the changes are up to your creative interpretation and engineering intuition. The testing process will vary drastically depending on the subject matter. For example, the makeTest repository relies alot on running actual make commands in the terminal, and then testing for proper output. If I were to make a pythonTest repository, I'd instead write alot of python unit tests and have them assert proper output. The point is that the exact steps will vary significantly. So, to help you with this process, I'll outline which lines of code you'll want to KEEP THE SAME in this file and which ones will have to be replaced with testing lines more specific to your subject material.
+This is the point where the changes are up to your creative interpretation and engineering intuition. The testing process will vary drastically depending on the subject matter. For example, the makeTest repository relies a lot on running actual make commands in the terminal, and then testing for proper output. If I were to make a pythonTest repository, I'd instead write a lot of python unit tests and have them assert proper output. The point is that the exact steps will vary significantly. So, to help you with this process, I'll outline which lines of code you'll want to KEEP THE SAME in this file and which ones will have to be replaced with testing lines more specific to your subject material.
 
-You'll want to keep lines 3 through 45, which download all the necessary packages for the javascript files to run correctly, and handle the complicated process of runnning tests on multiple repositories at the same time. I'd highly reccomend you NOT TO TOUCH this code unless you know what you're doing, as this will cause you many hours of frustration and debugging if you don't. Since it works as it is, there isn't any reason to mess with this unless you want to add another `npm install` line or if you know the system well enough to want to improve it.
+You'll want to keep lines 3 through 45, which download all the necessary packages for the javascript files to run correctly, and handle the complicated process of running tests on multiple repositories at the same time. I'd highly recommend you NOT TO TOUCH this code unless you know what you're doing, as this will cause you many hours of frustration and debugging if you don't. Since it works as it is, there isn't any reason to mess with this unless you want to add another `npm install` line or if you know the system well enough to want to improve it.
 
-Lines 46 through 213 are the actual tests, so most (if not all) of this should change. Notice how I segmented this into two sections, a section for question 1 and a section for question 2. You should also do this for each of your questions, as it will keep you sane and stop you from losing your place in the file. Also notice that each testing line is followed by a comment line, which outputs the successful completion of the step to the pull request. You'll have to do this as well, or it can become very difficult for a user to know where their code went wrong. You can use all of the javascript files available in the .cbc folder, any linux terminal commands, and any other tools you can think of as a means to test the user's code, as long as you can trigger it through the workflow file. Be sure to save any additional files that you write to the .cbc folder so that other students can use them in future testing repositories. If you want to test specific output without users being able to see it, use a GitHub Secret (as described in the "Repository Settings/Secrets" section above). If you are wondering if it's possible to do something through the workflow files, look it up! Google is your friend if you want to do something that we havent't already implemented in the .cbc folder. 
+Lines 46 through 213 are the actual tests, so most (if not all) of this should change. Notice how I segmented this into two sections, a section for question 1 and a section for question 2. You should also do this for each of your questions, as it will keep you sane and stop you from losing your place in the file. Also notice that each testing line is followed by a comment line, which outputs the successful completion of the step to the pull request. You'll have to do this as well, or it can become very difficult for a user to know where their code went wrong. You can use all of the javascript files available in the .cbc folder, any linux terminal commands, and any other tools you can think of as a means to test the user's code, as long as you can trigger it through the workflow file. Be sure to save any additional files that you write to the .cbc folder so that other students can use them in future testing repositories. If you want to test specific output without users being able to see it, use a GitHub Secret (as described in the "Repository Settings/Secrets" section above). If you are wondering if it's possible to do something through the workflow files, look it up! Google is your friend if you want to do something that we haven't already implemented in the .cbc folder. 
 
 Lines 214 through 234 issue the badge to the user, so you'll probably want to leave them just as is.
 
@@ -1184,7 +1184,7 @@ So that it triggers on the failure of a certain step, you'll have to give that s
 
 Lines 310 through 325 handle closing the pull request after testing and giving it the 'checkComplete' label, so you won't need to edit this.
 
-And those are the changes you'll need to make to the makeTest.yml file. Be warned, this is the hardest part of making the testing repository. This will proabably take 95% of your total time making the repository, and debugging will be a very necessary step. Be sure to use alternate GitHub accounts to submit multiple pull requests at the same time, and then make sure that the results are as expected. For example, if the user forgets to put their email into email.txt, does the repository realize they forget and output an error, or erroneously state that the user was issued their badge? If the user's code has incorrect output, does the corresponding failure comment get posted? Is the framework for testing repositories working correctly (as in, each repository is getting checked once and without repeats)? If you're having trouble with the last one, you probably forgot to update some of the .cbc files with the new repository name.
+And those are the changes you'll need to make to the makeTest.yml file. Be warned, this is the hardest part of making the testing repository. This will probably take 95% of your total time making the repository, and debugging will be a very necessary step. Be sure to use alternate GitHub accounts to submit multiple pull requests at the same time, and then make sure that the results are as expected. For example, if the user forgets to put their email into email.txt, does the repository realize they forget and output an error, or erroneously state that the user was issued their badge? If the user's code has incorrect output, does the corresponding failure comment get posted? Is the framework for testing repositories working correctly (as in, each repository is getting checked once and without repeats)? If you're having trouble with the last one, you probably forgot to update some of the .cbc files with the new repository name.
 
 To debug easily, go to the GitHub Actions tab on the repository, navigate to the Trigger PR Test Runs workflow, and hit the "Run Workflow" button. This will allow you to test your workflow files without having to wait 5-20 minutes for it to be triggered automatically. Also, the GitHub Actions tab stores the results of all of the workflow runs, so you can look in there to see exactly what happened when your workflow file ran, all the way to the exact terminal output. This is very useful. 
 
@@ -1212,25 +1212,25 @@ Here is the code to make that possible, so copy and edit it for your testing rep
 ## Make Badge
 <a href="https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q"><img src="https://media.badgr.com/uploads/badges/8e853a0b-726b-4101-8cb0-4b299926f19d.png" alt="Make Badge" width="250"/></a>
 
-For those who believe they have mastered Make and Makefiles, we present the Make badge! This badge can be viewed in it's entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). The Make badge can be used to prove your Makefile knowledge to potential employers, educational instutitions, or anyone else! To earn it, you'll have to complete the Make test and use your knowledge to write Makefiles for varying situations. Attempt the Make test and earn the Make badge with the button below!
+For those who believe they have mastered Make and Makefiles, we present the Make badge! This badge can be viewed in it's entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). The Make badge can be used to prove your Makefile knowledge to potential employers, educational institutions, or anyone else! To earn it, you'll have to complete the Make test and use your knowledge to write Makefiles for varying situations. Attempt the Make test and earn the Make badge with the button below!
 
 <div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/makeTest'">
     <p class="activity-label h3-clone">EARN THE MAKE BADGE</p>
     <p class="dropdown-arrow h3-clone">&#9654;</p>
 </div>
 
-Good luck to those who attempt the test, and if you pass, congradulations! You are now certified in Make and Makefiles by the BYU Computing Boot Camp.
+Good luck to those who attempt the test, and if you pass, congratulations! You are now certified in Make and Makefiles by the BYU Computing Boot Camp.
 ```
 
 Be sure to replace all of the links with the proper ones, and make sure to preserve all of the functionality (hitting the button should take you to the repository, the badge image should match the badge you are awarding, and clicking on the badge should take you to the badge's public Badgr page).
 
-When you're done editing the BYU Computing Boot Camp website, be sure to submit a pull request to the CBC repository so that your changes can actually appear on the website. If your changes are merged, congraduations! Your automated test repository is fully functional and on the CBC website!
+When you're done editing the BYU Computing Boot Camp website, be sure to submit a pull request to the CBC repository so that your changes can actually appear on the website. If your changes are merged, congratulations! Your automated test repository is fully functional and on the CBC website!
 
 ## Future Plans
-Eventually, we'll want to have some sort of pass-off assesement for every sub-module that has a badge. Whether these pass-offs will be project-based assessments (hand-graded) or code-based assessments (automated tests) is up to you and the rest of the team. However, code-based assessments can be preferred where the BYU Computing Boot Camp staff wouldn't want to have to manually check user submissions. I personally believe that we should implement these wherever possible, as the BYU Computing Boot Camp doesn't have active development year-round, and so automatic pass-offs wouldn't be subject to delays as a manual pass-off system would. However, there are some sub-modules where an automatic pass-off just wouldn't be possible or would be ill-suited for the subject matter.
+Eventually, we'll want to have some sort of pass-off assessment for every sub-module that has a badge. Whether these pass-offs will be project-based assessments (hand-graded) or code-based assessments (automated tests) is up to you and the rest of the team. However, code-based assessments can be preferred where the BYU Computing Boot Camp staff wouldn't want to have to manually check user submissions. I personally believe that we should implement these wherever possible, as the BYU Computing Boot Camp doesn't have active development year-round, and so automatic pass-offs wouldn't be subject to delays as a manual pass-off system would. However, there are some sub-modules where an automatic pass-off just wouldn't be possible or would be ill-suited for the subject matter.
 
 So, a tentative starting place would be to implement automated pass-off tests for CMake, Python Intro, Python Packages, Unit Testing, SQL Basics, and Matlab, as those would all translate decently well into automated tests.
 
 Another idea is that when each person is assigned to improve/make a page on the site, they are in charge of making the pass-off test for it. If they decided they want to have an automated test, they can follow the tutorial in this guide to do so.
 
-I was also considering improving the makeTest repository by adding more problems to it (i.e. more Makefiles to implement). This would give the users more experince and more hours with Make and add value to the Make badge. I'm not sure what direction these new Makefiles would take, but preferrably it would require the user to make their own creative Makefiles based off of the concepts they learned in the sub-module, instead of just re-making the Makefiles explained on the website, as the current two Makefiles require.
+I was also considering improving the makeTest repository by adding more problems to it (i.e. more Makefiles to implement). This would give the users more experience and more hours with Make and add value to the Make badge. I'm not sure what direction these new Makefiles would take, but preferably it would require the user to make their own creative Makefiles based off of the concepts they learned in the sub-module, instead of just re-making the Makefiles explained on the website, as the current two Makefiles require.
