@@ -48,14 +48,14 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 | Wed, Jun 8 <br /> (**Live Talk**)   | RapidWright                           | Hayden Cook
 
 Other FPGA tutorial pages and videos are available for you to work on offline.  Discuss with your research advisor to decide which of these you should complete:
-  * F4PGA Toolchain:
-    * [Prjxray & FASM]({% link _selfpaced/fasm.md %})
-    * [fasm2bels]({% link _selfpaced/fasm2bels.md %})
-    * [fpga-tool-perf, symbiflow-examples]({% link _selfpaced/symbiflowexamples.md %})
   * Xilinx Tools:
     * [Vivado Installation]({% link _selfpaced/installing_vivado.md %})
     * [Vivado Block Design + Vitis]({% link _selfpaced/vivado_block_design.md %})
     * [Vitis HLS]({% link _selfpaced/vitis_hls.md %})
+  * F4PGA Toolchain:
+    * [Prjxray & FASM]({% link _selfpaced/fasm.md %})
+    * [fasm2bels]({% link _selfpaced/fasm2bels.md %})
+    * [fpga-tool-perf, symbiflow-examples]({% link _selfpaced/symbiflowexamples.md %})
 
 
 ## Networking Track
