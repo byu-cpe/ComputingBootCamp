@@ -320,7 +320,7 @@ The second step leaves a comment on the pull request, just like in the previous 
   run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Problem 1 tree executable ran"
 ```
 
-This step tries to run the executable that the `make` command should have generated, and saves it's output to a file called "output.log".
+This step tries to run the executable that the `make` command should have generated, and saves its output to a file called "output.log".
 
 ```
 - name: Read Output
@@ -619,7 +619,7 @@ For information on how to use the "badgeAPI.js" file, see the section with the s
   run: node .cbc/makeComment.js ${ secrets.AUTH_TOKEN } ${ steps.number.outputs.content } "Error - Badge issue failed - Email Address wasn't valid"
 ```
 
-These steps handle failure output when one of the previous steps fails. They use the javascript file "makeComment.js" to make this comment on the pull request. The line `if: always() %% steps.<idOfStep>.outcome == 'failure'` is key to the functionality of these steps. We want an error message to be output when a step crashes or throws an error. However, default behavior for workflow files is that the entire workflow terminates after an error is thrown. To get around this, we use `if: always()`, which means that the step will run even if a previous step threw an error. However, we don't want every error message to print when the workflow file terminates prematurely, just one. For this reason, the `always()` is anded with `steps.<idOfStep>.outcome == 'failure'`. This means that the step will only run if it's corresponding step is the one that threw the error. Just replace `<idOfStep>` with the id of the step that corresponds to it. This allows us to outline all of the error messages in order and in an easy to read manner.
+These steps handle failure output when one of the previous steps fails. They use the javascript file "makeComment.js" to make this comment on the pull request. The line `if: always() %% steps.<idOfStep>.outcome == 'failure'` is key to the functionality of these steps. We want an error message to be output when a step crashes or throws an error. However, default behavior for workflow files is that the entire workflow terminates after an error is thrown. To get around this, we use `if: always()`, which means that the step will run even if a previous step threw an error. However, we don't want every error message to print when the workflow file terminates prematurely, just one. For this reason, the `always()` is anded with `steps.<idOfStep>.outcome == 'failure'`. This means that the step will only run if its corresponding step is the one that threw the error. Just replace `<idOfStep>` with the id of the step that corresponds to it. This allows us to outline all of the error messages in order and in an easy to read manner.
 
 ```
   #Close Pull Request
@@ -1141,9 +1141,14 @@ To use this file, you'll need to edit line 3 so that it contains the entity ID o
 var makeBadgeEntityID = 'opPKYN_pQFi6UWl1Q_aT5Q';
 ```
 
-If I were editing this for my pythonTest repository, I'd rename this variable to be `pythonBadgeEntityID` and then swap it out with the `makeBadgeEntityID` name throughout the rest of the code. In addition, I'd need to find the entity ID that corresponds to the python badge. To find this out, download the badgeAPI.js file onto your local machine, copy `console.log(JSON.stringify(JSON.parse(xhr.responseText),null,'\t'))` onto line 103 of the code, comment out the issueAssertionToTestUser() function, and then make additional edits so that you can run the getBadgeClassInformation() function with the `computingBootCampId` variable as the `issuerID` parameter. Now, if you run the code with the username and password for the BYU Computing Boot Camp Badgr account (contact Daniel Butterfield in Professor Mangelson's lab for access to this information), you'll get to see information on all of the badges currently in the Badgr issuer.
+<!--If I were editing this for my pythonTest repository, I'd rename this variable to be `pythonBadgeEntityID` and then swap it out with the `makeBadgeEntityID` name throughout the rest of the code. In addition, I'd need to find the entity ID that corresponds to the python badge. To find this out, download the badgeAPI.js file onto your local machine, copy `console.log(JSON.stringify(JSON.parse(xhr.responseText),null,'\t'))` onto line 103 of the code, comment out the issueAssertionToTestUser() function, and then make additional edits so that you can run the getBadgeClassInformation() function with the `computingBootCampId` variable as the `issuerID` parameter. Now, if you run the code with the username and password for the BYU Computing Boot Camp Badgr account (contact Daniel Butterfield in Professor Mangelson's lab for access to this information), you'll get to see information on all of the badges currently in the Badgr issuer.
+ -->
 
-Find the badge that you want to reward, and make note of it's entity ID. If you can't seem to find the badge, then it probably hasn't been added to the Badgr account yet. See the sub-module "How to create a badge" in the module "Badges" on the CBC website for information on how to add a badge to Badgr. Now, in the repository (NOT on your local machine), replace the entity ID on line 3 with the entity ID of the badge that you want to reward. This means that the badgeAPI.js file in the repository only has the updated entityID, and none of the other changes. Now, it should be ready to issue the proper badge for your repository.
+To get the ID of the badge you want to reward, go to the Badgr page for the badge. The URL for the page will be of the form "https://badgr.com/public/badges/&lt;BadgeEntityId>", so just copy the slug from the URL and past it into this spot.
+
+<img src = "{% link media/testDocumentation/BadgeIDInURL.png %}" width="900">
+
+Find the badge that you want to reward, and make note of its entity ID. If you can't seem to find the badge, then it probably hasn't been added to the Badgr account yet. See the sub-module "How to create a badge" in the module "Badges" on the CBC website for information on how to add a badge to Badgr. Now replace the entity ID on line 3 with the entity ID of the badge that you want to reward. Now, it should be ready to issue the proper badge for your repository.
 
 ### .cbc/getRepoInfo.js
 To use this file, you'll need to value on line 7 from `makeTest` to the name of the new repository.
@@ -1212,7 +1217,7 @@ Here is the code to make that possible, so copy and edit it for your testing rep
 ## Make Badge
 <a href="https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q"><img src="https://media.badgr.com/uploads/badges/8e853a0b-726b-4101-8cb0-4b299926f19d.png" alt="Make Badge" width="250"/></a>
 
-For those who believe they have mastered Make and Makefiles, we present the Make badge! This badge can be viewed in it's entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). The Make badge can be used to prove your Makefile knowledge to potential employers, educational institutions, or anyone else! To earn it, you'll have to complete the Make test and use your knowledge to write Makefiles for varying situations. Attempt the Make test and earn the Make badge with the button below!
+For those who believe they have mastered Make and Makefiles, we present the Make badge! This badge can be viewed in its entirety on Badgr.com here: [Make Badge](https://badgr.com/public/badges/opPKYN_pQFi6UWl1Q_aT5Q). The Make badge can be used to prove your Makefile knowledge to potential employers, educational institutions, or anyone else! To earn it, you'll have to complete the Make test and use your knowledge to write Makefiles for varying situations. Attempt the Make test and earn the Make badge with the button below!
 
 <div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/makeTest'">
     <p class="activity-label h3-clone">EARN THE MAKE BADGE</p>
