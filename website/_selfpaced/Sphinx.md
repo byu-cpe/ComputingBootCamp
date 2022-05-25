@@ -14,7 +14,7 @@ On May 19, 2021 Prof Wirthlin discussed how to set up Sphinx and how to document
 
 ## Introduction and Installing Sphinx
 
-Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a verity of different coding languages (not just python) and also allows you to generate html websites from restructured text.
+Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a variety of different coding languages (not just python) and also allows you to generate html websites from restructured text.
 
 You can install sphinx using either the system package manager or pip. You can also try installing sphinx within a conda env. The commands for each of these options can be found bellow:
 ### System Package Manager
@@ -223,7 +223,7 @@ This concludes our module about Documentation and Sphinx. For more information c
 
 
 * [This online tool](https://www.tablesgenerator.com/text_tables) is invaluable for building complex tables in RST or Markdown format. 
-* Visit [this website](https://www.sphinx-doc.org/en/master/) for the official Sphinx guid. 
+* Visit [this website](https://www.sphinx-doc.org/en/master/) for the official Sphinx guide. 
 
 * If you want RST examples the [SpyDrNet documentation](https://byuccl.github.io/spydrnet/docs/stable/index.html) is written in RST. See how each page is written by clicking on **View Page Source** at the top of the page. As previously mentioned [Symbiflow](https://symbiflow-examples.readthedocs.io/en/latest/) is also written in RST.
 

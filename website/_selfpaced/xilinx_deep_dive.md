@@ -140,10 +140,10 @@ Although this is the last topic in this self-paced review of what is inside a Xi
 But, wait, there's more...
 
 ## The Xilinx Libraries Guide
-- The above all works well when what you want to express can be written behaviorally and then recognized by the synthesizer.  However, there are some things for which there is no behavioral code that will suffice.  In these cases you will be required to to *structually instance* Xilinx primitives to get what you want.
+- The above all works well when what you want to express can be written behaviorally and then recognized by the synthesizer.  However, there are some things for which there is no behavioral code that will suffice.  In these cases you will be required to to *structurally instance* Xilinx primitives to get what you want.
 - A prime example of this is a clock synthesizer PLL.  There is no behavioral description of this, what you need to do is to find the proper library element and then figure out how to instantiate it in your design.
 - To learn about this, search for and find a copy of "Vivado Design Suite 7 Series FPGA and Zynq-7000 SoC Libraries Guide", get this version if you can: "UG953 (v2019.1) May 22, 2019"
-- Chapter 4 lists the various design elements by functonal category.  Go to the beginning of Chapter 4 (about page 250) and click on "MMCME2_BASE".  
+- Chapter 4 lists the various design elements by functional category.  Go to the beginning of Chapter 4 (about page 250) and click on "MMCME2_BASE".  
   - This is a multi-mode clock generator/synthesis block.  You can bring an input clock into it and it will generate additional clocks at multiples or fractions of the incoming clock frequency for use in your circuit.  It will also allow you to shift the phase of the incoming clock before distribution to the rest of your circuit.   In short, this is a must-have block for large, multi-clock designs.  
   - The *only* way to get an MMCME2_BASE block into your circuit is to instantiate it.
   - This document shows you how to do so.

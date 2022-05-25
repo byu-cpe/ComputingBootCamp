@@ -52,7 +52,7 @@ More about PCB design can be found on the Layout Guidelines page.
 
 ### Libraries/Database
 
-Libraries contain the information about each part, as well as link the schematic symbol to the PCB footprint, or part shape. Because having a library for every part becomes messy very quickly, we use a database instead. See the Parts Database page for more information. Make sure to enter all relavant informationinto the database when adding a new part. All of the information about a part that you will use is usually listed on digikey (where we buy almost all of our parts). Digikey also usually has a link to that part's datasheet which has even more information.
+Libraries contain the information about each part, as well as link the schematic symbol to the PCB footprint, or part shape. Because having a library for every part becomes messy very quickly, we use a database instead. See the Parts Database page for more information. Make sure to enter all relevant information into the database when adding a new part. All of the information about a part that you will use is usually listed on digikey (where we buy almost all of our parts). Digikey also usually has a link to that part's datasheet which has even more information.
 
 ### Footprints
 
