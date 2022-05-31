@@ -40,6 +40,9 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 
 ## FPGA Track
 
+<span style="color:red">For those from other institutions that would like to attend via Zoom webinar, please use link above.</span>
+
+
 | Date                                | Topic                                 | Speaker               | Followup Activity                                                         
 |-------------------------------------|---------------------|-----------------|-------------------------------------------------------------------   
 | Wed, Jun 1 <br /> (**Live Talk**)   | FPGA Overview                         | Goeders
