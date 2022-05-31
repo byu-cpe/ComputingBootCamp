@@ -19,7 +19,7 @@ The following gives some general information regarding PCB ordering for the CCL.
 
 These are the files that need to be send to the manufacturer. They also contain the files needed to create a board stencil. (More about stencils below)
 
-From the PCB document, click File -> Fabrication Outputs -> Gerber X2 Files. This will allow you to create the gerber as well as the drill files at the same time. Gerber and drill files can also be created separately if needed. Once this is open, there are several settings that are ok to change. The "Format" lists the decimal precision to be outputed, with 2:6 being the most precise. This is the recommended option for boards with high density parts, such as an FPGA or an FMC connector. Increasing the precision may increase the price of the board, but that has never actually been tested.  
+From the PCB document, click File -> Fabrication Outputs -> Gerber X2 Files. This will allow you to create the gerber as well as the drill files at the same time. Gerber and drill files can also be created separately if needed. Once this is open, there are several settings that are ok to change. The "Format" lists the decimal precision to be outputted, with 2:6 being the most precise. This is the recommended option for boards with high density parts, such as an FPGA or an FMC connector. Increasing the precision may increase the price of the board, but that has never actually been tested.  
 
 On the right side there are 2 tabs, "Layers To Plot" and "Drills". On both pages the files to be created are shown. All the files with relevant information for the board need to be created. This can easily be done by clicking "Plot Layers" -> "Used on". This must be done for both pages. 
 
@@ -27,7 +27,7 @@ The default settings also have the box checked for "Generate DRC Rules export fi
 
 The following files are required for board manufacturing. The first part is the Altium extension for the file, the second is the layer the file describes. **Make sure** you zip up the NC Drill files with the Gerber files, or the mechanical board holes will not be drilled. The zip file containing all of these files is what needs to be sent to the manufacturer.
 
-You can check that the files were generated correctly using a Gerber viewer online. jlcpcb.com is a good one.  Go to the website, click "QUOTE NOW" and upload your zipped folder of all the Gerber and Drill files using the "Add your gerber file" button.  Be sure to check that the drill holes are actually holes in the image and that any cutouts or unusual board outline shapes are cut as they should be. These files can also be opened one at a time by Altium. You should go thorugh every file to make sure that everything looks like you expect it to.
+You can check that the files were generated correctly using a Gerber viewer online. jlcpcb.com is a good one.  Go to the website, click "QUOTE NOW" and upload your zipped folder of all the Gerber and Drill files using the "Add your gerber file" button.  Be sure to check that the drill holes are actually holes in the image and that any cutouts or unusual board outline shapes are cut as they should be. These files can also be opened one at a time by Altium. You should go through every file to make sure that everything looks like you expect it to.
 
 GTL - Gerber Top Layer
 GTO - Gerber Top Overlay
@@ -54,7 +54,7 @@ The bill of materials lists all of the parts, and the quantity of each one. It g
 
 From the "General" tab you can select the type of file to be exported. CSV or excel is recommended to be able to upload this file to digikey directly. Doing so makes ordering parts a lot easier. You will have to create a digikey account to be able to upload it, but since it is free to do so, just do it, it'll make your life easier. 
 
-Once all the correct settings are chosen, you can click "OK" to save the settings, or "Export..." to create the bill of materials file. If it doesn't give you the option of where to save it, it will probably show up in the "Project Outputs for (projet name)". 
+Once all the correct settings are chosen, you can click "OK" to save the settings, or "Export..." to create the bill of materials file. If it doesn't give you the option of where to save it, it will probably show up in the "Project Outputs for (project name)". 
 
 ### Stencil Manufacture Files
 

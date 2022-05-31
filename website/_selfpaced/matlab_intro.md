@@ -14,7 +14,7 @@ Matlab is a software used by engineers around the globe to perform mathematical 
 
 ## Setup
 
-A Matlab SDK (Sofware Development Kit) can be downloaded  <a href="https://software.byu.edu/student" target="_blank">here</a> if you are a current BYU student. You will need to create a Matlab account using your byu email (i.e. NetID@byu.edu), and you will need an access code (available to current BYU students through BYU after creating a Matlab account) in order to use the full version of Matlab rather than the free trial version.
+A Matlab SDK (Software Development Kit) can be downloaded  <a href="https://software.byu.edu/student" target="_blank">here</a> if you are a current BYU student. You will need to create a Matlab account using your byu email (i.e. NetID@byu.edu), and you will need an access code (available to current BYU students through BYU after creating a Matlab account) in order to use the full version of Matlab rather than the free trial version.
 
 ## Intro to Matlab Window
 
@@ -225,7 +225,7 @@ Using the following matrix and the commands you just learned, find the following
 ```
 try_it = [ 2 1 4 3 ; 4 1 2 1 ; 1 3 4 2 ]
 ```
-- What are the index of all occurances of the value 2 ( SOLUTION: (1,1), (2,3), (3,4) )
+- What are the index of all occurrences of the value 2 ( SOLUTION: (1,1), (2,3), (3,4) )
 - Sum of row 2 and 3 ( SOLUTION: [ 5 4 6 3 ] )
 - Column 4 multiplied by the value in index (1,2) ( SOLUTION: [ 3 ; 1 ; 2 ] )
 - Index (3,4) multiplied by the 2x2 matrix in the bottom right corner ( SOLUTION: [ 4 2 ; 8 4 ] ) 

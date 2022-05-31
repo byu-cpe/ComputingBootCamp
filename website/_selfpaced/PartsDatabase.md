@@ -17,7 +17,7 @@ Database parts are like global variables. **DO NOT modify a part in the Database
 
 ******************************************************************************************************************************************************************************
 
-When adding parts to the Database, don't worry if similar parts do not have CCL part numbers near each other. You can search for any part by component value (or anything else, but usually the value is what we are most insterested in, at least for resistors and capacitors) in the search box in the Components panel in Altium.
+When adding parts to the Database, don't worry if similar parts do not have CCL part numbers near each other. You can search for any part by component value (or anything else, but usually the value is what we are most interested in, at least for resistors and capacitors) in the search box in the Components panel in Altium.
 
 ## How to use the Database
 
@@ -32,7 +32,9 @@ The Parts Database is in the Altium_PCB GitHub repository. Once you have cloned 
 
 ## How to add parts to the Database
 
-To add a part to the Database, you will need the part's specifications (usually available on [Digi-Key](https://www.digikey.com), schematic symbol (see howto -> pcb -> altium -> Schematic Libraries on BYU CCL Wiki), and footprint (see howto -> pcb -> altium -> Adding parts -> Adding a footprint on BYU CCL Wiki). You will also need to make sure that you have access to the Database (See howto -> pcb -> github on BYU CCL Wiki).
+To add a part to the Database, you will need the part's specifications (usually available on [Digi-Key](https://www.digikey.com), schematic symbol, and footprint. You will also need to make sure that you have access to the Database.
+
+One way to get the schematic symbol and footprint of a part after you have found one on Digi-Key is to search for the part in Altium under the Manufacturer Part Search panel. You can typically download the schematic symbol and footprint directly from there. Then, do the following to add that new part to the database:
 
   - Open the Microsoft Access file.  It is found in the Altium_PCB GitHub repository. Altium_PCB -> PartsDatabase -> Database -> Altium_Database (If there are two files named Altium_Database, click on the larger one, not the 1kB one)
   - Double-click on the sheet for the type of part you are adding on the left side of the Access file.
