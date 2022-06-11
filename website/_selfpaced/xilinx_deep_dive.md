@@ -59,7 +59,7 @@ Next, read about the Shift Registers that are available in a SLICEM.
 - Learn how you can dynamically change a shift register's length while it is operational.
 
 ## Wide MUXes in Both SLICEL's and SLICEM's
-Quickly identify and then readup on the F7 and F8 MUXes in a slice.   Learn from Figure 2-21 through 2-23 how you can combine LUTs together with these F7 and F8 muxes to make larger muxes.
+Quickly identify and then read up on the F7 and F8 MUXes in a slice.   Learn from Figure 2-21 through 2-23 how you can combine LUTs together with these F7 and F8 muxes to make larger muxes.
 
 ## Carry Logic
 Finally, read the section titled "Carry Logic" and figure out how the CARRY4 block works.

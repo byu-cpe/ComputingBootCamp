@@ -66,7 +66,7 @@ This page discusses how you can export your IP from Vitis HLS to be used in a Vi
 
 ### Updating Platform Project
 * Launch Vitis and reopen your existing workspace.
-* Right-click on your platform project, and choose *Update Hardware Specifiction*. Make sure you select your new XSA file.
+* Right-click on your platform project, and choose *Update Hardware Specification*. Make sure you select your new XSA file.
 * If done correctly, you should see your HLS driver located at *ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/ps7_cortexa9_0/libsrc/digitrec_v1_0/src.  Inspect the source code and locate:
 	* *xdigitrec_hw.h* has register offsets for your IP core.  If you followed the steps correctly, you should have:
 	  * control register (*XDIGITREC_CONTROL_ADDR_AP_CTRL*)
