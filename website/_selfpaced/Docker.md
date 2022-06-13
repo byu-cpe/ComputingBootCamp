@@ -7,8 +7,7 @@ type: development
 order: 12
 ---
 ## Docker
-A brief intro to Docker. It allows you to run processes in isolated containers. A docker 'containter' is standalone package of software that will run reliable regardless of the computing environtment. 
-Docker can be used to build software and aplications, share content and colaborate with other developers, and run the resulting applications. 
+A brief intro to Docker. It allows you to run processes in isolated containers. A docker 'containter' is standalone package of software that will run reliable regardless of the computing environtment. Docker can be used to build software and aplications, share content to colaborate with other developers, and run the resulting applications. 
 ## Installation
   1. Update the `apt` package index and install necessary packages
 ``` 
