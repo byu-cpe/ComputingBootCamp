@@ -3,7 +3,7 @@
 # When making a new question, use the above id number and then 
 # increment it.
 
-# --------------------------- Activites for 61_quizzes.md --------------------------- 
+# --------------------------- Activites for quizzes.md --------------------------- 
 - id: 1 # A unique identifier used to embed the question
   type: multiple_choice
   help: "Hint: Tool Command Language"
@@ -37,7 +37,7 @@
       correct: loyal
 
 
-# --------------------------- Activites for 05_linux.md ---------------------------
+# --------------------------- Activites for linux.md ---------------------------
 - id: 4
   prompt: Match each linux command with its function.
   type: matching
@@ -73,7 +73,7 @@
     - text: rm -i
       correct: prompt
 
-# --------------------------- Activites for 13_make.md ---------------------------
+# --------------------------- Activites for make.md ---------------------------
 - id: 6
   prompt: Match the automatic variable with its value
   help: See https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html for help
@@ -108,7 +108,7 @@
       correct: true
     - text: CPP=$(HEADERS:.h=.cpp)
 
-# --------------------------- Activites for 12_git.md ---------------------------
+# --------------------------- Activites for git.md ---------------------------
 - id: 9
   prompt: Match the git log feature on the left with its corresponding functionality on the right
   type: matching
@@ -127,7 +127,7 @@
     - text: --grep=(pattern)
       correct: Limit the commits output to ones with log message that matches the specified pattern (regular expression)
 
-# --------------------------- Activites for 12a_github.md ---------------------------
+# --------------------------- Activites for github.md ---------------------------
 - id: 10
   prompt: Match the GitHub feature on the left to its functionality on the right
   type: matching
@@ -147,7 +147,7 @@
     - text: Insights
       correct: An application that provides data about your repository, including traffic, number of pull request and issues, contributors, and more
 
-# --------------------------- Activites for 14_pythonIntro.md --------------------------- 
+# --------------------------- Activites for pythonIntro.md --------------------------- 
 - id: 11
   prompt: Which of the following statements in Python is equivalent to 1776?
   type: multiple_choice
@@ -168,3 +168,13 @@
     - text: 'Python'
     - text: 'name'
     - text: "SyntaxError: invalid syntax"
+
+# --------------------------- Activites for pythonIntro.md --------------------------- 
+- id: 14
+  prompt: What is the primary difference between a function and script?
+  type: multiple_choice
+  responses:
+    - text: "A function runs faster than a script"
+    - text: "A function requires user input and can return a specific value while a script is a compilation of commands"
+      correct: true
+    - text: "A script requires user input and can return a specific value while a function is a compilation of commands"
