@@ -48,15 +48,23 @@ Try running through the examples we talked about in lecture.
 * Watch the following video by Jason Turner for a quick introduction: <https://www.youtube.com/watch?v=HPMvU64RUTY>
 * Read throgh the following page for an overview of the syntax: <https://llvm.org/docs/CMakePrimer.html>
 
+{% include quizzes.html id=14 %}
+
+{% include quizzes.html id=15 %}
+
 ## PUBLIC, PRIVATE,  INTERFACE
 
 The PUBLIC, PRIVATE, and INTERFACE keywords are used to specify if a dependency, directory path, or property should be applied to the current target, its dependencies, or both.
 
 Read more about this at: <https://leimao.github.io/blog/CMake-Public-Private-Interface/>
 
+{% include quizzes.html id=16 %}
+
 ## STATIC and SHARED
 
 Read more about the differences between static and shared libraries: <https://www.geeksforgeeks.org/difference-between-static-and-shared-libraries/>
+
+{% include quizzes.html id=17 %}
 
 ## Essential CMake Functions
 
@@ -69,6 +77,8 @@ Read more about the differences between static and shared libraries: <https://ww
 * target_compile_features - <https://cmake.org/cmake/help/latest/command/target_compile_features.html>
 
 The official documentation for all built-in cmake functions can be found at: <https://cmake.org/cmake/help/v3.20/>
+
+{% include quizzes.html id=18 %}
 
 ## Create Your Own Example
 
