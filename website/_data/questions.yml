@@ -220,7 +220,7 @@
     - text: target_include_directories()
       correct: Specifies include directories to use when compiling a given target.  
     - text: target_link_libraries()
-      correct: Specify libraries or flags to use when linking a given target and/or its dependents.  
+      correct: Specifies libraries or flags to use when linking a given target and/or its dependents.  
     - text: target_link_directories()
       correct: Specifies the paths in which the linker should search for libraries when linking a given target.  
     - text: target_compile_features()
