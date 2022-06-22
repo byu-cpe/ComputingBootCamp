@@ -13,7 +13,7 @@ The prjxray-bram-patch (`XBP` for short) repo can be found at https://github.com
 
 ## Overview
 
-As was described in the final section of the 220 Textbook (Section 19.7 for v2.0 of the textbook), when designing circuits, you can specify what contents a memory should be initalized to when the circuit begins operation.  You can find the relevant [pages here]({%  link media/meminit.pdf %}) (focus on the 2nd page).   This can be done for both ROM or RAM memories (in the case of a ROM the contents will not change as the circuit operates but in the case of a RAM the contents will get overwritten).  These _memory initialization contents_ become part of the bitstream and so when the FPGA is configured it will "wake up" with the memories initialized. 
+As was described in the final section of the 220 Textbook (Section 19.7 for v2.0 of the textbook), when designing circuits, you can specify what contents a memory should be initialized to when the circuit begins operation.  You can find the relevant [pages here]({%  link media/meminit.pdf %}) (focus on the 2nd page).   This can be done for both ROM or RAM memories (in the case of a ROM the contents will not change as the circuit operates but in the case of a RAM the contents will get overwritten).  These _memory initialization contents_ become part of the bitstream and so when the FPGA is configured it will "wake up" with the memories initialized. 
 
 Since the memory initialization contents are part of the bitstream it should be possible to use prjxray to determine where those bits are and modify them _after_ the bitstream is generated.  For systems where the implementation time takes many hours, this provides a quick way to make changes to the memory contents without having to re-implement the design.  
 

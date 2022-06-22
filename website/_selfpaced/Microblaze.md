@@ -15,7 +15,7 @@ for the Nexys 4 DDR board is already downloaded and added to vivado.
 *  Create Project
 *  Click Next
 *  Choose a project name and location and click next
-*  Choose RTL Project and check "Do not spicify sources at this time" and click next
+*  Choose RTL Project and check "Do not specify sources at this time" and click next
 *  At the top of the window select Boards
 *  From the list of boards highlight the Nexys4 DDR and click next
   *  If the board is not shown in the list, you need to download and add the board file to vivado. 
@@ -76,7 +76,7 @@ for the Nexys 4 DDR board is already downloaded and added to vivado.
 ## Generate Bitstream
 *  Click the Validate design button
 *  Click OK
-*  On the sources tab, right click your block design and select Creat HDL Wrapper
+*  On the sources tab, right click your block design and select Create HDL Wrapper
 *  Check Let Vivado manage wrapper and auto-update
 *  Click OK
 *  Under the Flow Navigator select "Generate Bitstream"
@@ -130,7 +130,7 @@ int main() {
 *  Open a separate terminal
 *  Enter the following command
   * python3 -m serial.tools.miniterm /dev/ttyUSB1 9600 
-## Run Your Applicaton on the Board
+## Application
 *  Right-click on your application project and select run as -> Launch on Hardware (Single application debug)
 *  You should see the message *Hello World* in the UART terminal
 ## Sources

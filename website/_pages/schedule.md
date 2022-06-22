@@ -40,18 +40,25 @@ The boot camp will follow a mix of live presentations, live Q&A sessions, and of
 
 ## FPGA Track
 
-| Date          | Topic                                 | Speaker               | Followup Activity                                                         
-|---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------   
-| Mon, May 23   | FPGA Overview                         | Goeders
-| Wed, May 25   | Vivado Review and Tcl for Vivado      | Nelson
-| Fri, May 26   | Xilinx 7 Series FPGA Deep Dive  (no lecture - self-paced learning activity only) | Nelson
-| Mon, May 30   | HOLIDAY                               |
-| Wed, Jun 1    | Prjxray & FASM                        | 
-| Fri, Jun 3    | fasm2bels, fpga-tool-perf, symbiflow-examples | Nelson 
-| Mon, Jun 6    | Guest Speaker
-| Wed, Jun 8    | RapidWright                           |
-| Fri, Jun 10   | Vivado Block Design + Vitis          | Goeders
-| Mon, Jun 13   | Vitis HLS                            | Goeders
+<span style="color:red">For those from other institutions that would like to attend via Zoom webinar, please use link above.</span>
+
+
+| Date                                | Topic                                 | Speaker               | Followup Activity                                                         
+|-------------------------------------|---------------------|-----------------|-------------------------------------------------------------------   
+| Wed, Jun 1 <br /> (**Live Talk**)   | FPGA Overview                         | Goeders
+| Fri, Jun 3 <br /> (*Offline*)       | [Vivado Review and Tcl for Vivado]({% link _selfpaced/tclvivado.md %})      | Nelson
+| Mon, Jun 6 <br /> (**Live Talk**)   | Xilinx 7 Series FPGA Deep Dive        | Nelson
+| Wed, Jun 8 <br /> (**Live Talk**)   | RapidWright                           | Hayden Cook
+
+Other FPGA tutorial pages and videos are available for you to work on offline.  Discuss with your research advisor to decide which of these you should complete:
+  * Xilinx Tools:
+    * [Vivado Installation]({% link _selfpaced/installing_vivado.md %})
+    * [Vivado Block Design + Vitis]({% link _selfpaced/vivado_block_design.md %})
+    * [Vitis HLS]({% link _selfpaced/vitis_hls.md %})
+  * F4PGA Toolchain:
+    * [Prjxray & FASM]({% link _selfpaced/fasm.md %})
+    * [fasm2bels]({% link _selfpaced/fasm2bels.md %})
+    * [fpga-tool-perf, symbiflow-examples]({% link _selfpaced/symbiflowexamples.md %})
 
 
 ## Networking Track
@@ -60,7 +67,7 @@ The networking track will be meeting in EB 302 at 2-3:30 PM.
 
 | Date          | Topic                                                                          | Speaker               
 |---------------|--------------------------------------------------------------------------------|-----------------------
-| Wed, Jun 1    | [Networking Basics]({% link _selfpaced/networking.md %})                    | Lundrigan
-| Wed, Jun 8    | [Networking Command Line Tools]({% link _selfpaced/networking_tools.md  %}) | Lundrigan
-| Wed, Jun 15   | Case Study: Connecting a Raspberry Pi to the Internet                          | Lundrigan
-| Wed, Jun 22   | Wireless Networking                                                            | Lundrigan
+| Wed, Jun 8    | [Networking Basics]({% link _selfpaced/networking.md %})                    | Lundrigan
+| Wed, Jun 15    | [Networking Command Line Tools]({% link _selfpaced/networking_tools.md  %}) | Lundrigan
+| Wed, Jun 22   | Case Study: Connecting a Raspberry Pi to the Internet                          | Lundrigan
+| Wed, Jun 29   | Wireless Networking                                                            | Lundrigan

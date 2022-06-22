@@ -40,7 +40,7 @@ After watching these videos, when you run into problems, or there is something t
 
 ### Schematics
 
-Each PCB project can have multiple schematics. The software links all of the schematic pages together to make the PCB. Schematics detail how each part is connected. It is important to keep your schematics organized since they are how you will show others how your board is put together. To help with organization of our github schematic files are generally named boardName_schematicName. They do not need revision numbers. Past revisions are kept in a seperate folder named with its revision number. 
+Each PCB project can have multiple schematics. The software links all of the schematic pages together to make the PCB. Schematics detail how each part is connected. It is important to keep your schematics organized since they are how you will show others how your board is put together. To help with organization of our github schematic files are generally named boardName_schematicName. They do not need revision numbers. Past revisions are kept in a separate folder named with its revision number. 
 
 ### PCB
 
@@ -52,13 +52,13 @@ More about PCB design can be found on the Layout Guidelines page.
 
 ### Libraries/Database
 
-Libraries contain the information about each part, as well as link the schematic sybmol to the PCB footprint, or part shape. Because having a library for every part becomes messy very quickly, we use a database instead. See the Parts Database page for more information. Make sure to enter all relavant informationinto the database when adding a new part. All of the information about a part that you will use is usually listed on digikey (where we buy almost all of our parts). Digikey also usually has a link to that part's datasheet which has even more information.
+Libraries contain the information about each part, as well as link the schematic symbol to the PCB footprint, or part shape. Because having a library for every part becomes messy very quickly, we use a database instead. See the Parts Database page for more information. Make sure to enter all relevant information into the database when adding a new part. All of the information about a part that you will use is usually listed on digikey (where we buy almost all of our parts). Digikey also usually has a link to that part's datasheet which has even more information.
 
 ### Footprints
 
-Footprints are documents that contain the pin assignment and shape and size of every part. These need to linked to the schematic symbols through the database for each part or it will not show up when you create the PCB document. 
+Footprints are documents that contain the pin assignment and shape and size of every part. These need to be linked to the schematic symbols through the database for each part or it will not show up when you create the PCB document. 
 
-To add a footprint, go to the 'PCB Library' tab, then select 'Add'. This will add a new footprint that you can now edit. Double click the entry and rename the footprint. However, it is usually easier to go to an already existing footprint and make a copy. For more complex parts, sometimes the manufacturer will actually have a part footprint available on their website. There are also websites where you can download footprint and schematic symbols such as https://www.snapeda.com/ and https://www.ultralibrarian.com/. It is recommended to double check dimensions when using these websites to make sure that they match the information in the parts datasheet. 
+To add a footprint, go to the 'PCB Library' tab, then select 'Add'. This will add a new footprint that you can now edit. Double click the entry and rename the footprint. However, it is usually easier to go to an already existing footprint and make a copy. For more complex parts, sometimes the manufacturer will actually have a part footprint available on their website. There are also websites where you can download footprint and schematic symbols such as https://www.snapeda.com/ and https://www.ultralibrarian.com/. It is recommended to double check dimensions when using these websites to make sure that they match the information in the parts data sheet. 
 
 Now you can add pads or pins to the footprint, depending on if the part is surface mount or through-hole mount, respectively. In the properties tab, you can change the pad dimensions and which layer it is on. With surface mount parts, the pads are usually on the top layer.
 

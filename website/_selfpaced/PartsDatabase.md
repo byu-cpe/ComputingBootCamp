@@ -17,7 +17,7 @@ Database parts are like global variables. **DO NOT modify a part in the Database
 
 ******************************************************************************************************************************************************************************
 
-When adding parts to the Database, don't worry if similar parts do not have CCL part numbers near each other. You can search for any part by component value (or anything else, but usually the value is what we are most insterested in, at least for resistors and capacitors) in the search box in the Components panel in Altium.
+When adding parts to the Database, don't worry if similar parts do not have CCL part numbers near each other. You can search for any part by component value (or anything else, but usually the value is what we are most interested in, at least for resistors and capacitors) in the search box in the Components panel in Altium.
 
 ## How to use the Database
 
@@ -26,13 +26,15 @@ The Parts Database is in the Altium_PCB GitHub repository. Once you have cloned 
   - Click on the menu icon (three horizontal lines to the right of the list of components that are currently available to use).
   - Click "File-based Libraries Preferences." This will open a new window.
   - In the new window, click "Install..."
-  - Navigate to the Database. You will find it in the Altium_PCB GitHub repository in PartsDatabase -> Database. The file type is "Altium Library Database file." Choose the file by double-clicking it or by highlighting it and clicking "Open." This will add the Database to the Installed Libraries list. The Activated check box next to it should be checked.
+  - Navigate to the Database. You will find it in the Altium_PCB GitHub repository in PartsDatabase -> Database. The file type is "Altium Library Database file." You may have to change the default extension to  .Dblib in order to see the Database. Choose the file by double-clicking it or by highlighting it and clicking "Open." This will add the Database to the Installed Libraries list. The Activated check box next to it should be checked.
   - Note: Altium may give you an error if you do not have a 64-bit access database engine installed. See "Other things to know about the database" below.
   - Click "Close." The folders in the Database will now appear in the list of components to choose from in the Components panel. You can select a folder, search for a part, and drag it onto your schematic.
 
 ## How to add parts to the Database
 
-To add a part to the Database, you will need the part's specifications (usually available on [Digi-Key](https://www.digikey.com), schematic symbol (see howto -> pcb -> altium -> Schematic Libraries on BYU CCL Wiki), and footprint (see howto -> pcb -> altium -> Adding parts -> Adding a footprint on BYU CCL Wiki). You will also need to make sure that you have access to the Database (See howto -> pcb -> github on BYU CCL Wiki).
+To add a part to the Database, you will need the part's specifications (usually available on [Digi-Key](https://www.digikey.com), schematic symbol, and footprint. You will also need to make sure that you have access to the Database.
+
+One way to get the schematic symbol and footprint of a part after you have found one on Digi-Key is to search for the part in Altium under the Manufacturer Part Search panel. You can typically download the schematic symbol and footprint directly from there. Then, do the following to add that new part to the database:
 
   - Open the Microsoft Access file.  It is found in the Altium_PCB GitHub repository. Altium_PCB -> PartsDatabase -> Database -> Altium_Database (If there are two files named Altium_Database, click on the larger one, not the 1kB one)
   - Double-click on the sheet for the type of part you are adding on the left side of the Access file.

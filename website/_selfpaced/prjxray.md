@@ -55,11 +55,11 @@ After adding the alias to your .bashrc file, kill your terminal and open a new o
 
 To deactivate your virtual environment, type `deactivate` into the terminal and "(env)" will disappear, returning your terminal to normal.
 
-To learn more about Python virtual enviroments, click [here](https://byu-cpe.github.io/ComputingBootCamp/tutorials/pythonEnvs/).
+To learn more about Python virtual environments, click [here](https://byu-cpe.github.io/ComputingBootCamp/tutorials/pythonEnvs/).
 
 ## Lecture
 
-On June 2, 2021, we had a lecture from Professor Nelson about Project X-Ray and [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/). The video is embeddded below.
+On June 2, 2021, we had a lecture from Professor Nelson about Project X-Ray and [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/). The video is embedded below.
 
 <iframe width="800" height="600"
 src="https://www.youtube.com/embed/6HGN8pQn_jA">
@@ -67,7 +67,7 @@ src="https://www.youtube.com/embed/6HGN8pQn_jA">
 
 ## Follow-Up Activities
 
-Project X-Ray includes many tools, which is where you'll find out more about its capabilites. See the [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/), [bit2fasm](https://byu-cpe.github.io/ComputingBootCamp/tutorials/bit2fasm/), and [fasm2bels](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm2bels/) modules to learn more. 
+Project X-Ray includes many tools, which is where you'll find out more about its capabilities. See the [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/), [bit2fasm](https://byu-cpe.github.io/ComputingBootCamp/tutorials/bit2fasm/), and [fasm2bels](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm2bels/) modules to learn more. 
 
 Below are some activities associated with the fuzzers.
 

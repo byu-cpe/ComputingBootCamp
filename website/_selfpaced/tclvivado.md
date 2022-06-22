@@ -80,10 +80,10 @@ Create an 'analyze_design' script in Tcl.
    1. Any of its cell properties that have different values from the default values for such a cell.  This one can be a bit tricky to figure out - search the web for some ideas or create your own.  If this turns out to be too hard, just print out all the properties.
    1. A list of the cell's pins along with the name (or other identifying information) of the net (wire) attached to that pin.
 1. For each net in the logical design, print out information about it:
-  1. Its name, type, etc.
-  1. A listing of the pins on cells that it is connected to.
-  1. If it is routed then print out a listing of the pins on sites or cells it is connected to.  For each such connected pin, print out enough identifying information so it is obvious where that can be located.
-  1. If it is routed then print out a listing of the wires/nodes and PIPs making up its route.  For each such wire/node and PIP print out enough identifying information so it is obvious where they are located.  This last one will require you figure out what a PIP is.  
+   1. Its name, type, etc.
+   1. A listing of the pins on cells that it is connected to.
+   1. If it is routed then print out a listing of the pins on sites or cells it is connected to.  For each such connected pin, print out enough identifying information so it is obvious where that can be located.
+   1. If it is routed then print out a listing of the wires/nodes and PIPs making up its route.  For each such wire/node and PIP print out enough identifying information so it is obvious where they are located.  This last one will require you figure out what a PIP is.  
 
 In short, from the above info you print out one should be able to re-create the entire design from cells and nets to placement and routing (but you do not need to do the re-creation).
 
