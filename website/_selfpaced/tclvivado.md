@@ -26,7 +26,7 @@ To begin with, let's review what you already know about using Vivado in GUI mode
   * Open it (or create a new project if needed)
   * Modify it
   * Simulate it using the built-in simulator
-    * Figure out how to add just the signals you care about to the waveform display.  There is a tutorial [here from BYU's ECEn 323](http://ecen323wiki.groups.et.byu.net/dokuwiki/doku.php?id=tutorials:simulation_tutorials) which may help in the next few steps.
+    * Figure out how to add just the signals you care about to the waveform display.  There is a tutorial [here from BYU's ECEn 323](http://ecen323wiki.groups.et.byu.net/tutorials/simulation_tutorials/) which may help in the next few steps.
     * Figure out how to add dividers between groups of signals in the waveform display
     * Figure out how to change the radix used to display the values of multi-bit signals
     * Figure out how to jump to the next signal transition for a selected signal in the waveform display

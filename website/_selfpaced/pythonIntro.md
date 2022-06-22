@@ -68,7 +68,7 @@ optional arguments:
 
 To build a command line tool, you will need to use [`argparse`](https://docs.python.org/3/library/argparse.html) or something similar. Your utility should work with any well formatted CSV file, but here is some example data to get you started: [small]({% link media/example_data.csv %}) and [large]({% link media/example_data_big.csv %}).
 
-If you are already familiar with Python, increase the difficulty by allowing a URL to be passed in instead of a file. Your utility will download the CSV file and then parse it. The third-party library [`requests`](https://requests.readthedocs.io/en/master/) will be useful  for this.
+If you are already familiar with Python, increase the difficulty by allowing a URL to be passed in instead of a file. Your utility will download the CSV file and then parse it. The third-party library [`requests`](https://requests.readthedocs.io/en/latest/) will be useful  for this.
 
 <!-- [`requests`](https://docs.python-requests.org/en/master/) link currently broken, add back later if it gets fixed -->
 
