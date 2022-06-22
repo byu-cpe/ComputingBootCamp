@@ -57,6 +57,7 @@ Below are some other helpful resources for beginners to Matlab:
   - <a href="http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf" target="_blank">Introduction to Matlab</a>
   - <a href="http://www.cs.cmu.edu/~tom/10601_fall2012/recitations/matlab_quickref.pdf" target="_blank">MATLAB Quick Reference</a>
 
+{% include quizzes.html id=31 %}
 
 ## Basic plotting
 
