@@ -6,7 +6,8 @@ slug: vscode
 type: development
 order: 3
 ---
-
+## Overview 
+VS Code is an editor that has risen in popularity in recent years. The 2021 stackoverflow developer survey reported that around 70% of respondants use VS code (see survey results [here](https://insights.stackoverflow.com/survey/2021#most-popular-technologies-new-collab-tools)). VS code is a versitile text editor with a vast array of extensions that allow easy coding in many different languages. VS code does not have any inbuilt compiling tools however it can easily interact with those that you have installed. VS Code can be configured to run python scripts and compile C code but requires the needed programs to be installed for it to do so (python or GCC or similar). With the proper use, VS code can be an efficient tool as you work on many projects. 
 
 
 ## Installation
@@ -29,6 +30,8 @@ Alternatively you can open entire directories in VS Code:
 ``` 
 code <path_to_dir>
 ```
+
+Alternatively you can open the program using the GUI and then choose a folder or file to open.
 
 ## Tutorial
 
@@ -130,6 +133,8 @@ There are a multude of extensions for VS Code. Which to install will depend both
 * [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
   * Allows easy integration with Docker
 
+
+<!---
 ## Faculty Brainstorming 
   To be added...   There is a lecture on this topic, we should schedule this to be just after that lecture.
 
@@ -147,3 +152,4 @@ Others might just be a mention of some feature in the spirit of: "did you even k
 - Writing your own keyboard macros.  Students likely don't need this, it is for me!  I have figured it out twice now and then forget how to do it by the next time I try next :-)
 
 What else?
+--->
