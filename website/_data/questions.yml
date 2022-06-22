@@ -3,6 +3,9 @@
 # When making a new question, use the above id number and then 
 # increment it.
 
+# copy and paste the following within your page, substituting your id
+# {% include quizzes.html id=1 %}
+
 # --------------------------- Activites for quizzes.md --------------------------- 
 - id: 1 # A unique identifier used to embed the question
   type: multiple_choice
@@ -36,9 +39,19 @@
     - text: _____, strong, and true
       correct: loyal
 
+#- id: 4
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 5
+#  prompt: 
+#  type:
+#  responses:
+
 
 # --------------------------- Activites for linux.md ---------------------------
-- id: 4
+- id: 6
   prompt: Match each linux command with its function.
   type: matching
   responses:
@@ -51,7 +64,7 @@
     - text: cat
       correct: display file contents
 
-- id: 13
+- id: 7
   prompt: Help Alice copy a file off of the BYU caedm servers!
   type: fill_in
   responses:
@@ -62,7 +75,7 @@
             _______________________________________________________________
       correct: scp alice123@ssh.et.byu.edu:Documents/textfile1.txt ~/Downloads
 
-- id: 5
+- id: 8
   prompt: Use the manual pages in a terminal session to find the function of each option.
   type: matching
   responses:
@@ -73,8 +86,18 @@
     - text: rm -i
       correct: prompt
 
+#- id: 9
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 10
+#  prompt:
+#  type:
+#  responses:
+
 # --------------------------- Activites for make.md ---------------------------
-- id: 6
+- id: 11
   prompt: Match the automatic variable with its value
   help: See https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html for help
   type: matching
@@ -88,7 +111,7 @@
     - text: $@
       correct: The target of the rule
 
-- id: 7
+- id: 12
   type: multiple_choice
   prompt: What is the target of the first rule?
   responses: 
@@ -98,7 +121,7 @@
     - text: calc
       correct: true
 
-- id: 8
+- id: 13
   prompt: Which of the following is a Makefile function that takes the .cpp files in a variable called CPP, changes the endings to .h, and saves them in a variable called HEADERS?
   type: multiple_choice
   responses:
@@ -108,8 +131,18 @@
       correct: true
     - text: CPP=$(HEADERS:.h=.cpp)
 
+#- id: 14
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 15
+#  prompt:
+#  type:
+#  responses:
+
 # --------------------------- Activites for git.md ---------------------------
-- id: 9
+- id: 16
   prompt: Match the git log feature on the left with its corresponding functionality on the right
   type: matching
   help: Use git log --help
@@ -127,8 +160,28 @@
     - text: --grep=(pattern)
       correct: Limit the commits output to ones with log message that matches the specified pattern (regular expression)
 
+#- id: 17
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 18
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 19
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 20
+#  prompt:
+#  type:
+#  responses:
+
 # --------------------------- Activites for github.md ---------------------------
-- id: 10
+- id: 21
   prompt: Match the GitHub feature on the left to its functionality on the right
   type: matching
   responses:
@@ -147,8 +200,28 @@
     - text: Insights
       correct: An application that provides data about your repository, including traffic, number of pull request and issues, contributors, and more
 
+#- id: 22
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 23
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 24
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 25
+#  prompt:
+#  type:
+#  responses:
+
 # --------------------------- Activites for pythonIntro.md --------------------------- 
-- id: 11
+- id: 26
   prompt: Which of the following statements in Python is equivalent to 1776?
   type: multiple_choice
   responses:
@@ -158,7 +231,7 @@
     - text: '1_776'
       correct: true
 
-- id: 12
+- id: 27
   prompt: "What is the output of the following statements: lst = ['My', 'name', 'is', 'Python'] and lst[-2]?"
   type: multiple_choice
   responses:
@@ -169,8 +242,23 @@
     - text: 'name'
     - text: "SyntaxError: invalid syntax"
 
-# --------------------------- Activites for pythonIntro.md --------------------------- 
-- id: 14
+#- id: 28
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 29
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 30
+#  prompt:
+#  type:
+#  responses:
+
+# --------------------------- Activites for matlab_intro.md --------------------------- 
+- id: 31
   prompt: What is the primary difference between a function and script?
   type: multiple_choice
   responses:
@@ -178,3 +266,23 @@
     - text: "A function requires user input and can return a specific value while a script is a compilation of commands"
       correct: true
     - text: "A script requires user input and can return a specific value while a function is a compilation of commands"
+
+#- id: 32
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 33
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 34
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 35
+#  prompt:
+#  type:
+#  responses:

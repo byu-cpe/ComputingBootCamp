@@ -39,9 +39,9 @@ On May 10th and 12th of 2021 we had an introduction to Python by Prof Lundrigan.
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/sq0_nicEFH8"> </iframe> 
 
 
-{% include quizzes.html id=11 %}
+{% include quizzes.html id=26 %}
 
-{% include quizzes.html id=12 %}
+{% include quizzes.html id=27 %}
 
 ## Resources
 For those who have not used Python before, there is a tutorial put out by python.org that is very helpful and gives a great introduction to the language. It is also a great tool for those who are familiar with Python already because it goes deeply into a lot of the available data structures and other aspects of the language. This tutorial is for Python3.10.4, which is the newest version out right now, but you can choose most of the previous versions on the drop-down menu that appears on the tutorial. The link to it is [here](https://docs.python.org/3.10/tutorial/index.html).

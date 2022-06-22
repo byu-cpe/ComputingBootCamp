@@ -41,7 +41,7 @@ Everything in Linux can be (and usually is) run by shell scripts and commands so
 ### Linux Tutorial 
 **<ins>You must to read through and complete all steps of this tutorial</ins>**: <https://ryanstutorials.net/linuxtutorial>.  Even if you are already familiar with Linux and the command line, please read through the different topics and bring yourself up to speed on any you aren't familiar with.
 
-{% include quizzes.html id=4 %}
+{% include quizzes.html id=6 %}
 
 ### Linux Resources (please add to this as you find good stuff)
 Here are some Linux tutorials that may be helpful:
@@ -101,7 +101,7 @@ Copy files to and from a remote machine as in:
 
 This is how you move files between machines.
 
-{% include quizzes.html id=13 %}
+{% include quizzes.html id=7 %}
 
 ### SSH Keys
 Instead of having to authenticate with a password each time you connect to a remote machine, you can set up an SSH key to do automatic authentication.  [This tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1804) explains how to set this up in a variety of ways.
@@ -135,7 +135,7 @@ Host myDesktop
     IdentityFile ~/.ssh/privateKeyName
 ```
 
-{% include quizzes.html id=5 %}
+{% include quizzes.html id=8 %}
 
 <!-- # Faculty Notes
 - Writing shell scripts (especially if they take parameters)

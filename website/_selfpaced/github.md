@@ -23,7 +23,7 @@ Here are a few ideas for follow-up activities:
 
 - Start a new repo on GitHub and explore the features
 
-{% include quizzes.html id=10 %}
+{% include quizzes.html id=21 %}
 
 - Fork an interesting repo
 - Submit a pull request to an open-source project
