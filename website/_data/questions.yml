@@ -225,7 +225,7 @@
   prompt: Which of the following statements in Python is equivalent to 1776?
   type: multiple_choice
   responses:
-    - text: 1,776
+    - text: '1,776'
     - text: '1.776'
     - text: 1-776
     - text: '1_776'
