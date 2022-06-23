@@ -225,9 +225,9 @@
   prompt: Which of the following statements in Python is equivalent to 1776?
   type: multiple_choice
   responses:
-    - text: "1,776"
+    - text: 1,776
     - text: '1.776'
-    - text: '1-776'
+    - text: 1-776
     - text: '1_776'
       correct: true
 
@@ -235,27 +235,39 @@
   prompt: "What is the output of the following statements: lst = ['My', 'name', 'is', 'Python'] and lst[-2]?"
   type: multiple_choice
   responses:
-    - text: 'is'
+    - text: is
       correct: true
     - text: "IndexError: list index out of range"
-    - text: 'Python'
-    - text: 'name'
+    - text: Python
+    - text: name
     - text: "SyntaxError: invalid syntax"
 
-#- id: 28
-#  prompt:
-#  type:
-#  responses:
+- id: 28
+  prompt: "In C and C++, we type #include to add code from header files to our current file."
+  type: fill_in
+  responses:
+    - text: In Python, however, we just type ______ to include other files or modules in our program.
+      correct: import
 
-#- id: 29
-#  prompt:
-#  type:
-#  responses:
+- id: 29
+  prompt: What does this statement do? import numpy as np
+  type: multiple_choice
+  responses:
+    - text: Imports only the "np" part of numpy
+    - text: Nothing. This is only used as filler code. Everyone puts it in their files for no reason
+    - text: Imports the numpy module and sets "np" as an alias for the user to use in place of "numpy" for convenience
+      correct: true
+    - text: The "as np" portion of the statement is a flag that tells Python not to raise an error if there is a problem importing numpy
 
-#- id: 30
-#  prompt:
-#  type:
-#  responses:
+- id: 30
+  prompt: How does the Python interpreter react to this statement? lst = [5, 8.1, 'Python', True]
+  type: multiple_choice
+  responses:
+    - text: It will throw a syntax error and quit
+    - text: It will set all elements to the type and value of the first element
+    - text: It will set lst to contain just the first two elements since they are the only numbers in the list
+    - text: It won't freak out since this is a valid list
+      correct: true
 
 # --------------------------- Activites for matlab_intro.md --------------------------- 
 - id: 31
