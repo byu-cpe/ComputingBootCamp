@@ -90,4 +90,14 @@ There are hundreds of printed tutorials on the web, find some and read them.  He
 - [Learning Git Branching](https://learngitbranching.js.org/?locale=en_US)
 - [Git Cheat Sheet](https://github.com/JakeEdvenson/ComputingBootCamp/files/8577687/git-cheat-sheet-education.pdf)
 
+## Certify Your Skills
+<a href="https://badgr.com/public/badges/VfiBaNJFSdCiSti946bVCA"><img src="https://api.badgr.io/public/badges/VfiBaNJFSdCiSti946bVCA/image?imageVersion=1" alt="Git Badge" width="250"/></a>
 
+For those who believe they have mastered Git, we present the Git badge! This badge can be viewed in its entirety on Badgr.com here: [Git Badge](https://badgr.com/public/badges/VfiBaNJFSdCiSti946bVCA). The Git badge can be used to prove your Git knowledge to potential employers, educational institutions, or anyone else! To earn it, you'll have to complete the Git test and use your knowledge to perform Git commands for various situations. Attempt the Git test and earn the Git badge with the button below!
+
+<div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/gitTest'">
+    <p class="activity-label h3-clone">EARN THE GIT BADGE</p>
+    <p class="dropdown-arrow h3-clone">&#9654;</p>
+</div>
+
+Good luck to those who attempt the test, and if you pass, congratulations! You are now certified in Git by the BYU Computing Boot Camp.
