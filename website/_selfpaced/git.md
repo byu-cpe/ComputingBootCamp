@@ -24,6 +24,22 @@ On May 6, 2020 we had a Zoom-based Git Tutorial by Prof Nelson.  The video is em
 src="https://www.youtube.com/embed/sh_YkYK5p0o">
 </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=0s) Introduction to Git<br>
+[3:03](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=183s) Initializing a Git repository<br>
+[4:10](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=250s) Checking the status of your repository<br>
+[4:40](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=280s) Adding files to your repository<br>
+[5:38](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=338s) .gitignore files<br>
+[8:05](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=485s) .gitconfig files<br>
+[9:20](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=560s) Committing changes<br>
+[14:32](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=872s) Going back to previous commits<br>
+[18:36](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1116s) Using "git diff"<br>
+[22:00](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1320s) Branching<br>
+[27:15](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1635s) Merging<br>
+[30:07](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1807s) Cloning repositories<br>
+[32:09](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1929s) Group usage of Git with GitHub
+
 ## Follow-Up Activities
 
 Git is one of those things that you can only read so much about until you really start using it for a project, which is when you will get good with it.  Thus, it probably merits only a few hours’ work to get familiar with it.  
