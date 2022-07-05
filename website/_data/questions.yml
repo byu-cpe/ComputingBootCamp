@@ -298,3 +298,61 @@
 #  prompt:
 #  type:
 #  responses:
+
+# --------------------------- Activities for 13_cmake.md ---------------------------------
+- id: 114
+  prompt: Which of the following functions in CMake is essential for compiling and executing a program?
+  type: multiple_choice
+  responses:
+    - text: "cmake_minimum_required()"
+    - text: "project()"
+    - text: "add_executable()"
+      correct: true
+
+- id: 115
+  prompt: CMake's loop and control flow blocks have similar scopes compared to C-based languages.
+  type: multiple_choice
+  responses:
+    - text: "true"
+    - text: "false"
+      correct: true
+
+- id: 116
+  prompt: Match CMake's keywords with their description used for target_include_directories and target_link_libraries.
+  type: matching
+  responses:
+    - text: PUBLIC
+      correct: Used for the current target and other targets that have dependencies on the current target.
+    - text: PRIVATE
+      correct: Used for the current target.
+    - text: INTERFACE
+      correct: Used for other targets that have dependencies on the current target.  
+
+- id: 117
+  prompt: Fill in the blanks using static or shared
+  type: fill_in
+  responses:
+    - text: The code in a ______ library is referenced by programs using it at run-time.
+      correct: shared
+    - text: The code in a ______ library is linked into the program at compile time.
+      correct: static
+
+- id: 118
+  prompt: Match CMake's functions with their description
+  type: matching
+  responses:
+    - text: project()
+      correct: Sets the name of the project, and stores it in the variable PROJECT_NAME.
+    - text: add_library()
+      correct: Adds a library target called <name> to be built from the source files listed in the command invocation.
+    - text: add_executable()
+      correct: Adds an executable target called <name> to be built from the source files listed in the command invocation.
+    - text: target_include_directories()
+      correct: Specifies include directories to use when compiling a given target.  
+    - text: target_link_libraries()
+      correct: Specifies libraries or flags to use when linking a given target and/or its dependents.  
+    - text: target_link_directories()
+      correct: Specifies the paths in which the linker should search for libraries when linking a given target.  
+    - text: target_compile_features()
+      correct: Specifies compiler features required when compiling a given target.          
+    
