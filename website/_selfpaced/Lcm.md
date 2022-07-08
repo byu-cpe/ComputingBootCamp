@@ -28,7 +28,10 @@ src="https://www.youtube.com/embed/sh_YkYK5p0o">
 
 ## Downloading 
 
-Clone the most recent release from the lcm repository here: <https://github.com/lcm-proj/lcm/releases>.
+The FRoSt Lab has forked and modified the source code of LCM, allowing us to correct a few old methods used in their installation. 
+In particular this has allowed us to more reliably install LCM with python. 
+
+Please clone the master branch of the repository found at <https://bitbucket.org/frostlab/lcm/src/master/>.
 If you are uncertain where to put the repo, generally I just clone it into my home directory.
 
 Alternate methods for downloading LCM exist, but those will not be covered in this guide.
@@ -58,63 +61,62 @@ To install all of the above:
 Some optional prerequisites for LCM can be found on the build instructions webpage, but they are not necessary for basic LCM operations and compatibility with the C and C++ programming languages.
 Should you encounter any problems using LCM with another language, please refer to the [full build instructions](https://lcm-proj.github.io/build_instructions.html) to find those optional prerequisites.
 
-==== Notes on CMake ====
+#### Notes on CMake
 
-There are multiple ways to install CMake, with each method providing slightly different versions. For our purposes installing through apt, as is done above, should be sufficient. 
-However, installing it through apt usually does not get you access to the newest version of CMake, so if for some reason you need a newer version, the full list of installation methods are:
-* Through apt, the system package manager ( <syntaxhighlight lang="bash" inline> sudo apt install cmake </syntaxhighlight> )
-* Through pip, the python package manager ( <syntaxhighlight lang="bash" inline> pip install cmake </syntaxhighlight> )
-* Through cloning the source code for CMake (Visit https://gitlab.kitware.com/cmake/cmake and follow the instructions in their README file)
+There are multiple ways to install CMake, with each method providing slightly different versions. For our purposes installing through apt, as is done above, should be sufficient. However, installing it through apt usually does not get you access to the newest version of CMake, so if for some reason you need a newer version, the full list of installation methods are:
+* Through apt, the system package manager (```sudo apt install cmake```)
+* Through pip, the python package manager (```pip install cmake ```)
+* Through cloning the source code for CMake (Visit <https://gitlab.kitware.com/cmake/cmake> and follow the instructions in their README file)
 
-As previously mentioned, apt should be new enough, but pip grants a newer version than apt, and cloning the source code will provide you with the newest possible version of CMake.
+As previously mentioned, apt should be new enough, but pip grants a newer version than apt, and cloning the source code will provide you with the newest possible version of CMake. For more information on CMake, see the [CMake page](https://byu-cpe.github.io/ComputingBootCamp/tutorials/cmake/) on the BYU Computing Boot Camp.
 
-=== Building LCM ===
+### Building LCM
 
 On Ubuntu, the steps to build LCM are as follows:
 * Navigate to the lcm directory within a terminal
-* Run <syntaxhighlight lang="bash" inline> mkdir build </syntaxhighlight>
-* Run <syntaxhighlight lang="bash" inline> cd build </syntaxhighlight>
-* Run <syntaxhighlight lang="bash" inline> cmake .. </syntaxhighlight>
-* Run <syntaxhighlight lang="bash" inline> make </syntaxhighlight>
-* Run <syntaxhighlight lang="bash" inline> sudo make install </syntaxhighlight>
+* Run ```mkdir build``` 
+* Run ```cd build``` 
+* Run ```cmake ..``` 
+* Run ```make``` 
+* Run ```sudo make install``` 
 
-Our lab has also added a command to build the python portion of LCM:
-* Run <syntaxhighlight lang="bash" inline> make python-install </syntaxhighlight>
+The FRoSt Lab fork of LCM has also added a command to build the python portion of LCM:
+* Run ```make python-install```
 ** Did you get an error after running the above?
-*** Note that this will not work if your system only has python 2. If you get an error that mentions "No module named 'setuptools'" Please use conda and python3 and if conda is not already activated by default then run <syntaxhighlight lang="bash" inline> conda config --set auto_activate_base true </syntaxhighlight>, restart your terminal, remove the build folder from LCM and all of it's contents, and start over with the build steps. This time when you get to the python-install step it should run successfully.
+*** Note that this will not work if your system only has python 2. If you get an error that mentions "No module named 'setuptools'" Please use conda and python3 and if conda is not already activated by default then run  ```conda config --set auto_activate_base true```, restart your terminal, remove the build folder from LCM and all of it's contents, and start over with the build steps. This time when you get to the python-install step it should run successfully.
 *** Alternatively, if you receive an error message mentioning not having permissions to edit specific file locations, run the command with sudo privileges.
 
-Note that for each python environment that you would like to have LCM installed on, you will need to repeat all of the above steps. If you have already installed it once, then in your base lcm folder remove the build folder with <syntaxhighlight lang="bash" inline> rm -rf build </syntaxhighlight> to recursively delete everything inside and including the build folder. Then you can start on the first step of building LCM above and run through all of the steps again, ensuring that your python environment of choice is active.
+Note that for each python environment that you would like to have LCM installed on, you will need to repeat all of the above steps. If you have already installed it once, then in your base lcm folder remove the build folder with ```rm -rf build``` to recursively delete everything inside and including the build folder. Then you can start on the first step of building LCM above and run through all of the steps again, ensuring that your python environment of choice is active.
 
 Now you should have LCM built and installed on your system!
 
-=== LCM Python Package ===
+### LCM Python Package
 
-If you will be using LCM with python, while you can still follow the instructions above and install it for python after installing it to your system, alternatively you can install it for your python environment with 
-<syntaxhighlight lang="bash"> pip install lcm </syntaxhighlight>
+If you will be using LCM with python, while you can still follow the instructions above and install it for python after installing it to your system, alternatively you can install it for your python environment with: 
+```pip install lcm``` 
 
-The site for the pip version can be found at https://pypi.org/project/lcm/
+The site for the pip version can be found at <https://pypi.org/project/lcm/>.
 
-== Using LCM ==
+## Using LCM
 
 At this point you should have LCM installed on your system. 
-To now learn about how to use LCM, feel free to refer to their tutorials, which are found at https://lcm-proj.github.io/tutorial_general.html.
+To now learn about how to use LCM, feel free to refer to their tutorials, which are found at <https://lcm-proj.github.io/tutorial_general.html>.
 
 Some of the same material will be covered in the sections that follow in this tutorial, but we hope to make things slightly clearer and easier to follow.
 Additional material will also be provided here that is not easily found in their tutorials.
 Lastly, it is worth noting that all of the material here is focused on using LCM with C++.
 The steps for different languages are very similar, but the syntax may vary, so please refer to the LCM documentation and their tutorials for usage with other languages.
 
-=== Defining Messages ===
+### Defining Messages
 
 Message definitions are language independent for LCM, but are crucial for being able to subsequently publish and receive those messages using other programming languages.
 
 The first step to define new messages and types is to create a file with the .lcm file extension.
-Inside of our new file we must then define a package name, so the first line of the file should be <syntaxhighlight lang="text" inline> package [your package name here]; </syntaxhighlight>, noting that the semicolon is necessary at the end of the line.
+Inside of our new file we must then define a package name, so the first line of the file should be ```package [your package name here];```, noting that the semicolon is necessary at the end of the line.
 
 Following the package definition is where you can then define any messages that you choose.
-All messages should be of the format
-<syntaxhighlight lang="text">
+All messages should be of the format:
+```
 struct [message name]
 {
     [type1] [variable1];
@@ -122,15 +124,15 @@ struct [message name]
     ...
     [typeN] [variableN];
 }
-</syntaxhighlight>
+```
 
 Where the message names and variable names can be of your specification, while the types must be one of a preset list of accepted types by LCM. 
-Those type specifications can be found at https://lcm-proj.github.io/type_specification.html
+Those type specifications can be found at <https://lcm-proj.github.io/type_specification.html>.
 
 For my example I am going to be setting up two messages, one that contains information about an item (the name, cost, and whether or not that item is in stock), and another message that is used to provide a report of a list of items, including information like the time stamp, number of items in the status report, and then the list of all of those items.
 
-To do this I created the following file
-<syntaxhighlight lang="text">
+To do this I created the following file:
+```
 // Comments are identical to the c++ format, so any line preceded by // is a comment
 // The filename that I chose for this file is example_def.lcm
 
@@ -149,7 +151,7 @@ struct status
     int16_t item_count;
     item items[item_count];
 }
-</syntaxhighlight>
+```
 
 So in this file I have created a package with the name of example_pkg, in which I have defined two message types: item and status. 
 The first message contains all of the fields that I will need to store the data for one item, while the second one contains an array of item types as a means of storing a status report.
@@ -157,21 +159,21 @@ The first message contains all of the fields that I will need to store the data 
 At this point, I now need to generate the code that will allow my c++ program (which we have not yet written) to use these message definitions.
 
 LCM provides many different terminal commands, most of which will be covered later, but we do need one of them in order to generate the code to allow my messages to be used in a c++ program. 
-In a terminal that is in the directory of your .lcm file, run 
-<syntaxhighlight lang="bash"> lcm-gen -x [filename].lcm </syntaxhighlight>
+In a terminal that is in the directory of your .lcm file, run: 
+```lcm-gen -x [filename].lcm```
 This will generate code from your .lcm file in c++ that defines your messages and allows them to be included and used in your program.
 The -x parameter is what specifies that the code should be generated for c++. 
 An important note is that if you have some of your messages using other messages defined in the same package (as is the case in the example file provided above), you will need to use a slightly modified command
-<syntaxhighlight lang="bash"> lcm-gen -x --cpp-include .. [filename].lcm </syntaxhighlight>
+```lcm-gen -x --cpp-include .. [filename].lcm```
 which will allow for your messages to include one another properly.
-A number of other parameters can be used for other languages, all of which can be found at https://lcm-proj.github.io/tut_lcmgen.html.
+A number of other parameters can be used for other languages, all of which can be found at <https://lcm-proj.github.io/tut_lcmgen.html>.
 
 The lcm-gen command should now have created a folder that uses the package name specified in your .lcm file, and inside of that folder you should see one or more .hpp files (one .hpp file will be generated for each message you defined).
 So after running lcm-gen I now have a folder called 'example_pkg' with two files inside, namely, 'item.hpp' and 'status.hpp'.
 
 We now have defined our messages and are ready to move on to the next step, incorporating those messages in a program that will publish data using them.
 
-=== Sending Messages ===
+### Sending Messages
 
 In order to send a message, we first need to fill it with some kind of useful information.
 This is now where the programming language of your choice comes in. 
@@ -179,7 +181,7 @@ For each language the process is ever so slightly different, but the principles 
 We need to: Include the message definitions, create an object of that type in our code, fill it with the desired information, and then publish it over the network using built in functions from LCM.
 
 Following is the file that I created for publishing simple messages that use the item and status types that I defined in the previous section.
-<syntaxhighlight lang="cpp">
+````
 #include <lcm/lcm-cpp.hpp>
 #include "example_pkg/item.hpp"
 #include "example_pkg/status.hpp"
@@ -235,7 +237,7 @@ int main(int argc, char** argv)
     }
     return 0;
 }
-</syntaxhighlight>
+```
 
 In the file I have:
 * Included the main LCM package
@@ -258,13 +260,13 @@ On the other hand, if you overfill the array (eg. if the message specifies an ar
 
 Ultimately, you can have any number of scripts running simultaneously and publishing on either the same, or different, channels.
 
-=== Receiving Messages ===
+### Receiving Messages
 
 Receiving messages isn't quite as straightforward as sending them. 
 Once again, you'll need a file that includes the base LCM library, as well as any messages that will be used in the script.
 
 The file that I created for my example is below
-<syntaxhighlight lang="cpp">
+```
 #include <lcm/lcm-cpp.hpp>
 #include "example_pkg/item.hpp"
 #include "example_pkg/status.hpp"
@@ -333,7 +335,7 @@ int main(int argc, char** argv)
     while(0 == lcm.handle());
     return 0;
 }
-</syntaxhighlight>
+```
 
 In the above you'll see that the main function is pretty simple. 
 We initialize an LCM object, subscribe to the appropriate channels (knowing the channel name is necessary to receive the messages properly), and then have an infinite loop that will handle the processing of any received messages per the definitions found in the Handler class.
@@ -341,7 +343,7 @@ We initialize an LCM object, subscribe to the appropriate channels (knowing the 
 The handler class is where things get a bit more structured and slightly more difficult to follow. 
 In order to subscribe to a channel a handler class must also exist that defines the function(s) that should be called whenever a message is received. 
 The simplest format for a handler class would be
-<syntaxhighlight lang="cpp">
+```
 class Handler
 {
     public:
@@ -351,7 +353,8 @@ class Handler
             // Insert whatever code you would then like to use to process the message here
         }
 }
-</syntaxhighlight>
+```
+
 In the code above, the parameters of the handler function must be kept as is, with the exception of inserting your package and message name in the [pkg] and [msg] fields. 
 
 You are welcome to include as many handler functions as you would like, with each one handling a different type of message, or even messages from a different package. 
@@ -363,7 +366,7 @@ In other words, if you call the handle() function and aren't sending any message
 An alternative to the handle() function is the handleTimeout() function, which has one parameter, the number of milliseconds that can pass before the function will timeout, which can be used to prevent the function from indefinitely blocking your code. 
 Another alternative is to introduce threading into your script and have one thread dedicated to listening for LCM messages, and the other thread executing the rest of your code, though this does introduce some additional complexity for the programmer.
 
-For the documentation on the LCM class functions, like handle() and handleTimeout(), please visit https://lcm-proj.github.io/classlcm_1_1LCM.html#aac221c0fa80ede30a2383fba612f972e.
+For the documentation on the LCM class functions, like handle() and handleTimeout(), please visit <https://lcm-proj.github.io/classlcm_1_1LCM.html#aac221c0fa80ede30a2383fba612f972e>.
 
 Lastly, just as in the publishing section, you can have as many scripts running as you would like that interact with the same channels.
 
@@ -376,10 +379,10 @@ Just to complicate matters more, we will have two sets of stereo cameras, one on
 Both sets of cameras could be publishing their data on the "STEREO_CAM" channel and everything that is subscribed to that channel would receive images from the front and back of the vehicle.
 Ultimately it wouldn't be a good idea to have both of those camera sets using the same channel, but it serves to describe what you can do with LCM.
 
-=== CMake and LCM ===
+### CMake and LCM
 
-For the example code that I have provided in the previous sections, I used the following CMake file to generate the executables for both the publishing and receiving scripts
-<syntaxhighlight lang="text">
+For the example code that I have provided in the previous sections, I used the following CMake file to generate the executables for both the publishing and receiving scripts:
+```
 # Always must specify the minimum version of CMake that is required, in this case I used version 3.16, so I specified 3.16
 cmake_minimum_required(VERSION 3.16)
 
@@ -398,15 +401,15 @@ target_link_libraries(pub lcm)
 # project(rec) # 2 projects needn't be included in the same CMakelist
 add_executable(rec example_rec.cpp)
 target_link_libraries(rec lcm)
-</syntaxhighlight>
+```
 
 The CMakeLists.txt file show above was in my base directory with my .lcm file, from there I:
-* Created a build folder and moved into it with <syntaxhighlight lang="text" inline> mkdir build && cd build </syntaxhighlight>
-* Ran CMake to generate the makefile with <syntaxhighlight lang="text" inline> cmake .. </syntaxhighlight> (The .. is because for the cmake command I want it to use the CMakeLists.txt found in the directory below my build folder)
-* Generated my executables with <syntaxhighlight lang="text" inline> make </syntaxhighlight>
+* Created a build folder and moved into it with ```mkdir build && cd build```
+* Ran CMake to generate the makefile with ```cmake ..``` (The .. is because for the cmake command I want it to use the CMakeLists.txt found in the directory below my build folder)
+* Generated my executables with ```make```
 
-If you are using the lab's lcm_messages repository and want to include it in another project that uses the pods structure, you can do so by including 
-<syntaxhighlight lang="text">
+If you are using the FRoSt Lab's lcm_messages repository and want to include it in another project that uses the pods structure, you can do so by including in the base CMakeLists.txt file:
+```
 # LCM Messages
 FetchContent_Declare(
   lcm_messages
@@ -415,15 +418,13 @@ FetchContent_Declare(
   UPDATE_DISCONNECTED true
   )
 FetchContent_MakeAvailable(lcm_messages)
-</syntaxhighlight>
-In the base CMakeLists.txt file.
+```
+
 If you need to use a branch other than master, you can swap out the GIT_TAG field from "origin/master" to be "origin/[branch name]".
 
-For an example of including the lcm_messages repository in another repository, see https://bitbucket.org/frostlab/flir_camera_driver/src/master/CMakeLists.txt to see how the FLIR camera driver does so.
+### Tools and Terminal Commands
 
-=== Tools and Terminal Commands ===
-
-==== Base Terminal Commands ====
+#### Base Terminal Commands
 
 LCM provides a number of useful and/or necessary commands available from the terminal.
 
@@ -438,22 +439,22 @@ The first three are all terminal based commands, and the last two provide user i
 However, in order to use the last two you must have installed default-jdk in part of the prerequisites, as those user interfaces rely on Java and will only be available to you if LCM was able to find Java during the installation process. 
 If you did not have default-jdk installed and aren't able to use lcm-logplayer-gui and lcm-spy, please return to the 'Building and Installing LCM' section of this page.
 
-===== lcm-gen =====
+##### lcm-gen
 
 This command will generate source code for the message types that you have defined in a .lcm file type. 
-See https://lcm-proj.github.io/tut_lcmgen.html for a description on how to use it and the flags required for each output language. 
+See <https://lcm-proj.github.io/tut_lcmgen.html> for a description on how to use it and the flags required for each output language. 
 The code generated from this command will be output into a folder with the name of the package specified in the .lcm file, with individual files for each message definition inside of that folder.
 
-===== lcm-logger =====
+##### lcm-logger
 
 This command allows for LCM messages to be logged to a logfile.
 When run without any additional flags or options set it will log any LCM messages on any channel in the network, and output them to an automatically generated logfile, the name of which will be output in the terminal.
 
 Additional flags or options can be provided to set the logfile to record messages on specific channels, and to output to a user-defined logfile destination and name, rather than an automatically generated one.
 
-To view the options and learn more about them, run <syntaxhighlight lang="bash" inline> lcm-logger -h </syntaxhighlight> in a terminal.
+To view the options and learn more about them, run ```lcm-logger -h``` in a terminal.
 
-===== lcm-logplayer =====
+##### lcm-logplayer
 
 This command allows you to play back a log. 
 Logs record the message and contents, channel the message was sent on, as well as the time that the message was sent at.
@@ -467,33 +468,28 @@ A user could manually drive the wheelchair through an environment with all of th
 Then as the autonomous control systems of the wheelchair are being developed, we could play back those data logs and see how the control system handles the input data in real time to verify that it works as expected. 
 Using the logged data and playback features we can then develop systems and test them before applying them onto the vehicle, minimizing the risk of unexpected behavior, especially behaviors that could lead to damage to the hardware.
 
-===== lcm-logplayer-gui =====
+##### lcm-logplayer-gui
 
 This provides access to a GUI that allows for greater control of the playback of a logfile, when compared to the lcm-logplayer command. 
 Specific channels can be isolated, playback speed can be easily controlled, and the progress of the logfile can be viewed.
 
 As previously mentioned, this command requires the use of java and a graphical output, so if one or both of those are unavailable for some reason, you can use the lcm-logplayer command instead.
 
-===== lcm-spy =====
+##### lcm-spy
 
 This command provides a GUI that can be used to visualize all desired messages and channels in real time.
 Some of the useful information provided is the channel, message type, number of messages received, frequency at which messages are received, and then additional information like the current values of message fields.
 Additionally, the messages can be clicked on to view more detailed information, and the individual fields can also be clicked on to view a plot of those values over time. 
 
-The interactive features (clicking on messages and fields) can only be used once proper setup for your message types has been performed.
-Fortunately this had been made simple with our lab's lcm_messages repository.
-Any messages defined therein can be setup with lcm-spy by running <syntaxhighlight lang="bash" inline> make spy </syntaxhighlight> from within the base directory of the repository.
-The repository can be found at https://bitbucket.org/frostlab/lcm_messages/src/master/, and instructions on using and adding to that repository can be found in the 'Adding LCM messages to the FRoSt Lab Repo' section of this guide.
+The interactive features (clicking on messages and fields) can only be used once proper setup for your message types has been performed. When run without any setup, lcm-spy will listen to any message and channel, similar to lcm-logger, but with greater feedback to the user than lcm-logger, but without any of the interactive features.
 
-When run without any setup, lcm-spy will listen to any message and channel, similar to lcm-logger, but with greater feedback to the user than lcm-logger, but without any of the interactive features.
-
-If you are not using the lcm_messages repository, you will not have access to <syntaxhighlight lang="bash" inline> make spy </syntaxhighlight>. Instead you will need to:
+In order to setup your message types to use the interactive features, you will need to:
 
 # Generate the java form of your messages
 # Have a terminal open in the directory that contains your .lcm file you used to generate the messages
-# Run <syntaxhighlight lang="bash" inline> javac -cp /usr/local/shar/java/lcm.jar [your package name]/*.java </syntaxhighlight> to create .class files for each of your java messages
-# Run <syntaxhighlight lang="bash" inline> jar cf [your package name].jar [your package name]/*.class </syntaxhighlight> to create a .jar file from your .class files
-# Then run <syntaxhighlight lang="bash" inline> export CLASSPATH=[your package name].jar && lcm-spy </syntaxhighlight> to run lcm-spy using your .jar file to allow it to process messages that are any of your message types
+# Run ```javac -cp /usr/local/shar/java/lcm.jar [your package name]/*.java``` to create .class files for each of your java messages
+# Run ```jar cf [your package name].jar [your package name]/*.class``` to create a .jar file from your .class files
+# Then run ```export CLASSPATH=[your package name].jar && lcm-spy``` to run lcm-spy using your .jar file to allow it to process messages that are any of your message types
 
 ==== Additional Terminal Commands ====
 
@@ -518,9 +514,9 @@ More information on this can be found at https://lcm-proj.github.io/multicast_se
 The ttl is time-to-live, and controls how far in the network the signal can go.
 
 If you want to allow LCM to communicate across a local network, run 
-<syntaxhighlight lang="bash">
+```
 export LCM_DEFAULT_URL=udpm://239.255.76.67:7667?ttl=1
-</syntaxhighlight>
+```
 on all systems that are connected to each other and will be using that network to publish and receive LCM messages.
 The ttl variable is what we are updating, the default for this is 0, which restricts communication to a single device. 
 A value of 1 then allows for communication over a local network, and a value of 2 should allow communication through a router (this has not yet been tested by me, but the value of 1 has been tested and confirmed to work as advertised).
@@ -531,9 +527,9 @@ This will ensure that LCM is configured to broadcast on the local network from s
 
 Alternatively, some of the above can be done in the LCM scripts, rather than from the Ubuntu system environment.
 At this time I have not yet experimented with how to do that, but doing so requires the use of 
-<syntaxhighlight> lcm::LCM lcm = lcm_create(); </syntaxhighlight> 
+```lcm::LCM lcm = lcm_create(); ``` 
 (with the appropriate parameters passed in for your use case) instead of just 
-<syntaxhighlight> lcm::LCM lcm; </syntaxhighlight>
+```lcm::LCM lcm; ```
 in your code. 
 The documentation for the lcm_create() function can be found at https://lcm-proj.github.io/group__LcmC__lcm__t.html#gaf29963ef43edadf45296d5ad82c18d4b.
 
@@ -541,22 +537,22 @@ The documentation for the lcm_create() function can be found at https://lcm-proj
 
 If you still are unable to communicate between devices, you may need to configure routes between them.
 This can be done by running the command
-<syntaxhighlight lang="bash">
+```
 sudo route add -net 224.0.0.0 netmask 240.0.0.0 dev [interface]
-</syntaxhighlight>
+```
 where [interface] is the appropriate connection for the local network for that device.
 
 ===== Identifying The Network =====
 
 In order to identify the connection, the easiest way is to disable all wi-fi connections for all devices that are connected together, and ensure that they are not connected to any wired internet connections as well.
 Then run 
-<syntaxhighlight lang="bash">
+```
 arp -a
-</syntaxhighlight>
+```
 and you should get an output that is something along the lines of
-<syntaxhighlight lang="text">
+```
 DEVICE-NAME (IP-ADDRESS) at HARDWARE-ADDRESS [CONNECTION-TYPE] on INTERFACE
-</syntaxhighlight>
+```
 In the above, everything in all caps is a field wherein you'll find some form of text or numeric data.
 The field that you care about is INTERFACE. 
 Whatever is output there is what you should put into the [interface] field of the earlier command for adding a route.
@@ -567,9 +563,9 @@ You will need to do this for all systems connected to the local network, after w
 If you will be using LCM on a machine that has no network connections, be them wired or wireless, then you need to enable multicast on your computer, or else you will not be able to use any scripts that contain LCM functionality in them.
 
 The commands for a Linux system are:
-<syntaxhighlight lang="text"> sudo ifconfig lo multicast </syntaxhighlight>
+``` sudo ifconfig lo multicast ```
 and
-<syntaxhighlight lang="text"> sudo route add -net 224.0.0.0 netmask 240.0.0.0 dev lo </syntaxhighlight>
+``` sudo route add -net 224.0.0.0 netmask 240.0.0.0 dev lo ```
 
 After which you should be able to run any LCM scripts as you normally would, noting that only scripts running on that computer will be communicating with one another.
 
@@ -583,24 +579,24 @@ The repository for all of our LCM message definitions can be found at https://bi
 If you will need to add any new message types to the repository, please follow these steps:
 # Clone the master branch of the repository
 # Create and switch to a new branch
-#* <syntaxhighlight lang="bash" inline> git checkout -b [name of your new branch] </syntaxhighlight>
+#* ```git checkout -b [name of your new branch] ```
 # Push and set the upstream for your new branch
-#* <syntaxhighlight lang="bash" inline> git push --set-upstream origin [name of your new branch] </syntaxhighlight>
+#* ```git push --set-upstream origin [name of your new branch] ```
 # Add a new .lcm file in the lcmtypes folder with a descriptive name (generally the name of the file should be closely tied to the other repository that the message will be used in)
-# Define any messages that you need to in the new .lcm file, ensuring that the package definition is <syntaxhighlight lang="text" inline> package lcm_messages; </syntaxhighlight> in any of the new .lcm files you add
+# Define any messages that you need to in the new .lcm file, ensuring that the package definition is ```package lcm_messages;``` in any of the new .lcm files you add
 # Verify that your new LCM messages are properly generated
 ## Open a terminal to the base directory of the lcm_messages repo
-## Run <syntaxhighlight lang="bash" inline> make </syntaxhighlight>
+## Run ```make ```
 ## Correct any errors, if they exist and repeat until you have verified that your messages are correctly defined
 # Add, commit, and push your changes (while still within your new branch)
 # Test that the other repo that uses the messages is able to do so
 #* Instructions on including the lcm_messages repo in other repos are found in the README of the lcm_messages repo, just change the GIT_TAG field from origin/master to origin/[your branch name]
 # If all works as intended and you have finished testing your new message(s), merge your branch into the master one
-## Run <syntaxhighlight lang="bash" inline> git checkout master </syntaxhighlight> to switch back to the master branch
-## Run <syntaxhighlight lang="bash" inline> git merge [your branch name] </syntaxhighlight> to merge your branch into the master branch (This will bring all of the changes that you made in your branch into the master branch)
+## Run ```git checkout master ``` to switch back to the master branch
+## Run ```git merge [your branch name] ``` to merge your branch into the master branch (This will bring all of the changes that you made in your branch into the master branch)
 # Delete your branch
-#* To delete the branch from your computer run <syntaxhighlight lang="bash" inline> git branch -d [your branch name] </syntaxhighlight>
-#* To delete the branch from bitbucket run <syntaxhighlight lang="bash" inline> git branch -d [remote name] [your branch name] </syntaxhighlight> (usually the remote name is origin, though this may be different in certain cases)
+#* To delete the branch from your computer run ```git branch -d [your branch name] ```
+#* To delete the branch from bitbucket run ```git branch -d [remote name] [your branch name] ``` (usually the remote name is origin, though this may be different in certain cases)
 # Update the GIT_TAG field in the CMakeLists.txt file of the repo that is using your new message to be origin/master so that it pulls from the master branch instead of your, now deleted, branch, and also then rebuild that project to reflect those changes
 
 And that's it!
@@ -667,28 +663,28 @@ These installation instructions have been tested and verified on:
 * Windows 10
 * Windows 11
 
-== Setup and Installation ==
+## Setup and Installation
 
 * '''Install Java JDK 8'''
 ** Download and Install Java JDK 8 using jdk-8u311-windows-x64.exe found in the folder at [https://byu.box.com/s/ckc9ehi0we9ifz4vj2hum7dcz4lijyf2 https://byu.box.com/s/ckc9ehi0we9ifz4vj2hum7dcz4lijyf2]
-** Add a new environment variable called 'JAVA_HOME' with a value of <syntaxhighlight>C:\Program Files\Java\jdk1.8.0_311</syntaxhighlight>
-** Also add <syntaxhighlight>
+** Add a new environment variable called 'JAVA_HOME' with a value of ```C:\Program Files\Java\jdk1.8.0_311```
+** Also add ```
 C:\Program Files\Java\jdk1.8.0_311\jre\bin
 C:\Program Files\Java\jdk1.8.0_311\jre\bin\server
-C:\Program Files\Java\jdk1.8.0_311\bin</syntaxhighlight> to the PATH environment variable
+C:\Program Files\Java\jdk1.8.0_311\bin``` to the PATH environment variable
 *** '''''Sidenote:''''' If you encounter any errors with java when trying to build LCM later on with CMake, try uninstalling and reinstalling Java.
 * '''Install Python'''
 ** Miniconda is recommended, and can be found at [https://docs.conda.io/en/latest/miniconda.html https://docs.conda.io/en/latest/miniconda.html]
-** Add the location of your python executable to PATH, which should be <syntaxhighlight>%USERPROFILE%\miniconda3</syntaxhighlight>
+** Add the location of your python executable to PATH, which should be ```%USERPROFILE%\miniconda3```
 ** Open miniconda (search for it in the windows search bar and run the anaconda prompt)
-*** Run <syntaxhighlight inline>pip install --upgrade pip</syntaxhighlight>
-*** Run <syntaxhighlight inline>pip install pyjnius</syntaxhighlight>
+*** Run ```pip install --upgrade pip```
+*** Run ```pip install pyjnius```
 * '''Install GLIB'''
 ** Download and install MSYS2 from [https://www.msys2.org/ https://www.msys2.org/]
-** Run MSYS2 and within the console that opens up run <syntaxhighlight>pacman -S mingw-w64-x86_64-gtk3</syntaxhighlight> and in the prompt press 'y' to install gtk3 which will include GLIB 2.0
-** Add <syntaxhighlight>
+** Run MSYS2 and within the console that opens up run ```pacman -S mingw-w64-x86_64-gtk3``` and in the prompt press 'y' to install gtk3 which will include GLIB 2.0
+** Add ```
 C:\msys64\mingw64\lib
-C:\msys64\mingw64\bin</syntaxhighlight> to the path variable
+C:\msys64\mingw64\bin``` to the path variable
 * '''Install CMake'''
 ** Download and run the windows installer from [https://cmake.org/download/ https://cmake.org/download/]
 ** While it is not necessary to add CMake to the path, you can check to have it added to path for the current user if you would like access to CMake from the command prompt (We will be using the GUI later, hence no need for it to be added to the PATH variable)
@@ -704,11 +700,13 @@ C:\msys64\mingw64\bin</syntaxhighlight> to the path variable
 ** Set 'Where to build the binaries' to the same path as above, with the addition of '/build' so that it will create a new folder named build, where the binaries will be placed
 ** Click 'Configure' and select 'yes' when prompted to create the build folder, as it shouldn't yet exist, ensure that the generator matches the Visual Studio version that you installed previously (eg. Visual Studio 17 2022), leave the selection of 'Use default native compilers', then click 'Finish' 
 ** After the configuration has completed, check the 'Advanced' box and find LCM_ENABLE_TESTS and deselect it
-** Ensure that LCM_ENABLE_PYTHON is selected, and that python was found and the PYTHON variables have been all set to reference the miniconda installation, for example: <syntaxhighlight>
+** Ensure that LCM_ENABLE_PYTHON is selected, and that python was found and the PYTHON variables have been all set to reference the miniconda installation, for example: 
+```
 PYTHON_EXECUTABLE          C:/Users/kalin/miniconda3/python.exe
 PYTHON_INCLUDE_DIR         C:/Users/kalin/miniconda3/include
 PYTHON_LIBRARY             C:/Users/kalin/miniconda3/libs/python39.lib
-</syntaxhighlight> Note that your python library may be a different version from python39.
+``` 
+Note that your python library may be a different version from python39.
 ** Click 'Configure' once again and ensure that the configuration is successful once more, and if so then click 'Generate'
 * '''Build LCM in Visual Studio'''
 ** Navigate to the build folder for LCM, where you generated the binaries, and open up lcm.sln in Visual Studio
@@ -717,28 +715,28 @@ PYTHON_LIBRARY             C:/Users/kalin/miniconda3/libs/python39.lib
 ** Open Visual Studio as an administrator, and then open up lcm.sln
 ** In the solution explorer panel on the right hand side, locate INSTALL, right click it, hover over 'Project Only' and select 'Build Only INSTALL'
 * '''Add LCM to PATH'''
-** Add <syntaxhighlight>C:\Program Files (x86)\lcm\bin</syntaxhighlight> (This allows access to LCM commands in the command prompt)
+** Add ```C:\Program Files (x86)\lcm\bin``` (This allows access to LCM commands in the command prompt)
 * Test your installation (see [https://lcm-proj.github.io/tutorial_general.html https://lcm-proj.github.io/tutorial_general.html] for a list of available LCM tutorials with scripts that you can easily use to test if everything is working)
 
-=== Notes For Windows 7 (IVER Backseat) ===
-* When installing python, the last version of python that supports Windows 7 is Python 3.8, so rather than downloading the latest miniconda release, download the last version that shipped with Python 3.8 from [https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Windows-x86_64.exe https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Windows-x86_64.exe]
+### Notes For Windows 7 (IVER Backseat)
+* When installing python, the last version of python that supports Windows 7 is Python 3.8, so rather than downloading the latest miniconda release, download the last version that shipped with Python 3.8 from [https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Windows-x86_64.exe](https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Windows-x86_64.exe).
 
-== Additional Steps For C++ in Visual Studio ==
+## Additional Steps For C++ in Visual Studio
 * Create a new project
 * In the Project tab, select select your project's properties (it should be the very last item in the drop-down menu)
 * In Configuration Properties, select VC++ Directories
-** add <syntaxhighlight>C:\Program Files (x86)\lcm\include;</syntaxhighlight> to the end of the Include Directories field
-** add <syntaxhighlight>;C:\Program Files (x86)\lcm\lib;</syntaxhighlight> to the end of the Library Directories field
+** add ```C:\Program Files (x86)\lcm\include;``` to the end of the Include Directories field
+** add ```;C:\Program Files (x86)\lcm\lib;``` to the end of the Library Directories field
 * In Linker, select Input
-** add <syntaxhighlight>;lcm.lib;lcm-static.lib</syntaxhighlight> to the end of the Additional Dependencies field
+** add ```;lcm.lib;lcm-static.lib``` to the end of the Additional Dependencies field
 * Now switch from Debug to Release and perform the same changes as above
 * Then in the Project drop-down menu select Export Template, select the project you have just modified, and create a new template based on that project. 
 * Now you can create new projects using that template that will all be ready to go with LCM readily available through #include <lcm/lcm-cpp.hpp>
 
-== Additional Steps For Python ==
+## Additional Steps For Python
 Ensure that you always use the base conda python environment, as that is what you have now installed lcm to. If you try to run a script that uses lcm with another python environment or version, it most likely will not work. 
 While you can install lcm multiple times, using different python environments, I highly recommend that you don't, as that will take a lot of time and is likely very unnecessary. Ultimately it'll be much easier on Linux where you can just create a new python environment and pip install lcm. On Windows it's much more involved, so just use the base conda environment, which is where this guide will have the python package installed for.
 
 Initially python will not be able to find the lcm package, in order to fix that please do the following:
 * Add LCM Python package to Environment Variables
-** Check your environment variables, if one called PYTHONPATH exists, then edit it, otherwise create a new variable called 'PYTHONPATH' and add the following to the value field <syntaxhighlight> C:\Program Files (x86)\lcm\lib\site-packages </syntaxhighlight>
+** Check your environment variables, if one called PYTHONPATH exists, then edit it, otherwise create a new variable called 'PYTHONPATH' and add the following to the value field ```C:\Program Files (x86)\lcm\lib\site-packages ```
