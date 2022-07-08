@@ -1,8 +1,3 @@
-
-# Current id index: 15
-# When making a new question, use the above id number and then 
-# increment it.
-
 # copy and paste the following within your page, substituting your id
 # {% include quizzes.html id=1 %}
 
