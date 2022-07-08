@@ -8,31 +8,28 @@ order: 0
 ---
 
 
-# LCM On Linux
+# Lightweight Communications and Marshalling (LCM)
 
-## Overview - What is LCM
+## Overview - What is LCM?
 
 As stated on the main page of the [LCM documentation](https://lcm-proj.github.io/), Lightweight Communications and Marshalling, or LCM, "is a set of libraries and tools for message passing and data marshalling, targeted at real-time systems where high-bandwidth and low latency are critical. It provides a publish/subscribe message passing model and automatic marshalling/unmarshalling code generation with bindings for applications in a variety of programming languages."
 
 In other words, LCM is a tool that allows us to send and receive messages between the components of our robotic systems.
 
-Alternate tools that serve this same, or a similar, purpose exist, such as the [Robot Operating System (ROS)](https://www.ros.org/) , or [ZeroMQ](https://zeromq.org/). Each approach has it's own advantages and drawbacks. We have chosen to use LCM because it is lightweight, or has very little overhead, and is relatively simple to implement and use.
+Alternate tools that serve this same, or a similar, purpose exist, such as the [Robot Operating System (ROS)](https://www.ros.org/), or [ZeroMQ](https://zeromq.org/). Each approach has it's own advantages and drawbacks. We have chosen to use LCM because it is lightweight, or has very little overhead, and is relatively simple to implement and use.
 
 ## Lecture
 
 For the recording of our discussion about LCM, see the video below:
 
 <iframe width="800" height="600" allow="fullscreen"
-src="https://www.youtube.com/embed/sh_YkYK5p0o">
+src="https://www.youtube.com/embed/xTEgV79aVLY">
 </iframe>
 
-## Downloading 
+## Download
 
 The FRoSt Lab has forked and modified the source code of LCM, allowing us to correct a few old methods used in their installation. 
-In particular this has allowed us to more reliably install LCM with python. 
-
-Please clone the master branch of the repository found at <https://bitbucket.org/frostlab/lcm/src/master/>.
-If you are uncertain where to put the repo, generally I just clone it into my home directory.
+In particular this has allowed us to more reliably install LCM with python. Please clone the master branch of the repository found at <https://bitbucket.org/frostlab/lcm/src/master/>. If you are uncertain where to put the repo, generally I just clone it into my home directory.
 
 Alternate methods for downloading LCM exist, but those will not be covered in this guide.
 
@@ -50,16 +47,14 @@ They are:
 * build-essential
 * libglib2.0-dev
 * cmake (version 3.1 or higher)
-And one more that I highly recommend installing to allow access to a few useful tools we will cover later, which is:
-* default-jdk
+* default-jdk (not required, but permits use of useful tools later on)
 
 To install all of the above:
-* Run ```sudo apt update ``` to update your package list
-* Run ```sudo apt install build-essential libglib2.0-dev cmake default-jdk``` to install all of the dependencies
-** If you already have some of the dependencies installed, running the above command will just skip installing the ones you already have on your system
+- Run ```sudo apt update ``` to update your package list
+- Run ```sudo apt install build-essential libglib2.0-dev cmake default-jdk``` to install all of the dependencies
+    - If you already have some of the dependencies installed, running the above command will just skip installing the ones you already have on your system
 
-Some optional prerequisites for LCM can be found on the build instructions webpage, but they are not necessary for basic LCM operations and compatibility with the C and C++ programming languages.
-Should you encounter any problems using LCM with another language, please refer to the [full build instructions](https://lcm-proj.github.io/build_instructions.html) to find those optional prerequisites.
+Some optional prerequisites for LCM can be found on the build instructions webpage, but they are not necessary for basic LCM operations and compatibility with the C and C++ programming languages. Should you encounter any problems using LCM with another language, please refer to the [full build instructions](https://lcm-proj.github.io/build_instructions.html) to find those optional prerequisites.
 
 #### Notes on CMake
 
@@ -68,7 +63,7 @@ There are multiple ways to install CMake, with each method providing slightly di
 * Through pip, the python package manager (```pip install cmake ```)
 * Through cloning the source code for CMake (Visit <https://gitlab.kitware.com/cmake/cmake> and follow the instructions in their README file)
 
-As previously mentioned, apt should be new enough, but pip grants a newer version than apt, and cloning the source code will provide you with the newest possible version of CMake. For more information on CMake, see the [CMake page](https://byu-cpe.github.io/ComputingBootCamp/tutorials/cmake/) on the BYU Computing Boot Camp.
+As previously mentioned, apt should be new enough, but pip grants a newer version than apt, and cloning the source code will provide you with the newest possible version of CMake. For more information on CMake, see the [CMake page](https://byu-cpe.github.io/ComputingBootCamp/tutorials/cmake/) on the BYU Computing BootCamp website.
 
 ### Building LCM
 
@@ -81,10 +76,10 @@ On Ubuntu, the steps to build LCM are as follows:
 * Run ```sudo make install``` 
 
 The FRoSt Lab fork of LCM has also added a command to build the python portion of LCM:
-* Run ```make python-install```
-** Did you get an error after running the above?
-*** Note that this will not work if your system only has python 2. If you get an error that mentions "No module named 'setuptools'" Please use conda and python3 and if conda is not already activated by default then run  ```conda config --set auto_activate_base true```, restart your terminal, remove the build folder from LCM and all of it's contents, and start over with the build steps. This time when you get to the python-install step it should run successfully.
-*** Alternatively, if you receive an error message mentioning not having permissions to edit specific file locations, run the command with sudo privileges.
+- Run ```make python-install```
+    - Did you get an error after running the above?
+        - Note that this will not work if your system only has python 2. If you get an error that mentions ```No module named 'setuptools'```, then use [conda](https://byu-cpe.github.io/ComputingBootCamp/tutorials/conda/) and [python3](https://byu-cpe.github.io/ComputingBootCamp/tutorials/pythonIntro/). If conda is not already activated by default then run  ```conda config --set auto_activate_base true```, restart your terminal, remove the build folder from LCM and all of it's contents, and start over with the build steps. This time when you get to the python-install step it should run successfully.
+        - Alternatively, if you receive an error message mentioning not having permissions to edit specific file locations, run the command with sudo privileges.
 
 Note that for each python environment that you would like to have LCM installed on, you will need to repeat all of the above steps. If you have already installed it once, then in your base lcm folder remove the build folder with ```rm -rf build``` to recursively delete everything inside and including the build folder. Then you can start on the first step of building LCM above and run through all of the steps again, ensuring that your python environment of choice is active.
 
@@ -93,6 +88,7 @@ Now you should have LCM built and installed on your system!
 ### LCM Python Package
 
 If you will be using LCM with python, while you can still follow the instructions above and install it for python after installing it to your system, alternatively you can install it for your python environment with: 
+
 ```pip install lcm``` 
 
 The site for the pip version can be found at <https://pypi.org/project/lcm/>.
@@ -160,13 +156,16 @@ At this point, I now need to generate the code that will allow my c++ program (w
 
 LCM provides many different terminal commands, most of which will be covered later, but we do need one of them in order to generate the code to allow my messages to be used in a c++ program. 
 In a terminal that is in the directory of your .lcm file, run: 
+
 ```lcm-gen -x [filename].lcm```
+
 This will generate code from your .lcm file in c++ that defines your messages and allows them to be included and used in your program.
 The -x parameter is what specifies that the code should be generated for c++. 
-An important note is that if you have some of your messages using other messages defined in the same package (as is the case in the example file provided above), you will need to use a slightly modified command
+An important note is that if you have some of your messages using other messages defined in the same package (as is the case in the example file provided above), you will need to use a slightly modified command:
+
 ```lcm-gen -x --cpp-include .. [filename].lcm```
-which will allow for your messages to include one another properly.
-A number of other parameters can be used for other languages, all of which can be found at <https://lcm-proj.github.io/tut_lcmgen.html>.
+
+This will allow for your messages to include one another properly. A number of other parameters can be used for other languages, all of which can be found at <https://lcm-proj.github.io/tut_lcmgen.html>.
 
 The lcm-gen command should now have created a folder that uses the package name specified in your .lcm file, and inside of that folder you should see one or more .hpp files (one .hpp file will be generated for each message you defined).
 So after running lcm-gen I now have a folder called 'example_pkg' with two files inside, namely, 'item.hpp' and 'status.hpp'.
@@ -175,10 +174,11 @@ We now have defined our messages and are ready to move on to the next step, inco
 
 ### Sending Messages
 
-In order to send a message, we first need to fill it with some kind of useful information.
-This is now where the programming language of your choice comes in. 
-For each language the process is ever so slightly different, but the principles remain the same. 
-We need to: Include the message definitions, create an object of that type in our code, fill it with the desired information, and then publish it over the network using built in functions from LCM.
+In order to send a message, we first need to fill it with some kind of useful information. This is now where the programming language of your choice comes in. For each language the process is ever so slightly different, but the principles remain the same. We need to: 
+* Include the message definitions
+* Create an object of that type in our code
+* Fill it with the desired information
+* Publish it over the network using built in functions from LCM.
 
 Following is the file that I created for publishing simple messages that use the item and status types that I defined in the previous section.
 ````
@@ -240,12 +240,12 @@ int main(int argc, char** argv)
 ```
 
 In the file I have:
-* Included the main LCM package
-* Included any defined LCM message types that will be used
-* Included any other standard libraries that I'm using
-* Created a helper function to easily fill in the data fields of an item message type
-* Created a main function that:
-** Initializes LCM
+- Included the main LCM package
+- Included any defined LCM message types that will be used
+- Included any other standard libraries that I'm using
+- Created a helper function to easily fill in the data fields of an item message type
+- Created a main function that:
+- Initializes LCM
 ** Checks whether or not command line arguments were provided
 ** Initializes and stores information in either a single item message, or in a status message that contains five item messages
 ** Calls the publish function to transmit the desired message over the network, using a specified channel
