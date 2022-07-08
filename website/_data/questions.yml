@@ -3,7 +3,10 @@
 # When making a new question, use the above id number and then 
 # increment it.
 
-# --------------------------- Activites for 61_quizzes.md --------------------------- 
+# copy and paste the following within your page, substituting your id
+# {% include quizzes.html id=1 %}
+
+# --------------------------- Activites for quizzes.md --------------------------- 
 - id: 1 # A unique identifier used to embed the question
   type: multiple_choice
   help: "Hint: Tool Command Language"
@@ -36,9 +39,19 @@
     - text: _____, strong, and true
       correct: loyal
 
+#- id: 4
+#  prompt:
+#  type:
+#  responses:
 
-# --------------------------- Activites for 05_linux.md ---------------------------
-- id: 4
+#- id: 5
+#  prompt: 
+#  type:
+#  responses:
+
+
+# --------------------------- Activites for linux.md ---------------------------
+- id: 6
   prompt: Match each linux command with its function.
   type: matching
   responses:
@@ -51,7 +64,7 @@
     - text: cat
       correct: display file contents
 
-- id: 13
+- id: 7
   prompt: Help Alice copy a file off of the BYU caedm servers!
   type: fill_in
   responses:
@@ -62,19 +75,29 @@
             _______________________________________________________________
       correct: scp alice123@ssh.et.byu.edu:Documents/textfile1.txt ~/Downloads
 
-- id: 5
+- id: 8
   prompt: Use the manual pages in a terminal session to find the function of each option.
   type: matching
   responses:
     - text: ls -L
       correct: dereference
     - text: chmod -f
-      correct: supress error msgs
+      correct: suppress error msgs
     - text: rm -i
       correct: prompt
 
-# --------------------------- Activites for 13_make.md ---------------------------
-- id: 6
+#- id: 9
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 10
+#  prompt:
+#  type:
+#  responses:
+
+# --------------------------- Activites for make.md ---------------------------
+- id: 11
   prompt: Match the automatic variable with its value
   help: See https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html for help
   type: matching
@@ -88,7 +111,7 @@
     - text: $@
       correct: The target of the rule
 
-- id: 7
+- id: 12
   type: multiple_choice
   prompt: What is the target of the first rule?
   responses: 
@@ -98,8 +121,8 @@
     - text: calc
       correct: true
 
-- id: 8
-  prompt: Which of the following is a Makefile function that takes the .cpp files in a varible called CPP, changes the endings to .h, and saves them in a variable called HEADERS?
+- id: 13
+  prompt: Which of the following is a Makefile function that takes the .cpp files in a variable called CPP, changes the endings to .h, and saves them in a variable called HEADERS?
   type: multiple_choice
   responses:
     - text: HEADERS=$(wildcard *.h)
@@ -108,8 +131,18 @@
       correct: true
     - text: CPP=$(HEADERS:.h=.cpp)
 
-# --------------------------- Activites for 12_git.md ---------------------------
-- id: 9
+#- id: 14
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 15
+#  prompt:
+#  type:
+#  responses:
+
+# --------------------------- Activites for git.md ---------------------------
+- id: 16
   prompt: Match the git log feature on the left with its corresponding functionality on the right
   type: matching
   help: Use git log --help
@@ -127,8 +160,28 @@
     - text: --grep=(pattern)
       correct: Limit the commits output to ones with log message that matches the specified pattern (regular expression)
 
-# --------------------------- Activites for 12a_github.md ---------------------------
-- id: 10
+#- id: 17
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 18
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 19
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 20
+#  prompt:
+#  type:
+#  responses:
+
+# --------------------------- Activites for github.md ---------------------------
+- id: 21
   prompt: Match the GitHub feature on the left to its functionality on the right
   type: matching
   responses:
@@ -147,24 +200,159 @@
     - text: Insights
       correct: An application that provides data about your repository, including traffic, number of pull request and issues, contributors, and more
 
-# --------------------------- Activites for 14_pythonIntro.md --------------------------- 
-- id: 11
+#- id: 22
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 23
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 24
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 25
+#  prompt:
+#  type:
+#  responses:
+
+# --------------------------- Activites for pythonIntro.md --------------------------- 
+- id: 26
   prompt: Which of the following statements in Python is equivalent to 1776?
   type: multiple_choice
   responses:
-    - text: "1,776"
+    - text: '1,776'
     - text: '1.776'
-    - text: '1-776'
+    - text: 1-776
     - text: '1_776'
       correct: true
 
-- id: 12
+- id: 27
   prompt: "What is the output of the following statements: lst = ['My', 'name', 'is', 'Python'] and lst[-2]?"
   type: multiple_choice
   responses:
-    - text: 'is'
+    - text: is
       correct: true
     - text: "IndexError: list index out of range"
-    - text: 'Python'
-    - text: 'name'
+    - text: Python
+    - text: name
     - text: "SyntaxError: invalid syntax"
+
+- id: 28
+  prompt: "In C and C++, we type #include to add code from header files to our current file."
+  type: fill_in
+  responses:
+    - text: In Python, however, we just type ______ to include other files or modules in our program.
+      correct: import
+
+- id: 29
+  prompt: What does this statement do? import numpy as np
+  type: multiple_choice
+  responses:
+    - text: Imports only the "np" part of numpy
+    - text: Nothing. This is only used as filler code. Everyone puts it in their files for no reason
+    - text: Imports the numpy module and sets "np" as an alias for the user to use in place of "numpy" for convenience
+      correct: true
+    - text: The "as np" portion of the statement is a flag that tells Python not to raise an error if there is a problem importing numpy
+
+- id: 30
+  prompt: How does the Python interpreter react to this statement? lst = [5, 8.1, 'Python', True]
+  type: multiple_choice
+  responses:
+    - text: It will throw a syntax error and quit
+    - text: It will set all elements to the type and value of the first element
+    - text: It will set lst to contain just the first two elements since they are the only numbers in the list
+    - text: It won't freak out since this is a valid list
+      correct: true
+
+# --------------------------- Activites for matlab_intro.md --------------------------- 
+- id: 31
+  prompt: What is the primary difference between a function and script?
+  type: multiple_choice
+  responses:
+    - text: "A function runs faster than a script"
+    - text: "A function requires user input and can return a specific value while a script is a compilation of commands"
+      correct: true
+    - text: "A script requires user input and can return a specific value while a function is a compilation of commands"
+
+#- id: 32
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 33
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 34
+#  prompt:
+#  type:
+#  responses:
+
+#- id: 35
+#  prompt:
+#  type:
+#  responses:
+
+# --------------------------- Activities for 13_cmake.md ---------------------------------
+- id: 114
+  prompt: Which of the following functions in CMake is essential for compiling and executing a program?
+  type: multiple_choice
+  responses:
+    - text: "cmake_minimum_required()"
+    - text: "project()"
+    - text: "add_executable()"
+      correct: true
+
+- id: 115
+  prompt: CMake's loop and control flow blocks have similar scopes compared to C-based languages.
+  type: multiple_choice
+  responses:
+    - text: "true"
+    - text: "false"
+      correct: true
+
+- id: 116
+  prompt: Match CMake's keywords with their description used for target_include_directories and target_link_libraries.
+  type: matching
+  responses:
+    - text: PUBLIC
+      correct: Used for the current target and other targets that have dependencies on the current target.
+    - text: PRIVATE
+      correct: Used for the current target.
+    - text: INTERFACE
+      correct: Used for other targets that have dependencies on the current target.  
+
+- id: 117
+  prompt: Fill in the blanks using static or shared
+  type: fill_in
+  responses:
+    - text: The code in a ______ library is referenced by programs using it at run-time.
+      correct: shared
+    - text: The code in a ______ library is linked into the program at compile time.
+      correct: static
+
+- id: 118
+  prompt: Match CMake's functions with their description
+  type: matching
+  responses:
+    - text: project()
+      correct: Sets the name of the project, and stores it in the variable PROJECT_NAME.
+    - text: add_library()
+      correct: Adds a library target called <name> to be built from the source files listed in the command invocation.
+    - text: add_executable()
+      correct: Adds an executable target called <name> to be built from the source files listed in the command invocation.
+    - text: target_include_directories()
+      correct: Specifies include directories to use when compiling a given target.  
+    - text: target_link_libraries()
+      correct: Specifies libraries or flags to use when linking a given target and/or its dependents.  
+    - text: target_link_directories()
+      correct: Specifies the paths in which the linker should search for libraries when linking a given target.  
+    - text: target_compile_features()
+      correct: Specifies compiler features required when compiling a given target.          
+    
