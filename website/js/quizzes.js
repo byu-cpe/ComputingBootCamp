@@ -43,6 +43,7 @@ $(".collapsible").click(function (event) {
   var content = this.nextElementSibling;
   if (content.style.maxHeight) {
     content.style.maxHeight = null;
+    setTimeout(function () { content.style.display = "none"; }, 100)
   } else {
     content.style.display = "block";
     content.style.maxHeight = content.scrollHeight + "px";
@@ -77,7 +78,7 @@ $(".matching-response").click(changeclass);
 $(".matching-response").click(function () {
   matching_check_answer($(this).attr("data-text"), $(this).attr("data-correct"))
 });
-$(".mc-response").click(function() {
+$(".mc-response").click(function () {
   multiple_choice_check_answer($(this).attr("data-correct"));
 });
 

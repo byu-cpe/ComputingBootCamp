@@ -24,7 +24,7 @@ title: 2021 Students
 
 ### Goeders
 * [Brandon Heiner](https://heinerb1.github.io/pages/log/)
-* [Bryce Hamilton](https://brycejh.github.io/CCL_Page/pages/log/)
+* Bryce Hamilton<!-- link was https://brycejh.github.io/CCL_Page/pages/log/-->
 * [Jonathan Thompson](https://jonath48.github.io/pages/log/)
 * [Jarom Harris](https://jaromharris.github.io/immerse/)
 * [Samuel Reynolds](https://thedhcreator.github.io/pages/log/)
