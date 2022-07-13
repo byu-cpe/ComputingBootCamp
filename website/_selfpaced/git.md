@@ -24,6 +24,22 @@ On May 6, 2020 we had a Zoom-based Git Tutorial by Prof Nelson.  The video is em
 src="https://www.youtube.com/embed/sh_YkYK5p0o">
 </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=0s) Introduction to Git<br>
+[3:03](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=183s) Initializing a Git repository<br>
+[4:10](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=250s) Checking the status of your repository<br>
+[4:40](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=280s) Adding files to your repository<br>
+[5:38](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=338s) .gitignore files<br>
+[8:05](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=485s) .gitconfig files<br>
+[9:20](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=560s) Committing changes<br>
+[14:32](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=872s) Going back to previous commits<br>
+[18:36](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1116s) Using "git diff"<br>
+[22:00](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1320s) Branching<br>
+[27:15](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1635s) Merging<br>
+[30:07](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1807s) Cloning repositories<br>
+[32:09](https://www.youtube.com/watch?v=sh_YkYK5p0o&t=1929s) Group usage of Git with GitHub
+
 ## Follow-Up Activities
 
 Git is one of those things that you can only read so much about until you really start using it for a project, which is when you will get good with it.  Thus, it probably merits only a few hours’ work to get familiar with it.  
@@ -43,11 +59,15 @@ Re-watch the video from above and replicate the basic steps you see there with s
 {% include quizzes.html id=16 %}
 
 ### Learn About Git Aliases
-1. Set some aliases in ~/.gitconfig
-1. Find some handy git aliases online.  One of my favorites: <https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs>
+1. Find some handy git aliases online.  
+    * Handy git aliases: <https://betterdev.blog/handy-git-aliases/>
+    * Making pretty `git log` outputs: <https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs>
+    * Awesome git aliases (including dad jokes): <https://davidwalsh.name/awesome-git-aliases>
+    * Advanced aliases using shell commands: <https://www.atlassian.com/blog/git/advanced-git-aliases>
+1. Set some of these aliases in ~/.gitconfig and try them out for yourself!
 
 ### Play With Branches
-1. Create a new branch and then check it out
+1. Create a new branch and then check it out.
 1. Check what branch you are on by noting where it shows up in `git status`.  Also see what `git branch` tells you.
 1. Now, change a file and recommit.
 1. Merge the branch’s changes back into master (you must checkout master to do this since a merge is always “merge something else into my current version")
@@ -90,4 +110,14 @@ There are hundreds of printed tutorials on the web, find some and read them.  He
 - [Learning Git Branching](https://learngitbranching.js.org/?locale=en_US)
 - [Git Cheat Sheet](https://github.com/JakeEdvenson/ComputingBootCamp/files/8577687/git-cheat-sheet-education.pdf)
 
+## Certify Your Skills
+<a href="https://badgr.com/public/badges/VfiBaNJFSdCiSti946bVCA"><img src="https://api.badgr.io/public/badges/VfiBaNJFSdCiSti946bVCA/image?imageVersion=1" alt="Git Badge" width="250"/></a>
 
+For those who believe they have mastered Git, we present the Git badge! This badge can be viewed in its entirety on Badgr.com here: [Git Badge](https://badgr.com/public/badges/VfiBaNJFSdCiSti946bVCA). The Git badge can be used to prove your Git knowledge to potential employers, educational institutions, or anyone else! To earn it, you'll have to complete the Git test and use your knowledge to perform Git commands for various situations. Attempt the Git test and earn the Git badge with the button below!
+
+<div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/gitTest'">
+    <p class="activity-label h3-clone">EARN THE GIT BADGE</p>
+    <p class="dropdown-arrow h3-clone">&#9654;</p>
+</div>
+
+Good luck to those who attempt the test, and if you pass, congratulations! You are now certified in Git by the BYU Computing Boot Camp.
