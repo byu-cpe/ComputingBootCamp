@@ -1144,7 +1144,7 @@ var makeBadgeEntityID = 'opPKYN_pQFi6UWl1Q_aT5Q';
 <!--If I were editing this for my pythonTest repository, I'd rename this variable to be `pythonBadgeEntityID` and then swap it out with the `makeBadgeEntityID` name throughout the rest of the code. In addition, I'd need to find the entity ID that corresponds to the python badge. To find this out, download the badgeAPI.js file onto your local machine, copy `console.log(JSON.stringify(JSON.parse(xhr.responseText),null,'\t'))` onto line 103 of the code, comment out the issueAssertionToTestUser() function, and then make additional edits so that you can run the getBadgeClassInformation() function with the `computingBootCampId` variable as the `issuerID` parameter. Now, if you run the code with the username and password for the BYU Computing Boot Camp Badgr account (contact Daniel Butterfield in Professor Mangelson's lab for access to this information), you'll get to see information on all of the badges currently in the Badgr issuer.
  -->
 
-To get the ID of the badge you want to reward, go to the Badgr page for the badge. The URL for the page will be of the form "https://badgr.com/public/badges/&lt;BadgeEntityId>", so just copy the slug from the URL and past it into this spot.
+To get the ID of the badge you want to reward, go to the Badgr page for the badge. The URL for the page will be of the form "https://badgr.com/public/badges/&lt;BadgeEntityId>", so just copy the slug from the URL and paste it into this spot.
 
 <img src = "{% link media/testDocumentation/BadgeIDInURL.png %}" width="900">
 
