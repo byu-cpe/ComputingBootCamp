@@ -1,0 +1,35 @@
+All Items:
+red apples x15 = $3.75
+1.00 lb bread x1 = $2.00
+orange oranges x1 = $32.00
+green cucumbers x12 = $12.00
+brown potatoes x2 = $1.00
+green apples x15 = $3.75
+yellow lemons x1 = $32.00
+green spinach x12 = $12.00
+0.75 lb cereal x3 = $6.00
+red beets x2 = $0.20
+yellow apples x15 = $3.75
+orange oranges x1 = $32.00
+green lettuce x12 = $12.00
+Total $152.45
+
+Grains:
+1.00 lb bread x1 = $2.00
+0.75 lb cereal x3 = $6.00
+Total $8.00
+
+Produce:
+red apples x15 = $3.75
+orange oranges x1 = $32.00
+green cucumbers x12 = $12.00
+brown potatoes x2 = $1.00
+green apples x15 = $3.75
+yellow lemons x1 = $32.00
+green spinach x12 = $12.00
+red beets x2 = $0.20
+yellow apples x15 = $3.75
+orange oranges x1 = $32.00
+green lettuce x12 = $12.00
+Total $144.45
+

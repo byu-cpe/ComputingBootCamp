@@ -79,6 +79,60 @@ On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded 
 * Latex run and preview
 * Run on save
 * Package recommendations
+### Setting up Debugger 
+Properly configured VS code can run a debugger allowing you to step through and inspect your code. A brief explanation of the setup and use of the debugger is given below with a focus on C++ and Python. An extremely detailed explanation of all of the available features and settings can be found [here](https://code.visualstudio.com/docs/editor/debugging).
+
+All launch configurations are stored in a file named launch.json in the .vscode folder. If your workspace does not yet have a launch.json file, create one by going to the debug tab and select creat a launch.json file. After a launch.json file has been created, you can add configurations either by manually typing them in or by selecting the add configuration button. This will allow you to choose from a number of preset configurations (based on your installed extensions) that you can then edit for your specific application. Note: many languages have both a launch and attach preset. In most cases, you will want launch as attach does not start an application it merely debugs an already running one. 
+
+Settings that are common to most language configurations include the following
+* `"name"`
+    * This is the name that will be displayed in VS code for the configuration
+* `"type"`
+  * this denotes the language of the code.
+* `"request"`
+  * Either `"launch"` or `"attach`. Launch will start the program attach merely connects to an already running proccess
+* `"program"`
+  * The path to the script or executable
+* `"cwd"`
+  * The directory your code will be executed in.
+* `"args"`
+  * The arguments to be passed to your program
+
+Two useful variables that can be used in the settings are `${file}` which holds the path to the currenly open file. And `${workspaceFolder}` which refers to the root folder of your workspace. 
+#### C/C++
+Below is a simple example configuration for C or C++.
+```
+{
+    "name": "(gdb) Launch",
+    "type": "cppdbg",
+    "request": "launch",
+    "program": "${workspaceFolder}/main",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${workspaceFolder}",
+    "MIMode": "gdb"
+}
+```
+The two settings specific to C/C++ is `"type"` and `"MIMode"`. The type is set to `"cppdbg"` to indicate the language being used is either C or C++. `"MIMode"` is set to `"gdb"` to indicate that we want to debug using gdb. If you are using a Mac, you may need to change this to `"lldb"` as that is the debugger that is by default installed. 
+
+Also notice that program points to a compiled executable, not to the source code. You must compile your C/C++ code before launching.
+
+Additional C/C++ settings can be found [here](https://code.visualstudio.com/docs/cpp/launch-json-reference).
+
+#### Python
+Below is a simple example configuration for Python.
+```
+{
+    "name": "Python: Current File",
+    "type": "python",
+    "request": "launch",
+    "program": "${file}"
+}
+```
+This example is quite simple. The program type of python is specified and program is indicated by `${file}`. This means that this configuration will run and debug whichever python file we currently have open. If that is desired `${file}` can be replaced with the path to a specific file. 
+
+Additional information on Python-specific debugging can be found [here](https://code.visualstudio.com/docs/python/debugging).
+
 
 ### Formatting Code
 VS Code provides the ability to format your code automatically. Depending on the language of your code a formatter may be already available for others you may need to install one. Once a formatter is installed it can be configured to format on save. Some languages and formatters also all formatting on paste or formatting when line is completed. You can manually format the code using the keystroke `Ctrl+Shift+I`. If you choose to use a formatter make sure your formatter and settings match those of the project you are working on.
@@ -133,6 +187,17 @@ There are a multitude of extensions for VS Code. Which to install will depend bo
 * [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
   * Allows easy integration with Docker
 
+## Activities 
+Bellow are several activities that might help you familiarize yourself with VS Code
+### Configure the settings
+Create a test project or open an existing one and setup VS Code's settings to fit. Try to setup the formatter and the debugger.
+
+### Try the debugger
+Try to debug a program in VS Code. Clone the Bootcamp repository and use the VS Code debugger to find the errors in the VS Code example untill you can get the expected output.
+
+
+## Additional resource
+VS Code has extensive tutorials and documentation. Below is a list of pages on key topics. Links to specific topics were included as part of the various tips. The full document can be found [here](https://code.visualstudio.com/docs)
 
 <!---
 ## Faculty Brainstorming 
