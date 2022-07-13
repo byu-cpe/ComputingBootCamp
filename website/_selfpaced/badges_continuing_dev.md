@@ -3,8 +3,7 @@ layout: page
 toc: false
 title: Badge Development
 slug: badges_dev
-type: broader_impacts
-order: 2
+type: resources
 ---
 
 Badges are one of the core elements of the BYU Computing Boot Camp. They motivate those who use our site to put their newly-learned skills to the test by attempting a 

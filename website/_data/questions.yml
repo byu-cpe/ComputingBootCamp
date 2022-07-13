@@ -1,8 +1,3 @@
-
-# Current id index: 14
-# When making a new question, use the above id number and then 
-# increment it.
-
 # copy and paste the following within your page, substituting your id
 # {% include quizzes.html id=1 %}
 
@@ -147,7 +142,7 @@
   type: matching
   help: Use git log --help
   responses:
-    - text: --(number)
+    - text: -(number)
       correct: Limit the number of commits to output
     - text: --reverse
       correct: Output the commits chosen to be shown in reverse order
