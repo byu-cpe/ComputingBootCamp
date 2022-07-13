@@ -177,7 +177,13 @@ For a followup activity, read more about the following topics and experiment wit
 * Plotting/visualization <https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html>
 * Statistical tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/computation.html>
 
-## Helpful Links
+## Conclusion
+Packages are a large part of why python is such an important tool. Numpy, pandas, and matplotlib are just a few of the packages that you will undoubtably use throughout your career. Between the three packages, there is a lot to learn and remember. Below is a list of links to quickly reference for help with a variety of functions.
+* Numpy Reference - <https://numpy.org/doc/stable/reference/index.html#reference>
+* Matplotlib Reference - <https://matplotlib.org/stable/api/index.html>
+* Pandas Reference - <https://pandas.pydata.org/docs/reference/index.html>
+
+## Other Helpful Links
 
 * BYU ACME Tutorials - <https://foundations-of-applied-mathematics.github.io/>
 * Numpy Docs - <https://numpy.org/doc/stable/>
