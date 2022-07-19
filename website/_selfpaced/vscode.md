@@ -39,33 +39,39 @@ On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded 
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
 
-**Tutorial Topics**:
-  * Take a tour: (3:24)
-    * Opening Files (5:12)
-      * File vs Folder vs Workspace
-      * Reload workspace (Ctrl+R)
-      * Open file (Ctrl+P)      
-    * Viewing files (11:05)
-      * Split views
-      * File previews (markdown)
-    * Working with code: (13:59)
-      * Syntax highlighting 
-      * Autocomplete
-      * Auto parameters
-    * Sidebar (19:33)
-    * Terminal (and multiple terminals)  (21:20)
-  * Extensions    (22:22)
-  * Remote Access (SSH) (27:20)
-  * Settings (32:46)
-    * How to access JSON settings
-    * User vs Workspace settings 
-    * Extension settings     
-    * Settings Sync
-  * Launch Configurations (Debugging) (40:45)
-  * Tasks (46:51)
-  * Github / Pull Request Integrations (49:00)
-  * Git Integrations (51:22)
-  * Package recommendations (53:25)
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=KetWeah5Z9A&t=0s) Introduction<br>
+[3:24](https://www.youtube.com/watch?v=KetWeah5Z9A&t=204s) Take a tour<br>
+[5:12](https://www.youtube.com/watch?v=KetWeah5Z9A&t=312s) Opening files
+  * File vs Folder vs Workspace
+  * Reload workspace (Ctrl+R)
+  * Open file (Ctrl+P)
+
+[11:05](https://www.youtube.com/watch?v=KetWeah5Z9A&t=665s) Viewing files
+  * Split views
+  * File previews (Markdown)
+
+[13:59](https://www.youtube.com/watch?v=KetWeah5Z9A&t=859s) Working with code
+  * Syntax highlighting
+  * Autocomplete
+  * Auto parameters
+
+[19:33](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1173s) Sidebar<br>
+[21:20](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1280s) Terminals<br>
+[22:22](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1342s) Extensions<br>
+[27:20](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1640s) Remote access (SSH)<br>
+[32:46](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1966s) Settings
+  * How to access JSON settings
+  * User vs Workspace settings
+  * Extension settings
+  * Settings Sync
+
+[40:45](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2445s) Launch Configurations (Debugging)<br>
+[46:51](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2811s) Tasks<br>
+[49:00](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2940s) GitHub/Pull Request Integrations<br>
+[51:22](https://www.youtube.com/watch?v=KetWeah5Z9A&t=3082s) Git Integrations<br>
+[53:25](https://www.youtube.com/watch?v=KetWeah5Z9A&t=3205s) Package recommendations
  
 ## VS Code Tips
 * Settings:
