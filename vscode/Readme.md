@@ -1,0 +1,2 @@
+# VS debugger example
+This contains a python and a c++ program. Both have slight errors. Use the VS code debugger to locate and fix them until your output file matches the expected output with the given input file
