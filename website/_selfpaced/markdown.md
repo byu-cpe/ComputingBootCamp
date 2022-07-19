@@ -14,11 +14,11 @@ Markdown is useful for taking notes and is frequently used in GitHub repositorie
 ```
 This is how you make words **bold** 
 and other words *italic* with Markdown. 
-And this is how you make a [link to Google!](http://google.com)
+And this is how you make a [link to Google!](https://google.com)
 ```
 This is how you make words **bold** 
 and other words *italic* with Markdown. 
-And this is how you make a [link to Google!](http://google.com)
+And this is how you make a [link to Google!](https://google.com)
 
 ***
 
@@ -71,11 +71,11 @@ this is normal text
 
 ## Links
 ```
-http://github.com - automatic!
-[GitHub](http://github.com)
+https://github.com - automatic!
+[GitHub](https://github.com)
 ```
-http://github.com - automatic!
-[GitHub](http://github.com)
+https://github.com - automatic!
+[GitHub](https://github.com)
 
 ***
 

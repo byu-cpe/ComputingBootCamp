@@ -54,8 +54,8 @@ Below are some other helpful commands to be used:
   - <a hreg="https://www.mathworks.com/help/matlab/ref/edit.html" target="_blank">edit</a>
 
 Below are some other helpful resources for beginners to Matlab:
-  - <a href="http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf" target="_blank">Introduction to Matlab</a>
-  - <a href="http://www.cs.cmu.edu/~tom/10601_fall2012/recitations/matlab_quickref.pdf" target="_blank">MATLAB Quick Reference</a>
+  - <a href="https://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf" target="_blank">Introduction to Matlab</a>
+  - <a href="https://www.cs.cmu.edu/~tom/10601_fall2012/recitations/matlab_quickref.pdf" target="_blank">MATLAB Quick Reference</a>
 
 {% include quizzes.html id=31 %}
 
@@ -169,7 +169,7 @@ Using one of the [other surface and mesh plots](https://www.mathworks.com/help/m
 
 Learn more about plotting in Matlab:
   - [MathWorks plot Help Center](https://www.mathworks.com/help/matlab/ref/plot.html)
-  - [BYU ECEn 240 Matlab Intro](http://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf)
+  - [BYU ECEn 240 Matlab Intro](https://ecenmatlab.groups.et.byu.net/lib/exe/fetch.php?media=240matlab:ch0:matlab_intro.pdf)
   - [Tutorialspoint Matlab Plotting](https://www.tutorialspoint.com/matlab/matlab_plotting.htm)
   - [Create the MATLAB logo](https://www.mathworks.com/help/matlab/visualize/creating-the-matlab-logo.html)
 

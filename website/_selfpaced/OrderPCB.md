@@ -100,7 +100,7 @@ We usually order parts from these suppliers:
   
 ### Professional PCB Assembly
 
-We have not actually submitted a PCB for assembly. We have, however, investigated the process. We have contact with Pat Farnell (pat@aapcb.com) from [Advanced Assembly](http://aapcb.com). To do an assembly you need the following files:
+We have not actually submitted a PCB for assembly. We have, however, investigated the process. We have contact with Pat Farnell (pat@aapcb.com) from [Advanced Assembly](https://aapcb.com). To do an assembly you need the following files:
 
 - Bill of Materials
 - XYRS - X position, Y position, Rotation, Side

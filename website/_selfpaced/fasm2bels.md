@@ -21,7 +21,7 @@ Before you begin, make sure you have Python3.7 or later, and the python3-virtual
 
 1. Follow the instructions to install RapidWright [here](https://github.com/Xilinx/RapidWright)
 
-        wget http://www.rapidwright.io/docs/_downloads/rapidwright-installer.jar
+        wget https://www.rapidwright.io/docs/_downloads/rapidwright-installer.jar
         java -jar rapidwright-installer.jar -t
         source rapidwright.sh
 

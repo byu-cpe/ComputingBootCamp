@@ -211,7 +211,7 @@ This concludes our module about Documentation and Sphinx. For more information c
 
 * Go through the different RST functions in the [sphinx guide](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html) and pick a few that interest you. Incorporate this functionality into your documentation.
 * Go to [Symbiflow.readthedocs.io](https://symbiflow-examples.readthedocs.io/en/latest/) and look at the RST that the webpage is written in by clicking on **Show Source** in the top right hand corner of each page. Try to incorporate a few of the design techniques into your own documentation.
-* Sphinx uses *alabaster* as the default theme of its webpage. Learn how to change the theme of your webpage by following [this link](https://www.sphinx-doc.org/en/master/usage/theming.html#:~:text=%20These%20themes%20are%3A%20%201%20nosidebar%20%28true,6%20linkcolor%207%20visitedlinkcolor%208%20admonitioncolor%20More%20).
+* Sphinx uses *alabaster* as the default theme of its webpage. Learn how to change the theme of your webpage by following [this link](https://www.sphinx-doc.org/en/master/usage/theming.html).
 * Learn about [doctest](https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html) and try adding a few tests to your code using sphinx.
 
 ### **Additional resources**
