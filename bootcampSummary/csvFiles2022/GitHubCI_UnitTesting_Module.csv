@@ -1,0 +1,23 @@
+Name, Net ID, Homework ID, Score, Percent, Attempt,Q1,Q2,Q2 Score,Q3,Q3 Score
+Prompt, ***, ***, , , ,"" (True/False),"" (Fill-in-the-blank),,"" (Open response),
+Key, ***, ***, , , ,A,0:<=:<=:100, 1,  , 1
+Type, ***, ***, , , ,True/False, Numeric Range             ,, Long Text             ,
+
+
+Daniel Ross,djr86,D597FC77F,2,66.67,1,A,"1.25",1,"",0,
+Preston Walker,plwalker,FBAAEB979,3,100,1,A,"1",1,"There weren't realy any activities for the module. It would be nice to have some suggestions to practice.",1,
+Samuel Reynolds,samuel51,222760FB2,3,100,1,A,"1",1,"The page getting more content/activities would be good. It currently doesn't seem to be finished. Good content, but it needs more.",1,
+Garrett Smith,gs285,29D695F7A,2,66.67,1,A,"1.5",1,"",0,
+Jake Edvenson,edvenson,0EB535295,3,100,1,A,"2.5",1,"In contrast with the numpy section, this one needs some activities to complete.",1,
+Tyler Ricks,rickstr,B8F051F0F,3,100,1,A,"1.5",1,"This was a great tutorial to pytest and google test.",1,
+Zachary Driskill,zd227,16DD161F0,3,100,1,A,"1",1,"You should provide some sample code for us to write tests for",1,
+Zephram Tripp,ztripp,401DDB8D5,3,100,1,A,"2",1,"Add stuff to do.",1,
+Jeremy Read,jr656,A1E731722,3,100,1,A,"2",1,"NA",1,
+Julia Hansen,jh2459,32464F09E,3,100,1,A,"3",1,"none",1,
+Benjamin Broce,benbroce,005A6C806,3,100,1,A,"3",1,"Very helpful",1,
+Ethan Monlux,emonlux,3A2306ADC,2,66.67,1,A,"2.5",1,"",0,
+Jacob Hansen,jacobqh,7FB04465B,3,100,1,A,"4",1,"none",1,
+Josh Hanni,jsh5674,5495C1089,3,100,1,A,"1",1,"I think there were just videos for this module, so it would be great to have some follow-up activities.",1,
+Camille Wirthlin,cwirthl2,9AA9878EF,3,100,1,A,"2",1,"I've had background with C++ google testing before, so I found it very helpful to learn how to test code in python. I also found it very interesting to see the application of testing and how it can be implemented with Github. I didn't understand that part very well, but found it useful to see the applicability of it and made me want to spend more time creating tests for my github repositories in the future.",1,
+Jon Backman,backmanj,4CF9FBD38,2,66.67,1,A,"1",1,"",0,
+Pablo Lopez Medina,palm9727,35EDD6643,3,100,1,A,"2",1,"Some activities could be added to it.",1,

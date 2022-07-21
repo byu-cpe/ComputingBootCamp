@@ -1,0 +1,28 @@
+Name, Net ID, Homework ID, Score, Percent, Attempt,Q1,Q2,Q2 Score,Q3,Q3 Score
+Prompt, ***, ***, , , ,"" (True/False),"" (Fill-in-the-blank),,"" (Open response),
+Key, ***, ***, , , ,A,0:<=:<=:100, 1,  , 1
+Type, ***, ***, , , ,True/False, Numeric Range             ,, Long Text             ,
+
+
+Daniel Ross,djr86,D597FC77F,3,100,1,A,"3",1,"None",1,
+Preston Walker,plwalker,FBAAEB979,3,100,1,A,"2.5",1,"I liked the module. No suggestions.",1,
+Wesley Collyer,wc237,8CA9B6796,2,66.67,1,B,"1",1,"I attended the lecture.",1,
+Samuel Reynolds,samuel51,222760FB2,3,100,1,A,"1.5",1,"It was good to revisit old virtual environments I made last year. Activities are good, maybe a quiz or two added to the page for more practice.",1,
+Ethan Campbell,camp1539,F726A0437,2,66.67,1,A,"4",1,"",0,
+Garrett Smith,gs285,29D695F7A,2,66.67,1,A,"2",1,"",0,
+Jake Edvenson,edvenson,0EB535295,3,100,1,A,"7",1,"I think this module has too much information compared to other ones. In some ways, it feels overwhelming.",1,
+Carter Pollan,cjp82,3303BC89D,3,100,1,A,"6",1,"Honestly I still don't feel like I all the way understand this",1,
+Tyler Ricks,rickstr,B8F051F0F,3,100,1,A,"1.5",1,"Very good intro to python virtual environments.",1,
+Zachary Driskill,zd227,16DD161F0,3,100,1,A,"3",1,"very helpful module with in depth directions and disctussions",1,
+Zephram Tripp,ztripp,401DDB8D5,3,100,1,A,"3",1,"This one seems like it will be really useful. I especially like how so much of the lecture content was written on the page as well, so I wasn't relying on the lecture to go back and relearn things.",1,
+Jeremy Read,jr656,A1E731722,3,100,1,A,"3",1,"Great",1,
+Julia Hansen,jh2459,32464F09E,3,100,1,A,"3",1,"none",1,
+Benjamin Broce,benbroce,005A6C806,3,100,1,A,"3",1,"Very helpful, as my project (VTR) uses lots of Python packages and a virtual environment.",1,
+Ethan Monlux,emonlux,3A2306ADC,2,66.67,1,A,"1.5",1,"",0,
+Weston Smith,wms29,C2ADACA21,2,66.67,1,A,"2",1,"",0,
+Jacob Hansen,jacobqh,7FB04465B,3,100,1,A,"4",1,"none",1,
+Josh Hanni,jsh5674,5495C1089,3,100,1,A,"5",1,"I also want to point out that I did the three modules before this but forgot to do it on Learning Suite. I would love to still get credit for those if at all possible.",1,
+Camille Wirthlin,cwirthl2,9AA9878EF,3,100,1,A,"2",1,"It was well explained and clear. I now use python environments for every project. It was very helpful and very useful.",1,
+Jon Backman,backmanj,4CF9FBD38,3,100,1,A,"2",1,"I wish that we had spent a little more time in explaining why virtual environments are important. For me that wasn't really emphasized and I was confused for a long time during the video and the lecture. Besides that it was good and informational.",1,
+Pablo Lopez Medina,palm9727,35EDD6643,3,100,1,A,"4",1,"I think it is great the wat it is.",1,
+Preston Draper,dp166231,BD0FE6359,0,0,1, ,"",0,"",0,

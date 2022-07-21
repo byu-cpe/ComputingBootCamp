@@ -1,0 +1,27 @@
+Name, Net ID, Homework ID, Score, Percent, Attempt,Q1,Q2,Q2 Score,Q3,Q3 Score
+Prompt, ***, ***, , , ,"" (True/False),"" (Fill-in-the-blank),,"" (Open response),
+Key, ***, ***, , , ,A,0:<=:<=:100, 1,  , 1
+Type, ***, ***, , , ,True/False, Numeric Range             ,, Long Text             ,
+
+
+Daniel Ross,djr86,D597FC77F,3,100,1,A,"1.2",1,"I just need to spend some more time practicing. It was great!",1,
+Preston Walker,plwalker,FBAAEB979,3,100,1,A,"3.5",1,"There were lots of things to watch/read, but it didn't feel like there were lots of activities to practice.",1,
+Samuel Reynolds,samuel51,222760FB2,3,100,1,A,"1",1,"A quiz and resulting badge just like the Make module has would be good!",1,
+Ethan Campbell,camp1539,F726A0437,3,100,1,A,"5",1,"I personally had a hard time following the video for this module. I think it might be because the terminals were very messy. That might just be me though.",1,
+Garrett Smith,gs285,29D695F7A,2,66.67,1,A,"1.5",1,"",0,
+Jake Edvenson,edvenson,0EB535295,3,100,1,A,"4",1,"None",1,
+Benjamin Havens,bhavens,A9A68E839,0,0,1, ,"",0,"",0,
+Carter Pollan,cjp82,3303BC89D,3,100,1,A,"3",1,"Cmake is much more convineint then make",1,
+Tyler Ricks,rickstr,B8F051F0F,3,100,1,A,"3",1,"This tutorial provided plenty of information on cmake, which I liked.",1,
+Zachary Driskill,zd227,16DD161F0,3,100,1,A,"3",1,"it was pretty good",1,
+Zephram Tripp,ztripp,401DDB8D5,3,100,1,A,"5",1,"I think it was good.",1,
+Jeremy Read,jr656,A1E731722,3,100,1,A,"2",1,"Still confused, but I will keep reviewing as I need it in my research this summer",1,
+Julia Hansen,jh2459,32464F09E,2,66.67,1,A,"4",1,"",0,
+Benjamin Broce,benbroce,005A6C806,3,100,1,A,"3",1,"Great resources and talk, I look forward to using this in practice.",1,
+Jared Robinson,jaredcr2,3705AE759,3,100,1,A,"3",1,"It was good.",1,
+Ethan Monlux,emonlux,3A2306ADC,0,0,1, ,"",0,"",0,
+Weston Smith,wms29,C2ADACA21,3,100,1,A,"2",1,"The beginning of the video was new and I learned something but definitely caused me to be zoned out by the time it began to cover cmake. I enjoyed the live lecture more.",1,
+Jacob Hansen,jacobqh,7FB04465B,3,100,1,A,"4",1,"none",1,
+Josh Hanni,jsh5674,5495C1089,3,100,1,A,"4",1,"I really liked this module.",1,
+Jon Backman,backmanj,4CF9FBD38,3,100,1,A,"2",1,"The video was a little confusing but Dr Goeders helped clarify some things for during the lecture hour. I like Cmake more than make.",1,
+Pablo Lopez Medina,palm9727,35EDD6643,3,100,1,A,"4",1,"There is a lot of material to learn many things about cmake.",1,
