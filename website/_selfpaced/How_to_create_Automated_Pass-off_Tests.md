@@ -1107,14 +1107,17 @@ An example use of this code would be `node .cbc/triggerRunForAllPRs.js ${ secret
 
 Due to the specific functionality of this javascript file, you'll only want to use it in the triggerPRruns.yml file, in order to avoid creating an infinite loop.
 
-## Creating an automated pass-off test
+## Creating an automated pass-off test (Automated Setup)
+The easiest way to make a new pass-off test is using our modelTest git repository. You'll need to login to GitHub as the BYUComputingBootCampTests user. You can get the email and password from Zephram Tripp. Then open up [this page](https://github.com/BYUComputingBootCampTests/modelTest/blob/main/HowToUse.md) and follow the instructions to make a repo from the model. The manual setup instructions are preserved below in case you find the automated setup doesn't work for you.
+
+## Creating an automated pass-off test (Manual Setup)
 Alright, now it's time to make a completely new pass-off test! I'll walk through it step-by-step as much as I can, however due to the fact that many of the tests will have to vary significantly according to the subject matter being tested, some sections will be up to your creative vision.
 
 The first step is to make a new repository on GitHub for this new automated pass-off test. Login to GitHub as the BYUComputingBootCampTests user. You can get the email and password from Daniel Butterfield (who is currently working in Professor Mangelson's lab). Create a new public repository, and give it the name of the subject matter being tested, followed by "Test". For example, if I wanted to make an automated test for the Python sub-module, I would name my repository "pythonTest".
 
 After creating the repository, copy over the .github and .cbc folders from the makeTest repository into this one, so that you can re-use a lot of the same code. Also, copy over the .gitignore file, the email.txt file, and the README.md file. There are edits that you'll have to make to a lot of these files so that they work in the new repository and a lot of settings to configure. I'll go through them one by one:
 
-### Repository Settings/Secrets
+### Repository Settings/Secrets (Manual Setup)
 These are the changes that you'll need to make to the repository itself for the workflow files to run at all. 
 
 First, make sure that the branch name of the repository is called "main" instead of "master". Look-up how to change this if it isn't.
