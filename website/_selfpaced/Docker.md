@@ -84,6 +84,11 @@ Commands:
 
 ## Conclusion
 Docker is a powerful tool for developers to build, ship, and run applications. You can stage a standardized environment that can be easily set up and used across an organization, or a team of developers. It is excellent for finding and fixing bugs. You can execute the testing of an application in a Docker container, then make edits and relaunch your design when bugs are identified. This provides quick verification of your fixes and leads to an efficient developement process. Updates are then easy to distribute by pushing your new docker image to the production environment. The ability to easily set up isolated environments is perfect for use in continuous integration and continous deployment. There is also a wide variety of docker images and applications that you can take advantage of as a user. Check out some of these examples:  
+ - [Plex](https://hub.docker.com/r/linuxserver/plex) media server
+ - [Home Assisntant](https://hub.docker.com/r/homeassistant/home-assistant)
+ - [Handbrake](https://hub.docker.com/r/jlesage/handbrake) digital video transcoder
+ - [Unifi](https://hub.docker.com/r/linuxserver/unifi) WiFi managemer
+ - [Watchtower](https://hub.docker.com/r/containrrr/watchtower) automates updates to docker images
 
 ## Activities
  - Run your csv_parser.py program in a docker container (you will need to create a container using -v to have the files you need)
