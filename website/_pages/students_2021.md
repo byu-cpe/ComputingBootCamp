@@ -14,7 +14,7 @@ title: 2021 Students
 ### Wirthlin
 * [Ben Glines](https://benglines.github.io/immerse-website/pages/log/)
 * [Jackson Smith](https://rjsmith1999.github.io/IMMERSE/pages/log/)
-* [Jordi Ramos](https://jordi1215.github.io/pages/log)
+* Jordi Ramos <!-- link was https://jordi1215.github.io/pages/log-->
 * [Garrett Westover](https://garrettxw.github.io/garrettx/pages/log)
 * [Cody Arvonen](https://codyarvonen.github.io/personal_website/)
 * [Jacob Brown](https://jacobdbrown4.github.io/jacob_brown//pages/log/)
