@@ -57,9 +57,17 @@ Once you feel more confident:
 - Fork an interesting repo
 - Submit a pull request to an open-source project
 
-<!--
-TO DO ## Certify Your Skills 
--->
+## Certify Your Skills
+<a href="https://badgr.com/public/badges/MnrvOXV8QpC2VOYcgVTOlQ"><img src="https://api.badgr.io/public/badges/MnrvOXV8QpC2VOYcgVTOlQ/image" alt="GitHub Badge" width="250"/></a>
+
+For those who believe they have mastered GitHub, we present the GitHub badge! This badge can be viewed in its entirety on Badgr.com here: [GitHub Badge](https://badgr.com/public/badges/MnrvOXV8QpC2VOYcgVTOlQ). The GitHub badge can be used to prove your GitHub knowledge to potential employers, educational institutions, or anyone else! To earn it, you'll have to complete the GitHub test and use your knowledge to perform GitHub commands for various situations. Attempt the GitHub test and earn the GitHub badge with the button below! The badging process is still under construction, so make sure to let us know if something doesn't work or make sense.
+
+<div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/githubTest'">
+    <p class="activity-label h3-clone">EARN THE GITHUB BADGE</p>
+    <p class="dropdown-arrow h3-clone">&#9654;</p>
+</div>
+
+Good luck to those who attempt the test, and if you pass, congratulations! You are now certified in GitHub by the BYU Computing Boot Camp.
 
 ## Additional Resources
 Here is a [Powerpoint](../../media/Github_Actions.pptx) briefly discussing GitHub Actions
