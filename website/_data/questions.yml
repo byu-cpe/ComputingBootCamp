@@ -349,5 +349,24 @@
     - text: target_link_directories()
       correct: Specifies the paths in which the linker should search for libraries when linking a given target.  
     - text: target_compile_features()
-      correct: Specifies compiler features required when compiling a given target.          
-    
+      correct: Specifies compiler features required when compiling a given target.   
+
+
+
+# --------------------------- Activities for OpenSource.md ---------------------------------
+- id: 130
+  prompt: I can do anything I want with Open Source Software
+  type: multiple_choice
+  responses:
+    - text: "true"
+    - text: "false"
+      correct: true
+
+- id: 131
+  prompt: When creating my own open sourc project, I should
+  type: multiple_choice
+  responses:
+    - text: "use an existing licence"
+      correct: true
+    - text: "create my own licence"
+    - text: "not use a licence"
