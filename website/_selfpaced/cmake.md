@@ -101,6 +101,18 @@ To do this you will need to play around with and understand the PUBLIC and PRIVA
 
 * Play around with introducing dependencies between libraries that are or are not needed by targets further up the chain.
 
+## Certify Your Skills
+<a href="https://badgr.com/public/badges/dHgXDlBtTCa1Re-LwGo5pw"><img src="https://media.badgr.com/uploads/badges/060b773b-bd5c-48b0-82e3-68af87eabf0f.png" alt="CMake Badge" width="250"/></a>
+
+For those who believe they have mastered CMake, we present the CMake badge! This badge can be viewed in its entirety on Badgr.com here: [CMake Badge](https://badgr.com/public/badges/dHgXDlBtTCa1Re-LwGo5pw). The CMake badge can be used to prove your CMake files knowledge to potential employers, educational institutions, or anyone else! To earn it, you'll have to complete the CMake test and use your knowledge to write CMake files for varying situations. Attempt the CMake test and earn the CMake badge with the button below!
+
+<div class="collapsible" onclick="location.href='https://github.com/BYUComputingBootCampTests/cmakeTest'">
+    <p class="activity-label h3-clone">EARN THE CMAKE BADGE</p>
+    <p class="dropdown-arrow h3-clone">&#9654;</p>
+</div>
+
+Good luck to those who attempt the test, and if you pass, congratulations! You are now certified in CMake by the BYU Computing Boot Camp.
+
 # Advanced (But Essential) Topics
 
 ## Learn about Modern CMake
