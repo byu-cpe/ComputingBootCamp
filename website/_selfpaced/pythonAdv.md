@@ -12,17 +12,17 @@ On May 14, 2021 Prof Mangelson gave a tutorial on how to use the Numpy, Pandas, 
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/hdDKcOLD-5M"> </iframe> 
 
-### Video Timestamps
+### Timestamps
 
-* Installation
-* numpy - 2:29
-  * Creating a numpy array - 3:46
-  * Array indexing - 9:28
-  * Array operations - 12:16
-* matplotlib - 26:42
-  * General graphing - 27:55
-  * Other types of plots - 38:32
-* pandas - 48:39
+[0:00](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=0s) Installation of various packages<br>
+[2:29](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=149s) Introduction to NumPy<br>
+[3:46](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=226s) Creating a NumPy array<br>
+[9:28](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=568s) Array indexing<br>
+[12:16](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=736s) Array operations<br>
+[26:42](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=1602s) Introduction to Matplotlib<br>
+[27:55](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=1675s) General graphing<br>
+[38:32](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=2312s) Other types of plots<br>
+[48:39](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=2919s) pandas
 
 ## Overview
 
