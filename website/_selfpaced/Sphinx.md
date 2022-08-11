@@ -12,6 +12,19 @@ On May 19, 2021 Prof Wirthlin discussed how to set up Sphinx and how to document
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/hOC9g8ZV5VA"> </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=0s) Introduction and documentation discussion<br>
+[6:56](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=416s) Creating documentation from source code<br>
+[12:08](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=728s) Introduction to Sphinx<br>
+[13:17](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=797s) The Python Docstring<br>
+[18:52](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=1132s) Installation and setup of Sphinx<br>
+[25:34](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=1534s) Customizing your Sphinx output<br>
+[34:34](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=2074s) Example project<br>
+[41:35](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=2495s) Read the Docs<br>
+[44:10](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=2650s) Alternatives to restructured text<br>
+[48:10](https://www.youtube.com/watch?v=hOC9g8ZV5VA&t=2890s) Pylint
+
 ## Introduction and Installing Sphinx
 
 Sphinx is a very powerful tool that allows you to automatically generate documentation for your code. It works with a variety of different coding languages (not just python) and also allows you to generate html websites from restructured text.
