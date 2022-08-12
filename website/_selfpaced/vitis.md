@@ -12,6 +12,14 @@ On June 21, 2021 we had a Vivado Vitis Tutorial by Prof Goeders. The video is em
 
 <iframe width="800" height="600" src="https://www.youtube.com/embed/suO89IG7Mho"> </iframe> 
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=suO89IG7Mho&t=0s) Introduction<br>
+[8:44](https://www.youtube.com/watch?v=suO89IG7Mho&t=524s) Introduction to block design and hardware configuration<br>
+[29:34](https://www.youtube.com/watch?v=suO89IG7Mho&t=1774s) Preparing and generating a bitstream<br>
+[42:58](https://www.youtube.com/watch?v=suO89IG7Mho&t=2578s) Introduction to Vitis and exporting from Vivado<br>
+[47:52](https://www.youtube.com/watch?v=suO89IG7Mho&t=2872s) Example Vitis project
+
 ## Create Vitis Projects
 
 Run Vitis (`vitis`), and choose a workspace location. I used _lab_vitis/sw_ for my workspace location.
