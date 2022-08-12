@@ -11,6 +11,16 @@ On May 26, 2021 Prof Nelson discussed how to use TCL in Vivado. The video is emb
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/dk7wFKXoMcg"> </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=dk7wFKXoMcg&t=0s) Introduction<br>
+[5:46](https://www.youtube.com/watch?v=dk7wFKXoMcg&t=346s) Driving Vivado using TCL<br>
+[11:44](https://www.youtube.com/watch?v=dk7wFKXoMcg&t=704s) Compiling a design<br>
+[22:12](https://www.youtube.com/watch?v=dk7wFKXoMcg&t=1332s) Design analysis<br>
+[28:46](https://www.youtube.com/watch?v=dk7wFKXoMcg&t=1726s) Properties<br>
+[31:10](https://www.youtube.com/watch?v=dk7wFKXoMcg&t=1870s) Demo: Mixing TCL and the GUI<br>
+[47:06](https://www.youtube.com/watch?v=dk7wFKXoMcg&t=2826s) Wrap-up and closing comments
+
 Tcl is a command language used in a variety of CAD tools.  Our interest in it is for use with Vivado - it is the scripting language that Vivado's command line capability is based on.  Using it you can do 2 main things:
 
 1. Write scripts to automate the processes we typically used the Vivado GUI for.  These include design creation, synthesis, implementation, and bitstream generation.
