@@ -6,6 +6,11 @@ slug: vivado_tcl
 type: fpga_commercial
 order: 2
 ---
+## FPGA Overview
+On June 1, 2022 Professor Goeders gave an overview of FPGAs. The video is embedded below.
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/7SzrMFNLq8w"> </iframe>
+
 ## Lecture Video
 On May 26, 2021 Prof Nelson discussed how to use TCL in Vivado. The video is embedded below. 
 
