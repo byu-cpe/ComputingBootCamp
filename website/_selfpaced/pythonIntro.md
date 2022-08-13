@@ -54,6 +54,9 @@ On May 10th and 12th of 2021 we had an introduction to Python by Prof Lundrigan.
 [22:45](https://www.youtube.com/watch?v=sq0_nicEFH8&t=1365s) Introduction to requests<br>
 [28:30](https://www.youtube.com/watch?v=sq0_nicEFH8&t=1710s) Review of assignment and demos
 
+### Lecture 3 (2022)
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/C47CawwJ04k"> </iframe>
+
 {% include quizzes.html id=26 %}
 
 {% include quizzes.html id=27 %}
