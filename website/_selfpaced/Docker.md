@@ -4,7 +4,7 @@ toc: true
 title: Docker
 slug: docker
 type: development
-order: 12
+order: 13
 ---
 
 ## Docker
@@ -48,12 +48,14 @@ docker: Got permission denied while trying to connect to the Docker daemon socke
 ```
 If this happens, use the command `sudo chmod 666 /var/run/docker.sock` to change the permissions on the docker.sock file.
 
-## Lecture Video
+## Lecture Videos
+
+### Lecture 1
 On May 21, 2021 Prof Lundrigan discussed how to use Dockers. The video is embedded below. 
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/RP3QTEr58_Q"> </iframe>
 
-### Time Stamps
+#### Time Stamps
 
 [0:00](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=0s) Introduction<br>
 [1:20](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=80s) What is Docker?<br>
@@ -67,6 +69,11 @@ On May 21, 2021 Prof Lundrigan discussed how to use Dockers. The video is embedd
 [35:53](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=2153s) portainer<br>
 [40:15](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=2415s) Build and run image from Dockerfile<br>
 [46:24](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=2784s) Build Docker that runs as web app
+
+### Lecture 2
+On May 20, 2022 Professor Lundrigan gave another lecture on Docker. The video is below.
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/yB_D04Yt5P4"> </iframe>
 
 ## Docker Cheat Sheet
 Commands:  
