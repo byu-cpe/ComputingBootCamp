@@ -8,7 +8,13 @@ order: 10
 ---
 
 ## Lecture Videos
+On May 13th, 2022 Prof Goeders gave a lecture/tutorial on using Github CI and Unit Testing with GoogleTest and Pytest. The first video embedded below is the most recent video explaining these tools.
+
 On May 17, 2021 we had a Pytest Tutorial by Prof Goeders and a GoogleTest tutorial by Prof Mangelson. The videos are embedded below
+
+
+### Unit Testing Tutorial 2022
+<iframe width="800" height="600" src="https://www.youtube.com/embed/oPF25GoFIp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ### Pytest-for Python
