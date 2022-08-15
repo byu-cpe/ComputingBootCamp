@@ -23,6 +23,17 @@ On June 4, 2021, Professor Nelson gave an overview of the various repositories i
 src="https://www.youtube.com/embed/zNZND75nQ10"> 
 </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=zNZND75nQ10&t=0s) Overview of SymbiFlow/symbiflow-examples<br>
+[4:21](https://www.youtube.com/watch?v=zNZND75nQ10&t=261s) Overview of SymbiFlow/prjxray-bram-patch<br>
+[7:31](https://www.youtube.com/watch?v=zNZND75nQ10&t=451s) Introduction to FPGA Interchange Format<br>
+[12:06](https://www.youtube.com/watch?v=zNZND75nQ10&t=726s) Serialization<br>
+[20:11](https://www.youtube.com/watch?v=zNZND75nQ10&t=1211s) Overview of SymbiFlow/fpga-interchange-schema<br>
+[26:18](https://www.youtube.com/watch?v=zNZND75nQ10&t=1578s) Overview of SymbiFlow/python-fpga-interchange<br>
+[28:25](https://www.youtube.com/watch?v=zNZND75nQ10&t=1705s) VTR and SymbiFlow/vtr-verilog-to-routing<br>
+[30:19](https://www.youtube.com/watch?v=zNZND75nQ10&t=1819s) Closing discussion
+
 ## Follow-Up Activities
 
 There are instructions in the SymbiFlow Examples repository on how to build its sample designs manually. The process outlined is fully self-contained - you do not need anything else installed to run these designs - the instructions do it all. The best way to test it out is to simply copy the entire list of instructions and paste them into your terminal window.

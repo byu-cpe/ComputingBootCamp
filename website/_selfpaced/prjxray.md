@@ -65,6 +65,26 @@ On June 2, 2021, we had a lecture from Professor Nelson about Project X-Ray and 
 src="https://www.youtube.com/embed/6HGN8pQn_jA">
 </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=0s) Overview of open source software<br>
+[4:22](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=262s) Open source FPGA tools<br>
+[11:54](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=714s) VTR<br>
+[14:20](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=860s) Project IceStorm<br>
+[14:47](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=887s) SymbiFlow<br>
+[16:45](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=1005s) Introduction to Project X-Ray<br>
+[18:45](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=1125s) Nextpnr<br>
+[19:47](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=1187s) A look inside Project X-Ray<br>
+[23:02](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=1382s) part.json<br>
+[24:14](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=1454s) tilegrid.json<br>
+[28:19](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=1699s) segbits file<br>
+[34:10](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=2050s) Discussion of the uses of Project X-Ray<br>
+[38:07](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=2287s) fasm<br>
+[44:42](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=2682s) Example fasm output<br>
+[50:15](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=3015s) Discussion on fasm uses and benefits<br>
+[52:44](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=3164s) Fuzzers<br>
+[55:30](https://www.youtube.com/watch?v=6HGN8pQn_jA&t=3330s) Contributing to open source projects
+
 ## Follow-Up Activities
 
 Project X-Ray includes many tools, which is where you'll find out more about its capabilities. See the [FASM](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm/), [bit2fasm](https://byu-cpe.github.io/ComputingBootCamp/tutorials/bit2fasm/), and [fasm2bels](https://byu-cpe.github.io/ComputingBootCamp/tutorials/fasm2bels/) modules to learn more. 

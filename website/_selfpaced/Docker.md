@@ -4,7 +4,7 @@ toc: true
 title: Docker
 slug: docker
 type: development
-order: 12
+order: 13
 ---
 
 ## Docker
@@ -48,23 +48,32 @@ docker: Got permission denied while trying to connect to the Docker daemon socke
 ```
 If this happens, use the command `sudo chmod 666 /var/run/docker.sock` to change the permissions on the docker.sock file.
 
-## Lecture Video
+## Lecture Videos
+
+### Lecture 1
 On May 21, 2021 Prof Lundrigan discussed how to use Dockers. The video is embedded below. 
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/RP3QTEr58_Q"> </iframe>
 
 #### Time Stamps
- - 1:20 - What is Docker?
- - 9:50 - Terminology
- - 12:46 - run ubuntu
- - 22:00 - run python
-   - 24:35 - volumes
-   - 27:40 - docker hub
-   - 29:29 - docker files
-   - 35:53 - portainer
- - 40:15 - build and run image from a Dockerfile
- - 46:24 - build a docker that runs as web app
- - 58:20 - summary
+
+[0:00](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=0s) Introduction<br>
+[1:20](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=80s) What is Docker?<br>
+[9:50](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=590s) Terminology<br>
+[11:50](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=710s) ps<br>
+[12:46](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=766s) Run Ubuntu<br>
+[22:00](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=1320s) Run Python<br>
+[24:35](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=1475s) volumes<br>
+[27:40](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=1660s) Docker Hub<br>
+[29:29](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=1769s) Docker files<br>
+[35:53](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=2153s) portainer<br>
+[40:15](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=2415s) Build and run image from Dockerfile<br>
+[46:24](https://www.youtube.com/watch?v=RP3QTEr58_Q&t=2784s) Build Docker that runs as web app
+
+### Lecture 2
+On May 20, 2022 Professor Lundrigan gave another lecture on Docker. The video is below.
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/yB_D04Yt5P4"> </iframe>
 
 ## Docker Cheat Sheet
 Commands:  

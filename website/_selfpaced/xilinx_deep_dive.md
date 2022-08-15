@@ -24,6 +24,11 @@ In addition, you will become familiar with the extensive documentation Xilinx ha
 
 The hope is that you will have 10x the understanding of what is in an FPGA than you previously had, and you will be more able to use those features to your advantage when you do design.
 
+## Lecture Video
+On June 6, 2022 Professor Nelson gave a deep dive about Xilinx 7 Series FPGAs. The video is embedded below.
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/GO1KqbKBdfk"> </iframe>
+
 # CLB's and Slices
 A CLB (configurable logic block) tile is where general logic is found in an FPGA.  A CLB contains two slices.  Each slice contains LUTs, flip flops, arithmetic logic, and routing.  
 

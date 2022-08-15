@@ -76,6 +76,11 @@ On June 4, 2021, Professor Goeders gave an overview of the FASM 2 BELs repositor
 src="https://www.youtube.com/embed/58wXkBlyu-Q"> 
 </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=58wXkBlyu-Q&t=0s) Introduction to netlists<br>
+[7:09](https://www.youtube.com/watch?v=58wXkBlyu-Q&t=429s) fasm2Bels<br>
+[12:38](https://www.youtube.com/watch?v=58wXkBlyu-Q&t=758s) Why use this?
 
 ## Follow-Up Activities
 

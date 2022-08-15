@@ -17,6 +17,12 @@ To install Ubuntu on your machine:
   1. Create a bootable USB: <https://ubuntu.com/tutorials/create-a-usb-stick-on-windows>
   1. Install using the USB: <https://ubuntu.com/tutorials/install-ubuntu-desktop>
 
+## Lecture Video
+
+On April 27, 2022 Dr. Wirthlin gave a brief overview of Linux. The video is embedded below.
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/Zjoc77AC8IA"> </iframe>
+
 
 ## Learn the Command Line
 

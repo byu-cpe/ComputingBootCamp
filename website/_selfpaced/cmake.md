@@ -30,6 +30,15 @@ On May 7, 2021 we had a CMake Tutorial by Prof Mangelson. The video is embedded 
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/4PoLuU32nqw"> </iframe> 
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=4PoLuU32nqw&t=0s) Compilation Process Steps<br>
+[16:06](https://www.youtube.com/watch?v=4PoLuU32nqw&t=966s) Static and Dynamic Libraries<br>
+[34:36](https://www.youtube.com/watch?v=4PoLuU32nqw&t=2076s) Why CMake?<br>
+[38:01](https://www.youtube.com/watch?v=4PoLuU32nqw&t=2281s) CMake Structure<br>
+[46:35](https://www.youtube.com/watch?v=4PoLuU32nqw&t=2795s) Running CMake<br>
+[56:23](https://www.youtube.com/watch?v=4PoLuU32nqw&t=3383s) CCMake<br>
+[1:01:26](https://www.youtube.com/watch?v=4PoLuU32nqw&t=3686s) Advanced Topics<br>
 
 All of the files used in the lecture tutorial can be found at: <https://github.com/byu-cpe/ComputingBootCamp/tree/main/cmake>
 
