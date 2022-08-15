@@ -35,9 +35,9 @@ Alternatively you can open the program using the GUI and then choose a folder or
 
 ## Tutorial
 
-On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded below
+On May 2, 2022 we had a tutorial for using VS Code and setting up a debugger for C given by Prof Goeders. He was followed by Prof Lundrigan in giving a tutorial of using Python in VS Code. The video is embedded below
 
-<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ce0lVayBHpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Timestamps
 
@@ -204,6 +204,10 @@ Try to debug a program in VS Code. Clone the Bootcamp repository and use the VS 
 
 ## Additional resource
 VS Code has extensive tutorials and documentation. Below is a list of pages on key topics. Links to specific topics were included as part of the various tips. The full document can be found [here](https://code.visualstudio.com/docs)
+
+A previous tutorial was given on May 3, 2021 Prof Goeders. The video is embedded below:
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
 
 <!---
 ## Faculty Brainstorming 
