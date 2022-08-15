@@ -38,40 +38,6 @@ Alternatively you can open the program using the GUI and then choose a folder or
 On May 2, 2022 we had a tutorial for using VS Code and setting up a debugger for C given by Prof Goeders. He was followed by Prof Lundrigan in giving a tutorial of using Python in VS Code. The video is embedded below
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ce0lVayBHpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### Timestamps
-
-[0:00](https://www.youtube.com/watch?v=KetWeah5Z9A&t=0s) Introduction<br>
-[3:24](https://www.youtube.com/watch?v=KetWeah5Z9A&t=204s) Take a tour<br>
-[5:12](https://www.youtube.com/watch?v=KetWeah5Z9A&t=312s) Opening files
-  * File vs Folder vs Workspace
-  * Reload workspace (Ctrl+R)
-  * Open file (Ctrl+P)
-
-[11:05](https://www.youtube.com/watch?v=KetWeah5Z9A&t=665s) Viewing files
-  * Split views
-  * File previews (Markdown)
-
-[13:59](https://www.youtube.com/watch?v=KetWeah5Z9A&t=859s) Working with code
-  * Syntax highlighting
-  * Autocomplete
-  * Auto parameters
-
-[19:33](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1173s) Sidebar<br>
-[21:20](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1280s) Terminals<br>
-[22:22](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1342s) Extensions<br>
-[27:20](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1640s) Remote access (SSH)<br>
-[32:46](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1966s) Settings
-  * How to access JSON settings
-  * User vs Workspace settings
-  * Extension settings
-  * Settings Sync
-
-[40:45](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2445s) Launch Configurations (Debugging)<br>
-[46:51](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2811s) Tasks<br>
-[49:00](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2940s) GitHub/Pull Request Integrations<br>
-[51:22](https://www.youtube.com/watch?v=KetWeah5Z9A&t=3082s) Git Integrations<br>
-[53:25](https://www.youtube.com/watch?v=KetWeah5Z9A&t=3205s) Package recommendations
  
 ## VS Code Tips
 * Settings:
@@ -208,6 +174,40 @@ VS Code has extensive tutorials and documentation. Below is a list of pages on k
 A previous tutorial was given on May 3, 2021 Prof Goeders. The video is embedded below:
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
+
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=KetWeah5Z9A&t=0s) Introduction<br>
+[3:24](https://www.youtube.com/watch?v=KetWeah5Z9A&t=204s) Take a tour<br>
+[5:12](https://www.youtube.com/watch?v=KetWeah5Z9A&t=312s) Opening files
+  * File vs Folder vs Workspace
+  * Reload workspace (Ctrl+R)
+  * Open file (Ctrl+P)
+
+[11:05](https://www.youtube.com/watch?v=KetWeah5Z9A&t=665s) Viewing files
+  * Split views
+  * File previews (Markdown)
+
+[13:59](https://www.youtube.com/watch?v=KetWeah5Z9A&t=859s) Working with code
+  * Syntax highlighting
+  * Autocomplete
+  * Auto parameters
+
+[19:33](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1173s) Sidebar<br>
+[21:20](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1280s) Terminals<br>
+[22:22](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1342s) Extensions<br>
+[27:20](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1640s) Remote access (SSH)<br>
+[32:46](https://www.youtube.com/watch?v=KetWeah5Z9A&t=1966s) Settings
+  * How to access JSON settings
+  * User vs Workspace settings
+  * Extension settings
+  * Settings Sync
+
+[40:45](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2445s) Launch Configurations (Debugging)<br>
+[46:51](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2811s) Tasks<br>
+[49:00](https://www.youtube.com/watch?v=KetWeah5Z9A&t=2940s) GitHub/Pull Request Integrations<br>
+[51:22](https://www.youtube.com/watch?v=KetWeah5Z9A&t=3082s) Git Integrations<br>
+[53:25](https://www.youtube.com/watch?v=KetWeah5Z9A&t=3205s) Package recommendations
 
 <!---
 ## Faculty Brainstorming 
