@@ -175,7 +175,7 @@ For a followup activity, read more about the following topics and experiment wit
 * File I/O <https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html>
 * Working with timestamps and time series <https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html>
 * Plotting/visualization <https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html>
-* Statistical tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/computation.html>
+* Statistical tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/>
 
 ## Conclusion
 Packages are a large part of why python is such an important tool. Numpy, pandas, and matplotlib are just a few of the packages that you will undoubtably use throughout your career. Between the three packages, there is a lot to learn and remember. Below is a list of links to quickly reference for help with a variety of functions.
