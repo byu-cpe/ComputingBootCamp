@@ -42,7 +42,7 @@ fonts:
   header: "'Exo 2', sans-serif"
 
 collections:
-  selfpaced:
+  modules:
     output: true
     permalink: /tutorials/:title/
   pages:

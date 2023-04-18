@@ -7,7 +7,7 @@ type: fpga_commercial
 order: 6
 ---
 
-### Previous: [Vitis Tutorial]({% link _selfpaced/vitis_hls.md %})
+### Previous: [Vitis Tutorial]({% link _modules/vitis_hls.md %})
 
 This page discusses how you can export your IP from Vitis HLS to be used in a Vivado project, and ultimately to communicate with the HLS accelerator from a Vitis software proj ect.
 

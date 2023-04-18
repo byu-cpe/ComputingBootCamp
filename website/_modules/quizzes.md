@@ -8,7 +8,7 @@ type: resources
 In order to provide a better learning experience and check the learner's understanding of material, we have included some templates for quiz questions to embed throughout the various pages of the site. Consider adding a question or two to pages that don't have any already!
 
 ## Adding a New Question
-This tutorial will not go over Git and Github. See [How to Contribute]({% link _selfpaced/How_to_Contribute.md %}) for help setting up your repository.
+This tutorial will not go over Git and Github. See [How to Contribute]({% link _modules/How_to_Contribute.md %}) for help setting up your repository.
 
 All of the data for you question will be stored at ```ComputingBootCamp/website/_data/questions.yml```. Navigate to this file and append your question's info to the end.
 

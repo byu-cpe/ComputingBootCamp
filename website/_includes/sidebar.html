@@ -15,7 +15,7 @@
         </a>
 
 
-        {% assign self_paced_sorted = site.selfpaced | sort : "order" %}
+        {% assign self_paced_sorted = site.modules | sort : "order" %}
 
         {% for group in site.data.groups %}
         <div class="card">
