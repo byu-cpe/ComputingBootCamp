@@ -73,4 +73,3 @@ Good luck to those who attempt the test, and if you pass, congratulations! You a
 Here is a [Powerpoint](../../media/Github_Actions.pptx) briefly discussing GitHub Actions
 There are hundreds of tutorials on the web. Find some and read/watch them. Here are some we have found:
 
-- [GitHub Course](https://lab.github.com)

@@ -137,7 +137,7 @@ ax.legend()  # Add a legend.
 # Citation: Example from matplotlib.org tutorial
 ```
 
-For more information see: <https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py>
+For more information see: <https://matplotlib.org/stable/tutorials/introductory/quick_start.html>
 
 ### Followup Activities
 

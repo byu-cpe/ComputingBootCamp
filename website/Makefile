@@ -5,7 +5,7 @@ dbuild:
 	docker run --rm --volume="$$PWD:/srv/jekyll" -it jekyll/jekyll:4.0 jekyll build
 
 check_links: build
-	bundle exec htmlproofer --allow_missing_href --ignore_missing_alt --swap_urls "^\/ComputingBootCamp:" --ignore-status-codes "0,301,302,403,429,500,503", --enforce_https false ./_site
+	bundle exec htmlproofer --allow_missing_href true --ignore_missing_alt true --swap_urls "^\/ComputingBootCamp:" --ignore-status-codes "0,301,302,403,429,500,503", --enforce_https false ./_site
 
 build:
 	bundle exec jekyll build

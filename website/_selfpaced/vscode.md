@@ -172,7 +172,7 @@ The first line is not required unless the default formatter has been changed.
 
 The formatter settings can be changed from the default by placing a file named `.clang-format` in your project directory. You can read more about that [here](https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
 
-*Note:* VS Code assumes cpp files contain C++ code and C files contain C code. With h files, VS Code by default assumes they are C++ code and will apply cpp settings to them. You can specify the file to use C using [these steps.](https://code.visualstudio.com/docs/languages/overview#_changing-the-language-for-the-selected-file)
+*Note:* VS Code assumes cpp files contain C++ code and C files contain C code. With h files, VS Code by default assumes they are C++ code and will apply cpp settings to them. You can specify the file to use C using [these steps.](https://code.visualstudio.com/docs/languages/overview#_change-the-language-for-the-selected-file)
 
 ### Extension recommendations
 There are a multitude of extensions for VS Code. Which to install will depend both on personal preference and the projects you are working on. Below is a list of some useful extensions. 
