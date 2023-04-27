@@ -10,7 +10,7 @@ title: 2023 Schedule
 This year the boot camp will be completed by students offline.  The schedule below provides a rough suggestion of pacing, but feel free to work through the modules faster.  Be sure to go through each module thoroughly and complete the suggested activities.
 
 ### Week 1            
-* Wed May 3, 3pm - **In-Person Introduction**: Welcome, Setup, IMMERSE log
+* Wed May 3, 2pm - **In-Person Introduction**: Welcome, Setup, IMMERSE log
   * Setup your computer. 
   * Get on Slack. 
   * Complete [Linux setup/tutorials]({% link _modules/linux.md%}). 
