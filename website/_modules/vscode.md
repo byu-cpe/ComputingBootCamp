@@ -7,7 +7,7 @@ type: development
 order: 3
 ---
 ## Overview 
-VS Code is an editor that has risen in popularity in recent years. The 2021 stackoverflow developer survey reported that around 70% of respondants use VS code (see survey results [here](https://insights.stackoverflow.com/survey/2021#most-popular-technologies-new-collab-tools)). VS code is a versitile text editor with a vast array of extensions that allow easy coding in many different languages. VS code does not have any inbuilt compiling tools however it can easily interact with those that you have installed. VS Code can be configured to run python scripts and compile C code but requires the needed programs to be installed for it to do so (python or GCC or similar). With the proper use, VS code can be an efficient tool as you work on many projects. 
+VS Code is an editor that has risen in popularity in recent years. The 2021 stackoverflow developer survey reported that around 70% of respondants use VS code (see survey results [here](https://insights.stackoverflow.com/survey/2021#most-popular-technologies-new-collab-tools)). VS code is a versatile text editor with a vast array of extensions that allow easy coding in many different languages. VS code does not have any inbuilt compiling tools however it can easily interact with those that you have installed. VS Code can be configured to run python scripts and compile C code but requires the needed programs to be installed for it to do so (python or GCC or similar). With the proper use, VS code can be an efficient tool as you work on many projects. 
 
 
 ## Installation
