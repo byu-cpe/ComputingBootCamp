@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Conda In Depth • BYU Computing Bootcamp
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ComputingBootCamp/css/main.css>
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="25x17" href=/ComputingBootCamp/media/icon/logo.png>
+
+<script src="https://kit.fontawesome.com/624d595ebf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ComputingBootCamp/"><img src="/ComputingBootCamp/media/icon/logo.png" width="50"> <img
+                    src="/ComputingBootCamp/media/icon/sidebar_title.png" width="200">
+            </a>
+        </div>
+
+
+        <a href="/ComputingBootCamp/pages/schedule/"
+            class="sidebar-item list-group-item list-group-item-action bg-light sidebar-schedule sidebar-item">
+            <span class="badge badge-pill badge-dark-grey"></span>
+            Schedule
+        </a>
+
+
+        
+
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsedevelopment" aria-expanded=""
+                aria-controls="collapsedevelopment">
+                Software Development
+            </div>
+
+            <div id="collapsedevelopment" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/linux/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Linux Setup & Tutorials
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/git/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Git
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/github/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        GitHub
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vscode/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        VS Code
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/make/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Make (and Makefiles)
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/cmake/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        CMake
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/webTechnologies/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Web Technologies
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/pythonIntro/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Python Intro
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/openSourceIntro/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        OpenSource Intro
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/pythonEnvs/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Python Environments
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/conda/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Conda In Depth
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/pythonAdv/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Python Packages
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/unit_testing/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Unit Testing
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/sphinx/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Documentation + Sphinx
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/computer_security/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Computer Security
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/docker/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Docker
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/matlab/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Matlab
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsefpga_commercial" aria-expanded=""
+                aria-controls="collapsefpga_commercial">
+                Commercial FPGA
+            </div>
+
+            <div id="collapsefpga_commercial" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/install_vivado/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Install Vivado/Vitis
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vivado_tcl/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Vivado Review and Tcl for Vivado
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/xilinx_deep_dive/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Xilinx 7 Series FPGA Deep Dive
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vivado/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Vivado Block Design Tutorial
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vitis/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Vitis: Software
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vitis_hls/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Vitis: HLS
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/hls_system_integration/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        HLS System Integration
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/microblaze/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Microblaze Soft Processor
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/JTAG/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        JTAG
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/verilog_basics/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        System Verilog Intro Labs
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsefpga_opensource" aria-expanded=""
+                aria-controls="collapsefpga_opensource">
+                Open FPGA CAD
+            </div>
+
+            <div id="collapsefpga_opensource" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/rapidwright/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        RapidWright
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/interchange/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Interchange
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/xray/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Project X-Ray
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/fasm/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        FASM (FPGA Assembly)
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/bit2fasm/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        bit2fasm
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/fasm2bels/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        fasm2bels
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/symbiflow-examples/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        symbiflow-examples
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vtr/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        VTR
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsenetworking" aria-expanded=""
+                aria-controls="collapsenetworking">
+                Networking
+            </div>
+
+            <div id="collapsenetworking" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/networking/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Networking
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/networking-tools/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Networking Tools
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsePCB" aria-expanded=""
+                aria-controls="collapsePCB">
+                PCB
+            </div>
+
+            <div id="collapsePCB" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/altium/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Altium
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/partsDatabase/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Parts Database
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/layoutGuidelines/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Layout Guidelines
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/orderPCB/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Ordering PCBs
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/solderingStation/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Soldering Station
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsebroader_impacts" aria-expanded=""
+                aria-controls="collapsebroader_impacts">
+                Broader Impacts
+            </div>
+
+            <div id="collapsebroader_impacts" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/impacts/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Broader Impact Summaries
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapseresources" aria-expanded=""
+                aria-controls="collapseresources">
+                Resources
+            </div>
+
+            <div id="collapseresources" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/badges_dev/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Badge Development
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/create_passoff/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        How to create automated pass-off tests
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/slack/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Slack
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/quizzes/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Quiz Questions
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/faq/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        FAQ - Misc Ideas
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/contribute/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        How to Contribute
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/setup_website/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Creating Your Own Website
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/markdown/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Markdown
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsearchive" aria-expanded=""
+                aria-controls="collapsearchive">
+                Archive
+            </div>
+
+            <div id="collapsearchive" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vm_setup/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Virtual Machine Setup
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/bram-patch/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        bram-patch
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/github_PCB/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        PCB - Github
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/sql/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        SQL Basics
+                    </a>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- <div class="sidebar-heading-big"></div>
+        <div class="card">
+            <div class="sidebar-heading-big btn-link " data-toggle="collapse" data-target="#collapseResources"
+                aria-expanded="" aria-controls="collapseResources">
+                Resources </div>
+            <div id="collapseResources" class="collapse show ">
+                <div class="list-group list-group-flush">
+                    
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg title-bar border-bottom d-flex flex-row">
+    <div>
+        <button class="btn btn-brand" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <div class="flex-fill">
+        <p class="title-text">BYU Computing Boot Camp</p>
+    </div>
+
+    <!-- <a href="#" class="navbar-brand mb-0 h1  page-title-bar text-center mx-auto" id="page-title-bar"></a> -->
+
+    
+    <div class="p-2">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link btn btn-brand suggest-edits"
+                    href="https://github.com/byu-cpe/ComputingBootCamp/issues/new?labels=website&title=Updates to Conda In Depth page"><i
+                        class="fab fa-github"></i> Suggest
+                    Edits</a>
+            </li>
+        </ul>
+    </div>
+    
+</nav>
+
+      <div class="container">
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    Conda In Depth
+  </h1>
+
+  <div class="page-content">
+    
+    <div class="lab-toc col-md-6 col-lg-3 bg-light">
+      <h4>Table of Contents</h4>
+      <ul>
+  <li><a href="#managing-and-maintaining-python-virtual-environments">Managing and Maintaining Python Virtual Environments</a></li>
+  <li><a href="#installing-miniconda">Installing Miniconda</a></li>
+  <li><a href="#primary-conda-commands">Primary Conda Commands</a></li>
+  <li><a href="#cloning-and-removing-environments">Cloning and Removing Environments</a></li>
+  <li><a href="#revisions">Revisions</a></li>
+  <li><a href="#sharing-environments">Sharing Environments</a></li>
+  <li><a href="#channels">Channels</a></li>
+  <li><a href="#pip">Pip</a></li>
+  <li><a href="#how-fpga-tool-perf-uses-conda">How fpga-tool-perf uses conda</a></li>
+  <li><a href="#other-sources--tutorials">Other Sources &amp; Tutorials:</a></li>
+</ul>
+
+    </div>
+    
+
+    <h2 id="managing-and-maintaining-python-virtual-environments">Managing and Maintaining Python Virtual Environments</h2>
+
+<p>Conda is a great tool for organizing your space. Every python project you have can include a wide variety of downloaded packages, and conda can help you to keep them from interfering with each other. It also helps you to keep track of exactly which packages are required for a project to work.</p>
+
+<p>It also makes it easy to share environments for your projects with others.</p>
+
+<p>With conda, you can create environments w/ packages for each of your projects, keeping things simple and easy to follow.</p>
+
+<p>Anaconda is the full name, and miniconda is the same thing, but without a gui option. 
+However, it has all of the same functionality available through the command line. 
+Miniconda is also a smaller download as anaconda comes with lots of packages, whereas miniconda only downloads necessary packages, and then you can download any further packages on your own.</p>
+
+<p><img src="/ComputingBootCamp/media/conda/conda-2.jpg" width="600" /></p>
+
+<p><img src="/ComputingBootCamp/media/conda/conda-1.png" width="600" /></p>
+
+<p>This image comes from a <a href="https://www.youtube.com/watch?v=23aQdrS58e0">video by Academind</a>. It is one of many tutorials covering conda. This image may help you understand the benefits of conda. You can achieve essentially the same things with virtualenv and pip, but conda has proven for me to be much easier to understand and navigate.</p>
+
+<p>According to the video, conda makes data analysis easier, and also makes it easier for those who are new to python to get started.</p>
+
+<h2 id="installing-miniconda">Installing Miniconda</h2>
+
+<p>The following are the steps to installing miniconda</p>
+
+<p><strong><em>1</em></strong>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">wget</code> from the command line.</p>
+
+<p>For Linux:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd
+</span>wget <span class="nt">--no-verbose</span> <span class="nt">--continue</span> https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+<span class="c">## or ##</span>
+<span class="nb">cd
+</span>wget <span class="nt">--no-verbose</span> <span class="nt">--continue</span> https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+</code></pre></div></div>
+
+<p><strong><em>2</em></strong>.</p>
+
+<p>Run these:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">CONDA_DIR</span><span class="o">=</span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>/env/conda
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$CONDA_DIR</span>/bin:<span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>
+</code></pre></div></div>
+<p><strong><em>3</em></strong>.</p>
+
+<p>Now that you have the installer downloaded, change the permissions and then run it:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod </span>a+x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh <span class="nt">-p</span> <span class="nv">$CONDA_DIR</span> <span class="nt">-b</span> <span class="nt">-f</span>
+<span class="c">## or ##</span>
+<span class="nb">chmod </span>a+x Miniconda3-latest-MacOSX-x86_64.sh
+./Miniconda3-latest-MacOSX-x86_64.sh <span class="nt">-p</span> <span class="nv">$CONDA_DIR</span> <span class="nt">-b</span> <span class="nt">-f</span>
+</code></pre></div></div>
+<p><strong><em>4</em></strong>.</p>
+
+<p>Finally restart your terminal (or <code class="language-plaintext highlighter-rouge">source ~/.bashrc</code> in Linux) and you are all set.</p>
+
+<blockquote>
+  <p>Alternatively, you can go to <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a>, where you will find an installer and instructions.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="primary-conda-commands">Primary Conda Commands</h2>
+
+<p>These are the commands you will likely use often. Notice that in each example, I have run the command from my home directory. It doesn’t matter where you run the command as long as it starts with conda, it knows what to do with the command. Run these, and then you’ll be ready to do just about anything you could need:</p>
+
+<p>1) <code class="language-plaintext highlighter-rouge">conda create --name &lt;name&gt; python=&lt;version_number&gt;</code> - Creates a new environment, setting its name and which version of python it will operate under. (3.7 or 3.8 are the most recent versions).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda create --name new python=3.7
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/ryanjohnson/env/conda/envs/new
+  
+  added / updated specs:
+    - python=3.7
+
+The following NEW packages will be INSTALLED:
+...
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+</code></pre></div></div>
+
+<p>2)  <code class="language-plaintext highlighter-rouge">conda activate &lt;name&gt;</code> - Activates the specified environment.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda activate new
+</code></pre></div></div>
+
+<p>3) <code class="language-plaintext highlighter-rouge">conda env list</code> - Lists all of the environments and prints an asterisk next to the currently open environment. Very useful!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda env list
+# conda environments:
+#
+base                     /Users/ryanjohnson/env/conda
+myenv                    /Users/ryanjohnson/env/conda/envs/myenv
+new                   *  /Users/ryanjohnson/env/conda/envs/new
+</code></pre></div></div>
+<p>One thing to recognize about this is that there is an environment called <code class="language-plaintext highlighter-rouge">base</code>, and if you are not in one of your other environments, you are in that one. For example, if you run <code class="language-plaintext highlighter-rouge">conda deactivate</code>, and then <code class="language-plaintext highlighter-rouge">conda env list</code>, it will have an asterisk next to <code class="language-plaintext highlighter-rouge">base</code>.</p>
+
+<p>4) <code class="language-plaintext highlighter-rouge">conda install &lt;package_name&gt;</code> - Installs the named package within the currently open environment.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda install pandas
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/ryanjohnson/env/conda/envs/new
+
+  added / updated specs:
+    - pandas
+
+The following packages will be downloaded:
+...
+
+The following NEW packages will be INSTALLED:
+...
+
+The following packages will be UPDATED:
+...
+
+Downloading and Extracting Packages
+...
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+</code></pre></div></div>
+
+<p>5) <code class="language-plaintext highlighter-rouge">conda list</code> - Lists all of the packages in the open environment. Also very useful!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda list
+# packages in environment at /Users/ryanjohnson/env/conda/envs/new:
+#
+# Name                    Version                   Build  Channel
+blas                      1.0                         mkl  
+ca-certificates           2020.1.1                      0  
+certifi                   2019.11.28               py27_0  
+intel-openmp              2019.4                      233  
+libcxx                    10.0.0                        1  
+libedit                   3.1.20181209         hb402a30_0  
+libffi                    3.3                  h0a44026_1  
+libgfortran               3.0.1                h93005f0_2  
+mkl                       2019.4                      233  
+mkl-service               2.3.0            py27hfbe908c_0  
+mkl_fft                   1.0.15           py27h5e564d8_0  
+mkl_random                1.1.0            py27ha771720_0  
+ncurses                   6.2                  h0a44026_1  
+numpy                     1.16.6           py27h81c90fd_0  
+numpy-base                1.16.6           py27h6575580_0  
+pandas                    0.24.2           py27h0a44026_0  
+pip                       19.3.1                   py27_0  
+python                    2.7.18               h47d645e_1  
+python-dateutil           2.8.1                      py_0  
+pytz                      2020.1                     py_0  
+readline                  8.0                  h1de35cc_0  
+setuptools                44.0.0                   py27_0  
+six                       1.15.0                     py_0  
+sqlite                    3.31.1               h5c1f38d_1  
+tk                        8.6.8                ha441bb4_0  
+wheel                     0.33.6                   py27_0  
+zlib                      1.2.11               h1de35cc_3  
+</code></pre></div></div>
+
+<p>6) <code class="language-plaintext highlighter-rouge">conda deactivate</code> - Deactivates the current environment.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda deactivate
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cloning-and-removing-environments">Cloning and Removing Environments</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">conda create --clone &lt;env_name&gt; --name &lt;new_name&gt;</code> - Clones an environment with the new name specified.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda create --clone new --name newer
+Source:      /Users/ryanjohnson/env/conda/envs/new
+Destination: /Users/ryanjohnson/env/conda/envs/newer
+Packages: 29
+Files: 0
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+Ryans-MacBook-Air-2:~ ryanjohnson$ conda env list
+# conda environments:
+#
+base                  *  /Users/ryanjohnson/env/conda
+myenv                    /Users/ryanjohnson/env/conda/envs/myenv
+new                      /Users/ryanjohnson/env/conda/envs/new
+newer                    /Users/ryanjohnson/env/conda/envs/newer
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">conda remove --name ENVNAME --all</code> - Deletes an entire environment</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda remove --name newer --all
+
+Remove all packages in environment /Users/ryanjohnson/env/conda/envs/newer:
+
+## Package Plan ##
+
+  environment location: /Users/ryanjohnson/env/conda/envs/newer
+
+The following packages will be REMOVED:
+...
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+Ryans-MacBook-Air-2:~ ryanjohnson$ conda env list
+# conda environments:
+#
+base                  *  /Users/ryanjohnson/env/conda
+myenv                    /Users/ryanjohnson/env/conda/envs/myenv
+new                      /Users/ryanjohnson/env/conda/envs/new
+</code></pre></div></div>
+<hr />
+<h2 id="revisions">Revisions</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">conda list --revisions</code> - Lists changes that have been made to your code. This is how you can see what packages you have added and when.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda list --revisions
+2020-06-16 08:53:04  (rev 0)
+    +ca-certificates-2020.1.1 (defaults/osx-64)
+    +certifi-2020.4.5.1 (defaults/osx-64)
+    +libcxx-10.0.0 (defaults/osx-64)
+    +libedit-3.1.20181209 (defaults/osx-64)
+    +libffi-3.3 (defaults/osx-64)
+    +ncurses-6.2 (defaults/osx-64)
+    +openssl-1.1.1g (defaults/osx-64)
+    +pip-20.0.2 (defaults/osx-64)
+    +python-3.7.7 (defaults/osx-64)
+    +readline-8.0 (defaults/osx-64)
+    +setuptools-47.1.1 (defaults/osx-64)
+    +sqlite-3.31.1 (defaults/osx-64)
+    +tk-8.6.8 (defaults/osx-64)
+    +wheel-0.34.2 (defaults/osx-64)
+    +xz-5.2.5 (defaults/osx-64)
+    +zlib-1.2.11 (defaults/osx-64)
+
+2020-06-16 09:09:02  (rev 1)
+     certifi  {2020.4.5.1 (defaults/osx-64) -&gt; 2020.4.5.2 (defaults/osx-64)}
+    +blas-1.0 (defaults/osx-64)
+    +intel-openmp-2019.4 (defaults/osx-64)
+    +libgfortran-3.0.1 (defaults/osx-64)
+    +mkl-2019.4 (defaults/osx-64)
+    +mkl-service-2.3.0 (defaults/osx-64)
+    +mkl_fft-1.0.15 (defaults/osx-64)
+    +mkl_random-1.1.1 (defaults/osx-64)
+    +numpy-1.18.1 (defaults/osx-64)
+    +numpy-base-1.18.1 (defaults/osx-64)
+    +pandas-1.0.3 (defaults/osx-64)
+    +python-dateutil-2.8.1 (defaults/noarch)
+    +pytz-2020.1 (defaults/noarch)
+    +six-1.15.0 (defaults/noarch)
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">conda install --name &lt;env_name&gt; --revision &lt;rev_number&gt;</code> - Restore the environment to a previous revision</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ryans-MacBook-Air-2:~ ryanjohnson$ conda install --name new --revision 0
+
+## Package Plan ##
+
+  environment location: /Users/ryanjohnson/env/conda/envs/new
+
+  added / updated specs:
+    - pandas
+    - python=3.7
+
+
+The following packages will be REMOVED:
+
+  blas-1.0-mkl
+  intel-openmp-2019.4-233
+  libgfortran-3.0.1-h93005f0_2
+  mkl-2019.4-233
+  mkl-service-2.3.0-py37hfbe908c_0
+  mkl_fft-1.0.15-py37h5e564d8_0
+  mkl_random-1.1.1-py37h959d312_0
+  numpy-1.18.1-py37h7241aed_0
+  numpy-base-1.18.1-py37h3304bdc_1
+  pandas-1.0.3-py37h6c726b0_0
+  python-dateutil-2.8.1-py_0
+  pytz-2020.1-py_0
+  six-1.15.0-py_0
+
+The following packages will be DOWNGRADED:
+
+  certifi                                 2020.4.5.2-py37_0 --&gt; 2020.4.5.1-py37_0
+
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="sharing-environments">Sharing Environments</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">conda env export --name &lt;env_name&gt; &gt; envname.yml</code> - Export an environment to a <code class="language-plaintext highlighter-rouge">yaml</code> file, that can be shared with other systems.</li>
+</ul>
+
+<p>The <code class="language-plaintext highlighter-rouge">YAML</code> file created when running this command on the environment titled <code class="language-plaintext highlighter-rouge">new</code> looks like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: new
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2020.1.1=0
+  - openssl=1.1.1g=h1de35cc_0
+prefix: /Users/ryanjohnson/env/conda/envs/new
+</code></pre></div></div>
+<p>It is a very simple file, that shows conda everything it needs to know to recreate the environment. Many got repositories recreate the environment they need by referencing a <code class="language-plaintext highlighter-rouge">yaml</code> file like this one. These files make it extremely easy for a group project to function, as everyone makes the exact same environment from the file, and thus can focus their debugging on their own work, instead of the install process.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">conda env create --file envname.yml</code> - Create an environment from a <code class="language-plaintext highlighter-rouge">yaml</code> file.</li>
+</ul>
+
+<hr />
+
+<h2 id="channels">Channels</h2>
+
+<p>When you run conda install, it looks through the default channels to find it, and if it isn’t there, it doesn’t download. In this case, you need to specify the channel under which it can be found (conda-forge or symbiflow for example). You can search for specific packages on https://anaconda.org/ and find the channel for a certain package.</p>
+
+<p>Below is the command you will need to install a package from a different channel</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install -c &lt;channel_name&gt; &lt;package_name&gt;
+</code></pre></div></div>
+<p>You can also add a channel to your list, so that it is checked when looking for the package. This is the command you would use to add a channel to your list:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda config --add channels &lt;channel_name&gt;
+</code></pre></div></div>
+
+<p>This next command is how you see which channels are added to your</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda config --show channels
+</code></pre></div></div>
+<p>There is one thing to keep in mind. Whenever there is a conflict between channels (i.e. the package you are looking for is found in multiple channels), then the channel with the highest priority is chosen first. If you –add a channel, it  becomes the new highest priority. If you would like the default channel to retain highest priority, then use –append instead.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda config --append channels &lt;channel_name&gt;
+</code></pre></div></div>
+<p>Also, to remove a channel from your default list, run:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda config --remove channels &lt;channel_name&gt;
+</code></pre></div></div>
+<hr />
+
+<h2 id="pip">Pip</h2>
+
+<p>Anaconda has published a page on <a href="https://www.anaconda.com/blog/understanding-conda-and-pip">Understanding Conda and Pip</a>, which is informative regarding the differences between conda and pip, as well as conda’s functionality, and the ability to use both together:</p>
+
+<p>“Conda and pip are often considered as being nearly identical. Although some of the functionality of these two tools overlap, they were designed and should be used for different purposes. Pip is the Python Packaging Authority’s recommended tool for installing packages from the Python Package Index, PyPI. Pip installs Python software packaged as wheels or source distributions. The latter may require that the system have compatible compilers, and possibly libraries, installed before invoking pip to succeed.</p>
+
+<p>“Conda is a cross platform package and environment manager that installs and manages conda packages from the Anaconda repository as well as from the Anaconda Cloud. Conda packages are binaries. There is never a need to have compilers available to install them. Additionally conda packages are not limited to Python software. They may also contain C or C++ libraries, R packages or any other software.</p>
+
+<p>…</p>
+
+<p>“Another key difference between the two tools is that conda has the ability to create isolated environments that can contain different versions of Python and/or the packages installed in them. This can be extremely useful when working with data science tools as different tools may contain conflicting requirements which could prevent them all being installed into a single environment. Pip has no built in support for environments but rather depends on other tools like virtualenv or venv to create isolated environments. Tools such as pipenv, poetry, and hatch wrap pip and virtualenv to provide a unified method for working with these environments.</p>
+
+<p>…</p>
+
+<p>“A major reason for combining pip with conda is when one or more packages are only available to install via pip. Over 1,500 packages are available in the Anaconda repository, including the most popular data science, machine learning, and AI frameworks. These, along with thousands of additional packages available on Anaconda cloud from channeling including conda-forge and bioconda, can be installed using conda. Despite this large collection of packages, it is still small compared to the over 150,000 packages available on PyPI. Occasionally a package is needed which is not available as a conda package but is available on PyPI and can be installed with pip. In these cases, it makes sense to try to use both conda and pip.”</p>
+
+<p>To use pip within a conda environment, you need to install it:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install pip
+</code></pre></div></div>
+<p>Then you can use <code class="language-plaintext highlighter-rouge">pip install</code> to install any packages not available in conda. Essentially, it’s not wrong to use pip inside of conda. It’s better to install using conda, but for any packages that don’t have a conda build, it’s perfectly acceptable to use pip.</p>
+
+<hr />
+
+<h2 id="how-fpga-tool-perf-uses-conda">How fpga-tool-perf uses conda</h2>
+
+<p>I learned how conda works in part by studying <a href="https://github.com/SymbiFlow/fpga-tool-perf">Symbiflow’s fpga-tool-perf</a> repository. The following notes describe how a github repository/project can use conda, following the steps used by fpga-tool-perf.</p>
+
+<p>After you clone fpga-tool-perf, the first thing you do is run <code class="language-plaintext highlighter-rouge">make conda</code>. These are the commands run to make the conda environment for fpga-tool-perf.</p>
+
+<p>In the Makefile:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p env
+source utils/conda.sh
+</code></pre></div></div>
+
+<p>In <code class="language-plaintext highlighter-rouge">conda.sh</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export CONDA_DIR=$(pwd)/env/conda
+export PATH=$CONDA_DIR/bin:${PATH}
+(
+    if [[ ! -e ${CONDA_DIR}/bin/conda ]]; then
+        cd env &amp;&amp; \
+        wget --no-verbose --continue https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh &amp;&amp; \
+        chmod a+x Miniconda3-latest-Linux-x86_64.sh
+        (
+            export HOME=$CONDA_DIR
+            ./Miniconda3-latest-Linux-x86_64.sh -p $CONDA_DIR -b -f || exit 1
+        )
+
+        conda config --system --add envs_dirs $CONDA_DIR/envs
+        conda config --system --add pkgs_dirs $CONDA_DIR/pkgs
+    fi
+    conda config --system --set always_yes yes
+    conda config --system --set changeps1 no
+    conda update -q conda
+
+    conda env create --file ../conf/environment.yml
+    conda init bash
+    source ~/.bashrc
+
+    conda info -a
+)
+</code></pre></div></div>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">fpga-tool-perf</code> uses the wget method to install miniconda.</li>
+  <li>It changes a few configuration settings to suit its needs</li>
+  <li>Finally, it creates an environment called fpga-tool-perf-env from a <code class="language-plaintext highlighter-rouge">YAML</code> file: <code class="language-plaintext highlighter-rouge">environment.yml</code>, whose contents are displayed below:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: fpga-tool-perf-env
+channels:
+  - conda-forge
+  - symbiflow
+dependencies:
+  - yosys
+  - yosys-plugins
+  - vtr=8.0.0.rc2_3935_g7d6424bb0
+  - nextpnr-xilinx
+  - nextpnr-ice40
+  - prjxray
+  - pip
+  - pip:                          # Packages installed from PyPI
+    - -r file:requirements.txt
+</code></pre></div></div>
+
+<p>The file above does the following: gives a name for the environment, lists channels from which to access the dependencies, and gives some more packages to install through the file <code class="language-plaintext highlighter-rouge">requirements.txt</code>, shown below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terminaltables
+asciitable
+simplejson
+tqdm
+colorclass
+lxml
+python-constraint
+intervaltree
+jinja2
+pytest
+pandas
+git+https://github.com/SymbiFlow/fasm.git#egg=fasm
+git+https://github.com/SymbiFlow/prjxray.git#egg=prjxray
+git+https://github.com/SymbiFlow/edalize.git@symbiflow#egg=edalize
+git+https://github.com/SymbiFlow/symbiflow-xc-fasm2bels.git#egg=symbiflow-xc-fasm2bels
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="other-sources--tutorials">Other Sources &amp; Tutorials:</h2>
+
+<p>User Guide: <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/index.html">https://docs.conda.io/projects/conda/en/latest/user-guide/index.html</a></p>
+
+<p><strong>Cheatsheet: <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/index.html">https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html</a></strong></p>
+
+<p>26-Minute Tutorial from Academind: <a href="https://www.youtube.com/watch?v=23aQdrS58e0">https://www.youtube.com/watch?v=23aQdrS58e0</a></p>
+
+<p>Here is an excellent written tutorial on Miniconda: 
+<a href="https://protostar.space/why-you-need-python-environments-and-how-to-manage-them-with-conda">https://protostar.space/why-you-need-python-environments-and-how-to-manage-them-with-conda</a></p>
+
+<p>My 2-Slide Powerpoint Presentation:</p>
+
+<p><img src="/ComputingBootCamp/media/conda/CondaPres-1.jpg" width="600" /></p>
+
+<p><img src="/ComputingBootCamp/media/conda/CondaPres-2.jpg" width="600" /></p>
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ComputingBootCamp/js/jquery.visible.min.js></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src=/ComputingBootCamp/js/js.cookie-2.2.1.min.js></script>
+<script src=/ComputingBootCamp/js/quizzes.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+
+<!-- Sidebar memory script -->
+<script type="module">
+
+    $(document).ready(function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown) {
+            // $("#collapsesetup").collapse("show");
+            return;
+        }
+        shown = JSON.parse(shown);
+
+        shown.forEach(function (item, index) {
+            $("#" + item).addClass('no-collapse-animation')
+            $("#" + item).collapse("show");
+            $("#" + item).removeClass('no-collapse-animation')
+        });
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsedevelopment").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsedevelopment");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsedevelopment").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsedevelopment"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsefpga_commercial").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsefpga_commercial");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsefpga_commercial").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsefpga_commercial"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsefpga_opensource").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsefpga_opensource");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsefpga_opensource").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsefpga_opensource"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsenetworking").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsenetworking");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsenetworking").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsenetworking"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsePCB").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsePCB");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsePCB").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsePCB"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsebroader_impacts").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsebroader_impacts");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsebroader_impacts").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsebroader_impacts"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapseresources").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapseresources");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapseresources").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapseresources"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsearchive").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsearchive");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsearchive").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsearchive"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+</script>
+
+</body>
+
+</html>

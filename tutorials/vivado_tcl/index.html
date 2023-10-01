@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Vivado Review and Tcl for Vivado • BYU Computing Bootcamp
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ComputingBootCamp/css/main.css>
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="25x17" href=/ComputingBootCamp/media/icon/logo.png>
+
+<script src="https://kit.fontawesome.com/624d595ebf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+<div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ComputingBootCamp/"><img src="/ComputingBootCamp/media/icon/logo.png" width="50"> <img
+                    src="/ComputingBootCamp/media/icon/sidebar_title.png" width="200">
+            </a>
+        </div>
+
+
+        <a href="/ComputingBootCamp/pages/schedule/"
+            class="sidebar-item list-group-item list-group-item-action bg-light sidebar-schedule sidebar-item">
+            <span class="badge badge-pill badge-dark-grey"></span>
+            Schedule
+        </a>
+
+
+        
+
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsedevelopment" aria-expanded=""
+                aria-controls="collapsedevelopment">
+                Software Development
+            </div>
+
+            <div id="collapsedevelopment" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/linux/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Linux Setup & Tutorials
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/git/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Git
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/github/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        GitHub
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vscode/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        VS Code
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/make/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Make (and Makefiles)
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/cmake/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        CMake
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/webTechnologies/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Web Technologies
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/pythonIntro/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Python Intro
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/openSourceIntro/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        OpenSource Intro
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/pythonEnvs/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Python Environments
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/conda/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Conda In Depth
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/pythonAdv/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Python Packages
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/unit_testing/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Unit Testing
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/sphinx/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Documentation + Sphinx
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/computer_security/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Computer Security
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/docker/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Docker
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/matlab/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Matlab
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsefpga_commercial" aria-expanded=""
+                aria-controls="collapsefpga_commercial">
+                Commercial FPGA
+            </div>
+
+            <div id="collapsefpga_commercial" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/install_vivado/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Install Vivado/Vitis
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vivado_tcl/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Vivado Review and Tcl for Vivado
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/xilinx_deep_dive/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Xilinx 7 Series FPGA Deep Dive
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vivado/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Vivado Block Design Tutorial
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vitis/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Vitis: Software
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vitis_hls/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Vitis: HLS
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/hls_system_integration/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        HLS System Integration
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/microblaze/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Microblaze Soft Processor
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/JTAG/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        JTAG
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/verilog_basics/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        System Verilog Intro Labs
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsefpga_opensource" aria-expanded=""
+                aria-controls="collapsefpga_opensource">
+                Open FPGA CAD
+            </div>
+
+            <div id="collapsefpga_opensource" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/rapidwright/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        RapidWright
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/interchange/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Interchange
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/xray/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Project X-Ray
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/fasm/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        FASM (FPGA Assembly)
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/bit2fasm/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        bit2fasm
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/fasm2bels/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        fasm2bels
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/symbiflow-examples/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        symbiflow-examples
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vtr/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        VTR
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsenetworking" aria-expanded=""
+                aria-controls="collapsenetworking">
+                Networking
+            </div>
+
+            <div id="collapsenetworking" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/networking/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Networking
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/networking-tools/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Networking Tools
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsePCB" aria-expanded=""
+                aria-controls="collapsePCB">
+                PCB
+            </div>
+
+            <div id="collapsePCB" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/altium/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Altium
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/partsDatabase/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Parts Database
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/layoutGuidelines/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Layout Guidelines
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/orderPCB/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Ordering PCBs
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/solderingStation/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Soldering Station
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsebroader_impacts" aria-expanded=""
+                aria-controls="collapsebroader_impacts">
+                Broader Impacts
+            </div>
+
+            <div id="collapsebroader_impacts" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/impacts/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Broader Impact Summaries
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapseresources" aria-expanded=""
+                aria-controls="collapseresources">
+                Resources
+            </div>
+
+            <div id="collapseresources" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/badges_dev/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Badge Development
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/create_passoff/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        How to create automated pass-off tests
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/slack/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Slack
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/quizzes/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Quiz Questions
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/faq/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        FAQ - Misc Ideas
+                    </a>
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/contribute/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        How to Contribute
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/setup_website/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Creating Your Own Website
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/markdown/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Markdown
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+
+            <div class="sidebar-heading-big btn-link collapsed" data-toggle="collapse"
+                data-target="#collapsearchive" aria-expanded=""
+                aria-controls="collapsearchive">
+                Archive
+            </div>
+
+            <div id="collapsearchive" class="collapse">
+                <div class="list-group list-group-flush">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/vm_setup/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        Virtual Machine Setup
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/bram-patch/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        bram-patch
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/github_PCB/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        PCB - Github
+                    </a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/ComputingBootCamp/tutorials/sql/"
+                        class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
+                        <span class="badge badge-pill badge-dark-grey"></span>
+                        SQL Basics
+                    </a>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- <div class="sidebar-heading-big"></div>
+        <div class="card">
+            <div class="sidebar-heading-big btn-link " data-toggle="collapse" data-target="#collapseResources"
+                aria-expanded="" aria-controls="collapseResources">
+                Resources </div>
+            <div id="collapseResources" class="collapse show ">
+                <div class="list-group list-group-flush">
+                    
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg title-bar border-bottom d-flex flex-row">
+    <div>
+        <button class="btn btn-brand" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <div class="flex-fill">
+        <p class="title-text">BYU Computing Boot Camp</p>
+    </div>
+
+    <!-- <a href="#" class="navbar-brand mb-0 h1  page-title-bar text-center mx-auto" id="page-title-bar"></a> -->
+
+    
+    <div class="p-2">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link btn btn-brand suggest-edits"
+                    href="https://github.com/byu-cpe/ComputingBootCamp/issues/new?labels=website&title=Updates to Vivado Review and Tcl for Vivado page"><i
+                        class="fab fa-github"></i> Suggest
+                    Edits</a>
+            </li>
+        </ul>
+    </div>
+    
+</nav>
+
+      <div class="container">
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    Vivado Review and Tcl for Vivado
+  </h1>
+
+  <div class="page-content">
+    
+    <div class="lab-toc col-md-6 col-lg-3 bg-light">
+      <h4>Table of Contents</h4>
+      <ul>
+  <li><a href="#fpga-overview">FPGA Overview</a></li>
+  <li><a href="#lecture-video">Lecture Video</a>
+    <ul>
+      <li><a href="#timestamps">Timestamps</a></li>
+    </ul>
+  </li>
+  <li><a href="#mini-project-1">Mini-project 1</a></li>
+  <li><a href="#mini-project-2">Mini-project 2</a></li>
+  <li><a href="#mini-project-3">Mini-project 3</a></li>
+  <li><a href="#mini-project-4">Mini-project 4</a></li>
+</ul>
+
+    </div>
+    
+
+    <h2 id="fpga-overview">FPGA Overview</h2>
+<p>On June 1, 2022 Professor Goeders gave an overview of FPGAs. The video is embedded below.</p>
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/7SzrMFNLq8w"> </iframe>
+
+<h2 id="lecture-video">Lecture Video</h2>
+<p>On May 26, 2021 Prof Nelson discussed how to use TCL in Vivado. The video is embedded below.</p>
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/dk7wFKXoMcg"> </iframe>
+
+<h3 id="timestamps">Timestamps</h3>
+
+<p><a href="https://www.youtube.com/watch?v=dk7wFKXoMcg&amp;t=0s">0:00</a> Introduction<br />
+<a href="https://www.youtube.com/watch?v=dk7wFKXoMcg&amp;t=346s">5:46</a> Driving Vivado using TCL<br />
+<a href="https://www.youtube.com/watch?v=dk7wFKXoMcg&amp;t=704s">11:44</a> Compiling a design<br />
+<a href="https://www.youtube.com/watch?v=dk7wFKXoMcg&amp;t=1332s">22:12</a> Design analysis<br />
+<a href="https://www.youtube.com/watch?v=dk7wFKXoMcg&amp;t=1726s">28:46</a> Properties<br />
+<a href="https://www.youtube.com/watch?v=dk7wFKXoMcg&amp;t=1870s">31:10</a> Demo: Mixing TCL and the GUI<br />
+<a href="https://www.youtube.com/watch?v=dk7wFKXoMcg&amp;t=2826s">47:06</a> Wrap-up and closing comments</p>
+
+<p>Tcl is a command language used in a variety of CAD tools.  Our interest in it is for use with Vivado - it is the scripting language that Vivado’s command line capability is based on.  Using it you can do 2 main things:</p>
+
+<ol>
+  <li>Write scripts to automate the processes we typically used the Vivado GUI for.  These include design creation, synthesis, implementation, and bitstream generation.</li>
+  <li>Write scripts to create, modify, or query designs.  That is, Vivado contains methods to add cells and wires to a design and place and route them individually.  It also contains methods to query and analyze existing designs in terms of determining the cells, wires, and placement information in the design as well as querying Vivado’s device representation.</li>
+</ol>
+
+<p>The goal of this unit is to help you get comfortable with running Vivado from the command line to accomplish these tasks.</p>
+
+<h1 id="task-1-refresh-your-vivado-abilities-with-the-gui">Task 1: Refresh Your Vivado Abilities With the GUI</h1>
+<p>To begin with, let’s review what you already know about using Vivado in GUI mode.</p>
+<ul>
+  <li>Get yourself a Vivado version installed you can use.  It need not be the very latest but use a relatively recent version.</li>
+  <li>Take an FPGA design from a previous class you have had or project you have done</li>
+  <li>Using the Vivado (GUI mode):
+    <ul>
+      <li>Open it (or create a new project if needed)</li>
+      <li>Modify it</li>
+      <li>Simulate it using the built-in simulator
+        <ul>
+          <li>Figure out how to add just the signals you care about to the waveform display.  There is a tutorial <a href="https://ecen323wiki.groups.et.byu.net/tutorials/simulation_tutorials/">here from BYU’s ECEn 323</a> which may help in the next few steps.</li>
+          <li>Figure out how to add dividers between groups of signals in the waveform display</li>
+          <li>Figure out how to change the radix used to display the values of multi-bit signals</li>
+          <li>Figure out how to jump to the next signal transition for a selected signal in the waveform display</li>
+          <li>Figure out how to save the waveform display setup you have created and then re-load it for a later simulation</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="task-2-learn-to-write-a-systemverilog-testbench">Task 2: Learn to Write a SystemVerilog Testbench</h1>
+<p>In your classes you used Tcl commands to control your simulation.  This is sufficient for small designs but not for real designs.   The accepted way to exercise a circuit in simulation is to write a <em>testbench</em> using SystemVerilog (or whatever HDL you are coding your design in).</p>
+
+<ul>
+  <li>Write your own SystemVerilog-based testbench for your design and simulate it that way instead of with a Tcl file.  You can find details on testbenches <a href="https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/SVTestbenches">at this BYU tutorial</a>.  Note that that tutorial is outside this website so use the Back button to return to here…</li>
+</ul>
+
+<h1 id="task-3-learn-how-to-drive-vivado-using-tcl">Task 3: Learn How to Drive Vivado Using Tcl</h1>
+<p>You can do essentially everything you need (except perhaps physically view simulation waveforms) using a script containing Tcl commands.  That is, you can create projects, add design files, compile your design files, start a simulation, synthesize/implement/generate bitstreams, etc. all using Tcl commands.</p>
+
+<p>This is often a preferred way to work since you want to be able to write a complete Tcl script to do what you want (create, implement, and then analyze a design) without your having to manually drive the GUI click by click.  And, this is the ONLY feasible way to script a large set of test runs of the tools on benchmark designs, for example.</p>
+
+<p>One work method is to do everything with Tcl except simulation.  When you want to simulate you can either start up the Vivado simulator from the command line on a series of files or learn to another more standard simulator (like Modelsim).</p>
+
+<p>Also, note if you start Vivado in <code class="language-plaintext highlighter-rouge">Tcl mode</code> using the <code class="language-plaintext highlighter-rouge">-mode tcl</code> flag you can always start and stop the GUI as needed using <code class="language-plaintext highlighter-rouge">start_gui</code> and <code class="language-plaintext highlighter-rouge">stop_gui</code> in the Tcl console.</p>
+
+<p>To learn how to use Tcl, work your way through this <a href="https://github.com/byu-cpe/BYU-Computing-Tutorials/wiki/TclVivado">BYU Tcl Tutorial</a>, which is focused on the basic usage of Tcl inside Vivado.</p>
+
+<p>Then, here is a good <a href="https://wiki.tcl-lang.org/page/Tcl+Tutorial+Lesson+0">general Tcl Tutorial</a> which will fill in many gaps and provide information on many of the language features.</p>
+
+<p>To proceed:</p>
+<ul>
+  <li>Use a version of the script from the tutorial above to synthesize and implement your design.</li>
+  <li>For things that require the GUI to see the effects (like some simulations), have the GUI open.</li>
+  <li>For things that don’t require the GUI (like synthesizing), do everything by running “vivado -mode tcl” and just do it from the command line.</li>
+  <li>Experiment with starting and stopping the GUI.</li>
+</ul>
+
+<p>Finally, a hint: anything you do in the GUI in Vivado (with a few exceptions) will put the resulting Tcl command to accomplish that into the Tcl console log.  So, one way to learn how to do things is to do them graphically and then look to see what the equivalent Tcl commands to accomplish that are.</p>
+
+<p>Just remember that you usually are in <code class="language-plaintext highlighter-rouge">project mode</code> when you create and work with projects from the GUI.  And, you are in <code class="language-plaintext highlighter-rouge">non-project mode</code> when you create designs solely using Tcl commands.  And, note that the commands for doing certain tasks in project mode are different for non-project mode.  So you can only take the above paragraph’s hint so far in learning Tcl commands.  At this point, go read up on project and non-project mode in Vivado to understand the differences.</p>
+
+<h1 id="task-4-write-some-additional-tcl-scripts-to-learn-more">Task 4: Write Some Additional Tcl Scripts to Learn More</h1>
+
+<h2 id="mini-project-1">Mini-project 1</h2>
+<p>You can prevent what sites Vivado will use when doing placement (‘place_design’).  If a site has a PROHIBIT property attached to it then Vivado will avoid using it.  This experiment entails:</p>
+
+<ol>
+  <li>Write a Tcl script to attach the PROHIBIT property to every SLICE, BRAM, and DSP site in the chip.  You can do a “get-sites” call to get all sites.  Look at what comes back and figure out what names you can filter on  (like SLICE*).  You then attach the property to each thing returned.</li>
+  <li>Now, remove the property at specific locations (maybe a rectangle or donut shaped area in the middle or corner of the chip.</li>
+  <li>Run the design through the tools from the command line, start the gui, and observe whether it followed your placement directives.  Iterate until you figure out how to make it do so.  For example, can you make it so all the circuitry in your design ends up in a small rectangle in a certain place on the FPGA?  You won’t be able to observe this easily with a 4-bit counter design, you might need a bigger design to be able to observe it…</li>
+</ol>
+
+<h2 id="mini-project-2">Mini-project 2</h2>
+<p>Create an ‘analyze_design’ script in Tcl.</p>
+
+<ol>
+  <li>Print out the name of the design and the name of the part it is mapped to.</li>
+  <li>For each port on the top-level of the design print out all the identifying information you can gather for that port (its location, its direction, its type, …)</li>
+  <li>For each cell in the logical design, print out information about it:
+    <ol>
+      <li>Its name, type, etc.</li>
+      <li>Its placed location if placed, “UNPLACED” otherwise.</li>
+      <li>Any of its cell properties that have different values from the default values for such a cell.  This one can be a bit tricky to figure out - search the web for some ideas or create your own.  If this turns out to be too hard, just print out all the properties.</li>
+      <li>A list of the cell’s pins along with the name (or other identifying information) of the net (wire) attached to that pin.</li>
+    </ol>
+  </li>
+  <li>For each net in the logical design, print out information about it:
+    <ol>
+      <li>Its name, type, etc.</li>
+      <li>A listing of the pins on cells that it is connected to.</li>
+      <li>If it is routed then print out a listing of the pins on sites or cells it is connected to.  For each such connected pin, print out enough identifying information so it is obvious where that can be located.</li>
+      <li>If it is routed then print out a listing of the wires/nodes and PIPs making up its route.  For each such wire/node and PIP print out enough identifying information so it is obvious where they are located.  This last one will require you figure out what a PIP is.</li>
+    </ol>
+  </li>
+</ol>
+
+<p>In short, from the above info you print out one should be able to re-create the entire design from cells and nets to placement and routing (but you do not need to do the re-creation).</p>
+
+<h2 id="mini-project-3">Mini-project 3</h2>
+<p>Print an analysis of a device.</p>
+<ol>
+  <li>How many rows and columns does it have?</li>
+  <li>How many I/O pins?</li>
+  <li>How many I/O banks?</li>
+  <li>How many CLB tiles?</li>
+  <li>How many LUT BELs?</li>
+  <li>How many BRAM tiles and/or sites?</li>
+  <li>How many SLICEL vs. SLICEM sites does it have?
+etc.</li>
+</ol>
+
+<h2 id="mini-project-4">Mini-project 4</h2>
+<p>For a given wiring switchbox in the device:</p>
+<ol>
+  <li>Print out all the wires in the switchbox</li>
+  <li>For each wire, print out:
+    <ol>
+      <li>The possible connections from that wire. For each such connection:
+        <ol>
+          <li>Give the destination wire and whether the connection to that wire is programmable or permanent (yes, Xilinx parts actually have non-programmable PIPs - they are always on).</li>
+          <li>The tile location of the other wire.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ComputingBootCamp/js/jquery.visible.min.js></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src=/ComputingBootCamp/js/js.cookie-2.2.1.min.js></script>
+<script src=/ComputingBootCamp/js/quizzes.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+
+<!-- Sidebar memory script -->
+<script type="module">
+
+    $(document).ready(function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown) {
+            // $("#collapsesetup").collapse("show");
+            return;
+        }
+        shown = JSON.parse(shown);
+
+        shown.forEach(function (item, index) {
+            $("#" + item).addClass('no-collapse-animation')
+            $("#" + item).collapse("show");
+            $("#" + item).removeClass('no-collapse-animation')
+        });
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsedevelopment").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsedevelopment");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsedevelopment").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsedevelopment"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsefpga_commercial").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsefpga_commercial");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsefpga_commercial").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsefpga_commercial"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsefpga_opensource").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsefpga_opensource");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsefpga_opensource").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsefpga_opensource"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsenetworking").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsenetworking");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsenetworking").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsenetworking"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsePCB").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsePCB");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsePCB").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsePCB"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsebroader_impacts").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsebroader_impacts");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsebroader_impacts").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsebroader_impacts"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapseresources").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapseresources");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapseresources").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapseresources"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+
+    // When a group is expanded, save it to the 'expandedSidebars' cookie.
+    $("#collapsearchive").on('shown.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            shown = "[]";
+        shown = JSON.parse(shown);
+        shown.push("collapsearchive");
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    // When a group is hidden, remove it from the 'exapndedSidebars' cookie
+    $("#collapsearchive").on('hidden.bs.collapse', function () {
+        var shown = Cookies.get('expandedSidebars');
+        if (!shown)
+            return;
+        shown = JSON.parse(shown);
+
+        shown = shown.filter(function (value, index, arr) {
+            return value != "collapsearchive"
+        });
+        Cookies.set('expandedSidebars', JSON.stringify(shown));
+    });
+
+    
+</script>
+
+</body>
+
+</html>
