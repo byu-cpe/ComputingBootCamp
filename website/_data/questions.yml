@@ -363,7 +363,7 @@
       correct: true
 
 - id: 131
-  prompt: When creating my own open sourc project, I should
+  prompt: When creating my own open source project, I should
   type: multiple_choice
   responses:
     - text: "use an existing licence"
