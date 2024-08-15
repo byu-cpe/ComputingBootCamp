@@ -76,7 +76,7 @@ There are way too many methods and operations for us to cover all of them here, 
 Your followup assignment for numpy is to look through the documentation at the link above(and google for what you can't find there) and try out the operations related to the following topics:
 
 * Array creation - Try creating arrays using np.ones, np.zeros, np.arange, np.linspace, and from lists of lists.
-* Array indexing - Try out the various methods for accessing array elements,  See: <https://numpy.org/doc/stable/reference/arrays.indexing.html>
+* Array indexing - Try out the various methods for accessing array elements,  See: <https://numpy.org/doc/stable/reference/routines.indexing.html>
 * Array Operations
   * Sort an array
   * Find the unique elements in an array
