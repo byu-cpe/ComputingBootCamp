@@ -1,0 +1,13 @@
+Produce apples 15 $0.25 red 
+Grain bread 1 $2.00 1.00
+Produce oranges 1 $32.00 orange
+Produce cucumbers 12 $1.00 green
+Produce potatoes 2 $0.50 brown
+Produce apples 15 $0.25 green
+Produce lemons 1 $32.00 yellow
+Produce spinach 12 $1.00 green
+Grain cereal 3 $2.00 0.75
+Produce beets 2 $0.10 red
+Produce apples 15 $0.25 yellow
+Produce oranges 1 $32.00 orange
+Produce lettuce 12 $1.00 green
