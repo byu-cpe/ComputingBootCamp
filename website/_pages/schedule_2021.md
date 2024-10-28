@@ -11,9 +11,9 @@ These are talks presented by faculty/students (mostly faculty).  **We will be me
 
 | Date          | Topic                                 | Speaker               | Followup Activity                                                         
 |---------------|-------------------------------        |-----------------------|-------------------------------------------------------------------        
-| Mon, Apr 26   | Welcome, Setup, and Your Website      | Faculty               | Setup your computer. Get on Slack. Complete [Linux setup/tutorials]({% link _selfpaced/linux.md%}). Setup your website where you can post daily/weekly progress updates.
-| Wed, Apr 28   | Git                                   | Goeders               | Complete the followup activities on the [Git]({% link _selfpaced/git.md %}) page.  If you are already a Git expert, contribute to the list of follow-up topics with your own suggestions.
-| Fri, Apr 30   | Github                                | Lundrigan     | Add a link on the [students]({% link _pages/students_2021.md %}) page via pull request.   Add your name and photo to your lab website via pull request ([CCL](https://ccl.byu.edu), [NET Lab](https://netlab.byu.edu/), etc.). 
+| Mon, Apr 26   | Welcome, Setup, and Your Website      | Faculty               | Setup your computer. Get on Slack. Complete [Linux setup/tutorials]({% link _modules/linux.md%}). Setup your website where you can post daily/weekly progress updates.
+| Wed, Apr 28   | Git                                   | Goeders               | Complete the followup activities on the [Git]({% link _modules/git.md %}) page.  If you are already a Git expert, contribute to the list of follow-up topics with your own suggestions.
+| Fri, Apr 30   | Github                                | Lundrigan     | Add a link on the students page via pull request.   Add your name and photo to your lab website via pull request ([CCL](https://ccl.byu.edu), [NET Lab](https://netlab.byu.edu/), etc.). 
 | Mon, May 3    | VS Code                               | Goeders               | Debug a C Program
 | Wed, May 5    | make                                  | Goeders               | Create a simple C program of your choice, and compile it using make.  Push it up to Github.  Next, find a Makefile that is part of one of your group's projects and work through it to understand how it works.
 | Fri, May 7    | cmake                                 | Mangelson             | ???
@@ -79,7 +79,7 @@ The networking track will be meeting in EB 302 at 2-3:30 PM.
 
 | Date          | Topic                         | Speaker               
 |---------------|-------------------------------|-----------------------
-| Wed, Jun 2    | [Networking Basics]({% link _selfpaced/networking.md %})             | Lundrigan
-| Wed, Jun 9    | [Networking Command Line Tools]({% link _selfpaced/networking_tools.md  %}) | Lundrigan
+| Wed, Jun 2    | [Networking Basics]({% link _modules/networking.md %})             | Lundrigan
+| Wed, Jun 9    | [Networking Command Line Tools]({% link _modules/networking_tools.md  %}) | Lundrigan
 | Wed, Jun 16   | Wireshark                     | Lundrigan
 | Wed, Jun 23   | Wireless Networking           | Lundrigan

@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Immerse Computing Bootcamp"
+title: "BYU Computing Bootcamp"
 class_name: Bootcamp
 class_number: Bootcamp
 email: brentnelson@byu.edu
@@ -42,7 +42,7 @@ fonts:
   header: "'Exo 2', sans-serif"
 
 collections:
-  selfpaced:
+  modules:
     output: true
     permalink: /tutorials/:title/
   pages:

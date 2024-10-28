@@ -33,12 +33,29 @@ On May 10th and 12th of 2021 we had an introduction to Python by Prof Lundrigan.
 ### Lecture 1
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KuD3mJxcwnk"> </iframe> 
 
-<!--- #### Video Timestamps --->
+#### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=KuD3mJxcwnk&t=0s) Introduction<br>
+[2:23](https://www.youtube.com/watch?v=KuD3mJxcwnk&t=143s) Why Python?<br>
+[17:42](https://www.youtube.com/watch?v=KuD3mJxcwnk&t=1062s) The Python REPL<br>
+[34:13](https://www.youtube.com/watch?v=KuD3mJxcwnk&t=2053s) Basics of Python script writing<br>
+[50:36](https://www.youtube.com/watch?v=KuD3mJxcwnk&t=3036s) Python interpreting process and debugging<br>
+[52:57](https://www.youtube.com/watch?v=KuD3mJxcwnk&t=3177s) Python as a multi-paradigm language<br>
+[1:06:10](https://www.youtube.com/watch?v=KuD3mJxcwnk&t=3970s) Dynamic typing
 
 ### Lecture 2
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/sq0_nicEFH8"> </iframe> 
 
-<!--- #### Video Timestamps --->
+#### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=sq0_nicEFH8&t=0s) Follow-up activity introduction<br>
+[3:52](https://www.youtube.com/watch?v=sq0_nicEFH8&t=232s) Introduction to argparse<br>
+[16:00](https://www.youtube.com/watch?v=sq0_nicEFH8&t=960s) Reading files<br>
+[22:45](https://www.youtube.com/watch?v=sq0_nicEFH8&t=1365s) Introduction to requests<br>
+[28:30](https://www.youtube.com/watch?v=sq0_nicEFH8&t=1710s) Review of assignment and demos
+
+### Lecture 3 (2022)
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/C47CawwJ04k"> </iframe>
 
 {% include quizzes.html id=26 %}
 

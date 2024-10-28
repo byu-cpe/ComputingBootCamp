@@ -12,6 +12,11 @@ order: 6
 ## Overview
 Open source Software refers to software where the source code is available publicly and can be modified. Open source software embraces the ideals of collaboration and public review, allowing comunities to form and help develop software. However, the fact that a software is open source does not necessarily grant the ability to do anything you want with it. Open source software is protected by licences. There are several common licences that are used in most projects. Some licences may require you to use the same licence or to share any modifications you make. 
 
+## Lecture Video
+On May 9, 2022 Professor Wirthlin gave a lecture about open source projects. The video is embedded below.
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/yqVypKmNh7g"> </iframe>
+
 ## Self-Paced Activities
 
 {% include quizzes.html id=130 %}
@@ -43,3 +48,4 @@ Open source Software refers to software where the source code is available publi
   * [Linux: Whose kernel is it?](https://www.wired.com/2004/05/linux-whose-kernel-is-it/)
   * [The Cathedral and the Bazaar](http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/index.html)
   * [Open Source Guides](https://opensource.guide/)
+  * [Google Open Source Code Release Guidelines](https://opensource.google/documentation/reference/releasing)

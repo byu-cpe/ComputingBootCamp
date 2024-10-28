@@ -35,7 +35,31 @@ sudo apt install make
 ## Lecture Video
 On May 5, 2021, we had a Make Tutorial by Prof Goeders. The video is embedded below:
 
-<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/4ITu7eJBdDY"> </iframe> 
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/4ITu7eJBdDY"> </iframe>
+
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=0s) Introduction to Make<br>
+[1:01](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=61s) Creating a recipe<br>
+[2:54](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=174s) Running makefiles and recipes<br>
+[4:09](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=249s) Common uses of Make<br>
+[5:15](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=315s) Using Make to create other files<br>
+[8:20](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=500s) A simple C program<br>
+[9:28](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=568s) Compiling C with Make<br>
+[10:25](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=625s) Adding dependencies<br>
+[12:35](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=755s) make clean<br>
+[12:53](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=773s) Importance of recipe names<br>
+[15:01](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=901s) Adding variables<br>
+[16:40](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=1000s) Chaining recipes<br>
+[24:47](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=1487s) Importance of recipe order<br>
+[25:17](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=1517s) Comments on suppressing output<br>
+[25:50](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=1550s) Comments on calling other makefiles<br>
+[26:28](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=1588s) Built-in variables<br>
+[30:06](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=1806s) Simplifying through pattern matching<br>
+[32:01](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=1921s) Demonstration of verbose option<br>
+[34:35](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=2075s) Making your makefiles more generic and reusable<br>
+[40:54](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=2454s) Creating overridable variables<br>
+[43:55](https://www.youtube.com/watch?v=4ITu7eJBdDY&t=2635s) Creating a default, catch-all rule
 
 ## Example
 

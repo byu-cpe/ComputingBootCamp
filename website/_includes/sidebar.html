@@ -13,13 +13,9 @@
             <span class="badge badge-pill badge-dark-grey"></span>
             Schedule
         </a>
-        <!-- <a href="{% link _pages/students_2021.md %}"
-            class="sidebar-item list-group-item list-group-item-action bg-light sidebar-item">
-            <span class="badge badge-pill badge-dark-grey"></span>
-            Student List
-        </a> -->
 
-        {% assign self_paced_sorted = site.selfpaced | sort : "order" %}
+
+        {% assign self_paced_sorted = site.modules | sort : "order" %}
 
         {% for group in site.data.groups %}
         <div class="card">

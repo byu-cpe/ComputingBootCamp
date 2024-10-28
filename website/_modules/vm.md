@@ -74,7 +74,7 @@ Moving on, we will install a few more things you will need:
 
 * Install Xilinx Vivado
   * First increase CPU's and memory in the VM (see below)
-  * Follow [Instructions]({% link _selfpaced/installing_vivado.md %})
+  * Follow [Instructions]({% link _modules/installing_vivado.md %})
 
 
 ## VM Customization

@@ -8,11 +8,24 @@ order: 7
 ---
 
 
-## Lecture Video
+# Lecture Videos
+
+## Lecture 1
 On May 12, 2021 Prof Nelson discussed two different methods of setting up virtual environments on Linux machines. The video is embedded below. 
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/o3uLvzaBHL0"> </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=o3uLvzaBHL0&t=0s) Overview of Python versions and environments<br>
+[4:44](https://www.youtube.com/watch?v=o3uLvzaBHL0&t=284s) Introduction to venv<br>
+[15:36](https://www.youtube.com/watch?v=o3uLvzaBHL0&t=936s) Discussion on environment preferences<br>
+[19:34](https://www.youtube.com/watch?v=o3uLvzaBHL0&t=1174s) Conda
+
+## Lecture 2
+On May 11, 2022 Professor Goeders talked about environments. The video is below.
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/_392WJiynnE"> </iframe>
 
 You can install virtual environments on your machine by taking the steps that follow.
 

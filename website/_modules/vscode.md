@@ -7,7 +7,7 @@ type: development
 order: 3
 ---
 ## Overview 
-VS Code is an editor that has risen in popularity in recent years. The 2021 stackoverflow developer survey reported that around 70% of respondants use VS code (see survey results [here](https://insights.stackoverflow.com/survey/2021#most-popular-technologies-new-collab-tools)). VS code is a versitile text editor with a vast array of extensions that allow easy coding in many different languages. VS code does not have any inbuilt compiling tools however it can easily interact with those that you have installed. VS Code can be configured to run python scripts and compile C code but requires the needed programs to be installed for it to do so (python or GCC or similar). With the proper use, VS code can be an efficient tool as you work on many projects. 
+VS Code is an editor that has risen in popularity in recent years. The 2021 stackoverflow developer survey reported that around 70% of respondants use VS code (see survey results [here](https://insights.stackoverflow.com/survey/2021#most-popular-technologies-new-collab-tools)). VS code is a versatile text editor with a vast array of extensions that allow easy coding in many different languages. VS code does not have any inbuilt compiling tools however it can easily interact with those that you have installed. VS Code can be configured to run python scripts and compile C code but requires the needed programs to be installed for it to do so (python or GCC or similar). With the proper use, VS code can be an efficient tool as you work on many projects. 
 
 
 ## Installation
@@ -35,9 +35,9 @@ Alternatively you can open the program using the GUI and then choose a folder or
 
 ## Tutorial
 
-On May 3, 2021 we had a VS Code Tutorial by Prof Goeders. The video is embedded below
+On May 2, 2022 we had a tutorial for using VS Code and setting up a debugger for C given by Prof Goeders. He was followed by Prof Lundrigan in giving a tutorial of using Python in VS Code. The video is embedded below
 
-<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ce0lVayBHpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Timestamps
 
@@ -172,7 +172,7 @@ The first line is not required unless the default formatter has been changed.
 
 The formatter settings can be changed from the default by placing a file named `.clang-format` in your project directory. You can read more about that [here](https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
 
-*Note:* VS Code assumes cpp files contain C++ code and C files contain C code. With h files, VS Code by default assumes they are C++ code and will apply cpp settings to them. You can specify the file to use C using [these steps.](https://code.visualstudio.com/docs/languages/overview#_changing-the-language-for-the-selected-file)
+*Note:* VS Code assumes cpp files contain C++ code and C files contain C code. With h files, VS Code by default assumes they are C++ code and will apply cpp settings to them. You can specify the file to use C using [these steps.](https://code.visualstudio.com/docs/languages/overview#_change-the-language-for-the-selected-file)
 
 ### Extension recommendations
 There are a multitude of extensions for VS Code. Which to install will depend both on personal preference and the projects you are working on. Below is a list of some useful extensions. 
@@ -204,6 +204,10 @@ Try to debug a program in VS Code. Clone the Bootcamp repository and use the VS 
 
 ## Additional resource
 VS Code has extensive tutorials and documentation. Below is a list of pages on key topics. Links to specific topics were included as part of the various tips. The full document can be found [here](https://code.visualstudio.com/docs)
+
+A previous tutorial was given on May 3, 2021 Prof Goeders. The video is embedded below:
+
+<iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/KetWeah5Z9A"> </iframe>
 
 <!---
 ## Faculty Brainstorming 

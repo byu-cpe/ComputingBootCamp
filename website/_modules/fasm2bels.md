@@ -76,6 +76,11 @@ On June 4, 2021, Professor Goeders gave an overview of the FASM 2 BELs repositor
 src="https://www.youtube.com/embed/58wXkBlyu-Q"> 
 </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=58wXkBlyu-Q&t=0s) Introduction to netlists<br>
+[7:09](https://www.youtube.com/watch?v=58wXkBlyu-Q&t=429s) fasm2Bels<br>
+[12:38](https://www.youtube.com/watch?v=58wXkBlyu-Q&t=758s) Why use this?
 
 ## Follow-Up Activities
 
@@ -123,5 +128,5 @@ Modify the appropriate Makefile variables to reflect the newly imported files. T
 * FASM2BELs Github Repository (BYU CCL Fork) - <https://github.com/byuccl/symbiflow-xc-fasm2bels>
 * FASM2BELs Github Repository - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels>
 * FASM2BELs README.md - <https://github.com/SymbiFlow/symbiflow-xc-fasm2bels/blob/master/README.md>
-* How to Install RapidWright - <https://www.rapidwright.io/docs/Automatic_Install.html>
+* How to Install RapidWright - <https://www.rapidwright.io/docs/Install.html>
 

@@ -12,17 +12,17 @@ On May 14, 2021 Prof Mangelson gave a tutorial on how to use the Numpy, Pandas, 
 
 <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/hdDKcOLD-5M"> </iframe> 
 
-### Video Timestamps
+### Timestamps
 
-* Installation
-* numpy - 2:29
-  * Creating a numpy array - 3:46
-  * Array indexing - 9:28
-  * Array operations - 12:16
-* matplotlib - 26:42
-  * General graphing - 27:55
-  * Other types of plots - 38:32
-* pandas - 48:39
+[0:00](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=0s) Installation of various packages<br>
+[2:29](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=149s) Introduction to NumPy<br>
+[3:46](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=226s) Creating a NumPy array<br>
+[9:28](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=568s) Array indexing<br>
+[12:16](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=736s) Array operations<br>
+[26:42](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=1602s) Introduction to Matplotlib<br>
+[27:55](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=1675s) General graphing<br>
+[38:32](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=2312s) Other types of plots<br>
+[48:39](https://www.youtube.com/watch?v=hdDKcOLD-5M&t=2919s) pandas
 
 ## Overview
 
@@ -76,7 +76,7 @@ There are way too many methods and operations for us to cover all of them here, 
 Your followup assignment for numpy is to look through the documentation at the link above(and google for what you can't find there) and try out the operations related to the following topics:
 
 * Array creation - Try creating arrays using np.ones, np.zeros, np.arange, np.linspace, and from lists of lists.
-* Array indexing - Try out the various methods for accessing array elements,  See: <https://numpy.org/doc/stable/reference/arrays.indexing.html>
+* Array indexing - Try out the various methods for accessing array elements,  See: <https://numpy.org/doc/stable/reference/routines.indexing.html>
 * Array Operations
   * Sort an array
   * Find the unique elements in an array
@@ -137,7 +137,7 @@ ax.legend()  # Add a legend.
 # Citation: Example from matplotlib.org tutorial
 ```
 
-For more information see: <https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py>
+For more information see: <https://matplotlib.org/stable/tutorials/introductory/quick_start.html>
 
 ### Followup Activities
 
@@ -175,7 +175,7 @@ For a followup activity, read more about the following topics and experiment wit
 * File I/O <https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html>
 * Working with timestamps and time series <https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html>
 * Plotting/visualization <https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html>
-* Statistical tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/computation.html>
+* Statistical tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/>
 
 ## Conclusion
 Packages are a large part of why python is such an important tool. Numpy, pandas, and matplotlib are just a few of the packages that you will undoubtably use throughout your career. Between the three packages, there is a lot to learn and remember. Below is a list of links to quickly reference for help with a variety of functions.

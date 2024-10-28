@@ -22,3 +22,6 @@ order: 6
 
 ## Resources
 
+On May 16th, 2022 a tutorial was given on Web Technologies by Prof Lundrigan. The video is embedded below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/valULtQpank" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

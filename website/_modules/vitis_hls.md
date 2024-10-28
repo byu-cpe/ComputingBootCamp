@@ -12,6 +12,18 @@ On June 23, 2021 we had a Vitis HLS Tutorial by Prof Goeders. The video is embed
 
 <iframe width="800" height="600" src="https://www.youtube.com/embed/i_nQmjEaMVs"> </iframe> 
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=0s) Introduction to High Level Synthesis<br>
+[8:20](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=500s) Example function<br>
+[10:39](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=639s) Introduction to Vitis HLS<br>
+[17:43](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=1063s) C Simulation<br>
+[20:15](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=1215s) C Synthesis<br>
+[28:30](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=1710s) Seeing the generated Verilog<br>
+[32:42](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=1962s) Thoughts on increasing the performance<br>
+[38:19](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=2299s) Using Vitis HLS to optimize performance<br>
+[57:28](https://www.youtube.com/watch?v=i_nQmjEaMVs&t=3448s) Using main memory
+
 ## Install Vitis HLS
 
 For this assignment we will be using Vitis HLS. You can install Vitis on your local machine (https://www.xilinx.com/support/download.html). If you do this, you should install Vitis 2020.2 on an Ubuntu 18.04 (or newer) machine. To install it will take approximately 100GB. 

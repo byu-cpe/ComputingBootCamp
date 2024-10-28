@@ -12,6 +12,20 @@ On June 9, 2021 Prof Lundrigan discussed some common networking tools. The video
 
 <iframe width="800" height="500" allow="fullscreen" src="https://www.youtube.com/embed/r-z62olDMQM"> </iframe>
 
+### Timestamps
+
+[0:00](https://www.youtube.com/watch?v=r-z62olDMQM&t=0s) Introduction<br>
+[1:19](https://www.youtube.com/watch?v=r-z62olDMQM&t=79s) ifconfig and ip address<br>
+[6:59](https://www.youtube.com/watch?v=r-z62olDMQM&t=419s) ping<br>
+[10:34](https://www.youtube.com/watch?v=r-z62olDMQM&t=634s) dig and nslookup<br>
+[16:18](https://www.youtube.com/watch?v=r-z62olDMQM&t=978s) traceroute<br>
+[21:05](https://www.youtube.com/watch?v=r-z62olDMQM&t=1265s) curl/wget/httpie<br>
+[30:04](https://www.youtube.com/watch?v=r-z62olDMQM&t=1804s) arp<br>
+[31:53](https://www.youtube.com/watch?v=r-z62olDMQM&t=1913s) nmap<br>
+[37:28](https://www.youtube.com/watch?v=r-z62olDMQM&t=2248s) nc<br>
+[40:38](https://www.youtube.com/watch?v=r-z62olDMQM&t=2438s) tcpdump/wireshark/tshark<br>
+[52:06](https://www.youtube.com/watch?v=r-z62olDMQM&t=3126s) Wrap-up
+
 ## Tools
 
 - [ifconfig](https://linux.die.net/man/8/ifconfig) or [ip](https://linux.die.net/man/8/ip)
