@@ -77,7 +77,7 @@ sudo apt upgrade
 
 In many tutorials you will be asked to edit files.  It is good to be familiar with a command-line editor like Vim, nano, or Emacs in order to make quick edits without needing a GUI, but if you prefer to always use a GUI for editing files, that's fine.  
 
-There are some instructions on installing and running VS Code [here]({% link _selfpaced/vscode.md %}).
+There are some instructions on installing and running VS Code [here]({% link _modules/vscode.md %}).
 
 
 ## Other Things to Learn and Set Up
@@ -111,6 +111,8 @@ This is how you move files between machines.
 
 ### SSH Keys
 Instead of having to authenticate with a password each time you connect to a remote machine, you can set up an SSH key to do automatic authentication.  [This tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1804) explains how to set this up in a variety of ways.
+
+You will need to add your SSH Key to your GitHub account. This will allow you to use your SSH key to authenticate with GitHub in order to clone repositories using the SSH method. [This page](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) should walk you through the instructions on adding this to you account. 
 
 A few of notes __before__ following the tutorial:
   * If your computer doesn't have ''ssh-copy-id'' installed, you will need to follow the instructions below that

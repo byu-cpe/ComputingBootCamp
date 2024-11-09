@@ -7,7 +7,7 @@ type: development
 order: 3
 ---
 ## Overview 
-VS Code is an editor that has risen in popularity in recent years. The 2021 stackoverflow developer survey reported that around 70% of respondants use VS code (see survey results [here](https://insights.stackoverflow.com/survey/2021#most-popular-technologies-new-collab-tools)). VS code is a versitile text editor with a vast array of extensions that allow easy coding in many different languages. VS code does not have any inbuilt compiling tools however it can easily interact with those that you have installed. VS Code can be configured to run python scripts and compile C code but requires the needed programs to be installed for it to do so (python or GCC or similar). With the proper use, VS code can be an efficient tool as you work on many projects. 
+VS Code is an editor that has risen in popularity in recent years. The 2021 stackoverflow developer survey reported that around 70% of respondants use VS code (see survey results [here](https://insights.stackoverflow.com/survey/2021#most-popular-technologies-new-collab-tools)). VS code is a versatile text editor with a vast array of extensions that allow easy coding in many different languages. VS code does not have any inbuilt compiling tools however it can easily interact with those that you have installed. VS Code can be configured to run python scripts and compile C code but requires the needed programs to be installed for it to do so (python or GCC or similar). With the proper use, VS code can be an efficient tool as you work on many projects. 
 
 
 ## Installation
@@ -110,22 +110,17 @@ Additional information on Python-specific debugging can be found [here](https://
 VS Code provides the ability to format your code automatically. Depending on the language of your code a formatter may be already available for others you may need to install one. Once a formatter is installed it can be configured to format on save. Some languages and formatters also all formatting on paste or formatting when line is completed. You can manually format the code using the keystroke `Ctrl+Shift+I`. If you choose to use a formatter make sure your formatter and settings match those of the project you are working on.
 
 #### Python
-VS code does not by default have a python formatter. The recommended formatter to use is [Black](https://black.readthedocs.io/en/stable/). To install black simply run 
+VS code does not by default have a python formatter. The recommended formatter to use is [Black](https://black.readthedocs.io/en/stable/). To install black simply install the extension "Black Formatter" by Microsoft within VS Code. Then, open your settings.json file and add the following:
 ```
-pip install black
-```
-Then, open your settings.json file. The settings you will need to add are:
-```
-    "python.formatting.provider": "black",
     "[python]": {"editor.formatOnSave": true}
 ```
-The first setting specifies our chosen formatter. The second enables formatting on save for python files. 
+This setting enables formatting on save for python files. 
 
-To adjust the formatter's settings you may set `"python.formatting.blackArgs"`. For instance, the following example sets the max line length to 100.
+To adjust the formatter's settings you may set `"black-formatter.args"`. For instance, the following example sets the max line length to 100.
 ```
-"python.formatting.blackArgs": ["--line-length", "100"]
+"black-formatter.args": ["--line-length", "100"]
 ```
-See [this page](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html), for more information on Black's settings.
+See black's [extension page](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) and [documentation](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html) for more information on Black's settings.
 
 #### C/C++
 VS code uses clang-format to format C and C++ code by default. You can enable the formatter to format on save as well as to format a line whenever you type `;` using the following settings.
@@ -138,7 +133,7 @@ The first line is not required unless the default formatter has been changed.
 
 The formatter settings can be changed from the default by placing a file named `.clang-format` in your project directory. You can read more about that [here](https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
 
-*Note:* VS Code assumes cpp files contain C++ code and C files contain C code. With h files, VS Code by default assumes they are C++ code and will apply cpp settings to them. You can specify the file to use C using [these steps.](https://code.visualstudio.com/docs/languages/overview#_changing-the-language-for-the-selected-file)
+*Note:* VS Code assumes cpp files contain C++ code and C files contain C code. With h files, VS Code by default assumes they are C++ code and will apply cpp settings to them. You can specify the file to use C using [these steps.](https://code.visualstudio.com/docs/languages/overview#_change-the-language-for-the-selected-file)
 
 ### Extension recommendations
 There are a multitude of extensions for VS Code. Which to install will depend both on personal preference and the projects you are working on. Below is a list of some useful extensions. 

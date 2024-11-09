@@ -76,7 +76,7 @@ There are way too many methods and operations for us to cover all of them here, 
 Your followup assignment for numpy is to look through the documentation at the link above(and google for what you can't find there) and try out the operations related to the following topics:
 
 * Array creation - Try creating arrays using np.ones, np.zeros, np.arange, np.linspace, and from lists of lists.
-* Array indexing - Try out the various methods for accessing array elements,  See: <https://numpy.org/doc/stable/reference/arrays.indexing.html>
+* Array indexing - Try out the various methods for accessing array elements,  See: <https://numpy.org/doc/stable/reference/routines.indexing.html>
 * Array Operations
   * Sort an array
   * Find the unique elements in an array
@@ -137,7 +137,7 @@ ax.legend()  # Add a legend.
 # Citation: Example from matplotlib.org tutorial
 ```
 
-For more information see: <https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py>
+For more information see: <https://matplotlib.org/stable/tutorials/introductory/quick_start.html>
 
 ### Followup Activities
 
@@ -175,7 +175,7 @@ For a followup activity, read more about the following topics and experiment wit
 * File I/O <https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html>
 * Working with timestamps and time series <https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html>
 * Plotting/visualization <https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html>
-* Statistical tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/computation.html>
+* Statistical tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/>
 
 ## Conclusion
 Packages are a large part of why python is such an important tool. Numpy, pandas, and matplotlib are just a few of the packages that you will undoubtably use throughout your career. Between the three packages, there is a lot to learn and remember. Below is a list of links to quickly reference for help with a variety of functions.

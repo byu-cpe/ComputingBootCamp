@@ -48,3 +48,4 @@ On May 9, 2022 Professor Wirthlin gave a lecture about open source projects. The
   * [Linux: Whose kernel is it?](https://www.wired.com/2004/05/linux-whose-kernel-is-it/)
   * [The Cathedral and the Bazaar](http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/index.html)
   * [Open Source Guides](https://opensource.guide/)
+  * [Google Open Source Code Release Guidelines](https://opensource.google/documentation/reference/releasing)

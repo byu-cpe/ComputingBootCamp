@@ -12,7 +12,7 @@ Any contributions to this website are welcomed and appreciated! In order to main
 
 1. Fork the [ComputingBootCamp repository](https://github.com/byu-cpe/ComputingBootCamp) and clone it. Modify the repository on your cloned repo locally on your computer. 
 1. Determine which category your topic falls under (Software Development, Robotics, etc.)
-1. Create a new Markdown file for your new module in the ```ComputingBootCamp/website/_selfpaced/``` folder. Follow the naming convention of the other files already in the folder. 
+1. Create a new Markdown file for your new module in the ```ComputingBootCamp/website/_modules/``` folder. Follow the naming convention of the other files already in the folder. 
 1. Start creating the module page! Follow the format shown below. Make sure to change the ```type: <module_category>``` line at the top of your Markdown folder so it appears in the correct category. 
 1. Preview your changes by hosting your website. Follow the instructions on [this page](https://byu-cpe.github.io/ComputingBootCamp/tutorials/setup_website/#try-out-your-website) to host the website locally. 
 1. Once you've made all changes/additions: 
