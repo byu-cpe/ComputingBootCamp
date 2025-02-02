@@ -8,7 +8,7 @@ order: 6
 ---
 
 ## Overview
-Web browsers rely on a variety of technologies to load webpages and deliver a seamless experience to its users. The fundamentals of web technologies revolve around creating and displayin webpages, handling data, and utilizing network protocols that enable these processes. Most web browsers come with an *Inspect* tool, which allows users to explore a website's HTML, CSS, javascript, sources, and networking protocols that make the site functional.
+Web browsers rely on a variety of technologies to load webpages and deliver a seamless experience to its users. The fundamentals of web technologies revolve around creating and displaying webpages, handling data, and utilizing network protocols that enable these processes. Most web browsers come with an *Inspect* tool, which allows users to explore a website's HTML, CSS, javascript, sources, and networking protocols that make the site functional.
 
 In this module, you will learn how to:
 1. Analyze how websites work using inspection tools.
@@ -118,7 +118,7 @@ Creating a Hello World webpage using Flask is rather straightforward, but it onl
 * **Learn about template inheritance.** Use [Template Inheritance](https://flask.palletsprojects.com/en/stable/patterns/templateinheritance/) to create a custom title, header, and/or footer shared within all pages of your site.
 * **Design a homepage.** Create a homepage that contains the following:
    * A welcome message.
-   * An image .
+   * An image.
    * At least three links to other pages in your flask project. Make sure each page also links back to the homepage (this can be accomplished automatically with template inheritance).
 
 ## Additional Resources
