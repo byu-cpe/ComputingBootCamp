@@ -14,7 +14,7 @@ Matlab is a software used by engineers around the globe to perform mathematical 
 
 ## Setup
 
-A Matlab SDK (Software Development Kit) can be downloaded  <a href="https://software.byu.edu/student" target="_blank">here</a> if you are a current BYU student. You will need to create a Matlab account using your byu email (i.e. NetID@byu.edu), and you will need an access code (available to current BYU students through BYU after creating a Matlab account) in order to use the full version of Matlab rather than the free trial version.
+A Matlab SDK (Software Development Kit) can be downloaded  <a href="https://www.mathworks.com/academia/tah-portal/brigham-young-university-30284884.html" target="_blank">here</a> if you are a current BYU student. You will need to create a Matlab account using your byu email (i.e. NetID@byu.edu), and you will need an access code (available to current BYU students through BYU after creating a Matlab account) in order to use the full version of Matlab rather than the free trial version.
 
 ## Intro to Matlab Window
 
