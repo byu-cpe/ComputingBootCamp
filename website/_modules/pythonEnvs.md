@@ -37,7 +37,7 @@ Before proceeding carefully consider the goals of what we are trying to achieve:
 - We want to be able to install as many different python versions as desired on the system for our own use.
 - We want to create *sand-boxed* virtual environments for running python.  That is, each virtual environment will have its own version of python installed and its own custom set of python modules added to it.  In this way a given environment is totally isolated from the system python and from each other.
 
-There are two ways to do this: using python's `venv` module or using `Conda`.  They will be covered in that order.  There are advantages and disadvantages to each.
+There are three ways to do this: using python's `venv` module on its own, using `venv` within `uv`, or using `Conda`.  They will be covered in that order.  There are advantages and disadvantages to each.
 
 # Using venv
 
@@ -87,7 +87,12 @@ alias de='deactivate'
 - A possible shortcoming of the `venv` approach is that there is no real environment manager.  As mentioned, environments can live anywhere - there is no central repo or controller for your environments; there is no way to list them or manage them.  You just remember where they are to activate them.  
 - As a result it is simple and super easy to use, but other approaches do provide some capabilities to help manage your environments if that is deemed important.
     - One is `pyenv` a github project you can download and build.  When it installs a new python version for an environment on your machine it compiles it from sources.  It then provides facilities to manage your environments and make it easy to switch between them.  It may be useful or it may be overkill, depending on what you need.
-    - Another is `conda`, which will be covered next so keep reading.
+    - Others are `conda` and `uv`, which will be covered next so keep reading.
+
+# Using uv
+
+`uv` is a newer Python package and program manager written in Rust. It includes `venv`, can install isolated Python versions on its own (versus `venv`, which can only use already installed versions), and includes a linter/formatter (`ruff`) and type checker/language server (`ty`) via included extensions (`uvx`). It is extremely fast and easy to use and has [very good documentation](https://docs.astral.sh/uv/).
+
 
 # Using Conda
 `Conda` was developed by the developers of `numpy`.  The web suggests it was done to solve problems that python, venv, and pip alone could not handle.  And, it works with other languages besides python, something the `numpy` developers thought important.  
@@ -149,6 +154,9 @@ alias cel='conda env list'
 - Finally, note that `conda` maintains its own python distribution instead of using PyPI.  That is generally not a problem, however.
 
 ## What to Choose?
+
+### [uv](https://docs.astral.sh/uv/)
+
 
 ### Venv
 
