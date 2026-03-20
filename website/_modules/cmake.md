@@ -31,9 +31,9 @@ An alternative method of install is to [use *pipx*](https://stackoverflow.com/qu
 
 To install *cmake* via *pipx*:
 
-```
-apt install pipx
-pipx install some-python-application
+```bash
+apt install pipx    # install pipx
+pipx install cmake   # install cmake 
 ```
 
 Then add the following to your *.bashrc* to give the *pipx* version of *cmake* priority:
