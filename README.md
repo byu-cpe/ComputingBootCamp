@@ -9,7 +9,7 @@
 * Assessment approaches for modules (Learning Suite? Other LMS systems?)
 
 ## Possible modules
-* Slack Training Module
+* Teams Training Module
 * F4PGA
 * Verilator
 
