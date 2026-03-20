@@ -93,6 +93,39 @@ alias de='deactivate'
 
 `uv` is a newer Python package and program manager written in Rust. It includes `venv`, can install isolated Python versions on its own (versus `venv`, which can only use already installed versions), and includes a linter/formatter (`ruff`) and type checker/language server (`ty`) via included extensions (`uvx`). It is extremely fast and easy to use and has [very good documentation](https://docs.astral.sh/uv/).
 
+To install `uv`:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+To [set up a virtual environment](https://docs.astral.sh/uv/pip/environments/):
+
+```bash
+uv venv # default environment in current directory
+```
+
+```bash
+uv venv my-name # at a specific path
+```
+
+```bash
+uv venv --python 3.11 # with a specific Python version
+```
+
+To activate the virtual environment:
+
+```bash
+source .venv/bin/activate
+```
+
+To exit the virtual environment:
+
+```bash
+deactivate
+```
+
+## Discussion of the `uv` Approach
 
 # Using Conda
 `Conda` was developed by the developers of `numpy`.  The web suggests it was done to solve problems that python, venv, and pip alone could not handle.  And, it works with other languages besides python, something the `numpy` developers thought important.  
