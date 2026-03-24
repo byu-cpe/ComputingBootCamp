@@ -125,7 +125,11 @@ To exit the virtual environment:
 deactivate
 ```
 
-## Discussion of the `uv` Approach
+## Discussion of the 'uv' Approach
+- `uv` is extremely fast and easy to use.
+- The [documentation](https://docs.astral.sh/uv/) is centralized and clear.
+- Tools and python versions can be installed via `uv` without sudo and without worrying about system-level installs.
+- `uv` is largely interchangeable with `pip` and `venv`, making migrating back and forth between it and python-native tooling straightforward.
 
 # Using Conda
 `Conda` was developed by the developers of `numpy`.  The web suggests it was done to solve problems that python, venv, and pip alone could not handle.  And, it works with other languages besides python, something the `numpy` developers thought important.  
@@ -188,9 +192,6 @@ alias cel='conda env list'
 
 ## What to Choose?
 
-### [uv](https://docs.astral.sh/uv/)
-
-
 ### Venv
 
 +: Uses built-in python functionality exclusively.
@@ -200,6 +201,20 @@ alias cel='conda env list'
 -: Only manages python packages
 
 +/-: Can put virtual environment into any directory
+
+### uv
+
++: Extremely fast.
+
++: Easy to use.
+
++: Compatible with `pip` and built-in Python functionality (easy migration).
+
++: Replaces `pip`, `pipx`, `venv`, and more with one tool.
+
+-: Requires external software.
+
+-: Maintained by private company (with open source license).
 
 ### Conda
 
@@ -229,7 +244,10 @@ Work through the following activities.
 - Rename the directory `env1` to be something else.  Can you still activate it as long as you use the right path?
 - Remove `env1`.
 
-### 2. Experiment with Conda
+### 2. Experiment with uv
+- Repeat the above steps using `uv`.
+
+### 3. Experiment with Conda
 - Repeat the above steps but using `Conda`. 
 - Call your environments `cenv1` and `cenv2`.  When you create each just specify a python version to use without first installing any python into your system.
 - When you create `cenv1` specify you want to install `pandas` in the `conda create` command itself (see above).  Then, once you have activated `cenv1` use `conda install` to add `matplotlib` to the environment.
