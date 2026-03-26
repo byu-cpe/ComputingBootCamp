@@ -37,7 +37,7 @@ Before proceeding carefully consider the goals of what we are trying to achieve:
 - We want to be able to install as many different python versions as desired on the system for our own use.
 - We want to create *sand-boxed* virtual environments for running python.  That is, each virtual environment will have its own version of python installed and its own custom set of python modules added to it.  In this way a given environment is totally isolated from the system python and from each other.
 
-There are two ways to do this: using python's `venv` module or using `Conda`.  They will be covered in that order.  There are advantages and disadvantages to each.
+There are three ways to do this: using python's `venv` module on its own, using `venv` within `uv`, or using `Conda`.  They will be covered in that order.  There are advantages and disadvantages to each.
 
 # Using venv
 
@@ -87,7 +87,49 @@ alias de='deactivate'
 - A possible shortcoming of the `venv` approach is that there is no real environment manager.  As mentioned, environments can live anywhere - there is no central repo or controller for your environments; there is no way to list them or manage them.  You just remember where they are to activate them.  
 - As a result it is simple and super easy to use, but other approaches do provide some capabilities to help manage your environments if that is deemed important.
     - One is `pyenv` a github project you can download and build.  When it installs a new python version for an environment on your machine it compiles it from sources.  It then provides facilities to manage your environments and make it easy to switch between them.  It may be useful or it may be overkill, depending on what you need.
-    - Another is `conda`, which will be covered next so keep reading.
+    - Others are `conda` and `uv`, which will be covered next so keep reading.
+
+# Using uv
+
+`uv` is a newer Python package and program manager written in Rust. It includes `venv`, can install isolated Python versions on its own (versus `venv`, which can only use already installed versions), and includes a linter/formatter (`ruff`) and type checker/language server (`ty`) via included extensions (`uvx`). It is extremely fast and easy to use and has [very good documentation](https://docs.astral.sh/uv/).
+
+To install `uv`:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+To [set up a virtual environment](https://docs.astral.sh/uv/pip/environments/):
+
+```bash
+uv venv # default environment in current directory
+```
+
+```bash
+uv venv my-name # at a specific path
+```
+
+```bash
+uv venv --python 3.11 # with a specific Python version
+```
+
+To activate the virtual environment:
+
+```bash
+source .venv/bin/activate
+```
+
+To exit the virtual environment:
+
+```bash
+deactivate
+```
+
+## Discussion of the 'uv' Approach
+- `uv` is extremely fast and easy to use.
+- The [documentation](https://docs.astral.sh/uv/) is centralized and clear.
+- Tools and python versions can be installed via `uv` without sudo and without worrying about system-level installs.
+- `uv` is largely interchangeable with `pip` and `venv`, making migrating back and forth between it and python-native tooling straightforward.
 
 # Using Conda
 `Conda` was developed by the developers of `numpy`.  The web suggests it was done to solve problems that python, venv, and pip alone could not handle.  And, it works with other languages besides python, something the `numpy` developers thought important.  
@@ -160,6 +202,20 @@ alias cel='conda env list'
 
 +/-: Can put virtual environment into any directory
 
+### uv
+
++: Extremely fast.
+
++: Easy to use.
+
++: Compatible with `pip` and built-in Python functionality (easy migration).
+
++: Replaces `pip`, `pipx`, `venv`, and more with one tool.
+
+-: Requires external software.
+
+-: Maintained by private company (with open source license).
+
 ### Conda
 
 -: Requires installing external software using `wget`
@@ -188,7 +244,10 @@ Work through the following activities.
 - Rename the directory `env1` to be something else.  Can you still activate it as long as you use the right path?
 - Remove `env1`.
 
-### 2. Experiment with Conda
+### 2. Experiment with uv
+- Repeat the above steps using `uv`.
+
+### 3. Experiment with Conda
 - Repeat the above steps but using `Conda`. 
 - Call your environments `cenv1` and `cenv2`.  When you create each just specify a python version to use without first installing any python into your system.
 - When you create `cenv1` specify you want to install `pandas` in the `conda create` command itself (see above).  Then, once you have activated `cenv1` use `conda install` to add `matplotlib` to the environment.
