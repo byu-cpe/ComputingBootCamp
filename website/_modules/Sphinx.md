@@ -229,12 +229,7 @@ This concludes our module about Documentation and Sphinx. For more information c
 
 ### **Additional resources**
 
-* We have barely scratched the surface of rst and sphinx in this module. A very helpful resource is the [sublime and sphinx guide](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html). If you are working with rst at all I highly recommend reading at least these sections from that resource. I personally use these methods nearly every time I write a new document:
-   * [Showing example code](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/code_blocks.html)
-   * [Adding links](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html)
-   * [Adding Images](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/images.html)
-
-
+* We have barely scratched the surface of rst and sphinx in this module. We highly recommend using online resources/examples when writing documentation, including the following: 
 * [This online tool](https://www.tablesgenerator.com/text_tables) is invaluable for building complex tables in RST or Markdown format. 
 * Visit [this website](https://www.sphinx-doc.org/en/master/) for the official Sphinx guide. 
 
