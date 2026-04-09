@@ -31,7 +31,7 @@ An alternative method of install is to use either [*uv*](https://docs.astral.sh/
 
 **First** add the following to your *.bashrc* to give the *pipx*/*uv* version of *cmake* priority:
 
-```bash
+```
 export PATH="$HOME/.local/bin:$PATH"
 ```
 

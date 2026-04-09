@@ -107,6 +107,6 @@ Docker is a powerful tool for developers to build, ship, and run applications. Y
 
 ## Additional Resources
  - [Official Docker Overview](https://docs.docker.com/get-started/overview/)  
- - [Awesome-docker](https://awesome-docker.netlify.app/)  
+ - [Awesome-docker](https://average.joe.dev/awesome-docker/)
  - [A 13 Part Docker Tutorial Series](https://rominirani.com/docker-tutorial-series-writing-a-dockerfile-ce5746617cd)  
  - [A Docker Container Manager in Minecraft](https://github.com/docker/dockercraft)  
