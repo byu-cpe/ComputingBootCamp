@@ -24,6 +24,31 @@ sudo apt install python3-pip
 sudo pip3 install --upgrade cmake
 ```
 
+### Externally Managed Environments
+
+Often on lab computers *cmake* (and other pip-installed apps) will be hard to upgrade because of the externally managed nature of the multi-user lab machines. 
+An alternative method of install is to use either [*uv*](https://docs.astral.sh/uv/concepts/tools/) or [*pipx*](https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3), tools that can run CLI tools in isolated virtual environments.
+
+**First** add the following to your *.bashrc* to give the *pipx*/*uv* version of *cmake* priority:
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+**Then** install *cmake* via *uv*:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh   # install uv
+uv tool install cmake   # install cmake
+```
+
+**Or** install *cmake* via *pipx*:
+
+```bash
+apt install pipx    # install pipx
+pipx install cmake    # install cmake
+```
+
 # Lecture Tutorial
 
 On May 7, 2021 we had a CMake Tutorial by Prof Mangelson. The video is embedded below:
