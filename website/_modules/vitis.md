@@ -4,7 +4,7 @@ toc: true
 title: "Vitis: Software"
 slug: vitis
 type: fpga_commercial
-order: 4
+order: 5
 ---
 
 ## Lecture Videos
