@@ -79,7 +79,7 @@ Once your program is compiled and ready to go it is time to program it onto the 
    - If that does not fix the issue return to the previous section and make sure the ID from `lsusb` matches the value entered in _51-altera-usb-blaster.rules_
 3. If there is only one device listed select the **Auto Detect** button on the right column, and when prompted select the device matching your board(ie. 5CSEMA5 for the DE1-SoC board)
    - This will add a second device for your boards SoC, which we will ignore.
-4. Double click `_<none>_` in the  _File_ column and navegate to the _output_files_ folder
+4. Double click `<none>` in the  _File_ column and navegate to the _output_files_ folder
 5. Select the .sof file and hit **Open**
 6. Select **Start** to program the FPGA
 7. If successful the progress bar in the top right will turn green and display `100% (Successful)`
