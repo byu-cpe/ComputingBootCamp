@@ -4,7 +4,7 @@ toc: true
 title: "Microblaze Soft Processor"
 slug: microblaze
 type: fpga_commercial
-order: 7
+order: 8
 ---
 The following procedure gives detailed steps for how to program a Nexys 4 DDR board with
 a microblaze soft processor and run code on that same processor. It assumes that the board file

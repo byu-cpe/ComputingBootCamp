@@ -4,7 +4,7 @@ toc: true
 title: JTAG
 slug: JTAG
 type: fpga_commercial
-order: 10
+order: 9
 ---
 
 

@@ -4,7 +4,7 @@ toc: true
 title: Xilinx 7 Series FPGA Deep Dive
 slug: xilinx_deep_dive
 type: fpga_commercial
-order: 3
+order: 4
 ---
 
 # Introduction

@@ -4,7 +4,7 @@ toc: false
 title: System Verilog Intro Labs
 slug: verilog_basics
 type: fpga_commercial
-order: 11
+order: 10
 ---
 
 These labs serve as an intro to digital design with SystemVerilog. They interactively teach concepts, and then walk you through developement process of writing in an HDL, simulating your design, and generating a bitstream. Better yet, all this is done in a Google Colaboratory Notebook so you don't need to worry about configuring your machine. 

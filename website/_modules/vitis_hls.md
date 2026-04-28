@@ -4,7 +4,7 @@ toc: true
 title: "Vitis: HLS"
 slug: vitis_hls
 type: fpga_commercial
-order: 5
+order: 6
 ---
 
 ## Lecture Videos

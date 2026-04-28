@@ -4,7 +4,7 @@ toc: false
 title: "HLS System Integration"
 slug: hls_system_integration
 type: fpga_commercial
-order: 6
+order: 7
 ---
 
 ### Previous: [Vitis Tutorial]({% link _modules/vitis_hls.md %})
