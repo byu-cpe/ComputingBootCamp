@@ -370,3 +370,41 @@
       correct: true
     - text: "create my own licence"
     - text: "not use a licence"
+
+# --------------------------- Activities for JTAG.md ---------------------------------
+- id: 132
+  prompt: Fill in the blank
+  type: fill_in
+  responses:
+    - text: TAP stands for ___.
+      correct: Test Access Port
+
+- id: 133
+  prompt: Match each signal with its function.
+  type: matching
+  responses:
+    - text: TDO
+      correct: Output from JTAG enabled device
+    - text: TMS
+      correct: Change state for TAP controller
+    - text: TDI
+      correct: Input from JCM 
+    - text: TCK
+      correct: Clock signal 
+
+- id: 134
+  prompt: Fill in the blank
+  type: fill_in
+  responses:
+    - text: What bits do you send to return the TAP controller to Test Logic Reset? ___
+      correct: 11111
+
+- id: 135
+  prompt: When does the value of TDI matter?
+  type: multiple_choice
+  responses:
+    - text: "Capture DR"
+    - text: "Shift IR"
+      correct: true
+    - text: "Select DR Scan"
+    - text: "Run Test Idle"
